@@ -56,7 +56,10 @@ done
 say "GitHub okuma tokenı (yalnızca read:packages izni; yazarken görünmez)"
 TOKEN="$(ask_secret 'Token: ')"
 [ -n "$TOKEN" ] || die "Token boş olamaz."
-printf '%s' "$TOKEN" | docker login ghcr.io -u avelro --password-stdin >/dev/null 2>&1 || die "GitHub girişi başarısız. Tokenın read:packages iznini ve süresini kontrol edin."
+if ! printf '%s' "$TOKEN" | docker login ghcr.io -u avelro --password-stdin >/dev/null 2>&1; then
+ GH_USER="$(ask 'GitHub kullanıcı adı (tokenı oluşturan hesap): ')"
+ printf '%s' "$TOKEN" | docker login ghcr.io -u "$GH_USER" --password-stdin >/dev/null 2>&1 || die "GitHub girişi başarısız. Tokenın read:packages iznini ve süresini kontrol edin."
+fi
 unset TOKEN
 ok "GitHub girişi yapıldı"
 
