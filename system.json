@@ -1,5 +1,5 @@
 {
-  "version": "1.0.11",
-  "notes": "- Yöneticinin Hesabım sayfası müşteri Hesabım sayfasıyla aynı görünüme geçti: üstte kimlik şeridi (Siteyi Düzenle, Çıkış), solda Mobil Uygulama kartı ve menü, sağda seçili bölüm.\n- Menüde iki bölüm var: QR ile Giriş (üç adımlı anlatım ve giriş kodu) ve Ana Hesaba Bağla (bağlantı anahtarı oluşturma, listeleme ve silme).",
-  "publishedAt": "2026-10-11T18:43:19.003Z"
+  "version": "1.0.12",
+  "notes": "- Yönetici girişliyken sitenin üst menüsünde \"Giriş / Üyelik\" yerine yöneticinin adı görünür.\n- Yönetici girişliyken Hesabım (üst menü ve alt menüden) giriş formu yerine yönetim sayfasını açar.\n- Yöneticinin Hesabım sayfası müşteri Hesabım sayfasıyla aynı görünüme geçti: üstte kimlik şeridi (Siteyi Düzenle, Çıkış), solda Mobil Uygulama kartı ve menü, sağda seçili bölüm.\n- Menüde iki bölüm var: QR ile Giriş (üç adımlı anlatım ve giriş kodu) ve Ana Hesaba Bağla (bağlantı anahtarı oluşturma, listeleme ve silme).",
+  "publishedAt": "2026-10-11T18:51:28.516Z"
 }
