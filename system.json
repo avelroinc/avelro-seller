@@ -1,0 +1,5 @@
+{
+  "version": "1.0.8",
+  "notes": "- Sistem güncellemesi mobil uygulamadan: Sistem ve Temalar ekranında yeni sürüm ve notları görünür, Sistemi Güncelle ile önce yedek alınır, sonra sunucudaki güncelleyici yeni sürümü kurar. İstenirse gece 03:00–05:00 arasında kendiliğinden güncellenir.\n- Temalar mobil uygulamadan kurulur, güncellenir ve mağazada kullanılır (önizlemeli liste).\n- Yöneticinin Hesabım sayfası yenilendi: telefon çiziminde QR ile giriş kodu, günün özeti (sipariş, ciro, bekleyen havale, soru ve yorum), site ve sistem kartları, ana hesaba bağlama.\n- Güncelleyicinin kurulması için sunucuda kurulum komutu bir kez yeniden çalıştırılmalıdır; sonraki güncellemeler uygulamadan yapılır.",
+  "publishedAt": "2026-10-11T18:01:00.908Z"
+}
