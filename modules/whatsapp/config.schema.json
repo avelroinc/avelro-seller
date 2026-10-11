@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "phoneNumberId",
+    "accessToken",
+    "toPhoneNumber"
+  ],
+  "properties": {
+    "phoneNumberId": {
+      "type": "string",
+      "title": "phoneNumberId",
+      "minLength": 1
+    },
+    "accessToken": {
+      "type": "string",
+      "title": "accessToken",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "toPhoneNumber": {
+      "type": "string",
+      "title": "toPhoneNumber",
+      "minLength": 1
+    }
+  }
+}

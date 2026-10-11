@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "accountSid",
+    "authToken",
+    "fromNumber"
+  ],
+  "properties": {
+    "accountSid": {
+      "type": "string",
+      "title": "accountSid",
+      "minLength": 1
+    },
+    "authToken": {
+      "type": "string",
+      "title": "authToken",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "fromNumber": {
+      "type": "string",
+      "title": "fromNumber",
+      "minLength": 1
+    }
+  }
+}

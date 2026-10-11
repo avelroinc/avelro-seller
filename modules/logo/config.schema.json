@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "wsUsername",
+    "wsPassword",
+    "firmCode"
+  ],
+  "properties": {
+    "wsUsername": {
+      "type": "string",
+      "title": "wsUsername",
+      "minLength": 1
+    },
+    "wsPassword": {
+      "type": "string",
+      "title": "wsPassword",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "firmCode": {
+      "type": "string",
+      "title": "firmCode",
+      "minLength": 1
+    }
+  }
+}

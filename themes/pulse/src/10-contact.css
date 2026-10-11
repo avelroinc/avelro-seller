@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Mağaza vitrini — iletişim sayfası
+   Üstte iletişim kanalı kartları (canlı destek, WhatsApp, e-posta, telefon; ilki vurgulu), altında solda destek metni,
+   çalışma bilgileri ve talep ipuçları, sağda hızlı işlem bağlantıları.
+   ========================================================================== */
+
+.shop-shell .shop-cx{display:grid;gap:40px;padding-bottom:24px}
+
+/* Kanal kartları */
+.shop-shell .shop-cx-channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.shop-shell .shop-cx-channel{position:relative;display:grid;grid-template-rows:auto 1fr auto;gap:16px;padding:26px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg,2px);background:var(--shop-surface);overflow:hidden;isolation:isolate;transition:transform .2s,box-shadow .2s,border-color .2s}
+.shop-shell .shop-cx-channel:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--shop-accent) 40%,transparent);box-shadow:var(--shop-shadow-lg)}
+.shop-shell .shop-cx-channel-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:var(--shop-radius,2px);background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .shop-cx-channel.is-whatsapp .shop-cx-channel-icon{background:color-mix(in srgb,#25d366 16%,transparent);color:#1da851}
+.shop-shell .shop-cx-channel-body{display:grid;align-content:start;gap:4px;min-width:0}
+.shop-shell .shop-cx-channel-body small{color:var(--shop-muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell .shop-cx-channel-body b{color:var(--shop-ink);font-family:var(--shop-display);font-size:20px;font-weight:800;line-height:1.25;overflow-wrap:anywhere}
+.shop-shell .shop-cx-channel-body p{margin:4px 0 0;color:var(--shop-muted);font-size:14px;line-height:1.6}
+.shop-shell .shop-cx-action{display:inline-flex;align-items:center;justify-content:center;gap:6px;justify-self:start;min-height:42px;padding:0 16px;border:1px solid var(--shop-line);border-radius:var(--shop-radius,2px);background:var(--shop-canvas);color:var(--shop-ink);font-size:14px;font-weight:700;text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.shop-shell .shop-cx-action:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+.shop-shell .shop-cx-action svg{width:16px;height:16px}
+/* Vurgulu ilk kanal: mağaza renginde zemin */
+.shop-shell .shop-cx-channel.is-primary{border-color:transparent;background:linear-gradient(135deg,var(--shop-accent-fill,var(--shop-accent)),color-mix(in srgb,var(--shop-accent-fill,var(--shop-accent)) 72%,#000));color:#fff;box-shadow:0 22px 40px -26px var(--shop-accent)}
+.shop-shell .shop-cx-channel.is-primary::after{position:absolute;right:-60px;bottom:-80px;z-index:-1;width:200px;height:200px;border-radius:50%;background:rgb(255 255 255 / .1);content:""}
+.shop-shell .shop-cx-channel.is-primary .shop-cx-channel-icon{background:rgb(255 255 255 / .16);color:#fff}
+.shop-shell .shop-cx-channel.is-primary .shop-cx-channel-body small,.shop-shell .shop-cx-channel.is-primary .shop-cx-channel-body p{color:rgb(255 255 255 / .82)}
+.shop-shell .shop-cx-channel.is-primary .shop-cx-channel-body b{color:#fff}
+.shop-shell .shop-cx-channel.is-primary .shop-cx-action{border-color:transparent;background:#fff;color:#18181b}
+.shop-shell .shop-cx-channel.is-primary .shop-cx-action:hover{background:rgb(255 255 255 / .9);color:#18181b}
+
+/* Alt bölüm: destek metni ve hızlı işlemler */
+.shop-shell .shop-cx-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:28px;align-items:start}
+.shop-shell .shop-cx-panel{display:grid;justify-items:start;gap:18px;padding:34px 36px;border-radius:var(--shop-radius-lg,2px);background:var(--shop-hero-bg,var(--shop-soft))}
+.shop-shell .shop-cx-eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:var(--shop-canvas);color:var(--shop-accent);font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell .shop-cx-panel h2{margin:0;color:var(--shop-ink);font-size:clamp(24px,2.6vw,32px);line-height:1.15}
+.shop-shell .shop-cx-copy{display:grid;gap:12px;color:var(--shop-ink-2);font-size:16px;line-height:1.75;white-space:pre-line}
+.shop-shell .shop-cx-copy p{margin:0}
+.shop-shell .shop-cx-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;width:100%;margin:0}
+.shop-shell .shop-cx-facts>div{display:grid;gap:4px;padding:14px 16px;border-radius:var(--shop-radius,2px);background:var(--shop-canvas)}
+.shop-shell .shop-cx-facts dt{display:flex;align-items:center;gap:8px;color:var(--shop-muted);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .shop-cx-facts dt svg{color:var(--shop-accent)}
+.shop-shell .shop-cx-facts dd{margin:0;color:var(--shop-ink);font-size:15px;font-weight:700;line-height:1.45}
+.shop-shell .shop-cx-tips{display:grid;gap:12px;width:100%;padding-top:20px;border-top:1px solid color-mix(in srgb,var(--shop-ink) 10%,transparent)}
+.shop-shell .shop-cx-tips h3{margin:0;color:var(--shop-ink);font-size:17px}
+.shop-shell .shop-cx-tips ol{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.shop-shell .shop-cx-tips li{display:flex;align-items:flex-start;gap:12px;color:var(--shop-ink-2);font-size:15px;line-height:1.6}
+.shop-shell .shop-cx-tips li>b{display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:var(--shop-accent);color:var(--shop-on-accent,#fff);font-size:12.5px;font-weight:800}
+.shop-shell .shop-cx-shortcuts{display:grid;gap:12px}
+.shop-shell .shop-cx-shortcuts>h2{margin:0 0 4px;color:var(--shop-ink);font-size:18px}
+.shop-shell .shop-cx-shortcut{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg,2px);background:var(--shop-surface);color:inherit;text-decoration:none;transition:border-color .15s,box-shadow .2s}
+.shop-shell .shop-cx-shortcut:hover{border-color:color-mix(in srgb,var(--shop-accent) 45%,transparent);box-shadow:var(--shop-shadow-lg)}
+.shop-shell .shop-cx-shortcut-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:var(--shop-radius,2px);background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .shop-cx-shortcut-text{display:grid;gap:2px;min-width:0}
+.shop-shell .shop-cx-shortcut-text b{color:var(--shop-ink);font-size:15.5px}
+.shop-shell .shop-cx-shortcut-text small{color:var(--shop-muted);font-size:13px;line-height:1.5}
+.shop-shell .shop-cx-shortcut-arrow{color:var(--shop-muted);transition:color .15s,transform .15s}
+.shop-shell .shop-cx-shortcut:hover .shop-cx-shortcut-arrow{color:var(--shop-accent);transform:translate(2px,-2px)}
+
+@media(max-width:900px){
+ .shop-shell .shop-cx{gap:28px}
+ .shop-shell .shop-cx-layout{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .shop-cx-panel{padding:26px 22px}
+}
+@media(max-width:560px){
+ .shop-shell .shop-cx-channels{grid-template-columns:minmax(0,1fr);gap:12px}
+ .shop-shell .shop-cx-channel{grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;gap:12px 14px;padding:18px}
+ .shop-shell .shop-cx-channel-icon{width:44px;height:44px}
+ .shop-shell .shop-cx-channel-body b{font-size:17px}
+ .shop-shell .shop-cx-action{grid-column:1/-1;justify-self:stretch}
+}

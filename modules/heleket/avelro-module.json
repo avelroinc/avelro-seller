@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "heleket",
+  "name": "Heleket Entegrasyonu",
+  "description": "Heleket ile kripto para ödemesi almak için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "payment",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.heleket.com"
+  ],
+  "configuration": "config.schema.json"
+}

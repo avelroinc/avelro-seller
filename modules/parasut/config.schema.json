@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "clientId",
+    "clientSecret",
+    "username",
+    "password",
+    "companyId"
+  ],
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "title": "clientId",
+      "minLength": 1
+    },
+    "clientSecret": {
+      "type": "string",
+      "title": "clientSecret",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "username": {
+      "type": "string",
+      "title": "username",
+      "minLength": 1
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "companyId": {
+      "type": "string",
+      "title": "companyId",
+      "minLength": 1
+    }
+  }
+}

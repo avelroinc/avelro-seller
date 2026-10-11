@@ -1,0 +1,12 @@
+{
+  "themes": [
+    {
+      "id": "pulse",
+      "name": "Pulse",
+      "description": "Beyaz ve açık gri-mavi bölümler, marka renkli platform kartları ve satış odaklı düzen.",
+      "path": "pulse",
+      "preview": "pulse/preview.webp",
+      "default": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Mağaza vitrini — kampanya (reklam) sayfası
+   Ortalanmış büyük başlık, güven satırı, kupon, platformlar, popüler paketler ve kapanış çağrısı.
+   ========================================================================== */
+
+.shop-shell .shop-ads-page{display:grid;gap:88px;}
+.shop-shell .shop-ads-hero{display:grid;justify-items:center;gap:0;padding-top:64px;padding-bottom:8px;text-align:center}
+.shop-shell .shop-ads-hero h1{max-width:18ch;font-size:clamp(34px,4.8vw,60px);letter-spacing:-.025em;line-height:1.1}
+.shop-shell .shop-ads-hero p{max-width:54ch;margin-top:20px;color:var(--shop-ink-2);font-size:17px;line-height:1.7}
+.shop-shell .shop-ads-hero-actions{margin-top:34px}
+.shop-shell .shop-ads-hero-actions .shop-button{min-height:56px;padding:0 32px;border-radius:2px;font-size:15.5px}
+.shop-shell .shop-ads-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:40px;border-top:1px solid var(--shop-line-2);border-bottom:1px solid var(--shop-line-2)}
+.shop-shell .shop-ads-trust li{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;color:var(--shop-ink-2);font-size:14.5px;font-weight:500}
+.shop-shell .shop-ads-trust li+li{border-left:1px solid var(--shop-line)}
+.shop-shell .shop-ads-trust svg{color:var(--shop-button-bg)}
+.shop-shell .shop-ads-coupon{display:grid;justify-items:center}
+.shop-shell .shop-ads-coupon .sc-coupon{width:min(100%,460px)}
+.shop-shell :is(.shop-ads-platforms,.shop-ads-packages)>h2{margin-bottom:24px;font-size:clamp(28px,3.4vw,42px);text-align:center}
+.shop-shell .shop-ads-platform-list{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.shop-shell .shop-ads-platform-list span{padding:10px 20px;border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);font-family:var(--shop-display);font-size:15px;font-weight:700;letter-spacing:-.01em}
+.shop-shell .shop-ads-package-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.shop-shell .shop-ads-package-card{position:relative;display:grid;gap:8px;padding:24px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius-lg);background:var(--shop-surface);transition:border-color .2s,transform .2s,box-shadow .2s}
+.shop-shell .shop-ads-package-card:hover{border-color:var(--shop-accent);transform:translateY(-3px);box-shadow:var(--shop-shadow)}
+.shop-shell .shop-ads-package-card b{font-size:17px;font-weight:600;line-height:1.35}
+.shop-shell .shop-ads-package-card strong{font-family:var(--shop-display);font-size:28px;font-weight:700;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.shop-shell .shop-ads-package-card small{color:var(--shop-muted);font-size:13px}
+.shop-shell .shop-ads-cta{display:grid;justify-items:center;gap:14px;padding:64px 32px;border-radius:2px;background:linear-gradient(135deg,var(--shop-accent-fill),color-mix(in srgb,var(--shop-accent-fill) 70%,#000));color:#fff;text-align:center}
+.shop-shell .shop-ads-cta h2{color:#fff;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.02em}
+.shop-shell .shop-ads-cta p{max-width:48ch;color:rgb(255 255 255 / .85);font-size:16px}
+.shop-shell .shop-ads-cta .shop-button{margin-top:10px;min-height:54px;background:#fff;color:var(--shop-accent-fill)}
+.shop-shell .shop-ads-cta .shop-button:not(:disabled):hover{background:#fff;color:var(--shop-accent-fill)}
+
+@media(max-width:640px){
+ .shop-shell .shop-ads-page{gap:64px}
+ .shop-shell .shop-ads-hero{padding-top:40px}
+ .shop-shell .shop-ads-hero p{font-size:16.5px}
+ .shop-shell .shop-ads-hero-actions,.shop-shell .shop-ads-hero-actions .shop-button{width:100%}
+ .shop-shell .shop-ads-trust{flex-direction:column;align-items:center}
+ .shop-shell .shop-ads-trust li+li{border-top:1px solid var(--shop-line);border-left:0}
+ .shop-shell .shop-ads-cta{padding:44px 22px}
+}
+
+/* Reklam sayfası yalnızca reklam trafiği içindir: ortak üst menü, alt bilgi, mobil dock, geri sayım/sepet bantları,
+   canlı sipariş akışı ve açılır bildirim bu sayfada gösterilmez. */
+.shop-shell:has(.shop-ads-page) :is(.shop-header,.shop-end,.shop-dock,.shop-countdown,.shop-cart-reminder,.shop-live-feed,.shop-popup){display:none!important}
+.shop-shell .shop-ads-page{padding-top:0;padding-bottom:40px}
+.shop-shell .shop-ads-brand{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;color:var(--shop-ink);font-family:var(--shop-display);font-size:17px}
+.shop-shell .shop-ads-brand img{width:40px;height:40px;border-radius:var(--shop-radius);object-fit:contain}
+.shop-shell .shop-ads-legal{order:99;margin-top:-56px;color:var(--shop-faint);font-size:12.5px;text-align:center}

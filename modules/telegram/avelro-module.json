@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "telegram",
+  "name": "Telegram Entegrasyonu",
+  "description": "Sipariş olaylarını Telegram üzerinden bildirir.",
+  "version": "1.0.0",
+  "hostApiVersion": 1,
+  "category": "notifications",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "events:orders.read",
+    "network:api.telegram.org"
+  ],
+  "configuration": "config.schema.json"
+}

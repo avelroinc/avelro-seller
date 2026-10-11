@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["botToken", "chatId"],
+  "properties": {
+    "botToken": {"type": "string", "title": "Bot Token", "minLength": 1, "writeOnly": true},
+    "chatId": {"type": "string", "title": "Chat ID", "minLength": 1}
+  }
+}

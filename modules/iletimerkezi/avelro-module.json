@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "iletimerkezi",
+  "name": "İleti Merkezi Entegrasyonu",
+  "description": "İleti Merkezi Entegrasyonu için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "loginverify",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.iletimerkezi.com"
+  ],
+  "configuration": "config.schema.json"
+}

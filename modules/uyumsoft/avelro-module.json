@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "uyumsoft",
+  "name": "Uyumsoft Entegrasyonu",
+  "description": "Uyumsoft Entegrasyonu için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "einvoice",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:efatura.uyumsoft.com.tr"
+  ],
+  "configuration": "config.schema.json"
+}

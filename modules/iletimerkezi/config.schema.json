@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "username",
+    "password",
+    "sender"
+  ],
+  "properties": {
+    "username": {
+      "type": "string",
+      "title": "username",
+      "minLength": 1
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "sender": {
+      "type": "string",
+      "title": "sender",
+      "minLength": 1
+    }
+  }
+}

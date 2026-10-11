@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "parasut",
+  "name": "Paraşüt Entegrasyonu",
+  "description": "Paraşüt Entegrasyonu için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "einvoice",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.parasut.com"
+  ],
+  "configuration": "config.schema.json"
+}

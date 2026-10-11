@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "secretKey",
+    "webhookSecret"
+  ],
+  "properties": {
+    "secretKey": {
+      "type": "string",
+      "title": "secretKey",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "webhookSecret": {
+      "type": "string",
+      "title": "webhookSecret",
+      "minLength": 1,
+      "writeOnly": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "cryptomus",
+  "name": "Cryptomus Entegrasyonu",
+  "description": "Cryptomus ile kripto para ödemesi almak için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "payment",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.cryptomus.com"
+  ],
+  "configuration": "config.schema.json"
+}

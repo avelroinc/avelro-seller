@@ -1,0 +1,389 @@
+/* ==========================================================================
+   Mağaza vitrini — satın alma akışı
+   Paket detayı ve ödeme kutusu, sepet (paketler + özet), sipariş sorgulama, ödeme kanalı düğmeleri.
+   ========================================================================== */
+
+/* --- Paket detayı -------------------------------------------------------- */
+.shop-shell .shop-fav-button:hover{border-color:#e4336f;color:#e4336f}
+.shop-shell .shop-fav-button[aria-pressed=true]{border-color:#e4336f;background:color-mix(in srgb,#e4336f 8%,var(--shop-surface));color:#e4336f}
+
+/* Ödeme kutusu: sağda yapışkan fiş. */
+.shop-shell :is(.shop-checkout-price,.shop-cart-total){position:relative;display:grid;gap:4px;padding:24px;background:linear-gradient(135deg,var(--shop-accent-fill),color-mix(in srgb,var(--shop-accent-fill) 70%,#000));color:#fff;overflow:hidden}
+.shop-shell :is(.shop-checkout-price,.shop-cart-total)::after{position:absolute;top:-60px;right:-40px;width:170px;height:170px;border-radius:50%;background:rgb(255 255 255 / .1);content:""}
+.shop-shell :is(.shop-checkout-price,.shop-cart-total) span{color:rgb(255 255 255 / .85);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell :is(.shop-checkout-price,.shop-cart-total) b{position:relative;z-index:1;color:#fff;font-family:var(--shop-display);font-size:36px;font-weight:700;letter-spacing:-.02em;line-height:1.05;font-variant-numeric:tabular-nums}
+.shop-shell :is(.shop-checkout,.shop-cart-summary,.shop-track-form,.shop-invoice)>label:not(.shop-check){display:grid;gap:8px;color:var(--shop-ink);font-size:13.5px;font-weight:600}
+
+/* --- Sepet --------------------------------------------------------------- */
+.shop-shell .shop-cart-remove{display:grid;place-items:center;width:40px;height:40px;margin-top:2px;border:1px solid transparent;border-radius:var(--shop-radius);background:transparent;color:var(--shop-muted);transition:color .15s,border-color .15s,background-color .15s}
+.shop-shell .shop-cart-remove svg{width:18px;height:18px}
+.shop-shell .shop-cart-remove:hover{border-color:color-mix(in srgb,var(--shop-bad) 35%,transparent);background:color-mix(in srgb,var(--shop-bad) 8%,transparent);color:var(--shop-bad)}
+.shop-shell .shop-cart-summary{position:sticky;top:calc(var(--shop-header-h) + 20px);display:grid;gap:16px;padding:0 24px 24px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);overflow:hidden}
+.shop-shell .shop-cart-summary>.shop-button{min-height:54px;font-size:15.5px}
+.shop-shell .shop-cart-note{display:block;color:var(--shop-muted);font-size:12.5px;font-style:normal;line-height:1.55}
+.shop-shell .shop-invoice{display:grid;gap:12px;padding:16px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface)}
+/* Ödeme yöntemi seçimi: seçilebilir kartlar. Her yöntemin kendi rengi vardır (bakiye yeşil, havale mavi, kart mor);
+   seçili kart renkli kenar, açık zemin ve onay işaretiyle belirginleşir. Kullanılamayan yöntem soluk ve açıklamalı görünür. */
+.shop-shell .shop-pay-methods{display:grid;gap:10px;min-width:0;margin:4px 0 0;padding:0;border:0}
+.shop-shell .shop-pay-methods>legend{float:left;width:100%;padding:0 0 4px;color:var(--shop-ink);font-size:13.5px;font-weight:600}
+.shop-shell .shop-pay-methods>legend+*{clear:both}
+.shop-shell .shop-pay-option{--pay:#16a36a;position:relative;display:flex;align-items:center;gap:12px;padding:13px 14px;border:1.5px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);cursor:pointer;transition:border-color .15s,background-color .15s,box-shadow .15s,transform .15s}
+.shop-shell .shop-pay-option[data-method=transfer]{--pay:#2563eb}
+.shop-shell .shop-pay-option[data-method=card]{--pay:#7c3aed}
+.shop-shell .shop-pay-option input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.shop-shell .shop-pay-option:hover:not([aria-disabled]){border-color:color-mix(in srgb,var(--pay) 55%,var(--shop-line-2));transform:translateY(-1px)}
+.shop-shell .shop-pay-option:has(input:focus-visible){outline:2px solid var(--pay);outline-offset:2px}
+.shop-shell .shop-pay-option.is-active{border-color:var(--pay);background:color-mix(in srgb,var(--pay) 7%,var(--shop-surface));box-shadow:0 10px 22px -16px var(--pay)}
+.shop-shell .shop-pay-option[aria-disabled]{cursor:not-allowed;opacity:.55}
+.shop-shell .shop-pay-icon{display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:2px;background:color-mix(in srgb,var(--pay) 12%,transparent);color:var(--pay);transition:background-color .15s,color .15s}
+.shop-shell .shop-pay-option.is-active .shop-pay-icon{background:linear-gradient(150deg,color-mix(in srgb,var(--pay) 80%,#fff),var(--pay));color:#fff;box-shadow:0 8px 16px -8px var(--pay)}
+.shop-shell .shop-pay-icon svg{width:20px;height:20px}
+.shop-shell .shop-pay-text{display:grid;gap:2px;min-width:0;flex:1}
+.shop-shell .shop-pay-text b{color:var(--shop-ink);font-size:14.5px;font-weight:600;line-height:1.3}
+.shop-shell .shop-pay-text small{color:var(--shop-muted);font-size:12.5px;line-height:1.4}
+.shop-shell .shop-pay-check{display:grid;place-items:center;width:22px;height:22px;flex:none;border:1.5px solid var(--shop-line-2);border-radius:50%;color:transparent;transition:background-color .15s,border-color .15s,color .15s}
+.shop-shell .shop-pay-check svg{width:13px;height:13px;stroke-width:3.2}
+.shop-shell .shop-pay-option.is-active .shop-pay-check{border-color:var(--pay);background:var(--pay);color:#fff}
+.shop-shell .shop-pay-gateways{display:flex;flex-wrap:wrap;gap:8px;padding:2px 0 2px 54px}
+.shop-shell .shop-pay-gateways button{min-height:36px;padding:0 14px;border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink-2);font-size:13px;font-weight:600;transition:border-color .15s,background-color .15s,color .15s}
+.shop-shell .shop-pay-gateways button:hover{border-color:#7c3aed;color:#7c3aed}
+.shop-shell .shop-pay-gateways button[aria-checked=true]{border-color:#7c3aed;background:#7c3aed;color:#fff}
+
+/* Sepet önerileri: sepette olmayan paketler mini kartlar hâlinde yatay kayar. Kenarlara yaklaşan kartlar silikleşerek
+   kaybolur; üzerine gelince ya da klavyeyle odaklanınca kayma durur. Dörtten az öneride kartlar sabit ve ortalıdır. */
+
+/* --- Sipariş sorgulama: başlık bandı içinde solda açıklama ve ipuçları, sağda form; altında tam genişlikte sonuç kartı
+   (durum, ilerleme adımları, sipariş bilgileri, hızlandırma talebi). ----------------------------------------------- */
+.shop-shell .shop-track-hero{position:relative;margin-top:14px;padding:0 48px 48px;border-radius:2px;background:var(--shop-hero-bg);overflow:hidden;isolation:isolate}
+.shop-shell .shop-track-hero::before{position:absolute;top:-140px;left:34%;z-index:-1;width:380px;height:380px;border-radius:50%;background:color-mix(in srgb,var(--shop-surface) 55%,transparent);content:"";pointer-events:none}
+.shop-shell .shop-track-hero-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,470px);align-items:center;gap:56px;padding-top:30px}
+.shop-shell .shop-track-intro{display:grid;justify-items:start;gap:0}
+.shop-shell .shop-track-intro>small{background:var(--shop-surface)}
+.shop-shell .shop-track-icon{display:grid;place-items:center;width:60px;height:60px;margin-bottom:22px;border-radius:2px;background:var(--shop-accent);color:var(--shop-on-accent);box-shadow:0 16px 30px -14px var(--shop-accent)}
+.shop-shell .shop-track-icon svg{width:26px;height:26px}
+.shop-shell .shop-track-intro h1{margin-top:16px;font-size:clamp(30px,3.6vw,44px);line-height:1.15}
+.shop-shell .shop-track-intro p{margin-top:12px;max-width:46ch;color:var(--shop-ink-2);font-size:16px}
+.shop-shell .shop-track-tips{display:grid;gap:10px;width:100%;max-width:460px;margin-top:26px}
+.shop-shell .shop-track-tips li{display:flex;align-items:center;gap:12px;color:var(--shop-ink-2);font-size:14px;line-height:1.45}
+.shop-shell .shop-track-tips svg{width:34px;height:34px;flex:none;padding:8px;border-radius:2px;background:var(--shop-surface);color:var(--shop-accent);box-shadow:0 6px 16px -10px rgb(27 35 54 / .3)}
+.shop-shell .shop-track-form{display:grid;gap:16px;padding:32px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
+.shop-shell .shop-track-form-head{display:grid;gap:4px;margin-bottom:4px}
+.shop-shell .shop-track-form-head h2{font-size:21px}
+.shop-shell .shop-track-form-head p{color:var(--shop-muted);font-size:14px}
+.shop-shell .shop-track-form input[name=orderCode]{font-weight:600;letter-spacing:.06em}
+.shop-shell .shop-track-form input[name=orderCode]::placeholder{font-weight:400;letter-spacing:0}
+.shop-shell .shop-track-form .shop-button{min-height:52px;margin-top:4px}
+
+/* Sonuç kartı */
+.shop-shell .shop-track-result{margin-top:32px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow);overflow:hidden;animation:shop-reveal .35s ease both}
+.shop-shell .shop-track-result>header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 28px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .shop-track-result>header>div{display:grid}
+.shop-shell .shop-track-result>header small{color:var(--shop-accent);font-size:11.5px;font-weight:600;letter-spacing:.08em}
+.shop-shell .shop-track-result>header b{font-family:var(--shop-display);font-size:24px;font-weight:700;letter-spacing:.02em}
+/* İlerleme adımları: tamamlananlar yeşil onaylı, sıradaki adım mağaza renginde, aradaki çizgi ilerledikçe dolar. */
+.shop-shell .shop-track-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:28px 28px 26px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .shop-track-steps li{position:relative;display:grid;justify-items:center;gap:10px;text-align:center}
+.shop-shell .shop-track-steps li+li::before{position:absolute;top:18px;right:calc(50% + 26px);left:calc(-50% + 26px);height:2px;background:var(--shop-line-2);content:""}
+.shop-shell .shop-track-steps li.is-done::before{background:var(--shop-good)}
+.shop-shell .shop-track-steps li.is-current::before{background:linear-gradient(90deg,var(--shop-good),var(--shop-accent))}
+.shop-shell .shop-track-steps li>span{position:relative;z-index:1;display:grid;place-items:center;width:38px;height:38px;border:2px solid var(--shop-line-2);border-radius:50%;background:var(--shop-surface);color:var(--shop-faint);font-size:14px;font-weight:700}
+.shop-shell .shop-track-steps li>span svg{width:18px;height:18px;stroke-width:3}
+.shop-shell .shop-track-steps li.is-done>span{border-color:var(--shop-good);background:var(--shop-good);color:var(--shop-on-good)}
+.shop-shell .shop-track-steps li.is-current>span{border-color:var(--shop-accent);background:var(--shop-accent);color:var(--shop-on-accent);box-shadow:0 0 0 6px color-mix(in srgb,var(--shop-accent) 16%,transparent)}
+.shop-shell .shop-track-steps b{color:var(--shop-muted);font-size:13.5px;font-weight:500}
+.shop-shell .shop-track-steps li:is(.is-done,.is-current) b{color:var(--shop-ink);font-weight:600}
+.shop-shell .shop-track-note{display:flex;align-items:center;gap:12px;margin:0;padding:20px 28px;border-bottom:1px solid var(--shop-line);background:color-mix(in srgb,var(--shop-bad) 6%,var(--shop-surface));color:var(--shop-ink-2);font-size:14.5px}
+.shop-shell .shop-track-note svg{width:22px;height:22px;flex:none;color:var(--shop-bad)}
+.shop-shell .shop-track-result dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.shop-shell .shop-track-result dl>div{display:grid;align-content:start;gap:4px;min-width:0;padding:18px 28px}
+.shop-shell .shop-track-result dl>div+div{border-left:1px solid var(--shop-line)}
+.shop-shell .shop-track-result dt{color:var(--shop-muted);font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.shop-shell .shop-track-result dd{overflow-wrap:anywhere;font-size:14.5px;font-weight:600}
+.shop-shell .shop-track-expedite{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:18px 28px;border-top:1px solid var(--shop-line);background:var(--shop-soft)}
+.shop-shell .shop-track-expedite>button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid var(--shop-accent);border-radius:2px;background:var(--shop-surface);color:var(--shop-accent);font-size:14px;font-weight:600;transition:background-color .15s,color .15s}
+.shop-shell .shop-track-expedite>button:not(:disabled):hover{background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .shop-track-expedite>button:disabled{opacity:.5}
+.shop-shell .shop-track-expedite-sent{display:inline-flex;align-items:center;gap:8px;color:var(--shop-good);font-size:14px;font-weight:600}
+
+/* Durum etiketleri: sipariş sorgulama ve müşteri hesabı aynı dili kullanır. */
+.shop-shell :is(.shop-track-result>header em,.customer-status){--tone:var(--shop-muted);display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border:1px solid color-mix(in srgb,var(--tone) 35%,transparent);border-radius:2px;background:color-mix(in srgb,var(--tone) 10%,transparent);color:var(--tone);font-size:12.5px;font-style:normal;font-weight:600;white-space:nowrap}
+.shop-shell :is(.shop-track-result>header em,.customer-status)::before{width:6px;height:6px;border-radius:50%;background:currentColor;content:""}
+.shop-shell :is(.shop-track-result>header em,.customer-status):is([data-status=COMPLETED],[data-status=APPROVED],[data-status=PAID]){--tone:var(--shop-good)}
+.shop-shell :is(.shop-track-result>header em,.customer-status):is([data-status=PROCESSING],[data-status=PENDING],[data-status=AWAITING_PAYMENT]){--tone:var(--shop-warn)}
+.shop-shell :is(.shop-track-result>header em,.customer-status):is([data-status=CANCELED],[data-status=REFUNDED],[data-status=REJECTED],[data-status=FAILED]){--tone:var(--shop-bad)}
+.shop-shell :is(.shop-track-result>header em,.customer-status)[data-status=PARTIAL]{--tone:var(--shop-ink-2)}
+
+/* Hedef önizlemesi (ödeme kutusu ve sepet): girilen hesap / gönderi kartı ve gönderi seçimi. */
+.shop-shell .tp{margin-top:0;padding:14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink);font-size:13.5px}
+.shop-shell :is(.tp-note,.tp-hint,.tp-card small){color:var(--shop-muted);opacity:1}
+.shop-shell :is(.tp-avatar,.tp-thumb){border:1px solid var(--shop-line-2);background:var(--shop-surface)}
+.shop-shell .tp-thumb{border-radius:2px}
+.shop-shell .tp-open{border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);transition:border-color .15s,color .15s}
+.shop-shell .tp-open:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+.shop-shell .tp-warn{border-color:color-mix(in srgb,var(--shop-warn) 45%,transparent);border-radius:var(--shop-radius);background:color-mix(in srgb,var(--shop-warn) 10%,transparent);color:var(--shop-ink-2)}
+.shop-shell .tp-post{border-radius:2px;background:var(--shop-surface)}
+.shop-shell .tp-post:hover{border-color:var(--shop-line-2)}
+.shop-shell .tp-post.selected{border-color:var(--shop-button-bg);box-shadow:0 0 0 2px color-mix(in srgb,var(--shop-button-bg) 30%,transparent)}
+.shop-shell .tp-post i{background:var(--shop-button-bg);color:#fff}
+
+/* Ödeme kanalları (mağaza hesabı ve sepet) */
+.shop-shell .payment-gateway-options{display:grid;gap:10px}
+.shop-shell .payment-channel-grid,.shop-shell .payment-channel-list{gap:10px}
+.shop-shell .payment-channel{border-color:var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .payment-channel.active{border-color:var(--shop-button-bg);background:var(--shop-tint)}
+.shop-shell .payment-channel-list>legend{color:var(--shop-ink);font-size:13.5px;font-weight:600;opacity:1}
+
+/* --- Dar ekranlar ---------------------------------------------------------- */
+@media(max-width:1000px){
+ .shop-shell .shop-track-hero-body{grid-template-columns:minmax(0,1fr);gap:32px}
+ .shop-shell .shop-track-steps b{font-size:12.5px}
+ .shop-shell .shop-track-result dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .shop-shell .shop-track-result dl>div:nth-child(3){border-left:0}
+ .shop-shell .shop-track-result dl>div:nth-child(n+3){border-top:1px solid var(--shop-line)}
+ .shop-shell :is(.shop-checkout,.shop-cart-summary,.shop-detail>.shop-success){position:static}
+}
+@media(max-width:640px){
+ .shop-shell .shop-fav-button{flex:1 1 100%}
+ .shop-shell .shop-cart-summary{padding:0 18px 20px}
+ .shop-shell .shop-track-hero{padding:0 18px 22px}
+ .shop-shell .shop-track-hero-body{padding-top:20px}
+ .shop-shell .shop-track-form{padding:22px 18px}
+ .shop-shell .shop-track-steps{padding:22px 10px 20px}
+ .shop-shell .shop-track-steps li+li::before{right:calc(50% + 20px);left:calc(-50% + 20px);top:15px}
+ .shop-shell .shop-track-steps li>span{width:32px;height:32px;font-size:12.5px}
+ .shop-shell .shop-track-steps b{font-size:11.5px;line-height:1.3}
+ .shop-shell .shop-track-result dl{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .shop-track-result dl>div+div{border-top:1px solid var(--shop-line);border-left:0}
+ .shop-shell .shop-track-result>header,.shop-shell .shop-track-result dl>div,.shop-shell .shop-track-expedite{padding-inline:18px}
+}
+
+/* --- Fatura anahtarı: onay kutusu yerine açıklamalı anahtar (switch). ------------------------------------------------ */
+.shop-shell :is(.shop-cart-summary,.shop-checkout,.shop-invoice)>label.shop-switch,.shop-shell .shop-switch{display:flex;font-weight:400;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);cursor:pointer;transition:border-color .15s,background-color .15s}
+.shop-shell .shop-switch:hover{border-color:color-mix(in srgb,var(--shop-accent) 45%,var(--shop-line-2))}
+.shop-shell .shop-switch:has(input:checked){border-color:var(--shop-accent);background:var(--shop-tint)}
+.shop-shell .shop-switch input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.shop-shell .shop-switch:has(input:focus-visible){outline:2px solid var(--shop-accent);outline-offset:2px}
+.shop-shell .shop-switch-track{position:relative;width:40px;height:22px;flex:none;border-radius:999px;background:var(--shop-line-2);transition:background-color .18s}
+.shop-shell .shop-switch-track::after{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgb(0 0 0 / .25);transition:transform .18s;content:""}
+.shop-shell .shop-switch input:checked+.shop-switch-track{background:var(--shop-accent)}
+.shop-shell .shop-switch input:checked+.shop-switch-track::after{transform:translateX(18px)}
+.shop-shell .shop-switch-text{display:grid;gap:1px;min-width:0}
+.shop-shell .shop-switch-text b{color:var(--shop-ink);font-size:14px;font-weight:600}
+.shop-shell .shop-switch-text small{color:var(--shop-muted);font-size:12.5px}
+
+/* --- Sipariş sonucu: yükleniyor ve canlandırılmış yeşil onay işareti. ---------------------------------------------- */
+.shop-shell :is(.shop-pay-submit,.shop-checkout .shop-button):disabled:has(.animate-spin){background:color-mix(in srgb,var(--shop-button-bg) 78%,var(--shop-surface));color:var(--shop-on-accent);cursor:progress}
+
+/* --- Sipariş sorgulama sonucu: form gizlenir, sonuç başlığında durum ve yeni sorgu düğmesi. --------------------------- */
+.shop-shell .shop-track .sc-breadcrumb+.shop-track-result{margin-top:24px}
+.shop-shell .shop-track-result-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:10px}
+.shop-shell .shop-track-again{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 14px;border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);font-size:13.5px;font-weight:600;cursor:pointer;transition:border-color .15s,color .15s}
+.shop-shell .shop-track-again:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+.shop-shell .shop-track-again svg{width:15px;height:15px}
+
+/* --- Mini sepet paneli (mobil dock) --------------------------------------------------------------------------------- */
+.shop-shell .shop-dock-panel li>.shop-dock-remove{background:var(--shop-soft);color:var(--shop-muted)}
+.shop-shell .shop-dock-panel li>.shop-dock-remove svg{fill:none}
+.shop-shell .shop-dock-panel li>.shop-dock-remove:hover{background:color-mix(in srgb,var(--shop-bad) 12%,transparent);color:var(--shop-bad)}
+.shop-shell .shop-dock-cart-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-top:1px solid var(--shop-line);background:var(--shop-soft)}
+.shop-shell .shop-dock-cart-foot>div{display:grid;line-height:1.2}
+.shop-shell .shop-dock-cart-foot small{color:var(--shop-muted);font-size:12px}
+.shop-shell .shop-dock-cart-foot b{color:var(--shop-ink);font-size:18px;font-weight:700}
+.shop-shell .shop-dock-cart-foot .shop-button{min-height:44px;padding:0 18px}
+.shop-shell .shop-dock-empty-cart svg{background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .shop-dock-empty-cart .shop-button{margin-top:4px;min-height:42px}
+
+/* --- Bildirim paneli: okunmamış duyuru işareti ve alt satır. -------------------------------------------------------- */
+.shop-shell .shop-notices-panel li.is-unread a{background:color-mix(in srgb,var(--shop-accent) 5%,var(--shop-surface))}
+.shop-shell .shop-notices-panel li.is-unread b::after{display:inline-block;width:7px;height:7px;margin-left:6px;border-radius:50%;background:var(--shop-accent);vertical-align:middle;content:""}
+.shop-shell .shop-notices-foot{display:flex;align-items:stretch;border-top:1px solid var(--shop-line)}
+.shop-shell .shop-notices-foot button{flex:1;padding:12px 10px;border:0;border-right:1px solid var(--shop-line);background:transparent;color:var(--shop-muted);font-size:13px;font-weight:600;cursor:pointer}
+.shop-shell .shop-notices-foot button:hover{color:var(--shop-accent)}
+.shop-shell .shop-notices-foot .shop-notices-all{flex:1;border-top:0}
+
+/* ==========================================================================
+   Satış ve güven bileşenleri: rozetler, miktar kaydırıcısı, karşılaştırma tablosu, canlı sipariş akışı, kampanya geri
+   sayımı, sepet hatırlatma, hızlı sipariş (bağlantıyla), hizmet durumu, sipariş değerlendirme ve uygulama yükleme.
+   Renkler yalnızca tema değişkenlerinden gelir; koyu mod ve tema paketleri ek kural gerektirmez.
+   ========================================================================== */
+
+/* --- Miktar kaydırıcısı ve karşılaştırma tablosu ---------------------------------------------------------------- */
+.shop-shell .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* --- Canlı sipariş akışı ------------------------------------------------------------------------------------------ */
+
+/* --- Kampanya geri sayımı ----------------------------------------------------------------------------------------- */
+.shop-shell .shop-clock{display:inline-flex;align-items:stretch;gap:5px;font-variant-numeric:tabular-nums}
+.shop-shell .shop-clock>span{display:grid;justify-items:center;min-width:44px;padding:6px 6px 5px;border-radius:2px;background:var(--shop-invert);color:var(--shop-invert-ink)}
+.shop-shell .shop-clock b{font-family:var(--shop-display);font-size:18px;font-weight:700;line-height:1.1}
+/* Rakam alanı en az iki hane genişliğinde: "--" yer tutucusu sayıya dönünce kutular genişleyip kaymaz. */
+.shop-shell .shop-clock b{min-width:2ch;text-align:center}
+.shop-shell .shop-clock small{color:var(--shop-invert-muted);font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .shop-clock.is-compact>span{display:inline-flex;align-items:baseline;gap:3px;min-width:0;padding:4px 7px}
+.shop-shell .shop-clock.is-compact b{font-size:14px}
+.shop-shell .shop-clock.is-compact small{font-size:9px}
+.shop-shell .shop-clock.is-over{padding:4px 8px;border-radius:2px;background:var(--shop-soft);color:var(--shop-muted);font-size:12px;font-weight:600}
+/* Kampanya şeridi: başlıkla aynı genişlikte, başlığın altında ayrı bir kart. */
+/* Başlık ile bant arası (başlığın 8px alt dolgusu + 14px) ve bant ile sayfa içeriği arası (8px + içeriğin 14px üst boşluğu) eşittir. */
+.shop-shell .shop-countdown{display:block;margin-block:14px 8px}
+.shop-shell[data-countdown-off] .shop-countdown{display:none}
+.shop-shell .shop-countdown-card{display:flex;align-items:center;gap:14px;min-height:56px;padding:8px 10px 8px 14px;border-radius:2px;background:linear-gradient(90deg,var(--shop-accent-fill),color-mix(in srgb,var(--shop-accent-fill) 72%,#7c3aed));color:#fff;box-shadow:0 14px 30px -18px color-mix(in srgb,var(--shop-accent) 80%,transparent)}
+.shop-shell .shop-countdown-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:2px;background:rgb(255 255 255 / .18);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.shop-shell .shop-countdown-tag svg{width:14px;height:14px}
+.shop-shell .shop-countdown-card>p{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;min-width:0;flex:1;margin:0;font-size:13.5px}
+.shop-shell .shop-countdown-card>p b{font-weight:700}
+.shop-shell .shop-countdown-card>p span{display:inline-flex;align-items:center;gap:6px;color:rgb(255 255 255 / .9)}
+.shop-shell .shop-countdown-card>p button{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border:1px dashed rgb(255 255 255 / .6);border-radius:2px;background:rgb(255 255 255 / .12);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.shop-shell .shop-countdown-card>p button svg{width:13px;height:13px}
+.shop-shell .shop-countdown-card>p code{font-family:inherit;letter-spacing:.04em}
+.shop-shell .shop-countdown .shop-clock>span{background:rgb(0 0 0 / .22);color:#fff}
+.shop-shell .shop-countdown .shop-clock small{color:rgb(255 255 255 / .75)}
+.shop-shell .shop-countdown-close{display:grid;place-items:center;width:32px;height:32px;flex:none;padding:0;border:0;border-radius:2px;background:none;color:#fff;cursor:pointer}
+.shop-shell .shop-countdown-close:hover{background:rgb(255 255 255 / .16)}
+.shop-shell .shop-countdown-close svg{width:16px;height:16px}
+.shop-shell .shop-countdown+.shop-cart-reminder{margin-top:2px}
+/* Mobil: etiket ve kapat üstte, kampanya adı ve kod ortada, sayaç altta. */
+@media(max-width:760px){
+ .shop-shell .shop-countdown{margin-block:12px 6px}
+ .shop-shell .shop-countdown-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;padding:12px 10px 12px 14px}
+ .shop-shell .shop-countdown-tag{justify-self:start;grid-column:1;grid-row:1}
+ .shop-shell .shop-countdown-close{grid-column:2;grid-row:1;margin:-4px -2px 0 0}
+ .shop-shell .shop-countdown-card>p{grid-column:1/-1;grid-row:2}
+ .shop-shell .shop-countdown-card>.shop-clock{grid-column:1/-1;grid-row:3;justify-self:start}
+}
+.shop-shell .sc-coupon-countdown{display:grid;gap:8px;margin:4px 0 14px}
+.shop-shell .sc-coupon-countdown small{color:var(--shop-muted);font-size:12px;font-weight:600}
+
+/* --- Sepet hatırlatma: başlıkla aynı genişlikte, başlığın altında ayrı bir kart --------------------------------------- */
+.shop-shell .shop-cart-reminder{display:block;margin-block:14px 8px}
+.shop-shell .shop-cart-reminder-card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;align-items:center;gap:14px;padding:12px 12px 12px 16px;border:1px solid color-mix(in srgb,var(--shop-accent) 28%,var(--shop-line));border-left:3px solid var(--shop-accent);border-radius:2px;background:linear-gradient(90deg,var(--shop-tint),var(--shop-surface) 60%);box-shadow:var(--shop-shadow)}
+.shop-shell .shop-cart-reminder-icon{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:2px;background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .shop-cart-reminder-icon svg{width:20px;height:20px}
+.shop-shell .shop-cart-reminder-icon b{position:absolute;top:-7px;right:-7px;display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--shop-ink);color:var(--shop-surface);font-size:11px;font-weight:700;line-height:1;box-shadow:0 0 0 2px var(--shop-surface)}
+.shop-shell .shop-cart-reminder-card>p{display:grid;gap:3px;min-width:0;margin:0}
+.shop-shell .shop-cart-reminder-card>p b{color:var(--shop-ink);font-size:14.5px;font-weight:600;line-height:1.3}
+.shop-shell .shop-cart-reminder-card>p span{overflow:hidden;color:var(--shop-muted);font-size:12.5px;line-height:1.45;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-cart-reminder-card>.shop-button{min-height:44px;padding:0 20px;white-space:nowrap}
+.shop-shell .shop-cart-reminder-close{display:grid;place-items:center;width:34px;height:34px;padding:0;border:0;border-radius:2px;background:none;color:var(--shop-muted);cursor:pointer}
+.shop-shell .shop-cart-reminder-close:hover{background:var(--shop-soft);color:var(--shop-ink)}
+.shop-shell .shop-cart-reminder-close svg{width:16px;height:16px}
+/* Mobil: simge, metin ve kapat üst satırda; düğme alt satırda tam genişlik. */
+@media(max-width:640px){
+ .shop-shell .shop-cart-reminder{margin-block:12px 6px}
+ .shop-shell .shop-cart-reminder-card{grid-template-columns:auto minmax(0,1fr) auto;gap:12px;padding:14px 10px 14px 14px}
+ .shop-shell .shop-cart-reminder-card>p span{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+ .shop-shell .shop-cart-reminder-card>.shop-button{grid-column:1/-1;grid-row:2;width:100%}
+ .shop-shell .shop-cart-reminder-close{grid-column:3;grid-row:1;align-self:start;margin-top:-4px}
+}
+
+/* Koyu mod düğmesi: başlık sığmadığında (menü çekmeceye dönüştüğünde) menünün içinde yazılı satır olarak gösterilir. */
+.shop-shell .shop-nav .shop-mobile-scheme{display:none}
+@media(max-width:1080px){
+ .shop-shell .shop-actions .shop-scheme-toggle{display:none}
+ .shop-shell .shop-nav .shop-mobile-scheme{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;margin-top:8px;padding:0 14px;border:0;border-radius:2px;background:var(--shop-soft);color:var(--shop-ink);font:inherit;font-size:14px;font-weight:600;text-align:left;cursor:pointer}
+ .shop-shell .shop-nav .shop-mobile-scheme svg{width:18px;height:18px;color:var(--shop-accent)}
+}
+
+/* --- Hızlı sipariş: bağlantıyla veya seçerek ---------------------------------------------------------------------- */
+.shop-shell .shop-quick-select{display:contents}
+.shop-shell .shop-quick-select>.shop-button{min-height:50px;min-width:210px;max-width:320px}
+.shop-shell .shop-quick-select>.shop-button span{overflow:hidden;text-overflow:ellipsis}
+.shop-shell .shop-quick:has(>.shop-quick-modes){grid-template-columns:minmax(210px,250px) minmax(0,1fr);grid-template-rows:auto auto 1fr;align-items:start;gap:14px 32px}
+.shop-shell .shop-quick:has(>.shop-quick-modes)>.shop-quick-title{grid-area:1/1}
+.shop-shell .shop-quick:has(>.shop-quick-modes)>.shop-quick-modes{grid-area:2/1}
+.shop-shell .shop-quick:has(>.shop-quick-modes)>:is(.shop-quick-link,.shop-quick-select){grid-column:2;grid-row:1/4;align-self:center}
+.shop-shell .shop-quick:has(>.shop-quick-modes) .shop-quick-select{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:14px}
+.shop-shell .shop-quick-modes{display:grid;grid-template-columns:1fr 1fr;padding:3px;border-radius:2px;background:var(--shop-soft)}
+.shop-shell .shop-quick-modes button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:0 10px;border:0;border-radius:2px;background:none;color:var(--shop-muted);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+.shop-shell .shop-quick-modes button svg{width:15px;height:15px}
+.shop-shell .shop-quick-modes button[aria-selected=true]{background:var(--shop-surface);color:var(--shop-ink);box-shadow:0 1px 3px rgb(0 0 0 / .12)}
+.shop-shell .shop-quick-link{display:grid;gap:10px;min-width:0}
+.shop-shell .shop-quick-paste{display:flex;align-items:center;gap:10px;min-height:54px;padding:0 8px 0 16px;border:1.5px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);transition:border-color .15s,box-shadow .15s}
+.shop-shell .shop-quick-paste:focus-within{border-color:var(--shop-accent);box-shadow:0 0 0 4px var(--shop-marker)}
+.shop-shell .shop-quick-paste>svg{width:19px;height:19px;flex:none;color:var(--shop-accent)}
+.shop-shell .shop-quick-paste input{flex:1;min-width:0;height:50px;padding:0;border:0;background:none;box-shadow:none;color:var(--shop-ink);font-size:15px;outline:0}
+.shop-shell .shop-quick-paste button{display:grid;place-items:center;width:34px;height:34px;padding:0;border:0;border-radius:2px;background:var(--shop-soft);color:var(--shop-muted);cursor:pointer}
+.shop-shell .shop-quick-paste button svg{width:15px;height:15px}
+@media(max-width:1080px){.shop-shell .shop-quick:has(>.shop-quick-modes){grid-template-columns:minmax(0,1fr);grid-template-rows:none}.shop-shell .shop-quick:has(>.shop-quick-modes)>*{grid-area:auto!important}.shop-shell .shop-quick:has(>.shop-quick-modes) .shop-quick-select{grid-template-columns:minmax(0,1fr)}.shop-shell .shop-quick-select>.shop-button{max-width:none;width:100%}}
+
+/* --- Hizmet durumu ------------------------------------------------------------------------------------------------ */
+
+/* --- Koyu mod düğmesi ve uygulama yükleme ------------------------------------------------------------------------- */
+.shop-shell .shop-scheme-toggle svg{width:19px;height:19px}
+.shop-shell .shop-install{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 12px;border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+.shop-shell .shop-install:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+.shop-shell .shop-install svg{width:15px;height:15px}
+
+/* --- Güven rozetleri ------------------------------------------------------------------------------------------------
+   Kartta: adedin altında, tek satırda kaydırılabilen küçük etiketler. Paket sayfasında: başlama ve garanti kartlarıyla
+   aynı görünümde küçük kartlar. */
+
+/* --- Paket kartı fiyat paneli: etiket ve fiyat solda, indirimsiz fiyat ve indirim oranı sağda. ------------------------ */
+.shop-shell .shop-package footer{gap:12px;padding:16px 18px 18px;text-align:left}
+.shop-shell .shop-package footer>div:not(.shop-package-actions){display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"label compare" "price compare";align-items:center;justify-items:start;column-gap:10px;padding:10px 14px;border-radius:2px;background:var(--shop-soft);line-height:1.2}
+.shop-shell .shop-package footer>div>small{grid-area:label;color:var(--shop-muted);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .shop-package footer>div>strong{grid-area:price;margin-top:3px;font-size:24px;line-height:1.1}
+
+/* --- Sepet önerileri: sepet listesinin altında düzenli bir ızgara. ----------------------------------------------------- */
+.shop-shell .shop-cart-suggest{display:grid;gap:14px;margin-top:28px}
+.shop-shell .shop-cart-suggest>header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.shop-shell .shop-cart-suggest>header small{display:block;color:var(--shop-accent);font-size:11px;font-weight:700;letter-spacing:.1em}
+.shop-shell .shop-cart-suggest>header h2{margin-top:4px;font-size:19px}
+.shop-shell .shop-cart-suggest>header>a{display:inline-flex;align-items:center;gap:4px;color:var(--shop-accent);font-size:13px;font-weight:600;white-space:nowrap}
+.shop-shell .shop-cart-suggest>header>a svg{width:15px;height:15px}
+.shop-shell .shop-cart-suggest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.shop-shell .shop-cart-suggest-grid article{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);transition:border-color .15s,box-shadow .15s}
+.shop-shell .shop-cart-suggest-grid article:hover{border-color:color-mix(in srgb,var(--shop-accent) 40%,var(--shop-line));box-shadow:var(--shop-shadow)}
+.shop-shell .shop-cart-suggest-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:2px;background:var(--brand,var(--shop-accent-fill));color:#fff}
+.shop-shell .shop-cart-suggest-icon svg{width:21px;height:21px}
+.shop-shell .shop-cart-suggest-grid article>div{display:grid;gap:1px;min-width:0}
+.shop-shell .shop-cart-suggest-grid small{overflow:hidden;color:var(--shop-muted);font-size:11.5px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-cart-suggest-grid a{overflow:hidden;color:var(--shop-ink);font-size:13.5px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-cart-suggest-grid a:hover{color:var(--shop-accent)}
+.shop-shell .shop-cart-suggest-grid strong{color:var(--shop-accent);font-size:14px;font-weight:700}
+.shop-shell .shop-cart-suggest-grid button{display:inline-flex;align-items:center;gap:4px;min-height:36px;padding:0 12px;border:1px solid color-mix(in srgb,var(--shop-accent) 45%,var(--shop-line));border-radius:2px;background:var(--shop-tint);color:var(--shop-accent);font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;transition:background-color .15s,color .15s}
+.shop-shell .shop-cart-suggest-grid button:hover{background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .shop-cart-suggest-grid button svg{width:15px;height:15px}
+@media(max-width:640px){.shop-shell .shop-cart-suggest-grid{grid-template-columns:minmax(0,1fr)}.shop-shell .shop-cart-suggest-grid button span{display:none}.shop-shell .shop-cart-suggest-grid button{width:38px;justify-content:center;padding:0}}
+
+/* --- Siparişlerim tablosu (mobilde kartlara dönüşür) -------------------------------------------------------------- */
+
+/* --- Havale bildirimi formu ve havale ile bakiye yükleme ---------------------------------------------------------- */
+.shop-shell .shop-transfer-form{display:grid;gap:12px;width:100%;margin-top:4px;padding:16px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);text-align:left}
+.shop-shell .shop-transfer-form>header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px}
+.shop-shell .shop-transfer-form>header b{color:var(--shop-ink);font-size:15px}
+.shop-shell .shop-transfer-form>header span{color:var(--shop-muted);font-size:12.5px;font-weight:600}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts){display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts) li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;padding:10px 12px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-soft)}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts) li>div{display:grid;gap:1px}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts) small{color:var(--shop-muted);font-size:12px}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts) button{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px dashed color-mix(in srgb,var(--shop-accent) 45%,var(--shop-line-2));border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);font:inherit;cursor:pointer}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts) code{font-family:var(--shop-display);font-size:13px;font-weight:600;letter-spacing:.04em}
+.shop-shell :is(.shop-transfer-accounts,.customer-transfer-accounts) button svg{width:15px;height:15px;color:var(--shop-accent)}
+.shop-shell .shop-transfer-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.shop-shell .shop-transfer-fields label{display:grid;gap:6px;color:var(--shop-ink);font-size:13px;font-weight:600}
+.shop-shell .shop-transfer-note{grid-column:1/-1}
+.shop-shell .shop-transfer-form .shop-button{justify-self:start;min-height:46px}
+.shop-shell .shop-transfer-done{display:flex;align-items:flex-start;gap:12px;width:100%;padding:14px 16px;border:1px solid color-mix(in srgb,var(--shop-good) 35%,var(--shop-line));border-radius:2px;background:color-mix(in srgb,var(--shop-good) 8%,var(--shop-surface));text-align:left}
+.shop-shell .shop-transfer-done>svg{width:22px;height:22px;flex:none;padding:3px;border-radius:50%;background:var(--shop-good);color:var(--shop-on-good)}
+.shop-shell .shop-transfer-done div{display:grid;gap:2px}
+.shop-shell .shop-transfer-done span{color:var(--shop-muted);font-size:13px}
+@media(max-width:640px){.shop-shell .shop-transfer-fields{grid-template-columns:minmax(0,1fr)}.shop-shell .shop-transfer-form .shop-button{justify-self:stretch}}
+
+/* --- Paket sayfası satın alma kutusu: Satın Al ve Sepete Ekle ---------------------------------------------------- */
+
+/* Canlı destekte yeni mesaj: dock Destek simgesinde küçük kırmızı nokta. */
+.shop-shell .shop-dock-bar .shop-dock-dot{position:absolute;top:-3px;right:-3px;width:12px;height:12px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 2px var(--shop-surface);animation:shop-dot-pulse 1.6s ease-in-out infinite}
+@keyframes shop-dot-pulse{50%{box-shadow:0 0 0 2px var(--shop-surface),0 0 0 6px rgb(239 68 68 / .25)}}
+
+/* Mağaza tabloları (Siparişlerim, Yükleme Geçmişi): başlık ve hücreler aynı hizada, durum rozetleri eşit genişlikte. */
+.shop-shell :is(.customer-orders-table,.customer-history-scroll) :is(th,td){text-align:left;vertical-align:middle}
+/* Sepet: özel yorum paketlerinde yorum alanı (her satır bir yorum). */
+.shop-shell .shop-cart-comments small{color:var(--shop-muted);font-weight:500}
+.shop-shell .shop-cart-comments textarea{box-sizing:border-box;width:100%;min-height:110px;resize:vertical;line-height:1.5}
+.shop-shell .shop-cart-comments textarea[aria-invalid="true"]{border-color:#ef4444}
+
+/* Hesabım › Siparişlerim: masaüstünde başlıklar ve veriler ortalı; işlem düğmeleri aynı yükseklikte (36 px) tek sırada.
+   Verilen puan beş yıldız ve puanla gösterilir; Tekrar Al simge ve yazıyla belirgin bir düğmedir. */
+
+/* Paket sayfası: diğer sayfalardaki gibi breadcrumb, ad ve açıklama üstteki başlık kartında; kartla içerik arası 40px. */

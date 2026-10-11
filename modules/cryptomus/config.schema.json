@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "merchantId",
+    "paymentKey"
+  ],
+  "properties": {
+    "merchantId": {
+      "type": "string",
+      "title": "merchantId",
+      "minLength": 1
+    },
+    "paymentKey": {
+      "type": "string",
+      "title": "paymentKey",
+      "minLength": 1,
+      "writeOnly": true
+    }
+  }
+}

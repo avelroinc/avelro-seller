@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "stripe",
+  "name": "Stripe Entegrasyonu",
+  "description": "Stripe ile kartla ödeme almak için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "payment",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.stripe.com"
+  ],
+  "configuration": "config.schema.json"
+}

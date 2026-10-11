@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "netgsm",
+  "name": "Netgsm Entegrasyonu",
+  "description": "Netgsm Entegrasyonu için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "loginverify",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.netgsm.com.tr"
+  ],
+  "configuration": "config.schema.json"
+}

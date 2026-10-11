@@ -1,0 +1,29 @@
+# Avelro Paket Satış Sistemi Temaları
+
+Mağaza temaları. Her tema kendi klasöründedir; sistem `catalog.json` dosyasını okuyup temaları kurulum sihirbazında ve tema
+seçiminde listeler, seçilen temanın `theme.css` dosyasını indirir, doğrular ve kurar. Varsayılan tema Pulse'tır ve sistemle
+birlikte de gelir.
+
+| Tema | Klasör | Açıklama |
+| --- | --- | --- |
+| Pulse | `pulse/` | Beyaz ve açık gri-mavi bölümler, marka renkli platform kartları ve satış odaklı düzen. |
+
+## Tema Klasörü
+
+- `theme.json`: kimlik, ad, sürüm (X.Y.Z), açıklama, yazar ve önizleme görseli
+- `theme.css`: sistemin indirdiği tek stil dosyası (`npm run build` ile `src/` altından üretilir)
+- `preview.webp`: 960×600 önizleme görseli
+- `src/`, `build.mjs`: stil kaynakları ve derleme
+- `README.md`: tema açıklaması ve Türkçe sürüm notları
+
+Seçiciler `.shop-shell` ile başlar; mağaza rengi `--shop-accent` değişkenleriyle gelir. Stil dosyasında ters bölü kaçışı,
+`@import` ve `data:` dışındaki `url()` adresleri kullanılamaz; derleme ve sistem bunları denetler. Boyut sınırı 1,5 MB.
+
+## Yeni Tema Ekleme
+
+1. `pulse/` klasörünü yeni kimlikle kopyalayın (kimlik: küçük harf, rakam ve tire; `^[a-z][a-z0-9-]{1,30}$`).
+2. `theme.json` içinde kimliği, adı ve açıklamayı değiştirin; `src/` altındaki stilleri düzenleyip `npm run build` çalıştırın.
+3. `preview.webp` önizlemesini yenileyin.
+4. `catalog.json` içindeki `themes` listesine `id`, `name`, `description`, `path` ve `preview` alanlarıyla ekleyin.
+
+Sistem güncellemesi gerekmez; yeni tema bütün kurulumlarda hemen görünür.

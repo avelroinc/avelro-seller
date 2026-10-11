@@ -1,0 +1,8 @@
+{
+  "name": "avelro-seller-theme-pulse",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

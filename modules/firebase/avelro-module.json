@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "firebase",
+  "name": "Firebase Entegrasyonu",
+  "description": "Firebase Entegrasyonu için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "loginverify",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:identitytoolkit.googleapis.com"
+  ],
+  "configuration": "config.schema.json"
+}

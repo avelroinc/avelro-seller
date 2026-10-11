@@ -1,0 +1,571 @@
+/* ==========================================================================
+   Mağaza vitrini — temel katman
+   Değişkenler, açık ve koyu renk düzeni (Klasik / Modern), sıfırlama, yazı, düğmeler, form öğeleri, üst şerit ve başlık.
+   Tüm kurallar .shop-shell altındadır; panel ekranlarına sızmaz. Mağaza rengi (--shop-accent) vurgu ve başlıklarda,
+   düğme rengi (--shop-button-bg) satın alma düğmelerinde kullanılır. Platformlar kendi marka rengini taşır (--brand).
+   ========================================================================== */
+
+.shop-shell{
+ /* Klasik (varsayılan): beyaz ve açık gri-mavi bölümler, lacivert metin, bol gölge. */
+ /* Mağaza rengi okunabilirlik için sunucuda ayarlanır (bkz. layout): açık modda koyulaştırılmış, koyu modda açılmış hâli. */
+ --shop-accent:var(--shop-accent-light,#3d5ee0);
+ /* Üzerinde beyaz yazı taşıyan renkli zeminler (bant, kart, rozet) ve beyaz zemindeki vurgu yazıları: açık temada mağaza
+    rengiyle aynıdır; koyu temada açılmış vurgu yerine beyaz yazının okunduğu düğme rengi kullanılır. */
+ --shop-accent-fill:var(--shop-accent);
+ --shop-on-accent:#ffffff;
+ --shop-canvas:#ffffff;
+ --shop-band:#eef2f8;
+ --shop-outside:#fbfcfe;
+ --shop-surface:#ffffff;
+ --shop-soft:#f2f5fa;
+ --shop-ink:#1b2336;
+ --shop-ink-2:#3b4458;
+ --shop-muted:#5d667c;
+ --shop-faint:#9aa3b5;
+ --shop-line:#e7eaf1;
+ --shop-line-2:#d6dbe5;
+ --shop-border:var(--shop-line-2);
+ --shop-strong-line:var(--shop-line);
+ --shop-invert:#1b2336;
+ --shop-invert-ink:#ffffff;
+ --shop-invert-muted:#a9b1c3;
+ --shop-invert-line:#2e3850;
+ --shop-tint:color-mix(in srgb,var(--shop-accent) 8%,#fff);
+ --shop-tint-2:color-mix(in srgb,var(--shop-accent) 15%,#fff);
+ --shop-marker:color-mix(in srgb,var(--shop-accent) 22%,transparent);
+ --shop-good:#11845a;
+ --shop-on-good:#ffffff;
+ --shop-warn:#c77c02;
+ --shop-bad:#e0353b;
+ --shop-radius:2px;
+ --shop-radius-lg:2px;
+ --shop-shadow:0 12px 34px -14px rgb(27 35 54 / .16);
+ --shop-shadow-lg:0 26px 60px -24px rgb(27 35 54 / .28);
+ --shop-display:Poppins,"Segoe UI",system-ui,sans-serif;
+ --shop-text:Poppins,"Segoe UI",system-ui,sans-serif;
+ --shop-width:1240px;
+ --shop-gutter:28px;
+ --shop-header-h:80px;
+ --brand:var(--shop-accent);
+ --accent:var(--shop-button-bg);
+ color-scheme:light;
+ display:block;
+ min-height:100dvh;
+ overflow-x:clip;
+ background:var(--shop-outside);
+ color:var(--shop-ink);
+ font-family:var(--shop-text);
+ font-size:15px;
+ font-weight:400;
+ line-height:1.65;
+ -webkit-font-smoothing:antialiased;
+ text-rendering:optimizeLegibility;
+}
+/* Modern: gece mavisi zemin, açık metin. */
+.shop-shell[data-shop-scheme=dark]{
+ --shop-accent:var(--shop-accent-dark,#8aa2ff);
+ --shop-accent-fill:var(--shop-accent-light,#3d5ee0);
+ --shop-on-accent:#0d1321;
+ --shop-canvas:#0d1321;
+ --shop-band:#111a2c;
+ --shop-outside:#0c111e;
+ --shop-surface:#162036;
+ --shop-soft:#1c2740;
+ --shop-ink:#f2f5fb;
+ --shop-ink-2:#c9d0de;
+ --shop-muted:#98a2b8;
+ --shop-faint:#6d7891;
+ --shop-line:#223050;
+ --shop-line-2:#2f3e60;
+ --shop-invert:#f2f5fb;
+ --shop-invert-ink:#111827;
+ --shop-invert-muted:#58627a;
+ --shop-invert-line:#d7dce7;
+ --shop-tint:color-mix(in srgb,var(--shop-accent) 14%,var(--shop-surface));
+ --shop-tint-2:color-mix(in srgb,var(--shop-accent) 24%,var(--shop-surface));
+ --shop-marker:color-mix(in srgb,var(--shop-accent) 40%,transparent);
+ --shop-good:#3ecf8e;
+ --shop-on-good:#0d1321;
+ --shop-warn:#f1b24a;
+ --shop-bad:#ff6b6f;
+ --shop-shadow:0 14px 36px -16px rgb(0 0 0 / .6);
+ --shop-shadow-lg:0 30px 60px -24px rgb(0 0 0 / .75);
+ color-scheme:dark;
+}
+body:has(.shop-shell){background:#fbfcfe}
+body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
+
+/* Platform marka renkleri: kutular ve paket kartları içlerindeki ikona göre renklenir. */
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=instagram]){--brand:#e4336f}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=tiktok]){--brand:#121212}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=youtube]){--brand:#f00f0f}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=twitter]){--brand:#1d9bf0}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=facebook]){--brand:#3b5998}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=spotify]){--brand:#1db954}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=telegram]){--brand:#229ed9}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=linkedin]){--brand:#0a66c2}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=twitch]){--brand:#9146ff}
+.shop-shell[data-shop-scheme=dark] :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=tiktok]){--brand:#26303f}
+
+/* --- Sıfırlama ------------------------------------------------------------ */
+.shop-shell *,.shop-shell *::before,.shop-shell *::after{box-sizing:border-box}
+.shop-shell :where(h1,h2,h3,h4,h5,p,ul,ol,dl,dd,figure,blockquote){margin:0}
+.shop-shell :where(ul,ol){padding:0;list-style:none}
+.shop-shell :where(h1,h2,h3,h4,h5){color:var(--shop-ink);font-family:var(--shop-display);font-weight:700;letter-spacing:-.02em;line-height:1.2;text-wrap:balance}
+.shop-shell :where(p,li,dd){text-wrap:pretty}
+.shop-shell :where(b,strong){font-weight:600}
+.shop-shell :where(a){color:inherit;text-decoration:none}
+.shop-shell :where(button,input,select,textarea){font:inherit;color:inherit;letter-spacing:inherit}
+.shop-shell :where(button,summary,select,label[for]){cursor:pointer}
+.shop-shell :where(button:disabled){cursor:not-allowed}
+.shop-shell :where(svg){flex:none}
+.shop-shell :where(img){max-width:100%;height:auto}
+.shop-shell :where(table){width:100%;border-collapse:collapse}
+.shop-shell :where(th,td){padding:0;border:0;text-align:left}
+.shop-shell ::selection{background:var(--shop-marker);color:var(--shop-ink)}
+.shop-shell :focus-visible{outline:2px solid var(--shop-accent);outline-offset:3px}
+.shop-shell .animate-spin{animation:shop-spin .9s linear infinite}
+@keyframes shop-spin{to{transform:rotate(360deg)}}
+
+/* --- Yerleşim ------------------------------------------------------------- */
+/* Kutulu yerleşim: başlık, içerik ve footer ortalı tek bir kutunun içindedir; üstte ve altta boşluk yoktur; dış zemin iç zeminden çok az farklıdır.
+   overflow:clip, ekran kenarına uzanan bantları kutu kenarında keser; kaydırma kabı oluşturmadığı için yapışkan başlık çalışır. */
+.shop-shell .shop-frame{display:flex;flex-direction:column;width:100%;max-width:1440px;min-height:100dvh;margin-inline:auto;background:var(--shop-canvas);box-shadow:0 0 70px -34px rgb(27 35 54 / .045);overflow:clip}
+.shop-shell[data-shop-scheme=dark] .shop-frame{box-shadow:0 0 70px -34px rgb(0 0 0 / .25)}
+.shop-shell .shop-page{flex:1 0 auto}
+.shop-shell .shop-container{width:100%;max-width:calc(var(--shop-width) + var(--shop-gutter) * 2);margin-inline:auto;padding-inline:var(--shop-gutter)}
+.shop-shell main{padding-bottom:96px}
+
+/* Bölüm başlığı: ortalı. Üstte vurgu renginde küçük rozet, altında başlık ve açıklama; bağlantı altta ortalanır. */
+.shop-shell .shop-section-heading{display:flex;flex-direction:column;align-items:center;gap:18px;margin-bottom:40px;text-align:center}
+.shop-shell .shop-section-heading>div{display:grid;justify-items:center;max-width:680px}
+.shop-shell :where(.shop-section-heading>div>small,.shop-discover>div:first-child>small,.shop-track-intro>small,.customer-heading>div>small,.customer-auth-copy>small,.sc-heading-copy>small,.shop-choice-guide>small,.shop-hero-copy>small,.sc-eyebrow){display:inline-flex;align-items:center;gap:8px;color:var(--shop-accent);font-family:var(--shop-text);font-size:12px;font-weight:600;letter-spacing:.08em;line-height:1.4;text-transform:uppercase}
+.shop-shell :where(.shop-section-heading>div>small,.shop-track-intro>small,.customer-heading>div>small,.customer-auth-copy>small,.sc-heading-copy>small){padding:6px 14px;border-radius:2px;background:var(--shop-tint)}
+.shop-shell .shop-section-heading h2{margin-top:14px;font-size:clamp(26px,3vw,36px);text-transform:none}
+.shop-shell .shop-section-heading p{margin-top:10px;max-width:56ch;color:var(--shop-muted);font-size:15.5px}
+
+/* --- Düğmeler ------------------------------------------------------------- */
+.shop-shell :is(.shop-button,.customer-button,.payment-gateway-btn){display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border:0;border-radius:var(--shop-radius);background:var(--shop-button-bg);color:#fff;font-family:var(--shop-text);font-size:14.5px;font-weight:600;line-height:1.2;text-align:center;white-space:nowrap;box-shadow:0 10px 22px -12px color-mix(in srgb,var(--shop-button-bg) 90%,transparent);transition:background-color .18s,color .18s,transform .18s,box-shadow .18s}
+.shop-shell :is(.shop-button,.customer-button,.payment-gateway-btn) svg{width:17px;height:17px;transition:transform .18s}
+.shop-shell :is(.shop-button,.customer-button.primary,.payment-gateway-btn):not(:disabled):hover{background:color-mix(in srgb,var(--shop-button-bg) 88%,#000);transform:translateY(-1px);box-shadow:0 14px 26px -12px var(--shop-button-bg)}
+.shop-shell .shop-button:not(:disabled):hover svg:last-child{transform:translateX(3px)}
+.shop-shell :is(.shop-button,.customer-button,.payment-gateway-btn):not(:disabled):active{transform:translateY(0)}
+.shop-shell :is(.shop-button,.customer-button,.payment-gateway-btn):disabled{background:var(--shop-soft);color:var(--shop-faint);box-shadow:none}
+.shop-shell :is(.shop-button-outline,.customer-button:not(.primary)){border:1px solid var(--shop-line-2);background:var(--shop-surface);color:var(--shop-ink);box-shadow:none}
+.shop-shell :is(.shop-button-outline,.customer-button:not(.primary)):not(:disabled):hover{border-color:var(--shop-accent);background:var(--shop-surface);color:var(--shop-accent);box-shadow:none}
+.shop-shell .shop-text-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border:1px solid var(--shop-line-2);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);font-size:14px;font-weight:600;transition:gap .18s,color .18s,border-color .18s}
+.shop-shell .shop-text-link svg{width:16px;height:16px;color:var(--shop-accent)}
+.shop-shell .shop-text-link:hover{gap:12px;border-color:var(--shop-accent);color:var(--shop-accent)}
+
+/* --- Form öğeleri (sıfır özgüllük: bileşen kuralları her zaman üstün gelir) --- */
+.shop-shell :where(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea){width:100%;min-height:50px;padding:0 16px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font-size:14.5px;line-height:1.4;transition:border-color .15s,box-shadow .15s,background-color .15s}
+.shop-shell :where(textarea){padding:13px 16px;line-height:1.6;resize:vertical}
+.shop-shell :where(select){appearance:none;padding-right:42px;background-image:linear-gradient(45deg,transparent 50%,var(--shop-muted) 50%),linear-gradient(135deg,var(--shop-muted) 50%,transparent 50%);background-position:calc(100% - 21px) 52%,calc(100% - 16px) 52%;background-size:5px 5px;background-repeat:no-repeat}
+.shop-shell :is(input,select,textarea)::placeholder{color:var(--shop-faint)}
+.shop-shell :where(input:not([type=checkbox]):not([type=radio]),select,textarea):hover{border-color:color-mix(in srgb,var(--shop-accent) 40%,var(--shop-line-2))}
+.shop-shell :where(input:not([type=checkbox]):not([type=radio]),select,textarea):focus{outline:none;border-color:var(--shop-accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--shop-accent) 14%,transparent)}
+.shop-shell :where(input,select,textarea):disabled{opacity:.6;cursor:not-allowed}
+.shop-shell input[type=checkbox]{width:18px;height:18px;margin:0;accent-color:var(--shop-button-bg)}
+
+/* Uyarı kutuları */
+.shop-shell :is(.shop-error,.customer-message.error,.tools-error,.panel-data-warning){margin:0;padding:12px 16px;border:1px solid color-mix(in srgb,var(--shop-bad) 30%,transparent);border-radius:var(--shop-radius);background:color-mix(in srgb,var(--shop-bad) 7%,transparent);color:var(--shop-bad);font-size:14px;font-weight:500;line-height:1.5}
+.shop-shell .panel-data-warning button{margin-left:10px;padding:0;border:0;background:none;color:inherit;font-weight:700;text-decoration:underline}
+
+/* --- Başlık ve menü: kaydırırken üstte kalan, gölgeli beyaz bar --------------- */
+.shop-shell .shop-header{position:sticky;top:0;z-index:40;padding:14px 0 8px;background:color-mix(in srgb,var(--shop-canvas) 86%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px)}
+.shop-shell .shop-nav-row{display:flex;align-items:center;gap:16px;min-height:var(--shop-header-h);padding:0 14px 0 22px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .shop-brand{display:flex;align-items:center;gap:12px;min-width:0;margin-right:auto}
+.shop-shell .shop-brand>img{width:44px;height:44px;flex:none;border-radius:2px;object-fit:cover}
+.shop-shell .shop-brand>span:first-child{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:2px;background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .shop-brand>span:first-child svg{width:21px;height:21px}
+.shop-shell .shop-brand>span:last-child{display:grid;min-width:0;line-height:1.25}
+.shop-shell .shop-brand b{overflow:hidden;font-family:var(--shop-display);font-size:19px;font-weight:700;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-brand small{overflow:hidden;color:var(--shop-muted);font-size:12px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-nav{display:flex;align-items:center;gap:2px}
+.shop-shell .shop-nav a{position:relative;display:inline-flex;align-items:center;gap:6px;padding:10px 9px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:14.5px;font-weight:500;white-space:nowrap;transition:color .15s,background-color .15s}
+.shop-shell .shop-nav a .shop-menu-icon{width:17px;height:17px;color:var(--shop-faint);transition:color .15s}
+.shop-shell .shop-nav a:is(:hover,[aria-current=page]) .shop-menu-icon{color:var(--shop-accent)}
+.shop-shell .shop-nav a:hover{color:var(--shop-accent)}
+.shop-shell .shop-nav a[aria-current=page]{color:var(--shop-accent);font-weight:600}
+.shop-shell .shop-nav .shop-mobile-track{display:none}
+.shop-shell .shop-actions{display:flex;align-items:center;gap:6px}
+.shop-shell .shop-action{position:relative;display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 16px;border-radius:2px;background:var(--shop-soft);color:var(--shop-ink);font-size:14px;font-weight:600;transition:background-color .15s,color .15s}
+.shop-shell .shop-action svg{width:19px;height:19px}
+.shop-shell .shop-action:hover{background:var(--shop-tint-2);color:var(--shop-accent)}
+.shop-shell .shop-action-label{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-action-cart{background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .shop-action-cart:hover{background:color-mix(in srgb,var(--shop-accent) 88%,#000);color:var(--shop-on-accent)}
+.shop-shell .shop-action-cart b{display:grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:2px;background:#fff;color:var(--shop-accent-fill);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.shop-shell .shop-menu-toggle{display:none;place-items:center;width:46px;height:46px;border:0;border-radius:2px;background:var(--shop-soft);color:var(--shop-ink)}
+.shop-shell .shop-menu-toggle svg{width:20px;height:20px}
+
+/* Konum çubuğu */
+.shop-shell .sc-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding-top:26px;color:var(--shop-muted);font-size:13.5px}
+.shop-shell .sc-breadcrumb a{transition:color .15s}
+.shop-shell .sc-breadcrumb a:hover{color:var(--shop-accent)}
+.shop-shell .sc-breadcrumb svg{width:14px;height:14px;color:var(--shop-faint)}
+.shop-shell .sc-breadcrumb [aria-current=page]{overflow:hidden;max-width:40ch;color:var(--shop-ink);font-weight:500;text-overflow:ellipsis;white-space:nowrap}
+
+/* Boş durum ve başarı blokları */
+.shop-shell :is(.shop-empty,.sc-empty,.customer-empty){display:grid;justify-items:center;gap:10px;padding:56px 24px;border:1px dashed var(--shop-line-2);border-radius:var(--shop-radius-lg);background:var(--shop-surface);color:var(--shop-muted);font-size:15px;text-align:center}
+.shop-shell :is(.shop-empty,.sc-empty,.customer-empty)>svg,.shop-shell .sc-empty>span{display:grid;place-items:center;width:56px;height:56px;margin-bottom:4px;padding:15px;border-radius:2px;background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .sc-empty>span svg{width:24px;height:24px}
+.shop-shell :is(.shop-empty,.sc-empty,.customer-empty) :is(h2,h3){font-size:20px}
+.shop-shell :is(.shop-empty,.sc-empty,.customer-empty) p{max-width:46ch}
+.shop-shell :is(.shop-empty,.sc-empty,.customer-empty) .shop-button,.shop-shell :is(.sc-empty,.customer-empty) .customer-button{margin-top:8px}
+
+/* --- Dar ekran: menü açılır panele dönüşür --------------------------------- */
+@media(max-width:1240px) and (min-width:1081px){
+ .shop-shell .shop-brand small{display:none}
+}
+@media(max-width:1080px){
+ .shop-shell .shop-nav-row{gap:10px}
+ .shop-shell .shop-menu-toggle{display:grid}
+ .shop-shell .shop-nav{position:absolute;top:calc(100% + 8px);right:var(--shop-gutter);left:var(--shop-gutter);display:none;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100dvh - var(--shop-header-h) - 60px);overflow-y:auto;padding:10px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
+ .shop-shell .shop-nav.is-open{display:flex}
+ .shop-shell .shop-nav a{gap:12px;padding:13px 14px;font-size:15.5px}
+ .shop-shell .shop-nav a:hover,.shop-shell .shop-nav a[aria-current=page]{background:var(--shop-tint)}
+ .shop-shell .shop-nav a .shop-menu-icon{display:block;color:var(--shop-accent)}
+ .shop-shell .shop-nav .shop-mobile-track{display:flex;margin-top:8px;background:var(--shop-soft);font-weight:600}
+ .shop-shell .shop-nav .shop-mobile-track svg:last-child{width:17px;height:17px;margin-left:auto}
+}
+/* Menü satıra sığmadığında (öğe sayısı çoksa) geniş ekranda da açılır menü kullanılır. */
+.shop-shell .shop-nav-row.is-compact{gap:10px}
+.shop-shell .shop-nav-row.is-compact .shop-menu-toggle{display:grid}
+.shop-shell .shop-nav-row.is-compact .shop-nav{position:absolute;top:calc(100% + 8px);right:var(--shop-gutter);left:var(--shop-gutter);display:none;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100dvh - var(--shop-header-h) - 60px);overflow-y:auto;padding:10px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
+.shop-shell .shop-nav-row.is-compact .shop-nav.is-open{display:flex}
+.shop-shell .shop-nav-row.is-compact .shop-nav a{gap:12px;padding:13px 14px;font-size:15.5px}
+.shop-shell .shop-nav-row.is-compact .shop-nav a:hover,.shop-shell .shop-nav-row.is-compact .shop-nav a[aria-current=page]{background:var(--shop-tint)}
+.shop-shell .shop-nav-row.is-compact .shop-nav a .shop-menu-icon{display:block;color:var(--shop-accent)}
+.shop-shell .shop-nav-row.is-compact .shop-nav .shop-mobile-track{display:flex;margin-top:8px;background:var(--shop-soft);font-weight:600}
+.shop-shell .shop-nav-row.is-compact .shop-nav .shop-mobile-track svg:last-child{width:17px;height:17px;margin-left:auto}
+@media(min-width:1081px){.shop-shell .shop-nav-row.is-compact .shop-nav{left:auto;width:340px}}
+@media(max-width:640px){
+ .shop-shell{--shop-gutter:16px;--shop-header-h:64px;font-size:14.5px}
+ .shop-shell .shop-nav-row{padding:0 8px 0 12px;border-radius:2px}
+ .shop-shell .shop-brand small{display:none}
+ .shop-shell .shop-brand b{font-size:16px}
+ .shop-shell .shop-brand>img,.shop-shell .shop-brand>span:first-child{width:38px;height:38px;border-radius:2px}
+ .shop-shell .shop-actions{gap:6px}
+ .shop-shell .shop-action,.shop-shell .shop-menu-toggle{width:42px;height:42px;padding:0;justify-content:center;border-radius:2px}
+ .shop-shell .shop-action-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ .shop-shell .shop-action-cart b{position:absolute;top:-6px;right:-6px;box-shadow:0 0 0 2px var(--shop-surface)}
+ .shop-shell .shop-section-heading{margin-bottom:28px}
+ .shop-shell main{padding-bottom:72px}
+}
+
+/* Hem kapsayıcı hem kenarlıklı / zeminli bloklar: kenarlık ve zemin içerik genişliğinde kalır, kenar boşluğuna taşmaz. */
+.shop-shell .shop-container:is(.shop-nav-row,.sc-editorial,.shop-benefits,.shop-discover,.shop-ads-cta){width:calc(100% - var(--shop-gutter) * 2);max-width:var(--shop-width)}
+.shop-shell .shop-container:is(.sc-editorial,.shop-benefits){padding-inline:0}
+
+/* --- Bildirim zili: başlıkta hesap düğmesinin solunda; açılır panelde en yeni duyurular. ----------------------- */
+.shop-shell .shop-notices{position:relative}
+.shop-shell .shop-action-icon{width:46px;padding:0;border:0;justify-content:center;cursor:pointer}
+.shop-shell .shop-action-icon b{position:absolute;top:-6px;right:-6px;display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:#e0353b;color:#fff;font-size:11px;font-weight:700;box-shadow:0 0 0 2px var(--shop-surface)}
+.shop-shell .shop-notices-panel{position:absolute;top:calc(100% + 12px);right:0;z-index:60;display:grid;width:min(360px,calc(100vw - 32px));border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);animation:shop-reveal .2s ease both}
+.shop-shell .shop-notices-panel>header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .shop-notices-panel>header b{font-size:15px}
+.shop-shell .shop-notices-panel>header small{padding:2px 8px;border-radius:2px;background:var(--shop-tint);color:var(--shop-accent);font-size:12px;font-weight:600}
+.shop-shell .shop-notices-panel ul{display:grid;max-height:360px;overflow-y:auto}
+.shop-shell .shop-notices-panel li+li{border-top:1px solid var(--shop-line)}
+.shop-shell .shop-notices-panel li a{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;transition:background-color .15s}
+.shop-shell .shop-notices-panel li a:hover{background:var(--shop-soft)}
+.shop-shell .shop-notices-panel li a>span{display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:2px;background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .shop-notices-panel li a>span svg{width:16px;height:16px}
+.shop-shell .shop-notices-panel li div{display:grid;gap:3px;min-width:0}
+.shop-shell .shop-notices-panel li b{font-size:14px;line-height:1.35}
+.shop-shell .shop-notices-panel li p{display:-webkit-box;overflow:hidden;color:var(--shop-muted);font-size:13px;line-height:1.5;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.shop-shell .shop-notices-panel li time{color:var(--shop-faint);font-size:12px}
+.shop-shell .shop-notices-empty{padding:24px 16px;color:var(--shop-muted);font-size:13.5px;text-align:center}
+.shop-shell .shop-notices-all{display:block;padding:12px 16px;border-top:1px solid var(--shop-line);color:var(--shop-accent);font-size:13.5px;font-weight:600;text-align:center;transition:background-color .15s}
+.shop-shell .shop-notices-all:hover{background:var(--shop-tint)}
+
+/* --- Dock menü (yalnızca mobil): iPhone ana ekranındaki gibi buzlu cam kap içinde renkli uygulama simgeleri; köşeler
+   temayla aynı (2px), rozetler iOS gibi kırmızıdır. Masaüstünde dock gizlenir; favoriler paneli başlıktaki kalp
+   düğmesiyle sağ üstte açılır, canlı destek kendi düğmesiyle çalışır. ------------------------------------------------ */
+.shop-shell .shop-dock{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom));left:50%;z-index:45;display:grid;justify-items:center;gap:12px;transform:translateX(-50%)}
+.shop-shell .shop-dock-bar{display:flex;align-items:center;gap:9px;padding:8px 9px;border:1px solid rgb(255 255 255 / .6);border-radius:2px;background:rgb(242 244 248 / .6);box-shadow:0 22px 50px -20px rgb(27 35 54 / .45),inset 0 1px 0 rgb(255 255 255 / .7)}
+.shop-shell[data-shop-scheme=dark] .shop-dock-bar{border-color:rgb(255 255 255 / .12);background:rgb(30 38 58 / .58);box-shadow:0 22px 50px -20px rgb(0 0 0 / .7),inset 0 1px 0 rgb(255 255 255 / .08)}
+.shop-shell .shop-dock-bar>:is(a,button){--dock-a:#60a5fa;--dock-b:#1d4ed8;position:relative;display:grid;place-items:center;width:48px;height:48px;flex:none;padding:0;border:0;border-radius:2px;background:linear-gradient(160deg,var(--dock-a),var(--dock-b));color:#fff;box-shadow:0 10px 18px -10px var(--dock-b),inset 0 1px 0 rgb(255 255 255 / .35);cursor:pointer;transition:transform .22s cubic-bezier(.3,.7,.4,1.4)}
+.shop-shell .shop-dock-bar>:nth-child(2){--dock-a:#c084fc;--dock-b:#7c3aed}
+.shop-shell .shop-dock-bar>:nth-child(3){--dock-a:#fb7185;--dock-b:#e11d48}
+.shop-shell .shop-dock-bar>.shop-dock-cart{--dock-a:color-mix(in srgb,var(--shop-accent) 70%,#fff);--dock-b:var(--shop-accent)}
+.shop-shell .shop-dock-bar>:nth-child(5){--dock-a:#94a3b8;--dock-b:#475569}
+.shop-shell .shop-dock-bar>:nth-child(6){--dock-a:#4ade80;--dock-b:#059669}
+.shop-shell .shop-dock-bar>:is(a,button) svg{width:23px;height:23px;stroke-width:2}
+.shop-shell .shop-dock-bar>:is(a,button):active{transform:scale(.9)}
+.shop-shell .shop-dock-bar>:is(a,button)>span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.shop-shell .shop-dock-bar b{position:absolute;top:-5px;right:-5px;display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border:2px solid rgb(255 255 255 / .92);border-radius:999px;background:#ff3b30;color:#fff;font-size:10.5px;font-weight:700;line-height:1}
+.shop-shell .shop-dock-panel{display:grid;width:min(380px,calc(100vw - 24px));max-height:min(440px,calc(100dvh - 150px));border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);overflow:hidden;animation:shop-reveal .2s ease both}
+.shop-shell .shop-dock-panel>header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 18px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .shop-dock-panel>header b{font-size:15px}
+.shop-shell .shop-dock-panel>header button{display:grid;place-items:center;width:30px;height:30px;border:0;border-radius:2px;background:var(--shop-soft);color:var(--shop-ink-2)}
+.shop-shell .shop-dock-panel>header button svg{width:16px;height:16px}
+.shop-shell .shop-dock-panel ul{display:grid;overflow-y:auto}
+.shop-shell .shop-dock-panel li{display:flex;align-items:center;gap:12px;padding:12px 14px 12px 18px}
+.shop-shell .shop-dock-panel li+li{border-top:1px solid var(--shop-line)}
+.shop-shell .shop-dock-fav-icon{display:grid;place-items:center;width:40px;height:40px;flex:none;border-radius:2px;background:var(--brand,var(--shop-accent-fill));color:#fff}
+.shop-shell .shop-dock-fav-icon svg{width:19px;height:19px}
+.shop-shell .shop-dock-panel li:has([data-platform=instagram]){--brand:#e4336f}
+.shop-shell .shop-dock-panel li:has([data-platform=tiktok]){--brand:#121212}
+.shop-shell .shop-dock-panel li:has([data-platform=youtube]){--brand:#f00f0f}
+.shop-shell .shop-dock-panel li:has([data-platform=twitter]){--brand:#1d9bf0}
+.shop-shell .shop-dock-panel li:has([data-platform=facebook]){--brand:#3b5998}
+.shop-shell .shop-dock-panel li:has([data-platform=spotify]){--brand:#1db954}
+.shop-shell .shop-dock-panel li a{display:grid;gap:2px;min-width:0;flex:1}
+.shop-shell .shop-dock-panel li a b{overflow:hidden;font-size:14px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-dock-panel li a small{color:var(--shop-accent);font-size:13px;font-weight:600}
+.shop-shell .shop-dock-panel li>button{display:grid;place-items:center;width:34px;height:34px;flex:none;border:0;border-radius:2px;background:#e4336f;color:#fff}
+.shop-shell .shop-dock-panel li>button svg{width:16px;height:16px;fill:currentColor}
+.shop-shell .shop-dock-empty{display:grid;justify-items:center;gap:10px;padding:28px 22px;color:var(--shop-muted);font-size:13.5px;text-align:center}
+.shop-shell .shop-dock-empty svg{width:40px;height:40px;padding:10px;border-radius:50%;background:color-mix(in srgb,#e4336f 12%,transparent);color:#e4336f}
+/* Başlıktaki favoriler düğmesi (masaüstü) */
+.shop-shell .shop-action-fav b{background:#e4336f}
+.shop-shell .shop-action-fav:hover{color:#e4336f}
+
+/* Masaüstü: dock çubuğu gizlenir; favoriler paneli başlığın altında sağda açılır. */
+@media(min-width:761px){
+ .shop-shell .shop-dock{top:calc(var(--shop-header-h) + 30px);right:max(16px,calc((100vw - 1440px) / 2 + 28px));bottom:auto;left:auto;transform:none}
+ .shop-shell .shop-dock-bar{display:none}
+}
+/* Mobil: dock görünür; canlı desteğin kendi düğmesi gizlenir ve sohbet dock'taki Destek düğmesiyle açılır. */
+@media(max-width:760px){
+ .shop-shell .shop-action-fav{display:none}
+ .shop-shell:has(.shop-dock) [data-live-chat-launcher]{display:none}
+ .shop-shell:has(.shop-dock) [data-live-chat-root]{right:10px;bottom:calc(84px + env(safe-area-inset-bottom))}
+ .shop-shell:has(.shop-dock) .shop-end-bottom{padding-bottom:100px}
+}
+@media(max-width:640px){
+ .shop-shell .shop-action-icon{width:42px}
+ .shop-shell:has(.shop-dock) .shop-actions>a.shop-action{display:none}
+ /* Bildirim paneli mobilde ekranın iki kenarına sabitlenir, taşmaz. */
+ .shop-shell .shop-notices-panel{position:fixed;top:calc(var(--shop-header-h) + 26px);right:12px;left:12px;width:auto;max-height:calc(100dvh - var(--shop-header-h) - 140px);overflow-y:auto}
+}
+
+/* --- Canlı destek düğmesi (masaüstü): mağaza renginde, köşeleri temayla uyumlu kare düğme; hafif nabız halkası, çevrimiçi
+   noktası ve üzerine gelince "Canlı Destek" etiketi. Sohbet penceresi de temanın köşe ve kenar diline uyarlanır. ------- */
+@media(min-width:761px){
+ .shop-shell [data-live-chat-launcher]{position:relative;width:60px;height:60px;border-radius:2px!important;background:linear-gradient(150deg,color-mix(in srgb,var(--shop-accent-fill) 78%,#fff),var(--shop-accent-fill) 55%,color-mix(in srgb,var(--shop-accent-fill) 72%,#000))!important;color:#fff!important;box-shadow:0 18px 34px -14px var(--shop-accent),inset 0 1px 0 rgb(255 255 255 / .35)!important;transition:transform .2s,box-shadow .2s!important}
+ .shop-shell [data-live-chat-launcher]:hover{transform:translateY(-3px)!important;box-shadow:0 24px 40px -14px var(--shop-accent),inset 0 1px 0 rgb(255 255 255 / .35)!important}
+ .shop-shell [data-live-chat-launcher] svg{width:26px;height:26px}
+ .shop-shell [data-live-chat-launcher]::before{position:absolute;inset:-6px;border:2px solid color-mix(in srgb,var(--shop-accent) 45%,transparent);border-radius:2px;content:"";pointer-events:none;animation:shop-chat-ring 2.6s ease-out infinite}
+ .shop-shell [data-live-chat-launcher]::after{position:absolute;right:calc(100% + 14px);top:50%;padding:7px 12px;border-radius:2px;background:var(--shop-ink);color:var(--shop-canvas);font-size:13px;font-weight:600;white-space:nowrap;content:"Canlı Destek";opacity:0;pointer-events:none;transform:translate(6px,-50%);transition:opacity .15s,transform .15s}
+ .shop-shell [data-live-chat-launcher]:hover::after{opacity:1;transform:translate(0,-50%)}
+ .shop-shell [data-live-chat-launcher]>span{top:-7px!important;right:-7px!important;border:2px solid var(--shop-canvas);border-radius:999px!important}
+ .shop-shell [data-live-chat-root]>div:first-child:not([data-live-chat-launcher]){border-radius:2px!important;border-color:var(--shop-line)!important;box-shadow:var(--shop-shadow-lg)!important}
+}
+@keyframes shop-chat-ring{0%{opacity:.9;transform:scale(.92)}70%,100%{opacity:0;transform:scale(1.18)}}
+
+/* --- Şikayetvar marka karnesi: ana sayfada güven bölümü. ---------------------------------------------------- */
+
+/* --- Popup bildirim: yarı saydam arka plan üzerinde ortada kart; görsel varsa kartın solunda (mobilde üstünde). ------ */
+.shop-shell .shop-popup{position:fixed;inset:0;z-index:70;display:grid;place-items:center;padding:20px;background:rgb(13 19 33 / .55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:shop-fade .25s ease both}
+.shop-shell .shop-popup-card{position:relative;display:grid;width:min(460px,100%);border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:0 40px 80px -30px rgb(0 0 0 / .45);overflow:hidden;animation:shop-pop .3s cubic-bezier(.2,.8,.2,1) both}
+.shop-shell .shop-popup-card.has-image{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);width:min(760px,100%)}
+.shop-shell .shop-popup-card>img{width:100%;height:100%;min-height:240px;object-fit:cover;background:var(--shop-hero-bg)}
+.shop-shell .shop-popup-body{display:grid;align-content:center;gap:12px;padding:34px 30px 30px}
+.shop-shell .shop-popup-body h2{padding-right:26px;font-size:24px;line-height:1.2}
+.shop-shell .shop-popup-body p{color:var(--shop-muted);font-size:15px;line-height:1.7;white-space:pre-line}
+.shop-shell .shop-popup-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.shop-shell .shop-popup-actions .shop-button{min-height:46px}
+.shop-shell .shop-popup-close{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:2px;background:var(--shop-soft);color:var(--shop-ink-2);cursor:pointer;transition:background-color .15s,color .15s}
+.shop-shell .shop-popup-close:hover{background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .shop-popup-close svg{width:17px;height:17px}
+@keyframes shop-fade{from{opacity:0}to{opacity:1}}
+@keyframes shop-pop{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:640px){
+ .shop-shell .shop-popup{align-items:end;padding:12px}
+ .shop-shell .shop-popup-card.has-image{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .shop-popup-card>img{min-height:0;max-height:200px}
+ .shop-shell .shop-popup-body{padding:24px 20px 20px}
+ .shop-shell .shop-popup-actions .shop-button{flex:1}
+}
+
+/* Ücretsiz deneme sayfası */
+.shop-shell .shop-trial{display:grid;gap:22px;margin-bottom:88px}
+.shop-shell .shop-trial-gate{display:grid;justify-items:start;gap:8px;padding:22px 24px;border:1px solid var(--shop-button-bg);border-radius:var(--shop-radius);background:var(--shop-tint)}
+.shop-shell .shop-trial-gate b{font-size:17px}
+.shop-shell .shop-trial-gate span{color:var(--shop-ink-2);font-size:14.5px}
+.shop-shell .shop-trial-gate .shop-button{margin-top:6px}
+.shop-shell .shop-trial-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.shop-shell .shop-trial-card{display:grid;align-content:start;gap:14px;padding:22px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .shop-trial-card header{display:grid;gap:4px}
+.shop-shell .shop-trial-card small{color:var(--shop-accent);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell .shop-trial-card h2{font-size:19px}
+.shop-shell .shop-trial-card strong{font-family:var(--shop-display);font-size:26px}
+.shop-shell .shop-trial-card strong span{color:var(--shop-muted);font-family:inherit;font-size:14px;font-weight:500}
+.shop-shell .shop-trial-card label{display:grid;gap:6px;font-size:13.5px;font-weight:600}
+.shop-shell .shop-trial-card input{width:100%;min-height:48px;font-size:16px}
+.shop-shell .shop-trial-card .shop-button{width:100%;justify-content:center}
+.shop-shell .shop-trial-done{display:flex;align-items:center;gap:8px;color:var(--shop-good,#16a34a);font-weight:600}
+.shop-shell .shop-trial-note{color:var(--shop-muted);font-size:13.5px}
+.shop-shell .shop-trial-note a{color:var(--shop-accent);text-decoration:underline}
+.shop-shell .shop-trial-grid:has(>.shop-trial-card:only-child){grid-template-columns:minmax(0,560px)}
+
+/* Ücretsiz hizmet sayfası (stp): tanıtım ve talep kartı, ikonlu adımlar, diğer ücretsiz hizmet kartları. */
+
+/* Sepet: telefon girilmediğinde çıkan onay penceresi. */
+.shop-shell .shop-confirm{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:rgb(0 0 0 / .55)}
+.shop-shell .shop-confirm-card{display:grid;gap:14px;width:min(440px,100%);padding:24px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg,var(--shop-radius));background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
+.shop-shell .shop-confirm-card h3{font-size:19px;font-weight:700}
+.shop-shell .shop-confirm-card p{color:var(--shop-ink-2);font-size:15px;line-height:1.6}
+.shop-shell .shop-confirm-card>div{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+
+/* Fırsat Köşesi: kombin kartları (başlık, paket listesi, eski / yeni fiyat, sepete ekle) ve sepetteki kombin grubu. */
+/* Fırsat Köşesi kartları: indirim damgası, en çok kazandıran şeridi, kazanç çubuğu ve tek belirgin düğme. */
+/* Kaydırdıkça yükleme (content-visibility) çizimi kutuyla sınırlar; üzerine gelince yükselen kartın üst kenarı ve şeridi kesilmesin diye ızgara hep çizilir. */
+/* Süreli kombin: kartın üstünde geri sayım şeridi. */
+/* Ana sayfa Fırsat Köşesi tanıtımı: solda metin ve düğme, sağda üst üste duran indirim biletleri (paket listesi yok). */
+.shop-shell .shop-deal-teaser{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:64px;margin-bottom:24px;padding:44px 48px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg,var(--shop-radius,2px));background:radial-gradient(120% 140% at 100% 0%,color-mix(in srgb,var(--shop-accent) 14%,transparent),transparent 60%),var(--shop-surface);box-shadow:var(--shop-shadow);overflow:hidden}
+.shop-shell .shop-container.shop-deal-teaser{width:calc(100% - var(--shop-gutter) * 2);max-width:var(--shop-width);box-sizing:border-box}
+.shop-shell .shop-deal-teaser-copy{display:grid;justify-items:start;gap:16px}
+.shop-shell .shop-deal-teaser-eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:color-mix(in srgb,var(--shop-accent) 12%,transparent);color:var(--shop-accent-ink,var(--shop-accent));font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell .shop-deal-teaser-eyebrow svg{width:14px;height:14px}
+.shop-shell .shop-deal-teaser h2{margin:0;color:var(--shop-ink);font-size:clamp(28px,3.4vw,42px);font-weight:900;line-height:1.08;letter-spacing:-.02em}
+.shop-shell .shop-deal-teaser h2 em{color:var(--shop-accent);font-style:normal}
+.shop-shell .shop-deal-teaser-copy>p{max-width:460px;margin:0;color:var(--shop-muted);font-size:15.5px;line-height:1.65}
+.shop-shell .shop-deal-teaser-stats{display:flex;flex-wrap:wrap;gap:0;margin:4px 0 6px}
+.shop-shell .shop-deal-teaser-stats>div{display:grid;gap:2px;padding:0 22px}
+.shop-shell .shop-deal-teaser-stats>div:first-child{padding-left:0}
+.shop-shell .shop-deal-teaser-stats>div+div{border-left:1px solid var(--shop-line)}
+.shop-shell .shop-deal-teaser-stats dt{color:var(--shop-muted);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .shop-deal-teaser-stats dd{margin:0;color:var(--shop-ink);font-size:24px;font-weight:900;font-variant-numeric:tabular-nums}
+.shop-shell .shop-deal-teaser-stats>div:first-child dd{color:var(--shop-accent)}
+.shop-shell .shop-deal-teaser-cta{min-height:50px;padding-inline:26px;font-size:15px;font-weight:800}
+.shop-shell .shop-deal-teaser-cta svg{width:18px;height:18px;transition:transform .2s}
+.shop-shell .shop-deal-teaser-cta:hover svg{transform:translateX(3px)}
+.shop-shell .shop-deal-teaser-tickets{position:relative;display:grid;gap:14px;padding:8px 6px;color:inherit;text-decoration:none}
+.shop-shell .shop-deal-ticket{--notch:10px;display:grid;grid-template-columns:104px minmax(0,1fr);min-height:88px;border-radius:var(--shop-radius,2px);background:var(--shop-surface);box-shadow:0 14px 30px -18px rgb(0 0 0 / .45),0 0 0 1px var(--shop-line);transform:translateX(calc(var(--i) * 22px)) rotate(calc(-1.2deg + var(--i) * 1.2deg));transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;-webkit-mask:radial-gradient(circle var(--notch) at 104px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--notch) at 104px 100%,#0000 98%,#000) bottom/100% 51% no-repeat;mask:radial-gradient(circle var(--notch) at 104px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--notch) at 104px 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+.shop-shell .shop-deal-teaser-tickets:hover .shop-deal-ticket{transform:translateX(calc(var(--i) * 10px))}
+.shop-shell .shop-deal-ticket:first-child{box-shadow:0 18px 36px -18px color-mix(in srgb,var(--shop-accent) 60%,transparent),0 0 0 1px color-mix(in srgb,var(--shop-accent) 45%,var(--shop-line))}
+.shop-shell .shop-deal-ticket-stub{display:grid;place-content:center;justify-items:center;border-right:2px dashed color-mix(in srgb,var(--shop-on-accent,#fff) 55%,transparent);background:var(--shop-accent);color:var(--shop-on-accent,#fff)}
+.shop-shell .shop-deal-ticket-stub b{font-size:26px;font-weight:900;line-height:1}
+.shop-shell .shop-deal-ticket-stub small{margin-top:3px;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.shop-shell .shop-deal-ticket-body{display:grid;align-content:center;gap:4px;min-width:0;padding:14px 20px 14px 22px}
+.shop-shell .shop-deal-ticket-body b{overflow:hidden;color:var(--shop-ink);font-size:16px;font-weight:800;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-deal-ticket-body small{color:var(--shop-muted);font-size:13px}
+@media(max-width:900px){.shop-shell .shop-deal-teaser{grid-template-columns:1fr;gap:30px;padding:30px 22px}.shop-shell .shop-deal-ticket{transform:none}.shop-shell .shop-deal-teaser-tickets:hover .shop-deal-ticket{transform:none}.shop-shell .shop-deal-teaser-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.shop-shell .shop-deal-teaser-stats>div{padding:0 10px}.shop-shell .shop-deal-teaser-stats dt{font-size:10px}.shop-shell .shop-deal-teaser-stats dd{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.shop-shell .shop-deal-ticket{transition:none}}
+
+/* Masaüstü favoriler paneli: kalp düğmesine hizalı açılır (konum JS ile verilir), açılış hareketi bildirim paneliyle aynı. */
+@media(min-width:761px){.shop-shell .shop-dock.is-anchored{position:fixed;left:auto;bottom:auto;transform:none}.shop-shell .shop-dock.is-anchored .shop-dock-panel{width:360px;transform-origin:top right;animation:shop-fav-in .16s ease-out}}
+@keyframes shop-fav-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.shop-shell .shop-dock.is-anchored .shop-dock-panel{animation:none}}
+
+/* Son siparişler şeridi: başlığın üstünde, site (içerik) genişliğinde; siparişler tek tek değişerek gösterilir. */
+.shop-shell .shop-ticker-wrap{padding-top:10px}
+.shop-shell .shop-ticker{display:flex;align-items:center;height:40px;border:1px solid var(--shop-line);border-radius:var(--shop-radius,2px);background:var(--shop-surface);color:var(--shop-ink);font-size:13px;overflow:hidden;box-shadow:var(--shop-shadow)}
+.shop-shell .shop-ticker-label{display:inline-flex;align-items:center;gap:8px;flex:none;height:100%;padding:0 14px;background:var(--shop-accent-fill,var(--shop-accent));color:#fff;font-size:12px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.shop-shell .shop-ticker-label i{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:shop-ticker-dot 1.8s ease-out infinite}
+.shop-shell .shop-ticker-viewport{position:relative;flex:1;min-width:0;height:100%;overflow:hidden}
+.shop-shell .shop-ticker-item{display:flex;align-items:center;gap:8px;height:100%;margin:0;padding:0 16px;overflow:hidden;white-space:nowrap;animation:shop-ticker-in .45s cubic-bezier(.2,.8,.2,1)}
+.shop-shell .shop-ticker-item em{overflow:hidden;font-style:normal;font-weight:600;color:var(--shop-ink);text-overflow:ellipsis}
+.shop-shell .shop-ticker-item>span:not(.shop-ticker-icon){min-width:0;overflow:hidden;color:var(--shop-muted);text-overflow:ellipsis}
+.shop-shell .shop-ticker-item small{flex:none;color:var(--shop-muted);font-size:12px}
+.shop-shell .shop-ticker-icon{display:grid;place-items:center;flex:none;width:22px;height:22px;border-radius:2px;background:var(--shop-soft)}
+.shop-shell .shop-ticker-icon svg{width:13px;height:13px}
+.shop-shell .shop-ticker>button{display:grid;place-items:center;flex:none;width:40px;height:100%;border:0;border-left:1px solid var(--shop-line);background:transparent;color:var(--shop-muted);cursor:pointer}
+.shop-shell .shop-ticker>button:hover{color:var(--shop-ink)}
+.shop-shell .shop-ticker>button svg{width:15px;height:15px}
+@keyframes shop-ticker-in{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:none}}
+@keyframes shop-ticker-dot{0%{box-shadow:0 0 0 0 rgb(74 222 128 / .7)}70%{box-shadow:0 0 0 6px rgb(74 222 128 / 0)}100%{box-shadow:0 0 0 0 rgb(74 222 128 / 0)}}
+@media(max-width:640px){.shop-shell .shop-ticker{height:36px;font-size:12px}.shop-shell .shop-ticker-label{padding:0 12px;font-size:0;gap:0}.shop-shell .shop-ticker-item{padding:0 10px}.shop-shell .shop-ticker-item small{display:none}}
+@media(prefers-reduced-motion:reduce){.shop-shell .shop-ticker-item,.shop-shell .shop-ticker-label i{animation:none}}
+.shop-shell:has(.shop-ads-page) .shop-ticker-wrap{display:none!important}
+
+/* Soru - Cevap: paket sayfası bölümü, /soru-cevap sayfası, soru formu ve S / C rozetli liste. */
+.shop-shell .shop-qa-product{margin-top:56px;margin-bottom:24px}
+.shop-shell .shop-qa-product>header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px}
+.shop-shell .shop-qa-product>header small{display:block;margin-bottom:6px;color:var(--shop-accent-ink,var(--shop-accent));font-size:12px;font-weight:700;letter-spacing:.1em}
+.shop-shell .shop-qa-product>header h2{color:var(--shop-ink);font-size:clamp(22px,2.6vw,28px)}
+.shop-shell .shop-qa-product>header a{display:inline-flex;align-items:center;gap:6px;color:var(--shop-accent-ink,var(--shop-accent));font-weight:600}
+.shop-shell .shop-qa-product>header a svg{width:16px;height:16px}
+/* Sıkça sorulan sorular: liste kartları, hizmet sayfasındaki yan form ve SSS sayfası (kategoriler, arama, sayfa genişliğinde form). */
+.shop-shell .shop-qa-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);align-items:start;gap:24px}
+.shop-shell .shop-qa-search{display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface)}
+.shop-shell .shop-qa-search svg{flex:none;width:17px;height:17px;color:var(--shop-muted)}
+.shop-shell .shop-qa-search input{min-width:0;height:100%;flex:1;border:0;background:transparent;color:var(--shop-ink);font-size:15px;outline:0}
+.shop-shell .shop-qa-list{display:grid;gap:16px;margin:0;padding:0;list-style:none}
+.shop-shell .shop-qa-list>li{display:grid;gap:14px;padding:20px 22px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .shop-qa-list>li[hidden]{display:none}
+.shop-shell :is(.shop-qa-question,.shop-qa-answer){display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.shop-shell :is(.shop-qa-question,.shop-qa-answer)>span{display:grid;place-items:center;width:30px;height:30px;border-radius:2px;font-size:13px;font-weight:800}
+.shop-shell .shop-qa-question>span{background:var(--shop-tint);color:var(--shop-accent-ink,var(--shop-accent))}
+.shop-shell .shop-qa-answer>span{background:color-mix(in srgb,#16a34a 14%,transparent);color:#15803d}
+.shop-shell[data-shop-scheme=dark] .shop-qa-answer>span{color:#86efac}
+.shop-shell .shop-qa-question p{color:var(--shop-ink);font-weight:700;line-height:1.5}
+.shop-shell .shop-qa-answer p{color:var(--shop-ink-2,var(--shop-ink));line-height:1.65;white-space:pre-line}
+.shop-shell :is(.shop-qa-question,.shop-qa-answer) small{display:block;margin-top:4px;color:var(--shop-muted);font-size:12.5px}
+.shop-shell .shop-qa-question small a{color:var(--shop-accent-ink,var(--shop-accent));font-weight:600}
+.shop-shell .shop-qa-answer{padding-top:14px;border-top:1px dashed var(--shop-line)}
+.shop-shell .shop-qa-empty{margin:0;padding:24px;border:1px dashed var(--shop-line);border-radius:2px;color:var(--shop-muted);text-align:center}
+.shop-shell .shop-qa-empty[hidden]{display:none}
+.shop-shell .shop-qa-aside{position:sticky;top:calc(var(--shop-header-h,80px) + 16px)}
+.shop-shell .shop-qa-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
+/* Soru formu: kart (yan kutu) ve geniş (sayfa genişliği) görünümü; etiketler tek satır, alanlar aynı yükseklikte. */
+.shop-shell .shop-qa-form{display:grid;gap:16px;padding:24px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .shop-qa-form-head{display:grid;gap:6px}
+.shop-shell .shop-qa-form-head b{color:var(--shop-ink);font-family:var(--shop-display,inherit);font-size:20px;font-weight:800;line-height:1.3}
+.shop-shell .shop-qa-form-head p{margin:0;color:var(--shop-muted);font-size:14px;line-height:1.6}
+.shop-shell .shop-qa-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.shop-shell .shop-qa-fields label{display:grid;gap:6px;min-width:0;color:var(--shop-ink);font-size:13.5px;font-weight:600}
+.shop-shell .shop-qa-fields :is(.is-service,.is-question){grid-column:1/-1}
+.shop-shell .shop-qa-fields .is-question{order:-1}
+.shop-shell .shop-qa-fields .is-service{order:-2}
+.shop-shell .shop-qa-fields :is(input,select){box-sizing:border-box;width:100%;height:46px}
+.shop-shell .shop-qa-fields textarea{box-sizing:border-box;width:100%;min-height:104px;resize:vertical}
+.shop-shell .shop-qa-actions{display:flex;justify-content:stretch}
+.shop-shell .shop-qa-actions .shop-button{flex:1;justify-content:center}
+.shop-shell .shop-qa-form.is-wide{grid-template-columns:minmax(220px,.8fr) minmax(0,2fr);column-gap:40px;align-items:start;padding:32px}
+.shop-shell .shop-qa-form.is-wide>.shop-qa-form-head{grid-row:1/span 3;align-content:start}
+.shop-shell .shop-qa-form.is-wide>.shop-qa-form-head b{font-size:24px}
+.shop-shell .shop-qa-form.is-wide .shop-qa-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+.shop-shell .shop-qa-form.is-wide.has-service .shop-qa-fields{grid-template-columns:repeat(3,minmax(0,1fr))}
+.shop-shell .shop-qa-form.is-wide .shop-qa-fields .is-service{grid-column:auto;order:0}
+.shop-shell .shop-qa-form.is-wide .shop-qa-fields .is-question{order:1}
+.shop-shell .shop-qa-form.is-wide .shop-qa-actions{justify-content:flex-end}
+.shop-shell .shop-qa-form.is-wide .shop-qa-actions .shop-button{flex:none;min-width:200px}
+.shop-shell .shop-qa-form.is-done{align-items:start}
+.shop-shell .shop-qa-done{display:grid;gap:10px;justify-items:start}
+.shop-shell .shop-qa-done b{display:inline-flex;align-items:center;gap:8px;color:var(--shop-ink);font-size:16px}
+.shop-shell .shop-qa-done b svg{width:18px;height:18px;color:#16a34a}
+.shop-shell .shop-qa-done p{color:var(--shop-ink-2,var(--shop-ink));line-height:1.6;white-space:pre-line}
+.shop-shell .shop-qa-done small{color:var(--shop-muted);font-size:12px}
+.shop-shell .shop-qa-q:empty{display:none}
+/* SSS sayfası: kategoriler + sorular */
+.shop-shell .sqa{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:start}
+.shop-shell .sqa-nav{position:sticky;top:calc(var(--shop-header-h,80px) + 16px);display:grid;gap:12px;padding:16px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .sqa-nav-title{padding:0 8px;color:var(--shop-muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell .sqa-nav ul{display:grid;gap:4px;margin:0;padding:0;list-style:none}
+.shop-shell .sqa-nav button{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:10px;width:100%;height:42px;padding:0 10px;border:0;border-radius:2px;background:transparent;color:var(--shop-ink);font-size:14.5px;font-weight:600;text-align:left;cursor:pointer}
+.shop-shell .sqa-nav button i{display:grid;place-items:center;color:var(--shop-muted)}
+.shop-shell .sqa-nav button svg{width:18px;height:18px}
+.shop-shell .sqa-nav button span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .sqa-nav button small{min-width:26px;padding:2px 7px;border-radius:999px;background:var(--shop-soft,color-mix(in srgb,var(--shop-ink) 6%,transparent));color:var(--shop-muted);font-size:12px;font-weight:700;text-align:center}
+.shop-shell .sqa-nav button:hover{background:var(--shop-soft,color-mix(in srgb,var(--shop-ink) 5%,transparent))}
+.shop-shell .sqa-nav button[aria-pressed=true]{background:var(--shop-tint);color:var(--shop-accent-ink,var(--shop-accent))}
+.shop-shell .sqa-nav button[aria-pressed=true] i{color:inherit}
+.shop-shell .sqa-nav button[aria-pressed=true] small{background:var(--shop-accent);color:var(--shop-on-accent,#fff)}
+.shop-shell .sqa-ask-link{justify-content:center}
+.shop-shell .sqa-main{display:grid;gap:16px;min-width:0}
+.shop-shell .sqa-ask{scroll-margin-top:calc(var(--shop-header-h,80px) + 24px)}
+@media(max-width:900px){
+ .shop-shell .shop-qa-layout,.shop-shell .sqa{grid-template-columns:minmax(0,1fr)}
+ .shop-shell :is(.shop-qa-aside,.sqa-nav){position:static}
+ .shop-shell .sqa-nav{padding:12px}
+ .shop-shell .sqa-nav ul{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+ .shop-shell .sqa-nav li{flex:none}
+ .shop-shell .sqa-nav button{width:auto;border:1px solid var(--shop-line)}
+ .shop-shell .shop-qa-form.is-wide{grid-template-columns:minmax(0,1fr);padding:24px}
+ .shop-shell .shop-qa-form.is-wide>.shop-qa-form-head{grid-row:auto}
+ .shop-shell .shop-qa-form.is-wide.has-service .shop-qa-fields,.shop-shell .shop-qa-form.is-wide .shop-qa-fields{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .shop-qa-form.is-wide .shop-qa-actions .shop-button{flex:1}
+}
+@media(max-width:560px){.shop-shell .shop-qa-fields{grid-template-columns:minmax(0,1fr)}}
+
+/* Paket kartlarında satın alma düğmeleri de platformun marka rengini kullanır. TikTok'un marka rengi siyah olduğundan
+   düğmede TikTok kırmızısı (#fe2c55) kullanılır; diğer platformlarda düğme rengi kart başlığıyla aynıdır. */
+.shop-shell :is(.shop-package,.shop-suggest article,.shop-cart-suggest-grid article){--shop-button-bg:var(--brand-cta,var(--brand))}
+.shop-shell :is(.shop-package,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=tiktok]){--brand-cta:#fe2c55}
+.shop-shell .shop-bot{min-height:20px;color:var(--shop-muted)}
+.shop-shell .shop-bot .bot-check{font-size:12.5px}

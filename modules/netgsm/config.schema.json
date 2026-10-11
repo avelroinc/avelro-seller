@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "usercode",
+    "password",
+    "header"
+  ],
+  "properties": {
+    "usercode": {
+      "type": "string",
+      "title": "usercode",
+      "minLength": 1
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "minLength": 1,
+      "writeOnly": true
+    },
+    "header": {
+      "type": "string",
+      "title": "header",
+      "minLength": 1
+    }
+  }
+}

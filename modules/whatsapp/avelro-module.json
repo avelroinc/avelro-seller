@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "whatsapp",
+  "name": "WhatsApp Entegrasyonu",
+  "description": "WhatsApp Entegrasyonu için bağımsız sağlayıcı paketi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "notifications",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:graph.facebook.com"
+  ],
+  "configuration": "config.schema.json"
+}
