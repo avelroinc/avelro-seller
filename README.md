@@ -16,7 +16,9 @@ sistemi başlatır ve **Kurulum Anahtarı**'nı ekrana yazar. Ardından alan ad�
 hesabını, mağazayı ve temayı kurar. Sunucuda Plesk varsa uygulama yalnızca 127.0.0.1 üzerinde çalışır ve Plesk'in nginx ayarı
 yapılır; yoksa HTTPS'i Caddy sağlar (80 ve 443 portları açık olmalı).
 
-Ayarlar ve veriler `/opt/avelro-seller` klasöründe ve Docker volume'lerindedir. **Güncelleme** için aynı komutu yeniden çalıştırın.
+Ayarlar ve veriler `/opt/avelro-seller` klasöründe ve Docker volume'lerindedir. **Güncelleme** mobil uygulamanın Sistem ekranından yapılır (gece kendiliğinden güncelleme de açılabilir); kurulumun yanındaki küçük güncelleyici container yeni imajı indirip sistemi yeniden başlatır. Aynı kurulum komutunu yeniden çalıştırmak da sistemi günceller.
+
+`system.json`: son sistem sürümü ve Türkçe notları; kurulu sistemler yeni sürümü buradan öğrenir.
 
 ## İçerik
 

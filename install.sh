@@ -41,9 +41,100 @@ ok "Docker hazır"
 
 mkdir -p "$DIR"; cd "$DIR"
 
+# Sistem dosyaları. compose.yaml ve updater.sh her kurulumda ve güncellemede yeniden yazılır (yeni sürümün gerektirdiği servisler
+# eklensin diye); app.env, Caddyfile ve veriler korunur. updater: mobil uygulamadan istenen sistem güncellemesini yapan küçük
+# container (Docker'a yalnızca o erişir, port açmaz; /data/update klasöründeki isteği görünce imajı indirip uygulamayı yeniden başlatır).
+write_caddyfile(){
+cat > Caddyfile <<EOF
+$DOMAIN {
+  encode zstd gzip
+  reverse_proxy app:3000 {
+    header_up -CF-Connecting-IP
+    header_up X-Forwarded-For {remote_host}
+    header_up X-Forwarded-Proto {scheme}
+  }
+}
+EOF
+}
+write_compose(){
+ local network proxy proxyvol
+ if [ "$PLESK" = 1 ]; then network='    network_mode: host'; proxy=''; proxyvol=''
+ else network='    expose: ["3000"]'
+  proxy='  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on: [app]
+    ports: ["80:80", "443:443", "443:443/udp"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config'
+  proxyvol='  caddy-data:
+  caddy-config:'
+ fi
+cat > compose.yaml <<EOF
+services:
+  app:
+    image: $IMAGE
+    restart: unless-stopped
+    init: true
+$network
+    env_file: ./app.env
+    volumes:
+      - avelro-data:/data
+      - avelro-modules:/app/.module-packages
+    stop_grace_period: 30s
+  updater:
+    image: docker:27-cli
+    restart: unless-stopped
+    working_dir: $DIR
+    entrypoint: ["sh", "$DIR/updater.sh"]
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $DIR:$DIR
+      - /root/.docker:/root/.docker:ro
+      - avelro-data:/data
+$proxy
+volumes:
+  avelro-data:
+  avelro-modules:
+$proxyvol
+EOF
+}
+write_updater(){
+cat > updater.sh <<'EOF'
+#!/bin/sh
+# Avelro güncelleyici: /data/update/request görünce sistem imajını indirir ve uygulamayı yeniden başlatır; sonucu status.json'a yazar.
+# heartbeat: uygulama güncelleyicinin çalıştığını buradan anlar. Kurulum betiği bu dosyayı her çalıştığında yeniden yazar.
+mkdir -p /data/update && chown 1000:1000 /data/update 2>/dev/null
+status(){ printf '{"state":"%s","message":"%s","at":"%s"}' "$1" "$2" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > /data/update/status.json; chmod 644 /data/update/status.json; }
+while true; do
+ date +%s > /data/update/heartbeat
+ if [ -f /data/update/request ]; then
+  rm -f /data/update/request
+  status running "Yeni sürüm indiriliyor ve sistem yeniden başlatılıyor…"
+  if docker compose pull app > /tmp/update.log 2>&1 && docker compose up -d app >> /tmp/update.log 2>&1; then
+   status done "Sistem güncellendi."
+   docker image prune -f > /dev/null 2>&1
+  else
+   status error "$(tail -n 3 /tmp/update.log | tr '"\n\\' "'  " | cut -c1-300)"
+  fi
+ fi
+ sleep 5
+done
+EOF
+chmod 755 updater.sh
+}
+
+
 # 2. Güncelleme: kurulu sistemde imaj yenilenir, ayarlar ve veriler aynen kalır.
 if [ -f app.env ] && [ -f compose.yaml ]; then
  say "Kurulu sistem bulundu ($DIR); son sürüme güncelleniyor"
+ # Kurulumdaki seçimler app.env'den okunur: Plesk kurulumunda uygulama 127.0.0.1'de dinler.
+ PLESK=0; grep -q '^HOST=127.0.0.1' app.env && PLESK=1
+ DOMAIN="$(sed -n 's#^PUBLIC_ORIGIN=https://##p' app.env | head -n1)"
+ write_updater; write_compose
  docker compose pull -q || die "İmaj indirilemedi. GitHub tokenının süresi dolmuş olabilir: docker login ghcr.io komutuyla yeniden giriş yapın."
  docker compose up -d --remove-orphans
  docker image prune -f >/dev/null 2>&1 || true
@@ -104,62 +195,9 @@ AVELRO_SETUP_KEY=$SETUP_KEY
 EOF
 umask 022
 
-if [ "$PLESK" = 1 ]; then
-cat > compose.yaml <<EOF
-services:
-  app:
-    image: $IMAGE
-    restart: unless-stopped
-    init: true
-    network_mode: host
-    env_file: ./app.env
-    volumes:
-      - avelro-data:/data
-      - avelro-modules:/app/.module-packages
-    stop_grace_period: 30s
-volumes:
-  avelro-data:
-  avelro-modules:
-EOF
-else
-cat > Caddyfile <<EOF
-$DOMAIN {
-  encode zstd gzip
-  reverse_proxy app:3000 {
-    header_up -CF-Connecting-IP
-    header_up X-Forwarded-For {remote_host}
-    header_up X-Forwarded-Proto {scheme}
-  }
-}
-EOF
-cat > compose.yaml <<EOF
-services:
-  app:
-    image: $IMAGE
-    restart: unless-stopped
-    init: true
-    env_file: ./app.env
-    volumes:
-      - avelro-data:/data
-      - avelro-modules:/app/.module-packages
-    expose: ["3000"]
-    stop_grace_period: 30s
-  proxy:
-    image: caddy:2-alpine
-    restart: unless-stopped
-    depends_on: [app]
-    ports: ["80:80", "443:443", "443:443/udp"]
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data
-      - caddy-config:/config
-volumes:
-  avelro-data:
-  avelro-modules:
-  caddy-data:
-  caddy-config:
-EOF
-fi
+[ "$PLESK" = 1 ] || write_caddyfile
+write_compose
+write_updater
 ok "Ayarlar yazıldı ($DIR/app.env)"
 
 # 6. Başlatma
