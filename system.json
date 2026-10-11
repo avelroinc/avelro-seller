@@ -1,5 +1,5 @@
 {
-  "version": "1.0.13",
-  "notes": "- Mobil uygulamanın Daha Fazla menüsünde bekleyen işler sayıyla görünür: onay bekleyen yorumlar, yanıt bekleyen sorular ve yeni hızlandırma talepleri.\n- Mobil uygulama 1.11.0 ile birlikte: Hizmet Ekle sihirbazı, yeni Hizmetler ekranı ve yeniden düzenlenen Daha Fazla menüsü.",
-  "publishedAt": "2026-10-11T19:40:48.797Z"
+  "version": "1.0.14",
+  "notes": "- Arama Motoru Ayarları mobil uygulamadan yönetilir: site başlığı, başlık eki, site açıklaması, arama motorlarına kapatma, doğrulama kodları (Google, Bing, Yandex), kurum adı, sosyal profiller, SSS şeması ve özel robots.txt.\n- Ek hizmetlerin (ör. Hızlı Teslimat) bağlı olduğu ayrı servis bilgisi kayıtta korunur.\n- Tema kataloğunda hazırlanmakta olan temalar \"Yakında\" olarak görünür; kurulamaz ve kurulum sihirbazında listelenmez.",
+  "publishedAt": "2026-10-11T20:53:32.821Z"
 }
