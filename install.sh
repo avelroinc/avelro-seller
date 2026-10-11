@@ -9,6 +9,9 @@
 # ayarı yapılır; yoksa HTTPS'i Caddy sağlar.
 # Kurulu sunucuda tekrar çalıştırıldığında sistemi son sürüme günceller; ayarlar ve veriler korunur.
 set -euo pipefail
+# Betik "curl | bash" ile çalışır: bütün gövde main içindedir, böylece bash dosyanın tamamını okumadan çalıştırmaz ve stdin okuyan
+# bir komut (docker compose exec gibi) betiğin geri kalanını yutamaz; main'in stdin'i ayrıca /dev/null'a bağlanır.
+main(){
 
 IMAGE="ghcr.io/avelroinc/avelro-packet-seller:latest"
 DIR="${AVELRO_DIR:-/opt/avelro-seller}"
@@ -50,8 +53,12 @@ fi
 
 # 3. Bilgiler
 DOMAIN=""
+while :; do
 while ! printf '%s' "$DOMAIN" | grep -qE '^([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,63}$'; do
  DOMAIN="$(ask 'Alan adı (örnek: magaza.com): ' | tr '[:upper:]' '[:lower:]' | sed 's#^https\?://##; s#/.*##')"
+done
+ CONFIRM="$(ask "Alan adı $DOMAIN, doğru mu? [E/h]: ")"
+ case "$CONFIRM" in h|H|hayir|hayır|n|N) DOMAIN="";; *) break;; esac
 done
 say "GitHub okuma tokenı (yalnızca read:packages izni; yazarken görünmez)"
 TOKEN="$(ask_secret 'Token: ')"
@@ -202,3 +209,5 @@ printf '  Tarayıcıda açın:   \033[1mhttps://%s\033[0m\n' "$DOMAIN"
 printf '  Kurulum Anahtarı:  \033[1m%s\033[0m\n\n' "$SETUP_KEY"
 printf '  Anahtar sihirbazın ilk adımında istenir; tekrar görmek için: grep AVELRO_SETUP_KEY %s/app.env\n' "$DIR"
 printf '  Güncellemek için aynı kurulum komutunu yeniden çalıştırın.\n\n'
+}
+main "$@" </dev/null
