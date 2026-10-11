@@ -1,5 +1,5 @@
 {
-  "version": "1.0.14",
-  "notes": "- Arama Motoru Ayarları mobil uygulamadan yönetilir: site başlığı, başlık eki, site açıklaması, arama motorlarına kapatma, doğrulama kodları (Google, Bing, Yandex), kurum adı, sosyal profiller, SSS şeması ve özel robots.txt.\n- Ek hizmetlerin (ör. Hızlı Teslimat) bağlı olduğu ayrı servis bilgisi kayıtta korunur.\n- Tema kataloğunda hazırlanmakta olan temalar \"Yakında\" olarak görünür; kurulamaz ve kurulum sihirbazında listelenmez.",
-  "publishedAt": "2026-10-11T20:53:32.821Z"
+  "version": "1.0.15",
+  "notes": "- Mobil uygulamadan yapay zekâyla blog yazısı istenirken konu verilebilir; yazı istenirse taslak olarak kaydedilir.\n- Arama Motoru Ayarları mobil uygulamadan yönetilir: site başlığı, başlık eki, site açıklaması, arama motorlarına kapatma, doğrulama kodları (Google, Bing, Yandex), kurum adı, sosyal profiller, SSS şeması ve özel robots.txt.\n- Ek hizmetlerin (ör. Hızlı Teslimat) bağlı olduğu ayrı servis bilgisi kayıtta korunur.\n- Tema kataloğunda hazırlanmakta olan temalar \"Yakında\" olarak görünür; kurulamaz ve kurulum sihirbazında listelenmez.",
+  "publishedAt": "2026-10-11T22:01:26.482Z"
 }
