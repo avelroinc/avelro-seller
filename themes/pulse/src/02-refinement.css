@@ -1238,16 +1238,42 @@
 @media(max-width:560px){.shop-shell .shop-quick-actions{flex-wrap:wrap}.shop-shell .shop-quick-actions>.shop-quick-target{flex-basis:100%}.shop-shell .shop-quick-actions>.shop-button{flex:1 1 auto;min-width:0}.shop-shell .shop-quick-actions>.sfo-cart{width:54px;padding:0}.shop-shell .shop-quick-actions>.sfo-cart span{display:none}}
 /* Sepet: artık satılamayan satır (uyarı açılır pencerede) kırmızı çerçeveyle işaretlenir. */
 .shop-shell .scx-line.has-error{border-color:var(--shop-danger,#dc2626)}
-/* Mağaza uyarı penceresi: başlık rengi uyarının türünü gösterir; bağlantı düğmeleri düğmeyle aynı ölçüde. */
-.shop-shell .shop-alert.is-error .shop-confirm-card h3{color:var(--shop-danger,#dc2626)}
-.shop-shell .shop-alert.is-warn .shop-confirm-card h3{color:var(--shop-warn,#d97706)}
-.shop-shell .shop-alert.is-success .shop-confirm-card h3{color:#16a34a}
+/* Açılır pencereler (uyarılar, onaylar): bulanık koyu perde; kart ortada, yumuşak açılışla. Uyarıda üstte türünün renginde ince
+   şerit ve halkalı simge, ortalanmış başlık ve mesaj, altta eşit genişlikte düğmeler, sağ üstte kapat. Telefonda kart alttan açılır. */
+.shop-shell .shop-confirm{background:rgb(13 19 33 / .55);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);animation:shop-fade .2s ease both}
+.shop-shell .shop-confirm-card{position:relative;overflow:hidden;animation:shop-pop .28s cubic-bezier(.2,.8,.2,1) both;box-shadow:0 40px 90px -30px rgb(13 19 33 / .55)}
+.shop-shell .shop-alert{--tone:var(--shop-accent);--tone-soft:color-mix(in srgb,var(--tone) 12%,var(--shop-surface))}
+.shop-shell .shop-alert.is-error{--tone:var(--shop-danger,#dc2626)}
+.shop-shell .shop-alert.is-warn{--tone:var(--shop-warn,#d97706)}
+.shop-shell .shop-alert.is-success{--tone:#16a34a}
+.shop-shell .shop-alert.is-info{--tone:#2563eb}
+.shop-shell .shop-alert .shop-confirm-card{justify-items:center;gap:10px;width:min(440px,100%);padding:36px 28px 24px;text-align:center}
+.shop-shell .shop-alert .shop-confirm-card::before{content:"";position:absolute;top:0;right:0;left:0;height:4px;background:var(--tone)}
+.shop-shell .shop-alert-icon{display:grid;place-items:center;width:64px;height:64px;margin-bottom:6px;border-radius:50%;background:var(--tone-soft);color:var(--tone);box-shadow:0 0 0 8px color-mix(in srgb,var(--tone) 6%,transparent)}
+.shop-shell .shop-alert-icon svg{width:30px;height:30px;stroke-width:2.2}
+.shop-shell .shop-alert .shop-confirm-card h3{color:var(--shop-ink);font-size:21px;font-weight:800;line-height:1.25}
+.shop-shell .shop-alert .shop-confirm-card p{max-width:36ch;color:var(--shop-muted);font-size:15px;line-height:1.6}
+.shop-shell .shop-alert .shop-confirm-card>div{display:flex;flex-wrap:nowrap;justify-content:center;gap:10px;width:100%;margin-top:12px}
+.shop-shell .shop-alert .shop-confirm-card>div>.shop-button{flex:1 1 0;justify-content:center;min-height:48px;white-space:nowrap}
 .shop-shell .shop-alert .shop-confirm-card a.shop-button{text-decoration:none}
-/* Uyarı penceresi: iki düğme masaüstünde yan yana sığar; dar ekranda alt alta tam genişlik. */
-.shop-shell .shop-alert .shop-confirm-card{width:min(520px,100%)}
-.shop-shell .shop-alert .shop-confirm-card>div{flex-wrap:nowrap}
-.shop-shell .shop-alert .shop-confirm-card>div>.shop-button{white-space:nowrap}
-@media(max-width:560px){.shop-shell .shop-alert .shop-confirm-card>div{flex-direction:column-reverse}.shop-shell .shop-alert .shop-confirm-card>div>.shop-button{width:100%;justify-content:center}}
+.shop-shell .shop-alert-close{position:absolute;top:14px;right:14px;display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-muted);cursor:pointer;transition:background-color .15s,color .15s}
+.shop-shell .shop-alert-close:hover{background:var(--shop-ink);color:var(--shop-surface)}
+.shop-shell .shop-alert-close svg{width:16px;height:16px}
+@media(max-width:560px){
+ .shop-shell .shop-confirm{align-items:end;padding:0}
+ .shop-shell .shop-confirm-card{width:100%;border-width:1px 0 0;border-radius:var(--shop-radius-lg,var(--shop-radius)) var(--shop-radius-lg,var(--shop-radius)) 0 0;padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));animation-name:shop-sheet}
+ .shop-shell .shop-alert .shop-confirm-card{width:100%;padding:32px 20px calc(20px + env(safe-area-inset-bottom,0px))}
+ .shop-shell .shop-alert .shop-confirm-card::before{display:none}
+ .shop-shell .shop-alert .shop-confirm-card>div{flex-direction:column-reverse}
+ .shop-shell .shop-alert .shop-confirm-card>div>.shop-button{flex:none;width:100%}
+}
+@keyframes shop-sheet{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+/* Duyuru açılır penceresi: görselsiz kartta üstte vurgu renginde şerit; başlık daha güçlü, kapat düğmesi yuvarlak çizgisiz. */
+.shop-shell .shop-popup-card{border:0;border-radius:var(--shop-radius-lg,var(--shop-radius));box-shadow:0 40px 90px -30px rgb(13 19 33 / .55)}
+.shop-shell .shop-popup-card:not(.has-image)::before{content:"";position:absolute;top:0;right:0;left:0;height:4px;background:var(--shop-accent)}
+.shop-shell .shop-popup-body h2{font-size:25px;font-weight:800;letter-spacing:-.01em}
+.shop-shell .shop-popup-close{background:color-mix(in srgb,var(--shop-surface) 85%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 0 0 1px var(--shop-line)}
+@media(max-width:560px){.shop-shell .shop-popup{padding:0}.shop-shell .shop-popup-card{width:100%;border-radius:var(--shop-radius-lg,var(--shop-radius)) var(--shop-radius-lg,var(--shop-radius)) 0 0;animation-name:shop-sheet}.shop-shell .shop-popup-body{padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}}
 /* Bağlantı kontrolü: hizmete uymayan bağlantı alanı kırmızı çerçeveli (açıklama açılır pencerede). */
 .shop-shell .scx-field input[aria-invalid=true]{border-color:var(--shop-danger,#dc2626)!important}
 .shop-shell :is(.shop-quick-target,.sfo-input):has(input[aria-invalid=true]){border-color:var(--shop-danger,#dc2626)!important}

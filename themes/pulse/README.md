@@ -25,6 +25,13 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.3
+
+- Blog yazılarının arasındaki hizmet önerisi kartı: platform renginde şerit ve simge, üç miktar seçeneği ve Sipariş Ver.
+- Uyarı ve onay pencereleri yenilendi: bulanık arka plan, türüne göre renkli simge, ortalanmış metin; telefonda alttan açılır. Duyuru penceresi de aynı görünümde.
+- Hakkımızda: platformlar sağdan sola kayan şeritte, üzerine gelince durur.
+- İletişim: tek kutuda solda destek bilgileri, sağda renkli kanal satırları; altta ipuçları ve dört hızlı işlem kartı.
+
 ### 1.0.2
 
 - Denenen üç alt bilgi düzeni kaldırıldı; alt bilgi sekmeli düzende kalır. Bölüm boşlukları 1.0.1’deki gibi.
