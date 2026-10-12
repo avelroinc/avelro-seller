@@ -1,5 +1,5 @@
 {
-  "version": "1.0.25",
-  "notes": "- Hiçbir ödeme yöntemi (kart kanalı ya da havale / EFT) açık değilken sipariş verilemez: sepette Siparişi Tamamla kapanır ve \"Şu anda ödeme alınamıyor\" uyarısı görünür; sunucu da bu durumda sipariş oluşturmaz (bakiyeyle ödeme ve ücretsiz siparişler hariç).\n- Havale / EFT kapalıyken bakiye yükleme talebi gönderilemez; Hesabım › Bakiye Yükle’de bilgi görünür.",
-  "publishedAt": "2026-10-12T10:17:19.095Z"
+  "version": "1.0.26",
+  "notes": "- Bakiyeyle ödeme aynı anda iki kez gönderilirse (çift tıklama, iki sekme) bakiye artık iki kez çekilmez: siparişler ödeme sırasında kilitlenir, bakiye yetmezse yeniden ödeme bekler.\n- Süresi dolup iptal edilen siparişe ödeme sayfası açıkken yapılan ödeme kaybolmaz: üyede tutar bakiyesine eklenir, misafirde yönetime iade bildirimi gider. Zamanında ödenip sonradan iptal edilen siparişte tekrar gelen ödeme bildirimi bakiye eklemez.",
+  "publishedAt": "2026-10-12T10:34:24.231Z"
 }
