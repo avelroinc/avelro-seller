@@ -1,5 +1,5 @@
 {
-  "version": "1.0.26",
-  "notes": "- Bakiyeyle ödeme aynı anda iki kez gönderilirse (çift tıklama, iki sekme) bakiye artık iki kez çekilmez: siparişler ödeme sırasında kilitlenir, bakiye yetmezse yeniden ödeme bekler.\n- Süresi dolup iptal edilen siparişe ödeme sayfası açıkken yapılan ödeme kaybolmaz: üyede tutar bakiyesine eklenir, misafirde yönetime iade bildirimi gider. Zamanında ödenip sonradan iptal edilen siparişte tekrar gelen ödeme bildirimi bakiye eklemez.",
-  "publishedAt": "2026-10-12T10:34:24.231Z"
+  "version": "1.0.27",
+  "notes": "- Hizmet eklerken ve paketleri düzenlerken kâr oranı artık elle yazılır: Kâr Oranı (%) alanına oranı yazıp Fiyatları Doldur’a basınca bütün paketlerin satış fiyatı maliyet × (1 + kâr oranı) olarak hesaplanır. Sağlayıcı fiyatı USD / EUR ise maliyet TCMB kuruyla TL’ye çevrilir (önceden bu durumda öneri hiç çalışmıyordu). Paket yoksa servisin alt / üst sınırına göre örnek miktarlar eklenir.",
+  "publishedAt": "2026-10-12T10:48:25.414Z"
 }
