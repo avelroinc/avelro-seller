@@ -1,5 +1,5 @@
 {
-  "version": "1.0.20",
-  "notes": "- Canlı destekte sipariş durum kartı: ziyaretçi sipariş kodunu yazınca (üyeyse kendi siparişi, değilse kod ve sipariş e-postası eşleşirse) asistan siparişin durum kartını gönderir; kartta site logosu ve adı, sipariş kodu, tutar, ortak durum, ilerleme ve hizmetlerin tek tek durumu yer alır. Sohbeti temsilci yürütüyorsa da kart kendiliğinden gider.\n- Temsilci Av/Tawk’tan (Ekle › Sipariş Durumu) ziyaretçinin siparişlerinden birini seçerek ya da kodu yazarak kartı gönderebilir.\n- Ziyaretçi kart ya da dosya biçiminde mesaj yazamaz.",
-  "publishedAt": "2026-10-12T06:42:00.726Z"
+  "version": "1.0.21",
+  "notes": "- Sitede Düzenleme Modu: makalesi olmayan sayfalarda da makale eklenebilir. Kategori, platform, Ücretsiz Araçlar, Ücretsiz Hizmetler, ücretsiz hizmet ve lisans sayfalarında ve ana sayfada makale boşken Düzenleme Modu’nda boş makale alanı çıkar; Düzenle ile makale yazılır, yapay zekâyla oluşturulur ya da kapak görseli eklenir.\n- Ücretsiz araç sayfaları (Şekilli Nick, Hashtag Oluşturucu, Profil Analizi…) sayfada düzenlenir: rehber makalesi ile Google başlığı ve açıklaması. Boş bırakılan makalede hazır rehber gösterilir.\n- Boş makale alanı ziyaretçilere hiç gösterilmez; yönetici için de yalnızca Düzenleme Modu açıkken görünür.",
+  "publishedAt": "2026-10-12T07:37:06.876Z"
 }
