@@ -1,5 +1,5 @@
 {
-  "version": "1.0.28",
-  "notes": "- Shopier ödemeleri artık Shopier’in kendi kayıtlarından doğrulanır: müşteri Shopier’de ödedikten sonra siteye geri döner; sistem Shopier REST API’sinden (Kişisel Erişim Anahtarı ile) siparişin ödendiğini, tutarını ve para birimini kontrol eder, ancak öyleyse sipariş işlenir ya da bakiye yüklenir. Tarayıcıdan gelen sahte “başarılı” bilgisi artık işe yaramaz; bir Shopier ödemesi yalnızca bir sipariş için kullanılabilir.\n- Shopier ödemesi dönüşte hemen görünmezse 3 saat boyunca arka planda yeniden denetlenir; müşteri “Ödemen kontrol ediliyor” bilgisini görür. Doğrulanamazsa yönetime bildirim gider.\n- Shopier Entegrasyonu’na Kişisel Erişim Anahtarı (PAT) alanı eklendi; anahtar girilmeden Shopier ödemeleri otomatik onaylanmaz. Entegrasyon ayarlarında tek bir alan değiştirilebilir, diğer kayıtlı bilgiler korunur.",
-  "publishedAt": "2026-10-12T11:13:09.872Z"
+  "version": "1.0.29",
+  "notes": "- Site daha hızlı açılır: simgeler tek dosyada toplandı, ana sayfa açılışındaki istek sayısı yaklaşık 60’tan 35’e indi.\n- Oturum bilgisi sayfa başına bir kez istenir (önceden aynı sayfada birkaç bileşen ayrı ayrı istiyordu).\n- Sayfa çiziminde kullanılmayan ve zamanla büyüyen kayıtlar (sürüm geçmişi, taslaklar, otomatik blog ve SEO günlükleri, havale bildirimleri) artık her sayfa isteğinde okunmaz; site büyüdükçe yavaşlamaz.",
+  "publishedAt": "2026-10-12T11:59:17.300Z"
 }
