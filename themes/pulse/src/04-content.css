@@ -488,9 +488,6 @@
 }
 /* Ana sayfa bölüm aralığı: bölümler arası boşluk, bölüm içi boşluklardan (ör. makale satırları) belirgin biçimde büyüktür; böylece
    bölümler birbirinden ayrışır. Bütün ana sayfa bölümleri tek ölçüyü kullanır (refinement.css: main > … ~ … margin-top). */
-.shop-shell .shop-home{--shop-rhythm:96px}
-@media(max-width:1000px){.shop-shell .shop-home{--shop-rhythm:72px}}
-@media(max-width:760px){.shop-shell .shop-home{--shop-rhythm:56px}}
 /* Lisans sayfaları (yenilenmiş): geniş tanıtım alanı ve sağda sıralı Çok Satanlar listesi, kategori kartları, tek ürün ızgarası,
    tek parça güven şeridi, iki sütunlu SSS. */
 .shop-shell .lic-faq{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:48px;align-items:start;margin-bottom:24px}

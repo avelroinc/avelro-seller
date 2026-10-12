@@ -298,9 +298,6 @@
 .shop-shell .sfo-trial .sfo-card>footer .bot-check,.shop-shell .sfo-trial .sfo-card>footer>:not(.sfo-actions){flex:1;min-width:200px}
 @media(max-width:640px){.shop-shell .sfo-trial-gate{padding:18px}.shop-shell .sfo-card>.sfo-trial-done{margin:18px}}
 /* Ücretsiz araçlar, ücretsiz hizmetler ve lisans ürün sayfaları: bölümler arası boşluk ana sayfayla aynı (96 / 72 / 56). */
-.shop-shell .sc-flow{--shop-rhythm:96px}
-@media(max-width:1000px){.shop-shell .sc-flow{--shop-rhythm:72px}}
-@media(max-width:760px){.shop-shell .sc-flow{--shop-rhythm:56px}}
 .shop-shell .lx-page.sc-flow{gap:0}
 .shop-shell main.lx-page.sc-flow>.sc-breadcrumb+*{margin-top:16px!important}
 .shop-shell .lx-page>.shop-zig{padding-inline:0;max-width:none}

@@ -4,7 +4,7 @@
    çalışma bilgileri ve talep ipuçları, sağda hızlı işlem bağlantıları.
    ========================================================================== */
 
-.shop-shell .shop-cx{display:grid;gap:40px;padding-bottom:24px}
+.shop-shell .shop-cx{display:grid;gap:0;padding-bottom:0}
 
 /* Kanal kartları */
 .shop-shell .shop-cx-channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
@@ -57,7 +57,7 @@
 .shop-shell .shop-cx-shortcut:hover .shop-cx-shortcut-arrow{color:var(--shop-accent);transform:translate(2px,-2px)}
 
 @media(max-width:900px){
- .shop-shell .shop-cx{gap:28px}
+ .shop-shell .shop-cx{gap:0}
  .shop-shell .shop-cx-layout{grid-template-columns:minmax(0,1fr)}
  .shop-shell .shop-cx-panel{padding:26px 22px}
 }

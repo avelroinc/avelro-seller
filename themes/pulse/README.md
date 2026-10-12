@@ -25,6 +25,13 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.1
+
+- Bileşenler arası boşluk bütün sayfalarda aynı: masaüstünde 80 px, tablette 64 px, telefonda 48 px (ana sayfa, araçlar ve
+  ücretsiz hizmetler daha geniş, iletişim sayfası daha geniş aralık kullanıyordu). Son bileşenle alt bilgi arası da aynı.
+- Alt bilgi için üç yeni düzen: Klasik Sütunlar, Koyu Bant (çağrı kartıyla) ve Sade. Düzen yönetimden seçilir (sistem 1.0.30+);
+  varsayılan sekmeli düzen değişmedi.
+
 ### 1.0.0
 
 - Pulse teması sistemden ayrıldı ve ayrı depoda yayınlandı. Görünüm sistemdeki yerleşik Pulse ile aynıdır; iletişim

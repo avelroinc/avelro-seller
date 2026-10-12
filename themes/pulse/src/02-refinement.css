@@ -1209,8 +1209,11 @@
 
 /* Dikey ritim: her sayfada ana bloklar arasında tek ölçü (geniş ekran 64px, dar ekran 40px); başlık ile hemen altındaki içerik 24px.
    Blokların kendi üst / alt boşlukları burada sıfırlanır, böylece hiçbir sayfada göze batan farklı bir boşluk kalmaz. */
-.shop-shell{--shop-rhythm:64px}
-@media(max-width:760px){.shop-shell{--shop-rhythm:40px}}
+/* Bölüm aralığı bütün sayfalarda tek: ana sayfa, araçlar, ücretsiz hizmetler ve diğer sayfalar aynı boşlukla ayrılır (alt bilgiye
+   uzaklık da aynı). */
+.shop-shell{--shop-rhythm:80px}
+@media(max-width:1000px){.shop-shell{--shop-rhythm:64px}}
+@media(max-width:760px){.shop-shell{--shop-rhythm:48px}}
 .shop-shell main>:not(script,style,link,template,[hidden]){margin-top:0!important;margin-bottom:0!important}
 .shop-shell main>:not(script,style,link,template,[hidden])~:not(script,style,link,template,[hidden]){margin-top:var(--shop-rhythm)!important}
 .shop-shell main>.sc-list-heading+:not(script,style,link,template,[hidden]){margin-top:24px!important}
