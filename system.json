@@ -1,5 +1,5 @@
 {
-  "version": "1.0.27",
-  "notes": "- Hizmet eklerken ve paketleri düzenlerken kâr oranı artık elle yazılır: Kâr Oranı (%) alanına oranı yazıp Fiyatları Doldur’a basınca bütün paketlerin satış fiyatı maliyet × (1 + kâr oranı) olarak hesaplanır. Sağlayıcı fiyatı USD / EUR ise maliyet TCMB kuruyla TL’ye çevrilir (önceden bu durumda öneri hiç çalışmıyordu). Paket yoksa servisin alt / üst sınırına göre örnek miktarlar eklenir.",
-  "publishedAt": "2026-10-12T10:48:25.414Z"
+  "version": "1.0.28",
+  "notes": "- Shopier ödemeleri artık Shopier’in kendi kayıtlarından doğrulanır: müşteri Shopier’de ödedikten sonra siteye geri döner; sistem Shopier REST API’sinden (Kişisel Erişim Anahtarı ile) siparişin ödendiğini, tutarını ve para birimini kontrol eder, ancak öyleyse sipariş işlenir ya da bakiye yüklenir. Tarayıcıdan gelen sahte “başarılı” bilgisi artık işe yaramaz; bir Shopier ödemesi yalnızca bir sipariş için kullanılabilir.\n- Shopier ödemesi dönüşte hemen görünmezse 3 saat boyunca arka planda yeniden denetlenir; müşteri “Ödemen kontrol ediliyor” bilgisini görür. Doğrulanamazsa yönetime bildirim gider.\n- Shopier Entegrasyonu’na Kişisel Erişim Anahtarı (PAT) alanı eklendi; anahtar girilmeden Shopier ödemeleri otomatik onaylanmaz. Entegrasyon ayarlarında tek bir alan değiştirilebilir, diğer kayıtlı bilgiler korunur.",
+  "publishedAt": "2026-10-12T11:13:09.872Z"
 }
