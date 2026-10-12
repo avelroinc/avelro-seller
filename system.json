@@ -1,5 +1,5 @@
 {
-  "version": "1.0.30",
-  "notes": "- Bileşenler arası boşluk bütün sayfalarda aynı yükseklikte (Pulse 1.0.1 temasıyla): masaüstünde 80 px, tablette 64 px, telefonda 48 px.\n- Alt bilgi için üç yeni düzen hazırlandı: Klasik Sütunlar, Koyu Bant ve Sade. Varsayılan sekmeli düzen değişmedi; seçilen düzen yönetimden uygulanır.",
-  "publishedAt": "2026-10-12T13:05:37.256Z"
+  "version": "1.0.31",
+  "notes": "- Denenen üç alt bilgi düzeni kaldırıldı; alt bilgi önceki sekmeli düzeninde kalır (Pulse 1.0.2).",
+  "publishedAt": "2026-10-12T13:17:21.065Z"
 }
