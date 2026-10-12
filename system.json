@@ -1,5 +1,5 @@
 {
-  "version": "1.0.21",
-  "notes": "- Sitede Düzenleme Modu: makalesi olmayan sayfalarda da makale eklenebilir. Kategori, platform, Ücretsiz Araçlar, Ücretsiz Hizmetler, ücretsiz hizmet ve lisans sayfalarında ve ana sayfada makale boşken Düzenleme Modu’nda boş makale alanı çıkar; Düzenle ile makale yazılır, yapay zekâyla oluşturulur ya da kapak görseli eklenir.\n- Ücretsiz araç sayfaları (Şekilli Nick, Hashtag Oluşturucu, Profil Analizi…) sayfada düzenlenir: rehber makalesi ile Google başlığı ve açıklaması. Boş bırakılan makalede hazır rehber gösterilir.\n- Boş makale alanı ziyaretçilere hiç gösterilmez; yönetici için de yalnızca Düzenleme Modu açıkken görünür.",
-  "publishedAt": "2026-10-12T07:37:06.876Z"
+  "version": "1.0.22",
+  "notes": "- Platform (hizmetler) sayfasının üstündeki platform düğmeleri kaldırıldı.\n- Düzenleme Modu’nda görseller doğrudan düzenlenir: makale görselleri (her bölümün görseli ve makale kapağı), ana sayfa giriş görseli, lisans ürün görseli ve blog kapağının üzerinde Görseli Değiştir düğmesi çıkar; açılan pencerede yeni görsel yüklenir ya da özel görsel kaldırılır, Taslak Kaydet ya da Yayınla ile kaydedilir.\n- Lisans ürünlerinin makale düzenleyicisi hazır rehberle açılır; değiştirilmezse hazır rehber gösterilmeye devam eder.\n- Canlı destekteki sipariş kartı artık güncel durumu gösterir: kart açık kaldıkça (sitede ve Av/Tawk’ta) siparişin son durumu okunur.",
+  "publishedAt": "2026-10-12T07:55:17.975Z"
 }
