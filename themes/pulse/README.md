@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.2
+
+- Denenen üç alt bilgi düzeni kaldırıldı; alt bilgi sekmeli düzende kalır. Bölüm boşlukları 1.0.1’deki gibi.
+
 ### 1.0.1
 
 - Bileşenler arası boşluk bütün sayfalarda aynı: masaüstünde 80 px, tablette 64 px, telefonda 48 px (ana sayfa, araçlar ve
