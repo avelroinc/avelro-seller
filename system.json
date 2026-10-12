@@ -1,5 +1,5 @@
 {
-  "version": "1.0.15",
-  "notes": "- Mobil uygulamadan yapay zekâyla blog yazısı istenirken konu verilebilir; yazı istenirse taslak olarak kaydedilir.\n- Arama Motoru Ayarları mobil uygulamadan yönetilir: site başlığı, başlık eki, site açıklaması, arama motorlarına kapatma, doğrulama kodları (Google, Bing, Yandex), kurum adı, sosyal profiller, SSS şeması ve özel robots.txt.\n- Ek hizmetlerin (ör. Hızlı Teslimat) bağlı olduğu ayrı servis bilgisi kayıtta korunur.\n- Tema kataloğunda hazırlanmakta olan temalar \"Yakında\" olarak görünür; kurulamaz ve kurulum sihirbazında listelenmez.",
-  "publishedAt": "2026-10-11T22:01:26.482Z"
+  "version": "1.0.16",
+  "notes": "- Excel ile toplu ekleme: hizmetler (platform, paketler, servis bağlantısı) ve lisans ürünleri (fiyat, anahtarlar) şablondan içe aktarılır; aynı adlı kayıtlar güncellenir, hatalı satırlar numarasıyla bildirilir.\n- Arama motoru ayarları kaydedildikten sonra doğru geri okunur (arama motorlarına kapatma ayarı artık eski haline dönmez).\n- Otomatik güncellemenin saat aralığı seçilebilir.\n- Otomatik blog yazısının yayın saati seçilebilir; yapay zekâya başlık, kelime sayısı, anahtar kelimeler, üslup ve ek istek verilebilir.\n- Sağlayıcı eklerken para birimi sağlayıcının bakiye bilgisinden okunur; elle seçilmez.",
+  "publishedAt": "2026-10-12T04:18:15.820Z"
 }
