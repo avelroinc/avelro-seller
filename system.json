@@ -1,5 +1,5 @@
 {
-  "version": "1.0.16",
-  "notes": "- Excel ile toplu ekleme: hizmetler (platform, paketler, servis bağlantısı) ve lisans ürünleri (fiyat, anahtarlar) şablondan içe aktarılır; aynı adlı kayıtlar güncellenir, hatalı satırlar numarasıyla bildirilir.\n- Arama motoru ayarları kaydedildikten sonra doğru geri okunur (arama motorlarına kapatma ayarı artık eski haline dönmez).\n- Otomatik güncellemenin saat aralığı seçilebilir.\n- Otomatik blog yazısının yayın saati seçilebilir; yapay zekâya başlık, kelime sayısı, anahtar kelimeler, üslup ve ek istek verilebilir.\n- Sağlayıcı eklerken para birimi sağlayıcının bakiye bilgisinden okunur; elle seçilmez.",
-  "publishedAt": "2026-10-12T04:18:15.820Z"
+  "version": "1.0.17",
+  "notes": "- Sitede canlı destek açıksa canlı destek kutusu yeniden görünür; mesajlar Av/Tawk uygulamasından yanıtlanır.\n- Excel ile toplu ekleme: hizmetler (platform, paketler, servis bağlantısı) ve lisans ürünleri (fiyat, anahtarlar) şablondan içe aktarılır; aynı adlı kayıtlar güncellenir, hatalı satırlar numarasıyla bildirilir.\n- Arama motoru ayarları kaydedildikten sonra doğru geri okunur (arama motorlarına kapatma ayarı artık eski haline dönmez).\n- Otomatik güncellemenin saat aralığı seçilebilir.\n- Otomatik blog yazısının yayın saati seçilebilir; yapay zekâya başlık, kelime sayısı, anahtar kelimeler, üslup ve ek istek verilebilir.\n- Sağlayıcı eklerken para birimi sağlayıcının bakiye bilgisinden okunur; elle seçilmez.",
+  "publishedAt": "2026-10-12T05:14:35.862Z"
 }
