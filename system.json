@@ -1,5 +1,5 @@
 {
-  "version": "1.0.31",
-  "notes": "- Denenen üç alt bilgi düzeni kaldırıldı; alt bilgi önceki sekmeli düzeninde kalır (Pulse 1.0.2).",
-  "publishedAt": "2026-10-12T13:17:21.065Z"
+  "version": "1.0.32",
+  "notes": "- Blog kategorileri artık platformlar: kategori sayfası /blog/kategori/<platform> adresinde, kendi başlığı, açıklaması ve canonical adresiyle; site haritasına eklendi. Eski ?kategori= adresleri kalıcı yönlenir.\n- Blog yazısının kategorisi sitede Düzenle penceresinde platform listesinden seçilir; mobil uygulamada kendin yazdığın yazıda da platform seçilir.\n- Blog yazılarının arasına, yazının platformundan rastgele seçilen iki hizmet önerisi kartı eklenir (üç miktar seçeneği ve Sipariş Ver).\n- Düzenleme Modu: sayfanın üstündeki taslak şeridi kaldırıldı. Vazgeç, Taslak Kaydet, Taslağı Sil ve Yayınla sağ altta Bitir düğmesinin yanında simge olarak durur.\n- Düzenleme Modu: yeni Bölümler penceresi. Sayfanın (ana sayfa dahil) bütün bölümleri tek listede; sürükleyerek ya da oklarla sırala, anahtarla göster veya gizle.\n- Uyarı pencereleri yenilendi: türüne göre renkli simge, kapat düğmesi; telefonda alttan açılır.\n- Hakkımızda: üstteki rakam kartları kaldırıldı, platformlar sağdan sola kayan şeritte gösterilir.\n- İletişim sayfası yeni düzende: destek bilgileri ve kanallar tek kutuda, altta ipuçları ve hızlı işlem kartları.\n- Pulse teması 1.0.3 ile birlikte gelir.",
+  "publishedAt": "2026-10-12T20:29:21.274Z"
 }
