@@ -1,5 +1,5 @@
 {
-  "version": "1.0.29",
-  "notes": "- Site daha hızlı açılır: simgeler tek dosyada toplandı, ana sayfa açılışındaki istek sayısı yaklaşık 60’tan 35’e indi.\n- Oturum bilgisi sayfa başına bir kez istenir (önceden aynı sayfada birkaç bileşen ayrı ayrı istiyordu).\n- Sayfa çiziminde kullanılmayan ve zamanla büyüyen kayıtlar (sürüm geçmişi, taslaklar, otomatik blog ve SEO günlükleri, havale bildirimleri) artık her sayfa isteğinde okunmaz; site büyüdükçe yavaşlamaz.",
-  "publishedAt": "2026-10-12T11:59:17.300Z"
+  "version": "1.0.30",
+  "notes": "- Bileşenler arası boşluk bütün sayfalarda aynı yükseklikte (Pulse 1.0.1 temasıyla): masaüstünde 80 px, tablette 64 px, telefonda 48 px.\n- Alt bilgi için üç yeni düzen hazırlandı: Klasik Sütunlar, Koyu Bant ve Sade. Varsayılan sekmeli düzen değişmedi; seçilen düzen yönetimden uygulanır.",
+  "publishedAt": "2026-10-12T13:05:37.256Z"
 }
