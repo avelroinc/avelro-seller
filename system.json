@@ -1,5 +1,5 @@
 {
-  "version": "1.0.19",
-  "notes": "- Canlı destek bildirimleri yalnızca Av/Tawk uygulamasına gider; Av/Dashboard artık canlı destek bildirimi almaz ve bildirim geçmişinde canlı destek mesajları görünmez.\n- Av/Tawk 1.1.0 için: ana hesaba bağlı bütün sitelerin sohbetleri tek uygulamada yönetilir.",
-  "publishedAt": "2026-10-12T05:51:45.692Z"
+  "version": "1.0.20",
+  "notes": "- Canlı destekte sipariş durum kartı: ziyaretçi sipariş kodunu yazınca (üyeyse kendi siparişi, değilse kod ve sipariş e-postası eşleşirse) asistan siparişin durum kartını gönderir; kartta site logosu ve adı, sipariş kodu, tutar, ortak durum, ilerleme ve hizmetlerin tek tek durumu yer alır. Sohbeti temsilci yürütüyorsa da kart kendiliğinden gider.\n- Temsilci Av/Tawk’tan (Ekle › Sipariş Durumu) ziyaretçinin siparişlerinden birini seçerek ya da kodu yazarak kartı gönderebilir.\n- Ziyaretçi kart ya da dosya biçiminde mesaj yazamaz.",
+  "publishedAt": "2026-10-12T06:42:00.726Z"
 }
