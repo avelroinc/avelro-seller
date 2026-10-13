@@ -3469,14 +3469,14 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
  .shop-shell nav.shop-dock.is-horizontal{left:var(--shop-gutter,16px);right:var(--shop-gutter,16px);padding:8px 8px 7px!important;overflow:visible}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-bar{display:flex!important;align-items:center;justify-content:space-between;gap:2px}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-bar>:is(a,button){flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0}
- .shop-shell nav.shop-dock.is-horizontal .shop-dock-ico{width:40px;height:40px;border-radius:2px;background:color-mix(in srgb,var(--b) 13%,var(--shop-surface));color:var(--b);box-shadow:none;transition:background .2s,color .2s,transform .2s}
- .shop-shell nav.shop-dock.is-horizontal .shop-dock-ico>svg{width:19px;height:19px;stroke-width:2.1;filter:none}
+ .shop-shell nav.shop-dock.is-horizontal .shop-dock-ico{width:44px;height:44px;border-radius:2px;background:color-mix(in srgb,var(--b) 13%,var(--shop-surface));color:var(--b);box-shadow:none;transition:background .2s,color .2s,transform .2s}
+ .shop-shell nav.shop-dock.is-horizontal .shop-dock-ico>svg{width:21px;height:21px;stroke-width:2.1;filter:none}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-bar>[aria-current=page] .shop-dock-ico,.shop-shell nav.shop-dock.is-horizontal .shop-dock-bar>[aria-expanded=true] .shop-dock-ico,.shop-shell nav.shop-dock.is-horizontal .shop-dock-bar>[aria-pressed=true] .shop-dock-ico{background:linear-gradient(160deg,var(--a),var(--b));color:#fff;box-shadow:0 8px 14px -9px var(--b)}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-ico>b{top:-6px;right:-7px;min-width:17px;height:17px;padding:0 4px;border-width:2px;font-size:10px}
- .shop-shell nav.shop-dock.is-horizontal .shop-dock-bar>.shop-dock-cart{flex:0 0 78px;height:40px;overflow:visible}
- .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico{width:64px;height:64px;margin-top:-30px;border:4px solid var(--shop-surface);border-radius:50%;background:radial-gradient(120% 90% at 25% 12%,rgb(255 255 255 / .45),transparent 46%),linear-gradient(150deg,color-mix(in srgb,var(--shop-accent-fill) 62%,#fff),var(--shop-accent-fill));color:#fff;box-shadow:0 14px 26px -12px var(--shop-accent-fill),0 0 0 1px color-mix(in srgb,var(--shop-accent-fill) 35%,transparent)}
- .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico>svg{width:27px;height:27px;stroke-width:2.2}
- .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico>b{top:-4px;right:-4px;min-width:21px;height:21px;font-size:11px}
+ .shop-shell nav.shop-dock.is-horizontal .shop-dock-bar>.shop-dock-cart{flex:0 0 66px;height:44px;overflow:visible}
+ .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico{width:56px;height:56px;margin-top:-14px;border:3px solid var(--shop-surface);border-radius:50%;background:radial-gradient(120% 90% at 25% 12%,rgb(255 255 255 / .45),transparent 46%),linear-gradient(150deg,color-mix(in srgb,var(--shop-accent-fill) 62%,#fff),var(--shop-accent-fill));color:#fff;box-shadow:0 14px 26px -12px var(--shop-accent-fill),0 0 0 1px color-mix(in srgb,var(--shop-accent-fill) 35%,transparent)}
+ .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico>svg{width:24px;height:24px;stroke-width:2.2}
+ .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico>b{top:-5px;right:-5px;min-width:19px;height:19px;font-size:10.5px}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart:active .shop-dock-ico{transform:scale(.93)}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico{isolation:isolate;animation:dock-cart-glow 2.8s ease-in-out infinite}
  .shop-shell nav.shop-dock.is-horizontal .shop-dock-cart .shop-dock-ico::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:50%;background:linear-gradient(115deg,transparent 38%,rgb(255 255 255 / .6) 50%,transparent 62%) no-repeat;background-size:260% 100%;background-position:130% 0;pointer-events:none;animation:dock-cart-shine 3.6s ease-in-out 1s infinite}

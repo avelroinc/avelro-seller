@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.6
+
+- Alt menü (telefon): simgeler orantılı; yan simgeler 44 px, ortadaki sepet 56 px ve menünün biraz üstüne taşar (önceki büyük sepet ve küçük yan simgeler dengelendi). Parlama efekti korunur.
+
 ### 1.0.5
 
 - Alt menü (telefon): sepet ortada büyük, yuvarlak ve menünün üstüne taşan düğme; birkaç saniyede bir yüzeyinden ışık geçer ve çevresindeki renkli ışık yavaşça nabız atar. Yan öğeler küçük, açık renk zeminli simgeler; bulunulan sayfanın simgesi dolu renkte (sistem 1.0.48 ile; Ana Sayfa düğmesi kaldırıldı).
