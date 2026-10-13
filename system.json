@@ -1,5 +1,5 @@
 {
-  "version": "1.0.35",
-  "notes": "- Work/Bot: yapay zekâ çalışanın tek alanı. Mobil uygulamada (Av/Dashboard 1.17.5) Daha Fazla'nın en üstünde özet kartı (karar bekleyen, servis önerisi, kendisi çözdü); dokununca Work/Bot ekranı açılır: son 24 saatin özeti, üç birim (Sipariş Sorumlusu, Servis Danışmanı, Sağlayıcı Kâşifi) bekleyen işleri ve durumlarıyla, son kararlar (otomatik olanlar ayrı renkte).\n- Sipariş Sorumlusu, Servis Danışmanı ve Sağlayıcı Kâşifi artık menüde ayrı satır olarak değil, Work/Bot'tan açılır.",
-  "publishedAt": "2026-10-13T05:54:45.904Z"
+  "version": "1.0.36",
+  "notes": "- Mobil uygulama (Av/Dashboard 1.17.6): Daha Fazla'da profil simgesi başlığın sağ üst köşesine taşındı; Work/Bot kartı sayfanın en üstünde.\n- Work/Bot ekranında birim kartları aynı hizada: bekleyen iş sayısı ve ok sağda sabit genişlikte tek sütunda, başlık, açıklama ve durum satırı her kartta aynı genişlikte; kartların yüksekliği eşit.\n- Profil simgeleri bütün ekranlarda 2 köşe yarıçaplı kare.",
+  "publishedAt": "2026-10-13T06:44:01.805Z"
 }
