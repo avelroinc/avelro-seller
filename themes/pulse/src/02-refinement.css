@@ -20,7 +20,8 @@
 .shop-shell .shop-hero-floats{position:absolute;inset:0;z-index:0;pointer-events:none}
 .shop-shell .shop-hero-float{--tone:var(--shop-accent);position:absolute;display:flex;align-items:center;gap:12px;min-width:176px;padding:11px 18px 11px 11px;border:1px solid rgb(255 255 255 / .75);border-radius:2px;background:rgb(255 255 255 / .9);color:#1b2336;box-shadow:0 20px 40px -18px rgb(27 35 54 / .35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);animation:shop-float-in .8s cubic-bezier(.2,.8,.2,1) both,shop-float 6s ease-in-out infinite}
 .shop-shell[data-shop-scheme=dark] .shop-hero-float{border-color:rgb(255 255 255 / .08);background:rgb(22 32 54 / .88);color:#f2f5fb}
-.shop-shell .shop-hero-float>i{display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:2px;background:var(--tone);color:#fff;font-style:normal;animation:shop-ping 2.4s ease-out infinite}
+.shop-shell .shop-hero-float>i{position:relative;display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:2px;background:var(--tone);color:#fff;font-style:normal}
+.shop-shell .shop-hero-float>i::after{content:"";position:absolute;inset:0;border-radius:2px;background:color-mix(in srgb,var(--tone) 45%,transparent);will-change:opacity,transform;pointer-events:none;animation:shop-ping 2.4s ease-out infinite}
 .shop-shell .shop-hero-float>i svg{width:20px;height:20px}
 .shop-shell .shop-hero-float>span{display:grid;min-width:0;line-height:1.2}
 .shop-shell .shop-hero-float b{font-size:17px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
@@ -36,7 +37,7 @@
 .shop-shell .shop-hero-float-views>i{animation-delay:1.6s}
 @keyframes shop-float-in{from{opacity:0;scale:.88}to{opacity:1;scale:1}}
 @keyframes shop-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
-@keyframes shop-ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--tone) 55%,transparent)}70%,100%{box-shadow:0 0 0 12px transparent}}
+@keyframes shop-ping{0%{opacity:.9;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.55)}}
 @keyframes shop-fill{0%{transform:scaleX(.08)}70%,100%{transform:scaleX(1)}}
 .shop-shell .shop-hero-copy>small{padding:9px 16px;border-radius:2px;background:var(--shop-surface);box-shadow:0 10px 24px -14px rgb(27 35 54 / .35);letter-spacing:.06em}
 .shop-shell .shop-hero-copy h1{margin-top:22px;font-size:clamp(36px,4.6vw,60px);font-weight:700;letter-spacing:-.03em;line-height:1.08}

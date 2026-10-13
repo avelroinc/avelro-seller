@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.7
+
+- Hız: alt menüdeki sepet parlaması ve ana sayfa bildirim kartlarındaki halka efekti yalnızca ekran kartında çalışan yöntemle çizilir; görünüm aynı, sayfa boşta işlemciyi meşgul etmez.
+
 ### 1.0.6
 
 - Alt menü (telefon): simgeler orantılı; yan simgeler 44 px, ortadaki sepet 56 px ve menünün biraz üstüne taşar (önceki büyük sepet ve küçük yan simgeler dengelendi). Parlama efekti korunur.
