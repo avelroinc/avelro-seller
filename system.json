@@ -1,5 +1,5 @@
 {
-  "version": "1.0.37",
-  "notes": "- Mobil uygulama (Av/Dashboard 1.17.7): Work/Bot çalışırken robot simgesinde efekt — iki halka sırayla dışa doğru yayılıp söner (radar dalgası), kutu hafifçe nefes alıp parlar, \"Çalışıyor\" noktası yanıp söner. Kapalıyken simge soluk ve sabittir; telefonda hareketi azaltma ayarı açıksa efekt gösterilmez.",
-  "publishedAt": "2026-10-13T07:09:04.004Z"
+  "version": "1.0.38",
+  "notes": "- Hizmet adresleri artık platform içinde benzersiz: /facebook/takipci varken /twitter/takipci de oluşturulabilir. Başka platformda aynı adres varsa kayıt arka planda platform önekiyle saklanır, sitede kısa adres görünür. Aynı platformda aynı adres ikinci bir hizmete verilmez ve açık bir uyarı gösterilir. Mobil uygulamada hizmet ekleme ve düzenleme ile Excel ile toplu ekleme aynı kuralı kullanır.\n- Mobil uygulama (Av/Dashboard 1.17.8): Siparişler, Ödemeler, Müşteriler ve Daha Fazla sayfalarının sağ üstünde bildirimler (okunmamış sayısıyla), arama ve profil simgesi. Sayfalardaki arama çubukları kaldırıldı; arama simgesi sayfanın kendi arama kutusunu açıp kapatır, Daha Fazla'da genel aramayı açar.\n- Work/Bot kartı sadeleşti: alt yazı, alttaki açıklama satırı ve \"Çalışıyor\" etiketi kaldırıldı; çalışırken simgenin etrafındaki dalga küçüldü.\n- Menü: Excel ile Toplu Ekle menüden kaldırıldı (Hizmetler ve Lisans Ürünleri ekranlarında duruyor). Yeni adlar: Çapraz Satış Sistemi, Ödeme ve Sepet Ayarları, Tema Ayarları, Güncellemeler. Güvenlik ve Bağlantılar Profilim'e taşındı.",
+  "publishedAt": "2026-10-13T07:59:15.140Z"
 }
