@@ -1,5 +1,5 @@
 {
-  "version": "1.0.36",
-  "notes": "- Mobil uygulama (Av/Dashboard 1.17.6): Daha Fazla'da profil simgesi başlığın sağ üst köşesine taşındı; Work/Bot kartı sayfanın en üstünde.\n- Work/Bot ekranında birim kartları aynı hizada: bekleyen iş sayısı ve ok sağda sabit genişlikte tek sütunda, başlık, açıklama ve durum satırı her kartta aynı genişlikte; kartların yüksekliği eşit.\n- Profil simgeleri bütün ekranlarda 2 köşe yarıçaplı kare.",
-  "publishedAt": "2026-10-13T06:44:01.805Z"
+  "version": "1.0.37",
+  "notes": "- Mobil uygulama (Av/Dashboard 1.17.7): Work/Bot çalışırken robot simgesinde efekt — iki halka sırayla dışa doğru yayılıp söner (radar dalgası), kutu hafifçe nefes alıp parlar, \"Çalışıyor\" noktası yanıp söner. Kapalıyken simge soluk ve sabittir; telefonda hareketi azaltma ayarı açıksa efekt gösterilmez.",
+  "publishedAt": "2026-10-13T07:09:04.004Z"
 }
