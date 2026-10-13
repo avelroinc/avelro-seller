@@ -25,6 +25,13 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.8
+
+- Blog yazısı okuma düzeni: bölüm başlıklarında site renginde numara kutusu (İçindekiler ile aynı numaralar), alt başlıklarda renkli dikey çizgi, rahat satır aralığı; liste, alıntı, tablo ve görsel stilleri yenilendi.
+- İçindekiler yazının başında (ilk paragraftan önce) ayrı kutuda.
+- Yazı arası öneriler: platform renginde panelli hizmet önerisi (Popüler miktar vurgulu), indirim kuponu (kopyalanabilir kod), kombin (çok al az öde), ücretsiz hizmet ve ücretsiz araç kartları (sistem 1.0.50 ile).
+- Sayfa konumu (breadcrumb) tek satır; bulunulan sayfanın adı sığmazsa … ile kısalır.
+
 ### 1.0.7
 
 - Hız: alt menüdeki sepet parlaması ve ana sayfa bildirim kartlarındaki halka efekti yalnızca ekran kartında çalışan yöntemle çizilir; görünüm aynı, sayfa boşta işlemciyi meşgul etmez.
