@@ -1,5 +1,5 @@
 {
-  "version": "1.0.44",
-  "notes": "- Modüller ekranı düzeltmesi: 1.0.43'te Modüller ekranı uzun süre \"Modüller yükleniyor\" diye bekliyor, Reklam Modülü kurulurken \"İşlem tamamlanamadı\" hatası çıkıyordu. Yerel modül servisi artık Reklam Modülü'nü tanıyor ve kuruyor.\n- Modül servisi tanımadığı bir modül sorulduğunda takılıp kapanmak yerine hemen hata yanıtı verir (sitenin kısa süreli kapanmasına yol açabiliyordu).\n- Reklam Modülü güncelleme denetimine eklendi.",
-  "publishedAt": "2026-10-13T17:22:09.157Z"
+  "version": "1.0.45",
+  "notes": "- Reklam Modülü kartı: modül kurulu değilken Kaldır düğmesi artık görünmez. Kuruluyken Kaldır yalnızca paketi kaldırmayı sunar (modülün bağlantı ayarı olmadığı için \"Bağlantı Ayarlarını Sil\" seçeneği çıkmaz).",
+  "publishedAt": "2026-10-13T17:32:25.480Z"
 }
