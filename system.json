@@ -1,5 +1,5 @@
 {
-  "version": "1.0.48",
-  "notes": "- Alt menü: sepet ortada büyük düğme; Ana Sayfa düğmesi kaldırıldı (ana sayfaya logodan gidilir), diğer öğeler iki yana eşit dağılır. Yeni görünüm Pulse tema 1.0.5 ile gelir.\n- Canlı destek rozeti: okunmamış mesaj (proaktif karşılama dahil) varken sayının çevresinde yayılan halka ve simgede kısa sallanma; sitedeki canlı destek düğmesinde de aynı efekt.\n- Otomatik yazılar: zamanlanmış otomatik pilot yazılarının kapak görseli yapay zekâyla oluşturulur (aylık yapay zekâ bütçesine sayılır); görsel üretilemezse yazı kapaksız yayınlanır.\n- Mobil uygulama (Av/Dashboard 1.17.17): yorum kartlarında (Google, Trustpilot, Şikayetvar) \"Ana Sayfada Göster\" kaldırıldı, yalnızca \"Alt Bilgide Göster\" kaldı.",
-  "publishedAt": "2026-10-13T19:47:02.810Z"
+  "version": "1.0.49",
+  "notes": "- Canlı destek: alt kısımda yalnızca mesaj kutusu kalır; misafir ilk mesajını gönderince sohbetin içinde \"Size nasıl hitap edelim?\" kartıyla adı ve isteğe bağlı e-postası sorulur (Geç ile atlanabilir, üyelere sorulmaz). Başlıktaki düğme \"Sonlandır\" olarak kısaldı.\n- Hız: okunmamış mesaj rozetlerindeki halka efekti artık sayfayı her karede yeniden çizdirmez (ekran kartında çalışır).\n- Pulse tema 1.0.7: alt menüdeki sepet parlaması ve ana sayfa bildirim kartlarındaki halka efekti hafifletildi; görünüm aynı, sayfa daha akıcı.",
+  "publishedAt": "2026-10-13T20:26:19.601Z"
 }
