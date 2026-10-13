@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.5
+
+- Alt menü (telefon): sepet ortada büyük, yuvarlak ve menünün üstüne taşan düğme; birkaç saniyede bir yüzeyinden ışık geçer ve çevresindeki renkli ışık yavaşça nabız atar. Yan öğeler küçük, açık renk zeminli simgeler; bulunulan sayfanın simgesi dolu renkte (sistem 1.0.48 ile; Ana Sayfa düğmesi kaldırıldı).
+- Favoriler ve sepet paneli sitenin içerik genişliğinde açılır: telefonda alt menüyle aynı genişlikte, bilgisayarda sağ kenarı içerik kenarıyla aynı çizgide.
+
 ### 1.0.4
 
 - Sipariş Sorgula: sepetteki her tamamlanmış hizmetin altında Düşüş Bildir düğmesi (sistem 1.0.34 ile).
