@@ -1,5 +1,5 @@
 {
-  "version": "1.0.45",
-  "notes": "- Reklam Modülü kartı: modül kurulu değilken Kaldır düğmesi artık görünmez. Kuruluyken Kaldır yalnızca paketi kaldırmayı sunar (modülün bağlantı ayarı olmadığı için \"Bağlantı Ayarlarını Sil\" seçeneği çıkmaz).",
-  "publishedAt": "2026-10-13T17:32:25.480Z"
+  "version": "1.0.46",
+  "notes": "- Sayfa başlıkları: sekme ve Google başlıklarının sonuna mağaza adı (\"| Mağaza Adı\") eklenmez; her sayfa kendi başlığını taşır. Ana sayfa başlığı Arama Motoru Ayarları'ndan gelir, boşsa \"Sosyal Medya Hizmetleri\" yazar.\n- Google açıklamaları ve paylaşım önizlemeleri: mağaza adı ve işletme açıklaması yedek metin olarak kullanılmaz; paylaşımlardaki site adı yazılmaz. Yapısal veride kurum ve site adı İletişim Bilgileri'ndeki şirket adından ya da Arama Motoru Ayarları'ndaki kurum adından gelir.\n- Yapay zekâ ve İçerik Editörü Google başlığı ve açıklaması yazarken mağaza adını eklemez; otomatik blog yazılarında yazar adı boşsa mağaza adı yazılmaz. Daha önce kaydedilmiş başlıklar değişmez.\n- İşletme Açıklaması alanı kaldırıldı (Mağaza Bilgileri ve kurulum sihirbazı); sitede de kullanılmıyor.\n- Mobil uygulama (Av/Dashboard 1.17.15): Mağaza Bilgileri'nde İşletme Açıklaması alanı yok; mağaza adı tek başına kaydedilir.",
+  "publishedAt": "2026-10-13T17:59:17.004Z"
 }
