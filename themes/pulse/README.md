@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.4
+
+- Sipariş Sorgula: sepetteki her tamamlanmış hizmetin altında Düşüş Bildir düğmesi (sistem 1.0.34 ile).
+
 ### 1.0.3
 
 - Blog yazılarının arasındaki hizmet önerisi kartı: platform renginde şerit ve simge, üç miktar seçeneği ve Sipariş Ver.
