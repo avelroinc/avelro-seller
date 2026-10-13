@@ -25,6 +25,12 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.9
+
+- Blog yazısı içerik blokları: bilgi kutuları (İpucu, Dikkat, Önemli, Bilgi), büyük rakamlı vurgular, Kısaca özeti, artı / eksi sütunları, kaynaklı alıntı, adım adım liste, açılır SSS ve düğmeli sonuç kutusu (sistem 1.0.52 ile).
+- Okuma ilerleme çubuğu, büyük ilk harf, yazı sonunda faydalı oldu mu / paylaş / yazar kartı / Bunları da Okuyun.
+- Yan sütun: hizmetler, son yazılar, ücretsiz araçlar ve yardım kartı.
+
 ### 1.0.8
 
 - Blog yazısı okuma düzeni: bölüm başlıklarında site renginde numara kutusu (İçindekiler ile aynı numaralar), alt başlıklarda renkli dikey çizgi, rahat satır aralığı; liste, alıntı, tablo ve görsel stilleri yenilendi.
