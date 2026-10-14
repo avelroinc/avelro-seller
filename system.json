@@ -1,5 +1,5 @@
 {
-  "version": "1.0.57",
-  "notes": "- Sayfa aralıkları yeniden düzenlendi: üst menü ile ilk bileşen ve kutu ile başlayan bileşenler arası 20px; çerçevesiz başlık ya da metinle başlayan bölümlerin üstü bilgisayarda 48px, telefonda 32px; başlık ile kendi içeriği arası 14px; son bölüm ile alt bilgi arası 48px (telefonda 32px). Bütün sayfalarda aynı.\n- Ana sayfa müşteri yorumları yenilendi: üstte müşteri fotoğraflı kademeli kartlar, rozet, başlık ve ortalama puan; altında kaydırılabilen yorum kartları (fotoğraf, hizmet, yıldızlar, tarih). Fotoğraflar sipariş alanındaki Örnek Hesaplar arşivinden gelir.\n- Pulse tema 1.0.12: yeni aralık düzeni ve müşteri yorumları bölümü.",
-  "publishedAt": "2026-10-14T08:31:53.280Z"
+  "version": "1.0.58",
+  "notes": "- Müşteri yorumları: mobil uygulamada (Yorumlar › Gelenler ve Öne Çıkanlar) her yoruma Örnek Hesaplar arşivinden fotoğraf seçilebilir; sitede seçilen fotoğraf gösterilir. Seçilmeyen yorumlar otomatik fotoğraf alır.\n- Mobil uygulama (Av/Dashboard 1.17.22): yorumlarda fotoğraf seçimi.",
+  "publishedAt": "2026-10-14T09:27:42.816Z"
 }
