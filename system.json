@@ -1,5 +1,5 @@
 {
-  "version": "1.0.64",
-  "notes": "- Work/Bot yenilendi: birim sayfalarının üstünde birimin kartı (durum, aç / kapa, sayılar) ve ekibi var. Uzman ve Denetçi koltukları yan yana; koltuğa dokununca işe alma ve düzenleme aynı sayfada açılır (ayrı Ekip ve İşe Al ekranları kaldırıldı).\n- Birim sayfalarında Bekleyen / Geçmiş / Ayarlar sekmeleri; ayarlar sayfanın içinde ve yeniden tasarlandı (simgeli satırlar, hazır değer seçimi). Sağ üst köşedeki ayar düğmeleri kaldırıldı. Canlı Destek'in kendi sayfası var.\n- Canlı Akış: Son Kararlar yerine ajanların önerileri, Denetçi'nin onay ve itirazları, yazılar ve verilen kararlar canlı ve animasyonlu akar.\n- Work/Bot ana ekranı: Eğitim ve Rapor yan yana küçük kutular; birim satırlarında durum noktası ve çalışanların baş harfleri; üst kartta canlı durum. Work/Bot sayfalarında üst çubuk sayfayla aynı zeminde.\n- Yapay zekâya blog yazısı yazdırma ve İçerik Editörü'nde Şimdi Tara artık arka planda çalışır; uzun süren işler zaman aşımına düşmez (\"Yazı oluşturulamadı\" hatası giderildi).\n- Mobil uygulamada açılır pencere kalmadı: düzenleme pencereleri tam ekran sayfa olarak açılır, uyarılar ve onaylar ekranın altındaki bildirim çubuğunda görünür.\n- Mobil uygulama (Av/Dashboard 1.17.25) bu değişiklikleri içerir.",
-  "publishedAt": "2026-10-14T19:25:18.782Z"
+  "version": "1.0.65",
+  "notes": "- Yapay zekâyla yazı yazdırırken \"temperature does not support 0.7\" hatası giderildi: seçilen ChatGPT sürümü bir ayarı (yaratıcılık, düşünme düzeyi ya da yanıt biçimi) desteklemiyorsa istek o ayar olmadan yeniden gönderilir ve sistem bunu o sürüm için hatırlar. Blog, makale ve Work/Bot birimleri hangi ChatGPT sürümüyle çalışırsa çalışsın yarıda kalmaz.",
+  "publishedAt": "2026-10-14T19:41:23.345Z"
 }
