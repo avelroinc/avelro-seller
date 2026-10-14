@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.13
+
+- Kaydırırken süs animasyonları durur (sistem 1.0.59 ile); telefonda alt bilgi zemini alt menünün arkasına kadar uzanır.
+
 ### 1.0.12
 
 - Aralık düzeni: kutu ile başlayan bileşenler arası 20px, başlıklı bölümlerin üstü 48px (telefonda 32px), başlık ile içerik arası 14px (sistem 1.0.57 ile).

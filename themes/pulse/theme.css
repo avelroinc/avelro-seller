@@ -3803,3 +3803,8 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
  .shop-shell .shr-meta{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between}
  .shop-shell .shr-nav{display:none}
 }
+html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,html[data-scrolling] .shop-shell *::after,html[data-scrolling] [data-live-chat-root] *,html[data-scrolling] [data-live-chat-root] *::before,html[data-scrolling] [data-live-chat-root] *::after{animation-play-state:paused!important}
+@media(max-width:760px){
+ .shop-shell:has(.shop-dock.is-horizontal){padding-bottom:0!important}
+ .shop-shell:has(.shop-dock.is-horizontal) .shop-end{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}

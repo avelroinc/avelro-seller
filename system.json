@@ -1,5 +1,5 @@
 {
-  "version": "1.0.58",
-  "notes": "- Müşteri yorumları: mobil uygulamada (Yorumlar › Gelenler ve Öne Çıkanlar) her yoruma Örnek Hesaplar arşivinden fotoğraf seçilebilir; sitede seçilen fotoğraf gösterilir. Seçilmeyen yorumlar otomatik fotoğraf alır.\n- Mobil uygulama (Av/Dashboard 1.17.22): yorumlarda fotoğraf seçimi.",
-  "publishedAt": "2026-10-14T09:27:42.816Z"
+  "version": "1.0.59",
+  "notes": "- Site hızı: kaydırma sırasında süs animasyonları (sepet parlaması, rozet halkaları, kayan şeritler) durur, kaydırma bitince sürer. Kaydırırken tarayıcının her karede yaptığı görünüm hesabı ortadan kalktı; telefonlarda kaydırma belirgin şekilde akıcı.\n- Telefonda alt bilginin en altında, alt menünün arkasında görünen beyaz şerit giderildi; alt bilgi zemini ekranın sonuna kadar uzanır.\n- Yapay zekâyla yazı: uzun makalelerde OpenAI'ın yanıtı için bekleme süresi istenen uzunluğa göre uzar (önceden 30 saniyede kesiliyor ve yazı yazılmıyordu). Site düzenlemede istek penceresi açıkken simgeye dokunmak yazmayı başlatır.\n- Pulse tema 1.0.13: kaydırırken animasyon duraklatma ve alt bilgi zemini.",
+  "publishedAt": "2026-10-14T10:34:56.555Z"
 }
