@@ -3727,3 +3727,9 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 @media(max-width:900px){.shop-shell .sdx-list,.shop-shell .sdx-empty,.shop-shell .sdx.is-empty .sdx-empty{margin:0}.shop-shell .fx-tool-main+.fx-band-wrap{margin-top:24px}}
 .shop-shell .sdx>.sdx-list,.shop-shell .sdx.is-empty>.sdx-empty{margin-top:40px}
 @media(max-width:900px){.shop-shell .sdx>.sdx-list,.shop-shell .sdx.is-empty>.sdx-empty{margin-top:4px}}
+.shop-shell .scx-hero>.scx-head{padding-top:0}
+.shop-shell .scx-head .scx-title{margin:0 0 12px}
+.shop-shell .scx-tile>b{position:absolute;z-index:2;top:-14px;right:-14px;display:grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border-radius:999px;background:var(--shop-accent);color:var(--shop-on-accent,#fff);font-size:15px;font-weight:800;box-shadow:0 0 0 4px var(--shop-surface)}
+.shop-shell .scx-tile{overflow:visible}
+.shop-shell .scx-hero .scx-layout,.shop-shell .scx-hero .scx-empty,.shop-shell .scx-hero.is-empty .scx-empty{margin:0}
+@media(max-width:900px){.shop-shell .scx-hero .scx-layout,.shop-shell .scx-hero .scx-empty,.shop-shell .scx-hero.is-empty .scx-empty{margin:0}}

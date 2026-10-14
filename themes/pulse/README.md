@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.11
+
+- Sepet sayfası: giriş alanı diğer sayfalarla aynı (hareketsiz simge, köşede ürün sayısı); sepet listesi ve boş sepet kartı giriş alanının altında durur (sistem 1.0.55 ile).
+
 ### 1.0.10
 
 - Sayfa giriş alanının sağındaki görsel hareketsiz: düz duran simge kartı, site renginde üst şerit, katmanlı ikinci kart ve noktalı zemin (sistem 1.0.54 ile).
