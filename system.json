@@ -1,5 +1,5 @@
 {
-  "version": "1.0.65",
-  "notes": "- Yapay zekâyla yazı yazdırırken \"temperature does not support 0.7\" hatası giderildi: seçilen ChatGPT sürümü bir ayarı (yaratıcılık, düşünme düzeyi ya da yanıt biçimi) desteklemiyorsa istek o ayar olmadan yeniden gönderilir ve sistem bunu o sürüm için hatırlar. Blog, makale ve Work/Bot birimleri hangi ChatGPT sürümüyle çalışırsa çalışsın yarıda kalmaz.",
-  "publishedAt": "2026-10-14T19:41:23.345Z"
+  "version": "1.0.66",
+  "notes": "- Mobil uygulamanın üst kısmı yenilendi. Ana sekmelerde (Genel Bakış, Siparişler, Ödemeler, Müşteriler, Daha Fazla) en üstte sitenin adı ve baş harfli kutusu var; dokununca Panel Seç açılır. Sağda arama ve bildirimler tek çerçevede (okunmamış bildirimde kırmızı nokta), yanında profil; altında büyük sayfa başlığı. Genel Bakış'ta selamlama ve günün tarihi yazar.\n- Bütün ayrıntı sayfaları (ayarlar, Work/Bot birimleri, ürünler, servisler…) aynı üst çubuğu kullanır: gri şerit ve gölge yok, solda çerçeveli geri düğmesi, başlığın üstünde küçük harflerle site adı. Sayfanın Ekle / Ayarlar / Excel gibi düğmeleri sağda tek çerçevede toplanır.\n- Mobil uygulama (Av/Dashboard 1.17.26) bu değişiklikleri içerir.",
+  "publishedAt": "2026-10-14T20:32:03.838Z"
 }
