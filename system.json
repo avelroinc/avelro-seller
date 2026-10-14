@@ -1,5 +1,5 @@
 {
-  "version": "1.0.55",
-  "notes": "- Sekme başlıkları: Google başlıklarına daha önce kaydedilmiş site adları (\"… | Mağaza Adı\") güncellemeden sonra bir kez temizlenir.\n- Sekme simgesi (favicon): mobil uygulamada Mağaza Bilgileri'nden yüklenir; yüklenmezse logo kullanılır.\n- Canlı destek: ziyaretçi siteden ayrıldıktan 10 dakika sonra açık sohbet \"Ziyaretçi siteden ayrıldığı için sohbet kapatıldı.\" mesajıyla kapanır.\n- Sepet sayfası: giriş alanı diğer sayfalarla aynı (hareketsiz simge, ürün sayısı); sepet listesi giriş alanının altında durur; \"Güvenli Ödeme / Şifre İstenmez\" satırı ve yüzen etiketler kaldırıldı.\n- Ücretsiz Araçlar: sorular, araç sayfalarındaki kullanım adımları, notlar ve \"Diğer Ücretsiz Araçlar\" başlığı sitede üzerine tıklanarak düzenlenebilir.\n- Lisans sayfalarında sekme başlığı \"Lisans Anahtarı Lisans Anahtarı\" diye tekrarlanmaz.\n- Kullanılmayan eski ayarlar ve uçlar kaldırıldı.\n- Pulse tema 1.0.11: sepet giriş alanı ve sepet yerleşimi.\n- Mobil uygulama (Av/Dashboard 1.17.21): Mağaza Bilgileri'nde sekme simgesi yükleme.",
-  "publishedAt": "2026-10-14T06:59:19.791Z"
+  "version": "1.0.56",
+  "notes": "- Ücretsiz Araçlar, araç sayfaları ve Ücretsiz Hizmetler: giriş alanı geniş ekranlarda diğer sayfalardan geniş görünüyordu; artık bütün sayfalarla aynı genişlikte.",
+  "publishedAt": "2026-10-14T07:31:48.099Z"
 }
