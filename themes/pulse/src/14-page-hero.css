@@ -1,0 +1,17 @@
+/* Sayfa giriş alanının sağındaki görsel (Kampanyalar, Blog, İletişim, Duyurular, Hakkımızda, Fırsat Köşesi, Ücretsiz Araçlar,
+   Ücretsiz Hizmetler ve araç sayfaları): hareketsiz. Noktalı zemin üzerinde düz duran simge kartı; kartın üstünde marka renginde
+   ince şerit, simgenin arkasında açık renkli daire ve kartın arkasında kaydırılmış ikinci kart (katmanlı görünüm). */
+.shop-shell .sph-visual::before{content:"";position:absolute;top:24px;right:60px;width:300px;height:250px;background:radial-gradient(color-mix(in srgb,var(--shop-accent) 34%,transparent) 1.3px,transparent 1.8px) 0 0/18px 18px;-webkit-mask-image:radial-gradient(closest-side,#000 35%,transparent);mask-image:radial-gradient(closest-side,#000 35%,transparent)}
+.shop-shell .sph-visual .sth-glow{opacity:.14;animation:none}
+.shop-shell .sph-tile{top:62px;right:150px;width:148px;height:148px;border:1px solid var(--shop-line);border-radius:var(--shop-radius,2px);transform:none;animation:none;overflow:hidden;box-shadow:16px 16px 0 -1px color-mix(in srgb,var(--shop-accent) 16%,var(--shop-surface)),0 28px 50px -30px rgb(0 0 0 / .45)}
+.shop-shell .sph-tile::before{content:"";position:absolute;inset:28px;border-radius:50%;background:color-mix(in srgb,var(--shop-accent) 11%,transparent)}
+.shop-shell .sph-tile::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--shop-accent)}
+.shop-shell .sph-tile>svg{position:relative;width:52px;height:52px;stroke-width:1.6}
+/* Giriş alanının altındaki içerik (araç penceresi, araç kartları, kombinler) giriş alanına binmez; sayfanın içinde durur. */
+.shop-shell .fx-tool-main{margin-top:0}
+.shop-shell .fx-tool-main+.fx-band-wrap{margin-top:32px}
+.shop-shell .sdx{padding-top:0}
+.shop-shell .sdx-list,.shop-shell .sdx.is-empty .sdx-empty{margin:0}
+@media(max-width:900px){.shop-shell .sdx-list,.shop-shell .sdx-empty,.shop-shell .sdx.is-empty .sdx-empty{margin:0}.shop-shell .fx-tool-main+.fx-band-wrap{margin-top:24px}}
+.shop-shell .sdx>.sdx-list,.shop-shell .sdx.is-empty>.sdx-empty{margin-top:40px}
+@media(max-width:900px){.shop-shell .sdx>.sdx-list,.shop-shell .sdx.is-empty>.sdx-empty{margin-top:4px}}

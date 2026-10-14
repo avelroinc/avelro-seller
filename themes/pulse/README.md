@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.10
+
+- Sayfa giriş alanının sağındaki görsel hareketsiz: düz duran simge kartı, site renginde üst şerit, katmanlı ikinci kart ve noktalı zemin (sistem 1.0.54 ile).
+- Araç penceresi, araç kartları ve Fırsat Köşesi kombinleri giriş alanına binmez; giriş alanının altında durur.
+
 ### 1.0.9
 
 - Blog yazısı içerik blokları: bilgi kutuları (İpucu, Dikkat, Önemli, Bilgi), büyük rakamlı vurgular, Kısaca özeti, artı / eksi sütunları, kaynaklı alıntı, adım adım liste, açılır SSS ve düğmeli sonuç kutusu (sistem 1.0.52 ile).
