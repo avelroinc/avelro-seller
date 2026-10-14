@@ -1,0 +1,29 @@
+/* Bileşen aralığı bütün sayfalarda ve bütün ekran genişliklerinde 20px: giriş alanı ile ilk bölüm, bölümler arası ve son bölüm ile
+   alt bilgi. Bölüm başlığı ile kendi içeriği arası 14px (başlık ait olduğu içeriğe yakın, bir önceki bölümden ayrı durur). */
+.shop-shell{--shop-rhythm:20px;--shop-heading-gap:14px}
+@media(max-width:1000px){.shop-shell{--shop-rhythm:20px}}
+@media(max-width:760px){.shop-shell{--shop-rhythm:20px}}
+/* Giriş alanının kendi alt boşluğu yok; aradaki boşluk ritimden gelir. Giriş alanıyla aynı bölümde duran içerik (kombinler, sepet) 20px aşağıda. */
+.shop-shell .sc-content-hero,.shop-shell .sc-about-page .sc-content-hero{margin-bottom:0}
+.shop-shell .sdx>.sdx-list,.shop-shell .sdx.is-empty>.sdx-empty,.shop-shell .scx-hero>.scx-layout,.shop-shell .scx-hero>.scx-empty,.shop-shell .scx-hero.is-empty>.scx-empty{margin-top:var(--shop-rhythm)!important}
+/* Başlık → içerik */
+.shop-shell .shop-section-heading,.shop-shell .shop-platforms .shop-section-heading{margin-bottom:var(--shop-heading-gap)}
+.shop-shell main>.sc-list-heading+:not(script,style,link,template,[hidden]){margin-top:var(--shop-heading-gap)!important}
+.shop-shell .sc-list-heading{margin-bottom:0}
+.shop-shell .sc-about-steps>header{margin-bottom:var(--shop-heading-gap)}
+@media(max-width:760px){.shop-shell .shop-section-heading{margin-bottom:var(--shop-heading-gap)}}
+.shop-shell :is(.sc-about-platforms,.sc-about-values)>header,.shop-shell .shop-qa-product>header{margin-bottom:var(--shop-heading-gap)}
+.shop-shell .sc-breadcrumb+.lx-hero{margin-top:var(--shop-heading-gap)}
+/* Üst menü ile ilk bileşen arası 20px (menünün alt payı ve giriş alanının üst payı birlikte 22px tutuyordu). Okuma ilerleme çubuğu
+   (sabit konumlu) ilk bileşen sayılmaz. */
+.shop-shell main{margin-top:-2px}
+.shop-shell main>.sc-progress+.sth.sph.sc-content-hero{margin-top:0!important}
+.shop-shell main.lx-page.sc-flow>.sc-breadcrumb+*{margin-top:var(--shop-heading-gap)!important}
+.shop-shell main>.sc-breadcrumb:first-child,.shop-shell main>.sc-breadcrumb:first-of-type,.shop-shell .sa-wrap>.sc-breadcrumb:first-child{padding-top:14px}
+/* Okuyucu gözüyle ince ayar: kutu (zemin ya da çerçeve) ile başlayan bileşenler arası 20px yeterli, kutunun kenarı ayrımı yapar.
+   Çerçevesiz bir başlık ya da metinle başlayan bölümün üstü daha açık (bilgisayarda 48px, telefonda 32px): yeni bir konunun başladığı
+   görünür, önceki bölüme yapışmaz. Alt bilgi de sayfadan aynı açıklıkla ayrılır. */
+.shop-shell{--shop-section-gap:48px}
+@media(max-width:760px){.shop-shell{--shop-section-gap:32px}}
+.shop-shell main>:not(script,style,link,template,[hidden])~:is(.sc-list-heading,:has(>:is(.shop-section-heading,header,.sph-points-title,.lic-quick-head,.sc-faq,.shop-zig-rows,.sc-article):first-child)):not(.sth,.sc-content-hero){margin-top:var(--shop-section-gap)!important}
+.shop-shell main{padding-bottom:var(--shop-section-gap)!important}

@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.12
+
+- Aralık düzeni: kutu ile başlayan bileşenler arası 20px, başlıklı bölümlerin üstü 48px (telefonda 32px), başlık ile içerik arası 14px (sistem 1.0.57 ile).
+- Ana sayfa müşteri yorumları: fotoğraflı kademeli kartlar, ortalama puan ve kaydırılabilen yorum kartları.
+
 ### 1.0.11
 
 - Sepet sayfası: giriş alanı diğer sayfalarla aynı (hareketsiz simge, köşede ürün sayısı); sepet listesi ve boş sepet kartı giriş alanının altında durur (sistem 1.0.55 ile).
