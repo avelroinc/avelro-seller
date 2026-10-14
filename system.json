@@ -1,5 +1,5 @@
 {
   "version": "1.0.53",
   "notes": "- Sitede düzenleme: bir bölümün \"Düzenle\" düğmesi yalnızca o bölümü açar. Ana sayfada Giriş Görseli penceresinde makale artık tekrar çıkmaz; makale yalnızca Makale bölümünden, Google görünümü kendi düğmesinden düzenlenir.\n- Ücretsiz Araçlar: giriş alanındaki bilgi kutuları \"Ücretsiz Araç sayısı · Anında Sonuç · Sınırsız Kullanım Hakkı\" oldu (önceki \"0 ₺ Ücret · 3 Adımda Hazır · Üyeliksiz Kullanım\" yerine); yazılar sayfada tıklanarak değiştirilebilir.",
-  "publishedAt": "2026-10-13T21:53:05.054Z"
+  "publishedAt": "2026-10-14T05:35:50.046Z"
 }
