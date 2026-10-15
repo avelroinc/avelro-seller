@@ -1,5 +1,5 @@
 {
-  "version": "1.0.74",
-  "notes": "- Mobil uygulama, Modüller sayfası: grup başlıkları kartın içinde; her grubun renkli simgesi, adı ve açık modül sayısı kartın üst satırında görünüyor.\n- Mobil uygulama (Av/Dashboard 1.17.34) bu değişikliği içerir.",
-  "publishedAt": "2026-10-15T11:18:04.610Z"
+  "version": "1.0.75",
+  "notes": "- Yapay zekâ modellerini yönetici seçer: Gemini modeli artık kendiliğinden değiştirilmez. Seçilen model bulunamazsa hangi model olduğu ve nereden değiştirileceği yazılır.\n- Gemini Ayarları: yazı modeli hesabın erişebildiği modellerden seçilir ya da adı elle yazılır; ilk kayıtta model seçmek gerekir ve anahtar seçilen modelle denenerek kaydedilir.\n- Yeni Görsel Üretimi ayarı (Modüller › Yapay Zekâ): blog kapaklarını ve Düzenleme Modu'ndaki görselleri hangi modülün (OpenAI ya da Gemini) ve hangi modelin üreteceği seçilir. OpenAI'da gpt-image-1, gpt-image-1-mini ve dall-e-3; Gemini'de hesabın görsel modelleri listelenir, başka model adı da yazılabilir.\n- Seçilen modül kapalıysa ya da model çalışmıyorsa görsel üretilmez ve nedeni yazılır; sistem başka modüle ya da modele (örneğin dall-e-3'e) kendiliğinden geçmez. Eski \"Görselleri Gemini Üretsin\" seçimi yeni ayara aktarılır.\n- Mobil uygulama (Av/Dashboard 1.17.35) bu değişiklikleri içerir.",
+  "publishedAt": "2026-10-15T12:27:50.746Z"
 }
