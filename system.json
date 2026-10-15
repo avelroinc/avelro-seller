@@ -1,5 +1,5 @@
 {
-  "version": "1.0.76",
-  "notes": "- Mobil uygulama, Modüller: her modül sayfası tek sayfa ve aynı düzende; üstte modülün kimliği ve durumu, tek \"Kullan\" anahtarı, başlıklı bölümler (Bağlantı, Model, Paket) ve altta sabit Kaydet çubuğu.\n- Model seçimi sayfanın içinde işaretlenen bir liste oldu (iç içe açılan seçim penceresi kaldırıldı, model seçilememe sorunu giderildi); listede olmayan model adı da yazılabilir.\n- Gemini'nin anahtarı, modeli ve paket işlemleri Gemini Entegrasyonu sayfasında; ayrı \"Gemini Ayarları\" penceresi kaldırıldı.\n- Modül listesine arama ve durum süzgeçleri (Tümü, Açık, Kapalı, Kurulu Değil, Güncelleme) eklendi.\n- Giriş ve seçim alanları açık temada da çerçeveli görünür.\n- Mobil uygulama (Av/Dashboard 1.17.36) bu değişiklikleri içerir.",
-  "publishedAt": "2026-10-15T12:54:25.256Z"
+  "version": "1.0.77",
+  "notes": "- Mobil uygulama hızlandı: arkada açık kalan sekmeler ve ekranlar (ana sayfa, sipariş listeleri, sipariş ayrıntısı, onaylar, destek, bildirim zili) artık sürekli istek göndermiyor; otomatik yenileme yalnızca ekrandaki sayfada ve uygulama öndeyken çalışıyor.\n- Yenilemede gelen veri değişmemişse listeler yeniden çizilmiyor.\n- Modül durum sorgusu en çok 5 saniye bekliyor (önceden 70 saniyeye kadar); canlı destek ve sipariş kararları modül servisini beklemiyor.\n- Gemini model listesi 10 dakika saklanıyor; Modüller ve Work/Bot ekranları her açılışta Google'a gitmiyor.\n- Mobil uygulama (Av/Dashboard 1.17.37) bu değişiklikleri içerir.",
+  "publishedAt": "2026-10-15T13:32:42.423Z"
 }
