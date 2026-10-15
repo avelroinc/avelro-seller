@@ -2,7 +2,7 @@
 
 Avelro Packet Seller System için yapay zekâ modülü. Kaynak: `avelroinc/avelro-seller` deposundaki `modules/gemini/` klasörü.
 
-- `avelro-module.json`: modül kimliği, sürüm, Host API (3) ve izinli ağ adresi
+- `avelro-module.json`: modül kimliği, sürüm, Host API (2) ve izinli ağ adresi
 - `config.schema.json`: istenen bağlantı ayarı (API anahtarı)
 - `src/server.ts`: sağlayıcı kodu (`complete`: yazı, `image`: görsel, `models`: hesabın erişebildiği modeller)
 
@@ -31,6 +31,10 @@ görseller OpenAI ile devam eder.
 3. Değişiklikleri `avelro-seller` deposunun `main` dalına gönderin.
 
 ## Sürüm Notları
+
+### 1.0.1
+
+- Kurulumdaki "Paket çalışma yetkileri uyumsuz" hatası giderildi: paket, sağlayıcı modüllerinin çalışma sözleşmesine (Host API 2) göre düzenlendi. Davranış değişmedi.
 
 ### 1.0.0
 
