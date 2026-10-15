@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.16
+
+- Ana sayfa Hızlı Sipariş kartı: soldaki başlık ve simge kaldırıldı; Sipariş Ver / Takip Et seçimi solda, alanların kutularıyla aynı hizada ve aynı yükseklikte, üstünde 1. adım etiketi (İşlem Seç); alanlar 2–4 olarak numaralanır (telefonda kartın üstünde).
+- Sistem 1.0.83 ve üzeri gerekir.
+
 ### 1.0.15
 
 - Araç sayfaları yeniden düzenlendi: araç kutusu giriş alanına bitişik değil, altında boşlukla ayrı durur; solda araç (başlık satırında simge, ad ve not), sağda Nasıl Kullanılır? kartı (numaralı adımlar alt alta), dar ekranda alt alta. Adımların numaralarıyla yazılarının üst üste binmesi giderildi; yan yana alanlar aynı hizada başlar.

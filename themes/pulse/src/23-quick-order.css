@@ -1,0 +1,32 @@
+/* Ana sayfa Hızlı Sipariş kartı: başlık ve simge yok. Geniş ekranda Sipariş Ver / Takip Et seçimi alanlarla aynı satırda, solda; seçim
+   kutusu alanların kutularıyla aynı hizada ve aynı yükseklikte (etiket satırının altında). Telefonda seçim kartın üstünde. */
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes){grid-template-columns:minmax(200px,auto) minmax(0,1fr);grid-template-rows:auto;align-items:start;gap:16px 20px}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes{grid-area:1/1;align-self:start;box-sizing:border-box;width:auto;height:54px;min-height:0;margin-top:29.5px}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes button{min-height:0;height:100%}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-link)>.shop-quick-modes{margin-top:0}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>:is(.shop-quick-link,.shop-quick-select){grid-column:2;grid-row:1;align-self:start}
+@media(max-width:1080px){.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes{height:50px}}
+@media(max-width:760px){
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes){grid-template-columns:minmax(0,1fr)}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes{width:100%;height:auto;margin-top:0}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes button{min-height:38px}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>:is(.shop-quick-link,.shop-quick-select){grid-column:1;grid-row:2}
+}
+/* 1. adım etiketi (İşlem Seç): alanların etiketleriyle aynı biçimde, seçim düğmelerinin üstünde; sağdaki numara hep vurgu renginde. */
+.shop-shell #hizli-siparis .shop-quick-step{position:relative;display:block;min-height:20px;padding-right:34px}
+.shop-shell #hizli-siparis .shop-quick-step b{display:block;color:var(--shop-ink);font-size:13px;font-weight:600}
+.shop-shell #hizli-siparis .shop-quick-step span{position:absolute;top:0;right:0;display:grid;place-items:center;min-width:24px;height:20px;padding:0 6px;border-radius:2px;background:var(--shop-accent);color:var(--shop-on-accent);font-size:10.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-step{grid-area:1/1;align-self:start}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-link)>.shop-quick-modes{margin-top:29.5px}
+.shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-link{margin-top:29.5px}
+@media(max-width:760px){
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-step{grid-area:auto}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes{grid-row:2;margin-top:-8px}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>:is(.shop-quick-link,.shop-quick-select){grid-row:3;margin-top:0}
+}
+/* 761–1080 px: temanın tek sütun kuralı (grid-area:auto!important) bu kartta geçersiz; seçim solda, alanlar sağda kalır. */
+@media(min-width:761px) and (max-width:1080px){
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-step{grid-area:1/1!important}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>.shop-quick-modes{grid-area:1/1!important}
+ .shop-shell #hizli-siparis.shop-quick.is-modes-top:has(>.shop-quick-modes)>:is(.shop-quick-link,.shop-quick-select){grid-area:1/2!important}
+}
