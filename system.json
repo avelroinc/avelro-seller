@@ -1,5 +1,5 @@
 {
-  "version": "1.0.81",
-  "notes": "- Canlı destekte sohbet puanlama kaldırıldı: ziyaretçiye puan ekranı gösterilmez, raporlarda puan yer almaz.\n- Ziyaretçi sonradan siteye gelince kapanan sohbet doğrudan açılmaz; pencerenin üstünde \"Önceki Sohbetin\" şeridi durur. Şeride dokunmadan yazdığı mesaj yeni bir canlı destek talebi olur (Av/Tawk'ta ayrı sohbet); şeride dokunup eski sohbete yazarsa o sohbet yeniden açılır.\n- Takma ad kaldırıldı: ziyaretçi, sohbetle ilgilenen personelin hesap adını görür.\n- Blog: bir yazıyı silerken ya da değiştirirken hazır gelen yazılar yüzünden çıkan \"metni boş ya da çok kısa\" hatası giderildi; yazıların metni korunur.\n- Av/Tawk 1.5.0 yeni tasarımıyla (Av/Dashboard ile aynı görünüm) çalışır.",
-  "publishedAt": "2026-10-15T19:21:20.360Z"
+  "version": "1.0.82",
+  "notes": "- Site düzenleme penceresi baştan yapıldı: bütün düzenleyiciler sitenin renkleri, yazı tipi ve köşeleriyle çizilir, açık ve koyu temaya uyar; sitenin kendi kuralları pencerenin içini bozmaz.\n- Menüler pencereye sığan tek sütunda: Üst Menü / Alt Menü seçimi, öğelerin adı tam genişlikte, yukarı / aşağı taşıma, gizleme ve kaldırma, hazır sayfa / özel sayfa / bağlantı ekleme ve altta Menüleri Kaydet.\n- Bileşen listesi, Ayarlar (görünürlük, sıra ve bileşen seçenekleri anahtarlarla), Görsel sekmesi, Google'da Görünüm, makale düzenleyicisi ve yapay zekâ yazım isteği yeni görünümde.\n- Av/Dashboard 1.17.41: Work/Bot'taki yapay zekâ şeridinde CHATGPT, CLAUDE ve GEMINI kendi simgeleriyle görünür.",
+  "publishedAt": "2026-10-15T20:18:05.845Z"
 }
