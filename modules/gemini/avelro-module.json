@@ -3,7 +3,7 @@
   "id": "gemini",
   "name": "Gemini Entegrasyonu",
   "description": "Google Gemini ile yazı (İçerik Editörü çalışanı) ve görsel üretimi.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "hostApiVersion": 2,
   "category": "ai",
   "scopes": [

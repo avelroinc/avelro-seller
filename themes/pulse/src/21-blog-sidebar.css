@@ -1,0 +1,28 @@
+/* Blog listesi: solda Kategoriler kartı (arama kutusu, yazı sayılarıyla kategori listesi; sayfa kayarken yanında kalır), sağda yazı
+   kartları. Telefonda kategoriler yazıların üstünde yatay kaydırılan çipler olur. */
+.shop-shell .sbl{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:start}
+.shop-shell .sbl-side{display:grid;gap:16px;position:sticky;top:132px;padding:18px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .sbl-search{display:flex;align-items:center;gap:0;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-soft);overflow:hidden}
+.shop-shell .sbl-search input{flex:1;min-width:0;height:42px;padding:0 12px;border:0;background:transparent;color:var(--shop-ink);font:inherit;font-size:14px;outline:none}
+.shop-shell .sbl-search button{display:grid;place-items:center;width:42px;height:42px;border:0;background:transparent;color:var(--shop-muted);cursor:pointer}
+.shop-shell .sbl-search button svg{width:18px;height:18px}
+.shop-shell .sbl-search:focus-within{border-color:var(--shop-accent)}
+.shop-shell .sbl-cats h2{margin:0 0 8px;color:var(--shop-muted);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .sbl-cats ul{display:grid;gap:2px;margin:0;padding:0;list-style:none}
+.shop-shell .sbl-cats a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:40px;padding:0 12px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:14.5px;font-weight:600;text-decoration:none;transition:background-color .15s,color .15s}
+.shop-shell .sbl-cats a:hover{background:var(--shop-soft);color:var(--shop-ink)}
+.shop-shell .sbl-cats a[aria-current=page]{background:color-mix(in srgb,var(--shop-accent) 12%,transparent);color:var(--shop-accent)}
+.shop-shell .sbl-cats b{min-width:26px;padding:2px 8px;border-radius:999px;background:var(--shop-soft);color:var(--shop-muted);font-size:12px;font-weight:700;text-align:center}
+.shop-shell .sbl-cats a[aria-current=page] b{background:var(--shop-accent);color:var(--shop-on-accent,#fff)}
+.shop-shell .sbl-main{display:grid;gap:28px;min-width:0}
+.shop-shell .sbl-main .sc-blog-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+@media(max-width:900px){
+ .shop-shell .sbl{grid-template-columns:minmax(0,1fr);gap:20px}
+ .shop-shell .sbl-side{position:static;padding:0;border:0;background:transparent}
+ .shop-shell .sbl-cats h2{display:none}
+ .shop-shell .sbl-cats ul{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+ .shop-shell .sbl-cats ul::-webkit-scrollbar{display:none}
+ .shop-shell .sbl-cats li{flex:none}
+ .shop-shell .sbl-cats a{min-height:38px;border:1px solid var(--shop-line);background:var(--shop-surface)}
+ .shop-shell .sbl-search{background:var(--shop-surface)}
+}

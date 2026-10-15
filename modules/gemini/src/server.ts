@@ -4,7 +4,7 @@
 export type ModuleHost={configuration():Promise<GeminiConfig>;request(url:string,init?:RequestInit):Promise<{ok:boolean;status:number;json():Promise<unknown>;text():Promise<string>}>};
 type GeminiConfig={apiKey:string};
 type Failure={error:string;status:number};
-type CompleteInput={model:string;system?:string;prompt:string;maxTokens?:number;temperature?:number;json?:boolean};
+type CompleteInput={model:string;system?:string;prompt:string;maxTokens?:number;temperature?:number;json?:boolean;thinking?:"low"|"high"};
 type ImageInput={model:string;prompt:string;aspect?:"16:9"|"1:1"|"9:16"|"3:2"|"4:3"};
 
 const API="https://generativelanguage.googleapis.com/v1beta";
@@ -26,13 +26,19 @@ export default function createModule(host:ModuleHost){
  }
 
  // Yazı: sistem talimatı ve kullanıcı mesajı; json istenirse yanıt JSON olarak istenir. Kullanılan jeton sayıları döner (bütçe için).
+ // Düşünme seviyesi (isteğe bağlı): Gemini 3 modellerinde thinkingLevel, 2.5 modellerinde düşünme bütçesi. Model bu ayarı kabul
+ // etmezse (Google 400 ile bildirir) istek ayarsız bir kez daha gönderilir; seviye verilmezse modelin varsayılanı kullanılır.
+ const thinkingConfig=(model:string,level?:"low"|"high")=>!level?null:/^gemini-3/.test(model)?{thinkingLevel:level}:/^gemini-2\.5/.test(model)?{thinkingBudget:level==="low"?1024:-1}:null;
  async function complete(input:CompleteInput){
   if(!validModel(input?.model)||typeof input.prompt!=="string"||!input.prompt.trim())return {error:"Yazı isteği geçersiz.",status:400};
-  const r=await call(`models/${input.model}:generateContent`,{
+  const thinking=thinkingConfig(input.model,input.thinking==="low"||input.thinking==="high"?input.thinking:undefined);
+  const send=(withThinking:boolean)=>call(`models/${input.model}:generateContent`,{
    ...(input.system?{systemInstruction:{parts:[{text:input.system}]}}:{}),
    contents:[{role:"user",parts:[{text:input.prompt}]}],
-   generationConfig:{maxOutputTokens:Math.max(256,Math.min(65536,Number(input.maxTokens)||8192)),...(typeof input.temperature==="number"?{temperature:input.temperature}:{}),...(input.json?{responseMimeType:"application/json"}:{})},
+   generationConfig:{maxOutputTokens:Math.max(256,Math.min(65536,Number(input.maxTokens)||8192)),...(typeof input.temperature==="number"?{temperature:input.temperature}:{}),...(input.json?{responseMimeType:"application/json"}:{}),...(withThinking&&thinking?{thinkingConfig:thinking}:{})},
   });
+  let r=await send(true);
+  if("error" in r&&thinking&&r.status===400&&/think/i.test(r.error))r=await send(false);
   if("error" in r)return r;
   const d=r.data as {candidates?:{content?:{parts?:{text?:string}[]};finishReason?:string}[];promptFeedback?:{blockReason?:string};usageMetadata?:{promptTokenCount?:number;candidatesTokenCount?:number;thoughtsTokenCount?:number}};
   if(d.promptFeedback?.blockReason)return {error:"Gemini bu isteği güvenlik nedeniyle yanıtlamadı; konuyu değiştirip tekrar deneyin.",status:400};

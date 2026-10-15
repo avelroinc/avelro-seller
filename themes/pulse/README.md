@@ -25,6 +25,22 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.15
+
+- Araç sayfaları yeniden düzenlendi: araç kutusu giriş alanına bitişik değil, altında boşlukla ayrı durur; solda araç (başlık satırında simge, ad ve not), sağda Nasıl Kullanılır? kartı (numaralı adımlar alt alta), dar ekranda alt alta. Adımların numaralarıyla yazılarının üst üste binmesi giderildi; yan yana alanlar aynı hizada başlar.
+- Bütün sayfalarda giriş alanı ile içerik arası aynı: masaüstünde 48 px, tablet ve telefonda 32 px (bazı sayfalarda içerik giriş alanına bitişikti).
+- Uzun sayfa başlıkları (ör. blog yazıları) giriş alanındaki görselin üstüne binmez.
+- Satışa henüz açılmamış hizmet sayfasında düz yazı yerine kart: simge, açıklama ve platformun diğer hizmetlerine giden düğme.
+- Telefonda dokunma alanları büyüdü: Fırsat Köşesi adet çubukları, kartlardaki ürün bağlantıları, Tüm Sorular ve giriş ekranı bağlantıları.
+- Blog sayfasında yan sütun: arama kutusu ve yazı sayılarıyla kategoriler; hiçbir kategoriye bağlı olmayan yazılar Diğer kategorisinde listelenir.
+- Hesabım: telefonda karşılama alanı ve cüzdan tek satırda daha az yer kaplar, sekme şeridi seçili bölümü ortaya kaydırır ve kenarda solarak kaydırılabildiğini gösterir; Kartla Öde / Fast ile Ödeme ve Bireysel / Kurumsal seçimleri yan yana; hızlı bağlantıların yazısı taşmaz. Telefon Doğrulama formun yanında Neden Doğrulamalısın? kartıyla geniş ekranı doldurur.
+- Hesabım › Yönetim: yan kart uygulamada nelerin yönetildiğini anlatır (aynı Giriş Kodu Oluştur düğmesi iki kez görünmez); telefonda yan kart gizlenir.
+- Sistem 1.0.80 ve üzeri gerekir.
+
+### 1.0.14
+
+- Ana sayfa giriş alanı: 761–1280 px genişlikteki ekranlarda Beğeni kartı açıklama yazısının üstüne biniyordu; bu genişliklerde gizlenir.
+
 ### 1.0.13
 
 - Kaydırırken süs animasyonları durur (sistem 1.0.59 ile); telefonda alt bilgi zemini alt menünün arkasına kadar uzanır.

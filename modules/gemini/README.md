@@ -32,6 +32,10 @@ görseller OpenAI ile devam eder.
 
 ## Sürüm Notları
 
+### 1.0.2
+
+- Düşünme seviyesi: Gemini Ayarları'nda Düşük seçilirse model yazmadan önce daha kısa düşünür; yazılar daha hızlı gelir ve yanıt sınırına takılma riski azalır. Seçilmezse modelin varsayılanı kullanılır. Ayarı desteklemeyen modellerde istek ayarsız gönderilir. Sistem 1.0.80 ve üzeri gerekir.
+
 ### 1.0.1
 
 - Kurulumdaki "Paket çalışma yetkileri uyumsuz" hatası giderildi: paket, sağlayıcı modüllerinin çalışma sözleşmesine (Host API 2) göre düzenlendi. Davranış değişmedi.
