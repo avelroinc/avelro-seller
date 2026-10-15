@@ -1,5 +1,5 @@
 {
-  "version": "1.0.78",
-  "notes": "- Mobil uygulama: seçim listeleri (model, sürüm, servis, hizmet) artık ayrı pencerede değil, kutunun hemen altında açılıyor; seçince kapanıyor. Work/Bot çalışan koltuklarında yapay zekâ ve model seçtikten sonra ekranın takılı kalması giderildi.\n- Çalışan koltuğu düzenleme alanına kapatma düğmesi eklendi.\n- Mobil uygulama (Av/Dashboard 1.17.38) bu değişiklikleri içerir.",
-  "publishedAt": "2026-10-15T13:46:49.255Z"
+  "version": "1.0.79",
+  "notes": "- Gemini ile yazılan metinlerin yarıda kesilmesi giderildi: Pro modellerin yazmadan önceki düşünme adımı çıktı sınırını tüketiyordu; artık metin payına ayrıca düşünme payı ekleniyor (ücret yalnızca kullanılan kadar).\n- Yanıt yine sınıra takılırsa en geniş sınırla bir kez daha deneniyor; yine tamamlanamazsa yarım metin kaydedilmiyor, nedeni yazılıyor.",
+  "publishedAt": "2026-10-15T14:17:44.558Z"
 }
