@@ -1,5 +1,5 @@
 {
-  "version": "1.0.77",
-  "notes": "- Mobil uygulama hızlandı: arkada açık kalan sekmeler ve ekranlar (ana sayfa, sipariş listeleri, sipariş ayrıntısı, onaylar, destek, bildirim zili) artık sürekli istek göndermiyor; otomatik yenileme yalnızca ekrandaki sayfada ve uygulama öndeyken çalışıyor.\n- Yenilemede gelen veri değişmemişse listeler yeniden çizilmiyor.\n- Modül durum sorgusu en çok 5 saniye bekliyor (önceden 70 saniyeye kadar); canlı destek ve sipariş kararları modül servisini beklemiyor.\n- Gemini model listesi 10 dakika saklanıyor; Modüller ve Work/Bot ekranları her açılışta Google'a gitmiyor.\n- Mobil uygulama (Av/Dashboard 1.17.37) bu değişiklikleri içerir.",
-  "publishedAt": "2026-10-15T13:32:42.423Z"
+  "version": "1.0.78",
+  "notes": "- Mobil uygulama: seçim listeleri (model, sürüm, servis, hizmet) artık ayrı pencerede değil, kutunun hemen altında açılıyor; seçince kapanıyor. Work/Bot çalışan koltuklarında yapay zekâ ve model seçtikten sonra ekranın takılı kalması giderildi.\n- Çalışan koltuğu düzenleme alanına kapatma düğmesi eklendi.\n- Mobil uygulama (Av/Dashboard 1.17.38) bu değişiklikleri içerir.",
+  "publishedAt": "2026-10-15T13:46:49.255Z"
 }
