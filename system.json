@@ -1,5 +1,5 @@
 {
-  "version": "1.0.73",
-  "notes": "- Gemini modülünün kurulumda verdiği \"Paket çalışma yetkileri uyumsuz\" hatası giderildi (Gemini modülü 1.0.1). Kurulum denetimi sağlayıcı modüllerinin sözleşmesine göre test ediliyor.\n- Mobil uygulama hızlandı: kartlar, anahtarlar ve rapor çubuklarındaki animasyonlar her yenilemede yeniden kurulmuyor; alt menü genişliği anında değişiyor; Work/Bot model listeleri her dakika değil, yalnızca koltuk düzenlenirken bir kez alınıyor.\n- Work/Bot ekip bilgisi sunucuda daha hızlı hazırlanıyor (karar istatistikleri bir kez hesaplanıyor, çalışanlar paralel okunuyor).\n- Modüller sayfası yenilendi: Havale / EFT Ödeme'de, ChatGPT ve Claude Gemini'nin yanında Yapay Zekâ'da, HikerAPI Platform'da, Google ve Facebook ile giriş yeni Sosyal Giriş grubunda. Her modül markasının renginde simgeyle ve durum etiketiyle listeleniyor; üstte açık, kapalı, kurulu olmayan modül ve güncelleme sayıları, her grupta açık modül sayısı görünüyor.\n- Mobil uygulama (Av/Dashboard 1.17.33) bu değişiklikleri içerir.",
-  "publishedAt": "2026-10-15T10:50:48.661Z"
+  "version": "1.0.74",
+  "notes": "- Mobil uygulama, Modüller sayfası: grup başlıkları kartın içinde; her grubun renkli simgesi, adı ve açık modül sayısı kartın üst satırında görünüyor.\n- Mobil uygulama (Av/Dashboard 1.17.34) bu değişikliği içerir.",
+  "publishedAt": "2026-10-15T11:18:04.610Z"
 }
