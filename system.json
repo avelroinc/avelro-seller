@@ -1,5 +1,5 @@
 {
-  "version": "1.0.91",
-  "notes": "- Av/Dashboard 1.17.46: Canlı Akış'ta iş belgesinin yolu kesik çizgiyle görünür; her masada karar bekleyen iş sayısı yazar; iş yokken çalışanlar arada bir kıpırdar, Mağaza simgesi nefes alır.\n- Av/Dashboard 1.17.46: Canlı Akış'ta Senin masanda bekleyen işler belge yığını olarak durur; dokununca iş kollarına göre bekleyen işler ve son kararların açılır, iş koluna dokununca o iş kolunun ekranına gidilir.",
-  "publishedAt": "2026-10-16T11:38:48.699Z"
+  "version": "1.0.92",
+  "notes": "- Av/Dashboard 1.17.47: Work/Bot ana ekranında Birimler listesinin yerini canlı Ofis aldı; bir masaya dokununca o iş kolunun ekranı açılır, bekleyen iş sayısı ve çalışma durumu masada görünür. Ayrı Canlı Akış sayfası kaldırıldı.\n- Av/Dashboard 1.17.47: Senin masan yeniden çizildi: sırtın dönük koltukta oturuyorsun, bilgisayar ekranında sitenin ana sayfası açık; ara ara kafanı uzatıp çalışanlara bakar, sigara içip duman üflersin. Masaya dokununca bekleyen işler kâğıt yığınları, son kararların damgalı kâğıtlar olarak açılır.",
+  "publishedAt": "2026-10-16T12:21:04.988Z"
 }
