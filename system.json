@@ -1,5 +1,5 @@
 {
-  "version": "1.0.89",
-  "notes": "- DataForSEO istekleri görünür: her istek Work/Bot canlı akışında İçerik Editörü satırı olarak yazılır (kaç aramanın sayısı alındı, isteğin ücreti ve bu ayın toplamı); hata olursa nedeni yazılır.\n- DataForSEO'ya giden aramalar Google Ads'in kabul ettiği biçime getirilir (kesme işareti ve işaretler); \"instagram'da\" gibi tek bir arama artık bütün isteğin reddedilmesine yol açmaz.\n- Google'dan yeterli arama önerisi gelmezse ana kelime için Google Ads'in ilgili aramaları (aylık arama sayısıyla) kullanılır. DataForSEO Entegrasyonu 1.0.1 gerekir.",
-  "publishedAt": "2026-10-16T10:36:29.817Z"
+  "version": "1.0.90",
+  "notes": "- Av/Dashboard 1.17.45: Canlı Akış ayrı bir sayfa oldu (Work/Bot › Canlı). İş kolları bir ofis katında masalar olarak görünür: çalışan iş yapınca kıpırdar ve \"yazıyor\" balonu çıkar, iş belgesi Senin masana ya da Mağaza'ya uçar, Denetçi'nin onayı ve itirazı rozetle görünür. Ayrıntı yazısı yoktur; bir masaya ya da zaman çizgisindeki noktaya dokununca aynı sayfada altta açılır.\n- Av/Dashboard 1.17.45: Work/Bot'ta Durdur düğmesi kalktı; bot simgesine iki kez dokununca bot durur ya da yeniden çalışır (tek dokunuşta hatırlatma çıkar). Çalışırken simgeden dalgalar yayılır, durmuşken durgundur.",
+  "publishedAt": "2026-10-16T11:15:32.062Z"
 }
