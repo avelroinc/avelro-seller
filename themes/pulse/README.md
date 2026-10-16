@@ -25,6 +25,12 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.18
+
+- Tema içindeki çakışmalar temizlendi: 118 !important satırından 100+ tanesi kaldırıldı (gereksiz olanlar atıldı, gerekenlerde seçici özgülleşti, hep ezilen rakip satırlar silindi). Kalanlar bilerek: sayfa aralık düzeni ve hareketi azalt ayarları. Görünüm değişmedi (24 sayfa, 3 genişlik, açık ve koyu temada hesaplanmış stiller karşılaştırıldı).
+- Ana sayfa yorum kartlarında ürün satırı kesilmeden iki satıra kadar görünür; Hızlı Sipariş › Takip Et tablette iki alan yan yana, Sorgula altında; yönetici girişliyken İşlem Seç etiketi düzgün görünür.
+- Sistem 1.0.83 ve üzeri gerekir.
+
 ### 1.0.17
 
 - Tema dosyası temizlendi: 23 parça tek dosyada (src/pulse.css) birleşti; hiçbir sayfada eşleşmeyen 120 seçici ve sonradan ezildiği için hiç uygulanmayan 130 kural satırı atıldı. Görünüm değişmedi (24 sayfa, 3 genişlik, açık ve koyu temada bütün öğelerin hesaplanmış stilleri önce ve sonra karşılaştırıldı).

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.83",
-  "notes": "- Ana sayfa Hızlı Sipariş kartı: soldaki başlık ve simge kaldırıldı; Sipariş Ver / Takip Et seçimi 1. adım (İşlem Seç) olarak alanlarla aynı satırda ve aynı hizada, alanlar 2–4 olarak numaralanır. Telefonda seçim kartın üstündedir.\n- Sitedeki bütün açılır listeler sitenin renkleri, yazı tipi ve köşeleriyle açılır (seçili seçenek işaretli, açık ve koyu temada); klavyeyle gezilebilir. Telefonda telefonun kendi seçicisi açılır.\n- Pulse teması 1.0.16 ile birlikte çalışır.",
-  "publishedAt": "2026-10-15T20:44:47.918Z"
+  "version": "1.0.84",
+  "notes": "- Site düzenleme araç çubuğu düzenleme penceresiyle aynı görünümde: sitenin renkleri, açık ve koyu tema.\n- Sipariş Sorgula sayfasında e-posta kutusunun yazısı telefonda sığacak şekilde kısaldı.\n- Pulse teması 1.0.18: tema içindeki çakışmalar temizlendi (görünüm değişmedi), yorum kartlarında ürün satırı kesilmez, Hızlı Sipariş › Takip Et tablette düzenli, yönetici girişliyken İşlem Seç etiketi düzgün görünür.\n- Av/Dashboard 1.17.42: Modüller ekranında her modül kendi logosuyla görünür.",
+  "publishedAt": "2026-10-16T06:43:09.089Z"
 }
