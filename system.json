@@ -1,5 +1,5 @@
 {
-  "version": "1.0.86",
-  "notes": "- Av/Dashboard 1.17.43: Work/Bot ekranındaki yapay zekâ şeridinin sağındaki ok kaldırıldı; şeride dokununca Yapay Zekâ Bağlantıları yine açılır.",
-  "publishedAt": "2026-10-16T07:12:38.593Z"
+  "version": "1.0.87",
+  "notes": "- Yazılarda ara başlıklar Google'daki gerçek aramalardan seçilir (ana kelimenin arama önerileri) ve soru biçiminde, her kelimenin baş harfi büyük yazılır (ör. \"Reels İzlenme Paketleri Ne Kadar?\"); hile ve kurallara aykırı aramalar başlık yapılmaz.\n- Yazılarda kalın yazılan anahtar kelimeler kısa (1–3 kelime) ve çok aranan kelimelerdir; uzun ifadeler kalın yazılmaz.\n- Yeni SEO modülü DataForSEO Entegrasyonu: Google Ads verisiyle aramaların Türkiye'deki aylık arama sayısı alınır; ara başlıklar ve kalın kelimeler en çok arananlardan seçilir, hiç aranmayanlar atılır. Modüller › SEO'dan kurulur.\n- Yeni SEO modülü Google Search Console Entegrasyonu: İçerik Editörü Google başlığı, açıklama ve makaleleri sayfanın Google'da göründüğü gerçek aramalara göre yazar; çok gösterilip az tıklanan sayfalar için \"Az Tıklanıyor\" önerisiyle yeni başlık ve açıklama önerir. Hizmet hesabıyla salt okunur bağlanır.\n- Av/Dashboard 1.17.44: Modüller ekranında SEO grubu, DataForSEO ve Google Search Console kurulum formları; İçerik Editörü'nde \"Az Tıklanıyor\" önerisi.",
+  "publishedAt": "2026-10-16T08:54:21.082Z"
 }

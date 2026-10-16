@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "searchconsole",
+  "name": "Google Search Console Entegrasyonu",
+  "description": "Sitenin Google aramalarındaki performansı; İçerik Editörü Google başlığı, açıklama ve makaleleri gerçek aramalara göre yazar.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "seo",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:oauth2.googleapis.com",
+    "network:searchconsole.googleapis.com"
+  ],
+  "configuration": "config.schema.json"
+}

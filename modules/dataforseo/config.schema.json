@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "login",
+    "password"
+  ],
+  "properties": {
+    "login": {
+      "type": "string",
+      "title": "login",
+      "minLength": 1
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "minLength": 1,
+      "writeOnly": true
+    }
+  }
+}
