@@ -1,5 +1,5 @@
 {
-  "version": "1.0.85",
-  "notes": "- Telefona gelen bildirimler yeni şablonda: başlık emojisiyle ve baş harfleri büyük (💳 Sipariş Ödendi · #K7M2QX), sipariş kodu başlıkta; ürün, bağlantı, tutar ve kişi bilgileri emojileriyle tek satırda, durum satırları altında; uygulamaya yönlendiren satırlar atıldı (bildirime dokununca ilgili ekran açılır); sitenin adı son satırda. Telegram ve WhatsApp mesajları değişmedi.",
-  "publishedAt": "2026-10-16T07:00:46.320Z"
+  "version": "1.0.86",
+  "notes": "- Av/Dashboard 1.17.43: Work/Bot ekranındaki yapay zekâ şeridinin sağındaki ok kaldırıldı; şeride dokununca Yapay Zekâ Bağlantıları yine açılır.",
+  "publishedAt": "2026-10-16T07:12:38.593Z"
 }
