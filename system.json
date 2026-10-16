@@ -1,5 +1,5 @@
 {
-  "version": "1.0.90",
-  "notes": "- Av/Dashboard 1.17.45: Canlı Akış ayrı bir sayfa oldu (Work/Bot › Canlı). İş kolları bir ofis katında masalar olarak görünür: çalışan iş yapınca kıpırdar ve \"yazıyor\" balonu çıkar, iş belgesi Senin masana ya da Mağaza'ya uçar, Denetçi'nin onayı ve itirazı rozetle görünür. Ayrıntı yazısı yoktur; bir masaya ya da zaman çizgisindeki noktaya dokununca aynı sayfada altta açılır.\n- Av/Dashboard 1.17.45: Work/Bot'ta Durdur düğmesi kalktı; bot simgesine iki kez dokununca bot durur ya da yeniden çalışır (tek dokunuşta hatırlatma çıkar). Çalışırken simgeden dalgalar yayılır, durmuşken durgundur.",
-  "publishedAt": "2026-10-16T11:15:32.062Z"
+  "version": "1.0.91",
+  "notes": "- Av/Dashboard 1.17.46: Canlı Akış'ta iş belgesinin yolu kesik çizgiyle görünür; her masada karar bekleyen iş sayısı yazar; iş yokken çalışanlar arada bir kıpırdar, Mağaza simgesi nefes alır.\n- Av/Dashboard 1.17.46: Canlı Akış'ta Senin masanda bekleyen işler belge yığını olarak durur; dokununca iş kollarına göre bekleyen işler ve son kararların açılır, iş koluna dokununca o iş kolunun ekranına gidilir.",
+  "publishedAt": "2026-10-16T11:38:48.699Z"
 }
