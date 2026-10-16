@@ -4,7 +4,7 @@ Avelro Packet Seller System için SEO modülü. Kaynak: `avelroinc/avelro-seller
 
 - `avelro-module.json`: modül kimliği, sürüm, Host API (2) ve izinli ağ adresi
 - `config.schema.json`: istenen bağlantı ayarları (API girişi ve şifresi)
-- `src/server.ts`: sağlayıcı kodu (`searchVolume`: kelimelerin aylık arama sayısı, `account`: bağlantı denemesi ve bakiye)
+- `src/server.ts`: sağlayıcı kodu (`searchVolume`: kelimelerin aylık arama sayısı, `keywordIdeas`: ilgili aramalar, `account`: bağlantı denemesi ve bakiye)
 
 ## Ne İşe Yarar
 
@@ -12,6 +12,8 @@ Avelro Packet Seller System için SEO modülü. Kaynak: `avelroinc/avelro-seller
   Türkiye'deki aylık ortalama arama sayısı Google Ads (Anahtar Kelime Planlayıcı) verisinden alınır.
 - Ara başlıklar en çok aranan sorulardan seçilir; hiç aranmayan öneriler atılır. Yazıda kalın yazılan kısa anahtar kelimeler de
   arama sayısı yüksek olanlardan seçilir.
+- Google'dan yeterli arama önerisi gelmezse ana kelime için Google Ads'in ilgili aramaları kullanılır.
+- Her istek Work/Bot canlı akışında İçerik Editörü satırı olarak görünür: kaç aramanın sayısı alındı, isteğin ücreti ve bu ayın toplamı; hata olursa nedeni.
 - Modül kapalıysa ya da ayar yoksa yazılar yine yazılır; öneriler Google'ın kendi sırasıyla kullanılır.
 
 ## Ücret
@@ -39,6 +41,12 @@ güncelleme başarısız olursa kurulu sürüm korunur. Kaldırma bağlantı aya
 3. Değişiklikleri `avelro-seller` deposunun `main` dalına gönderin.
 
 ## Sürüm Notları
+
+### 1.0.1
+
+- Kesme işareti ya da işaret içeren aramalar (ör. "instagram'da") Google Ads'in kabul ettiği biçime getirilir; bu tür bir arama artık bütün isteğin reddedilmesine yol açmaz.
+- Yeni işlem: ilgili aramalar (Google Ads önerileri, aylık arama sayısıyla). Google'dan yeterli öneri gelmediğinde kullanılır.
+- Her yanıtta isteğin ücreti döner; sistem bunu Work/Bot canlı akışına ve aylık toplama yazar. Sistem 1.0.89 ve üzeri gerekir.
 
 ### 1.0.0
 

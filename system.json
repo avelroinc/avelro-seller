@@ -1,5 +1,5 @@
 {
-  "version": "1.0.88",
-  "notes": "- Blog yazısının platformu doğru bulunur: başlıkta geçen platform ya da özelliği (Reels → Instagram, Shorts → YouTube, tweet → X) kategoriden önce gelir; yapay zekâ yazılarında konu bir platform adı içermese de yazı rastgele bir platforma bağlanmaz.\n- Yazı arasındaki öneriler (hizmet, ücretsiz deneme, kombin) ve Sonuç kutusundaki düğme yalnızca yazının konusunun platformundan gelir; seçim her yazıda sabittir, sayfa yenilendikçe değişmez.\n- Yapay zekâ yazıları konudan sapmaz: yazara yalnızca yazının platformunun hizmetleri verilir, başka platformun hizmeti tanıtılmaz; mağaza adı yazıya yazılmaz.\n- Yazılardaki İpucu / Dikkat / Önemli / Bilgi kutuları azaldı: uzunluğa göre en fazla 1–3 kutu, fazlası düz paragraf olarak görünür (yayındaki yazılarda da geçerli).",
-  "publishedAt": "2026-10-16T10:00:16.570Z"
+  "version": "1.0.89",
+  "notes": "- DataForSEO istekleri görünür: her istek Work/Bot canlı akışında İçerik Editörü satırı olarak yazılır (kaç aramanın sayısı alındı, isteğin ücreti ve bu ayın toplamı); hata olursa nedeni yazılır.\n- DataForSEO'ya giden aramalar Google Ads'in kabul ettiği biçime getirilir (kesme işareti ve işaretler); \"instagram'da\" gibi tek bir arama artık bütün isteğin reddedilmesine yol açmaz.\n- Google'dan yeterli arama önerisi gelmezse ana kelime için Google Ads'in ilgili aramaları (aylık arama sayısıyla) kullanılır. DataForSEO Entegrasyonu 1.0.1 gerekir.",
+  "publishedAt": "2026-10-16T10:36:29.817Z"
 }

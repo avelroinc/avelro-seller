@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "dataforseo",
   "name": "DataForSEO Entegrasyonu",
-  "description": "Google Ads verisiyle anahtar kelimelerin aylık arama sayısı; yazılarda ara başlık ve kalın kelimeler çok arananlardan seçilir.",
-  "version": "1.0.0",
+  "description": "Google Ads verisiyle anahtar kelimelerin aylık arama sayısı ve ilgili aramalar; yazılarda ara başlık ve kalın kelimeler çok arananlardan seçilir.",
+  "version": "1.0.1",
   "hostApiVersion": 2,
   "category": "seo",
   "scopes": [
