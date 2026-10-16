@@ -1,5 +1,5 @@
 {
-  "version": "1.0.92",
-  "notes": "- Av/Dashboard 1.17.47: Work/Bot ana ekranında Birimler listesinin yerini canlı Ofis aldı; bir masaya dokununca o iş kolunun ekranı açılır, bekleyen iş sayısı ve çalışma durumu masada görünür. Ayrı Canlı Akış sayfası kaldırıldı.\n- Av/Dashboard 1.17.47: Senin masan yeniden çizildi: sırtın dönük koltukta oturuyorsun, bilgisayar ekranında sitenin ana sayfası açık; ara ara kafanı uzatıp çalışanlara bakar, sigara içip duman üflersin. Masaya dokununca bekleyen işler kâğıt yığınları, son kararların damgalı kâğıtlar olarak açılır.",
-  "publishedAt": "2026-10-16T12:21:04.988Z"
+  "version": "1.0.93",
+  "notes": "- Av/Dashboard 1.17.48: Work/Bot yalnızca ofisten oluşur: üstte Ofis kartı (bot simgesine iki kez dokununca bot durur ya da çalışır, sağda Eğitim), altında Mağaza ve iş kolu masaları. Masada sorun varsa kırmızı ünlem görünür; kapalı iş kolları katın altında soluk simgelerdir; son iş tek satırda akar.\n- Av/Dashboard 1.17.48: İş kolu sayfaları sadeleşti: üstte tek satır (ekip, durum ya da \"Bağla\", aç/kapa), ekip ve açıklama Ayarlar'da, öneriler türe göre gruplu, tarihler kısa.\n- Av/Dashboard 1.17.48: Daha Fazla'daki Work/Bot kartında sayılar kalktı; bot simgesine iki kez dokununca bot durur ya da yeniden çalışır.",
+  "publishedAt": "2026-10-16T13:05:07.043Z"
 }
