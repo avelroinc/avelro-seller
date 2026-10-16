@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.17
+
+- Tema dosyası temizlendi: 23 parça tek dosyada (src/pulse.css) birleşti; hiçbir sayfada eşleşmeyen 120 seçici ve sonradan ezildiği için hiç uygulanmayan 130 kural satırı atıldı. Görünüm değişmedi (24 sayfa, 3 genişlik, açık ve koyu temada bütün öğelerin hesaplanmış stilleri önce ve sonra karşılaştırıldı).
+- Sistem 1.0.83 ve üzeri gerekir.
+
 ### 1.0.16
 
 - Ana sayfa Hızlı Sipariş kartı: soldaki başlık ve simge kaldırıldı; Sipariş Ver / Takip Et seçimi solda, alanların kutularıyla aynı hizada ve aynı yükseklikte, üstünde 1. adım etiketi (İşlem Seç); alanlar 2–4 olarak numaralanır (telefonda kartın üstünde).

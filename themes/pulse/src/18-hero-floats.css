@@ -1,4 +1,0 @@
-/* Ana sayfa giriş alanı: 761–1280 px genişlikte Beğeni kartı açıklama yazısının üstüne biniyordu; bu aralıkta gizlenir (telefonda alt köşede görünmeye devam eder). */
-@media(min-width:761px) and (max-width:1280px){
- .shop-shell .shop-hero-float-likes{display:none}
-}

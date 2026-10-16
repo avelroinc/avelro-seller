@@ -1,9 +1,0 @@
-/* Kaydırırken bütün süs animasyonları durur (html[data-scrolling]; bkz. sistemdeki sayfa geçişi bileşeni): çalışan animasyonlar
-   her karede stil hesaplattığı için kaydırma ağırlaşıyordu. Kaydırma bitince kaldıkları yerden sürer. */
-html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,html[data-scrolling] .shop-shell *::after,html[data-scrolling] [data-live-chat-root] *,html[data-scrolling] [data-live-chat-root] *::before,html[data-scrolling] [data-live-chat-root] *::after{animation-play-state:paused!important}
-/* Alt menü telefonda sayfanın altına kadar uzanır: alt bilgi zemini menünün arkasında da sürer (önceden sayfanın kendi zemini
-   beyaz şerit olarak görünüyordu). */
-@media(max-width:760px){
- .shop-shell:has(.shop-dock.is-horizontal){padding-bottom:0!important}
- .shop-shell:has(.shop-dock.is-horizontal) .shop-end{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
-}
