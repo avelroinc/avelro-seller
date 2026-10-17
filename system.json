@@ -1,5 +1,5 @@
 {
-  "version": "1.0.97",
-  "notes": "- Av/Dashboard 1.17.52: Uygulama 15 Ekim'deki tasarımına döndü (1.17.41 ile aynı). Son iki günün tasarım denemeleri geri alındı: yeni başlık, Daha Fazla düzenleri, renkler, alt menü, yeni Work/Bot ve bulanık ayar sayfaları.\n- Sistem tarafındaki SEO modülleri, DataForSEO, Search Console, blog ve bildirim düzeltmeleri olduğu gibi duruyor.",
-  "publishedAt": "2026-10-17T05:29:44.344Z"
+  "version": "1.0.98",
+  "notes": "- Sitedeki Düzenleme Modu kaldırıldı: yönetici çubuğu ve sayfa üstü düzenleme pencereleri yok; yönetici de siteyi yayındaki hâliyle görür.\n- Av/Dashboard 1.17.53: Sayfa Makaleleri (Site İçeriği): ana sayfa, platform, kategori, ücretsiz araç, ücretsiz hizmet ve lisans ürünü sayfalarının makalesi mobilden yapay zekâyla yazılır; uzunluk ve ek istek seçilir, yazı okunup yayınlanır.\n- Av/Dashboard 1.17.53: Sitede Düzenle düğmeleri Sitede Gör oldu; blogda yazıyı yapay zekâ yazar (Kendim Yazacağım seçeneği kaldırıldı).",
+  "publishedAt": "2026-10-17T08:48:10.778Z"
 }
