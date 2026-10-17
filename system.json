@@ -1,5 +1,5 @@
 {
-  "version": "1.0.100",
-  "notes": "- Av/Dashboard 1.17.55: Work/Bot kartı Genel Bakış kartlarıyla aynı renkte; özet adları Sana Bırakılan, Bot Çözdü ve Servis Önerileri.\n- Av/Dashboard 1.17.55: Canlı akış şeridinde yazının başlığı görünür (“‹Başlık› Yazıldı. - İçerik Editörü”); sığmayan satır yana kayar.\n- Av/Dashboard 1.17.55: Birim sayfalarında üstteki kart kaldırıldı; aç / kapa üst çubukta (güç simgesi). Birim Personelleri başlığı ve gri koltuk zemini yok.\n- Av/Dashboard 1.17.55: Haftalık Rapor’da Öne Çıkanlar konuya göre simgeli, sayılar vurgulu. Modüller’de grup başlıkları yeni düzende.\n- Av/Dashboard 1.17.55: Düğmeler iş sürerken yükleniyor gösterir; yüklenen bölümlerde soluk iskelet görünür.\n- Av/Dashboard 1.17.55: Telefonun bildirim simgesi yeni Av/ logosu oldu.",
-  "publishedAt": "2026-10-17T12:33:10.539Z"
+  "version": "1.0.101",
+  "notes": "- Av/Dashboard 1.17.56: Alt menüde seçili sekme uygulamanın mavisiyle görünür (mavi zemin, beyaz simge ve yazı).\n- Av/Dashboard 1.17.56: Ayrıntı ve düzenleme sayfalarında üst çubuktaki geri düğmesi ve simgeler, ana sekmelerdeki logo ve arama kutusuyla aynı boyda.\n- Av/Dashboard 1.17.56: Daha Fazla’daki Work/Bot girişi veri göstermeyen, kart görünümlü bir düğme oldu.\n- Av/Dashboard 1.17.56: Birim sayfalarındaki aç / kapa yalnızca güç simgesi (açıkken yeşil).",
+  "publishedAt": "2026-10-17T12:54:09.958Z"
 }
