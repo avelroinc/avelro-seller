@@ -1,5 +1,5 @@
 {
-  "version": "1.0.101",
-  "notes": "- Av/Dashboard 1.17.56: Alt menüde seçili sekme uygulamanın mavisiyle görünür (mavi zemin, beyaz simge ve yazı).\n- Av/Dashboard 1.17.56: Ayrıntı ve düzenleme sayfalarında üst çubuktaki geri düğmesi ve simgeler, ana sekmelerdeki logo ve arama kutusuyla aynı boyda.\n- Av/Dashboard 1.17.56: Daha Fazla’daki Work/Bot girişi veri göstermeyen, kart görünümlü bir düğme oldu.\n- Av/Dashboard 1.17.56: Birim sayfalarındaki aç / kapa yalnızca güç simgesi (açıkken yeşil).",
-  "publishedAt": "2026-10-17T12:54:09.958Z"
+  "version": "1.0.102",
+  "notes": "- Google başlıklarında mağaza adı yer almaz: sayfa kaydedilirken başlığın sonundaki “| Mağaza Adı” eki kendiliğinden kaldırılır.\n- Av/Dashboard 1.17.57: Hizmet ve lisans ürünü sayfaları sekmeli (Satış / Ürün, Makale, Google, Ayarlar); makale yapay zekâyla ürünün kendi sayfasında yazılır, Google önizlemesi görünür. Site İçeriği › Makaleler’de bu ürünler artık listelenmez.\n- Av/Dashboard 1.17.57: İçerik Editörü ve Mağaza Ayarları yeniden düzenlendi: Yayın Takvimi tek kutuda, Denetim puanı düğmelerle, Otomatik Blog ve WhatsApp anahtarları başlıkta, logo ve sekme simgesi mağaza kutusunda.\n- Av/Dashboard 1.17.57: Deneme sayfalarına Sırala ve Sitede Gör, Ücretsiz Araçlar’a Sitede Gör eklendi.\n- Av/Dashboard 1.17.57: Bildirim simgesi yuvarlak içinde Av/ logosu.",
+  "publishedAt": "2026-10-17T13:53:51.527Z"
 }
