@@ -1,5 +1,5 @@
 {
-  "version": "1.0.96",
-  "notes": "- Av/Dashboard 1.17.51: Work/Bot çizimle birebir: Manrope yazı tipi, yazılar telefonun yazı büyütmesinden etkilenmez, ölçüler çizimdeki gibi.\n- Av/Dashboard 1.17.51: Çalışan ayarları ve İşlemler açılınca arka plan telefonda da bulanıklaşır.\n- Av/Dashboard 1.17.51: Çalışan ayarlarında kapatma sağ üstte; İşlemler'de geri oku solda, iş sayısı başlığın yanında.",
-  "publishedAt": "2026-10-16T21:21:14.927Z"
+  "version": "1.0.97",
+  "notes": "- Av/Dashboard 1.17.52: Uygulama 15 Ekim'deki tasarımına döndü (1.17.41 ile aynı). Son iki günün tasarım denemeleri geri alındı: yeni başlık, Daha Fazla düzenleri, renkler, alt menü, yeni Work/Bot ve bulanık ayar sayfaları.\n- Sistem tarafındaki SEO modülleri, DataForSEO, Search Console, blog ve bildirim düzeltmeleri olduğu gibi duruyor.",
+  "publishedAt": "2026-10-17T05:29:44.344Z"
 }
