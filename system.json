@@ -1,5 +1,5 @@
 {
-  "version": "1.0.103",
-  "notes": "- Sitedeki bütün makaleler ana sayfadaki düzende: ilk satırda başlık, giriş paragrafı ve kapak görseli; numaralı bölümler ikinci satırdan başlar (hizmet, platform, lisans, deneme, araç ve sistem sayfaları).\n- Av/Dashboard 1.17.58: Work/Bot canlı akış şeridine dokununca o anki işin ayrıntısı açılır (birim, yapan çalışan, zaman, kaydın tam metni, Birime Git).\n- Av/Dashboard 1.17.58: Mağaza Ayarları’nda şirket adı Mağaza Adı’nın altında isteğe bağlı “Resmi Unvan” olarak durur.\n- Av/Dashboard 1.17.58: Alt satıra geçen seçim düğmelerinin Android’de görünmemesi düzeltildi (ör. Deneme Yazısı türü).",
-  "publishedAt": "2026-10-17T14:19:35.233Z"
+  "version": "1.0.104",
+  "notes": "- Av/Dashboard 1.17.59: Daha Fazla’daki Work/Bot kartının çerçevesinde ince bir mavi ışık döner (telefonda hareket azaltma açıksa durur).",
+  "publishedAt": "2026-10-17T14:59:09.173Z"
 }
