@@ -1,5 +1,5 @@
 {
-  "version": "1.0.104",
-  "notes": "- Av/Dashboard 1.17.59: Daha Fazla’daki Work/Bot kartının çerçevesinde ince bir mavi ışık döner (telefonda hareket azaltma açıksa durur).",
-  "publishedAt": "2026-10-17T14:59:09.173Z"
+  "version": "1.0.105",
+  "notes": "- Av/Dashboard 1.17.60 ve Av/Tawk 1.5.1: Uygulamalar avelro açılışıyla başlar: harfler tek tek düşer, altında uygulamanın adı (Yönetim Paneli / Canlı Destek) belirir, ortadan büyüyen daireyle uygulama açılır. Telefonun ilk açılış ekranında logo yok.",
+  "publishedAt": "2026-10-17T15:18:18.388Z"
 }
