@@ -4245,22 +4245,6 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 .shop-shell .ep-pick{display:grid;gap:16px;min-width:0}
 .shop-shell .ep-pick h2,.shop-shell .ep-buy h2{display:flex;align-items:center;gap:10px;margin:0;font-size:19px;line-height:1.3}
 .shop-shell .ep-pick h2 span,.shop-shell .ep-buy h2 span{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:var(--shop-radius);background:var(--shop-accent);color:var(--shop-on-accent);font-size:14px;font-weight:800}
-.shop-shell .ep-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.shop-shell .ep-tile{position:relative;display:grid;justify-items:start;align-content:start;gap:6px;min-width:0;padding:16px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer;transition:border-color .15s,box-shadow .15s}
-.shop-shell .ep-tile:hover{border-color:color-mix(in srgb,var(--shop-accent) 50%,var(--shop-line-2))}
-.shop-shell .ep-tile.is-on{border-color:var(--shop-accent);box-shadow:inset 0 0 0 1px var(--shop-accent);background:var(--shop-tint)}
-.shop-shell .ep-tile.is-out{opacity:.6}
-.shop-shell .ep-tile:focus-visible{outline:2px solid var(--shop-accent);outline-offset:2px}
-.shop-shell .ep-tile-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:var(--shop-radius);background:var(--shop-tint-2);color:var(--shop-accent)}
-.shop-shell .ep-tile-icon svg{width:18px;height:18px}
-.shop-shell .ep-tile>b{max-width:100%;overflow:hidden;font-size:15.5px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap}
-.shop-shell .ep-tile-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px}
-.shop-shell .ep-tile-price strong{color:var(--shop-ink);font-size:17px;font-variant-numeric:tabular-nums}
-.shop-shell .ep-tile-price s{color:var(--shop-faint);font-size:13px}
-.shop-shell .ep-tile>small{color:var(--shop-muted);font-size:12.5px}
-.shop-shell .ep-tile-badge{position:absolute;top:12px;right:12px;padding:2px 8px;border-radius:var(--shop-radius);background:var(--shop-accent);color:var(--shop-on-accent);font-size:11.5px;font-style:normal;font-weight:800}
-.shop-shell .ep-tile-check{position:absolute;right:12px;bottom:12px;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--shop-accent);color:var(--shop-on-accent)}
-.shop-shell .ep-tile-check svg{width:13px;height:13px}
 .shop-shell .ep-buy{position:sticky;top:calc(var(--shop-header-h) + 16px);display:grid;gap:16px;padding:22px;border:1px solid var(--shop-line);border-top:4px solid var(--shop-accent);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
 .shop-shell .ep-buy .lic-buy-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px}
 .shop-shell .ep-buy .lic-buy-actions .shop-button{min-height:48px;justify-content:center}
@@ -4286,8 +4270,6 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
  .shop-shell .ep-game-body{padding:10px 12px 12px}
  .shop-shell .ep-game-body b{font-size:14.5px}
  .shop-shell .ep-game-go{display:none}
- .shop-shell .ep-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- .shop-shell .ep-tile{padding:12px}
  .shop-shell .ep-buy{padding:16px}
  .shop-shell .ep-home-head .shop-button{width:100%;justify-content:center}
 }
@@ -4318,3 +4300,53 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
  .shop-shell .ep-skin p{font-size:13.5px}
 }
 @media (prefers-reduced-motion:reduce){.shop-shell .ep-skin::before{animation:none}}
+/* E-Pin paket kutucukları: üstte vurgu renginde ışıklı alan ve paket büyüklüğüne göre 1-3 taş, ortada büyük miktar ve birim
+   (2.500 EP), teslim türü; altta fiyat (üstü çizili fiyat ve indirim oranı, birim fiyat) ve seçim düğmesi. Seçili kutu vurgu
+   rengiyle çerçevelenir; büyük pakette üzerine gelince ışık süzülür. */
+.shop-shell .ep-tile{position:relative;display:grid;align-content:start;gap:10px;min-width:0;padding:0 0 16px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer;overflow:hidden;transition:border-color .18s,box-shadow .18s,transform .18s}
+.shop-shell .ep-tile:hover{border-color:color-mix(in srgb,var(--shop-accent) 55%,var(--shop-line-2));box-shadow:0 18px 34px -24px color-mix(in srgb,var(--shop-accent) 70%,transparent);transform:translateY(-3px)}
+.shop-shell .ep-tile:focus-visible{outline:2px solid var(--shop-accent);outline-offset:2px}
+.shop-shell .ep-tile.is-on{border-color:var(--shop-accent);box-shadow:0 0 0 1px var(--shop-accent),0 20px 38px -22px color-mix(in srgb,var(--shop-accent) 80%,transparent)}
+.shop-shell .ep-tile.is-out{opacity:.55;filter:grayscale(.6)}
+.shop-shell .ep-tile-top{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;min-height:62px;padding:14px 14px 0;background:radial-gradient(120% 160% at 0% 0%,color-mix(in srgb,var(--shop-accent) 20%,var(--shop-surface)),transparent 62%),linear-gradient(180deg,var(--shop-tint),var(--shop-surface));overflow:hidden}
+.shop-shell .ep-tile.is-on .ep-tile-top{background:radial-gradient(120% 160% at 0% 0%,color-mix(in srgb,var(--shop-accent) 34%,var(--shop-surface)),transparent 66%),linear-gradient(180deg,var(--shop-tint-2),var(--shop-surface))}
+.shop-shell .ep-tile[data-tier="3"] .ep-tile-top::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgb(255 255 255 / .55) 48%,transparent 66%);transform:translateX(-120%);transition:transform .9s}
+.shop-shell .ep-tile[data-tier="3"]:hover .ep-tile-top::after{transform:translateX(120%)}
+.shop-shell .ep-tile-gems{display:flex;align-items:center}
+.shop-shell .ep-tile-gems svg{width:24px;height:24px;margin-right:-7px;padding:4px;border-radius:50%;background:var(--shop-surface);color:var(--shop-accent);fill:color-mix(in srgb,var(--shop-accent) 22%,transparent);box-shadow:0 4px 10px -4px color-mix(in srgb,var(--shop-accent) 70%,transparent)}
+.shop-shell .ep-tile[data-tier="2"] .ep-tile-gems svg{width:27px;height:27px}
+.shop-shell .ep-tile[data-tier="3"] .ep-tile-gems svg{width:30px;height:30px;fill:color-mix(in srgb,var(--shop-accent) 42%,transparent)}
+.shop-shell .ep-tile-badge{position:relative;z-index:1;flex:none;max-width:60%;overflow:hidden;padding:3px 9px;border-radius:var(--shop-radius);background:var(--shop-accent);color:var(--shop-on-accent);font-size:11px;font-style:normal;font-weight:800;letter-spacing:.02em;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .ep-tile-badge.is-best{background:var(--shop-good);color:var(--shop-on-good)}
+.shop-shell .ep-tile-amount{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px;min-width:0;padding:2px 16px 0}
+.shop-shell .ep-tile-amount b{color:var(--shop-ink);font-size:30px;font-weight:800;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.shop-shell .ep-tile-amount b.is-text{font-size:18px;line-height:1.25;letter-spacing:0}
+.shop-shell .ep-tile-amount em{color:var(--shop-accent);font-size:14px;font-style:normal;font-weight:800;letter-spacing:.04em}
+.shop-shell .ep-tile-kind{display:flex;align-items:center;gap:6px;padding:0 16px;color:var(--shop-muted);font-size:12.5px}
+.shop-shell .ep-tile-kind svg{flex:none;width:13px;height:13px;color:var(--shop-faint)}
+.shop-shell .ep-tile-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:2px 16px 0;padding-top:12px;border-top:1px dashed var(--shop-line-2)}
+.shop-shell .ep-tile-price{display:grid;gap:1px;min-width:0}
+.shop-shell .ep-tile-was{display:flex;align-items:center;gap:6px;min-height:21px}
+.shop-shell .ep-tile-was s{color:var(--shop-faint);font-size:12.5px}
+.shop-shell .ep-tile-was i{padding:1px 6px;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--shop-good) 14%,transparent);color:var(--shop-good);font-size:11px;font-style:normal;font-weight:800}
+.shop-shell .ep-tile-price strong{color:var(--shop-ink);font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}
+.shop-shell .ep-tile-price small{color:var(--shop-muted);font-size:11.5px;font-variant-numeric:tabular-nums}
+.shop-shell .ep-tile-check{display:grid;place-items:center;flex:none;width:24px;height:24px;border:2px solid var(--shop-line-2);border-radius:50%;color:transparent;transition:background-color .15s,border-color .15s}
+.shop-shell .ep-tile-check svg{width:13px;height:13px}
+.shop-shell .ep-tile.is-on .ep-tile-check{border-color:var(--shop-accent);background:var(--shop-accent);color:var(--shop-on-accent)}
+@media (max-width:560px){
+ .shop-shell .ep-tile{gap:8px;padding-bottom:12px}
+ .shop-shell .ep-tile-top{min-height:50px;padding:10px 10px 0}
+ .shop-shell .ep-tile-gems svg{width:21px!important;height:21px!important;padding:3px}
+ .shop-shell .ep-tile-badge{font-size:10px;padding:2px 6px}
+ .shop-shell .ep-tile-amount{padding:0 12px}
+ .shop-shell .ep-tile-amount b{font-size:23px}
+ .shop-shell .ep-tile-amount em{font-size:12px}
+ .shop-shell .ep-tile-kind{padding:0 12px;font-size:11.5px}
+ .shop-shell .ep-tile-foot{margin:0 12px;padding-top:10px}
+ .shop-shell .ep-tile-price strong{font-size:16px}
+ .shop-shell .ep-tile-check{width:20px;height:20px}
+}
+@media (prefers-reduced-motion:reduce){.shop-shell .ep-tile{transition:none}.shop-shell .ep-tile:hover{transform:none}}
+.shop-shell .ep-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.shop-shell .ep-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}

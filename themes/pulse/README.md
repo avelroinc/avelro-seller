@@ -30,6 +30,7 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 - İç sayfaların giriş alanı tek satır: solda konum kartı (Ana Sayfa › sayfa), yanında başlık ve açıklama, en sağda sayfanın simgesi; bant yüksekliği üçte bire indi. Telefonda konum üstte ince şerit, altında başlık ve simge. İletişim, Hakkımızda, Kampanyalar, Duyurular, Sıkça Sorulan Sorular, Fırsat Köşesi, Ücretsiz Hizmetler ve kendi sayfalar.
 - E-Pin bölümü: /e-pin sayfasında oyun kartları (kapak, paket sayısı, en düşük fiyat); oyun sayfasında paket kutucukları ve yanında satın alma kutusu (adet ya da Oyuncu ID alanları), altında Nasıl Kullanılır adımları; ana sayfada Popüler Oyunlar bölümü.
 - E-Pin oyun görünümü: oyuna giriş bandı görseli, logo ve vurgu rengi verilebilir; oyun sayfası sitenin temasında kalır, giriş alanı oyunun görseliyle (karakterler iki yanda) çizilir, düğme ve seçili paket oyunun rengini alır. Paketler üç sütun.
+- E-Pin paket kutucukları yenilendi: büyük miktar ve birim (2.500 EP), paket büyüklüğüne göre 1-3 taş, indirim oranı, birim fiyat (₺0,10 / EP), seçim düğmesi; seçili paket oyunun rengiyle parlar.
 
 ### 1.0.20
 
