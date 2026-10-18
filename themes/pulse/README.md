@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.21
+
+- İç sayfaların giriş alanı tek satır: solda konum kartı (Ana Sayfa › sayfa), yanında başlık ve açıklama, en sağda sayfanın simgesi; bant yüksekliği üçte bire indi. Telefonda konum üstte ince şerit, altında başlık ve simge. İletişim, Hakkımızda, Kampanyalar, Duyurular, Sıkça Sorulan Sorular, Fırsat Köşesi, Ücretsiz Hizmetler ve kendi sayfalar.
+- E-Pin bölümü: /e-pin sayfasında oyun kartları (kapak, paket sayısı, en düşük fiyat); oyun sayfasında paket kutucukları ve yanında satın alma kutusu (adet ya da Oyuncu ID alanları), altında Nasıl Kullanılır adımları; ana sayfada Popüler Oyunlar bölümü.
+
 ### 1.0.20
 
 - Makale bölümleri (ana sayfa ve bütün sayfalar) kutu içinde kaydırılmaz: uzun metin kesilip soluklaşır, Devamını Oku ile tamamı açılır; kısa metin olduğu gibi görünür. Metin görselle dikeyde ortalanır.
