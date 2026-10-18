@@ -1,5 +1,5 @@
 {
-  "version": "1.0.107",
-  "notes": "- Makalelerdeki iç bağlantılar makalenin platformunda kalır: platform adı yazılmadan geçen hizmet adı (ör. \"canlı yayın izleyici\") yalnızca o platformun hizmetine bağlanır; başka platformun hizmeti ancak platform adıyla birlikte geçerse (ör. \"Facebook canlı yayın izleyici\") bağlanır.\n- Aynı ifade makalede bir kez bağlanır; ikinci geçişinde başka sayfaya bağlantı verilmez.\n- Platformu belirtilmeyen yazılarda (elle yazılan blog yazısı, sayfa metni) platform, metinde adı en çok geçen platformdan anlaşılır.",
-  "publishedAt": "2026-10-17T19:49:47.621Z"
+  "version": "1.0.108",
+  "notes": "- Av/Tawk 1.5.2: Tasarım Av/Dashboard ile birebir aynı: bölüm başlıkları kutunun içinde, tam ekran sayfalarda Kaydet ve Sil alttaki sabit çubukta, alt menüde seçili bölüm mavi, üst çubuktaki düğmeler ve profil resmi Av/Dashboard boyutunda.\n- Düğmeler iş bitene kadar yükleniyor görünür; yüklenirken soluk iskelet görünür; \"… yok\" yazıları gösterilmez; açıklamalar kısaldı.\n- Sohbetler sayfa sayfa; Açık / Kapalı seçimi diğer listelerdeki gibi; Yanıt Ekle düğmesi alt menünün üstünde, her zaman görünür.\n- Titreşim kaldırıldı.",
+  "publishedAt": "2026-10-18T07:28:23.388Z"
 }
