@@ -25,6 +25,16 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.19
+
+- Blog yazısı giriş alanı: solda konum, kategori, başlık, özet ve yazar; sağda kapak görseli; altında okuma süresi, bölüm sayısı, yayın tarihi ve paylaş şeridi.
+- İçindekiler yeni düzende: tek çerçeveli kutu, bölüm sayısı, iki sütunlu hücreler ve ara başlıklarla aynı numara kutuları.
+- Blog yazısında ilk harfin büyük yazılması, ara başlıkların üstündeki çizgiler ve ayraç çizgileri kaldırıldı; başlık aralıkları daraldı.
+- Sıkça Sorulan Sorular yazının altında ayrı bölümde.
+- Yazı arasındaki Ücretsiz Hizmet ve Ücretsiz Araç kartları afiş görünümünde; yan sütunda Ücretsiz Araçlar afişi.
+- Hakkımızda sayfası sadeleşti: metin ve yanında tek kutuda Neden Biz, altında çağrı.
+- Telefonda ve tablette makale bölümleri ve hızlı lisans listesi kendi içinde kaymaz; sayfa kaydırması takılmaz.
+
 ### 1.0.18
 
 - Tema içindeki çakışmalar temizlendi: 118 !important satırından 100+ tanesi kaldırıldı (gereksiz olanlar atıldı, gerekenlerde seçici özgülleşti, hep ezilen rakip satırlar silindi). Kalanlar bilerek: sayfa aralık düzeni ve hareketi azalt ayarları. Görünüm değişmedi (24 sayfa, 3 genişlik, açık ve koyu temada hesaplanmış stiller karşılaştırıldı).
