@@ -25,6 +25,12 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.20
+
+- Makale bölümleri (ana sayfa ve bütün sayfalar) kutu içinde kaydırılmaz: uzun metin kesilip soluklaşır, Devamını Oku ile tamamı açılır; kısa metin olduğu gibi görünür. Metin görselle dikeyde ortalanır.
+- Ana sayfadaki Öne Çıkan Hizmetler: platform süzgeci kalktı; telefonda kartlar sayfadan taşmaz, her kaydırmada bir kart gelir, altta kart noktaları.
+- Blog yazısının bilgi şeridinde Paylaş düğmeleri telefonda taşmaz: Paylaş satırı tam genişlikte, düğmeler biraz küçüldü.
+
 ### 1.0.19
 
 - Blog yazısı giriş alanı: solda konum, kategori, başlık, özet ve yazar; sağda kapak görseli; altında okuma süresi, bölüm sayısı, yayın tarihi ve paylaş şeridi.

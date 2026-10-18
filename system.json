@@ -1,5 +1,5 @@
 {
-  "version": "1.0.110",
-  "notes": "- Yönetici Yetkisi: Müşteri Detayı’ndaki tek anahtarla bir site üyesi, kendi şifresiyle Av/Dashboard’a da girebilen yönetici olur (mağaza yönetimi ve canlı destek); anahtar kapatılınca uygulamadan çıkarılır, üyeliği kalır. Bu üye sitede yönetici şifresiyle de üye olarak girer. Yalnızca ana yönetici değiştirir.\n- Av/Dashboard 1.17.63 ve Av/Tawk 1.5.4: Giriş ekranından Social Media Marketing seçimi kaldırıldı; uygulamalar paket satış sitelerine bağlanır (site adresi, kullanıcı adı ve şifre).\n- Blog yazısı yeni giriş alanıyla açılır: solda başlık, özet ve yazar, sağda kapak görseli, altında okuma süresi, bölüm, yayın tarihi ve paylaş şeridi. İçindekiler yenilendi; Sıkça Sorulan Sorular yazının altında ayrı bölümde; özet kutusu ve ilk harfin büyük yazılması kaldırıldı; başlık arası çizgiler kalktı.\n- Blog: ücretsiz hizmet ve ücretsiz araç kartları afiş görünümünde, yan sütunda Ücretsiz Araçlar afişi.\n- Hakkımızda sayfası sadeleşti: metin, yanında Neden Biz kutusu ve çağrı.\n- Telefonda makale bölümleri ve hızlı lisans listesi kendi içinde kaymaz; sayfa kaydırması takılmaz.\n- Pulse teması 1.0.19.",
-  "publishedAt": "2026-10-18T16:49:08.391Z"
+  "version": "1.0.111",
+  "notes": "- Makale bölümleri (ana sayfa ve bütün sayfalar) kutu içinde kaydırılmaz: uzun metin kesilip soluklaşır, Devamını Oku ile tamamı yerinde açılır; kısa metin olduğu gibi görünür. Metnin tamamı sayfada durur, arama motorları okur.\n- Ana sayfadaki Öne Çıkan Hizmetler: platform süzgeci kaldırıldı; telefonda kartlar sayfadan taşmaz, her kaydırmada bir kart gelir, altta kart noktaları.\n- Blog yazısının bilgi şeridinde Paylaş düğmeleri telefonda taşmaz.\n- Pulse teması 1.0.20.",
+  "publishedAt": "2026-10-18T18:07:52.875Z"
 }
