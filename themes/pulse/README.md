@@ -31,6 +31,7 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 - E-Pin bölümü: /e-pin sayfasında oyun kartları (kapak, paket sayısı, en düşük fiyat); oyun sayfasında paket kutucukları ve yanında satın alma kutusu (adet ya da Oyuncu ID alanları), altında Nasıl Kullanılır adımları; ana sayfada Popüler Oyunlar bölümü.
 - E-Pin oyun görünümü: oyuna giriş bandı görseli, logo ve vurgu rengi verilebilir; oyun sayfası sitenin temasında kalır, giriş alanı oyunun görseliyle (karakterler iki yanda) çizilir, düğme ve seçili paket oyunun rengini alır. Paketler üç sütun.
 - E-Pin paket kutucukları yenilendi: büyük miktar ve birim (2.500 EP), paket büyüklüğüne göre 1-3 taş, indirim oranı, birim fiyat (₺0,10 / EP), seçim düğmesi; seçili paket oyunun rengiyle parlar.
+- SMS Onay sayfası: uygulama seçimi, bayraklı ülke listesi (teslim oranı, stok, fiyat, Numara Al), sağda Numaralarım (numara, geri sayım, gelen onay kodu, İptal Et ve İade Al, Tamamla).
 
 ### 1.0.20
 
