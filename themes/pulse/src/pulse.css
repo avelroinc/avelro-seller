@@ -5202,3 +5202,27 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .sc-more .sc-prose :is(h2,h3){scroll-margin-top:calc(var(--shop-header-h) + 32px)}
 .shop-shell .hd-sms-demo>span:nth-child(2) small{white-space:nowrap}
 @media (max-width:560px){.shop-shell .hd-sms-demo{flex-wrap:nowrap;gap:10px;padding:12px}.shop-shell .hd-sms-code b{font-size:17px}.shop-shell .hd-sms-ok{display:none}}
+
+/* Telefon ve tablet menüsü standart liste görünümünde (masaüstü yan menüsünden ayrı): ürün türleri kutusuz, kendi renginde
+   düz yazı ve simge; sayfalar kutusuz simge ve yazı, açık sayfa vurgu renginde. */
+@media (max-width:1080px){
+ .shop-shell .shop-mmenu .shop-mmenu-kinds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+ .shop-shell .shop-mmenu .shop-mmenu-kinds.is-odd>a:last-child{grid-column:auto}
+ .shop-shell .shop-mmenu .shop-mmenu-kind{flex-direction:row;justify-content:flex-start;align-items:center;gap:10px;min-height:44px;padding:4px 2px;border-radius:0;background:transparent;color:var(--k);text-align:left}
+ .shop-shell .shop-mmenu .shop-mmenu-kind:active{background:transparent;opacity:.7}
+ .shop-shell .shop-mmenu .shop-mmenu-kind .shop-products-ico{width:22px;height:22px;background:transparent;box-shadow:none;color:var(--k)}
+ .shop-shell .shop-mmenu .shop-mmenu-kind .shop-products-ico svg{width:20px;height:20px}
+ .shop-shell .shop-mmenu .shop-mmenu-kind>span:last-child{justify-items:start}
+ .shop-shell .shop-mmenu .shop-mmenu-kinds .shop-mmenu-kind b{overflow:hidden;color:var(--k);font-size:15px;font-weight:700;line-height:1.3;letter-spacing:0;text-overflow:ellipsis;text-transform:none;white-space:nowrap}
+ .shop-shell .shop-mmenu .shop-mmenu-kind small{display:none}
+ .shop-shell .shop-mmenu .shop-mmenu-links a{gap:10px;min-height:44px;padding:4px 2px;border-radius:0;background:transparent;color:var(--shop-ink);font-size:15px}
+ .shop-shell .shop-mmenu .shop-mmenu-links a>i{width:22px;height:22px;background:transparent}
+ .shop-shell .shop-mmenu .shop-mmenu-links .shop-menu-icon{width:20px;height:20px;color:var(--shop-accent)}
+ .shop-shell .shop-mmenu .shop-mmenu-links a[aria-current=page]{color:var(--shop-accent);font-weight:700}
+ .shop-shell .shop-mmenu .shop-mmenu-links a[aria-current=page]>i{background:transparent}
+ .shop-shell .shop-mmenu .shop-mmenu-links a[aria-current=page] .shop-menu-icon{color:var(--shop-accent)}
+ .shop-shell .shop-mmenu .shop-mmenu-links a:active{opacity:.7}
+}
+@media (max-width:360px){
+ .shop-shell .shop-mmenu .shop-mmenu-links a,.shop-shell .shop-mmenu .shop-mmenu-kinds .shop-mmenu-kind b{font-size:13.5px}
+}
