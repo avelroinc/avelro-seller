@@ -5481,3 +5481,17 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-notes small{color:var(--shop-muted);font-size:12px;font-weight:700}
 .shop-shell .adm-notes p{margin:0;color:var(--shop-ink-2);font-size:13.5px;line-height:1.6;white-space:pre-line}
 .shop-shell .adm-pages>.adm-groups{position:sticky;top:calc(var(--shop-header-h,72px) + 24px)}
+@media (max-width:640px){
+ .shop-shell .adm-table thead{display:none}
+ .shop-shell .adm-table,.shop-shell .adm-table tbody{display:block}
+ .shop-shell .adm-table tr{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;padding:12px 14px;border-bottom:1px solid var(--shop-line)}
+ .shop-shell .adm-table tbody tr:last-child{border-bottom:0}
+ .shop-shell .adm-table td{padding:0;border:0}
+ .shop-shell .adm-table td:first-child{flex:1 1 100%}
+ .shop-shell .adm-table td.adm-empty{flex:1 1 100%;padding:8px 0}
+ .shop-shell .adm-table-wrap{overflow-x:visible}
+ .shop-shell .adm-pages>.adm-groups,.shop-shell .adm-texts-grid>.adm-groups{flex-wrap:wrap;overflow:visible}
+ .shop-shell .adm-pages>.adm-groups{display:flex;position:static}
+ .shop-shell .adm-pages>.adm-groups button{flex:1 1 auto}
+ .shop-shell .adm-toolbar>.shop-button{flex:1 1 auto}
+}
