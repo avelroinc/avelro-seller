@@ -4781,6 +4781,42 @@ html.shop-menu-open{overflow:hidden}
  .shop-shell .shop-frame{transition:padding-left .2s ease}
  .shop-shell[data-rail=pinned] .shop-frame{padding-left:266px}
 }
+/* Yan menü görünümü: ürün türleri renkli simge kutularıyla (üzerine gelince dolu renk), sayfalar yumuşak simge kutularıyla;
+   açık sayfa dolu vurgu kutusuyla. Ürün paneli içeriği kadar uzun; başlığı tür renginde bant,
+   satırlar marka logolu, altta tam genişlik Tümünü Gör düğmesi. */
+@media (min-width:1081px){
+ .shop-shell .shop-rail{background:linear-gradient(180deg,color-mix(in srgb,var(--shop-accent) 5%,var(--shop-surface)),var(--shop-surface) 260px)}
+ .shop-shell .shop-rail-item{position:relative}
+ .shop-shell .shop-rail-item .shop-rail-ico{transition:background-color .15s,color .15s,box-shadow .15s,transform .15s}
+ .shop-shell .shop-rail-item.is-kind .shop-rail-ico{background:linear-gradient(145deg,color-mix(in srgb,var(--k) 24%,var(--shop-surface)),color-mix(in srgb,var(--k) 9%,var(--shop-surface)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--k) 24%,transparent)}
+ .shop-shell .shop-rail-group:is(:hover,:focus-within)>.shop-rail-item.is-kind{background:color-mix(in srgb,var(--k) 9%,var(--shop-surface));color:var(--shop-ink)}
+ .shop-shell :is(.shop-rail-group:is(:hover,:focus-within)>.shop-rail-item.is-kind,.shop-rail-item.is-kind[aria-current=page]) .shop-rail-ico{background:var(--k);color:#fff;box-shadow:0 10px 18px -12px var(--k)}
+ .shop-shell .shop-rail-item.is-kind[aria-current=page]{background:color-mix(in srgb,var(--k) 9%,var(--shop-surface));color:var(--shop-ink)}
+ .shop-shell .shop-rail-item:not(.is-kind) .shop-rail-ico{width:40px;height:40px;margin:0 2px;background:var(--shop-soft);color:var(--shop-ink-2)}
+ .shop-shell .shop-rail-item:not(.is-kind) .shop-rail-ico :is(svg,.shop-menu-icon){color:inherit}
+ .shop-shell .shop-rail-item:not(.is-kind):hover .shop-rail-ico{background:var(--shop-tint);color:var(--shop-accent)}
+ .shop-shell .shop-rail-item:not(.is-kind)[aria-current=page]{background:transparent;color:var(--shop-accent)}
+ .shop-shell .shop-rail-item:not(.is-kind)[aria-current=page] .shop-rail-ico{background:var(--shop-accent-fill,var(--shop-accent));color:var(--shop-on-accent,#fff);box-shadow:0 10px 18px -12px var(--shop-accent)}
+ .shop-shell .shop-rail-item:active .shop-rail-ico{transform:scale(.94)}
+ .shop-shell .shop-rail-sep{margin:10px 6px}
+ .shop-shell .shop-rail-foot{padding-top:10px}
+ /* Ürün paneli */
+ .shop-shell .shop-rail-fly{bottom:auto;gap:0;width:320px;max-height:calc(100vh - 28px);padding:0;overflow:hidden}
+ .shop-shell .shop-rail-fly .shop-products-head{flex:none;gap:14px;padding:18px;border-bottom:0;background:linear-gradient(135deg,color-mix(in srgb,var(--k) 18%,var(--shop-surface)),color-mix(in srgb,var(--k) 4%,var(--shop-surface)))}
+ .shop-shell .shop-rail-fly .shop-products-ico{width:46px;height:46px;background:var(--k);color:#fff;box-shadow:0 12px 22px -14px var(--k)}
+ .shop-shell .shop-rail-fly .shop-products-ico svg{width:22px;height:22px}
+ .shop-shell .shop-rail-fly .shop-products-head b{font-size:15.5px}
+ .shop-shell .shop-rail-fly .shop-products-head:hover b{color:var(--shop-ink)}
+ .shop-shell .shop-rail-fly ul{gap:2px;padding:10px}
+ .shop-shell .shop-rail-fly li a{gap:12px;min-height:48px;padding:6px 10px 6px 6px;color:var(--shop-ink);font-weight:600;transition:background-color .15s}
+ .shop-shell .shop-rail-fly li a::after{content:"";flex:none;width:7px;height:7px;margin-left:auto;border-top:2px solid var(--k);border-right:2px solid var(--k);opacity:0;transform:translateX(-4px) rotate(45deg);transition:opacity .15s,transform .15s}
+ .shop-shell .shop-rail-fly li a:hover{background:color-mix(in srgb,var(--k) 8%,var(--shop-surface));color:var(--shop-ink)}
+ .shop-shell .shop-rail-fly li a:hover::after{opacity:1;transform:rotate(45deg)}
+ .shop-shell .shop-rail-fly .shop-products-lead{width:34px;height:34px;background:color-mix(in srgb,var(--k) 12%,var(--shop-surface))}
+ .shop-shell .shop-rail-fly .shop-products-lead .brand-logo{width:34px!important;height:34px!important}
+ .shop-shell .shop-rail-fly .shop-products-all{flex:none;justify-content:center;justify-self:stretch;min-height:46px;margin:0 10px 10px;border-radius:var(--shop-radius);background:var(--k);color:#fff;font-size:14px;transition:filter .15s}
+ .shop-shell .shop-rail-fly .shop-products-all:hover{filter:brightness(1.08)}
+}
 @media (min-width:1081px) and (max-width:1439px){.shop-shell .shop-frame{padding-left:100px}}
 @media (min-width:1764px){.shop-shell[data-rail=pinned] .shop-frame{padding-left:0}}
 /* Başlık araması dar ekranda gizli (telefon menüsünün içinde ayrı arama var). */
