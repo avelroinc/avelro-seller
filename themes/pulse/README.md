@@ -25,6 +25,12 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.23
+
+- Telefon menüsü: bölümler arasındaki çizgiler kalktı; Ürünler ve Sayfalar küçük başlıklarla ayrılır, sayfalar simge kutulu ve adları kesilmez, Sipariş Sorgula ile Hesabım yan yana. Çok dar telefonda kutucuklarda simge üstte, sayfalar tek sütun.
+- Ürün türü adları yan menüde, yan panelde ve telefon menüsünde büyük harfle (SOSYAL MEDYA, E-PİN, LİSANS, SMS ONAY).
+- Başlık araması telefonda sayfa açılırken görünüp kaybolmaz.
+
 ### 1.0.22
 
 - Ana sayfa hızlı sipariş kutusunun üstünde ürün türü sekmeleri (büyük harfle): SOSYAL MEDYA, E-PİN, LİSANS, SMS ONAY (yalnızca satıştaki türler). E-Pin, Lisans ve SMS Onay sekmesinde iki seçim, fiyat ve Satın Al düğmesi.

@@ -4614,3 +4614,34 @@ html.shop-menu-open{overflow:hidden}
 }
 @media (min-width:1081px) and (max-width:1439px){.shop-shell .shop-frame{padding-left:100px}}
 @media (min-width:1764px){.shop-shell[data-rail=pinned] .shop-frame{padding-left:0}}
+/* Başlık araması dar ekranda gizli (telefon menüsünün içinde ayrı arama var). */
+@media (max-width:1080px){.shop-shell .shop-header .shop-nav-row>.shop-nav-search{display:none}}
+/* Telefon menüsü düzeni: bölümler çizgisiz, küçük başlıklarla ayrılır; sayfalar simge kutulu, altta yan yana iki kutu. */
+.shop-shell .shop-mmenu{gap:10px;padding:14px 14px 16px}
+.shop-shell .shop-mmenu-title{margin:8px 2px 0;color:var(--shop-muted);font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.shop-shell .shop-mmenu-links{gap:4px 8px;padding-top:0;border-top:0}
+.shop-shell .shop-mmenu-links a{gap:12px;min-height:50px;padding:0 6px}
+.shop-shell .shop-mmenu-links a>i{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:var(--shop-radius);background:var(--shop-soft);font-style:normal;transition:background-color .15s}
+.shop-shell .shop-mmenu-links a[aria-current=page]{background:transparent}
+.shop-shell .shop-mmenu-links a[aria-current=page]>i{background:var(--shop-accent)}
+.shop-shell .shop-mmenu-links a[aria-current=page] .shop-menu-icon{color:var(--shop-on-accent)}
+.shop-shell .shop-mmenu-foot{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:6px;padding-top:0;border-top:0}
+.shop-shell .shop-mmenu-foot>a{justify-content:center;min-height:52px;padding:0 10px}
+.shop-shell .shop-mmenu-foot .shop-mobile-scheme{grid-column:1/-1;justify-content:center}
+/* Ürün türü adları büyük harfle (yan menü, yan panel başlığı, telefon kutucukları; lang="tr": i → İ). */
+.shop-shell :is(.shop-rail-item.is-kind .shop-rail-label b,.shop-rail-fly .shop-products-head b,.shop-mmenu-kind b){text-transform:uppercase;letter-spacing:.04em}
+.shop-shell .shop-rail-item.is-kind .shop-rail-label b{font-size:13.5px;font-weight:700}
+.shop-shell .shop-mmenu-kind b{font-size:14px}
+/* Telefon menüsünde sayfa adları kesilmez, gerekirse iki satıra iner. */
+.shop-shell .shop-mmenu-links a{gap:10px;padding:4px 4px}
+.shop-shell .shop-mmenu-links a>i{width:34px;height:34px}
+.shop-shell .shop-mmenu-links a span{overflow:visible;white-space:normal;line-height:1.25}
+/* Çok dar telefon (360 px ve altı): tür kutucuklarında simge üstte, sayfalar tek sütun. */
+@media (max-width:360px){
+ .shop-shell .shop-mmenu{padding:12px}
+ .shop-shell .shop-mmenu-kind{flex-direction:column;align-items:flex-start;gap:8px;min-height:0;padding:10px}
+ .shop-shell .shop-mmenu-kind .shop-products-ico{width:34px;height:34px}
+ .shop-shell .shop-mmenu-kind b{font-size:13px;white-space:normal}
+ .shop-shell .shop-mmenu-links{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .shop-mmenu-foot>a{font-size:13.5px;padding:0 6px}
+}
