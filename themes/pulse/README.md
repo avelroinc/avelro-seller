@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.30
+
+- Ana sayfa SMS Onay kartı (`.hd-sms-card`), eşit boy oyun kartları (`.hd-game`), makale kartı (`.sc-more-card`, kapak ve içindekiler).
+- Boşluk: --shop-rhythm 24 / 20 / 16; sayfa girişi ile içerik arası 48 / 32.
+
 ### 1.0.29
 
 - Bölüm başlıkları: ortalı, iki yanda çizgili başlık; bağlantılı bölümlerde simgeli kutulu bant (`.shop-section-heading.is-band`).
