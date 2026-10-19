@@ -5499,3 +5499,7 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-inline-editor .adm-input :is(input,select,textarea){background:var(--shop-surface)}
 .shop-shell .adm-inline-editor .adm-switch{background:var(--shop-surface)}
 .shop-shell .adm-inline-ico{width:14px;height:14px;margin-right:6px;vertical-align:-2px}
+.shop-shell .adm-inline-form{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.shop-shell .adm-inline-form input{min-height:38px;padding:0 10px;border:1px solid var(--shop-accent);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:13.5px}
+.shop-shell .adm-inline-form .shop-button{min-height:38px;padding:0 12px;font-size:13px}
+.shop-shell .adm-thumb{flex:none;width:30px;height:30px;border-radius:calc(var(--shop-radius) + 4px);object-fit:cover}
