@@ -5450,3 +5450,4 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-themes b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px}
 .shop-shell .adm-themes small{color:var(--shop-muted);font-size:13px;line-height:1.5}
 @media (max-width:560px){.shop-shell .adm-themes li{grid-template-columns:96px minmax(0,1fr)}.shop-shell .adm-themes img{width:96px;height:64px}.shop-shell .adm-themes li .shop-button{grid-column:1/-1}}
+.shop-shell .adm-row[aria-current]{border-color:var(--shop-accent);background:var(--shop-tint)}
