@@ -5091,3 +5091,80 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
  .shop-shell .shop-mlist .shop-mobile-scheme svg{width:18px;height:18px;color:var(--shop-accent)}
 }
 @media (min-width:761px) and (max-width:1080px){.shop-shell .shop-mlist{left:auto;width:340px}}
+.shop-shell .shop-mfull{display:none}
+@media (max-width:1080px){
+ html.shop-menu-open .shop-shell .shop-dock{visibility:hidden}
+ .shop-shell .shop-mfull{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;background:var(--shop-canvas);animation:shop-mfull-in .24s cubic-bezier(.2,.8,.2,1)}
+ @keyframes shop-mfull-in{from{opacity:.3;transform:translateX(28px)}}
+ .shop-shell .shop-mfull *{box-sizing:border-box}
+ .shop-shell .shop-mfull-top{display:grid;gap:16px;flex:none;padding:calc(12px + env(safe-area-inset-top)) var(--shop-gutter) 18px;background:radial-gradient(120% 140% at 100% 0%,color-mix(in srgb,var(--shop-accent) 22%,transparent),transparent 60%),linear-gradient(180deg,color-mix(in srgb,var(--shop-accent) 9%,var(--shop-surface)),var(--shop-surface));border-bottom:1px solid var(--shop-line)}
+ .shop-shell .shop-mfull-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}
+ .shop-shell .shop-mfull-bar .shop-brand{min-width:0}
+ .shop-shell .shop-mfull-bar .shop-brand img{width:40px;height:40px;object-fit:contain}
+ .shop-shell .shop-mfull-bar .shop-brand>span:first-child{width:40px;height:40px}
+ .shop-shell .shop-mfull-bar .shop-brand b{font-size:17px}
+ .shop-shell .shop-mfull-close{display:grid;place-items:center;flex:none;width:44px;height:44px;border:0;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--shop-ink) 7%,transparent);color:var(--shop-ink);cursor:pointer;transition:transform .15s}
+ .shop-shell .shop-mfull-close:active{transform:scale(.92)}
+ .shop-shell .shop-mfull-close svg{width:20px;height:20px}
+ .shop-shell .shop-mfull-hello{display:grid;gap:4px;margin:4px 0 0}
+ .shop-shell .shop-mfull-hello b{font-family:var(--shop-display);font-size:26px;line-height:1.15;letter-spacing:-.02em}
+ .shop-shell .shop-mfull-hello span{color:var(--shop-muted);font-size:14px}
+ .shop-shell .shop-mfull-top .shop-nav-search{flex:none;width:100%;max-width:none;margin:0}
+ .shop-shell .shop-mfull-top .shop-nav-search{height:50px;background:var(--shop-surface);box-shadow:0 12px 26px -20px rgb(15 23 42 / .55)}
+ .shop-shell .shop-mfull-body{display:flex;flex:1;flex-direction:column;gap:26px;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:20px var(--shop-gutter) 28px}
+ .shop-shell .shop-mfull-body>section{display:grid;gap:12px}
+ .shop-shell .shop-mfull-title{color:var(--shop-muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+ .shop-shell .shop-mfull-kinds{display:grid;gap:10px}
+ .shop-shell .shop-mfull-kinds a{display:flex;align-items:center;gap:14px;min-width:0;min-height:72px;padding:12px 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);text-decoration:none;box-shadow:0 1px 0 rgb(15 23 42 / .03);transition:border-color .15s,transform .15s}
+ .shop-shell .shop-mfull-kinds a:active{transform:scale(.985)}
+ .shop-shell .shop-mfull-kinds a[aria-current=page]{border-color:var(--shop-accent)}
+ .shop-shell .shop-mfull-logos{display:flex;flex:none;width:82px}
+ .shop-shell .shop-mfull-logos .brand-logo{box-shadow:0 0 0 2px var(--shop-surface)}
+ .shop-shell .shop-mfull-logos .brand-logo+.brand-logo{margin-left:-10px}
+ .shop-shell .shop-mfull-kind-text{display:grid;flex:1;min-width:0}
+ .shop-shell .shop-mfull-kind-text b{overflow:hidden;font-size:16px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}
+ .shop-shell .shop-mfull-kind-text small{color:var(--shop-muted);font-size:13px}
+ .shop-shell .shop-mfull-go{flex:none;width:34px;height:34px;padding:8px;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink-2)}
+ .shop-shell .shop-mfull-pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .shop-shell .shop-mfull-pages a{display:flex;align-items:center;gap:10px;min-width:0;min-height:50px;padding:0 12px;border-radius:var(--shop-radius);background:var(--shop-surface);border:1px solid var(--shop-line);color:var(--shop-ink);font-size:14px;font-weight:600;text-decoration:none}
+ .shop-shell .shop-mfull-pages a span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .shop-shell .shop-mfull-pages .shop-menu-icon{flex:none;width:18px;height:18px;color:var(--shop-accent)}
+ .shop-shell .shop-mfull-pages a[aria-current=page]{border-color:var(--shop-accent);color:var(--shop-accent)}
+ .shop-shell .shop-mfull-pages a:active{background:var(--shop-soft)}
+ .shop-shell .shop-mfull-foot{display:flex;gap:8px;flex:none;padding:12px var(--shop-gutter) calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--shop-line);background:var(--shop-surface)}
+ .shop-shell .shop-mfull-cta{display:flex;flex:1;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:var(--shop-radius);background:var(--shop-accent-fill,var(--shop-accent));color:var(--shop-on-accent,#fff);font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 14px 26px -16px var(--shop-accent)}
+ .shop-shell .shop-mfull-cta svg{width:19px;height:19px}
+ .shop-shell .shop-mfull-foot :is(.shop-mfull-icon,.shop-mobile-scheme){display:grid;place-items:center;flex:none;width:52px;min-height:52px;margin:0;padding:0;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink);font-size:0;cursor:pointer}
+ .shop-shell .shop-mfull-foot :is(.shop-mfull-icon,.shop-mobile-scheme) svg{width:20px;height:20px;color:var(--shop-ink-2)}
+}
+@media (min-width:761px) and (max-width:1080px){
+ .shop-shell :is(.shop-mfull-top,.shop-mfull-body,.shop-mfull-foot){padding-inline:max(var(--shop-gutter),calc((100% - 560px) / 2))}
+}
+@media (max-width:360px){
+ .shop-shell .shop-mfull-hello b{font-size:22px}
+ .shop-shell .shop-mfull-logos{width:70px}
+ .shop-shell .shop-mfull-logos .brand-logo{width:30px!important;height:30px!important}
+ .shop-shell .shop-mfull-pages a{font-size:13px;padding:0 10px}
+}
+@media (max-width:1080px){
+ .shop-shell .shop-mfull-close svg{transition:transform .2s}
+ .shop-shell .shop-mfull-close:active svg{transform:rotate(90deg)}
+ .shop-shell .shop-mfull-quick{display:flex;gap:8px;padding:2px 0 4px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}
+ .shop-shell .shop-mfull-quick::-webkit-scrollbar{display:none}
+ .shop-shell .shop-mfull-quick a{display:flex;align-items:center;gap:8px;flex:none;min-height:42px;padding:0 14px 0 9px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap;scroll-snap-align:start}
+ .shop-shell .shop-mfull-quick a:active{background:var(--shop-soft)}
+ .shop-shell .shop-mfull-quick .brand-logo{border-radius:50%;box-shadow:none}
+ .shop-shell .shop-mfull-kinds a:active .shop-mfull-go{background:var(--shop-accent-fill,var(--shop-accent));color:var(--shop-on-accent,#fff)}
+ .shop-shell .shop-mfull-logos .brand-logo{transition:transform .2s}
+ .shop-shell .shop-mfull-kinds a:active .shop-mfull-logos .brand-logo:nth-child(2){transform:translateY(-3px)}
+ .shop-shell .shop-mfull-pages a{border-color:transparent;background:var(--shop-soft)}
+ .shop-shell .shop-mfull-pages a[aria-current=page]{border-color:transparent;background:var(--shop-tint);color:var(--shop-accent)}
+ .shop-shell .shop-mfull-body>section{animation:shop-mfull-rise .32s cubic-bezier(.2,.8,.2,1) both}
+ .shop-shell .shop-mfull-body>section:nth-child(2){animation-delay:.04s}
+ .shop-shell .shop-mfull-body>section:nth-child(3){animation-delay:.08s}
+ .shop-shell .shop-mfull-kinds a{animation:shop-mfull-rise .32s cubic-bezier(.2,.8,.2,1) both}
+ .shop-shell .shop-mfull-kinds a:nth-child(2){animation-delay:.05s}
+ .shop-shell .shop-mfull-kinds a:nth-child(3){animation-delay:.1s}
+ .shop-shell .shop-mfull-kinds a:nth-child(4){animation-delay:.15s}
+ @keyframes shop-mfull-rise{from{opacity:0;transform:translateY(10px)}}
+}

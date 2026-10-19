@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.34
+
+- Telefon menüsü tam ekran: vurgu tonlu karşılama alanı (mağaza, kapatma, "Ne arıyorsun?", arama), Hızlı Erişim şeridi, ilk ürünlerin logolarıyla ürün türü satırları, iki sütun sayfa düğmeleri ve altta sabit Sipariş Sorgula, Hesabım, koyu mod (`.shop-mfull`).
+
 ### 1.0.33
 
 - Sol menü yenilendi: ürün türleri renkli simge kutularında (üzerine gelince ve açık sayfada dolu renk), sayfalar yumuşak simge kutularında, açık sayfa dolu vurgu kutusuyla. Ürün paneli içeriği kadar uzun; tür renginde başlık bandı, marka logolu satırlar ve tam genişlik Tümünü Gör düğmesi.
