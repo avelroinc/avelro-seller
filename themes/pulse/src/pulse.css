@@ -5509,3 +5509,46 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-chips button:hover{background:var(--shop-soft);color:#dc2626}
 .shop-shell .adm-chips button svg{width:14px;height:14px}
 .shop-shell .adm-chips .brand-logo{box-shadow:none}
+/* Yönetim › Sayfalar ve Blog: solda gruplu sayfa ağacı, sağda sayfa düzenleyici (sekmeler, Markdown alanı, görsel, Google önizleme). */
+.shop-shell .adm-pages{display:grid;grid-template-columns:320px minmax(0,1fr);gap:20px;align-items:start}
+.shop-shell .adm-tree{gap:10px;padding:14px;position:sticky;top:calc(var(--shop-header-h,72px) + 24px);max-height:calc(100vh - 140px);overflow-y:auto}
+.shop-shell .adm-tree-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.shop-shell .adm-tree-actions .shop-button{min-height:38px;padding:0 8px;font-size:13px}
+.shop-shell .adm-tree details{border-top:1px solid var(--shop-line)}
+.shop-shell .adm-tree summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 4px;color:var(--shop-ink);font-size:13.5px;font-weight:700;cursor:pointer;list-style:none}
+.shop-shell .adm-tree summary::-webkit-details-marker{display:none}
+.shop-shell .adm-tree summary::after{content:"";width:7px;height:7px;margin-left:6px;border-right:2px solid var(--shop-faint);border-bottom:2px solid var(--shop-faint);transform:rotate(-45deg);transition:transform .15s}
+.shop-shell .adm-tree details[open] summary::after{transform:rotate(45deg)}
+.shop-shell .adm-tree summary small{margin-left:auto;color:var(--shop-muted);font-size:12px;font-weight:600}
+.shop-shell .adm-tree ul{display:grid;gap:1px;margin:0 0 8px;padding:0;list-style:none}
+.shop-shell .adm-tree li button{display:flex;align-items:flex-start;gap:8px;width:100%;padding:8px;border:0;border-radius:var(--shop-radius);background:transparent;color:var(--shop-ink-2);font:inherit;text-align:left;cursor:pointer}
+.shop-shell .adm-tree li button:hover{background:var(--shop-soft)}
+.shop-shell .adm-tree li button[aria-current=page]{background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .adm-tree li button>svg{flex:none;width:15px;height:15px;margin-top:2px;color:var(--shop-faint)}
+.shop-shell .adm-tree li button span{display:grid;min-width:0}
+.shop-shell .adm-tree li b{overflow:hidden;font-size:13.5px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .adm-tree li small{color:var(--shop-muted);font-size:11.5px}
+.shop-shell .adm-count{float:right;color:var(--shop-faint);font-size:11.5px;font-style:normal;font-weight:600}
+.shop-shell .adm-input>small{color:var(--shop-muted);font-size:12px;line-height:1.5}
+.shop-shell .adm-image{display:flex;gap:12px;align-items:flex-start}
+.shop-shell .adm-image-thumb{display:grid;place-items:center;flex:none;width:96px;height:72px;overflow:hidden;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-faint)}
+.shop-shell .adm-image-thumb img{width:100%;height:100%;object-fit:cover}
+.shop-shell .adm-image-body{display:grid;flex:1;gap:8px;min-width:0}
+.shop-shell .adm-image-actions{display:flex;flex-wrap:wrap;gap:6px}
+.shop-shell .adm-image-actions .shop-button{min-height:36px;padding:0 12px;font-size:13px}
+.shop-shell .adm-rich{display:grid;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);overflow:hidden;background:var(--shop-surface)}
+.shop-shell .adm-rich:focus-within{border-color:var(--shop-accent)}
+.shop-shell .adm-rich-bar{display:flex;align-items:center;gap:2px;padding:6px;border-bottom:1px solid var(--shop-line);background:var(--shop-soft)}
+.shop-shell .adm-rich-bar button{display:grid;place-items:center;width:34px;height:32px;border:0;border-radius:var(--shop-radius);background:transparent;color:var(--shop-ink-2);cursor:pointer}
+.shop-shell .adm-rich-bar button:hover{background:var(--shop-surface);color:var(--shop-accent)}
+.shop-shell .adm-rich-bar svg{width:16px;height:16px}
+.shop-shell .adm-rich-bar small{margin-left:auto;padding-right:6px;color:var(--shop-muted);font-size:12px}
+.shop-shell .adm-input .adm-rich textarea{min-height:0;border:0;border-radius:0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;line-height:1.6}
+.shop-shell .adm-serp{display:grid;gap:4px;padding:16px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .adm-serp small{color:#188038;font-size:12.5px}
+.shop-shell .adm-serp b{color:#1a0dab;font-size:18px;font-weight:500}
+.shop-shell[data-shop-scheme=dark] .adm-serp b{color:#8ab4f8}.shop-shell[data-shop-scheme=dark] .adm-serp small{color:#81c995}
+.shop-shell .adm-serp p{margin:0;color:var(--shop-ink-2);font-size:13.5px;line-height:1.5}
+.shop-shell .adm-editor .adm-tabs{margin-top:-4px}
+@media (max-width:980px){.shop-shell .adm-pages{grid-template-columns:minmax(0,1fr)}.shop-shell .adm-tree{position:static;max-height:420px}}
+.shop-shell .adm-detail-head .adm-head-actions{flex:none;flex-wrap:nowrap;align-items:center}
