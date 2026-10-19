@@ -1,5 +1,5 @@
 {
-  "version": "1.0.120",
-  "notes": "- Ana sayfadaki SMS Onay bölümü yenilendi: içerik genişliğinde tek kart; solda başlık, üç adım ve Numara Al, sağda örnek onay kodu bildirimi ve popüler uygulamalar (dokununca o uygulamanın sayfası açılır).\n- Popüler Oyunlar eşit boyda oyun kartlarıyla: kapak görseli (yoksa marka renginde zemin) ve logo, teslim etiketleri, paket sayısı ve başlayan fiyat; telefonda iki sütun.\n- Makale alanı tek kart: solda başlık, okuma süresi ve metin (Devamını Gör), sağda kapak ve İçindekiler; İçindekiler'deki başlık metni açıp o başlığa gider. Ana sayfa, E-Pin, oyun ve SMS Onay sayfalarında.\n- Boşluklar: bölümler arası geniş kaldı; ilişkili bloklar birbirine yaklaştı ve sayfa girişi ile altındaki içerik arası her sayfada aynı (48 px, telefonda 32 px).\n- Pulse teması 1.0.30.",
-  "publishedAt": "2026-10-19T10:37:40.711Z"
+  "version": "1.0.121",
+  "notes": "- Ana sayfadaki Popüler Oyunlar oyun mağazası düzeninde: büyük kapaklı öne çıkan oyun (logo, teslim şekli, en ucuz üç paket ve Paketleri Gör), diğer oyunlar kapaklı kutucuklarda (kapak yoksa marka renginde zemin ve büyük silik logo, başlayan fiyat), sonda Tüm Oyunlar. Düzen oyun sayısına göre seçilir, boşluk kalmaz; telefonda öne çıkan oyun üstte, kutucuklar iki sütun.\n- Pulse teması 1.0.31.",
+  "publishedAt": "2026-10-19T11:03:36.484Z"
 }

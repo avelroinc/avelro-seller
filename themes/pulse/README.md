@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.31
+
+- Popüler Oyunlar oyun mağazası düzeni (`.hd-play`: öne çıkan oyun, kapaklı kutucuklar, Tüm Oyunlar).
+
 ### 1.0.30
 
 - Ana sayfa SMS Onay kartı (`.hd-sms-card`), eşit boy oyun kartları (`.hd-game`), makale kartı (`.sc-more-card`, kapak ve içindekiler).
