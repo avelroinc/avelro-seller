@@ -1,5 +1,5 @@
 {
-  "version": "1.0.122",
-  "notes": "- Arama motoru düzenlemeleri: açıklaması girilmemiş sayfalara (ana sayfa, Hakkımızda, İletişim, Ücretsiz Araçlar, kategoriler, özel sayfalar) otomatik açıklama yazılır.\n- Kategori başlığı girilmemişse \"Instagram Türk Takipçi Satın Al\" biçiminde, E-Pin oyunlarında \"Metin2 E-Pin Satın Al\" biçiminde başlık kullanılır.\n- Hizmet sayfalarına ürün yapılandırılmış verisi eklendi: en düşük ve en yüksek fiyat, onaylı yorum varsa puan.\n- Tüm sayfalarda canonical adres, Open Graph ve Twitter etiketleri; paylaşım görseli yoksa varsayılan görsel tam adresle eklenir.\n- Makale verilerinde görsel tam adres, yazar ve yayıncı olarak şirket adı (mağaza adı kullanılmaz); blog yazısında yazar yoksa şirket adı.\n- Lisans ve ücretsiz deneme ürünlerinde marka olarak mağaza adı yazılmaz; E-Pin oyun ürününe açıklama ve görsel eklendi.\n- Ücretsiz araç sayfalarında Google hata veren yazılım uygulaması verisi yerine sayfa verisi kullanılır.\n- Site haritasına /lisans ve güncellenme tarihleri eklendi.\n- Misafir hizmet sayfasını açınca oluşan konsol hatası (401) giderildi.",
-  "publishedAt": "2026-10-19T14:09:10.617Z"
+  "version": "1.0.123",
+  "notes": "- Sol menüden bir sayfaya geçerken üst menü alanında beliren kesik alan giderildi: sol menü geçiş sırasında üst menünün üstünde kalır, açık hâli canlandırılmaz.\n- Pulse teması 1.0.32.",
+  "publishedAt": "2026-10-19T15:17:48.269Z"
 }

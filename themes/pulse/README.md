@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.32
+
+- Sayfa geçişinde sol menü kendi katmanında, üst menünün üstünde kalır; açık menünün üstünde kesik başlık alanı görünmez.
+
 ### 1.0.31
 
 - Popüler Oyunlar oyun mağazası düzeni (`.hd-play`: öne çıkan oyun, kapaklı kutucuklar, Tüm Oyunlar).
