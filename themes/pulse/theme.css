@@ -5472,3 +5472,12 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-share-bar{height:8px;overflow:hidden;border-radius:var(--shop-radius);background:var(--shop-soft)}
 .shop-shell .adm-share-bar i{display:block;height:100%;background:var(--shop-accent-fill,var(--shop-accent))}
 @media (max-width:1180px){.shop-shell .adm-kpis.adm-kpis-5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.shop-shell .adm-qr{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:12px;border-radius:var(--shop-radius);background:var(--shop-soft)}
+.shop-shell .adm-qr img{width:180px;height:180px;border-radius:var(--shop-radius);background:#fff}
+.shop-shell .adm-qr div{display:grid;gap:4px;min-width:0}
+.shop-shell .adm-qr small{color:var(--shop-muted);font-size:12px}
+.shop-shell .adm-qr code{overflow-wrap:anywhere;font-size:14px;font-weight:700;letter-spacing:.06em}
+.shop-shell .adm-notes{display:grid;gap:6px;padding:12px 14px;border-radius:var(--shop-radius);background:var(--shop-soft)}
+.shop-shell .adm-notes small{color:var(--shop-muted);font-size:12px;font-weight:700}
+.shop-shell .adm-notes p{margin:0;color:var(--shop-ink-2);font-size:13.5px;line-height:1.6;white-space:pre-line}
+.shop-shell .adm-pages>.adm-groups{position:sticky;top:calc(var(--shop-header-h,72px) + 24px)}
