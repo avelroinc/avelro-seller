@@ -28,8 +28,8 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 ### 1.0.22
 
 - Ana sayfa hızlı sipariş kutusunun üstünde ürün türü sekmeleri (büyük harfle): SOSYAL MEDYA, E-PİN, LİSANS, SMS ONAY (yalnızca satıştaki türler). E-Pin, Lisans ve SMS Onay sekmesinde iki seçim, fiyat ve Satın Al düğmesi.
-- Başlık yenilendi: tek satır; Ürünler paneli (Sosyal Medya, E-Pin, Lisans, SMS Onay sütunları; ilk altı öğe ve Tümü bağlantısı), sığan kadar bağlantı, sığmayanlar Diğer menüsünde.
-- Telefon menüsü yenilendi: üstte ürün türü kutucukları, altında sayfalar iki sütun, en altta Sipariş Sorgula, Hesabım ve koyu mod.
+- Masaüstü başlık yenilendi: ince başlık (logo, ortada arama, düğmeler) ve solda yüzen yan menü. Yan menü simgelerle dar durur, üzerine gelince adlarıyla genişler; ürün türünün (Sosyal Medya, E-Pin, Lisans, SMS Onay) üzerine gelince yanında öğe paneli açılır. Menüyü Sabitle ile geniş kalır. Arama hizmet, platform, oyun, lisans, SMS uygulaması ve sayfalarda yazdıkça sonuç verir.
+- Telefon menüsü yenilendi: üstte arama ve ürün türü kutucukları, altında sayfalar iki sütun, en altta Sipariş Sorgula, Hesabım ve koyu mod.
 
 ### 1.0.21
 

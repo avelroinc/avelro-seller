@@ -4485,3 +4485,53 @@ html.shop-menu-open{overflow:hidden}
 .shop-shell .shop-products-col .shop-products-all{color:var(--k)}
 .shop-shell .shop-mmenu-kind b{white-space:normal;line-height:1.25}
 .shop-shell .shop-products-col ul{align-content:start}
+.shop-shell .shop-nav-row.is-thin .shop-brand{margin-right:0}
+.shop-shell .shop-nav-search{position:relative;display:flex;align-items:center;gap:10px;flex:1;min-width:0;max-width:620px;height:46px;margin-inline:auto;padding:0 14px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-soft);transition:border-color .15s,background-color .15s}
+.shop-shell .shop-nav-search:focus-within{border-color:var(--shop-accent);background:var(--shop-surface)}
+.shop-shell .shop-nav-search>svg{flex:none;width:18px;height:18px;color:var(--shop-faint)}
+.shop-shell .shop-nav-search input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;color:var(--shop-ink);font:inherit;font-size:14.5px}
+.shop-shell .shop-nav-search input::-webkit-search-cancel-button{display:none}
+.shop-shell .shop-nav-results{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;display:grid;gap:2px;padding:6px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);animation:shop-panel-in .15s ease-out}
+.shop-shell .shop-nav-results a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:0 12px;border-radius:var(--shop-radius);color:var(--shop-ink);font-size:14px;text-decoration:none}
+.shop-shell .shop-nav-results a[aria-selected=true]{background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .shop-nav-results a span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-nav-results small{flex:none;padding:2px 8px;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-muted);font-size:11.5px;font-weight:600}
+.shop-shell .shop-nav-results p{margin:0;padding:12px;color:var(--shop-muted);font-size:14px}
+.shop-shell .shop-mmenu .shop-nav-search{flex:none;width:100%;max-width:none;margin:0}
+.shop-shell .shop-rail{display:none}
+@media (min-width:1081px){
+ .shop-shell .shop-nav-row.is-thin .shop-menu-toggle{display:none}
+ .shop-shell .shop-rail{position:fixed;top:14px;bottom:14px;left:14px;z-index:45;display:flex;flex-direction:column;gap:8px;width:72px;padding:12px 10px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow);transition:width .2s ease,box-shadow .2s}
+ .shop-shell .shop-rail:is(:hover,:focus-within,.is-pinned){width:252px;box-shadow:var(--shop-shadow-lg)}
+ .shop-shell .shop-rail.is-pinned{box-shadow:var(--shop-shadow)}
+ .shop-shell .shop-rail-nav{display:flex;flex:1;flex-direction:column;gap:2px;min-height:0;overflow-x:hidden;overflow-y:auto;scrollbar-width:none}
+ .shop-shell .shop-rail-nav::-webkit-scrollbar{display:none}
+ .shop-shell .shop-rail-foot{display:grid;gap:2px;padding-top:8px;border-top:1px solid var(--shop-line)}
+ .shop-shell .shop-rail-item{display:flex;align-items:center;gap:12px;width:100%;min-height:50px;padding:0 6px 0 2px;border:0;border-radius:var(--shop-radius);background:transparent;color:var(--shop-ink-2);font:inherit;text-align:left;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .15s,color .15s}
+ .shop-shell .shop-rail-item:hover,.shop-shell .shop-rail-group:hover>.shop-rail-item{background:var(--shop-soft);color:var(--shop-ink)}
+ .shop-shell .shop-rail-item[aria-current=page]{background:var(--shop-tint);color:var(--shop-accent)}
+ .shop-shell .shop-rail-ico{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:var(--shop-radius);color:var(--shop-accent)}
+ .shop-shell .shop-rail-ico svg{width:20px;height:20px}
+ .shop-shell .shop-rail-item.is-kind .shop-rail-ico{background:color-mix(in srgb,var(--k) 13%,var(--shop-surface));color:var(--k)}
+ .shop-shell .shop-rail-label{display:grid;flex:1;min-width:0;opacity:0;transition:opacity .15s}
+ .shop-shell .shop-rail:is(:hover,:focus-within,.is-pinned) .shop-rail-label{opacity:1}
+ .shop-shell .shop-rail-label b{overflow:hidden;font-size:14.5px;font-weight:600;text-overflow:ellipsis}
+ .shop-shell .shop-rail-label small{color:var(--shop-muted);font-size:12px}
+ .shop-shell .shop-rail-caret{flex:none;width:16px;height:16px;color:var(--shop-faint);opacity:0;transition:opacity .15s,transform .15s}
+ .shop-shell .shop-rail:is(:hover,:focus-within,.is-pinned) .shop-rail-caret{opacity:1}
+ .shop-shell .shop-rail-group:hover .shop-rail-caret{transform:translateX(3px);color:var(--k)}
+ .shop-shell .shop-rail-sep{display:block;flex:none;height:1px;margin:8px 4px;background:var(--shop-line)}
+ .shop-shell .shop-rail-fly{position:absolute;top:-1px;bottom:-1px;left:100%;display:none;flex-direction:column;gap:12px;width:300px;margin-left:8px;padding:18px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
+ .shop-shell .shop-rail-fly::before{content:"";position:absolute;top:0;bottom:0;right:100%;width:10px}
+ .shop-shell .shop-rail-group:is(:hover,:focus-within) .shop-rail-fly{display:flex;animation:shop-fly-in .16s ease-out}
+ @keyframes shop-fly-in{from{opacity:0;transform:translateX(-6px)}}
+ .shop-shell .shop-rail-fly ul{display:grid;align-content:start;gap:2px;flex:1;margin:0;padding:0;overflow-y:auto;list-style:none}
+ .shop-shell .shop-rail-fly li a{display:flex;align-items:center;gap:10px;min-width:0;padding:8px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:14px;text-decoration:none}
+ .shop-shell .shop-rail-fly li a:hover{background:var(--shop-soft);color:var(--shop-ink)}
+ .shop-shell .shop-rail-fly li a>span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .shop-shell .shop-rail-fly .shop-products-all{color:var(--k)}
+ .shop-shell .shop-frame{transition:padding-left .2s ease}
+ .shop-shell[data-rail=pinned] .shop-frame{padding-left:266px}
+}
+@media (min-width:1081px) and (max-width:1439px){.shop-shell .shop-frame{padding-left:100px}}
+@media (min-width:1764px){.shop-shell[data-rail=pinned] .shop-frame{padding-left:0}}
