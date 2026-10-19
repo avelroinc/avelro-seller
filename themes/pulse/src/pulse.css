@@ -5363,3 +5363,79 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell.shop-admin .sa-auth-brand{grid-template-rows:none;align-content:center;padding-bottom:44px}
 .shop-shell.shop-admin .shop-frame:not(:has(.shop-rail)){padding-left:0}
 .shop-shell.shop-admin .sa-auth-copy h1{font-size:clamp(30px,3.4vw,46px)}
+/* Yönetim › Siparişler: üstte sekmeler ve arama, solda liste, sağda yapışkan detay kartı. */
+.shop-shell .adm-orders{grid-template-columns:minmax(0,1.6fr) minmax(340px,1fr)}
+.shop-shell .adm-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.shop-shell .adm-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.shop-shell .adm-tabs button{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 12px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink-2);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.shop-shell .adm-tabs button b{min-width:20px;padding:1px 6px;border-radius:var(--shop-radius);background:var(--shop-soft);font-size:11.5px;font-variant-numeric:tabular-nums;text-align:center}
+.shop-shell .adm-tabs button[aria-selected=true]{border-color:var(--shop-accent);background:var(--shop-accent-fill,var(--shop-accent));color:var(--shop-on-accent,#fff)}
+.shop-shell .adm-tabs button[aria-selected=true] b{background:rgb(255 255 255 / .22);color:inherit}
+.shop-shell .adm-search{flex:1 1 260px;max-width:none;margin:0}
+.shop-shell .adm-table tbody tr{cursor:pointer;transition:background-color .12s}
+.shop-shell .adm-table tbody tr:hover{background:var(--shop-soft)}
+.shop-shell .adm-table tbody tr.is-selected{background:var(--shop-tint)}
+.shop-shell .adm-row-link{padding:0;border:0;background:none;color:var(--shop-ink);font:inherit;cursor:pointer}
+.shop-shell .adm-table td.adm-empty{text-align:center}
+.shop-shell .adm-table td.adm-empty svg{width:16px;height:16px;vertical-align:-3px}
+.shop-shell .adm-pager{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--shop-muted);font-size:13.5px;font-variant-numeric:tabular-nums}
+.shop-shell .adm-detail{position:sticky;top:calc(var(--shop-header-h,72px) + 24px)}
+.shop-shell .adm-card{display:grid;gap:18px;padding:20px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .adm-card.adm-empty{color:var(--shop-muted);text-align:center}
+.shop-shell .adm-detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .adm-detail-head>div{display:grid;gap:2px}
+.shop-shell .adm-detail-head small{color:var(--shop-muted);font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.shop-shell .adm-detail-head b{font-family:var(--shop-display);font-size:22px;letter-spacing:-.01em}
+.shop-shell .adm-detail-head span{color:var(--shop-muted);font-size:13px}
+.shop-shell .adm-detail-total{color:var(--shop-accent);font-variant-numeric:tabular-nums}
+.shop-shell .adm-kv{display:grid;grid-template-columns:92px minmax(0,1fr);gap:8px 12px;margin:0;font-size:14px}
+.shop-shell .adm-kv dt{color:var(--shop-muted)}.shop-shell .adm-kv dd{margin:0;overflow-wrap:anywhere;font-weight:600}
+.shop-shell .adm-items{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.shop-shell .adm-items li{display:grid;gap:8px;padding:14px 0;border-top:1px solid var(--shop-line)}
+.shop-shell .adm-item-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.shop-shell .adm-item-head b{font-size:14.5px}
+.shop-shell :is(.adm-item-target,.adm-item-note){margin:0;color:var(--shop-muted);font-size:13px;overflow-wrap:anywhere}
+.shop-shell .adm-item-note{padding:8px 10px;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink-2)}
+.shop-shell .adm-item-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.shop-shell .adm-item-foot>span{font-weight:700;font-variant-numeric:tabular-nums}
+.shop-shell .adm-item-actions{display:flex;flex-wrap:wrap;gap:6px}
+.shop-shell .adm-item-actions .shop-button{min-height:36px;padding:0 12px;font-size:13px}
+.shop-shell .adm-item-hint{color:var(--shop-muted);font-size:12px}
+@media (max-width:1180px){.shop-shell .adm-orders{grid-template-columns:minmax(0,1fr)}.shop-shell .adm-detail{position:static}}
+/* Yönetim › Site Yazıları: gruplar, yazılar ve canlı önizleme yan yana; önizlemede seçili yazı kesikli çizgiyle işaretlenir. */
+.shop-shell .adm-muted{color:var(--shop-muted);font-size:13.5px}
+.shop-shell .adm-texts{display:grid;gap:16px}
+.shop-shell .adm-texts-grid{display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1.15fr);gap:16px;align-items:start}
+.shop-shell .adm-groups{gap:2px;padding:8px;position:sticky;top:calc(var(--shop-header-h,72px) + 24px);max-height:calc(100vh - 140px);overflow-y:auto}
+.shop-shell .adm-groups button{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:40px;padding:0 10px;border:0;border-radius:var(--shop-radius);background:transparent;color:var(--shop-ink-2);font:inherit;font-size:14px;font-weight:500;text-align:left;cursor:pointer}
+.shop-shell .adm-groups button:hover{background:var(--shop-soft)}
+.shop-shell .adm-groups button[aria-current=page]{background:var(--shop-tint);color:var(--shop-accent);font-weight:700}
+.shop-shell .adm-groups small{color:var(--shop-muted);font-size:12px;font-variant-numeric:tabular-nums}
+.shop-shell .adm-groups small b{color:var(--shop-accent);font-weight:700}
+.shop-shell .adm-fields{gap:0;padding:6px 20px 12px}
+.shop-shell .adm-fields-head{display:grid;gap:2px;padding:12px 0 14px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .adm-fields-head b{font-size:16px}.shop-shell .adm-fields-head small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .adm-field{display:grid;gap:6px;padding:14px 0;border-bottom:1px solid var(--shop-line)}
+.shop-shell .adm-field:last-child{border-bottom:0}
+.shop-shell .adm-field label{display:flex;justify-content:space-between;gap:10px;color:var(--shop-muted);font-size:12.5px;font-weight:600}
+.shop-shell .adm-field label em{flex:none;font-style:normal;font-size:11.5px;font-weight:700}
+.shop-shell .adm-field label em.is-dirty{color:var(--shop-accent)}.shop-shell .adm-field label em.is-custom{color:#15803d}
+.shop-shell[data-shop-scheme=dark] .adm-field label em.is-custom{color:#4ade80}
+.shop-shell .adm-field :is(input,textarea){width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:14.5px;resize:vertical;box-sizing:border-box}
+.shop-shell .adm-field :is(input,textarea):focus{border-color:var(--shop-accent);outline:0}
+.shop-shell .adm-field :is(input,textarea)::placeholder{color:var(--shop-faint)}
+.shop-shell .adm-field.is-focus label span{color:var(--shop-accent)}
+.shop-shell .adm-field>small{color:var(--shop-muted);font-size:12px}
+.shop-shell .adm-preview{position:sticky;top:calc(var(--shop-header-h,72px) + 24px);display:grid;grid-template-rows:auto minmax(0,1fr);height:calc(100vh - 140px);min-height:520px;overflow:hidden;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-soft);box-shadow:var(--shop-shadow)}
+.shop-shell .adm-preview-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--shop-line);background:var(--shop-surface);font-size:13px;font-weight:700}
+.shop-shell .adm-preview-bar code{overflow:hidden;color:var(--shop-muted);font-size:12.5px;font-weight:500;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .adm-preview-bar a{display:grid;place-items:center;width:30px;height:30px;margin-left:auto;border-radius:var(--shop-radius);color:var(--shop-ink-2)}
+.shop-shell .adm-preview-bar a:hover{background:var(--shop-soft)}
+.shop-shell .adm-preview-bar svg{width:16px;height:16px}
+.shop-shell .adm-preview iframe{width:100%;height:100%;border:0;background:var(--shop-canvas)}
+/* Önizleme çerçevesinin içindeki site: yazılar üzerine gelince ve seçiliyken işaretli. */
+html[data-text-preview] .shop-shell [data-t]{cursor:text;transition:outline-color .15s}
+html[data-text-preview] .shop-shell [data-t]:hover{outline:1px dashed color-mix(in srgb,var(--shop-accent) 60%,transparent);outline-offset:2px}
+html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop-accent);outline-offset:3px;background:color-mix(in srgb,var(--shop-accent) 10%,transparent)}
+@media (max-width:1300px){.shop-shell .adm-texts-grid{grid-template-columns:200px minmax(0,1fr)}.shop-shell .adm-preview{grid-column:1/-1;position:static;height:640px}}
+@media (max-width:760px){.shop-shell .adm-texts-grid{grid-template-columns:minmax(0,1fr)}.shop-shell .adm-groups{position:static;flex-direction:row;display:flex;overflow-x:auto;max-height:none}.shop-shell .adm-groups button{flex:none}.shop-shell .adm-preview{height:520px}}
