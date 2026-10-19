@@ -1,5 +1,5 @@
 {
-  "version": "1.0.113",
-  "notes": "- Masaüstü menü yenilendi: ince başlık (logo, ortada arama, düğmeler) ve solda yüzen yan menü. Yan menü simgelerle dar durur, üzerine gelince adlarıyla genişler; Sosyal Medya, E-Pin, Lisans ve SMS Onay'ın üzerine gelince yanında öğe paneli açılır. Menüyü Sabitle ile geniş açık kalır.\n- Site araması: hizmetler, platformlar, E-Pin oyunları, lisanslar, SMS Onay uygulamaları ve sayfalar tek kutuda; yazdıkça sonuçlar gelir.\n- Telefon menüsü yenilendi: üstte arama ve ürün türü kutucukları, altında sayfalar iki sütun, en altta Sipariş Sorgula, Hesabım ve koyu mod.\n- Ana sayfa hızlı sipariş kutusunun üstünde ürün türü sekmeleri: SOSYAL MEDYA, E-PİN, LİSANS, SMS ONAY (yalnızca satıştaki türler). E-Pin, Lisans ve SMS Onay sekmesinde seçim yapılır, fiyat görünür; Satın Al ilgili sayfayı seçim yapılmış olarak açar.\n- Pulse teması 1.0.22.",
-  "publishedAt": "2026-10-19T05:13:14.848Z"
+  "version": "1.0.114",
+  "notes": "- Telefon menüsü ekrana tam oturur, içinde kaydırma yok: üstte arama, ürün türleri tek sırada dört kutucuk, sayfalar iki sütun, altta Sipariş Sorgula, Hesabım ve koyu mod yan yana. Menü açıkken arkadaki sayfa kararır ve kaymaz; karartmaya dokununca menü kapanır.\n- Telefonda sayfa açılırken başlıktaki arama kutusu artık görünüp kaybolmaz.\n- Ürün türü adları yan menüde ve telefon menüsünde büyük harfle: SOSYAL MEDYA, E-PİN, LİSANS, SMS ONAY.\n- Masaüstü yan menü sayfaya yapışık: menü ve sayfa birlikte ortalanır, geniş ekranda kenarda ayrı kalmaz; sabitlenince içerik daralmaz.\n- Pulse teması 1.0.25.",
+  "publishedAt": "2026-10-19T05:39:11.953Z"
 }
