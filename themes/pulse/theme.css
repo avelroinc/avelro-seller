@@ -3520,6 +3520,10 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 @keyframes shop-page-in{from{opacity:0}}
 .shop-shell .shop-header{view-transition-name:shop-header}
 .shop-shell .shop-dock{view-transition-name:shop-dock}
+.shop-shell .shop-rail{view-transition-name:shop-rail}
+::view-transition-group(shop-rail){z-index:2;animation:none}
+::view-transition-old(shop-rail){display:none}
+::view-transition-new(shop-rail){animation:none}
 @supports not (view-transition-name:none){.shop-shell .shop-page-enter{animation:shop-enter .22s ease-out both}}
 @keyframes shop-enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .shop-shell .sc-faq-list details[open]>div{animation:shop-reveal .3s ease both}
