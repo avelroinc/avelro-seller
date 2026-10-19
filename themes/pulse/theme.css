@@ -5335,3 +5335,24 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-cell-brand>span:last-child{display:grid}
 .shop-shell .adm-muted svg{width:15px;height:15px;vertical-align:-3px}
 @media (max-width:560px){.shop-shell .adm-form-row{grid-template-columns:minmax(0,1fr)}}
+.shop-shell .adm-page-stack{display:grid;gap:28px}
+.shop-shell .adm-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.shop-shell .adm-tiles button{position:relative;display:flex;align-items:center;gap:12px;width:100%;padding:10px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer;box-shadow:var(--shop-shadow);transition:border-color .15s}
+.shop-shell .adm-tiles button:hover{border-color:var(--shop-line-2)}
+.shop-shell .adm-tiles button[aria-current]{border-color:var(--shop-accent);background:var(--shop-tint)}
+.shop-shell .adm-tile-art{display:grid;place-items:center;flex:none;width:56px;height:56px;overflow:hidden;border-radius:var(--shop-radius);background:var(--shop-soft)}
+.shop-shell .adm-tile-art img{width:100%;height:100%;object-fit:cover}
+.shop-shell .adm-tile-text{display:grid;min-width:0}
+.shop-shell .adm-tile-text b{overflow:hidden;font-size:14.5px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .adm-tile-text small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .adm-tiles .adm-tag{position:absolute;top:8px;right:8px}
+.shop-shell .adm-rows{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.shop-shell .adm-row{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:12px 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer}
+.shop-shell .adm-row:hover{border-color:var(--shop-accent)}
+.shop-shell .adm-row>span:first-child{display:grid;min-width:0}
+.shop-shell .adm-row small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .adm-row-end{display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+.shop-shell .adm-inline-editor{display:grid;gap:12px;padding:14px;border-radius:var(--shop-radius);background:var(--shop-soft)}
+.shop-shell .adm-inline-editor .adm-input :is(input,select,textarea){background:var(--shop-surface)}
+.shop-shell .adm-inline-editor .adm-switch{background:var(--shop-surface)}
+.shop-shell .adm-inline-ico{width:14px;height:14px;margin-right:6px;vertical-align:-2px}
