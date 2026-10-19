@@ -1,5 +1,5 @@
 {
-  "version": "1.0.124",
-  "notes": "- Sol menü yenilendi: ürün türleri (Sosyal Medya, E-Pin, Lisans, SMS Onay) kendi renginde simge kutularında; üzerine gelince ve o sayfadayken kutu dolu renge döner. Sayfalar yumuşak simge kutularında, açık sayfa dolu vurgu kutusuyla gösterilir.\n- Ürün paneli artık içeriği kadar uzun: tür renginde başlık bandı, marka logolu satırlar (üzerine gelince ok), altta tam genişlik Tümünü Gör düğmesi.\n- Menülerdeki sosyal medya platformları marka logolarıyla gösterilir.\n- Pulse teması 1.0.33.",
-  "publishedAt": "2026-10-19T15:34:54.494Z"
+  "version": "1.0.125",
+  "notes": "- Telefon menüsü yenilendi ve tüm ekranı kaplıyor: üstte mağaza, kapatma düğmesi, \"Ne arıyorsun?\" başlığı ve arama.\n- Hızlı Erişim: ilk hizmetler logolarıyla yana kayan bir şeritte, tek dokunuşla açılır.\n- Ürün türleri (Sosyal Medya, E-Pin, Lisans, SMS Onay) içlerindeki ilk ürünlerin logolarıyla geniş satırlarda; sayfalar iki sütun düğmelerde, açık sayfa vurgulu.\n- Altta sabit çubuk: Sipariş Sorgula, Hesabım ve koyu mod. Menü açılırken bölümler sırayla belirir; menü açıkken alt dock gizlenir.\n- Pulse teması 1.0.34.",
+  "publishedAt": "2026-10-19T17:10:46.255Z"
 }
