@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.26
+
+- Hesabım yeni ürün türlerine göre: menü Alışveriş, Cüzdan ve Hesap gruplarında; Genel Bakış'ta Lisanslarım, E-Pin Kodlarım ve SMS Numaralarım kutuları ve açık numara uyarısı. E-Pin Kodlarım: oyun kapağı, kodlar (kopyala) ya da yüklemenin oyuncu bilgileri, kullanım adımları. SMS Numaralarım: uygulama, ülke bayrağı, numara, gelen onay kodu (kopyala), durum ve canlı izleme bağlantısı.
+
 ### 1.0.25
 
 - Masaüstü yan menü sayfaya yapışık: menü ve sayfa birlikte ortalanır, menü içeriğin 16 px solunda durur; geniş ekranda kenarda ayrı kalmaz, sayfa zemini menüyü de içine alır. Sabitlenince içerik daralmaz, menüyle birlikte yeniden ortalanır.
