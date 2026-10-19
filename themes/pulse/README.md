@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.29
+
+- Bölüm başlıkları: ortalı, iki yanda çizgili başlık; bağlantılı bölümlerde simgeli kutulu bant (`.shop-section-heading.is-band`).
+
 ### 1.0.28
 
 - Ana sayfa: lisans vitrini, E-Pin oyun kartları, SMS Onay kayan logo şeridi; tek parça makale kutusu (Devamını Gör).

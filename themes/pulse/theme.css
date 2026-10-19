@@ -4947,3 +4947,30 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .hd-lic-card.is-more>svg{width:44px;height:44px;padding:11px;border-radius:50%;background:var(--shop-tint);color:var(--shop-accent)}
 .shop-shell .hd-lic-card.is-more .hd-buy{margin-top:4px}
 .shop-shell .sms-step-head h2{scroll-margin-top:calc(var(--shop-header-h) + 32px)}
+.shop-shell .shop-section-heading:not(.is-band),.shop-shell .shop-platforms .shop-section-heading:not(.is-band){display:grid;grid-template-columns:minmax(24px,1fr) minmax(0,max-content) minmax(24px,1fr);grid-template-areas:"eye eye eye" "l title r" "text text text" "action action action";align-items:center;justify-items:center;gap:12px 24px;max-width:none;margin-inline:0;text-align:center}
+.shop-shell .shop-section-heading>div{display:contents}
+.shop-shell .shop-section-heading:not(.is-band)>div>small{grid-area:eye;padding:0;background:none;border-radius:0;color:var(--shop-accent);font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.shop-shell .shop-section-heading:not(.is-band) h2{grid-area:title;margin:0;font-family:var(--shop-display);font-size:clamp(28px,3.2vw,40px);line-height:1.15;letter-spacing:-.02em;text-align:center;text-wrap:balance}
+.shop-shell .shop-section-heading:not(.is-band)::before,.shop-shell .shop-section-heading:not(.is-band)::after{content:"";align-self:center;justify-self:stretch;height:1px}
+.shop-shell .shop-section-heading:not(.is-band)::before{grid-area:l;background:linear-gradient(90deg,transparent,var(--shop-line-2))}
+.shop-shell .shop-section-heading:not(.is-band)::after{grid-area:r;background:linear-gradient(270deg,transparent,var(--shop-line-2))}
+.shop-shell .shop-section-heading:not(.is-band) p{grid-area:text;margin:0;max-width:60ch;color:var(--shop-muted);font-size:15.5px;text-align:center}
+.shop-shell .shop-section-heading:not(.is-band)>:is(a,button){grid-area:action}
+.shop-shell .shop-section-heading.is-band{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"ico eye action" "ico title action" "ico text action";align-items:center;justify-items:start;gap:4px 22px;max-width:none;margin-inline:0;padding:22px 24px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:linear-gradient(100deg,var(--shop-tint),var(--shop-surface) 62%);text-align:left}
+.shop-shell .shop-section-heading.is-band>.sh-ico{grid-area:ico;display:grid;place-items:center;width:58px;height:58px;border-radius:calc(var(--shop-radius) + 10px);background:var(--shop-accent-fill,var(--shop-accent));color:#fff;box-shadow:0 12px 24px -14px var(--shop-accent)}
+.shop-shell .shop-section-heading.is-band>.sh-ico svg{width:26px;height:26px}
+.shop-shell .shop-section-heading.is-band>div>small{grid-area:eye;padding:0;background:none;border-radius:0;color:var(--shop-accent);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.shop-shell .shop-section-heading.is-band h2{grid-area:title;margin:0;font-family:var(--shop-display);font-size:clamp(24px,2.5vw,32px);line-height:1.2;letter-spacing:-.02em;text-align:left}
+.shop-shell .shop-section-heading.is-band p{grid-area:text;margin:0;max-width:62ch;color:var(--shop-muted);font-size:15px;text-align:left}
+.shop-shell .shop-section-heading.is-band>:is(a,button){grid-area:action;justify-self:end}
+.shop-shell .shop-section-heading.is-band>.shop-text-link{min-height:48px;padding:0 22px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font-weight:700}
+.shop-shell .shop-section-heading.is-band>.shop-text-link:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+.shop-shell .shop-section-heading.is-band>.shop-button{min-height:48px}
+@media (max-width:640px){
+ .shop-shell .shop-section-heading:not(.is-band),.shop-shell .shop-platforms .shop-section-heading:not(.is-band){grid-template-columns:minmax(0,1fr);grid-template-areas:"eye" "title" "text" "action";gap:10px}
+ .shop-shell .shop-section-heading:not(.is-band)::before,.shop-shell .shop-section-heading:not(.is-band)::after{display:none}
+ .shop-shell .shop-section-heading.is-band{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ico eye" "ico title" "text text" "action action";gap:6px 14px;padding:18px}
+ .shop-shell .shop-section-heading.is-band>.sh-ico{width:48px;height:48px}
+ .shop-shell .shop-section-heading.is-band p{margin-top:6px}
+ .shop-shell .shop-section-heading.is-band>:is(a,button){justify-self:stretch;justify-content:center;margin-top:10px}
+}

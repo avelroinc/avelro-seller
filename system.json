@@ -1,5 +1,5 @@
 {
-  "version": "1.0.118",
-  "notes": "- Ana sayfanın dijital ürün bölümleri yenilendi: Lisans vitrini (tanıtım paneli, marka logolu ürün kartları, Tüm Lisansları Gör), E-Pin oyun kartları (oyun türü sekmeleri, en ucuz üç paket; telefonda kaydırılır) ve yeni SMS Onay bölümü (adımlar ve karşılıklı kayan uygulama logoları).\n- Ana sayfa makalesi tek parça gösterilir; uzun metin Devamını Gör ile açılır. SMS Onay, E-Pin ve oyun sayfalarına makale alanı eklendi (uygulamada Sayfa Makaleleri › E-Pin / SMS Onay).\n- Yeni Lisanslar sayfası (/lisans): yayındaki bütün lisans ürünleri; menüdeki Tüm Lisanslar buraya açılır.\n- SMS Onay sayfasında Numaralarım giriş alanının altında yatay bant: solda bakiye ve güvenceler, ortada açık numara (yoksa Hızlı Başla ile popüler uygulamalar), sağda aşağı kayan Son Numaralar.\n- Bütün sayfalarda bileşenler arası boşluk iki katına çıktı (masaüstünde 96, tablette 72, telefonda 64 px); ana sayfada her bölüm aynı aralıkla ayrılır.\n- Mobil uygulama (1.17.67): Sayfa Makaleleri'nde E-Pin ve SMS Onay sayfaları.\n- Pulse teması 1.0.28.",
-  "publishedAt": "2026-10-19T08:59:12.908Z"
+  "version": "1.0.119",
+  "notes": "- Bölüm başlıkları yenilendi: varsayılan başlık ortalı, iki yanında ince çizgiler, üstte etiket ve altta açıklama; bağlantısı olan bölümler (Öne Çıkan Hizmetler, Popüler Oyunlar) simgeli, açık zeminli bir kutuda, sağda düğmeyle. Telefonda ikisi de alt alta dizilir.\n- Pulse teması 1.0.29.",
+  "publishedAt": "2026-10-19T09:23:47.326Z"
 }
