@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.33
+
+- Sol menü yenilendi: ürün türleri renkli simge kutularında (üzerine gelince ve açık sayfada dolu renk), sayfalar yumuşak simge kutularında, açık sayfa dolu vurgu kutusuyla. Ürün paneli içeriği kadar uzun; tür renginde başlık bandı, marka logolu satırlar ve tam genişlik Tümünü Gör düğmesi.
+
 ### 1.0.32
 
 - Sayfa geçişinde sol menü kendi katmanında, üst menünün üstünde kalır; açık menünün üstünde kesik başlık alanı görünmez.

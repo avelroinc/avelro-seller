@@ -1,5 +1,5 @@
 {
-  "version": "1.0.123",
-  "notes": "- Sol menüden bir sayfaya geçerken üst menü alanında beliren kesik alan giderildi: sol menü geçiş sırasında üst menünün üstünde kalır, açık hâli canlandırılmaz.\n- Pulse teması 1.0.32.",
-  "publishedAt": "2026-10-19T15:17:48.269Z"
+  "version": "1.0.124",
+  "notes": "- Sol menü yenilendi: ürün türleri (Sosyal Medya, E-Pin, Lisans, SMS Onay) kendi renginde simge kutularında; üzerine gelince ve o sayfadayken kutu dolu renge döner. Sayfalar yumuşak simge kutularında, açık sayfa dolu vurgu kutusuyla gösterilir.\n- Ürün paneli artık içeriği kadar uzun: tür renginde başlık bandı, marka logolu satırlar (üzerine gelince ok), altta tam genişlik Tümünü Gör düğmesi.\n- Menülerdeki sosyal medya platformları marka logolarıyla gösterilir.\n- Pulse teması 1.0.33.",
+  "publishedAt": "2026-10-19T15:34:54.494Z"
 }
