@@ -4884,18 +4884,13 @@ html.shop-menu-open{overflow:hidden}
  .shop-shell .shop-mmenu-links a{font-size:13px}
 }
 @media (min-width:761px) and (max-width:1080px){.shop-shell .shop-mmenu{left:auto;width:400px;right:var(--shop-gutter)}}
-/* Telefon menüsü tam ekran: başlığın altından ekranın altına kadar; sayfalar aradaki alanı doldurur (sığmazsa kendi içinde
-   kayar), alttaki düğmeler en altta. Ürün türü kutucukları renksiz (yumuşak zemin, sade simge). */
+/* Telefon menüsü yüksekliği içeriği kadar (ekranın altına kadar uzamaz, ortada boşluk kalmaz); ekrandan uzun olamaz. */
 @media (max-width:1080px){
- .shop-shell .shop-mmenu{top:calc(var(--shop-header-h) + 22px);bottom:calc(12px + env(safe-area-inset-bottom));max-height:none;box-sizing:border-box}
+ .shop-shell .shop-mmenu{bottom:auto;max-height:calc(100dvh - var(--shop-header-h) - 34px - env(safe-area-inset-bottom));box-sizing:border-box}
  .shop-shell .shop-mmenu *{box-sizing:border-box}
- .shop-shell .shop-mmenu-links{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
- .shop-shell .shop-mmenu-foot{margin-top:auto}
- .shop-shell .shop-mmenu .shop-mmenu-kind{background:var(--shop-soft);color:var(--shop-ink)}
- .shop-shell .shop-mmenu .shop-mmenu-kind:active{background:var(--shop-tint)}
- .shop-shell .shop-mmenu .shop-mmenu-kind .shop-products-ico{background:var(--shop-surface);box-shadow:none;color:var(--shop-ink-2)}
+ .shop-shell .shop-mmenu-links{flex:none}
+ .shop-shell .shop-mmenu-foot{margin-top:4px}
 }
-
 @media (max-width:360px){
  .shop-shell .shop-mmenu{padding:10px}
  .shop-shell .shop-mmenu-kinds{gap:4px}
@@ -5207,3 +5202,19 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .sc-more .sc-prose :is(h2,h3){scroll-margin-top:calc(var(--shop-header-h) + 32px)}
 .shop-shell .hd-sms-demo>span:nth-child(2) small{white-space:nowrap}
 @media (max-width:560px){.shop-shell .hd-sms-demo{flex-wrap:nowrap;gap:10px;padding:12px}.shop-shell .hd-sms-code b{font-size:17px}.shop-shell .hd-sms-ok{display:none}}
+
+/* Telefon menüsü (ilk hâli): başlığın altında düz liste; satırlar simge ve yazı, simgeler vurgu renginde, açık sayfa vurgu
+   zemininde; en altta Sipariş Sorgula ve koyu mod yumuşak zeminli satırlar. Tablette sağda 340px. */
+.shop-shell .shop-mlist{display:none}
+@media (max-width:1080px){
+ .shop-shell .shop-mlist{position:fixed;top:calc(var(--shop-header-h) + 22px);right:var(--shop-gutter);left:var(--shop-gutter);z-index:50;display:flex;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100dvh - var(--shop-header-h) - 34px - env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;padding:10px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);box-sizing:border-box;animation:shop-fade-in .16s ease-out}
+ .shop-shell .shop-mlist>a{display:flex;align-items:center;gap:12px;flex:none;padding:13px 14px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:15.5px;font-weight:500;text-decoration:none;transition:background-color .15s,color .15s}
+ .shop-shell .shop-mlist>a:hover,.shop-shell .shop-mlist>a[aria-current=page]{background:var(--shop-tint)}
+ .shop-shell .shop-mlist>a[aria-current=page]{color:var(--shop-accent);font-weight:600}
+ .shop-shell .shop-mlist .shop-menu-icon{display:block;flex:none;width:18px;height:18px;color:var(--shop-accent)}
+ .shop-shell .shop-mlist>.shop-mobile-track{margin-top:8px;background:var(--shop-soft);color:var(--shop-ink);font-weight:600}
+ .shop-shell .shop-mlist>.shop-mobile-track>svg:last-child{width:17px;height:17px;margin-left:auto;color:var(--shop-faint)}
+ .shop-shell .shop-mlist .shop-mobile-scheme{display:flex;align-items:center;gap:12px;flex:none;width:100%;min-height:48px;margin-top:2px;padding:0 14px;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink);font:inherit;font-size:15px;font-weight:600;text-align:left;cursor:pointer}
+ .shop-shell .shop-mlist .shop-mobile-scheme svg{width:18px;height:18px;color:var(--shop-accent)}
+}
+@media (min-width:761px) and (max-width:1080px){.shop-shell .shop-mlist{left:auto;width:340px}}
