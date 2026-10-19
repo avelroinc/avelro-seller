@@ -4645,3 +4645,59 @@ html.shop-menu-open{overflow:hidden}
  .shop-shell .shop-mmenu-links{grid-template-columns:minmax(0,1fr)}
  .shop-shell .shop-mmenu-foot>a{font-size:13.5px;padding:0 6px}
 }
+/* Telefon menüsü ekrana tam oturur, kaydırma gerekmez: başlığın altından ekranın altına kadar sabit sayfa; ürün türleri tek
+   sırada dört kutucuk, sayfalar iki sütun kısa satırlar, altta üç eşit düğme (Sipariş Sorgula, Hesabım, koyu mod). Menü açıkken
+   alt dock gizlenir. Çok kısa ekranda sayfalar üç sütuna geçer. */
+@media (max-width:1080px){
+ html.shop-menu-open .shop-shell .shop-dock{display:none}
+ .shop-shell .shop-mmenu{position:fixed;top:calc(var(--shop-header-h) + 22px);bottom:calc(12px + env(safe-area-inset-bottom));left:var(--shop-gutter);right:var(--shop-gutter);width:auto;max-height:none;display:flex;flex-direction:column;gap:8px;padding:12px;overflow:hidden}
+ .shop-shell .shop-mmenu>.shop-nav-search{flex:none;height:44px}
+ .shop-shell .shop-mmenu-title{flex:none;margin:6px 2px 0;font-size:11px}
+ .shop-shell .shop-mmenu-kinds{flex:none;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:6px}
+ .shop-shell .shop-mmenu-kinds.is-odd>a:last-child{grid-column:auto}
+ .shop-shell .shop-mmenu-kind{flex-direction:column;justify-content:center;align-items:center;gap:6px;min-height:0;padding:10px 4px;text-align:center}
+ .shop-shell .shop-mmenu-kind .shop-products-ico{width:38px;height:38px}
+ .shop-shell .shop-mmenu-kind>span:last-child{justify-items:center}
+ .shop-shell .shop-mmenu-kind b{font-size:11px;line-height:1.2;white-space:normal;letter-spacing:.03em}
+ .shop-shell .shop-mmenu-kind small{display:none}
+ .shop-shell .shop-mmenu-links{flex:1;min-height:0;align-content:start;gap:2px 6px;overflow:hidden}
+ .shop-shell .shop-mmenu-links a{min-height:44px;padding:3px 4px;font-size:14px}
+ .shop-shell .shop-mmenu-links a>i{width:32px;height:32px}
+ .shop-shell .shop-mmenu-foot{flex:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:0}
+ .shop-shell .shop-mmenu-foot>a,.shop-shell .shop-mmenu-foot .shop-mobile-scheme{flex-direction:column;justify-content:center;gap:4px;min-height:58px;padding:6px 4px;font-size:12px;line-height:1.2;text-align:center}
+ .shop-shell .shop-mmenu-foot .shop-mobile-scheme{grid-column:auto}
+}
+@media (max-width:1080px) and (max-height:640px){
+ .shop-shell .shop-mmenu-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .shop-shell .shop-mmenu-links a{min-height:38px;font-size:13px}
+ .shop-shell .shop-mmenu-links a>i{width:28px;height:28px}
+ .shop-shell .shop-mmenu-kind{padding:8px 4px}
+ .shop-shell .shop-mmenu-kind .shop-products-ico{width:32px;height:32px}
+}
+@media (max-width:360px){
+ .shop-shell .shop-mmenu-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .shop-shell .shop-mmenu-links a{font-size:13px}
+}
+@media (min-width:761px) and (max-width:1080px){.shop-shell .shop-mmenu{left:auto;width:400px;right:var(--shop-gutter)}}
+/* Telefon menüsü yüksekliği içeriği kadar (ekranın altına kadar uzamaz, ortada boşluk kalmaz); ekrandan uzun olamaz. */
+@media (max-width:1080px){
+ .shop-shell .shop-mmenu{bottom:auto;max-height:calc(100dvh - var(--shop-header-h) - 34px - env(safe-area-inset-bottom));box-sizing:border-box}
+ .shop-shell .shop-mmenu *{box-sizing:border-box}
+ .shop-shell .shop-mmenu-links{flex:none}
+ .shop-shell .shop-mmenu-foot{margin-top:4px}
+}
+@media (max-width:360px){
+ .shop-shell .shop-mmenu{padding:10px}
+ .shop-shell .shop-mmenu-kinds{gap:4px}
+ .shop-shell .shop-mmenu-kind{padding:8px 2px}
+ .shop-shell .shop-mmenu-kind .shop-products-ico{width:32px;height:32px}
+ .shop-shell .shop-mmenu-kind b{font-size:9.5px;letter-spacing:.01em}
+ .shop-shell .shop-mmenu-links a{gap:8px;font-size:12.5px}
+ .shop-shell .shop-mmenu-links a>i{width:28px;height:28px}
+ .shop-shell .shop-mmenu-foot>a,.shop-shell .shop-mmenu-foot .shop-mobile-scheme{font-size:11px}
+}
+/* Menü açıkken arkadaki sayfa kararır ve kaymaz; karartmaya dokununca menü kapanır. */
+html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior:none}
+.shop-shell .shop-mmenu-backdrop{position:fixed;inset:0;z-index:39;background:rgb(10 14 24 / .42);backdrop-filter:blur(2px);animation:shop-fade-in .18s ease-out;touch-action:none}
+@keyframes shop-fade-in{from{opacity:0}}
+@media (min-width:1081px){.shop-shell .shop-mmenu-backdrop{display:none}}

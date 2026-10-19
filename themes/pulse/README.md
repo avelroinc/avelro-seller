@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.24
+
+- Telefon menüsü ekrana tam oturur, içinde kaydırma yok: ürün türleri tek sırada dört kutucuk, sayfalar iki sütun kısa satırlar, altta üç eşit düğme (Sipariş Sorgula, Hesabım, koyu mod). Menü açıkken arkadaki sayfa kararır ve kaymaz; karartmaya dokununca menü kapanır, alt dock gizlenir.
+
 ### 1.0.23
 
 - Telefon menüsü: bölümler arasındaki çizgiler kalktı; Ürünler ve Sayfalar küçük başlıklarla ayrılır, sayfalar simge kutulu ve adları kesilmez, Sipariş Sorgula ile Hesabım yan yana. Çok dar telefonda kutucuklarda simge üstte, sayfalar tek sütun.
