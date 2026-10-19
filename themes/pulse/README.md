@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.22
+
+- Ana sayfa hızlı sipariş kutusunun üstünde ürün türü sekmeleri: Sosyal Medya, E-Pin, Lisans, SMS Onay (yalnızca satıştaki türler). E-Pin, Lisans ve SMS Onay sekmesinde iki seçim, fiyat ve Satın Al düğmesi.
+
 ### 1.0.21
 
 - İç sayfaların giriş alanı tek satır: solda konum kartı (Ana Sayfa › sayfa), yanında başlık ve açıklama, en sağda sayfanın simgesi; bant yüksekliği üçte bire indi. Telefonda konum üstte ince şerit, altında başlık ve simge. İletişim, Hakkımızda, Kampanyalar, Duyurular, Sıkça Sorulan Sorular, Fırsat Köşesi, Ücretsiz Hizmetler ve kendi sayfalar.

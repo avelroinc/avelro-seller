@@ -4448,3 +4448,41 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
  .shop-shell .sms-search{width:100%}
  .shop-shell .sms-side{padding:16px}
 }
+/* Hızlı sipariş kutusunun üstündeki ürün türü sekmeleri (Sosyal Medya, E-Pin, Lisans, SMS Onay): kutunun üst kenarına yapışık
+   klasör sekmeleri; seçili sekme kutuyla birleşir. E-Pin, Lisans ve SMS seçiminde kutu iki alan, fiyat ve düğmeden oluşur. */
+.shop-shell .shop-quick.has-kinds{margin-top:-58px}
+.shop-shell .shop-quick-kinds{position:absolute;left:-1px;bottom:100%;display:flex;gap:4px;max-width:calc(100% + 2px);overflow-x:auto;scrollbar-width:none}
+.shop-shell .shop-quick-kinds::-webkit-scrollbar{display:none}
+.shop-shell .shop-quick-kinds button{display:inline-flex;align-items:center;gap:8px;flex:none;min-height:46px;padding:0 18px;border:1px solid var(--shop-line);border-bottom:0;border-radius:2px 2px 0 0;background:color-mix(in srgb,var(--shop-surface) 78%,transparent);color:var(--shop-ink-2);font:inherit;font-size:14px;font-weight:700;cursor:pointer;backdrop-filter:blur(8px);transition:background-color .15s,color .15s}
+.shop-shell .shop-quick-kinds button:hover{background:var(--shop-surface);color:var(--shop-ink)}
+.shop-shell .shop-quick-kinds button[aria-selected=true]{position:relative;background:var(--shop-surface);color:var(--shop-accent);box-shadow:inset 0 3px 0 var(--shop-accent)}
+.shop-shell .shop-quick-kinds button[aria-selected=true]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--shop-surface)}
+.shop-shell .shop-quick-kinds svg{width:17px;height:17px}
+.shop-shell .shop-quick.has-kinds{border-top-left-radius:0}
+.shop-shell .shop-quick.is-alt{grid-template-columns:minmax(0,1fr)}
+.shop-shell .shop-quick-alt{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:14px 28px}
+.shop-shell .shop-quick-alt .shop-quick-fields select{min-height:54px}
+.shop-shell .shop-quick-alt>.shop-button{min-height:54px;white-space:nowrap}
+.shop-shell .shop-quick-alt-total{display:grid;gap:8px;min-width:0}
+.shop-shell .shop-quick-alt-total>span{color:var(--shop-ink);font-size:13px;font-weight:600}
+.shop-shell .shop-quick-alt-total>b{display:flex;align-items:center;min-height:54px;padding:0 16px;border-radius:2px;background:var(--shop-tint);color:var(--shop-ink);font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+.shop-shell .shop-quick-alt-wait{display:flex;align-items:center;gap:8px;min-height:54px;padding:0 14px;border-radius:2px;background:var(--shop-soft);color:var(--shop-muted);font-size:14px}
+.shop-shell .shop-quick-alt-wait svg{width:16px;height:16px}
+.shop-shell .sms-row.is-target{background:var(--shop-tint);box-shadow:inset 3px 0 0 var(--shop-accent)}
+@media (max-width:900px){
+ .shop-shell .shop-quick-alt{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .shop-quick-alt>.shop-button{width:100%}
+}
+@media (max-width:640px){
+ .shop-shell .shop-quick.has-kinds{margin-top:-60px}
+ .shop-shell .shop-quick-kinds{gap:3px}
+ .shop-shell .shop-quick-kinds button{gap:6px;min-height:42px;padding:0 12px;font-size:13px}
+ .shop-shell .shop-quick-kinds svg{width:15px;height:15px}
+}
+.shop-shell .shop-home>.shop-hero-grid.is-quick-only .shop-quick.has-kinds{margin-top:48px}
+@media (max-width:640px){
+ .shop-shell .shop-quick-kinds{left:-1px;right:-1px;max-width:none;overflow:visible}
+ .shop-shell .shop-quick-kinds button{flex:1 1 0;flex-direction:column;justify-content:center;gap:3px;min-width:0;min-height:52px;padding:0 4px;font-size:11.5px;line-height:1.2}
+ .shop-shell .shop-quick-kinds button span{max-width:100%;text-align:center;overflow-wrap:anywhere}
+ .shop-shell .shop-quick.has-kinds{margin-top:-58px;border-top-left-radius:2px}
+}
