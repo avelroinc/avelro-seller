@@ -5495,3 +5495,4 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
  .shop-shell .adm-pages>.adm-groups button{flex:1 1 auto}
  .shop-shell .adm-toolbar>.shop-button{flex:1 1 auto}
 }
+.shop-shell .adm-row.adm-row-static{cursor:default}.shop-shell .adm-row.adm-row-static:hover{border-color:var(--shop-line)}.shop-shell .adm-row-end .shop-button{min-height:36px;padding:0 12px;font-size:13px}
