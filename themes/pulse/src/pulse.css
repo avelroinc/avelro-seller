@@ -4884,13 +4884,18 @@ html.shop-menu-open{overflow:hidden}
  .shop-shell .shop-mmenu-links a{font-size:13px}
 }
 @media (min-width:761px) and (max-width:1080px){.shop-shell .shop-mmenu{left:auto;width:400px;right:var(--shop-gutter)}}
-/* Telefon menüsü yüksekliği içeriği kadar (ekranın altına kadar uzamaz, ortada boşluk kalmaz); ekrandan uzun olamaz. */
+/* Telefon menüsü tam ekran: başlığın altından ekranın altına kadar; sayfalar aradaki alanı doldurur (sığmazsa kendi içinde
+   kayar), alttaki düğmeler en altta. Ürün türü kutucukları renksiz (yumuşak zemin, sade simge). */
 @media (max-width:1080px){
- .shop-shell .shop-mmenu{bottom:auto;max-height:calc(100dvh - var(--shop-header-h) - 34px - env(safe-area-inset-bottom));box-sizing:border-box}
+ .shop-shell .shop-mmenu{top:calc(var(--shop-header-h) + 22px);bottom:calc(12px + env(safe-area-inset-bottom));max-height:none;box-sizing:border-box}
  .shop-shell .shop-mmenu *{box-sizing:border-box}
- .shop-shell .shop-mmenu-links{flex:none}
- .shop-shell .shop-mmenu-foot{margin-top:4px}
+ .shop-shell .shop-mmenu-links{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+ .shop-shell .shop-mmenu-foot{margin-top:auto}
+ .shop-shell .shop-mmenu .shop-mmenu-kind{background:var(--shop-soft);color:var(--shop-ink)}
+ .shop-shell .shop-mmenu .shop-mmenu-kind:active{background:var(--shop-tint)}
+ .shop-shell .shop-mmenu .shop-mmenu-kind .shop-products-ico{background:var(--shop-surface);box-shadow:none;color:var(--shop-ink-2)}
 }
+
 @media (max-width:360px){
  .shop-shell .shop-mmenu{padding:10px}
  .shop-shell .shop-mmenu-kinds{gap:4px}
