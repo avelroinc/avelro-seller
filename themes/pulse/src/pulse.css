@@ -4489,3 +4489,74 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 /* Ürün türü sekmelerinin adları büyük harfle (lang="tr": i → İ). */
 .shop-shell .shop-quick-kinds button span{text-transform:uppercase;letter-spacing:.04em}
 @media (max-width:640px){.shop-shell .shop-quick-kinds button span{letter-spacing:.02em}}
+/* Başlık: tek satır; Ürünler paneli (ürün türleri sütun sütun), ilk bağlantılar ve Diğer menüsü. Telefon menüsü: ürün türü
+   kutucukları, iki sütun sayfalar, altta Sipariş Sorgula, Hesabım ve koyu mod. Tür renkleri --k ile gelir. */
+.shop-shell .shop-nav-row{position:relative}
+.shop-shell .is-social{--k:#e1306c}
+.shop-shell .is-epin{--k:#7c3aed}
+.shop-shell .is-license{--k:#d97706}
+.shop-shell .is-sms{--k:#16a34a}
+.shop-shell :is(.shop-nav-products,.shop-nav-more)>button{display:inline-flex;align-items:center;gap:6px;padding:10px 9px;border:0;border-radius:var(--shop-radius);background:transparent;color:var(--shop-ink-2);font:inherit;font-size:14.5px;font-weight:500;white-space:nowrap;cursor:pointer;transition:color .15s,background-color .15s}
+.shop-shell .shop-nav-products>button{font-weight:700;color:var(--shop-ink)}
+.shop-shell :is(.shop-nav-products,.shop-nav-more)>button:hover,.shop-shell :is(.shop-nav-products,.shop-nav-more).is-open>button{color:var(--shop-accent);background:var(--shop-tint)}
+.shop-shell .shop-nav-products>button .shop-menu-icon{width:17px;height:17px;color:var(--shop-accent)}
+.shop-shell .shop-nav-caret{width:15px;height:15px;transition:transform .2s}
+.shop-shell .is-open>button .shop-nav-caret{transform:rotate(180deg)}
+.shop-shell .shop-products-panel{position:absolute;top:calc(100% + 10px);left:0;right:0;z-index:50;display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding:22px 8px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);animation:shop-panel-in .18s ease-out}
+.shop-shell .shop-products-panel[hidden]{display:none}
+@keyframes shop-panel-in{from{opacity:0;transform:translateY(-6px)}}
+.shop-shell .shop-products-col{display:grid;align-content:start;gap:10px;min-width:0;padding:0 18px}
+.shop-shell .shop-products-col+.shop-products-col{border-left:1px solid var(--shop-line)}
+.shop-shell .shop-products-head{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--shop-line);color:var(--shop-ink);text-decoration:none}
+.shop-shell .shop-products-ico{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--k) 14%,var(--shop-surface));color:var(--k)}
+.shop-shell .shop-products-ico svg{width:20px;height:20px}
+.shop-shell .shop-products-head>span:last-child{display:grid;min-width:0}
+.shop-shell .shop-products-head b{font-size:15px}
+.shop-shell .shop-products-head small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .shop-products-head:hover b{color:var(--k)}
+.shop-shell .shop-products-col ul{display:grid;gap:2px;margin:0;padding:0;list-style:none}
+.shop-shell .shop-products-col li a{display:flex;align-items:center;gap:10px;min-width:0;padding:7px 8px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:14px;text-decoration:none;transition:background-color .15s,color .15s}
+.shop-shell .shop-products-col li a:hover{background:var(--shop-soft);color:var(--shop-ink)}
+.shop-shell .shop-products-col li a>span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-products-lead{display:grid;place-items:center;flex:none;width:26px;height:26px;overflow:hidden;border-radius:var(--shop-radius);color:var(--k)}
+.shop-shell .shop-products-lead svg{width:18px;height:18px}
+.shop-shell .shop-products-lead img{width:100%;height:100%;object-fit:cover}
+.shop-shell .shop-products-lead i{display:grid;place-items:center;width:100%;height:100%;background:var(--app);color:#fff;font-size:12px;font-style:normal;font-weight:800}
+.shop-shell .shop-products-all{display:inline-flex;align-items:center;gap:6px;justify-self:start;padding:4px 8px;color:var(--k);font-size:13.5px;font-weight:700;text-decoration:none}
+.shop-shell .shop-products-all svg{width:15px;height:15px;transition:transform .15s}
+.shop-shell .shop-products-all:hover svg{transform:translateX(3px)}
+.shop-shell .shop-nav-more{position:relative}
+.shop-shell .shop-more-panel{position:absolute;top:calc(100% + 10px);left:0;z-index:50;display:grid;gap:2px;min-width:230px;padding:8px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);animation:shop-panel-in .18s ease-out}
+.shop-shell .shop-more-panel[hidden]{display:none}
+.shop-shell .shop-shell .shop-more-panel a,.shop-shell .shop-more-panel a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:14px;text-decoration:none}
+.shop-shell .shop-more-panel a:hover,.shop-shell .shop-more-panel a[aria-current=page]{background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .shop-more-panel .shop-menu-icon{width:17px;height:17px;color:var(--shop-accent)}
+/* Telefon menüsü */
+.shop-shell .shop-mmenu{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:50;display:grid;gap:16px;max-height:calc(100dvh - var(--shop-header-h) - 40px);overflow-y:auto;overscroll-behavior:contain;padding:14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg);animation:shop-panel-in .18s ease-out}
+.shop-shell .shop-mmenu-kinds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.shop-shell .shop-mmenu-kinds.is-odd>a:last-child{grid-column:1/-1}
+.shop-shell .shop-mmenu-kind{display:flex;align-items:center;gap:12px;min-width:0;min-height:72px;padding:12px;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--k) 9%,var(--shop-surface));color:var(--shop-ink);text-decoration:none;transition:background-color .15s}
+.shop-shell .shop-mmenu-kind:active{background:color-mix(in srgb,var(--k) 16%,var(--shop-surface))}
+.shop-shell .shop-mmenu-kind .shop-products-ico{background:var(--k);color:#fff}
+.shop-shell .shop-mmenu-kind>span:last-child{display:grid;min-width:0}
+.shop-shell .shop-mmenu-kind b{overflow:hidden;font-size:15px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-mmenu-kind small{color:var(--shop-muted);font-size:12px}
+.shop-shell .shop-mmenu-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px;padding-top:4px;border-top:1px solid var(--shop-line)}
+.shop-shell .shop-mmenu-links a{display:flex;align-items:center;gap:10px;min-width:0;min-height:46px;padding:0 8px;border-radius:var(--shop-radius);color:var(--shop-ink-2);font-size:14.5px;text-decoration:none}
+.shop-shell .shop-mmenu-links a span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .shop-mmenu-links a[aria-current=page]{background:var(--shop-tint);color:var(--shop-accent);font-weight:600}
+.shop-shell .shop-mmenu-links .shop-menu-icon{flex:none;width:18px;height:18px;color:var(--shop-accent)}
+.shop-shell .shop-mmenu-foot{display:grid;gap:6px;padding-top:14px;border-top:1px solid var(--shop-line)}
+.shop-shell .shop-mmenu-foot>a,.shop-shell .shop-mmenu-foot .shop-mobile-scheme{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;margin:0;padding:0 14px;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink);font:inherit;font-size:14.5px;font-weight:600;text-decoration:none;cursor:pointer}
+.shop-shell .shop-mmenu-foot>a svg:first-child,.shop-shell .shop-mmenu-foot .shop-mobile-scheme svg{width:18px;height:18px;color:var(--shop-accent)}
+.shop-shell .shop-mmenu-foot>a svg:last-child{width:16px;height:16px;margin-left:auto;color:var(--shop-faint)}
+html.shop-menu-open{overflow:hidden}
+@media (min-width:761px){.shop-shell .shop-mmenu{left:auto;width:400px}}
+/* Başlık sığdırma ölçümü: görünmez satır; bağlantılar başlıktakiyle aynı ölçüde çizilir, her ekranda ölçülebilir kalır. */
+.shop-shell .shop-nav-measure{position:absolute;top:0;left:0;display:flex!important;gap:2px;visibility:hidden;pointer-events:none;white-space:nowrap}
+.shop-shell .shop-nav-measure a{display:inline-flex;align-items:center;gap:6px;padding:10px 9px;font-size:14.5px;font-weight:500;white-space:nowrap}
+.shop-shell .shop-nav-measure .shop-menu-icon{width:17px;height:17px}
+.shop-shell .shop-products-col{grid-template-rows:auto 1fr auto}
+.shop-shell .shop-products-col .shop-products-all{color:var(--k)}
+.shop-shell .shop-mmenu-kind b{white-space:normal;line-height:1.25}
+.shop-shell .shop-products-col ul{align-content:start}
