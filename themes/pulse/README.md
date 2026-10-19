@@ -27,7 +27,7 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ### 1.0.22
 
-- Ana sayfa hızlı sipariş kutusunun üstünde ürün türü sekmeleri: Sosyal Medya, E-Pin, Lisans, SMS Onay (yalnızca satıştaki türler). E-Pin, Lisans ve SMS Onay sekmesinde iki seçim, fiyat ve Satın Al düğmesi.
+- Ana sayfa hızlı sipariş kutusunun üstünde ürün türü sekmeleri (büyük harfle): SOSYAL MEDYA, E-PİN, LİSANS, SMS ONAY (yalnızca satıştaki türler). E-Pin, Lisans ve SMS Onay sekmesinde iki seçim, fiyat ve Satın Al düğmesi.
 
 ### 1.0.21
 

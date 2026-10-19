@@ -4486,3 +4486,6 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
  .shop-shell .shop-quick-kinds button span{max-width:100%;text-align:center;overflow-wrap:anywhere}
  .shop-shell .shop-quick.has-kinds{margin-top:-58px;border-top-left-radius:2px}
 }
+/* Ürün türü sekmelerinin adları büyük harfle (lang="tr": i → İ). */
+.shop-shell .shop-quick-kinds button span{text-transform:uppercase;letter-spacing:.04em}
+@media (max-width:640px){.shop-shell .shop-quick-kinds button span{letter-spacing:.02em}}
