@@ -5301,3 +5301,65 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
  .shop-shell .shop-mfull-kinds a:nth-child(4){animation-delay:.15s}
  @keyframes shop-mfull-rise{from{opacity:0;transform:translateY(10px)}}
 }
+
+/* ===== Site yönetim paneli (/admin): sitenin başlığı, yan menüsü, sayfa girişi ve bölüm başlıkları; yönetim kartları sitedeki
+   kartlarla aynı dilde (yüzey, ince çizgi, gölge, 2px köşe). ===== */
+.shop-shell.shop-admin .adm-page{display:grid;gap:40px;padding-bottom:64px}
+.shop-shell .admin-user{gap:8px;padding-left:6px}
+.shop-shell .admin-avatar{display:grid;place-items:center;width:30px;height:30px;border-radius:var(--shop-radius);background:var(--shop-accent-fill,var(--shop-accent));color:var(--shop-on-accent,#fff);font-size:12px;font-weight:800}
+.shop-shell .admin-gate{display:grid;gap:8px;place-content:center;min-height:60vh;text-align:center}
+.shop-shell .adm-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.shop-shell .adm-kpi{display:grid;gap:4px;padding:20px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .adm-kpi small{color:var(--shop-muted);font-size:13px;font-weight:600}
+.shop-shell .adm-kpi b{font-family:var(--shop-display);font-size:30px;line-height:1.2;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.shop-shell .adm-kpi span{color:var(--shop-muted);font-size:12.5px;font-weight:600}
+.shop-shell .adm-kpi span.is-ok{color:#15803d}.shop-shell .adm-kpi span.is-bad{color:#b91c1c}.shop-shell .adm-kpi span.is-warn{color:#b45309}
+.shop-shell[data-shop-scheme=dark] .adm-kpi span.is-ok{color:#4ade80}.shop-shell[data-shop-scheme=dark] .adm-kpi span.is-bad{color:#f87171}.shop-shell[data-shop-scheme=dark] .adm-kpi span.is-warn{color:#fbbf24}
+.shop-shell .adm-split{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:24px;align-items:start}
+.shop-shell .adm-block{display:grid;gap:16px;min-width:0}
+.shop-shell .adm-table-wrap{overflow-x:auto;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .adm-table{width:100%;border-collapse:collapse;font-size:14px}
+.shop-shell .adm-table th{padding:12px 16px;border-bottom:1px solid var(--shop-line);color:var(--shop-muted);font-size:12px;font-weight:700;letter-spacing:.04em;text-align:left;text-transform:uppercase;white-space:nowrap}
+.shop-shell .adm-table td{padding:13px 16px;border-bottom:1px solid var(--shop-line);color:var(--shop-ink-2);font-variant-numeric:tabular-nums;vertical-align:middle}
+.shop-shell .adm-table tr:last-child td{border-bottom:0}
+.shop-shell .adm-table td a{color:var(--shop-ink);text-decoration:none}.shop-shell .adm-table td a:hover{color:var(--shop-accent)}
+.shop-shell .adm-table td small{display:block;color:var(--shop-muted);font-size:12px}
+.shop-shell .adm-tag{display:inline-block;padding:4px 9px;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink-2);font-size:12px;font-weight:700;white-space:nowrap}
+.shop-shell .adm-tag.is-ok{background:color-mix(in srgb,#16a34a 12%,var(--shop-surface));color:#15803d}
+.shop-shell .adm-tag.is-info{background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .adm-tag.is-warn{background:color-mix(in srgb,#d97706 13%,var(--shop-surface));color:#b45309}
+.shop-shell .adm-tag.is-bad{background:color-mix(in srgb,#dc2626 11%,var(--shop-surface));color:#b91c1c}
+.shop-shell[data-shop-scheme=dark] .adm-tag.is-ok{color:#4ade80}.shop-shell[data-shop-scheme=dark] .adm-tag.is-warn{color:#fbbf24}.shop-shell[data-shop-scheme=dark] .adm-tag.is-bad{color:#f87171}
+.shop-shell .adm-todo{display:grid;margin:0;padding:0;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow);list-style:none}
+.shop-shell .adm-todo li+li{border-top:1px solid var(--shop-line)}
+.shop-shell .adm-todo a{display:flex;align-items:center;gap:14px;padding:14px 16px;color:var(--shop-ink);text-decoration:none}
+.shop-shell .adm-todo a:hover{background:var(--shop-soft)}
+.shop-shell .adm-todo a>svg{flex:none;width:16px;height:16px;margin-left:auto;color:var(--shop-faint)}
+.shop-shell .adm-todo a>span:nth-child(2){display:grid;min-width:0}
+.shop-shell .adm-todo b{font-size:14.5px}.shop-shell .adm-todo small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .adm-todo-ico{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:var(--shop-radius);background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .adm-todo-ico svg{width:19px;height:19px}
+.shop-shell .adm-empty{padding:18px 16px;color:var(--shop-muted);font-size:14px}
+.shop-shell.shop-admin .adm-block .shop-section-heading.is-band{margin:0}
+@media (max-width:1180px){.shop-shell .adm-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .adm-split{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.shop-shell .adm-kpis{gap:8px}.shop-shell .adm-kpi{padding:14px}.shop-shell .adm-kpi b{font-size:24px}.shop-shell .shop-header .admin-user>span:last-child{display:none}}
+/* Yönetim sayfa başlığı: kısa giriş (büyük hero yok). */
+.shop-shell .adm-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:8px 0 20px;border-bottom:1px solid var(--shop-line)}
+.shop-shell .adm-head>div:first-child{display:grid;gap:4px;min-width:0}
+.shop-shell .adm-head small{color:var(--shop-accent);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.shop-shell .adm-head h1{margin:0;font-family:var(--shop-display);font-size:clamp(24px,2.4vw,30px);line-height:1.2;letter-spacing:-.02em}
+.shop-shell .adm-head p{margin:0;color:var(--shop-muted);font-size:14.5px}
+.shop-shell .adm-head-actions{display:flex;flex-wrap:wrap;gap:8px}
+.shop-shell.shop-admin .adm-page{gap:28px;padding-top:8px}
+/* Yönetici girişi: sitedeki giriş ekranı; hata ve bilgi satırları, "oturumu açık tut" kutusu, doğrulama başlığı simgesi. */
+.shop-shell .sa-auth-form :is(.sa-error,.sa-notice){margin:0;padding:10px 12px;border-radius:var(--shop-radius);font-size:13.5px;line-height:1.5}
+.shop-shell .sa-auth-form .sa-error{background:color-mix(in srgb,#dc2626 10%,var(--shop-surface));color:#b91c1c}
+.shop-shell[data-shop-scheme=dark] .sa-auth-form .sa-error{color:#fca5a5}
+.shop-shell .sa-auth-form .sa-notice{background:var(--shop-tint);color:var(--shop-ink-2)}
+.shop-shell .sa-auth-form .sa-check{display:flex;align-items:center;gap:10px;color:var(--shop-ink-2);font-size:14px;cursor:pointer}
+.shop-shell .sa-auth-form .sa-check input{width:18px;height:18px;accent-color:var(--shop-accent)}
+.shop-shell .sa-auth-head .sa-head-ico{width:22px;height:22px;margin-right:8px;vertical-align:-4px;color:var(--shop-accent)}
+.shop-shell.shop-admin>.shop-frame>.sa{padding-block:clamp(16px,6vh,72px)}
+.shop-shell.shop-admin .sa-auth-brand{grid-template-rows:none;align-content:center;padding-bottom:44px}
+.shop-shell.shop-admin .shop-frame:not(:has(.shop-rail)){padding-left:0}
+.shop-shell.shop-admin .sa-auth-copy h1{font-size:clamp(30px,3.4vw,46px)}
