@@ -5598,3 +5598,12 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-themes small{color:var(--shop-muted);font-size:13px;line-height:1.5}
 @media (max-width:560px){.shop-shell .adm-themes li{grid-template-columns:96px minmax(0,1fr)}.shop-shell .adm-themes img{width:96px;height:64px}.shop-shell .adm-themes li .shop-button{grid-column:1/-1}}
 .shop-shell .adm-row[aria-current]{border-color:var(--shop-accent);background:var(--shop-tint)}
+/* Yönetim › Yorumlar: yorum kartları, yıldızlar. */
+.shop-shell .adm-reviews{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.shop-shell .adm-reviews li{gap:12px}
+.shop-shell .adm-reviews p{margin:0;color:var(--shop-ink-2);font-size:14.5px;line-height:1.6}
+.shop-shell .adm-review-head{display:grid;gap:4px}
+.shop-shell .adm-review-head small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .adm-stars{display:flex;gap:2px}
+.shop-shell .adm-stars svg{width:16px;height:16px;color:var(--shop-line-2)}
+.shop-shell .adm-stars svg.is-on{color:#f59e0b;fill:#f59e0b}
