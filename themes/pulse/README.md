@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.25
+
+- Masaüstü yan menü sayfaya yapışık: menü ve sayfa birlikte ortalanır, menü içeriğin 16 px solunda durur; geniş ekranda kenarda ayrı kalmaz, sayfa zemini menüyü de içine alır. Sabitlenince içerik daralmaz, menüyle birlikte yeniden ortalanır.
+
 ### 1.0.24
 
 - Telefon menüsü ekrana tam oturur, içinde kaydırma yok: ürün türleri tek sırada dört kutucuk, sayfalar iki sütun kısa satırlar, altta üç eşit düğme (Sipariş Sorgula, Hesabım, koyu mod). Menü açıkken arkadaki sayfa kararır ve kaymaz; karartmaya dokununca menü kapanır, alt dock gizlenir.

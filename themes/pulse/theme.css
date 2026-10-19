@@ -4612,3 +4612,10 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .shop-mmenu-backdrop{position:fixed;inset:0;z-index:39;background:rgb(10 14 24 / .42);backdrop-filter:blur(2px);animation:shop-fade-in .18s ease-out;touch-action:none}
 @keyframes shop-fade-in{from{opacity:0}}
 @media (min-width:1081px){.shop-shell .shop-mmenu-backdrop{display:none}}
+@media (min-width:1081px){
+ .shop-shell{--rail-w:72px}
+ .shop-shell[data-rail=pinned]{--rail-w:252px}
+ .shop-shell .shop-frame,.shop-shell[data-rail=pinned] .shop-frame{padding-left:calc(var(--rail-w) + 16px)!important}
+ .shop-shell .shop-rail{left:max(var(--shop-gutter),calc((100% - var(--shop-width) - var(--rail-w) - 16px) / 2));transition:width .2s ease,box-shadow .2s,left .2s ease}
+}
+@media (min-width:1081px){.shop-shell .shop-frame{max-width:calc(1440px + var(--rail-w) + 16px)}}
