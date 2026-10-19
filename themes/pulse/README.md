@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.27
+
+- SMS Onay: logolu uygulama kutuları, ülke kartları (teslim oranı çubuğu, stok, fiyat), Nasıl Çalışır adımları ve yenilenen
+  Numaralarım paneli. E-Pin: süzgeçli oyun listesi (arama, oyun türü, teslim şekli). Marka logosu kutusu (`.brand-logo`).
+
 ### 1.0.26
 
 - Hesabım yeni ürün türlerine göre: menü Alışveriş, Cüzdan ve Hesap gruplarında; Genel Bakış'ta Lisanslarım, E-Pin Kodlarım ve SMS Numaralarım kutuları ve açık numara uyarısı. E-Pin Kodlarım: oyun kapağı, kodlar (kopyala) ya da yüklemenin oyuncu bilgileri, kullanım adımları. SMS Numaralarım: uygulama, ülke bayrağı, numara, gelen onay kodu (kopyala), durum ve canlı izleme bağlantısı.
