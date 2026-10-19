@@ -5570,3 +5570,14 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-choice button{min-height:36px;padding:0 12px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
 .shop-shell .adm-choice button:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
 @media (max-width:980px){.shop-shell .adm-two{grid-template-columns:minmax(0,1fr)}}
+/* Yönetim › Ana Sayfa Bölümleri: bölüm satırında seçme düğmesi ve küçük görünürlük anahtarı; seçili satır vurgulu. */
+.shop-shell .adm-menu li.is-current{border-color:var(--shop-accent);background:var(--shop-tint)}
+.shop-shell .adm-menu-pick{display:grid;flex:1;min-width:0;padding:4px 6px;border:0;background:transparent;color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer}
+.shop-shell .adm-menu-pick b{font-size:14px}.shop-shell .adm-menu-pick small{color:var(--shop-muted);font-size:12px}
+.shop-shell .adm-mini-switch input{width:18px;height:18px;margin:0 6px;accent-color:var(--shop-accent);cursor:pointer}
+.shop-shell .adm-choice button.is-on{border-color:var(--shop-accent);background:var(--shop-accent-fill,var(--shop-accent));color:var(--shop-on-accent,#fff)}
+.shop-shell .adm-choice button:disabled{opacity:.45;cursor:default}
+.shop-shell .adm-switch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.shop-shell .adm-tree .adm-menu li button.adm-menu-pick{display:grid;flex:1;width:auto;min-width:0;padding:4px 6px;background:transparent}
+.shop-shell .adm-tree .adm-menu-move button{display:grid;width:28px;padding:0;background:var(--shop-soft)}
+.shop-shell .adm-tree .adm-menu li{padding:6px 8px 6px 6px}
