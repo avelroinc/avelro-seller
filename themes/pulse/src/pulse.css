@@ -5581,3 +5581,19 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-tree .adm-menu li button.adm-menu-pick{display:grid;flex:1;width:auto;min-width:0;padding:4px 6px;background:transparent}
 .shop-shell .adm-tree .adm-menu-move button{display:grid;width:28px;padding:0;background:var(--shop-soft)}
 .shop-shell .adm-tree .adm-menu li{padding:6px 8px 6px 6px}
+/* Yönetim › Tema ve Görünüm: renk seçici ve tema kartları. */
+.shop-shell .adm-colors{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.shop-shell .adm-colors>button{display:grid;place-items:center;width:36px;height:36px;padding:0;border:2px solid transparent;border-radius:var(--shop-radius);color:#fff;cursor:pointer;box-shadow:inset 0 0 0 1px rgb(0 0 0 / .1)}
+.shop-shell .adm-colors>button[aria-pressed=true]{border-color:var(--shop-ink)}
+.shop-shell .adm-colors>button svg{width:18px;height:18px}
+.shop-shell .adm-color-input{display:flex;align-items:center;gap:6px}
+.shop-shell .adm-color-input input[type=color]{width:40px;height:40px;padding:0;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:none;cursor:pointer}
+.shop-shell .adm-color-input input:not([type=color]){width:96px;min-height:40px;padding:0 10px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:14px}
+.shop-shell .adm-themes{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.shop-shell .adm-themes li{display:grid;grid-template-columns:140px minmax(0,1fr) auto;align-items:center;gap:14px;padding:12px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .adm-themes li.is-on{border-color:var(--shop-accent)}
+.shop-shell .adm-themes img{width:140px;height:88px;border-radius:var(--shop-radius);object-fit:cover;background:var(--shop-soft)}
+.shop-shell .adm-themes li>div{display:grid;gap:4px;min-width:0}
+.shop-shell .adm-themes b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px}
+.shop-shell .adm-themes small{color:var(--shop-muted);font-size:13px;line-height:1.5}
+@media (max-width:560px){.shop-shell .adm-themes li{grid-template-columns:96px minmax(0,1fr)}.shop-shell .adm-themes img{width:96px;height:64px}.shop-shell .adm-themes li .shop-button{grid-column:1/-1}}
