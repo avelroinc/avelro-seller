@@ -1,5 +1,5 @@
 {
-  "version": "1.0.121",
-  "notes": "- Ana sayfadaki Popüler Oyunlar oyun mağazası düzeninde: büyük kapaklı öne çıkan oyun (logo, teslim şekli, en ucuz üç paket ve Paketleri Gör), diğer oyunlar kapaklı kutucuklarda (kapak yoksa marka renginde zemin ve büyük silik logo, başlayan fiyat), sonda Tüm Oyunlar. Düzen oyun sayısına göre seçilir, boşluk kalmaz; telefonda öne çıkan oyun üstte, kutucuklar iki sütun.\n- Pulse teması 1.0.31.",
-  "publishedAt": "2026-10-19T11:03:36.484Z"
+  "version": "1.0.122",
+  "notes": "- Arama motoru düzenlemeleri: açıklaması girilmemiş sayfalara (ana sayfa, Hakkımızda, İletişim, Ücretsiz Araçlar, kategoriler, özel sayfalar) otomatik açıklama yazılır.\n- Kategori başlığı girilmemişse \"Instagram Türk Takipçi Satın Al\" biçiminde, E-Pin oyunlarında \"Metin2 E-Pin Satın Al\" biçiminde başlık kullanılır.\n- Hizmet sayfalarına ürün yapılandırılmış verisi eklendi: en düşük ve en yüksek fiyat, onaylı yorum varsa puan.\n- Tüm sayfalarda canonical adres, Open Graph ve Twitter etiketleri; paylaşım görseli yoksa varsayılan görsel tam adresle eklenir.\n- Makale verilerinde görsel tam adres, yazar ve yayıncı olarak şirket adı (mağaza adı kullanılmaz); blog yazısında yazar yoksa şirket adı.\n- Lisans ve ücretsiz deneme ürünlerinde marka olarak mağaza adı yazılmaz; E-Pin oyun ürününe açıklama ve görsel eklendi.\n- Ücretsiz araç sayfalarında Google hata veren yazılım uygulaması verisi yerine sayfa verisi kullanılır.\n- Site haritasına /lisans ve güncellenme tarihleri eklendi.\n- Misafir hizmet sayfasını açınca oluşan konsol hatası (401) giderildi.",
+  "publishedAt": "2026-10-19T14:09:10.617Z"
 }
