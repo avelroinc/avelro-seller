@@ -5408,3 +5408,20 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-editor .adm-tabs{margin-top:-4px}
 @media (max-width:980px){.shop-shell .adm-pages{grid-template-columns:minmax(0,1fr)}.shop-shell .adm-tree{position:static;max-height:420px}}
 .shop-shell .adm-detail-head .adm-head-actions{flex:none;flex-wrap:nowrap;align-items:center}
+.shop-shell .adm-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.shop-shell .adm-menu{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.shop-shell .adm-menu li{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .adm-menu li.is-hidden{opacity:.55}
+.shop-shell .adm-menu-move{display:grid;gap:2px}
+.shop-shell .adm-menu-move button{display:grid;place-items:center;width:28px;height:20px;padding:0;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink-2);cursor:pointer}
+.shop-shell .adm-menu-move button:disabled{opacity:.35;cursor:default}
+.shop-shell .adm-menu-move svg{width:13px;height:13px}
+.shop-shell .adm-menu-label{display:grid;flex:1;min-width:0}
+.shop-shell .adm-menu-label input{min-height:34px;padding:0 8px;border:1px solid transparent;border-radius:var(--shop-radius);background:transparent;color:var(--shop-ink);font:inherit;font-size:14.5px;font-weight:600}
+.shop-shell .adm-menu-label input:hover,.shop-shell .adm-menu-label input:focus{border-color:var(--shop-line-2);background:var(--shop-surface);outline:0}
+.shop-shell .adm-menu-label small{padding-left:9px;color:var(--shop-muted);font-size:12px}
+.shop-shell .adm-menu .adm-icon-btn{width:36px;height:36px}
+.shop-shell .adm-choice{display:flex;flex-wrap:wrap;gap:6px}
+.shop-shell .adm-choice button{min-height:36px;padding:0 12px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.shop-shell .adm-choice button:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+@media (max-width:980px){.shop-shell .adm-two{grid-template-columns:minmax(0,1fr)}}
