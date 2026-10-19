@@ -3967,12 +3967,14 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 }
 
 /* ===== spacing ===== */
-.shop-shell{--shop-rhythm:20px;--shop-heading-gap:14px}
+/* Bileşenler arası boşluk: ilişkili bloklar arasında --shop-rhythm, başlıklı bölümler arasında --shop-section-gap (2026-10-19'da
+   ikisi de iki katına çıktı: 20 → 40, 96 / 72 / 64). Ana sayfada bütün bölümler bölüm aralığıyla ayrılır. */
+.shop-shell{--shop-rhythm:40px;--shop-heading-gap:14px}
 @media (max-width:1000px){
- .shop-shell{--shop-rhythm:20px}
+ .shop-shell{--shop-rhythm:40px}
 }
 @media (max-width:760px){
- .shop-shell{--shop-rhythm:20px}
+ .shop-shell{--shop-rhythm:40px}
 }
 .shop-shell .sc-content-hero,.shop-shell .sc-about-page .sc-content-hero{margin-bottom:0}
 .shop-shell .sdx>.sdx-list,.shop-shell .sdx.is-empty>.sdx-empty,.shop-shell .scx-hero>.scx-layout,.shop-shell .scx-hero>.scx-empty,.shop-shell .scx-hero.is-empty>.scx-empty{margin-top:var(--shop-rhythm)!important}
@@ -3989,12 +3991,17 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 .shop-shell main>.sc-progress+.sth.sph.sc-content-hero{margin-top:0!important}
 .shop-shell main.lx-page.sc-flow>.sc-breadcrumb+*{margin-top:var(--shop-heading-gap)!important}
 .shop-shell main>.sc-breadcrumb:first-child,.shop-shell main>.sc-breadcrumb:first-of-type,.shop-shell .sa-wrap>.sc-breadcrumb:first-child{padding-top:14px}
-.shop-shell{--shop-section-gap:48px}
+.shop-shell{--shop-section-gap:96px}
+@media (max-width:1000px){
+ .shop-shell{--shop-section-gap:72px}
+}
 @media (max-width:760px){
- .shop-shell{--shop-section-gap:32px}
+ .shop-shell{--shop-section-gap:64px}
 }
 .shop-shell main>:not(script,style,link,template,[hidden])~:is(.sc-list-heading,:has(>:is(.shop-section-heading,header,.sph-points-title,.lic-quick-head,.sc-faq,.shop-zig-rows,.sc-article):first-child)):not(.sth,.sc-content-hero){margin-top:var(--shop-section-gap)!important}
 .shop-shell main{padding-bottom:var(--shop-section-gap)!important}
+.shop-shell main.shop-home>:not(script,style,link,template,[hidden])~:not(script,style,link,template,[hidden]){margin-top:var(--shop-section-gap)!important}
+.shop-shell main>:not(script,style,link,template,[hidden])~:has(>:is(.hd-lic-panel,.hd-head,.hd-sms-copy,.epc-side,.sms-side-info,.shop-deal-teaser-copy):first-child){margin-top:var(--shop-section-gap)!important}
 
 /* ===== home reviews ===== */
 .shop-shell .shr{position:relative;display:grid;gap:28px;margin:0;padding:40px 0 32px;border:1px solid var(--shop-line);border-radius:var(--shop-radius-lg,var(--shop-radius));background:radial-gradient(60% 70% at 50% 38%,color-mix(in srgb,var(--shop-accent) 9%,transparent),transparent 72%),var(--shop-soft,var(--shop-surface));overflow:hidden}
@@ -4224,7 +4231,7 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
  .shop-shell #hizli-siparis .shop-quick-track:not(.is-member)>.shop-button{grid-column:1/-1;width:100%;max-width:none}
 }
 /* E-Pin: oyun kartları (/e-pin ve ana sayfa), oyun sayfasında paket kutucukları ve satın alma kutusu. */
-.shop-shell .ep-page{display:grid;gap:28px;padding-bottom:56px}
+.shop-shell .ep-page{display:grid;gap:0;padding-bottom:56px}
 .shop-shell .ep-games{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
 .shop-shell .ep-game{position:relative;display:grid;grid-template-rows:auto 1fr;min-width:0;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);text-decoration:none;overflow:hidden;transition:border-color .15s,box-shadow .15s,transform .15s}
 .shop-shell .ep-game:hover{border-color:color-mix(in srgb,var(--shop-accent) 45%,var(--shop-line));box-shadow:var(--shop-shadow);transform:translateY(-2px)}
@@ -4355,9 +4362,9 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 .shop-shell .brand-logo svg{width:56%;height:56%}
 .shop-shell span.brand-logo>b{font-size:1em;font-weight:800;line-height:1}
 /* SMS Onay: solda (1) logolu uygulama kutuları, (2) ülke kartları ve nasıl çalışır; sağda yapışkan Numaralarım paneli. */
-.shop-shell .sms-page{display:grid;gap:28px;padding-bottom:56px}
-.shop-shell .sms-shop{display:grid;grid-template-columns:minmax(0,1fr) 360px;align-items:start;gap:28px}
-.shop-shell .sms-main{display:grid;gap:34px;min-width:0}
+.shop-shell .sms-page{display:grid;gap:0;padding-bottom:56px}
+.shop-shell .sms-shop{display:grid;grid-template-columns:minmax(0,1fr);gap:48px}
+.shop-shell .sms-main{display:grid;gap:56px;min-width:0}
 .shop-shell .sms-step{display:grid;gap:16px;min-width:0}
 .shop-shell .sms-step-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
 .shop-shell .sms-step-head h2,.shop-shell .sms-side-head h2,.shop-shell .sms-how h2{display:flex;align-items:center;gap:10px;margin:0;font-size:20px;line-height:1.3}
@@ -4414,54 +4421,115 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 .shop-shell .sms-how li span{display:grid;place-items:center;width:30px;height:30px;margin-bottom:4px;border-radius:50%;background:var(--shop-accent);color:var(--shop-on-accent);font-size:14px;font-weight:800}
 .shop-shell .sms-how li b{font-size:15px}
 .shop-shell .sms-how li p{margin:0;color:var(--shop-muted);font-size:13.5px;line-height:1.55}
-.shop-shell .sms-side{position:sticky;top:calc(var(--shop-header-h) + 16px);display:grid;gap:14px;padding:20px;border:1px solid var(--shop-line);border-top:4px solid var(--shop-accent);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow-lg)}
-.shop-shell .sms-side-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.shop-shell .sms-side-head h2{font-size:18px}
-.shop-shell .sms-side-head h2 svg{width:20px;height:20px;color:var(--shop-accent)}
-.shop-shell .sms-balance{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--shop-radius);background:var(--shop-tint);color:var(--shop-ink);font-size:13.5px;font-weight:800;text-decoration:none;font-variant-numeric:tabular-nums}
-.shop-shell .sms-balance svg{width:15px;height:15px;color:var(--shop-accent)}
-.shop-shell .sms-side-note{display:grid;gap:12px}
-.shop-shell .sms-side-note p,.shop-shell .sms-side-empty{margin:0;color:var(--shop-muted);font-size:14px}
-.shop-shell .sms-order{display:grid;gap:12px;padding-top:14px;border-top:1px solid var(--shop-line)}
-.shop-shell .sms-order header{display:flex;align-items:center;gap:10px}
-.shop-shell .sms-order header span{display:grid;flex:1;min-width:0}
-.shop-shell .sms-order header .brand-logo{display:grid;flex:none}
-.shop-shell .sms-order header b{font-size:15px}
-.shop-shell .sms-order header small{display:flex;align-items:center;gap:6px;color:var(--shop-muted);font-size:12.5px}
-.shop-shell .sms-order header small img{width:18px;height:12px;border-radius:1px;object-fit:cover}
-.shop-shell .sms-order time{display:inline-flex;align-items:center;gap:5px;color:var(--shop-ink-2);font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums}
+/* Numaralarım: giriş alanının altında yatay bant — solda başlık, bakiye ve güvenceler; ortada açık numaralar (ya da giriş / boş
+   durum); sağda aşağı kayan Son Numaralar şeridi. Telefonda bölümler alt alta. */
+.shop-shell .sms-side{display:grid;grid-template-columns:300px minmax(0,1fr);border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow);overflow:hidden}
+.shop-shell .sms-side.has-past{grid-template-columns:290px minmax(0,1fr) 330px}
+.shop-shell .sms-side>*{min-width:0;padding:24px}
+.shop-shell .sms-side>*+*{border-left:1px solid var(--shop-line)}
+.shop-shell .sms-side-info{display:grid;align-content:center;gap:16px;background:var(--shop-soft)}
+.shop-shell .sms-side-head{display:flex;align-items:center;gap:12px;min-width:0}
+.shop-shell .sms-side-badge{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:calc(var(--shop-radius) + 8px);background:var(--shop-accent-fill,var(--shop-accent));color:#fff;box-shadow:0 10px 20px -12px var(--shop-accent)}
+.shop-shell .sms-side-badge svg{width:22px;height:22px}
+.shop-shell .sms-side-head>span:last-child{display:grid;min-width:0}
+.shop-shell .sms-side-head h2{display:block;margin:0;font-size:18px;line-height:1.25}
+.shop-shell .sms-side-head small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .sms-balance{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);text-decoration:none;transition:border-color .15s}
+.shop-shell .sms-balance:hover{border-color:var(--shop-accent)}
+.shop-shell .sms-balance>span{display:grid;line-height:1.2}
+.shop-shell .sms-balance small{color:var(--shop-muted);font-size:12px}
+.shop-shell .sms-balance b{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.shop-shell .sms-balance em{display:inline-flex;align-items:center;gap:4px;padding:6px 10px;border-radius:999px;background:var(--shop-tint);color:var(--shop-accent);font-size:12.5px;font-style:normal;font-weight:800}
+.shop-shell .sms-balance em svg{width:14px;height:14px}
+.shop-shell .sms-points{display:grid;gap:10px;margin:0;padding:14px 0 0;border-top:1px dashed var(--shop-line-2);list-style:none}
+.shop-shell .sms-points li{display:flex;align-items:flex-start;gap:8px;color:var(--shop-ink-2);font-size:13px;line-height:1.45}
+.shop-shell .sms-points svg{flex:none;width:16px;height:16px;margin-top:1px;color:var(--shop-good)}
+.shop-shell .sms-side-body{display:grid;align-content:center;background:var(--shop-surface);container-type:inline-size}
+.shop-shell .sms-side-icon{display:grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .sms-side-icon svg{width:24px;height:24px}
+/* Açık numara yokken (ve misafirde) orta alan: durum satırı ve Hızlı Başla — popüler altı uygulama; dokununca ülkelere iner. */
+.shop-shell .sms-start{display:grid;gap:18px}
+.shop-shell .sms-start-head{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+.shop-shell .sms-start-head p{display:grid;gap:2px;flex:1 1 240px;margin:0}
+.shop-shell .sms-start-head b{color:var(--shop-ink);font-size:16px}
+.shop-shell .sms-start-head small{color:var(--shop-muted);font-size:13.5px;line-height:1.5}
+.shop-shell .sms-start-head .shop-button{min-height:46px;padding:0 24px}
+.shop-shell .sms-quick{display:grid;gap:10px;padding-top:16px;border-top:1px dashed var(--shop-line-2)}
+.shop-shell .sms-quick>small{color:var(--shop-muted);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .sms-quick>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.shop-shell .sms-quick button{display:flex;align-items:center;gap:10px;min-width:0;min-height:50px;padding:0 12px 0 9px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:13.5px;font-weight:700;text-align:left;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s}
+.shop-shell .sms-quick button span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .sms-quick button:hover{border-color:var(--shop-accent);box-shadow:var(--shop-shadow);transform:translateY(-2px)}
+.shop-shell .sms-quick button.is-on{border-color:var(--shop-accent);background:var(--shop-tint)}
+.shop-shell #sms-countries{scroll-margin-top:calc(var(--shop-header-h) + 32px)}
+@media (max-width:560px){.shop-shell .sms-quick>div{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .sms-start-head .shop-button{flex:1 1 100%;justify-content:center}}
+.shop-shell .sms-open{display:grid;gap:12px}
+.shop-shell .sms-order{display:grid;gap:12px;padding:16px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-canvas)}
+.shop-shell .sms-order.has-code{border-color:color-mix(in srgb,var(--shop-good) 45%,var(--shop-line))}
+.shop-shell .sms-order header{display:flex;align-items:center;gap:12px;min-width:0}
+.shop-shell .sms-order header>span:not(.brand-logo){display:grid;flex:1;min-width:0}
+.shop-shell .sms-order header b{font-size:15.5px}
+.shop-shell .sms-order header small{display:flex;align-items:center;gap:6px;min-width:0;color:var(--shop-muted);font-size:12.5px}
+.shop-shell .sms-order header small img{flex:none;width:18px;height:12px;border-radius:1px;object-fit:cover}
+.shop-shell .sms-order time{display:inline-flex;flex:none;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:var(--shop-soft);color:var(--shop-ink-2);font-size:13.5px;font-weight:800;font-variant-numeric:tabular-nums}
 .shop-shell .sms-order time svg{width:14px;height:14px}
-.shop-shell .sms-order time.is-late{color:var(--shop-bad)}
-.shop-shell .sms-phone,.shop-shell .sms-code{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:12px 14px;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer}
-.shop-shell .sms-phone span{font-size:20px;font-weight:800;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.shop-shell .sms-order time.is-late{background:color-mix(in srgb,var(--shop-bad) 12%,transparent);color:var(--shop-bad)}
+.shop-shell .sms-order-main{display:grid;gap:10px;min-width:0}
+.shop-shell .sms-phone,.shop-shell .sms-code{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-width:0;min-height:62px;padding:10px 14px;border:0;border-radius:var(--shop-radius);background:var(--shop-soft);color:var(--shop-ink);font:inherit;text-align:left;cursor:pointer;transition:box-shadow .15s}
+.shop-shell .sms-phone:hover,.shop-shell .sms-code:hover{box-shadow:inset 0 0 0 1px var(--shop-accent)}
+.shop-shell .sms-phone span{min-width:0;overflow:hidden;font-size:20px;font-weight:800;letter-spacing:.02em;text-overflow:ellipsis;white-space:nowrap;font-variant-numeric:tabular-nums}
 .shop-shell .sms-phone svg,.shop-shell .sms-code svg{flex:none;width:17px;height:17px;color:var(--shop-accent)}
-.shop-shell .sms-code{display:grid;grid-template-columns:1fr auto;background:color-mix(in srgb,var(--shop-good) 12%,var(--shop-surface))}
-.shop-shell .sms-code small{grid-column:1/-1;color:var(--shop-good);font-size:12px;font-weight:700}
-.shop-shell .sms-code b{font-size:30px;letter-spacing:.12em;font-variant-numeric:tabular-nums}
+.shop-shell .sms-code{display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:center;gap:0 10px;background:color-mix(in srgb,var(--shop-good) 12%,var(--shop-surface))}
+.shop-shell .sms-code small{grid-column:1/-1;color:var(--shop-good);font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.shop-shell .sms-code b{font-size:26px;line-height:1.2;letter-spacing:.14em;font-variant-numeric:tabular-nums}
 .shop-shell .sms-code svg{color:var(--shop-good)}
-.shop-shell .sms-wait{display:flex;align-items:center;gap:10px;margin:0;color:var(--shop-muted);font-size:13.5px}
+.shop-shell .sms-wait{display:flex;align-items:center;gap:10px;min-height:62px;margin:0;padding:10px 14px;border:1px dashed var(--shop-line-2);border-radius:var(--shop-radius);color:var(--shop-muted);font-size:13.5px}
 .shop-shell .sms-wait svg{flex:none;width:18px;height:18px;color:var(--shop-accent)}
 .shop-shell .sms-text{margin:0;color:var(--shop-muted);font-size:12.5px;overflow-wrap:anywhere}
-.shop-shell .sms-order-actions .shop-button{width:100%;min-height:44px}
-.shop-shell .sms-past{display:grid;gap:10px;padding-top:14px;border-top:1px solid var(--shop-line)}
-.shop-shell .sms-past h3{margin:0;font-size:14px}
-.shop-shell .sms-past ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-.shop-shell .sms-past li{display:flex;align-items:center;gap:10px}
-.shop-shell .sms-past li>span:nth-child(2){display:grid;flex:1;min-width:0}
-.shop-shell .sms-past b{overflow:hidden;font-size:13.5px;text-overflow:ellipsis;white-space:nowrap}
-.shop-shell .sms-past small{color:var(--shop-muted);font-size:12px;font-variant-numeric:tabular-nums}
-.shop-shell .sms-past-state{display:inline-flex;align-items:center;gap:4px;flex:none;font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.shop-shell .sms-order-actions .shop-button{width:100%;min-height:46px}
+@container (min-width:520px){
+ .shop-shell .sms-order-main{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@container (min-width:700px){
+ .shop-shell .sms-order{grid-template-columns:minmax(0,1fr) 190px;align-items:center;column-gap:16px}
+ .shop-shell .sms-order>header,.shop-shell .sms-order>.sms-text{grid-column:1/-1}
+ .shop-shell .sms-order>.sms-order-main{grid-column:1}
+ .shop-shell .sms-order>.sms-order-actions{grid-column:2;grid-row:2}
+ .shop-shell .sms-order-actions .shop-button{min-height:62px}
+}
+.shop-shell .sms-past{display:grid;align-content:start;gap:12px}
+.shop-shell .sms-past-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.shop-shell .sms-past h3{margin:0;font-size:15px}
+.shop-shell .sms-past-all{display:inline-flex;align-items:center;gap:5px;color:var(--shop-accent);font-size:13px;font-weight:800;text-decoration:none}
+.shop-shell .sms-past-all svg{width:14px;height:14px;transition:transform .15s}
+.shop-shell .sms-past-all:hover svg{transform:translateX(3px)}
+.shop-shell .sms-ticker{--row:58px;--gap:8px;position:relative;height:calc(var(--row) * 3 + var(--gap) * 2);overflow:hidden}
+.shop-shell .sms-ticker ul{display:grid;grid-auto-rows:var(--row);gap:var(--gap);margin:0;padding:0;list-style:none}
+.shop-shell .sms-ticker ul.is-slide{animation:sms-tick .65s cubic-bezier(.22,.8,.3,1)}
+.shop-shell .sms-ticker ul.is-slide>li:first-child{animation:sms-tick-in .65s ease}
+@keyframes sms-tick{from{transform:translateY(calc((var(--row) + var(--gap)) * -1))}to{transform:none}}
+@keyframes sms-tick-in{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.shop-shell .sms-ticker ul.is-slide,.shop-shell .sms-ticker ul.is-slide>li:first-child{animation:none}}
+.shop-shell .sms-ticker li{display:flex;align-items:center;gap:10px;min-width:0;padding:0 12px 0 10px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .sms-ticker li>span:nth-child(2){display:grid;flex:1;min-width:0}
+.shop-shell .sms-ticker b{overflow:hidden;font-size:13.5px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .sms-ticker small{overflow:hidden;color:var(--shop-muted);font-size:12px;text-overflow:ellipsis;white-space:nowrap;font-variant-numeric:tabular-nums}
+.shop-shell .sms-past-state{display:inline-flex;align-items:center;gap:4px;flex:none;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:800;font-variant-numeric:tabular-nums}
 .shop-shell .sms-past-state svg{width:13px;height:13px}
-.shop-shell .sms-past-state.is-ok{color:var(--shop-good)}
-.shop-shell .sms-past-state.is-back{color:var(--shop-warn)}
-.shop-shell .sms-past-state.is-x{color:var(--shop-faint)}
-.shop-shell .sms-past-all{display:inline-flex;align-items:center;gap:6px;color:var(--shop-accent);font-size:13.5px;font-weight:700;text-decoration:none}
-.shop-shell .sms-past-all svg{width:15px;height:15px}
-.shop-shell .sms-points{display:grid;gap:8px;margin:0;padding:14px 0 0;border-top:1px solid var(--shop-line);list-style:none}
-.shop-shell .sms-points li{display:flex;align-items:center;gap:8px;color:var(--shop-ink-2);font-size:13px}
-.shop-shell .sms-points svg{flex:none;width:16px;height:16px;color:var(--shop-good)}
+.shop-shell .sms-past-state.is-ok{background:color-mix(in srgb,var(--shop-good) 12%,transparent);color:var(--shop-good)}
+.shop-shell .sms-past-state.is-back{background:color-mix(in srgb,var(--shop-warn) 14%,transparent);color:var(--shop-warn)}
+.shop-shell .sms-past-state.is-x{background:var(--shop-soft);color:var(--shop-faint)}
+@media (max-width:1180px){
+ .shop-shell .sms-side.has-past{grid-template-columns:280px minmax(0,1fr)}
+ .shop-shell .sms-side.has-past>.sms-past{grid-column:1/-1;border-left:0;border-top:1px solid var(--shop-line)}
+}
+@media (max-width:860px){
+ .shop-shell .sms-side,.shop-shell .sms-side.has-past{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .sms-side>*+*{border-left:0;border-top:1px solid var(--shop-line)}
+ .shop-shell .sms-side>*{padding:18px}
+}
 @media (max-width:1280px){.shop-shell .sms-apps{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:1080px){.shop-shell .sms-shop{grid-template-columns:minmax(0,1fr)}.shop-shell .sms-side{position:static}.shop-shell .sms-shop.has-open .sms-side{order:-1}.shop-shell .sms-apps{grid-template-columns:repeat(6,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:1080px){.shop-shell .sms-apps{grid-template-columns:repeat(6,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:860px){.shop-shell .sms-apps{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .sms-how ol{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:560px){
  .shop-shell .sms-apps{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
@@ -4477,7 +4545,6 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
  .shop-shell .sms-card .sms-buy{grid-area:buy}
  .shop-shell .sms-card.is-ghost{min-height:118px}
  .shop-shell .sms-search{width:100%}
- .shop-shell .sms-side{padding:16px}
 }
 /* E-Pin ana sayfası: solda süzgeçler (yapışkan), sağda oyun satırları. Telefonda süzgeçler yatay kaydırılan şeritler olur. */
 .shop-shell .epc{display:grid;grid-template-columns:270px minmax(0,1fr);align-items:start;gap:28px}
@@ -4855,3 +4922,136 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 }
 /* Yatay kaydırılan hesap menüsünde (dar ekran) grup başlıkları gizli. */
 @media (max-width:1080px){.shop-shell .sa-nav .sa-nav-group{display:none}}
+/* Ana sayfa dijital ürün bölümleri: Lisans vitrini, E-Pin oyun kartları, SMS Onay kayan logo şeridi. */
+.shop-shell .hd-eyebrow{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:color-mix(in srgb,var(--shop-accent) 12%,transparent);color:var(--shop-accent);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .hd-eyebrow svg{width:14px;height:14px}
+.shop-shell .hd-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px}
+.shop-shell .hd-head>div{display:grid;justify-items:start;gap:10px;max-width:640px}
+.shop-shell .hd-head h2,.shop-shell .hd-sms h2{margin:0;font-family:var(--shop-display);font-size:clamp(28px,3.2vw,40px);line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
+.shop-shell .hd-head p,.shop-shell .hd-sms-copy p{margin:0;color:var(--shop-muted);font-size:15.5px}
+.shop-shell .hd-sms h2 em,.shop-shell .hd-lic-panel h2 em{color:var(--shop-accent);font-style:normal}
+/* Lisans vitrini */
+.shop-shell .hd-lic{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:16px;align-items:stretch}
+.shop-shell .hd-lic-panel{position:relative;display:grid;align-content:start;justify-items:start;gap:16px;padding:32px 28px;border-radius:var(--shop-radius);background:linear-gradient(150deg,var(--shop-accent-fill,var(--shop-accent)),color-mix(in srgb,var(--shop-accent-fill,var(--shop-accent)) 70%,#000));color:#fff;overflow:hidden}
+.shop-shell .hd-lic-panel::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:rgb(255 255 255 / .08);pointer-events:none}
+.shop-shell .hd-lic-panel .hd-eyebrow{background:rgb(255 255 255 / .16);color:#fff}
+.shop-shell .hd-lic-panel h2{margin:0;font-family:var(--shop-display);font-size:clamp(26px,2.6vw,34px);line-height:1.15;letter-spacing:-.02em}
+.shop-shell .hd-lic-panel h2 em{color:#fff;opacity:.78}
+.shop-shell .hd-lic-panel p{margin:0;color:rgb(255 255 255 / .82);font-size:14.5px}
+.shop-shell .hd-lic-panel ul{display:grid;gap:12px;margin:4px 0 0;padding:0;list-style:none}
+.shop-shell .hd-lic-panel li{display:flex;align-items:center;gap:12px}
+.shop-shell .hd-lic-panel li>svg{flex:none;width:36px;height:36px;padding:9px;border-radius:var(--shop-radius);background:rgb(255 255 255 / .14)}
+.shop-shell .hd-lic-panel li span{display:grid}
+.shop-shell .hd-lic-panel li b{font-size:14px}
+.shop-shell .hd-lic-panel li small{color:rgb(255 255 255 / .72);font-size:12.5px}
+.shop-shell .hd-lic-all{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;min-height:46px;margin-top:6px;padding:0 20px;border-radius:var(--shop-radius);background:#fff;color:var(--shop-accent-fill,var(--shop-accent));font-size:14.5px;font-weight:800;text-decoration:none;transition:transform .15s}
+.shop-shell .hd-lic-all svg{width:17px;height:17px}
+.shop-shell .hd-lic-all:hover{transform:translateX(3px)}
+.shop-shell .hd-lic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.shop-shell .hd-lic-card{display:grid;grid-template-rows:auto auto 1fr auto;gap:6px;min-width:0;padding:18px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink);text-decoration:none;transition:border-color .15s,box-shadow .15s,transform .15s}
+.shop-shell .hd-lic-card:hover{border-color:color-mix(in srgb,var(--shop-accent) 45%,var(--shop-line));box-shadow:var(--shop-shadow);transform:translateY(-3px)}
+.shop-shell .hd-lic-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.shop-shell .hd-lic-img{width:48px;height:48px;border-radius:calc(var(--shop-radius) + 6px);object-fit:cover;box-shadow:0 0 0 1px var(--shop-line)}
+.shop-shell .hd-off,.shop-shell .hd-badge{padding:3px 8px;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--shop-good) 13%,transparent);color:var(--shop-good);font-size:12px;font-style:normal;font-weight:800}
+.shop-shell .hd-badge{background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .hd-lic-card small{color:var(--shop-muted);font-size:12.5px}
+.shop-shell .hd-lic-card>b{display:-webkit-box;overflow:hidden;font-size:15.5px;line-height:1.35;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.shop-shell .hd-lic-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-top:10px;padding-top:12px;border-top:1px dashed var(--shop-line-2)}
+.shop-shell .hd-price{display:grid;line-height:1.15}
+.shop-shell .hd-price s{color:var(--shop-faint);font-size:12.5px}
+.shop-shell .hd-price strong{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}
+.shop-shell .hd-buy{display:inline-flex;align-items:center;gap:5px;color:var(--shop-accent);font-size:13.5px;font-weight:800;white-space:nowrap}
+.shop-shell .hd-buy svg{width:15px;height:15px;transition:transform .15s}
+.shop-shell .hd-lic-card:hover .hd-buy svg{transform:translateX(3px)}
+.shop-shell .hd-lic-card.is-out{opacity:.7}
+.shop-shell .hd-lic-card.is-out .hd-buy{color:var(--shop-faint)}
+/* E-Pin oyun kartları */
+.shop-shell .hd-ep{display:grid;gap:22px}
+.shop-shell .hd-tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.shop-shell .hd-tabs::-webkit-scrollbar{display:none}
+.shop-shell .hd-tabs button{flex:none;min-height:40px;padding:0 16px;border:1px solid var(--shop-line-2);border-radius:999px;background:var(--shop-surface);color:var(--shop-ink-2);font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.shop-shell .hd-tabs button:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
+.shop-shell .hd-tabs button.is-on{border-color:var(--shop-accent);background:var(--shop-accent);color:var(--shop-on-accent)}
+.shop-shell .hd-ep-grid{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:12px}
+.shop-shell .hd-ep-card{display:grid;grid-template-rows:auto 1fr auto;min-width:0;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);overflow:hidden;transition:border-color .15s,box-shadow .15s,transform .15s}
+.shop-shell .hd-ep-card:hover{border-color:color-mix(in srgb,var(--shop-accent) 40%,var(--shop-line));box-shadow:var(--shop-shadow);transform:translateY(-3px)}
+.shop-shell .hd-ep-head{display:flex;align-items:center;gap:12px;padding:16px;color:var(--shop-ink);text-decoration:none}
+.shop-shell .hd-ep-head>img{flex:none;width:52px;height:52px;border-radius:calc(var(--shop-radius) + 6px);object-fit:cover;box-shadow:0 0 0 1px var(--shop-line)}
+.shop-shell .hd-ep-head>span:last-child{display:grid;min-width:0}
+.shop-shell .hd-ep-head b{overflow:hidden;font-size:16px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .hd-ep-head small{display:flex;align-items:center;gap:4px;color:var(--shop-muted);font-size:12.5px}
+.shop-shell .hd-ep-head small svg{width:13px;height:13px;color:var(--shop-accent)}
+.shop-shell .hd-ep-card ul{display:grid;align-content:start;margin:0;padding:0 16px;list-style:none}
+.shop-shell .hd-ep-card li a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:40px;border-top:1px solid var(--shop-line);color:var(--shop-ink-2);font-size:13.5px;font-weight:600;text-decoration:none}
+.shop-shell .hd-ep-card li a span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .hd-ep-card li a strong{flex:none;color:var(--shop-ink);font-size:14px;font-weight:800;font-variant-numeric:tabular-nums}
+.shop-shell .hd-ep-card li a:hover span{color:var(--shop-accent)}
+.shop-shell .hd-ep-more{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;margin-top:10px;background:var(--shop-soft);color:var(--shop-accent);font-size:14px;font-weight:800;text-decoration:none;transition:background .15s,color .15s}
+.shop-shell .hd-ep-more svg{width:16px;height:16px}
+.shop-shell .hd-ep-more:hover{background:var(--shop-accent);color:var(--shop-on-accent)}
+/* SMS Onay: üstte tanıtım ve adımlar, altında karşılıklı kayan iki sıra logo */
+.shop-shell .hd-sms{display:grid;gap:28px;padding-block:44px;border-radius:var(--shop-radius);background:linear-gradient(180deg,var(--shop-band),transparent);overflow:hidden}
+.shop-shell .hd-sms-copy{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:24px 36px}
+.shop-shell .hd-sms-copy>div{display:grid;justify-items:start;gap:10px;max-width:560px}
+.shop-shell .hd-sms-copy ol{display:flex;gap:10px;margin:0;padding:0;list-style:none;counter-reset:hd-step}
+.shop-shell .hd-sms-copy li{display:grid;justify-items:center;gap:8px;min-width:96px;text-align:center;counter-increment:hd-step}
+.shop-shell .hd-sms-copy li span{position:relative;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--shop-surface);color:var(--shop-accent);box-shadow:var(--shop-shadow)}
+.shop-shell .hd-sms-copy li span::after{content:counter(hd-step);position:absolute;top:-4px;right:-4px;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--shop-accent);color:var(--shop-on-accent);font-size:11px;font-weight:800}
+.shop-shell .hd-sms-copy li svg{width:22px;height:22px}
+.shop-shell .hd-sms-copy li b{font-size:13px}
+.shop-shell .hd-sms-copy .shop-button{min-height:48px;white-space:nowrap}
+.shop-shell .hd-sms-rows{display:grid;gap:12px;margin-inline:calc(var(--shop-gutter) * -1);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.shop-shell .hd-marquee{overflow:hidden}
+.shop-shell .hd-marquee-track{display:flex;gap:12px;width:max-content;animation:hd-marquee calc(var(--n) * 3.2s) linear infinite}
+.shop-shell .hd-marquee.is-reverse .hd-marquee-track{animation-direction:reverse}
+.shop-shell .hd-marquee:hover .hd-marquee-track{animation-play-state:paused}
+@keyframes hd-marquee{to{transform:translateX(calc(-50% - 6px))}}
+@media (prefers-reduced-motion:reduce){.shop-shell .hd-marquee-track{animation:none}.shop-shell .hd-marquee{overflow-x:auto;scrollbar-width:none}}
+.shop-shell .hd-app{display:flex;align-items:center;gap:10px;padding:10px 18px 10px 10px;border:1px solid var(--shop-line);border-radius:999px;background:var(--shop-surface);color:var(--shop-ink);text-decoration:none;white-space:nowrap;transition:border-color .15s,box-shadow .15s}
+.shop-shell .hd-app .brand-logo{border-radius:50%}
+.shop-shell .hd-app b{font-size:14.5px}
+.shop-shell .hd-app:hover{border-color:var(--shop-accent);box-shadow:var(--shop-shadow)}
+@media (max-width:1180px){.shop-shell .hd-ep-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.shop-shell .hd-sms-copy{grid-template-columns:minmax(0,1fr) auto}.shop-shell .hd-sms-copy ol{grid-column:1/-1;grid-row:2}}
+@media (max-width:1020px){.shop-shell .hd-lic{grid-template-columns:minmax(0,1fr)}.shop-shell .hd-lic-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.shop-shell .hd-ep-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){
+ .shop-shell .hd-lic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .shop-shell .hd-lic-card{padding:14px}
+ .shop-shell .hd-lic-panel{padding:24px 20px}
+ .shop-shell .hd-sms{padding-block:32px}
+ .shop-shell .hd-sms-copy{grid-template-columns:minmax(0,1fr)}
+ .shop-shell .hd-sms-copy ol{grid-row:auto;justify-content:space-between}
+ .shop-shell .hd-sms-copy li{min-width:0;flex:1}
+ .shop-shell .hd-sms-copy .shop-button{justify-self:stretch}
+}
+@media (max-width:560px){
+ .shop-shell .hd-ep-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;margin-inline:calc(var(--shop-gutter) * -1);padding:0 var(--shop-gutter) 6px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--shop-gutter);scrollbar-width:none}
+ .shop-shell .hd-ep-grid::-webkit-scrollbar{display:none}
+ .shop-shell .hd-ep-card{scroll-snap-align:start}
+ .shop-shell .hd-ep-card:hover{transform:none}
+ .shop-shell .hd-head .shop-button{width:100%}
+ .shop-shell .hd-lic-foot{flex-wrap:wrap}
+ .shop-shell .hd-app{padding:8px 14px 8px 8px}
+}
+/* Tek parça makale (ana sayfa, E-Pin, oyun ve SMS Onay): başlık ve okuma süresi, uzun metin kesilip soluklaşır, Devamını Gör açar. */
+.shop-shell .sc-more-article{display:grid;gap:22px}
+.shop-shell .sc-page>.sc-more-article{max-width:none;padding-inline:0}
+.shop-shell .sc-more-article>header{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.shop-shell .sc-more-article>header>div{display:grid;justify-items:start;gap:10px;max-width:760px}
+.shop-shell .sc-more-article>header h2{margin:0;font-family:var(--shop-display);font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.02em;text-wrap:balance}
+.shop-shell .sc-more-article>header small{display:inline-flex;align-items:center;gap:6px;color:var(--shop-muted);font-size:13px}
+.shop-shell .sc-more-article>header img{flex:none;width:min(320px,36%);aspect-ratio:16/10;border-radius:var(--shop-radius);object-fit:cover}
+.shop-shell .sc-more{position:relative;padding:28px 32px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface)}
+.shop-shell .sc-more-body{max-height:440px;overflow:hidden}
+.shop-shell .sc-more.is-open .sc-more-body{max-height:none}
+.shop-shell .sc-more.is-long:not(.is-open) .sc-more-body{-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent);mask-image:linear-gradient(180deg,#000 62%,transparent)}
+.shop-shell .sc-more .sc-prose{max-width:860px}
+.shop-shell .sc-more-foot{display:flex;justify-content:center;padding-top:16px}
+.shop-shell .sc-more-button{min-height:44px}
+.shop-shell .sc-more-button svg{width:17px;height:17px;transition:transform .2s}
+.shop-shell .sc-more.is-open .sc-more-button svg{transform:rotate(180deg)}
+@media (max-width:720px){.shop-shell .sc-more{padding:20px 18px}.shop-shell .sc-more-article>header img{display:none}.shop-shell .sc-more-body{max-height:380px}}
+.shop-shell .hd-lic-panel h2{color:#fff}
+.shop-shell .hd-lic-card.is-more{grid-template-rows:none;align-content:center;justify-items:center;gap:8px;border-style:dashed;background:var(--shop-soft);text-align:center}
+.shop-shell .hd-lic-card.is-more>svg{width:44px;height:44px;padding:11px;border-radius:50%;background:var(--shop-tint);color:var(--shop-accent)}
+.shop-shell .hd-lic-card.is-more .hd-buy{margin-top:4px}
+.shop-shell .sms-step-head h2{scroll-margin-top:calc(var(--shop-header-h) + 32px)}

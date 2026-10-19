@@ -25,6 +25,12 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.28
+
+- Ana sayfa: lisans vitrini, E-Pin oyun kartları, SMS Onay kayan logo şeridi; tek parça makale kutusu (Devamını Gör).
+- SMS Onay: yatay Numaralarım bandı, Hızlı Başla, aşağı kayan Son Numaralar şeridi.
+- Bileşenler arası boşluk iki katı (--shop-rhythm 40, --shop-section-gap 96 / 72 / 64).
+
 ### 1.0.27
 
 - SMS Onay: logolu uygulama kutuları, ülke kartları (teslim oranı çubuğu, stok, fiyat), Nasıl Çalışır adımları ve yenilenen
