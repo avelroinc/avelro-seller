@@ -5747,3 +5747,12 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 @media (min-width:900px){.shop-shell .adm-mods .adm-rows{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .adm-mods .adm-rows>li:last-child:nth-child(odd){grid-column:1/-1}}
 .shop-shell .adm-two>:only-child{grid-column:1/-1}
 .shop-shell .adm-editor-foot{align-items:center}
+/* Ayarlar menüsü konu gruplarıyla (Hesap, Ödeme, Bağlantılar, Sistem): masaüstünde alt alta, dar ekranda yan yana sütunlar, telefonda grup başına iki sütun. */
+.shop-shell .adm-groups.adm-groups-sets{display:grid;gap:12px;align-content:start}
+.shop-shell .adm-groups-set{display:grid;gap:2px}
+.shop-shell .adm-groups-set>small{padding:6px 10px 4px;color:var(--shop-muted);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:980px){.shop-shell .adm-pages>.adm-groups.adm-groups-sets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;max-height:none}.shop-shell .adm-groups-set{align-content:start}.shop-shell .adm-groups-set>button{flex:none}}
+@media (max-width:760px){.shop-shell .adm-pages>.adm-groups.adm-groups-sets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.shop-shell .adm-pages>.adm-groups.adm-groups-sets{grid-template-columns:minmax(0,1fr)}.shop-shell .adm-groups-set{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .adm-groups-set>small{grid-column:1/-1}.shop-shell .adm-pages>.adm-groups-sets .adm-groups-set>button:last-child:nth-child(odd){grid-column:auto}.shop-shell .adm-pages>.adm-groups-sets .adm-groups-set>button:last-child:nth-child(even){grid-column:1/-1}}
+/* Yönetim telefon menüsü: bölüm kartlarının alt yazısı tek satır (kartlar eşit boy). */
+.shop-shell.shop-admin .shop-mfull-kinds small{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:0}.shop-shell.shop-admin .shop-mfull-kinds a>span:not(:first-child):not(:last-child),.shop-shell.shop-admin .shop-mfull-kinds a>div{min-width:0}
