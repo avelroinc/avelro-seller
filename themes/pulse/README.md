@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.38
+
+- Yönetim paneli bileşenleri: boş durum (simge, başlık, ilk adım düğmesi), baş harfli avatar, simgeli özet kutusu, sipariş adım çubuğu, mini özet ve bilgi satırları, profil başlığı, güne göre zaman çizelgesi; güncelleme durum kutuları ve tema sürüm satırı; çerçeveli uyarı.
+
 ### 1.0.37
 
 - Yönetim paneli: tek kontrol yüksekliği (düğme, giriş kutusu, seçim, arama, sekme, menü öğesi ve başlık düğmeleri 44 px; başlık şeritleri 52 px); araç satırındaki sayaç / durum yazıları ve sayfa numarası çerçeveli etiket.
