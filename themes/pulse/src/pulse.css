@@ -5931,3 +5931,8 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .sa-shopier-products{display:grid;gap:8px}
 .shop-shell .sa-shopier-products .shop-button{justify-content:flex-start}
 .shop-shell .sa-shopier-products .shop-button em{margin-left:auto;font-style:normal;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Bakiye Yükle: üç yöntem (Kartla, Fast, Shopier) varsa geniş ekranda tek satır, telefonda alt alta; satırda yalnız kalan kutu olmaz. */
+.shop-shell .sa-methods:has(>button:nth-child(3)){grid-template-columns:repeat(3,minmax(0,1fr))}
+.shop-shell .sa-methods:has(>button:nth-child(3)) button{gap:8px;padding:0 12px}
+@media (max-width:640px){.shop-shell .sa-methods:has(>button:nth-child(3)){grid-template-columns:minmax(0,1fr)}}
