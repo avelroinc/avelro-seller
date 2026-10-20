@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.40
+
+- Yönetim paneli: düğmeli satırlar (Shopier ile Bakiye, eşleşmeyen ödemeler) telefonda düğmeleri alt satıra alır.
+
 ### 1.0.39
 
 - Hesap › Bakiye Yükle: Shopier ile Öde yöntemi (adım listesi ve ödeme düğmesi); üç ödeme yöntemi geniş ekranda tek satır, telefonda alt alta.
