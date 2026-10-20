@@ -5924,3 +5924,10 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .adm-avatar{color:color-mix(in srgb,var(--av) 68%,#000)}.shop-shell[data-shop-scheme=dark] .adm-avatar{color:color-mix(in srgb,var(--av) 55%,#fff)}
 .shop-shell.shop-admin .adm-fields-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .shop-shell .adm-block{align-content:start}
+/* Bakiye Yükle › Shopier ile Öde: adımlar, bakiye kodu ve Shopier'deki bakiye paketleri. */
+.shop-shell .sa-steps-list{display:grid;gap:8px;margin:0;padding:0;list-style:none;counter-reset:sa-step}
+.shop-shell .sa-steps-list li{position:relative;padding-left:34px;color:var(--shop-ink-2);font-size:14px;line-height:1.5;counter-increment:sa-step}
+.shop-shell .sa-steps-list li::before{content:counter(sa-step);position:absolute;left:0;top:0;display:grid;place-items:center;width:24px;height:24px;border-radius:var(--shop-radius);background:var(--shop-tint);color:var(--shop-accent);font-size:12px;font-weight:800}
+.shop-shell .sa-shopier-products{display:grid;gap:8px}
+.shop-shell .sa-shopier-products .shop-button{justify-content:flex-start}
+.shop-shell .sa-shopier-products .shop-button em{margin-left:auto;font-style:normal;font-weight:700;font-variant-numeric:tabular-nums}
