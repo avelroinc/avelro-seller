@@ -1,5 +1,5 @@
 {
-  "version": "1.0.128",
-  "notes": "- Yönetim panelinde bütün düğmeler, giriş kutuları, seçimler, arama kutuları, sekmeler ve menü öğeleri aynı boyda (44 px); başlık şeritleri eşit yükseklikte.\n- Çerçeve dışında yazı kalmadı: sayaç ve durum yazıları ile sayfa numarası düğmelerle aynı boyda çerçeveli etiket; açıklama cümleleri sayaçla ya da liste başlığıyla değişti.\n- Ayarlar: Ödeme Yöntemleri, E-Fatura ve Giriş Doğrulama listeleri kendi başlıklarıyla tek kutuda.\n- Pulse teması 1.0.37.",
-  "publishedAt": "2026-10-20T08:17:59.915Z"
+  "version": "1.0.129",
+  "notes": "- Tema güncellemesi panelde: her temada kurulu ve son sürüm yazar; yeni sürüm varsa kullanılan temada da Güncelle düğmesi çıkar.\n- Sistem güncellemesi yeni tema getirdiyse sitedeki tema kendiliğinden yükseltilir; panelin yeni görünümü güncellemeden hemen sonra gelir.\n- Güncelleme ekranı: Sırada, Güncelleniyor, Tamamlandı ve Hata durumları mesajıyla; güncelleyici çalışmıyorsa ne yapılacağını söyleyen uyarı; Yeniden Denetle.\n- Modüller: yeni sürümü olan modülde Güncelle düğmesi ve Güncellemeleri Denetle.\n- Yeni bileşenler: boş ekranlarda simgeli yönlendirme ve ilk adım düğmesi, kişilerde renkli avatar, konusunun simgesiyle özet kutuları, siparişte adım çubuğu, müşteri kartında profil başlığı ve mini özet, İşlem Geçmişi güne göre zaman çizelgesi.\n- Pulse teması 1.0.38.",
+  "publishedAt": "2026-10-20T09:25:24.871Z"
 }
