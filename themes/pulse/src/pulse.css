@@ -5736,3 +5736,14 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 @media (max-width:1180px){.shop-shell .adm-detail:has(>.adm-empty:only-child){display:none}.shop-shell .adm-detail{scroll-margin-top:calc(var(--shop-header-h,72px) + 16px)}}
 /* Blok tek sütun: içindeki yana kayan satır (sekmeler) bloğu genişletmez. */
 .shop-shell .adm-block,.shop-shell .adm-page-stack{grid-template-columns:minmax(0,1fr)}.shop-shell .adm-toolbar>*{min-width:0}
+/* Ayrıntı başlığındaki düğmeler küçük; uzun ad ve adres başlık alanında kalır. */
+.shop-shell .adm-detail-head>div{min-width:0;flex:1 1 auto}.shop-shell .adm-detail-head span a{overflow-wrap:anywhere}
+.shop-shell .adm-detail-head>.shop-button,.shop-shell .adm-detail-head .adm-head-actions .shop-button{flex:none;min-height:36px;padding:0 12px;font-size:13px}
+/* Uzun ayrıntı kartında Kaydet / Sil satırı kartın altında sabit kalır (kart kendi içinde kayarken yarım görünmez). */
+@media (min-width:1181px){.shop-shell .adm-detail .adm-editor-foot{position:sticky;bottom:0;z-index:2;margin-bottom:-16px;padding-bottom:16px;background:var(--shop-surface)}}
+/* Yan yana iki kart aynı boyda; Kaydet satırı kartın dibinde hizalanır. */
+.shop-shell .adm-two{align-items:stretch}.shop-shell .adm-two>.adm-card{display:flex;flex-direction:column}.shop-shell .adm-two>.adm-card>.adm-editor-foot{margin-top:auto}
+/* Modül listesi iki sütun (tek sütunlu uzun liste yok); tek kalan son satır tam genişlik. İki sütunlu düzende tek kart satırı kaplar. */
+@media (min-width:900px){.shop-shell .adm-mods .adm-rows{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .adm-mods .adm-rows>li:last-child:nth-child(odd){grid-column:1/-1}}
+.shop-shell .adm-two>:only-child{grid-column:1/-1}
+.shop-shell .adm-editor-foot{align-items:center}
