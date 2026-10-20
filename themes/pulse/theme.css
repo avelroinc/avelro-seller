@@ -5633,3 +5633,13 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell.shop-admin .adm-preview-bar{min-height:48px;padding:8px 10px 8px 20px}
 .shop-shell.shop-admin .adm-preview-bar>span:first-child{display:inline-flex;align-items:center;gap:10px;font-family:var(--shop-display);font-size:16px;font-weight:600;white-space:nowrap}
 .shop-shell.shop-admin :is(.adm-fields-head>b,.adm-preview-bar>span:first-child)::before{content:"";flex:none;width:4px;height:16px;border-radius:2px;background:var(--shop-button-bg,var(--shop-accent))}
+.shop-shell.shop-admin :is(main.adm-page,.shop-header) :is(.shop-button,.adm-tabs button,.adm-groups button,.adm-icon-btn,.adm-select,.shop-nav-search,.shop-action,.admin-user){box-sizing:border-box;min-height:44px;height:44px;padding-block:0}
+.shop-shell.shop-admin main.adm-page .adm-icon-btn{width:44px;min-width:44px}
+.shop-shell.shop-admin .shop-header .shop-action-icon{width:44px}
+.shop-shell.shop-admin main.adm-page :is(input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=color]):not([type=range]),select){box-sizing:border-box;min-height:44px;height:44px;padding-block:0}
+.shop-shell.shop-admin :is(main.adm-page,.shop-header) .shop-nav-search input{height:100%;min-height:0;border:0}
+.shop-shell.shop-admin main.adm-page :is(.adm-card,.adm-inline-editor)>:is(.adm-sub,.adm-detail-head):first-child,.shop-shell.shop-admin main.adm-page :not(.adm-card)>.adm-sub:has(+:is(.adm-table-wrap,.adm-rows,.adm-todo,.adm-themes,.adm-kpis)),.shop-shell.shop-admin .adm-fields>.adm-fields-head:first-child,.shop-shell.shop-admin .adm-preview-bar{min-height:52px;padding-block:4px}
+.shop-shell.shop-admin main.adm-page :not(.adm-card)>.adm-sub.adm-sub-row:has(+:is(.adm-table-wrap,.adm-rows,.adm-todo,.adm-themes,.adm-kpis)){padding:4px 4px 4px 16px}
+.shop-shell.shop-admin main.adm-page .adm-detail-head>.shop-button,.shop-shell.shop-admin main.adm-page .adm-detail-head .adm-head-actions .shop-button{padding-inline:14px}
+.shop-shell.shop-admin main.adm-page :is(.adm-toolbar>.adm-muted,.adm-pager>span){display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;padding:0 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink-2);font-size:13.5px;font-weight:600;white-space:nowrap}
+.shop-shell.shop-admin .adm-tree li>button{min-height:44px;align-items:center}
