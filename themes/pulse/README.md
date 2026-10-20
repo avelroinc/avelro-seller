@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.39
+
+- Hesap › Bakiye Yükle: Shopier ile Öde yöntemi (adım listesi ve ödeme düğmesi); üç ödeme yöntemi geniş ekranda tek satır, telefonda alt alta.
+- Yönetim paneli: başlık altındaki açıklamalar yerine başlıkta etiket, yan yana kutular üstten hizalı.
+
 ### 1.0.38
 
 - Yönetim paneli bileşenleri: boş durum (simge, başlık, ilk adım düğmesi), baş harfli avatar, simgeli özet kutusu, sipariş adım çubuğu, mini özet ve bilgi satırları, profil başlığı, güne göre zaman çizelgesi; güncelleme durum kutuları ve tema sürüm satırı; çerçeveli uyarı.
