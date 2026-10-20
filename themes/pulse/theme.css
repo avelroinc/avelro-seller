@@ -5721,3 +5721,5 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell.shop-admin .adm-detail-head span,.shop-shell.shop-admin .adm-person small{overflow-wrap:anywhere}
 .shop-shell .adm-table td .adm-person{display:inline-flex;vertical-align:middle;gap:8px}
 .shop-shell .adm-avatar{color:color-mix(in srgb,var(--av) 68%,#000)}.shop-shell[data-shop-scheme=dark] .adm-avatar{color:color-mix(in srgb,var(--av) 55%,#fff)}
+.shop-shell.shop-admin .adm-fields-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.shop-shell .adm-block{align-content:start}
