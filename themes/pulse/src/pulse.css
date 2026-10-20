@@ -5844,3 +5844,81 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 @media (max-width:640px){.shop-shell.shop-admin .adm-themes li{grid-template-columns:96px minmax(0,1fr)}.shop-shell.shop-admin .adm-themes li>.shop-button{grid-column:1/-1;justify-self:stretch}.shop-shell.shop-admin main.adm-page .adm-toolbar>.adm-muted{flex:1 1 auto;justify-content:center}}
 @media (max-width:640px){.shop-shell.shop-admin main.adm-page .adm-editor-foot>.shop-button{flex:1 1 auto}}
 .shop-shell.shop-admin .adm-warn{padding:10px 14px;border:1px solid color-mix(in srgb,#d97706 35%,var(--shop-line));color:#92400e;font-size:13.5px;line-height:1.5}.shop-shell.shop-admin[data-shop-scheme=dark] .adm-warn{color:#fbbf24}
+/* ---- Yönetim bileşenleri (admin-kit): içeriğe göre seçilen parçalar ---- */
+/* Boş durum: simge kutusu, başlık, açıklama ve ilk adım düğmesi. */
+.shop-shell.shop-admin .adm-card.adm-state{display:grid;justify-items:center;gap:8px;padding:36px 24px;text-align:center}
+.shop-shell .adm-state-ico{display:grid;place-items:center;width:56px;height:56px;margin-bottom:6px;border-radius:var(--shop-radius);background:var(--shop-tint);color:color-mix(in srgb,var(--shop-accent) 80%,#000)}
+.shop-shell[data-shop-scheme=dark] .adm-state-ico{color:color-mix(in srgb,var(--shop-accent) 75%,#fff)}
+.shop-shell .adm-state-ico svg{width:26px;height:26px}
+.shop-shell .adm-state>b{color:var(--shop-ink);font-family:var(--shop-display);font-size:17px;font-weight:600}
+.shop-shell .adm-state>small{max-width:340px;color:var(--shop-muted);font-size:13.5px;line-height:1.55}
+.shop-shell .adm-state-action{margin-top:8px}
+/* Avatar: ada göre renkli baş harf kutusu. */
+.shop-shell .adm-avatar{display:inline-grid;place-items:center;flex:none;width:40px;height:40px;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--av) 14%,var(--shop-surface));color:color-mix(in srgb,var(--av) 85%,#000);font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1}
+.shop-shell[data-shop-scheme=dark] .adm-avatar{background:color-mix(in srgb,var(--av) 26%,var(--shop-surface));color:color-mix(in srgb,var(--av) 55%,#fff)}
+.shop-shell .adm-avatar.is-sm{width:32px;height:32px;font-size:12px}.shop-shell .adm-avatar.is-lg{width:52px;height:52px;font-size:18px}
+.shop-shell .adm-person{display:flex;align-items:center;gap:12px;min-width:0}
+.shop-shell .adm-person>span:last-child{display:grid;gap:1px;min-width:0}
+.shop-shell .adm-person b{overflow:hidden;color:var(--shop-ink);text-overflow:ellipsis;white-space:nowrap}.shop-shell .adm-person small{overflow:hidden;color:var(--shop-muted);font-size:12.5px;text-overflow:ellipsis;white-space:nowrap}
+.shop-shell .adm-card>.adm-person{padding:12px 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius)}
+.shop-shell .adm-table td .adm-person small{display:block}
+/* Özet kutusu: sağ üstte konusunun renginde simge. */
+.shop-shell.shop-admin .adm-kpi.adm-stat{position:relative;padding-right:72px}
+.shop-shell .adm-stat-ico{position:absolute;top:18px;right:18px;display:grid;place-items:center;width:42px;height:42px;border-radius:var(--shop-radius);background:color-mix(in srgb,var(--tone) 13%,var(--shop-surface));color:color-mix(in srgb,var(--tone) 88%,#000)}
+.shop-shell[data-shop-scheme=dark] .adm-stat-ico{background:color-mix(in srgb,var(--tone) 24%,var(--shop-surface));color:color-mix(in srgb,var(--tone) 55%,#fff)}
+.shop-shell .adm-stat-ico svg{width:20px;height:20px}
+@media (max-width:560px){.shop-shell.shop-admin .adm-kpi.adm-stat{padding-right:14px;padding-top:58px}.shop-shell .adm-stat-ico{top:14px;left:14px;right:auto;width:36px;height:36px}.shop-shell .adm-stat-ico svg{width:18px;height:18px}}
+/* Sipariş adımları: ödeme, hazırlanıyor, teslim; bağlantı çizgisiyle. */
+.shop-shell .adm-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;padding:0;list-style:none}
+.shop-shell .adm-steps li{position:relative;display:grid;justify-items:center;gap:6px;text-align:center}
+.shop-shell .adm-steps li::before{content:"";position:absolute;top:6px;left:calc(-50% + 9px);right:calc(50% + 9px);height:2px;background:var(--shop-line)}
+.shop-shell .adm-steps li:first-child::before{display:none}
+.shop-shell .adm-steps li.is-done::before,.shop-shell .adm-steps li.is-now::before{background:var(--shop-button-bg,var(--shop-accent))}
+.shop-shell .adm-steps i{width:14px;height:14px;box-sizing:border-box;border:2px solid var(--shop-line-2);border-radius:50%;background:var(--shop-surface)}
+.shop-shell .adm-steps li.is-done i{border-color:var(--shop-button-bg,var(--shop-accent));background:var(--shop-button-bg,var(--shop-accent))}
+.shop-shell .adm-steps li.is-now i{border-color:var(--shop-button-bg,var(--shop-accent));box-shadow:0 0 0 4px var(--shop-marker)}
+.shop-shell .adm-steps span{color:var(--shop-muted);font-size:12.5px;font-weight:600}
+.shop-shell .adm-steps li:is(.is-done,.is-now) span{color:var(--shop-ink)}
+.shop-shell .adm-steps.is-failed li:last-child i{border-color:#dc2626;background:#dc2626}
+.shop-shell .adm-steps.is-failed li:last-child::before{background:#dc2626}
+.shop-shell .adm-steps.is-failed li:last-child span{color:#b91c1c}.shop-shell[data-shop-scheme=dark] .adm-steps.is-failed li:last-child span{color:#f87171}
+/* Üçlü mini özet (müşteri kartı): ince çizgilerle bölünmüş tek kutu. */
+.shop-shell .adm-mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;overflow:hidden;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-line)}
+.shop-shell .adm-mini-stats>div{display:grid;gap:2px;min-width:0;padding:10px 12px;background:var(--shop-surface)}
+.shop-shell .adm-mini-stats small{color:var(--shop-muted);font-size:12px;font-weight:600}.shop-shell .adm-mini-stats b{overflow:hidden;font-family:var(--shop-display);font-size:16px;font-variant-numeric:tabular-nums;text-overflow:ellipsis;white-space:nowrap}
+/* Bilgi satırları: solda etiket, sağda değer, aralarında çizgi. */
+.shop-shell .adm-facts{display:grid;margin:0}
+.shop-shell .adm-facts>div{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--shop-line)}
+.shop-shell .adm-facts>div:last-child{border-bottom:0}
+.shop-shell .adm-facts dt{color:var(--shop-muted);font-size:13.5px}.shop-shell .adm-facts dd{margin:0;color:var(--shop-ink);font-size:14px;font-weight:600;text-align:right;overflow-wrap:anywhere}
+.shop-shell .adm-kv:empty{display:none}
+/* Profil başlığı (müşteri): büyük avatar, ad ve e-posta, durum etiketi; başlık çizgisi yerine avatar. */
+.shop-shell.shop-admin .adm-detail-head.adm-profile-head{justify-content:flex-start;gap:14px}
+.shop-shell.shop-admin .adm-profile-head>div{flex:1;min-width:0}
+.shop-shell.shop-admin .adm-profile-head>div>b::before{display:none}
+.shop-shell.shop-admin .adm-profile-head>div>:not(b){padding-left:0}
+/* Zaman çizelgesi (işlem geçmişi): her gün bir kutu; saat, renkli nokta, olay ve kişi. */
+.shop-shell .adm-timeline{display:grid;gap:12px}
+.shop-shell .adm-timeline section{overflow:hidden;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow)}
+.shop-shell .adm-timeline h3{display:flex;align-items:center;gap:10px;min-height:52px;margin:0;padding:4px 16px;border-bottom:1px solid var(--shop-line);font-family:var(--shop-display);font-size:16px;font-weight:600}
+.shop-shell .adm-timeline h3::before{content:"";flex:none;width:4px;height:16px;border-radius:2px;background:var(--shop-button-bg,var(--shop-accent))}
+.shop-shell .adm-timeline ol{margin:0;padding:6px 0;list-style:none}
+.shop-shell .adm-timeline li{position:relative;display:grid;grid-template-columns:48px 12px minmax(0,1fr) auto;align-items:center;gap:12px;padding:10px 16px}
+.shop-shell .adm-timeline li::after{content:"";position:absolute;top:0;bottom:0;left:81px;width:2px;background:var(--shop-line)}
+.shop-shell .adm-timeline li:first-child::after{top:50%}.shop-shell .adm-timeline li:last-child::after{bottom:50%}.shop-shell .adm-timeline li:only-child::after{display:none}
+.shop-shell .adm-timeline time{color:var(--shop-muted);font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.shop-shell .adm-timeline li>i{position:relative;z-index:1;width:12px;height:12px;box-sizing:border-box;border:2px solid var(--shop-surface);border-radius:50%;background:var(--tone,var(--shop-accent));box-shadow:0 0 0 1px var(--tone,var(--shop-accent))}
+.shop-shell .adm-timeline li>div{display:grid;gap:2px;min-width:0}
+.shop-shell .adm-timeline li b{font-size:14px;font-weight:600}.shop-shell .adm-timeline li b em{margin-left:6px;color:color-mix(in srgb,var(--shop-accent) 72%,#000);font-style:normal}
+.shop-shell[data-shop-scheme=dark] .adm-timeline li b em{color:color-mix(in srgb,var(--shop-accent) 72%,#fff)}
+.shop-shell .adm-timeline li small{color:var(--shop-muted);font-size:12.5px}
+@media (max-width:560px){.shop-shell .adm-timeline li{grid-template-columns:40px 12px minmax(0,1fr);gap:10px;padding:10px 12px}.shop-shell .adm-timeline li::after{left:67px}.shop-shell .adm-timeline-side{display:none}}
+/* Kart içinde kutu içinde kutu yok: kişi satırı ve mini özet çerçevesiz; mini özet hücreleri dikey çizgiyle ayrılır. */
+.shop-shell .adm-card>.adm-person{padding:0;border:0}
+.shop-shell .adm-mini-stats{gap:0;border:0;border-radius:0;background:transparent;overflow:visible}.shop-shell .adm-mini-stats>div{padding:2px 14px;background:transparent;border-left:1px solid var(--shop-line)}.shop-shell .adm-mini-stats>div:first-child{padding-left:0;border-left:0}
+.shop-shell .adm-row>span.adm-person{display:flex}
+/* Uzun e-posta / bağlantı kartı genişletmez; tablo kartında kişi hücresi etiketle aynı satırda. */
+.shop-shell.shop-admin .adm-card{grid-template-columns:minmax(0,1fr)}
+.shop-shell.shop-admin .adm-detail-head span,.shop-shell.shop-admin .adm-person small{overflow-wrap:anywhere}
+.shop-shell .adm-table td .adm-person{display:inline-flex;vertical-align:middle;gap:8px}
+.shop-shell .adm-avatar{color:color-mix(in srgb,var(--av) 68%,#000)}.shop-shell[data-shop-scheme=dark] .adm-avatar{color:color-mix(in srgb,var(--av) 55%,#fff)}
