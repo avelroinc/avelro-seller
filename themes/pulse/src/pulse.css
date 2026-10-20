@@ -5936,3 +5936,6 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .sa-methods:has(>button:nth-child(3)){grid-template-columns:repeat(3,minmax(0,1fr))}
 .shop-shell .sa-methods:has(>button:nth-child(3)) button{gap:8px;padding:0 12px}
 @media (max-width:640px){.shop-shell .sa-methods:has(>button:nth-child(3)){grid-template-columns:minmax(0,1fr)}}
+
+/* Yönetim: düğmeli satırlar (Shopier ile Bakiye) telefonda düğmeleri alt satıra alır. */
+@media (max-width:560px){.shop-shell .adm-row-actions{flex-wrap:wrap}.shop-shell .adm-row-actions>.adm-row-end{width:100%}.shop-shell .adm-row-actions>.adm-row-end>.shop-button{flex:1}}
