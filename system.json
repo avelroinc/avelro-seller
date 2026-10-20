@@ -1,5 +1,5 @@
 {
-  "version": "1.0.131",
-  "notes": "- Yönetim panelindeki bütün sayfalar yeniden dolu: Ayarlar (Hesabım, Personel, Ödeme Yöntemleri, E-Fatura, Bildirimler, Modüller, Güncelleme), Ödemeler, Hizmetler, Tema, Müşteriler, Raporlar, Lisanslar, E-Pin, SMS Onay, Kampanyalar, Menüler, Sayfalar ve Yazılar; Genel Bakış ve Siparişler yeni tasarımıyla kaldı.\n- Ayarlar › Ödeme Yöntemleri’nde Shopier ile Bakiye: aç / kapat, Şimdi Kontrol Et, bekleyen ödeme sayısı; eşleşmeyen Shopier ödemeleri müşteri aranarak atanır ya da kaldırılır.\n- Shopier alanları Kişisel Erişim Anahtarı önce olacak şekilde sıralandı; yalnızca anahtar girildiyse Yalnızca Bakiye yazar.\n- Pulse teması 1.0.40.",
-  "publishedAt": "2026-10-20T20:11:29.636Z"
+  "version": "1.0.132",
+  "notes": "- Shopier anahtar denetimi: anahtar çalışmıyorsa nedeni yazar (Shopier anahtarı kabul etmedi ve Shopier’in mesajı, ürün ya da sipariş izni yok, Shopier’e ulaşılamadı); ürünler ve siparişler birlikte denetlenir.\n- Shopier anahtarı kaydedilirken baştaki ve sondaki boşluklar, satır sonları, tırnaklar ve \"Bearer \" öneki kendiliğinden temizlenir.\n- Mobil uygulama 1.17.71: Shopier ile Bakiye’de aynı neden yazısı.",
+  "publishedAt": "2026-10-20T20:25:32.214Z"
 }
