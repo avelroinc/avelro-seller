@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.35
+
+- Yönetim paneli (/admin) stilleri: sayfa başlık alanı yok, kısa kart başlıkları; süzgeç sekmeleri satırı dengeli doldurur, telefonda yana kayan çip satırı; dar alanda tablolar sütun adlı satır kartları; uzun ayrıntı kartında sabit Kaydet satırı; yan yana kartlar eşit boyda; gruplu Ayarlar menüsü; bildirim zili ve yapılacaklar listesi; sipariş seçim kutuları ve toplu işlem satırı; açık ve koyu temada okunur etiket renkleri.
+
 ### 1.0.34
 
 - Telefon menüsü tam ekran: vurgu tonlu karşılama alanı (mağaza, kapatma, "Ne arıyorsun?", arama), Hızlı Erişim şeridi, ilk ürünlerin logolarıyla ürün türü satırları, iki sütun sayfa düğmeleri ve altta sabit Sipariş Sorgula, Hesabım, koyu mod (`.shop-mfull`).
