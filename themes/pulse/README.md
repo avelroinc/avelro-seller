@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.37
+
+- Yönetim paneli: tek kontrol yüksekliği (düğme, giriş kutusu, seçim, arama, sekme, menü öğesi ve başlık düğmeleri 44 px; başlık şeritleri 52 px); araç satırındaki sayaç / durum yazıları ve sayfa numarası çerçeveli etiket.
+
 ### 1.0.36
 
 - Yönetim paneli başlıkları mobil uygulamadaki gibi: başta renkli çizgi; kartın ilk başlığı üst şerit, tablo / liste / özet rakam başlıkları altlarındaki kutuyla birleşik; ayrıntı başlığında üst etiket yok; Site Yazıları ve önizleme başlıkları aynı şerit.
