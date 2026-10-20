@@ -5643,3 +5643,14 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell.shop-admin main.adm-page .adm-detail-head>.shop-button,.shop-shell.shop-admin main.adm-page .adm-detail-head .adm-head-actions .shop-button{padding-inline:14px}
 .shop-shell.shop-admin main.adm-page :is(.adm-toolbar>.adm-muted,.adm-pager>span){display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;padding:0 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:var(--shop-ink-2);font-size:13.5px;font-weight:600;white-space:nowrap}
 .shop-shell.shop-admin .adm-tree li>button{min-height:44px;align-items:center}
+.shop-shell .adm-notice{display:grid;gap:2px;padding:10px 14px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-soft);font-size:13.5px;line-height:1.5}
+.shop-shell .adm-notice b{font-size:13.5px}.shop-shell .adm-notice span{color:var(--shop-ink-2)}
+.shop-shell .adm-notice.is-info{border-color:color-mix(in srgb,var(--shop-accent) 35%,var(--shop-line));background:var(--shop-tint)}
+.shop-shell .adm-notice.is-ok{border-color:color-mix(in srgb,#16a34a 35%,var(--shop-line));background:color-mix(in srgb,#16a34a 8%,var(--shop-surface))}
+.shop-shell .adm-notice.is-bad{border-color:color-mix(in srgb,#dc2626 35%,var(--shop-line));background:color-mix(in srgb,#dc2626 7%,var(--shop-surface))}
+.shop-shell .adm-themes small.adm-theme-version{color:var(--shop-ink-2);font-size:12.5px;font-weight:600}
+.shop-shell.shop-admin .adm-themes li{grid-template-columns:140px minmax(0,1fr)}
+.shop-shell.shop-admin .adm-themes li>.shop-button{grid-column:2;justify-self:start}
+@media (max-width:640px){.shop-shell.shop-admin .adm-themes li{grid-template-columns:96px minmax(0,1fr)}.shop-shell.shop-admin .adm-themes li>.shop-button{grid-column:1/-1;justify-self:stretch}.shop-shell.shop-admin main.adm-page .adm-toolbar>.adm-muted{flex:1 1 auto;justify-content:center}}
+@media (max-width:640px){.shop-shell.shop-admin main.adm-page .adm-editor-foot>.shop-button{flex:1 1 auto}}
+.shop-shell.shop-admin .adm-warn{padding:10px 14px;border:1px solid color-mix(in srgb,#d97706 35%,var(--shop-line));color:#92400e;font-size:13.5px;line-height:1.5}.shop-shell.shop-admin[data-shop-scheme=dark] .adm-warn{color:#fbbf24}
