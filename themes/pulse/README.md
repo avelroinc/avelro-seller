@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.36
+
+- Yönetim paneli başlıkları mobil uygulamadaki gibi: başta renkli çizgi; kartın ilk başlığı üst şerit, tablo / liste / özet rakam başlıkları altlarındaki kutuyla birleşik; ayrıntı başlığında üst etiket yok; Site Yazıları ve önizleme başlıkları aynı şerit.
+
 ### 1.0.35
 
 - Yönetim paneli (/admin) stilleri: sayfa başlık alanı yok, kısa kart başlıkları; süzgeç sekmeleri satırı dengeli doldurur, telefonda yana kayan çip satırı; dar alanda tablolar sütun adlı satır kartları; uzun ayrıntı kartında sabit Kaydet satırı; yan yana kartlar eşit boyda; gruplu Ayarlar menüsü; bildirim zili ve yapılacaklar listesi; sipariş seçim kutuları ve toplu işlem satırı; açık ve koyu temada okunur etiket renkleri.
