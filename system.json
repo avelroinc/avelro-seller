@@ -1,5 +1,5 @@
 {
-  "version": "1.0.127",
-  "notes": "- Yönetim panelinde başlıklar mobil uygulamadaki gibi: her başlığın başında renkli çizgi var.\n- Kartın en üstündeki başlık kartın üst şeridi oldu; tabloların, listelerin ve özet rakamların üstündeki başlıklar onlarla tek kutu.\n- Raporlar: Son 7 Gün özeti tek kutuda, rakamlar ince çizgilerle bölünür; aylık satışlar kendi başlığıyla.\n- Ayrıntı kartlarında (sipariş, kupon, hizmet ve diğerleri) üstteki küçük etiket kalktı; yalnızca çizgi ve başlık.\n- Pulse teması 1.0.36.",
-  "publishedAt": "2026-10-20T07:12:26.364Z"
+  "version": "1.0.128",
+  "notes": "- Yönetim panelinde bütün düğmeler, giriş kutuları, seçimler, arama kutuları, sekmeler ve menü öğeleri aynı boyda (44 px); başlık şeritleri eşit yükseklikte.\n- Çerçeve dışında yazı kalmadı: sayaç ve durum yazıları ile sayfa numarası düğmelerle aynı boyda çerçeveli etiket; açıklama cümleleri sayaçla ya da liste başlığıyla değişti.\n- Ayarlar: Ödeme Yöntemleri, E-Fatura ve Giriş Doğrulama listeleri kendi başlıklarıyla tek kutuda.\n- Pulse teması 1.0.37.",
+  "publishedAt": "2026-10-20T08:17:59.915Z"
 }
