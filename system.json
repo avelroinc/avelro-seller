@@ -1,5 +1,5 @@
 {
-  "version": "1.0.138",
-  "notes": "- Başlıktaki düğmeler (Hesap Ekle, Kapat) şeridin içinde, başlıkla aynı hizada ve kompakt.\n- Kart başlıklarındaki Sayfayı Aç, Gizle / Göster, Ana Sayfaya Ekle ve Yayına Al düğmeleri kaldırıldı: sayfa Adres alanının sağındaki simgeyle açılır; görünürlük ve vitrin formdaki Sitede Göster ve Ana Sayfa Vitrininde anahtarlarıyla; sayfa ve yazılarda adres satırı, Yayında anahtarı ve silme.\n- Sayfa Metni alanı diğer alanlar gibi çerçeveli; arama kutularındaki yazılar başlık düzeninde.",
-  "publishedAt": "2026-10-25T17:01:32.702Z"
+  "version": "1.0.139",
+  "notes": "- Yazı kutularına tıklayınca çıkan renkli gölge halkası kaldırıldı; odakta kutunun kenarı tema rengine döner (arama, form alanları, giriş ekranı).\n- Üst çubuktaki aramada tarayıcının öneri oku gösterilmez.",
+  "publishedAt": "2026-10-25T17:22:00.861Z"
 }
