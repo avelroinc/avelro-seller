@@ -1,5 +1,5 @@
 {
-  "version": "1.0.144",
-  "notes": "- Personel eklerken e-posta adresi artık kabul edilir (her adresi geçersiz sayan kontrol düzeltildi). Canlı destekte kapanan sohbetin dökümü de yeniden ziyaretçinin e-postasına gider.\n- Bütün yönetim sayfalarında orta sütun kayarken soldaki menü / liste ve sağdaki kart ekranda kalır (iç kaydırma çubuğu yok).\n- Sosyal Medya sayfasında çok sayıda platform olunca araç satırı ve tablo sağdaki kartın altına taşmaz; sekmeler kendi çubuğunda kayar.\n- Yönetim panelinin ve sitenin sol menüsünün arkasındaki gölge kaldırıldı.\n- Telefon menülerinde Genel Bakış ve sayfa satırları gruplarla aynı hizada.",
-  "publishedAt": "2026-10-25T22:13:27.562Z"
+  "version": "1.0.145",
+  "notes": "- Hesabım’da ödeme bekleyen siparişi sonradan “Bakiyeyle Öde” ile ödeme yeniden çalışıyor (her denemede hata veriyordu).\n- Sepet, sipariş, kupon, bakiye, havale, lisans, SMS Onay ve E-Pin süreçleri için uçtan uca otomatik testler eklendi.",
+  "publishedAt": "2026-10-25T22:50:15.767Z"
 }
