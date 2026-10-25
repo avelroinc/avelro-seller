@@ -25,6 +25,10 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.42
+
+- Yönetim paneli: bütün sayfalar aynı genişlikte (kaydırma çubuğunun yeri hep ayrılır; liste / ayrıntı ve menü / içerik oranları ile kart aralıkları yeni bileşen setiyle eşit).
+
 ### 1.0.41
 
 - Yönetim paneli: bildirim zili yalnızca güncellemeleri gösterir (sürüm etiketi, sistem güncellemesi için yeşil simge, "Sistem Güncel" boş durumu).
