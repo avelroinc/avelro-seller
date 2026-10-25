@@ -1,5 +1,5 @@
 {
-  "version": "1.0.140",
-  "notes": "- Telefon menüsü: açılan grupların son sayfaları (ör. Site altında SEO) artık kesilmez; menü uzayınca kendi içinde kayar.\n- Güncelleme sayfasında modül güncellemeleri listelenmez (Modüller sayfasında ve bildirim zilinde görünür).",
-  "publishedAt": "2026-10-25T17:40:43.435Z"
+  "version": "1.0.141",
+  "notes": "- Yönetim paneli menüleri yeniden düzenlendi: Faturalar Satış altında kendi sayfasında; Yazılar artık Site Metinleri; Tema artık Görünüm (mağaza kimliği, iletişim ve şirket bilgileri, ana renk, tema); SEO yalnızca arama motoru ayarlarını içerir; 5sim bağlantısı SMS Onay sayfasında.\n- Sosyal Medya, Lisanslar, E-Pin, SMS Onay, Sağlayıcılar, Kuponlar, Fırsat Köşesi, Ücretsiz Hizmetler, Bonus ve Referans ve Duyurular sayfaları Siparişler ile aynı düzende: solda tablo, sağda seçilen kaydın kartı; görsel ve adres alanları tek çerçevede, etiketler aynı hizada.\n- Ödemeler, Müşteriler, Talepler ve Yorumlar Siparişler gibi yenilendi; tablolarda müşteri adı ve e-posta ayrı sütunda.\n- Raporlar sayfası: dönem seçimi (7, 30, 90 gün, 1 yıl), önceki dönemle karşılaştırmalı özet, ciro grafiği, en çok satanlar, ürün türleri, sipariş durumları ve bakiye yüklemeleri.\n- Ayarlar › Uygulamalar: Av/Dashboard ve Av/Tawk uygulamalarının son sürümü panelden indirilir ya da telefonla QR okutularak kurulur.\n- Arama önerileri panelde ve sitede simgeli, düzenli bir liste olarak açılır.\n- Sayfa yüklenirken üst alanın kapanıp açılması giderildi; yönetim panelinde mağaza adının altında Yönetici Paneli yazar.\n- Yan menüdeki Sabitle / Daralt özelliği panelden ve siteden kaldırıldı.\n- Sitenin telefon menüsü yönetim panelindeki gibi yenilendi (gruplu ürünler, arama, sayfalar).",
+  "publishedAt": "2026-10-25T19:21:47.838Z"
 }
