@@ -5,7 +5,7 @@ yönetim panelindeki Entegrasyon Ayarları ekranından bu depodan indirir, doğr
 
 | Tür | Modüller |
 | --- | --- |
-| Ödeme | `paytr`, `shopier`, `stripe`, `cryptomus`, `heleket` |
+| Ödeme | `stripe`, `cryptomus`, `heleket` |
 | Bildirim | `telegram`, `whatsapp` |
 | SMS ve doğrulama | `netgsm`, `iletimerkezi`, `twilio`, `firebase` |
 | E-fatura | `parasut`, `bizimhesap`, `logo`, `uyumsoft` |

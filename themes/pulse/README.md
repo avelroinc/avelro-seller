@@ -25,6 +25,11 @@ Yönetim paneli tema güncellemesini gösterir; sistem güncellemesi ve yeniden 
 
 ## Sürüm Notları
 
+### 1.0.41
+
+- Yönetim paneli: bildirim zili yalnızca güncellemeleri gösterir (sürüm etiketi, sistem güncellemesi için yeşil simge, "Sistem Güncel" boş durumu).
+- Shopier ile Öde stilleri kaldırıldı (Shopier sistemden çıkarıldı).
+
 ### 1.0.40
 
 - Yönetim paneli: düğmeli satırlar (Shopier ile Bakiye, eşleşmeyen ödemeler) telefonda düğmeleri alt satıra alır.
