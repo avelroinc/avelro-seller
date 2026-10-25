@@ -1,5 +1,5 @@
 {
-  "version": "1.0.135",
-  "notes": "- Yeni yan menü: üzerine gelince genişlemez; her grubun sayfaları yanında açılan tek panelde, simgeli ve bulunulan sayfa vurgulu. Sabitlenince gruplar açılıp kapanan liste olur, içerik taşmaz.\n- Telefon menüsü yenilendi: sayfa arama, açılıp kapanan gruplar, her sayfa tek dokunuşla açılır.\n- Tablolar daralınca yana kaymaz, ikincil sütunlar gizlenir; telefonda sipariş listesi tek ekrana sığar.\n- Eski düzendeki sayfalar yeni görünümde: düz düğmeler, tek parça sekmeler, noktalı durum etiketleri, ortalı tablolar, çerçeve içinde alan adları, aç / kapat anahtarları.\n- Talepler: yeni gelen talepler “Yeni” olarak görünür ve İncele düğmesi çıkar.\n- Ödemeler: yükleme yolu okunur adıyla (Stripe, Havale / EFT).\n- Telefonda üst çubukta mağaza adı düğmelerin altına girmez.",
-  "publishedAt": "2026-10-25T15:53:51.006Z"
+  "version": "1.0.136",
+  "notes": "- Başlık şeritlerindeki sayı rozetleri kaldırıldı (ör. Yetkili Hesaplar, Yapılacaklar).\n- Başlıktaki düğmeler (Hesap Ekle, Kapat, Sayfayı Aç, Gizle, Ana Sayfaya Ekle) şeridin tam boyunda, yan yana ve sağ kenara yaslı; telefonda başlığın altında tek satır.\n- Sağdaki ayrıntı ve düzenleme panelleri kendi içinde kaymaz; içeriği kadar uzar, alt kısmı sayfayla görünür.",
+  "publishedAt": "2026-10-25T16:09:48.448Z"
 }
