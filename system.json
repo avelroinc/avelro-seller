@@ -1,5 +1,5 @@
 {
-  "version": "1.0.142",
-  "notes": "- Bildirim zili artık tema güncellemelerini ve panelde henüz indirilmemiş mobil uygulama sürümlerini de gösterir (sistem ve modül güncellemelerinin yanında, her biri kendi simgesiyle).\n- Katalog sayfaları telefonda düzgün görünür: ürün ve hizmet adları tablolarda boş alanı kullanır, özet kutuları ikişerli dizilir, satılan uygulamalar eşit ızgarada.\n- Bölüm ve kart başlıklarının yanındaki sayılar kaldırıldı.\n- Uygulamalar bölümündeki QR kartından \"Kodu Kamerayla Okut\" satırı kaldırıldı.\n- Av/Dashboard 1.17.75: Daha Fazla ve Profilim yeniden düzenlendi; üst çubukta bildirim zili; Ayarlar › Uygulamalar’dan indirilebilir.",
-  "publishedAt": "2026-10-25T20:25:06.694Z"
+  "version": "1.0.143",
+  "notes": "- Sosyal Medya tablosu sadeleşti: simge yok, Hizmet ve Platform ayrı sütunlarda. Hizmet kartında paketler tek çerçeveli tabloda (Miktar | Fiyat, satırda kaldır, altta Paket Ekle); E-Pin oyuncu bilgileri ve kombin hizmetleri de aynı düzende.\n- Modüller sayfasında uzun liste kayarken soldaki Ayarlar menüsü ve sağdaki modül kartı ekranda kalır.\n- Sipariş kartında fatura durumu ve Fatura Kes / Faturayı Aç düğmesi.\n- Personel eklerken eksik bilgi (ad, e-posta, şifre, yetki) Kaydet’e basınca açıkça söylenir.\n- SMS Onay › Son Numaralar tablosunda ülke, bayrağıyla ayrı sütunda.",
+  "publishedAt": "2026-10-25T21:47:20.764Z"
 }
