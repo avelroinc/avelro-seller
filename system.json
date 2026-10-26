@@ -1,5 +1,5 @@
 {
-  "version": "1.0.152",
-  "notes": "- Yönetim panelindeki bütün tablolarda sütun başlıkları ve veriler ortalandı. Ad ve ürün sütunlarında satırlar yine aynı hizada başlıyor, kayma olmuyor.\n- Tablo yazıları tek tip: ad, kod, fiyat ve diğer bilgiler aynı kalınlık ve renkte; yalnızca ikinci satır bilgiler hafif soluk.",
-  "publishedAt": "2026-10-26T12:19:55.502Z"
+  "version": "1.0.153",
+  "notes": "- Work/Bot yönetim paneline geldi: sol menüde Work/Bot simgesi. Mobil uygulamadan farklı, masaüstüne özel ofis tasarımı: üstte durum, sayılar ve Çalış / Dur anahtarı; birim masaları, Gün Akışı, Eğitim ve Bütçe.\n- Her birim kendi ekranında açılır: Bekleyen ve Geçmiş işler, iş dosyasında seçenekler, botun önerisi ve yazılı talimat; Ekip sekmesinde terfi talepleri, Uzman / Denetçi koltukları ve verilen yetkiler; Ayarlar sekmesi.\n- Müşteri Temsilcisi (sorular ve yorumlar), Canlı Destek özeti, Sağlayıcı Kâşifi (adaylar, bağlama, deneme siparişi) ve Raporlama Uzmanı (haftalık rapor) masaüstünde.\n- İçerik Editörü ayarları: yazım talimatı (.md dosyası, sürümler, deneme yazısı), denetim geçme puanı ve otomatik blog (günler, saatler, konu sırası, yayın şekli, kapak görseli, yazar).\n- Kampanya Uzmanı ayarlarında botun kendi başına uyduğu sınırlar görünür.\n- Sipariş Sorumlusu: aynı siparişin kalemleri alt alta (\"2 / 3 Kalem\"); karar verirken müşteriye e-posta gönderme anahtarı (varsayılan kapalı).\n- Uzun listeler 15'er satırlık sayfalara bölündü; telefonda taşan satırlar ve sekmeler düzeltildi, koyu temada renkler okunaklı.",
+  "publishedAt": "2026-10-26T14:08:42.682Z"
 }
