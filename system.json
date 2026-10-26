@@ -1,5 +1,5 @@
 {
-  "version": "1.0.153",
-  "notes": "- Work/Bot yönetim paneline geldi: sol menüde Work/Bot simgesi. Mobil uygulamadan farklı, masaüstüne özel ofis tasarımı: üstte durum, sayılar ve Çalış / Dur anahtarı; birim masaları, Gün Akışı, Eğitim ve Bütçe.\n- Her birim kendi ekranında açılır: Bekleyen ve Geçmiş işler, iş dosyasında seçenekler, botun önerisi ve yazılı talimat; Ekip sekmesinde terfi talepleri, Uzman / Denetçi koltukları ve verilen yetkiler; Ayarlar sekmesi.\n- Müşteri Temsilcisi (sorular ve yorumlar), Canlı Destek özeti, Sağlayıcı Kâşifi (adaylar, bağlama, deneme siparişi) ve Raporlama Uzmanı (haftalık rapor) masaüstünde.\n- İçerik Editörü ayarları: yazım talimatı (.md dosyası, sürümler, deneme yazısı), denetim geçme puanı ve otomatik blog (günler, saatler, konu sırası, yayın şekli, kapak görseli, yazar).\n- Kampanya Uzmanı ayarlarında botun kendi başına uyduğu sınırlar görünür.\n- Sipariş Sorumlusu: aynı siparişin kalemleri alt alta (\"2 / 3 Kalem\"); karar verirken müşteriye e-posta gönderme anahtarı (varsayılan kapalı).\n- Uzun listeler 15'er satırlık sayfalara bölündü; telefonda taşan satırlar ve sekmeler düzeltildi, koyu temada renkler okunaklı.",
-  "publishedAt": "2026-10-26T14:08:42.682Z"
+  "version": "1.0.154",
+  "notes": "- Yönetim paneli koyu temada renkler düzeltildi: sol menü, özet kartları, yapılacaklar ve kişi kutularındaki renkli zeminler ile \"Ödeme Bekliyor\" gibi etiketler artık kahverengi ve çamurlu görünmüyor.\n- Logo kutusu, sol menüde seçili simge ve telefon menüsündeki dolu düğmeler koyu temada da düğme renginde, beyaz simgeyle görünüyor.\n- Ayarlar › Uygulamalar'da mobil uygulamanın yeni sürümü (1.17.76): E-Pin oyun türü seçimi.",
+  "publishedAt": "2026-10-26T15:45:11.564Z"
 }
