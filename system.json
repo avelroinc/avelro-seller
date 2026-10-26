@@ -1,5 +1,5 @@
 {
-  "version": "1.0.150",
-  "notes": "- E-Pin oyunlarına Oyun Türü seçimi geldi (E-Pin › oyun düzenleme): Mobil Oyunlar, Bilgisayar Oyunları, Konsol, Cüzdan ve Kart ya da Diğer. Otomatik seçilirse tür oyunun adından bulunur. Oyun listesinde Tür sütunu var.\n- Yönetim panelindeki tablolarda ad, ürün, müşteri ve sipariş numarası sütunları sola hizalı; satırlar artık kaymıyor.\n- Lisanslar tablosunda kategori ayrı sütunda gösteriliyor.",
-  "publishedAt": "2026-10-26T11:12:24.941Z"
+  "version": "1.0.151",
+  "notes": "- Yönetim panelindeki tablolarda satırların solundaki renkli çizgi kaldırıldı; durum, Durum sütunundaki etikette görünür.\n- Tablo sütunlarının genişlikleri dengelendi: ad ve ürün sütunu iki, diğer sütunlar birer pay alır; biri çok geniş, biri çok dar kalmaz.\n- Hizmetler tablosunda Platform sütunu Hizmet sütunundan önce geliyor.",
+  "publishedAt": "2026-10-26T11:48:47.451Z"
 }
