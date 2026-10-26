@@ -7,22 +7,6 @@
       "path": "pulse",
       "preview": "pulse/preview.webp",
       "default": true
-    },
-    {
-      "id": "aura",
-      "name": "Aura",
-      "description": "Koyu zemin, canlı geçişli vurgular ve büyük platform kartları.",
-      "path": "aura",
-      "preview": "aura/preview.png",
-      "comingSoon": true
-    },
-    {
-      "id": "lumen",
-      "name": "Lumen",
-      "description": "Sade ve aydınlık: bol beyaz alan, ince çizgiler ve editoryal başlıklar.",
-      "path": "lumen",
-      "preview": "lumen/preview.png",
-      "comingSoon": true
     }
   ]
 }
