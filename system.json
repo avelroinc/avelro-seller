@@ -1,5 +1,5 @@
 {
-  "version": "1.0.146",
-  "notes": "- Sistemde yalnızca Pulse teması kaldı: Aura ve diğer temalar kaldırıldı, yönetim panelinde artık yalnızca Pulse listeleniyor. Başka temadaki mağaza güncellemeyle Pulse’a geçer.\n- E-Pin, oyun, Lisanslar, lisans ürünü ve SMS Onay sayfalarına ana sayfadaki gibi büyük giriş alanı geldi. Her oyuna E-Pin › oyun düzenleme › Giriş Görseli’nden, E-Pin, Lisanslar ve SMS Onay sayfalarına Sayfalar’dan 1536×1024 görsel yüklenebilir; görsel yoksa sayfanın renginde logo kartı gösterilir.\n- E-Pin ve lisans sayfalarındaki satın alma kutusu kaldırıldı: pakete ya da Sepete Ekle’ye dokununca ürün sepete eklenir ve sepet açılır. Adet, lisans ek hizmetleri ve ID ile yüklemede oyuncu bilgileri sepette girilir; boş oyuncu bilgisiyle ödeme başlamaz.\n- Ana sayfanın platform, öne çıkan hizmet, fırsat, lisans, E-Pin, SMS Onay ve üyelik bölümleri yeni tasarıma geçti.\n- Hesabım giriş görselindeki kartlar dar masaüstü ekranlarda sol menünün altına girmiyor.",
-  "publishedAt": "2026-10-26T07:04:11.532Z"
+  "version": "1.0.147",
+  "notes": "- Ana sayfanın platform, öne çıkan hizmet, fırsat, lisans, E-Pin, SMS Onay ve üyelik bölümleri önceki tasarımına döndü.",
+  "publishedAt": "2026-10-26T07:13:30.805Z"
 }
