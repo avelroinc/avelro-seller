@@ -1,5 +1,5 @@
 {
-  "version": "1.0.148",
-  "notes": "- E-Pin, oyun, Lisanslar, lisans ürünü ve SMS Onay sayfalarında içerik artık giriş alanının üstüne binmiyor; giriş alanının altında, aralıklı başlıyor.\n- Telefonda görselsiz giriş alanı daha kısa.",
-  "publishedAt": "2026-10-26T08:16:28.162Z"
+  "version": "1.0.149",
+  "notes": "- Sitedeki donmalar giderildi: formlardaki bot doğrulaması artık sayfanın dışında, arka planda çözülüyor; hizmet, sepet, Hesabım ve Sipariş Sorgula sayfaları doğrulama sırasında takılmıyor.\n- Alt menüdeki sepet sayısı eğik değil, düz ve ortalı yazılıyor.",
+  "publishedAt": "2026-10-26T09:04:16.042Z"
 }
