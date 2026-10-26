@@ -1,5 +1,5 @@
 {
-  "version": "1.0.149",
-  "notes": "- Sitedeki donmalar giderildi: formlardaki bot doğrulaması artık sayfanın dışında, arka planda çözülüyor; hizmet, sepet, Hesabım ve Sipariş Sorgula sayfaları doğrulama sırasında takılmıyor.\n- Alt menüdeki sepet sayısı eğik değil, düz ve ortalı yazılıyor.",
-  "publishedAt": "2026-10-26T09:04:16.042Z"
+  "version": "1.0.150",
+  "notes": "- E-Pin oyunlarına Oyun Türü seçimi geldi (E-Pin › oyun düzenleme): Mobil Oyunlar, Bilgisayar Oyunları, Konsol, Cüzdan ve Kart ya da Diğer. Otomatik seçilirse tür oyunun adından bulunur. Oyun listesinde Tür sütunu var.\n- Yönetim panelindeki tablolarda ad, ürün, müşteri ve sipariş numarası sütunları sola hizalı; satırlar artık kaymıyor.\n- Lisanslar tablosunda kategori ayrı sütunda gösteriliyor.",
+  "publishedAt": "2026-10-26T11:12:24.941Z"
 }
