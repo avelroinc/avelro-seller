@@ -1,5 +1,5 @@
 {
-  "version": "1.0.158",
-  "notes": "- Work/Bot: Çalışıyor ve birimlerdeki Açık / Kapalı anahtarları panelin diğer anahtarlarıyla aynı görünüyor (yazı solda, anahtar sağda, açıkken ana renkte).",
-  "publishedAt": "2026-10-26T18:21:28.157Z"
+  "version": "1.0.159",
+  "notes": "- Work/Bot ekranları baştan sona tarandı ve görünüm hataları giderildi.\n- Uzman ve Denetçi koltuk düzenleyicisi dar telefonlarda (320 px) ekrandan taşmıyor; uzun model adları kısaltılarak gösterilir, etiket \"Sürüm\" oldu.\n- İş dosyasındaki işlem düğmeleri dar ekranda alt alta dizilir; yazılar kesilmez.\n- Telefonda birim başlığındaki Şimdi Tara düğmesi, Açık anahtarı ve etiket tek satırda eşit genişlikte.\n- Antrenman ekranında beş birim telefonda iki sütunlu ızgarada, kaydırmadan görünür.\n- İçerik Editörü iş dosyasında yazılacak metnin önizlemesi: Google başlığı ve açıklaması karakter sayılarıyla, eski metin üstü çizili, makale önerilerinde makalenin başı.",
+  "publishedAt": "2026-10-26T20:41:04.208Z"
 }
