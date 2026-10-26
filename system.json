@@ -1,5 +1,5 @@
 {
-  "version": "1.0.155",
-  "notes": "- Yönetim panelinin telefon menüsü düzenlendi: Genel Bakış, Work/Bot, Raporlar ve Ayarlar artık ayrı kutularda, grup kutularıyla aynı boyda ve eşit aralıklı. Gruplar eskisi gibi kendi kutusunda açılır.",
-  "publishedAt": "2026-10-26T15:58:24.149Z"
+  "version": "1.0.156",
+  "notes": "- Work/Bot stok tahmini: Servis Danışmanı lisans anahtarı ve E-Pin kod stoğunu satış hızına göre izler; \"Bu hızla yaklaşık 4 gün içinde biter\" uyarısı, eklenmesi gereken adet, Fiyatı %10 Artır ve Satıştan Kaldır seçenekleri. Uyarı zamanı ve hedef stok Servis Danışmanı › Ayarlar'da.\n- Work/Bot Antrenman (Eğitim › Antrenman): Sipariş Sorumlusu, Servis Danışmanı, İçerik Editörü, Kampanya Uzmanı ve Müşteri Temsilcisi için 10'ar örnek vakalık turlar. Kararını verirsin, bot tahminini sonra gösterir; kararlar öğrenmeye sayılır, hiçbir gerçek işlem yapılmaz.\n- Kendi adı olan seçenekler (Tamam, Stok Ekleyeceğim; Fiyat Aynı Kalsın) artık kendi adıyla görünür.",
+  "publishedAt": "2026-10-26T17:32:07.242Z"
 }
