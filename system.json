@@ -1,5 +1,5 @@
 {
-  "version": "1.0.151",
-  "notes": "- Yönetim panelindeki tablolarda satırların solundaki renkli çizgi kaldırıldı; durum, Durum sütunundaki etikette görünür.\n- Tablo sütunlarının genişlikleri dengelendi: ad ve ürün sütunu iki, diğer sütunlar birer pay alır; biri çok geniş, biri çok dar kalmaz.\n- Hizmetler tablosunda Platform sütunu Hizmet sütunundan önce geliyor.",
-  "publishedAt": "2026-10-26T11:48:47.451Z"
+  "version": "1.0.152",
+  "notes": "- Yönetim panelindeki bütün tablolarda sütun başlıkları ve veriler ortalandı. Ad ve ürün sütunlarında satırlar yine aynı hizada başlıyor, kayma olmuyor.\n- Tablo yazıları tek tip: ad, kod, fiyat ve diğer bilgiler aynı kalınlık ve renkte; yalnızca ikinci satır bilgiler hafif soluk.",
+  "publishedAt": "2026-10-26T12:19:55.502Z"
 }
