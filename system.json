@@ -1,5 +1,5 @@
 {
-  "version": "1.0.154",
-  "notes": "- Yönetim paneli koyu temada renkler düzeltildi: sol menü, özet kartları, yapılacaklar ve kişi kutularındaki renkli zeminler ile \"Ödeme Bekliyor\" gibi etiketler artık kahverengi ve çamurlu görünmüyor.\n- Logo kutusu, sol menüde seçili simge ve telefon menüsündeki dolu düğmeler koyu temada da düğme renginde, beyaz simgeyle görünüyor.\n- Ayarlar › Uygulamalar'da mobil uygulamanın yeni sürümü (1.17.76): E-Pin oyun türü seçimi.",
-  "publishedAt": "2026-10-26T15:45:11.564Z"
+  "version": "1.0.155",
+  "notes": "- Yönetim panelinin telefon menüsü düzenlendi: Genel Bakış, Work/Bot, Raporlar ve Ayarlar artık ayrı kutularda, grup kutularıyla aynı boyda ve eşit aralıklı. Gruplar eskisi gibi kendi kutusunda açılır.",
+  "publishedAt": "2026-10-26T15:58:24.149Z"
 }
