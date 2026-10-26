@@ -1,5 +1,5 @@
 {
-  "version": "1.0.156",
-  "notes": "- Work/Bot stok tahmini: Servis Danışmanı lisans anahtarı ve E-Pin kod stoğunu satış hızına göre izler; \"Bu hızla yaklaşık 4 gün içinde biter\" uyarısı, eklenmesi gereken adet, Fiyatı %10 Artır ve Satıştan Kaldır seçenekleri. Uyarı zamanı ve hedef stok Servis Danışmanı › Ayarlar'da.\n- Work/Bot Antrenman (Eğitim › Antrenman): Sipariş Sorumlusu, Servis Danışmanı, İçerik Editörü, Kampanya Uzmanı ve Müşteri Temsilcisi için 10'ar örnek vakalık turlar. Kararını verirsin, bot tahminini sonra gösterir; kararlar öğrenmeye sayılır, hiçbir gerçek işlem yapılmaz.\n- Kendi adı olan seçenekler (Tamam, Stok Ekleyeceğim; Fiyat Aynı Kalsın) artık kendi adıyla görünür.",
-  "publishedAt": "2026-10-26T17:32:07.242Z"
+  "version": "1.0.157",
+  "notes": "- Work/Bot Tasarruf Modu (Eğitim › Yapay Zekâ Bütçesi, varsayılan açık): kısa kararlar (tahmin, Denetçi kontrolü, yorum) sağlayıcının en ucuz modeliyle yapılır; makale, blog ve Google başlığı her zaman çalışanın kendi modeliyle yazılır.\n- Kendi kuralın: bir iş türünde son 10 kararından en az 9'u aynıysa bot yapay zekâya sormadan senin kuralınla tahmin eder (İçerik Editörü hariç).\n- SEO: Google başlığı 50–60 karakter (en fazla 65), açıklama 140–155 karakter yazılır; aralık dışına çıkan metin bir kez düzelttirilir. 65 karakteri aşan başlıklar ve 110 karakterden kısa açıklamalar için öneri açılır.",
+  "publishedAt": "2026-10-26T17:51:35.257Z"
 }
