@@ -5755,3 +5755,20 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .sa-methods:has(>button:nth-child(3)) button{gap:8px;padding:0 12px}
 @media (max-width:640px){.shop-shell .sa-methods:has(>button:nth-child(3)){grid-template-columns:minmax(0,1fr)}}
 @media (max-width:560px){.shop-shell .adm-row-actions{flex-wrap:wrap}.shop-shell .adm-row-actions>.adm-row-end{width:100%}.shop-shell .adm-row-actions>.adm-row-end>.shop-button{flex:1}}
+/* Ana sayfa bölümleri ve SSS: başlık bölüm kutusunun dışında, ortalı ve iki yanı çizgili (SectionHeading). Kutunun kendi boşlukları sıfırlanır. */
+.shop-shell .shop-section-heading h2 em{color:var(--shop-accent);font-style:normal}
+.shop-shell .shop-sec>:not(.shop-section-heading){margin-top:0;margin-bottom:0}
+.shop-shell .sc-ed{grid-template-columns:minmax(0,1fr);gap:0}
+.shop-shell .shop-discover.is-links{display:block;padding:28px}
+.shop-shell .shop-discover.is-links .shop-discover-links{grid-template-columns:repeat(3,minmax(0,1fr));justify-items:stretch}
+.shop-shell .sc-faq{display:block}
+.shop-shell .sc-faq>.sc-faq-list{max-width:880px;margin-inline:auto}
+@media (max-width:900px){.shop-shell .shop-discover.is-links{padding:18px}.shop-shell .shop-discover.is-links .shop-discover-links{grid-template-columns:minmax(0,1fr)}}
+.shop-shell .sc-more-time{display:inline-flex;align-items:center;gap:6px}
+@media (max-width:900px){.shop-shell .sc-more-aside:not(:has(>img)){display:none}}
+/* Tek parça makaleler ve Hakkımızda: İçindekiler sağ sütunda değil, metnin başında blog yazısındaki kutu. Makale çerçevesiz, okunur genişlikte. */
+.shop-shell :is(.sc-more-main,.sc-article-main)>.sc-post-toc{display:grid;margin:0;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);overflow:hidden}
+.shop-shell .sc-more-card{display:block;border:0;border-radius:0;background:none;overflow:visible}
+.shop-shell .sc-more-main{max-width:880px;margin-inline:auto;padding:0}
+.shop-shell .sc-more-cover{width:100%;aspect-ratio:16/7;border-radius:2px;object-fit:cover}
+@media (max-width:640px){.shop-shell .sc-more-main{padding:0}}
