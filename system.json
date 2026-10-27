@@ -1,5 +1,5 @@
 {
-  "version": "1.0.162",
-  "notes": "- Ana sayfada Lisanslar bölümü yenilendi: başlığın altında ortalı güvence satırı (Anında Teslim, Orijinal Anahtar, Hesabında Saklı) ve iki sütunlu fiyat listesi (logo, kategori, ürün adı, indirim oranı, eski ve yeni fiyat).\n- Popüler Oyunlar oyun rafı oldu: dikey kapaklı oyun kartları (kapak yoksa oyunun renginde zemin ve büyük logo), teslim şekli etiketleri, oyun adı ve başlayan fiyat. Tablette ve telefonda yana kaydırılır.\n- SMS Onay bölümü yenilendi: birbirine bağlı üç adım, boşluksuz dolan uygulama ızgarası ve ortada Numara Al ile iade güvencesi.\n- Sol menü varken sayfa içeriği ekranda ortalı; sağ ve sol boşluk eşit. Menü sabitlenince içerik eskisi gibi sağa kayar.\n- Alt bilgi zemini ekranın iki kenarına kadar uzanır.\n- Ana sayfa makalesi ve diğer tek parça makaleler içeriğin tam genişliğinde.\n- Pulse teması 1.0.45.",
-  "publishedAt": "2026-10-27T07:56:46.675Z"
+  "version": "1.0.163",
+  "notes": "- Ana sayfadaki Lisanslar bölümünden Tüm Lisanslar bağlantısı ve güvence satırı (Anında Teslim, Orijinal Anahtar, Hesabında Saklı) kaldırıldı; başlığın altında doğrudan ürün listesi.\n- Blogdan Son Yazılar listesinde satırın üzerine gelince açılan zemin artık sol menünün altına taşmıyor.\n- Pulse teması 1.0.46.",
+  "publishedAt": "2026-10-27T08:10:32.017Z"
 }
