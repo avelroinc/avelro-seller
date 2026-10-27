@@ -5723,3 +5723,5 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell main>.shop-container:has(>.sth)+:not(script,style,link,template,[hidden]){margin-top:var(--shop-hero-gap)!important}
 .shop-shell :is(.pg-body,.sc-flow,main)>.shop-zig{margin-bottom:0}
 .shop-shell .sms-shop{gap:var(--shop-hero-gap)}.shop-shell .sms-main{gap:var(--shop-section-gap)}
+/* Alt bilgi sekmeleri (7 sekmeye kadar): sütunlar eşit, uzun ad iki satıra iner; sekme satırı kartı taşırmaz. */
+@media (min-width:1001px) and (max-width:1399px){.shop-shell .shop-end-tabs{grid-template-columns:repeat(var(--shop-end-tabs,6),minmax(0,1fr))}.shop-shell .shop-end-section>button{justify-content:center;white-space:normal;text-align:center;line-height:1.3}}

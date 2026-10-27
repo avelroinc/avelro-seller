@@ -1,5 +1,5 @@
 {
-  "version": "1.0.167",
-  "notes": "- Sitenin bütün sayfalarında boşluklar tek düzende: bölümler arası 80 px (tablette 64, telefonda 48), giriş alanı ile ilk içerik arası 48 px (telefonda 32), bölüm başlığı ile içeriği arası 32 px (telefonda 24), içerik ile alttaki Tüm … bağlantısı arası 32 px (telefonda 24).\n- Lisans ürün sayfasında rehber ile Benzer Lisanslar artık birbirine yapışık değil; Kampanyalar ve Duyurular başlıklarının altındaki sıkışıklık giderildi.\n- Yönetim paneli: yan menü sabitlenmemişken içerik ekranda ortalı, sağ ve sol boşluk eşit (sitedeki gibi). Kaydırma çubuğu olsa da olmasa da iki taraf eşit kalır.\n- Pulse teması 1.0.50.",
-  "publishedAt": "2026-10-27T20:13:02.137Z"
+  "version": "1.0.168",
+  "notes": "- Alt bilgiye iki sekme eklendi: E-Pin Hizmetleri (oyunlar logolarıyla, Tüm Oyunlar) ve SMS Onay Hizmetleri (uygulamalar logolarıyla; tıklanan uygulama SMS Onay sayfasında seçili açılır, Tüm Uygulamalar). Sekme adları Site Metinleri › Alt Bilgi bölümünden ya da sitede Düzenleme Modu’ndan değiştirilebilir.\n- Orta boy ekranlarda alt bilgi sekmeleri satırı eşit paylaşır; sekme satırı artık kartı taşırmaz.\n- Yönetim paneli sol menüsünde Work/Bot simgesi canlı: yavaşça nefes alan mavi ışıma, yayılan halka ve ara sıra göz kırpma (hareketi azalt ayarında durur).\n- Blog yazısında paylaşım düğmeleri yalnızca üstteki bilgi şeridinde; yazının sonundaki tekrar kaldırıldı.\n- Pulse teması 1.0.51.",
+  "publishedAt": "2026-10-27T20:51:09.997Z"
 }
