@@ -2,15 +2,15 @@
 .shop-shell[data-shop-scheme=dark]{--shop-accent:var(--shop-accent-dark,#8aa2ff);--shop-accent-fill:var(--shop-accent-light,#3d5ee0);--shop-on-accent:#ffffff;--shop-canvas:#0d1321;--shop-band:#111a2c;--shop-outside:#0c111e;--shop-surface:#162036;--shop-soft:#1c2740;--shop-ink:#f2f5fb;--shop-ink-2:#c9d0de;--shop-muted:#98a2b8;--shop-faint:#6d7891;--shop-line:#223050;--shop-line-2:#2f3e60;--shop-invert:#f2f5fb;--shop-invert-ink:#111827;--shop-invert-muted:#58627a;--shop-invert-line:#d7dce7;--shop-tint:color-mix(in srgb,var(--shop-accent) 14%,var(--shop-surface));--shop-tint-2:color-mix(in srgb,var(--shop-accent) 24%,var(--shop-surface));--shop-marker:color-mix(in srgb,var(--shop-accent) 40%,transparent);--shop-good:#3ecf8e;--shop-on-good:#0d1321;--shop-warn:#f1b24a;--shop-bad:#ff6b6f;--shop-shadow:0 14px 36px -16px rgb(0 0 0 / .6);--shop-shadow-lg:0 30px 60px -24px rgb(0 0 0 / .75);color-scheme:dark}
 body:has(.shop-shell){background:#fbfcfe}
 body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=instagram]){--brand:#e4336f}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=tiktok]){--brand:#121212}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=youtube]){--brand:#f00f0f}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=twitter]){--brand:#1d9bf0}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=facebook]){--brand:#3b5998}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=spotify]){--brand:#1db954}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=telegram]){--brand:#229ed9}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=linkedin]){--brand:#0a66c2}
-.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=twitch]){--brand:#9146ff}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=instagram]){--brand:#e4336f}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=tiktok]){--brand:#121212}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=youtube]){--brand:#f00f0f}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=twitter]){--brand:#1d9bf0}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=facebook]){--brand:#3b5998}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=spotify]){--brand:#1db954}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=telegram]){--brand:#229ed9}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=linkedin]){--brand:#0a66c2}
+.shop-shell :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article,.ssv-card):has([data-platform=twitch]){--brand:#9146ff}
 .shop-shell[data-shop-scheme=dark] :is(.shop-package,.shop-platform-strip>a,.shop-suggest article,.shop-cart-suggest-grid article):has([data-platform=tiktok]){--brand:#26303f}
 .shop-shell *,.shop-shell *::before,.shop-shell *::after{box-sizing:border-box}
 .shop-shell :where(h1,h2,h3,h4,h5,p,ul,ol,dl,dd,figure,blockquote){margin:0}
@@ -926,24 +926,6 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
  .shop-shell .sfo-presets button{flex:1;min-width:0}
 }
 .shop-shell .ssv{display:grid;gap:36px;padding-bottom:48px}
-.shop-shell .ssv-group>h2{display:flex;align-items:center;gap:12px;margin:0 0 16px;color:var(--shop-ink);font-size:20px;letter-spacing:-.01em}
-.shop-shell .ssv-group>h2>span{display:grid;place-items:center;width:38px;height:38px;border-radius:2px;background:var(--shop-accent-fill);color:#fff}
-.shop-shell .ssv-group[data-platform=instagram]>h2>span{background:linear-gradient(135deg,#f58529,#dd2a7b 50%,#8134af)}
-.shop-shell .ssv-group[data-platform=tiktok]>h2>span{background:#111}
-.shop-shell .ssv-group[data-platform=youtube]>h2>span{background:#ff0033}
-.shop-shell .ssv-group>h2 svg{width:19px;height:19px}
-.shop-shell .ssv-group>h2 small{margin-left:auto;color:var(--shop-muted);font-size:13px;font-weight:600}
-.shop-shell .ssv-group ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:0;padding:0;list-style:none}
-.shop-shell .ssv-group a{position:relative;display:grid;align-content:start;gap:8px;height:100%;padding:20px 52px 18px 20px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);text-decoration:none;box-sizing:border-box;transition:border-color .15s,box-shadow .15s,transform .15s}
-.shop-shell .ssv-group a:hover{border-color:var(--shop-accent);box-shadow:0 18px 36px -24px rgb(0 0 0 / .45);transform:translateY(-2px)}
-.shop-shell .ssv-group a>b{font-size:16px}
-.shop-shell .ssv-group a>p{margin:0;color:var(--shop-muted);font-size:13.5px;line-height:1.55}
-.shop-shell .ssv-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:4px;color:var(--shop-muted);font-size:13px}
-.shop-shell .ssv-meta em{padding:3px 9px;border-radius:2px;background:color-mix(in srgb,var(--shop-accent) 12%,transparent);color:var(--shop-accent);font-size:11.5px;font-style:normal;font-weight:700}
-.shop-shell .ssv-meta strong{color:var(--shop-ink)}
-.shop-shell .ssv-group a>i{position:absolute;top:20px;right:18px;color:var(--shop-accent);transition:transform .15s}
-.shop-shell .ssv-group a:hover>i{transform:translateX(3px)}
-.shop-shell .ssv-group a>i svg{width:18px;height:18px}
 .shop-shell .ssv-empty{color:var(--shop-muted)}
 .shop-shell .sfo-next-head{margin:6px 0 0;color:var(--shop-accent);font-size:13.5px;font-weight:700}
 .shop-shell .sfo-qty.is-locked{align-items:center;justify-content:center;gap:8px;border-style:dashed;border-color:var(--shop-line);background:var(--shop-soft);color:var(--shop-ink)}
@@ -1248,23 +1230,6 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 .shop-shell .sph-body{position:relative;z-index:3;margin:24px 0 0}
 .shop-shell .sph.is-overlap .sph-body{margin:-96px 40px 0}
 .shop-shell .sph-points-wrap{display:grid;gap:16px;margin-top:72px}
-.shop-shell .sph-points-title{margin:0;font-size:22px}
-.shop-shell .sph-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0;padding:0;list-style:none}
-.shop-shell .sph-points li{position:relative;display:flex;align-items:flex-start;gap:14px;padding:18px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);overflow:hidden;opacity:0;animation:sph-in .6s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i,0)*140ms + 120ms)}
-.shop-shell .sph-points li::before{position:absolute;inset:0 auto 0 0;width:3px;background:var(--tone,var(--shop-accent));content:""}
-.shop-shell .sph-points li[data-tone=good]{--tone:#16a34a}
-.shop-shell .sph-points li[data-tone=warn]{--tone:#d97706}
-.shop-shell .sph-points li[data-tone=bad]{--tone:#dc2626}
-.shop-shell .sph-point-icon{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:2px;background:color-mix(in srgb,var(--tone,var(--shop-accent)) 14%,transparent);color:var(--tone,var(--shop-accent))}
-.shop-shell .sph-point-icon svg{width:20px;height:20px}
-.shop-shell .sph-points li:hover .sph-point-icon{animation:sph-pop .5s ease}
-.shop-shell .sph-points b{color:var(--shop-ink);font-size:15px}
-.shop-shell .sph-points p{margin:4px 0 0;color:var(--shop-muted);font-size:13.5px;line-height:1.55}
-@keyframes sph-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-@keyframes sph-pop{50%{transform:scale(1.15) rotate(-6deg)}}
-@media (prefers-reduced-motion:reduce){
- .shop-shell .sph-points li{opacity:1;animation:none}
-}
 @media (max-width:900px){
  .shop-shell .sph-banner{min-height:0;padding:36px 28px 40px}
  .shop-shell .sph.is-overlap .sph-banner{padding-bottom:120px}
@@ -1275,7 +1240,6 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 @media (max-width:560px){
  .shop-shell .sph-banner{padding:28px 20px 32px}
  .shop-shell .sph.is-overlap .sph-body{margin:-90px 8px 0}
- .shop-shell .sph-points{grid-template-columns:1fr}
 }
 .shop-shell .sph+.ssv{margin-top:40px}
 @media (max-width:900px){
@@ -4316,9 +4280,7 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 .shop-shell .sms-shop{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
 .shop-shell .sms-main{display:grid;gap:40px;min-width:0}
 .shop-shell .sms-step{display:grid;gap:16px;min-width:0}
-.shop-shell .sms-step-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
-.shop-shell .sms-step-head h2,.shop-shell .sms-side-head h2,.shop-shell .sms-how h2{display:flex;align-items:center;gap:10px;margin:0;font-size:20px;line-height:1.3}
-.shop-shell .sms-step-head h2 span{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:var(--shop-radius);background:var(--shop-accent-fill);color:var(--shop-on-accent);font-size:14px;font-weight:800}
+.shop-shell .sms-side-head h2{display:flex;align-items:center;gap:10px;margin:0;font-size:20px;line-height:1.3}
 .shop-shell .sms-search{display:flex;align-items:center;gap:8px;min-width:0;width:min(260px,100%);min-height:42px;padding:0 12px;border:1px solid var(--shop-line-2);border-radius:var(--shop-radius);background:var(--shop-surface)}
 .shop-shell .sms-search svg{flex:none;width:16px;height:16px;color:var(--shop-faint)}
 .shop-shell .sms-search input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--shop-ink);font:inherit;font-size:14px}
@@ -4366,11 +4328,6 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 .shop-shell .sms-empty{display:flex;align-items:center;justify-content:center;gap:10px;grid-column:1/-1;margin:0;padding:34px 16px;border:1px dashed var(--shop-line-2);border-radius:var(--shop-radius);color:var(--shop-muted)}
 .shop-shell .sms-empty svg{width:18px;height:18px}
 .shop-shell .sms-how{display:grid;gap:16px}
-.shop-shell .sms-how ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
-.shop-shell .sms-how li{display:grid;gap:6px;align-content:start;padding:18px;border-radius:var(--shop-radius);background:var(--shop-soft)}
-.shop-shell .sms-how li span{display:grid;place-items:center;width:30px;height:30px;margin-bottom:4px;border-radius:50%;background:var(--shop-accent-fill);color:var(--shop-on-accent);font-size:14px;font-weight:800}
-.shop-shell .sms-how li b{font-size:15px}
-.shop-shell .sms-how li p{margin:0;color:var(--shop-muted);font-size:13.5px;line-height:1.55}
 .shop-shell .sms-side{display:grid;grid-template-columns:300px minmax(0,1fr);border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);box-shadow:var(--shop-shadow);overflow:hidden}
 .shop-shell .sms-side.has-past{grid-template-columns:290px minmax(0,1fr) 330px}
 .shop-shell .sms-side>*{min-width:0;padding:24px}
@@ -4477,7 +4434,7 @@ html[data-scrolling] .shop-shell *,html[data-scrolling] .shop-shell *::before,ht
 }
 @media (max-width:1280px){.shop-shell .sms-apps{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:1080px){.shop-shell .sms-apps{grid-template-columns:repeat(6,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:860px){.shop-shell .sms-apps{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-shell .sms-how ol{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.shop-shell .sms-apps{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-shell .sms-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){
  .shop-shell .sms-apps{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
  .shop-shell .sms-app{min-height:100px;padding:12px 6px}
@@ -4901,7 +4858,6 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .sc-more-aside em{flex:none;color:var(--shop-accent);font-style:normal;font-weight:800;font-variant-numeric:tabular-nums}
 @media (max-width:900px){.shop-shell .sc-more-card{grid-template-columns:minmax(0,1fr)}.shop-shell .sc-more-aside{order:-1;grid-template-columns:minmax(0,1fr);border-left:0;border-bottom:1px solid var(--shop-line)}.shop-shell .sc-more-aside nav{display:none}.shop-shell .sc-more-aside>img{aspect-ratio:16/7}}
 @media (max-width:640px){.shop-shell .sc-more-main{padding:24px 20px}.shop-shell .sc-more-aside{padding:16px 20px}.shop-shell .sc-more-body{max-height:360px}}
-.shop-shell .sms-step-head h2{scroll-margin-top:calc(var(--shop-header-h) + 32px)}
 .shop-shell .shop-section-heading:not(.is-band),.shop-shell .shop-platforms .shop-section-heading:not(.is-band){display:grid;grid-template-columns:minmax(24px,1fr) minmax(0,max-content) minmax(24px,1fr);grid-template-areas:"eye eye eye" "l title r" "text text text" "action action action";align-items:center;justify-items:center;gap:12px 24px;max-width:none;margin-inline:0;text-align:center}
 .shop-shell .shop-section-heading>div{display:contents}
 .shop-shell .shop-section-heading:not(.is-band)>div>small{grid-area:eye;padding:0;background:none;border-radius:0;color:var(--shop-accent);font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
@@ -5696,3 +5652,55 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .shop-sec-more{display:flex;justify-content:center;margin-top:32px}
 .shop-shell .shop-sec>.shop-sec-more{margin-top:32px}
 .shop-shell .shop-sec-more>.shop-text-link{min-height:46px;padding:0 24px}
+
+/* Ortak adım tasarımı: simgesiz adımda numara; SMS Onay adım başlıklarının arama kutusu başlığın altında ortada; SMS yan kutusundaki
+   Hızlı Başla düğmeleri çerçevesiz (kutu içinde kutu olmasın). */
+.shop-shell .hx-steps li>span.is-num{color:var(--shop-accent);font-family:var(--shop-display);font-size:24px;font-weight:800}
+.shop-shell .hx-steps:last-child{margin-bottom:0}
+.shop-shell .sms-step .shop-section-heading{margin-bottom:0}
+.shop-shell .sms-step h2{scroll-margin-top:calc(var(--shop-header-h) + 32px)}
+.shop-shell .sms-step-tools{display:flex;justify-content:center}
+.shop-shell .sms-step-tools .sms-search{width:min(100%,360px)}
+.shop-shell .sms-how .shop-section-heading{margin-bottom:var(--shop-heading-gap,36px)}
+.shop-shell .sms-quick button{border-color:transparent;background:var(--shop-soft)}
+.shop-shell .sms-quick button.is-on,.shop-shell .sms-quick button:hover{border-color:transparent;background:var(--shop-tint)}
+.shop-shell .sph-points-wrap .shop-section-heading{margin-bottom:var(--shop-heading-gap,36px)}
+/* Sayfa giriş alanı simgesi: Kampanyalar, Blog, Duyurular, Hakkımızda, İletişim, sözleşme ve sepet sayfalarında da Lisans / E-Pin
+   sayfalarındaki gibi eğik, vurgu renginde büyük kutu ve beyaz simge (tek tip giriş görseli). */
+.shop-shell .sph-visual::before{display:none}
+.shop-shell .sph-tile{top:50%;right:14%;width:210px;height:210px;border:0;border-radius:34px;background:linear-gradient(140deg,color-mix(in srgb,var(--shop-accent-fill,var(--shop-accent)) 80%,#fff),var(--shop-accent-fill,var(--shop-accent)) 55%,color-mix(in srgb,var(--shop-accent-fill,var(--shop-accent)) 60%,#000));color:#fff;box-shadow:0 40px 80px -40px var(--shop-accent-fill,var(--shop-accent));transform:translateY(-50%) rotate(-8deg)}
+.shop-shell .sph-tile::before,.shop-shell .sph-tile::after{display:none}
+.shop-shell .sph-tile>svg{width:46%;height:46%;stroke-width:1.8}
+/* Lisans kartı: ürün görseli yoksa ana sayfadaki gibi marka logosu. */
+.shop-shell .lx-logo{position:relative;display:grid;place-items:center;filter:drop-shadow(0 14px 22px rgb(0 0 0 / .18))}
+/* Bulunamayan sayfa (mağaza içi): sitenin renkleriyle ortalı 404. */
+.shop-shell .shop-nf{display:grid;justify-items:center;gap:14px;padding-block:96px 120px;text-align:center}
+.shop-shell .shop-nf-code{font-family:var(--shop-display);font-size:clamp(96px,16vw,168px);font-weight:800;line-height:1;letter-spacing:-.05em;background:linear-gradient(160deg,var(--shop-accent),color-mix(in srgb,var(--shop-accent) 45%,var(--shop-ink)));-webkit-background-clip:text;background-clip:text;color:transparent}
+.shop-shell .shop-nf h1{margin:6px 0 0;color:var(--shop-ink);font-size:clamp(24px,3vw,32px)}
+.shop-shell .shop-nf p{max-width:52ch;margin:0;color:var(--shop-muted);font-size:15.5px;line-height:1.65}
+.shop-shell .shop-nf-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:14px}
+/* Metin sayfaları (/sayfa/…): düz, okunur metin; İçindekiler blog yazısındaki kutu. */
+.shop-shell .sc-doc{display:grid;gap:28px;margin-top:48px}
+.shop-shell .sc-doc>.sc-post-toc{display:grid;margin:0;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);overflow:hidden}
+.shop-shell .sc-doc .sc-prose{max-width:none}
+
+/* Platform sayfası: hizmet kartları (platform renginde simge, ad, kısa açıklama, 1.000 adet fiyatı ve Sipariş Ver), ardından Nasıl
+   Sipariş Verilir adımları ve Diğer Platformlar. */
+.shop-shell .ssv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.shop-shell .ssv-card{display:grid;grid-template-columns:52px minmax(0,1fr) auto;grid-template-areas:"ico text text" "price price go";align-items:center;gap:16px 14px;height:100%;padding:20px;border:1px solid var(--shop-line);border-radius:var(--shop-radius);background:var(--shop-surface);color:inherit;text-decoration:none;transition:border-color .18s,box-shadow .18s,transform .18s}
+.shop-shell .ssv-card:hover{border-color:color-mix(in srgb,var(--brand,var(--shop-accent)) 50%,var(--shop-line));box-shadow:var(--shop-shadow);transform:translateY(-2px)}
+.shop-shell .ssv-ico{grid-area:ico;display:grid;place-items:center;width:52px;height:52px;border-radius:var(--shop-radius);background:linear-gradient(150deg,var(--brand,var(--shop-accent-fill)),color-mix(in srgb,var(--brand,var(--shop-accent-fill)) 76%,#000));color:#fff;box-shadow:0 12px 24px -14px var(--brand,var(--shop-accent))}
+.shop-shell .ssv-ico svg{width:24px;height:24px}
+.shop-shell .ssv-text{grid-area:text;display:grid;gap:4px;min-width:0}
+.shop-shell .ssv-text b{color:var(--shop-ink);font-size:17px;font-weight:700}
+.shop-shell .ssv-text small{color:var(--shop-muted);font-size:13.5px;line-height:1.5}
+.shop-shell .ssv-price{grid-area:price;display:grid;line-height:1.25;padding-top:14px;border-top:1px dashed var(--shop-line-2)}
+.shop-shell .ssv-price small{color:var(--shop-muted);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.shop-shell .ssv-price strong{color:var(--shop-ink);font-size:19px;font-weight:800}
+.shop-shell .ssv-price em{justify-self:start;padding:3px 9px;border-radius:2px;background:var(--shop-tint);color:var(--shop-accent);font-size:12px;font-style:normal;font-weight:700}
+.shop-shell .ssv-go{grid-area:go;align-self:end;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:var(--shop-radius);background:var(--shop-tint);color:var(--shop-accent);font-size:13.5px;font-weight:700;transition:background-color .18s,color .18s}
+.shop-shell .ssv-go svg{width:16px;height:16px}
+.shop-shell .ssv-card:hover .ssv-go{background:var(--shop-accent-fill);color:var(--shop-on-accent)}
+.shop-shell .ssv-group .shop-section-heading{margin-bottom:var(--shop-heading-gap,36px)}
+.shop-shell .ssv-steps,.shop-shell .ssv-others{margin-top:var(--shop-section-gap,72px)}
+.shop-shell .ssv-others .shop-section-heading{margin-bottom:var(--shop-heading-gap,36px)}
