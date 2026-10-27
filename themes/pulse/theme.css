@@ -5630,7 +5630,8 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .hx-lic-go{width:18px;height:18px;color:var(--shop-muted);transition:color .18s,transform .18s}
 .shop-shell .hx-lic-row:hover .hx-lic-go{color:var(--shop-accent);transform:translateX(3px)}
 /* Ana sayfa › Popüler Oyunlar: dikey kapaklı oyun rafı. */
-.shop-shell .hx-games{display:grid;grid-template-columns:repeat(var(--n,6),minmax(0,1fr));gap:16px}
+/* Kart genişliği oyun sayısından bağımsız: her kart 6 sütunluk rafın bir sütunu kadar; az oyunda kartlar ortada durur. */
+.shop-shell .hx-games{display:grid;grid-template-columns:repeat(var(--n,6),calc((100% - 80px) / 6));justify-content:center;gap:16px}
 .shop-shell .hx-game{display:grid;gap:12px;color:inherit;text-decoration:none}
 .shop-shell .hx-game-art{position:relative;display:grid;place-items:center;aspect-ratio:3/4;overflow:hidden;border-radius:var(--shop-radius);background:linear-gradient(160deg,color-mix(in srgb,var(--game) 88%,#fff),color-mix(in srgb,var(--game) 70%,#000));box-shadow:0 18px 30px -22px color-mix(in srgb,var(--game) 80%,#000);transition:transform .25s,box-shadow .25s}
 .shop-shell .hx-game:hover .hx-game-art{transform:translateY(-4px);box-shadow:0 26px 40px -24px color-mix(in srgb,var(--game) 90%,#000)}
