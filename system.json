@@ -1,5 +1,5 @@
 {
-  "version": "1.0.163",
-  "notes": "- Ana sayfadaki Lisanslar bölümünden Tüm Lisanslar bağlantısı ve güvence satırı (Anında Teslim, Orijinal Anahtar, Hesabında Saklı) kaldırıldı; başlığın altında doğrudan ürün listesi.\n- Blogdan Son Yazılar listesinde satırın üzerine gelince açılan zemin artık sol menünün altına taşmıyor.\n- Pulse teması 1.0.46.",
-  "publishedAt": "2026-10-27T08:10:32.017Z"
+  "version": "1.0.164",
+  "notes": "- Bölüm bağlantıları (Tüm Hizmetler, Tüm Oyunlar, Hesabına Git, Tüm Yazılar, Bize Ulaşın) başlığın altından bölümün sonuna taşındı: içeriğin altında ortada durur.\n- Pulse teması 1.0.47.",
+  "publishedAt": "2026-10-27T08:18:07.145Z"
 }

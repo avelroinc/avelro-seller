@@ -5691,3 +5691,7 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
  .shop-shell:not([data-rail=pinned]) .shop-frame:has(>.shop-rail,.shop-rail){max-width:none;padding-inline:calc(var(--rail-w) + 4px)!important}
  .shop-shell:not([data-rail=pinned]) .shop-rail{left:max(16px,calc((100% - var(--shop-width)) / 2 - var(--rail-w) - 16px))}
 }
+/* Bölüm sonundaki bağlantı (Tüm Hizmetler, Tüm Oyunlar…): içeriğin altında ortada. */
+.shop-shell .shop-sec-more{display:flex;justify-content:center;margin-top:32px}
+.shop-shell .shop-sec>.shop-sec-more{margin-top:32px}
+.shop-shell .shop-sec-more>.shop-text-link{min-height:46px;padding:0 24px}
