@@ -5024,7 +5024,7 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .adm-head p{margin:0;color:var(--shop-muted);font-size:14.5px}
 .shop-shell .adm-head-actions{display:flex;flex-wrap:wrap;gap:8px}
 .shop-shell.shop-admin .adm-page{gap:12px;padding-top:8px}
-html:has(.shop-shell.shop-admin){scrollbar-gutter:stable}
+html:has(.shop-shell.shop-admin){scrollbar-gutter:stable both-edges}
 .shop-shell .sa-auth-form :is(.sa-error,.sa-notice){margin:0;padding:10px 12px;border-radius:var(--shop-radius);font-size:13.5px;line-height:1.5}
 .shop-shell .sa-auth-form .sa-error{background:color-mix(in srgb,#dc2626 10%,var(--shop-surface));color:#b91c1c}
 .shop-shell[data-shop-scheme=dark] .sa-auth-form .sa-error{color:#fca5a5}
@@ -5704,3 +5704,22 @@ html[data-text-preview] .shop-shell [data-t-focus]{outline:2px dashed var(--shop
 .shop-shell .ssv-group .shop-section-heading{margin-bottom:var(--shop-heading-gap,36px)}
 .shop-shell .ssv-steps,.shop-shell .ssv-others{margin-top:var(--shop-section-gap,72px)}
 .shop-shell .ssv-others .shop-section-heading{margin-bottom:var(--shop-heading-gap,36px)}
+/* Boşluk düzeni (bütün sayfalar): bölümler arası 80 / 64 / 48px, giriş alanı ile ilk içerik arası 48 / 32px, bölüm başlığı ile içeriği
+   arası 32 / 24px, içerik ile alttaki bağlantı (Tüm …) arası 32 / 24px. Sayfa gövdesindeki (.pg-body, .sc-flow) bölümler de aynı
+   aralıkla dizilir. */
+.shop-shell{--shop-section-gap:80px;--shop-hero-gap:48px;--shop-heading-gap:32px;--shop-more-gap:32px}
+@media (max-width:1000px){.shop-shell{--shop-section-gap:64px}}
+@media (max-width:760px){.shop-shell{--shop-section-gap:48px;--shop-hero-gap:32px;--shop-heading-gap:24px;--shop-more-gap:24px}}
+.shop-shell :is(.pg-body,.sc-flow)>:not(script,style,link,template,[hidden])~:not(script,style,link,template,[hidden]){margin-top:var(--shop-section-gap)!important}
+.shop-shell :is(main,.sc-flow):not(.shop-home)>:is(.sth,.sph,.shop-hero-grid,.sfo,.sdx-hero)+:not(script,style,link,template,[hidden]){margin-top:var(--shop-hero-gap)!important}
+.shop-shell main>.sc-about-layout+.sc-about-cta{margin-top:var(--shop-section-gap)!important}
+.shop-shell .ep-page .ep-pick{margin-top:0}
+.shop-shell .shop-sec-more,.shop-shell .shop-sec>.shop-sec-more{margin-top:var(--shop-more-gap)}
+.shop-shell .sph-points-wrap{gap:0}
+.shop-shell .sms-step .shop-section-heading{margin-bottom:calc(var(--shop-heading-gap) - 16px)}
+.shop-shell :is(.sms-how,.sph-points-wrap,.ssv-group,.ssv-others) .shop-section-heading{margin-bottom:var(--shop-heading-gap)}
+.shop-shell :is(.lx-related,.sms-how,.sc-related,.shop-cart-suggest){row-gap:0}
+.shop-shell .shop-qa-product{margin-bottom:0}
+.shop-shell main>.shop-container:has(>.sth)+:not(script,style,link,template,[hidden]){margin-top:var(--shop-hero-gap)!important}
+.shop-shell :is(.pg-body,.sc-flow,main)>.shop-zig{margin-bottom:0}
+.shop-shell .sms-shop{gap:var(--shop-hero-gap)}.shop-shell .sms-main{gap:var(--shop-section-gap)}
