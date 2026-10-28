@@ -3818,12 +3818,6 @@ body:has(.shop-shell[data-shop-scheme=dark]){background:#0c111e}
 .shop-shell .sc-blog-body .sc-conclusion>p{margin:0}
 .shop-shell .sc-blog-body .sc-conclusion-cta{justify-self:start;margin-top:4px;min-height:46px;padding-inline:20px;color:#fff;text-decoration:none}
 .shop-shell .sc-post-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:30px;padding:16px 18px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface)}
-.shop-shell .sc-feedback{display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--shop-ink);font-size:14.5px;font-weight:700}
-.shop-shell .sc-feedback>span{margin-right:4px}
-.shop-shell .sc-feedback button{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border:1px solid var(--shop-line);border-radius:2px;background:var(--shop-surface);color:var(--shop-ink);font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;transition:border-color .15s,color .15s}
-.shop-shell .sc-feedback button:hover{border-color:var(--shop-accent);color:var(--shop-accent)}
-.shop-shell .sc-feedback button svg,.shop-shell .sc-feedback p svg{width:16px;height:16px}
-.shop-shell .sc-feedback p{display:inline-flex;align-items:center;gap:8px;margin:0;color:#16a34a}
 .shop-shell .sc-share{display:flex;align-items:center;gap:8px}
 .shop-shell .sc-share>span{margin-right:2px;color:var(--shop-muted);font-size:13.5px;font-weight:700}
 .shop-shell .sc-share :is(a,button){display:grid;place-items:center;width:38px;height:38px;border:0;border-radius:2px;color:#fff;cursor:pointer;transition:transform .15s}

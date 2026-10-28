@@ -1,5 +1,5 @@
 {
-  "version": "1.0.176",
-  "notes": "- Work/Bot › Ekip akış şeması olarak görünür: Uzman ve Yazarlar solda alt alta, çizgilerle birleşip \"Kontrol\" etiketli okla sağdaki Denetçi'ye gider; boş Yazar Ekle kesik çizgiyle bağlıdır. Telefonda alt alta, aşağı okla. Denetçi'si olmayan birimlerde kartlar yan yana kalır.\n- Sol menüdeki Work/Bot simgesinde tek animasyon kaldı (yumuşak mavi ışıma); halka ve kırpışma kaldırıldı.\n- Pulse tema 1.0.52 (değişmedi).",
-  "publishedAt": "2026-10-28T13:45:38.047Z"
+  "version": "1.0.177",
+  "notes": "- Yönetim paneline sitede görünen ama yalnızca mobil uygulamadan ayarlanabilen ayarlar geldi:\n- Yorumlar › Ana Sayfa: ana sayfadaki müşteri yorumları eklenir, düzenlenir, silinir. Yorumlar › Rozetler: Google Yorumları, Trustpilot ve Şikayetvar puanı, sayısı, profil adresi; ana sayfada ve alt bilgide gösterim.\n- Duyurular: duyuru seçili değilken sağda Açılır Bildirim (başlık, metin, görsel, düğme, sıklık, gecikme).\n- Ödemeler › Sepet Ayarları: Hizmet Bedeli ve KDV, Sepet Hatırlatma (ne zaman, e-posta / SMS, kupon), Sepet Önerileri (yapay zekâya yeniden hazırlatma).\n- Bonus ve Referans › Yükleme Bonusu: onaylanan bakiye yüklemelerine yüzde bonus. Sitede bakiye yükleme özetinde bonus satırı görünür ve onay sonrası bakiyeye eklenir.\n- Kullanılmayan blog \"Bu yazı faydalı oldu mu?\" kodu temizlendi.\n- Pulse tema 1.0.53.",
+  "publishedAt": "2026-10-28T14:29:32.185Z"
 }
