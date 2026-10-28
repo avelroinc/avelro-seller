@@ -1,5 +1,5 @@
 {
-  "version": "1.0.178",
-  "notes": "- DeepSeek dördüncü yapay zekâ olarak eklendi: Work/Bot çalışanları (Sağlayıcı Kâşifi hariç her birimde) DeepSeek ile çalışabilir. Modeller: Chat (hızlı) ve Reasoner (düşünen). Harcama aylık bütçeye yazılır; hesapta bakiye bitince \"Bakiye Yok\" uyarısı çıkar.\n- Bütün yapay zekâlar artık modül: ChatGPT, Claude, Gemini ve DeepSeek Ayarlar › Modüller › Yapay Zekâ'dan kurulur, güncellenir ve kaldırılır. ChatGPT, Claude ve DeepSeek kartında API anahtarı, model ve Bağlantıyı Dene de vardır.\n- Geçiş: anahtarı kayıtlı olan ChatGPT ve Claude modülleri güncellemeden sonra birkaç dakika içinde kendiliğinden kurulur ve açılır; yapay zekâ işleri durmaz.\n- Gerekli modüller: ChatGPT Entegrasyonu 1.0.0, Claude Entegrasyonu 1.0.0, DeepSeek Entegrasyonu 1.0.0.\n- Pulse tema 1.0.53 (değişmedi).",
-  "publishedAt": "2026-10-28T15:54:44.371Z"
+  "version": "1.0.179",
+  "notes": "- Düzeltme: ChatGPT, Claude ve DeepSeek modülleri kurulurken çıkan \"Bu modül için GitHub kaynağı henüz tanımlanmadı\" hatası giderildi. Modüller artık Ayarlar › Modüller › Yapay Zekâ'dan kurulabilir; anahtarı kayıtlı ChatGPT ve Claude güncellemeden sonra birkaç dakika içinde kendiliğinden kurulur ve yapay zekâ işleri yeniden çalışır.\n- Pulse tema 1.0.53 (değişmedi).",
+  "publishedAt": "2026-10-28T18:14:55.174Z"
 }
