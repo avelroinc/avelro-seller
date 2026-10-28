@@ -14,7 +14,7 @@ Avelro Packet Seller System için yapay zekâ modülü. Kaynak: `avelroinc/avelr
 
 ## Kurulum
 
-1. Ayarlar › Modüller › Yapay Zekâ › ChatGPT'dan modülü kurun.
+1. Modüller › Yapay Zekâ › ChatGPT'dan modülü kurun.
 2. API anahtarını girin ve modeli seçin. Anahtar platform.openai.com › API keys bölümünden alınır.
 3. Bağlantıyı Dene ile kısa bir yanıt isteyerek anahtarı doğrulayın.
 

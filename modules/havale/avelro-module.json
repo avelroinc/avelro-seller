@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "havale",
+  "name": "Havale / EFT Entegrasyonu",
+  "description": "Ödeme adımında banka hesaplarıyla Havale / EFT ödemesini ve hesap ayarlarını açar.",
+  "version": "1.0.0",
+  "hostApiVersion": 3,
+  "category": "platform",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "host:platform"
+  ],
+  "configuration": "config.schema.json"
+}

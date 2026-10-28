@@ -13,7 +13,7 @@ Avelro Packet Seller System için yapay zekâ modülü. Kaynak: `avelroinc/avelr
 
 ## Kurulum
 
-1. Ayarlar › Modüller › Yapay Zekâ › DeepSeek'dan modülü kurun.
+1. Modüller › Yapay Zekâ › DeepSeek'dan modülü kurun.
 2. API anahtarını girin ve modeli seçin. Anahtar platform.deepseek.com › API keys (`sk-` ile başlar) bölümünden alınır.
 3. Bağlantıyı Dene ile kısa bir yanıt isteyerek anahtarı doğrulayın.
 

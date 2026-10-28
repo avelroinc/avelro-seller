@@ -13,7 +13,7 @@ Avelro Packet Seller System için yapay zekâ modülü. Kaynak: `avelroinc/avelr
 
 ## Kurulum
 
-1. Ayarlar › Modüller › Yapay Zekâ › Claude'dan modülü kurun.
+1. Modüller › Yapay Zekâ › Claude'dan modülü kurun.
 2. API anahtarını girin ve modeli seçin. Anahtar console.anthropic.com › API Keys (`sk-ant-` ile başlar) bölümünden alınır.
 3. Bağlantıyı Dene ile kısa bir yanıt isteyerek anahtarı doğrulayın.
 

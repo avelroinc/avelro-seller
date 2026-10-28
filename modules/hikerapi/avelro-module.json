@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "hikerapi",
+  "name": "HikerAPI Entegrasyonu",
+  "description": "Instagram profil analizi ve gönderi önizlemesi için profil verisini HikerAPI'den okur.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "social",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.hikerapi.com"
+  ],
+  "configuration": "config.schema.json"
+}

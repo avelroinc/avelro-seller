@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "social-login",
+  "name": "Sosyal Giriş Entegrasyonu",
+  "description": "Müşterilerin Google ve Facebook hesaplarıyla siteye girmesini sağlar.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "loginverify",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:oauth2.googleapis.com",
+    "network:openidconnect.googleapis.com",
+    "network:graph.facebook.com"
+  ],
+  "configuration": "config.schema.json"
+}

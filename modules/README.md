@@ -5,12 +5,14 @@ yönetim panelindeki Entegrasyon Ayarları ekranından bu depodan indirir, doğr
 
 | Tür | Modüller |
 | --- | --- |
-| Ödeme | `stripe`, `cryptomus`, `heleket` |
+| Ödeme | `havale`, `stripe`, `cryptomus`, `heleket` |
 | Bildirim | `telegram`, `whatsapp` |
 | SMS ve doğrulama | `netgsm`, `iletimerkezi`, `twilio`, `firebase` |
+| Sosyal giriş | `social-login` |
 | E-fatura | `parasut`, `bizimhesap`, `logo`, `uyumsoft` |
 | Yapay zekâ | `openai`, `claude`, `gemini`, `deepseek` |
 | SEO | `dataforseo`, `searchconsole` |
+| Sosyal medya | `hikerapi` |
 | Özellik | `reklam` |
 
 ## Modül Klasörü
