@@ -1,5 +1,5 @@
 {
-  "version": "1.0.175",
-  "notes": "- Yönetim paneli ile site aynı genişlikte ve hizada: panel kaydırma çubuğu için soldan da yer ayırdığından 15px daha dar ve kaymış görünüyordu; artık ikisi de yalnızca sağda yer ayırıyor, sekme geçişinde içerik kaymıyor.\n- Pulse tema 1.0.52.",
-  "publishedAt": "2026-10-28T13:21:47.089Z"
+  "version": "1.0.176",
+  "notes": "- Work/Bot › Ekip akış şeması olarak görünür: Uzman ve Yazarlar solda alt alta, çizgilerle birleşip \"Kontrol\" etiketli okla sağdaki Denetçi'ye gider; boş Yazar Ekle kesik çizgiyle bağlıdır. Telefonda alt alta, aşağı okla. Denetçi'si olmayan birimlerde kartlar yan yana kalır.\n- Sol menüdeki Work/Bot simgesinde tek animasyon kaldı (yumuşak mavi ışıma); halka ve kırpışma kaldırıldı.\n- Pulse tema 1.0.52 (değişmedi).",
+  "publishedAt": "2026-10-28T13:45:38.047Z"
 }
