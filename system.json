@@ -1,5 +1,5 @@
 {
-  "version": "1.0.172",
-  "notes": "- Work/Bot › Ekip: yazar ve temsilci kartları birbirine yapışık görünüyordu; artık kendi satırlarında aralıklı diziliyor, telefonda alt alta.\n- Pulse tema 1.0.51 (değişmedi).",
-  "publishedAt": "2026-10-28T11:58:33.443Z"
+  "version": "1.0.173",
+  "notes": "- 404 sayfası yeniden hareketli tasarımda (sallanan 404, dönen halka, süzülen noktalar; Ana Sayfaya Dön ve Geri Git). Sitenin menüsü ve alt bilgisi içinde, sitenin kendi renkleriyle; açık ve koyu temaya uyar.\n- Work/Bot sıfırlama: her birimin Ayarlar sekmesinde Sıfırla, Eğitim'de Hepsini Sıfırla. Bekleyen ve geçmiş işler, Antrenman kararları, isabet geçmişi, terfi talepleri ve Gün Akışı silinir; ayarlar, ekip, talimatlar ve verilen yetkiler kalır. Süren indirim kampanyaları silinmez.\n- İçerik Editörü yazı önerilerini (Google başlığı, açıklama, makale, güncel hâl) yalnızca yapay zekâyla açar; yapay zekâ çalışmıyorsa kalıp metin önermez, birim ekranında nedeniyle birlikte \"Yazı Önerileri Bekliyor\" uyarısı çıkar. Stok, maliyet, satış gibi sayıya dayalı öneriler her durumda gelir.\n- İş dosyasında botun tahmininin nereden geldiği görünür: Yapay Zekâ, Geçmiş Kararların ya da Kural.\n- Pulse tema 1.0.51 (değişmedi).",
+  "publishedAt": "2026-10-28T12:54:09.254Z"
 }
