@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "openai",
+  "name": "ChatGPT Entegrasyonu",
+  "description": "OpenAI ChatGPT ile yazı, internette araştırma (Sağlayıcı Kâşifi), görsel üretimi ve model listesi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "ai",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.openai.com"
+  ],
+  "configuration": "config.schema.json"
+}

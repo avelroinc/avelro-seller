@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "claude",
+  "name": "Claude Entegrasyonu",
+  "description": "Anthropic Claude ile yazı (Work/Bot çalışanı) ve model listesi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "ai",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.anthropic.com"
+  ],
+  "configuration": "config.schema.json"
+}

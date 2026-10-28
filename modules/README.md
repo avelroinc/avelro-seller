@@ -9,7 +9,7 @@ yönetim panelindeki Entegrasyon Ayarları ekranından bu depodan indirir, doğr
 | Bildirim | `telegram`, `whatsapp` |
 | SMS ve doğrulama | `netgsm`, `iletimerkezi`, `twilio`, `firebase` |
 | E-fatura | `parasut`, `bizimhesap`, `logo`, `uyumsoft` |
-| Yapay zekâ | `gemini` |
+| Yapay zekâ | `openai`, `claude`, `gemini`, `deepseek` |
 | SEO | `dataforseo`, `searchconsole` |
 | Özellik | `reklam` |
 

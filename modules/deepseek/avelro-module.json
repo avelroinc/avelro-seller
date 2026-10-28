@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "deepseek",
+  "name": "DeepSeek Entegrasyonu",
+  "description": "DeepSeek ile yazı (Work/Bot çalışanı) ve model listesi.",
+  "version": "1.0.0",
+  "hostApiVersion": 2,
+  "category": "ai",
+  "scopes": [
+    "store"
+  ],
+  "entrypoints": {
+    "server": "src/server.ts"
+  },
+  "capabilities": [
+    "network:api.deepseek.com"
+  ],
+  "configuration": "config.schema.json"
+}

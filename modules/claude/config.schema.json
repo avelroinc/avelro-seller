@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "apiKey"
+  ],
+  "properties": {
+    "apiKey": {
+      "type": "string",
+      "title": "apiKey",
+      "minLength": 1,
+      "writeOnly": true
+    }
+  }
+}
