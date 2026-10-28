@@ -5024,7 +5024,9 @@ html.shop-menu-open,html.shop-menu-open body{overflow:hidden;overscroll-behavior
 .shop-shell .adm-head p{margin:0;color:var(--shop-muted);font-size:14.5px}
 .shop-shell .adm-head-actions{display:flex;flex-wrap:wrap;gap:8px}
 .shop-shell.shop-admin .adm-page{gap:12px;padding-top:8px}
-html:has(.shop-shell.shop-admin){scrollbar-gutter:stable both-edges}
+/* Kaydırma çubuğu yeri site ve yönetim panelinde aynı (yalnızca sağda ayrılır): sekme geçişinde içerik genişliği ve hizası değişmez,
+   kısa sayfada da kaymaz. (both-edges paneli soldan da daraltıyordu.) */
+html:has(.shop-shell){scrollbar-gutter:stable}
 .shop-shell .sa-auth-form :is(.sa-error,.sa-notice){margin:0;padding:10px 12px;border-radius:var(--shop-radius);font-size:13.5px;line-height:1.5}
 .shop-shell .sa-auth-form .sa-error{background:color-mix(in srgb,#dc2626 10%,var(--shop-surface));color:#b91c1c}
 .shop-shell[data-shop-scheme=dark] .sa-auth-form .sa-error{color:#fca5a5}

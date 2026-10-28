@@ -1,5 +1,5 @@
 {
-  "version": "1.0.174",
-  "notes": "- Work/Bot yapay zekâ hesabındaki bakiyeyi takip eder: OpenAI, Claude ya da Gemini \"bakiye / kota bitti\" derse o yapay zekâ işaretlenir, sana bir kez bildirim gider ve botlar onu çağırmaz (boşuna hata alınmaz).\n- Work/Bot ofisinde \"Yapay Zekâ Bakiyesi Bitti\" uyarısı çıkar; birim kartlarında ve Ekip'te \"Bakiye Yok\" yazar; İçerik Editörü'ndeki \"Yazı Önerileri Bekliyor\" uyarısı nedenini bakiye olarak gösterir.\n- Saatte bir deneme yapılır; bakiye yüklenince en geç bir saat içinde işaret kendiliğinden kalkar, \"yeniden çalışıyor\" bildirimi gelir ve işler kaldığı yerden sürer.\n- Kısa süreli istek sınırı ve mağazanın kendi aylık yapay zekâ bütçesi bakiye yokluğu sayılmaz.\n- Pulse tema 1.0.51 (değişmedi).",
-  "publishedAt": "2026-10-28T13:07:18.441Z"
+  "version": "1.0.175",
+  "notes": "- Yönetim paneli ile site aynı genişlikte ve hizada: panel kaydırma çubuğu için soldan da yer ayırdığından 15px daha dar ve kaymış görünüyordu; artık ikisi de yalnızca sağda yer ayırıyor, sekme geçişinde içerik kaymıyor.\n- Pulse tema 1.0.52.",
+  "publishedAt": "2026-10-28T13:21:47.089Z"
 }
