@@ -1,5 +1,5 @@
 {
-  "version": "1.0.171",
-  "notes": "- Work/Bot › İçerik Editörü › Ekip: içerik ekibine en fazla 8 Yazar eklenebilir. Her yazarın kendi yapay zekâsı ve sürümü, adı, uzmanlık platformu, yazar açıklaması (Bot Yazsın ile yazdırılabilir) ve üslup talimatı var.\n- Otomatik Blog ve Yapay Zekâ Yazsın ile çıkan yazılar ekipteki yazarlar arasında sırayla yazılır; konu verilmemişse yazar kendi uzmanlık platformunda yazar. Yazının bütün yapay zekâ işleri o yazarın modeli ve üslubuyla yapılır, harcama ve Gün Akışı onun adına yazılır.\n- Yazı sitede yazarın adı ve açıklamasıyla yayınlanır; açıklama değişince eski yazılardaki yazar kutusu da güncellenir. Güncellik Kontrolü eskimiş yazının güncel hâlini yine o yazarına yazdırır. Ekipte yazar yoksa Otomatik Blog'daki yazar adı kullanılmaya devam eder.\n- Work/Bot › Canlı Destek › Ekip: en fazla 8 Temsilci eklenebilir (ad, yapay zekâ, dil: Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, Rusça, Arapça ya da Her Dil, üslup).\n- Ziyaretçinin yazdığı dil anlaşılır; o dili konuşan temsilci yanıtlar, yoksa Her Dil temsilcisi, o da yoksa Uzman. Yanıt her zaman ziyaretçinin dilinde yazılır ve sohbet balonunda temsilcinin adı görünür. Aynı dilde birden çok temsilci varsa sohbet hep aynı temsilcide kalır.\n- Ofis ekranında İçerik Editörü ve Canlı Destek kartlarında yazar ve temsilci sayısı görünür.\n- Pulse tema 1.0.51 (değişmedi).",
-  "publishedAt": "2026-10-28T11:20:37.029Z"
+  "version": "1.0.172",
+  "notes": "- Work/Bot › Ekip: yazar ve temsilci kartları birbirine yapışık görünüyordu; artık kendi satırlarında aralıklı diziliyor, telefonda alt alta.\n- Pulse tema 1.0.51 (değişmedi).",
+  "publishedAt": "2026-10-28T11:58:33.443Z"
 }
