@@ -1,5 +1,5 @@
 {
-  "version": "1.0.168",
-  "notes": "- Alt bilgiye iki sekme eklendi: E-Pin Hizmetleri (oyunlar logolarıyla, Tüm Oyunlar) ve SMS Onay Hizmetleri (uygulamalar logolarıyla; tıklanan uygulama SMS Onay sayfasında seçili açılır, Tüm Uygulamalar). Sekme adları Site Metinleri › Alt Bilgi bölümünden ya da sitede Düzenleme Modu’ndan değiştirilebilir.\n- Orta boy ekranlarda alt bilgi sekmeleri satırı eşit paylaşır; sekme satırı artık kartı taşırmaz.\n- Yönetim paneli sol menüsünde Work/Bot simgesi canlı: yavaşça nefes alan mavi ışıma, yayılan halka ve ara sıra göz kırpma (hareketi azalt ayarında durur).\n- Blog yazısında paylaşım düğmeleri yalnızca üstteki bilgi şeridinde; yazının sonundaki tekrar kaldırıldı.\n- Pulse teması 1.0.51.",
-  "publishedAt": "2026-10-27T20:51:09.997Z"
+  "version": "1.0.169",
+  "notes": "- Blog yazısının sonundaki \"Bunları da Okuyun\" bölümü ve \"Bu yazı faydalı oldu mu?\" satırı kaldırıldı; yazı etiketler ve yazar kutusuyla biter. Sağ sütundaki Son Yazılar yerinde duruyor.\n- Yazar kutusunda yazarın açıklaması görünür. Blog yazılarını yazan İçerik Editörü kendini okurlara tanıtan kısa bir açıklama yazar: Otomatik Blog ayarlarında yazar adı girilmiş ve açıklama boşsa ilk yazıyla birlikte kendisi yazıp kaydeder.\n- Work/Bot › İçerik › Otomatik Blog: Yazarın Adı altına Yazar Açıklaması alanı ve Bot Yazsın düğmesi geldi; açıklama istenince yeniden yazdırılabilir ve elle düzenlenebilir.\n- Açıklama her yeni yazıyla birlikte saklanır; otomatik blog yazarının eski yazılarında da aynı açıklama gösterilir.\n- Pulse tema 1.0.51 (değişmedi).",
+  "publishedAt": "2026-10-28T02:50:38.247Z"
 }
