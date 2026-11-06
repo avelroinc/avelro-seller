@@ -1,5 +1,5 @@
 {
-  "version": "1.0.187",
-  "notes": "- Ana sayfa hızlı sipariş: E-Pin, Lisans ve SMS Onay sekmelerinde de Sosyal Medya'daki gibi Sepete Ekle ve Satın Al düğmeleri (SMS Onay'da Numara Al). Tür sekmeleri arkadaki görselden etkilenmeyen tek tip görünümde.\n- Ana sayfa SMS Onay bölümünün başlığı diğer bölümler gibi üstte ortalı.\n- Öne Çıkan Hizmetler: kart gölgesi kaldırıldı; telefonda yandaki kartların kenarı görünür.\n- Alt bilgi › Kurumsal yeniden tasarlandı: Kurumsal, Ürünler ve Yardım sütunları; Sipariş Sorgula ve İletişim düğmeli yardım kartı.\n- Work/Bot: bütün çalışanların Ayarlar sekmesi aynı düzende (solda bölüm menüsü, sağda seçilen bölüm; Sıfırla menüde).\n- Kapalı ürün modülünün yönetim sayfasında uyarı şeridi ve Modülü Aç düğmesi.\n- Ürün sayfalarının (hizmet, lisans / yazılım, E-Pin oyunu) Google başlığı, açıklaması ve yapılandırılmış verisi yalnızca ürün kartındaki Google Görünümü'nden düzenlenir; Sayfalar'da nereden düzenleneceği yazar. Google başlığından mağaza adı otomatik çıkarılır.\n- Mobil: hizmet ve lisans ekranlarının Google sekmesinde başlık, açıklama ve işaretler tek panelde.",
-  "publishedAt": "2026-11-06T20:52:58.318Z"
+  "version": "1.0.188",
+  "notes": "- Düzeltme: 1.0.186 ve 1.0.187'deki görünüm değişiklikleri sitelere ulaşmıyordu (tema sürümü artmamıştı). Pulse 1.0.55 ve Arel 1.0.1 ile hepsi gelir: hızlı sipariş, ürün türü sekmeleri, ana sayfa SMS Onay bölümü, Öne Çıkan Hizmetler (gölgesiz; telefonda yandaki kartlar görünür), alt bilgi.\n- Alt bilgi › Kurumsal eski kartlı düzenine döndü (sayfa kartları, sözleşmeler, marka kartı).\n- Telefonda alt bilginin üstündeki ve altındaki fazla boşluk kaldırıldı.",
+  "publishedAt": "2026-11-06T21:15:30.516Z"
 }
