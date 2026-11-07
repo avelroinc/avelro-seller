@@ -22,8 +22,8 @@ başlar; güncelleme başarısız olursa kurulu sürüm korunur. Kaldırma bağl
 4. Shopier bildirim gönderdiğinde sipariş, Shopier API'sinden anahtarla yeniden okunur. Sipariş ödenmişse ve satırlarından biri bu
    referanslı ürünse sitedeki sipariş ya da bakiye yüklemesi onaylanır. Bildirimin kendisi tek başına ödeme kanıtı sayılmaz.
 
-Shopier ödeme sayfası ödemeden sonra siteye geri yönlendirmez; müşteri siparişinin durumunu sitedeki Sipariş Sorgula sayfasından
-görür.
+Shopier ödeme sayfası ödemeden sonra siteye geri yönlendirmez. Ödeme sayfası yeni sekmede açılır; sitedeki bekleme ekranı ödemeyi
+izler (bildirimi ve Shopier’e doğrudan sorarak) ve ödeme gelince sipariş sayfasına geçer.
 
 ## Güncelleme
 
@@ -34,6 +34,12 @@ görür.
 Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
+
+### 1.0.2
+
+- Ödeme bildirimi gelmese de ödeme onaylanır: müşteri bekleme ekranındayken ve yönetici siparişi açtığında sistem Shopier’e
+  siparişi sorar (son siparişlerde referansı taşıyan sipariş aranır, ödendiyse onaylanır).
+- Bildirimin biçimi farklı olsa da (sipariş, { data } ya da { order } içinde) sipariş ve referans bulunur.
 
 ### 1.0.1
 

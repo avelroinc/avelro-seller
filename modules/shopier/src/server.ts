@@ -57,25 +57,47 @@ async function createPayment(config:ShopierConfig,input:PaymentInput){
 }
 
 // The webhook body is only a hint: the order is read back from the API with the store's own token, and it counts only if one of its
-// lines is the single-use product titled with this reference.
-async function verifyWebhook(config:ShopierConfig,input:{payload:string}){
- const payload=input?.payload;
- if(typeof payload!=="string"||!payload)return null;
- let data:Order&{order?:Order};
+// lines is the single-use product titled with this reference. Webhook bodies may be the order itself or wrapped ({ data }, { order },
+// { data: { order } }), so the order id and the reference are looked up in all of them.
+// Pull mode (empty payload, reference given): the host asks while the customer waits or the admin opens the order, so a payment is
+// still settled when a webhook never arrives. Recent orders are listed and the one carrying the reference is checked.
+const isPaid=(order:Order|null|undefined)=>String(order?.paymentStatus||"").toLowerCase()==="paid";
+const carries=(order:Order|null|undefined,ref:string)=>(order?.lineItems||[]).some(line=>String(line?.title||"").toLowerCase().includes(ref));
+function findOrder(value:unknown,depth=0):Order|null{
+ if(!value||typeof value!=="object"||depth>3)return null;
+ const v=value as Record<string,unknown>;
+ if(Array.isArray(v.lineItems)&&typeof v.id==="string")return v as Order;
+ for(const key of ["order","data","payload","resource"])if(v[key]&&typeof v[key]==="object"){const found=findOrder(v[key],depth+1);if(found)return found}
+ return null;
+}
+async function pull(config:ShopierConfig,ref:string){
+ for(const query of ["?limit=50&sort=dateDesc","?limit=50",""]){
+  const list=await call<Order[]>(config,"GET",`/orders${query}`);
+  if(!list.ok||!Array.isArray(list.data))continue;
+  const hit=list.data.find(order=>carries(order,ref));
+  if(!hit)return {merchantOid:ref,status:"pending" as Status};
+  // The list entry is enough when it already says paid; otherwise the order is read on its own (fresher status).
+  if(isPaid(hit))return {merchantOid:ref,status:"paid" as Status};
+  if(typeof hit.id==="string"&&/^[A-Za-z0-9_-]{1,80}$/.test(hit.id)){const one=await call<Order>(config,"GET",`/orders/${encodeURIComponent(hit.id)}`);if(one.ok&&one.data&&carries(one.data,ref))return {merchantOid:ref,status:(isPaid(one.data)?"paid":"pending") as Status}}
+  return {merchantOid:ref,status:"pending" as Status};
+ }
+ return null;
+}
+async function verifyWebhook(config:ShopierConfig,input:{payload?:string;reference?:string}){
+ const payload=typeof input?.payload==="string"?input.payload:"";
+ if(!payload){const ref=String(input?.reference||"").toLowerCase();return REFERENCE.test(ref)&&ref.match(REFERENCE)?.[0]===ref?pull(config,ref):null}
+ let data:unknown;
  try{data=JSON.parse(payload)}catch{return null}
- const hint=data?.order&&typeof data.order==="object"?data.order:data;
- const orderId=typeof hint?.id==="string"?hint.id.trim():"";
- const merchantOid=(hint?.lineItems||[]).map(line=>String(line?.title||"").match(REFERENCE)?.[0]).find(Boolean)?.toLowerCase()||"";
+ const hint=findOrder(data);
+ const merchantOid=(payload.match(REFERENCE)?.[0]||"").toLowerCase();
  if(!merchantOid)return {merchantOid:"",status:"ignored" as Status};
- if(!/^[A-Za-z0-9_-]{1,80}$/.test(orderId))return null;
+ const orderId=typeof hint?.id==="string"?hint.id.trim():"";
+ if(!/^[A-Za-z0-9_-]{1,80}$/.test(orderId))return pull(config,merchantOid);
  const order=await call<Order>(config,"GET",`/orders/${encodeURIComponent(orderId)}`);
- if(!order.ok||!order.data)return null;
- const ours=(order.data.lineItems||[]).some(line=>String(line?.title||"").toLowerCase().includes(merchantOid));
- if(!ours)return null;
- const status:Status=String(order.data.paymentStatus||"").toLowerCase()==="paid"?"paid":"pending";
- return {merchantOid,status};
+ if(!order.ok||!order.data||!carries(order.data,merchantOid))return pull(config,merchantOid);
+ return {merchantOid,status:(isPaid(order.data)?"paid":"pending") as Status};
 }
 
 return {createPayment: async (input:PaymentInput) => createPayment(await host.configuration(),input),
-verifyCallback: async (input:{payload:string}) => verifyWebhook(await host.configuration(),input)};
+verifyCallback: async (input:{payload?:string;reference?:string}) => verifyWebhook(await host.configuration(),input)};
 }
