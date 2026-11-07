@@ -1,5 +1,5 @@
 {
-  "version": "1.0.200",
-  "notes": "- Raporlar ödemelere göre yeniden: ciro, iadeler, KDV, sağlayıcı maliyeti, ödeme şirketi komisyonu, hediye bakiye ve net kâr; tahsilat (kasa) ayrıca. Bugün, Dün, Bu Hafta, Geçen Hafta, Bu Ay, Geçen Ay, Son 30 / 90 Gün, Bu Yıl ya da tarih aralığı; önceki dönemle karşılaştırma, günlük ciro ve kâr grafiği, en çok satanların maliyeti ve kârı.\n- Personel yetkileri bölüm bölüm: Satış, Müşteriler, Katalog, Sağlayıcılar, Pazarlama, İletişim, Site, Raporlar, Work/Bot, Modüller, Ayarlar, Canlı Destek. Eski Mağaza Yönetimi yetkisi bütün mağaza bölümlerini kapsamaya devam eder.\n- Katalogda (hizmetler, lisanslar, yazılımlar, E-Pin, SMS Onay) ürüne tıklayınca düzenleme kendi sayfasında açılır; ürünün sayfa metni, makalesi ve Google görünümü de bu sayfada (Sayfalar'dan taşındı).\n- Genel Bakış'taki Shopier kartı sadeleşti; Hepsini Kapat ve Yenile kart başlığında.\n- Pulse teması: footer'ın bitişi sol menünün alt kenarıyla hizalı.",
-  "publishedAt": "2026-11-07T15:20:02.689Z"
+  "version": "1.0.201",
+  "notes": "- Yönetim panelindeki bütün tablolar ortalı.\n- Sipariş Sorumlusu: Shopier ile ödenen siparişlerde Karta İade Et seçeneği (kısmi teslimde teslim edilmeyen tutar; her zaman onayınla). Botun yaptığı iadeler raporlara ve iade dekontuna girer, müşteriye İade Yapıldı e-postası gider.\n- Haftalık rapor ciro ve net kârı Raporlar ile aynı hesaptan alır.\n- Sağlayıcı Kâşifi Work/Bot yetkisiyle de açılır.",
+  "publishedAt": "2026-11-07T17:01:37.952Z"
 }
