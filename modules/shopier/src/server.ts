@@ -173,10 +173,24 @@ async function closeOrder(config:ShopierConfig,input:CloseInput){
  return {ok:true,alreadyClosed:false,providerOrderId:orderId,note:`Shopier siparişi ${orderId} kapatıldı.`};
 }
 
+// Account summary (1.0.7): current balance per currency (GET /balance) and the last payouts (GET /payouts, newest first: id, status
+// pending / paid, date, amount, currency, IBAN shown only by its last four digits). Read-only; failures come back as { ok:false, note }.
+type BalanceRow={currency?:string;amount?:string};
+type PayoutRow={id?:string|number;status?:string;dateCreated?:string;amount?:string;currency?:string;destination?:{type?:string;iban?:string}};
+async function account(config:ShopierConfig){
+ const [balance,payouts]=await Promise.all([call<BalanceRow[]>(config,"GET","/balance"),call<PayoutRow[]>(config,"GET","/payouts?limit=5&sort=dateDesc")]);
+ if(!balance.ok)return {ok:false,note:apiError(balance.data,`Shopier bakiyesi okunamadı (HTTP ${balance.status}).`).message};
+ const iban=(v:unknown)=>{const s=String(v||"").replace(/\s+/g,"");return s?`•••• ${s.slice(-4)}`:""};
+ return {ok:true,
+  balances:(Array.isArray(balance.data)?balance.data:[]).map(b=>({currency:String(b?.currency||"TRY"),amount:String(b?.amount??"0")})),
+  payouts:payouts.ok&&Array.isArray(payouts.data)?payouts.data.slice(0,5).map(p=>({id:String(p?.id??""),status:String(p?.status||""),date:String(p?.dateCreated||""),amount:String(p?.amount??"0"),currency:String(p?.currency||"TRY"),iban:iban(p?.destination?.iban)})):[]};
+}
+
 return {createPayment: async (input:PaymentInput) => createPayment(await host.configuration(),input),
 // Network or API failures never surface as a bare module error: the host gets a pending answer with the reason.
 verifyCallback: async (input:{payload?:string;reference?:string;productId?:string}) => {try{const r=await verify(await host.configuration(),input);return r&&r.status==="paid"?{...r,providerOrderId:providerOrderOf(r.note)}:r}catch(error){const ref=String(input?.reference||"").toLowerCase();return ref?{merchantOid:ref,status:"pending" as Status,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}:null}},
 refund: async (input:RefundInput) => {try{return await refund(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}},
 refundStatus: async (input:{refundId:string}) => {try{return await refundStatus(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}},
-closeOrder: async (input:CloseInput) => {try{return await closeOrder(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}}};
+closeOrder: async (input:CloseInput) => {try{return await closeOrder(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}},
+account: async () => {try{return await account(await host.configuration())}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}}};
 }

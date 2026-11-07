@@ -35,6 +35,11 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.7
+
+- Shopier hesap özeti: yönetimde Genel Bakış'ta Shopier bakiyesi ve son ödeme aktarımları (tutar, tarih,
+  durum, IBAN'ın son dört hanesi). Sistem 1.0.199 ve üzeri gerekir.
+
 ### 1.0.6
 
 - Sipariş kapatma: Shopier ödemeyi sipariş kapatılınca aktarır. Yönetimde sipariş sayfasındaki Shopier'de Kapat, siparişlerdeki
