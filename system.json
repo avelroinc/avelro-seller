@@ -1,5 +1,5 @@
 {
-  "version": "1.0.188",
-  "notes": "- Düzeltme: 1.0.186 ve 1.0.187'deki görünüm değişiklikleri sitelere ulaşmıyordu (tema sürümü artmamıştı). Pulse 1.0.55 ve Arel 1.0.1 ile hepsi gelir: hızlı sipariş, ürün türü sekmeleri, ana sayfa SMS Onay bölümü, Öne Çıkan Hizmetler (gölgesiz; telefonda yandaki kartlar görünür), alt bilgi.\n- Alt bilgi › Kurumsal eski kartlı düzenine döndü (sayfa kartları, sözleşmeler, marka kartı).\n- Telefonda alt bilginin üstündeki ve altındaki fazla boşluk kaldırıldı.",
-  "publishedAt": "2026-11-06T21:15:30.516Z"
+  "version": "1.0.189",
+  "notes": "- Yeni ödeme modülü: Shopier. Modüller › Ödeme bölümünden kurulur; Shopier Kişisel Erişim Anahtarı girilince müşteriler kartla Shopier ödeme sayfasından öder, ödeme Shopier API’sinden doğrulanıp sipariş kendiliğinden onaylanır.\n- Ana sayfa makalesi: İçindekiler kaldırıldı; içinde görsel olan bölümler sağda ve solda görselli iki sütunlu satır olarak gösterilir.\n- Yazılardaki Sıkça Sorulan Sorular ve İlgili Yazılar artık ara başlık değil, kendi kutusu olan bileşenler; İçindekiler’e ve bölüm sayısına girmez.\n- Telefonda blog yazısı bilgi şeridindeki Bölüm hücresinin eksik çizgisi düzeltildi.\n- Sitenin telefon menüsündeki Hızlı Erişim alanı kaldırıldı.",
+  "publishedAt": "2026-11-07T05:49:58.789Z"
 }
