@@ -1,5 +1,5 @@
 {
-  "version": "1.0.192",
-  "notes": "- Shopier ile ödemede ödeme sayfası yeni sekmede açılır; sitede tam ekran, canlandırmalı “Ödemen Bekleniyor” ekranı çıkar. Ekranda sipariş kodu, ürünler ve ödenecek tutar görünür; Ödeme Sayfasını Aç, Sipariş Detayı ve Ana Sayfa düğmeleri vardır.\n- Shopier’den ödeme gelince ekran kendiliğinden “Ödemen Alındı” olur ve sipariş sayfasına (bakiye yüklemesinde Hesabım’a) geçer. Sepette, bekleyen sipariş ödemesinde ve bakiye yüklemede çalışır.",
-  "publishedAt": "2026-11-07T08:26:13.307Z"
+  "version": "1.0.193",
+  "notes": "- Shopier: ödeme bildirimi gelmese de ödeme onaylanır. Müşteri bekleme ekranındayken ve yönetici siparişi açtığında sistem Shopier’e siparişi sorar (Shopier modülü 1.0.2 gerekir). Bildirim ve dönüş adresleri artık her zaman sitenin https adresidir.\n- Yönetim paneli: sipariş detayı ayrı sayfada açılır (sağda panel açılmaz). Genel Bakış’taki Yapılacaklar kaldırıldı. Sipariş tablolarında tarih ve Üye / Misafir ayrı sütunlarda.\n- Yönetim panelinin telefon menüsündeki Siteyi Aç ve koyu mod düğmeleri kaldırıldı; sitenin telefon menüsündeki koyu mod düğmesinin arka planı kaldırıldı.",
+  "publishedAt": "2026-11-07T08:53:22.086Z"
 }
