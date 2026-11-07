@@ -5,7 +5,7 @@ yönetim panelindeki Entegrasyon Ayarları ekranından bu depodan indirir, doğr
 
 | Tür | Modüller |
 | --- | --- |
-| Ödeme | `havale`, `stripe`, `cryptomus`, `heleket` |
+| Ödeme | `havale`, `stripe`, `cryptomus`, `heleket`, `shopier` |
 | Bildirim | `telegram`, `whatsapp` |
 | SMS ve doğrulama | `netgsm`, `iletimerkezi`, `twilio`, `firebase` |
 | Sosyal giriş | `social-login` |

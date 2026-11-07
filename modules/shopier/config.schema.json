@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "accessToken"
+  ],
+  "properties": {
+    "accessToken": {
+      "type": "string",
+      "title": "accessToken",
+      "minLength": 1,
+      "writeOnly": true
+    }
+  }
+}
