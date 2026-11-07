@@ -1,5 +1,5 @@
 {
-  "version": "1.0.202",
-  "notes": "- Yönetim panelinde \"Elle\" ifadeleri \"Manuel\" oldu (Manuel İşlenecek, Ödeme Manuel Onaylandı, Manuel İade Edeceğim vb.); eski sipariş kayıtları da Manuel olarak görünür.",
-  "publishedAt": "2026-11-07T18:12:32.372Z"
+  "version": "1.0.203",
+  "notes": "- Yönetim uygulaması (Av/Dashboard 1.17.77) web paneliyle eşitlendi: Genel Bakış, Siparişler (sekmeler, toplu işlemler, Excel’e Aktar), Sipariş Detayı (iade yöntemleri, kısmi iade, Shopier’de Kapat, İade Dekontu, kayıtlar), Ödemeler, Müşteriler (gruplar), Müşteri Talepleri ve Raporlar webdeki kurallarla çalışır; personel yetkileri webdeki bölümlerle aynı.\n- Uygulamada kullanılmayan ekranlar ve eski SMM paneli desteği kaldırıldı; Daha Fazla’da Profil, Work/Bot ve Uygulama Ayarları (Görünüm ve Simge, Uygulama Kilidi) kalır. Müşteri Talepleri Müşteriler sekmesinde, girişler Profilim’de.\n- Uygulamadaki bağlantı anahtarları ve bağlı siteler kaldırıldı; başka bir panel Panel Seç › Panel Ekle ile eklenir.\n- Sipariş detayındaki iade dekontu uygulamadan da açılır; kayıt başlıkları web paneliyle aynı yazılır.",
+  "publishedAt": "2026-11-07T23:15:17.856Z"
 }
