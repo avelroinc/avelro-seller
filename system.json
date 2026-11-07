@@ -1,5 +1,5 @@
 {
-  "version": "1.0.191",
-  "notes": "- Temalar: kurulu her temada yeni sürüm varsa Güncelle düğmesi çıkar (kullanılmayan temalarda da). Güncelleme ve Uygula artık temayı eski sürüme düşürmez.\n- Yönetim panelindeki etiketler yeniden yazıldı: daha net, en fazla üç kelime. Ödeme yöntemlerindeki komisyon alanı “Ödeme Şirketi Komisyonu” oldu ve müşteriden alınmadığı yazıyor; sepetteki ücretler “Sepete Eklenen Ücretler”.\n- Yazar açıklamaları daha profesyonel yazılır: yazarın adıyla başlayan, uzmanlık alanını ve yaklaşımını anlatan editoryal bir tanıtım; uydurma unvan, yıl, rakam ve klişe kullanılmaz.\n- Sitenin telefon menüsü: Sipariş Sorgula üzerindeki çizgi kaldırıldı, ürün türü logoları yan yana iç içe gösterilir.",
-  "publishedAt": "2026-11-07T07:54:03.069Z"
+  "version": "1.0.192",
+  "notes": "- Shopier ile ödemede ödeme sayfası yeni sekmede açılır; sitede tam ekran, canlandırmalı “Ödemen Bekleniyor” ekranı çıkar. Ekranda sipariş kodu, ürünler ve ödenecek tutar görünür; Ödeme Sayfasını Aç, Sipariş Detayı ve Ana Sayfa düğmeleri vardır.\n- Shopier’den ödeme gelince ekran kendiliğinden “Ödemen Alındı” olur ve sipariş sayfasına (bakiye yüklemesinde Hesabım’a) geçer. Sepette, bekleyen sipariş ödemesinde ve bakiye yüklemede çalışır.",
+  "publishedAt": "2026-11-07T08:26:13.307Z"
 }
