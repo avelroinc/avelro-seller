@@ -1,5 +1,5 @@
 {
-  "version": "1.0.201",
-  "notes": "- Yönetim panelindeki bütün tablolar ortalı.\n- Sipariş Sorumlusu: Shopier ile ödenen siparişlerde Karta İade Et seçeneği (kısmi teslimde teslim edilmeyen tutar; her zaman onayınla). Botun yaptığı iadeler raporlara ve iade dekontuna girer, müşteriye İade Yapıldı e-postası gider.\n- Haftalık rapor ciro ve net kârı Raporlar ile aynı hesaptan alır.\n- Sağlayıcı Kâşifi Work/Bot yetkisiyle de açılır.",
-  "publishedAt": "2026-11-07T17:01:37.952Z"
+  "version": "1.0.202",
+  "notes": "- Yönetim panelinde \"Elle\" ifadeleri \"Manuel\" oldu (Manuel İşlenecek, Ödeme Manuel Onaylandı, Manuel İade Edeceğim vb.); eski sipariş kayıtları da Manuel olarak görünür.",
+  "publishedAt": "2026-11-07T18:12:32.372Z"
 }
