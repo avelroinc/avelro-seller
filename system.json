@@ -1,5 +1,5 @@
 {
-  "version": "1.0.194",
-  "notes": "- Shopier: ödeme, Shopier’de açılan ürünün kimliğiyle eşleştirilir (Shopier modülü 1.0.3 gerekir); bildirim ve Shopier’e sorma artık ürün başlığına bağlı değildir.\n- Yönetimde Shopier siparişinin sayfasında “Shopier Kayıtları” kartı: ödeme sayfasının açılması, gelen bildirimler ve Shopier’e sorulan durum açıklamasıyla görünür (ödemenin neden onaylanmadığı buradan anlaşılır).",
-  "publishedAt": "2026-11-07T09:30:04.498Z"
+  "version": "1.0.195",
+  "notes": "- Shopier: ürün kimliği Shopier yanıtının her biçiminden ya da ödeme adresinden alınır; kimliği kaydedilmemiş ödemeler (eskiler dahil) Shopier ürün listesinden bulunup onaylanır (Shopier modülü 1.0.4 gerekir). Shopier Kayıtları eşleşme olmazsa Shopier’in döndürdüğü son siparişleri gösterir; tekrarlayan satırlar tek satırda toplanır.\n- Sipariş detayı: üstte yan yana Müşteri (altında Fatura) ve Sipariş Bilgileri, altında sepet, en altta ödeme kayıtları; Siparişler düğmesi.",
+  "publishedAt": "2026-11-07T09:52:21.451Z"
 }
