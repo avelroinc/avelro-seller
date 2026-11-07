@@ -35,6 +35,12 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.6
+
+- Sipariş kapatma: Shopier ödemeyi sipariş kapatılınca aktarır. Yönetimde sipariş sayfasındaki Shopier'de Kapat, siparişlerdeki
+  toplu kapatma ya da tamamlanan siparişleri kendiliğinden kapatma ayarı siparişi Shopier'de dijital teslimat notuyla kapatır.
+  Zaten kapalı sipariş tekrar kapatılmaz. Sistem 1.0.198 ve üzeri gerekir.
+
 ### 1.0.5
 
 - Karta iade: yönetimde İade Et › Karta İade (Shopier) ile tutar Shopier üzerinden ödeme yapılan karta iade edilir (tek ürünlü

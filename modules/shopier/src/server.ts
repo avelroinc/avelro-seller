@@ -23,7 +23,7 @@ const PRODUCT_IMAGE="https://raw.githubusercontent.com/avelroinc/avelro-seller/m
 // Order reference written by the host: kind prefix + 32 hex characters (lib/payments/merchant-oid.ts).
 const REFERENCE=/(?:sdep|sord|sgrp)[0-9a-f]{32}/i;
 
-async function call<T>(config:ShopierConfig,method:"GET"|"POST",path:string,body?:unknown):Promise<{ok:boolean;status:number;data:T|null}>{
+async function call<T>(config:ShopierConfig,method:"GET"|"POST"|"PUT",path:string,body?:unknown):Promise<{ok:boolean;status:number;data:T|null}>{
  const response=await host.request(`${API}${path}`,{method,headers:{authorization:`Bearer ${config.accessToken}`,accept:"application/json",...(body?{"content-type":"application/json"}:{})},body:body?JSON.stringify(body):undefined});
  let data:unknown=null;try{data=await response.json()}catch{data=null}
  // Responses are either the object itself or wrapped in { data }.
@@ -150,9 +150,33 @@ async function refundStatus(config:ShopierConfig,input:{refundId:string}){
 }
 const providerOrderOf=(note:string)=>note.match(/siparişi\s+([A-Za-z0-9_-]+)\s+ödendi/)?.[1]||"";
 
+// Closing an order (1.0.6): Shopier pays the seller only after the order is closed (fulfilled). Digital goods need no cargo, only a
+// delivery note (PUT /orders/{id} with fulfillments: productType digital + note). The order is the one recorded at payment
+// (providerOrderId) or found again by product id / reference, as for refunds. An order that is already fulfilled answers ok with
+// alreadyClosed, so closing twice is harmless.
+type CloseInput={reference:string;productId?:string;providerOrderId?:string;note?:string};
+type OrderState={id?:string|number;status?:string};
+async function orderIdFor(config:ShopierConfig,input:{reference:string;productId?:string;providerOrderId?:string}):Promise<{id:string}|{error:string}>{
+ const ref=String(input?.reference||"").toLowerCase();
+ if(ref.match(REFERENCE)?.[0]!==ref)return {error:"Ödeme referansı geçersiz."};
+ let orderId=String(input?.providerOrderId||"");
+ if(!orderId){const found=await pull(config,ref,String(input?.productId||""));orderId=found.status==="paid"?providerOrderOf(found.note):"";if(!orderId)return {error:`Shopier siparişi bulunamadı: ${found.note}`}}
+ return ID.test(orderId)?{id:orderId}:{error:"Shopier sipariş numarası geçersiz."};
+}
+async function closeOrder(config:ShopierConfig,input:CloseInput){
+ const found=await orderIdFor(config,input);if("error" in found)return {ok:false,note:found.error};
+ const orderId=found.id,current=await call<OrderState>(config,"GET",`/orders/${encodeURIComponent(orderId)}`);
+ if(current.ok&&String(current.data?.status||"").toLowerCase()==="fulfilled")return {ok:true,alreadyClosed:true,providerOrderId:orderId,note:`Shopier siparişi ${orderId} zaten kapalı.`};
+ const note=String(input?.note||"").trim().slice(0,500)||"Dijital hizmet siparişiniz teslim edildi.";
+ const r=await call<OrderState>(config,"PUT",`/orders/${encodeURIComponent(orderId)}`,{fulfillments:{productType:"digital",note}});
+ if(!r.ok)return {ok:false,providerOrderId:orderId,note:apiError(r.data,`Shopier siparişi kapatmadı (HTTP ${r.status}).`).message};
+ return {ok:true,alreadyClosed:false,providerOrderId:orderId,note:`Shopier siparişi ${orderId} kapatıldı.`};
+}
+
 return {createPayment: async (input:PaymentInput) => createPayment(await host.configuration(),input),
 // Network or API failures never surface as a bare module error: the host gets a pending answer with the reason.
 verifyCallback: async (input:{payload?:string;reference?:string;productId?:string}) => {try{const r=await verify(await host.configuration(),input);return r&&r.status==="paid"?{...r,providerOrderId:providerOrderOf(r.note)}:r}catch(error){const ref=String(input?.reference||"").toLowerCase();return ref?{merchantOid:ref,status:"pending" as Status,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}:null}},
 refund: async (input:RefundInput) => {try{return await refund(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}},
-refundStatus: async (input:{refundId:string}) => {try{return await refundStatus(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}}};
+refundStatus: async (input:{refundId:string}) => {try{return await refundStatus(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}},
+closeOrder: async (input:CloseInput) => {try{return await closeOrder(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}}};
 }
