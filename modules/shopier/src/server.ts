@@ -6,7 +6,9 @@ export type ModuleHost={configuration():Promise<ShopierConfig>;request(url:strin
 type ShopierConfig={accessToken:string};
 type Status="paid"|"failed"|"pending"|"ignored";
 type PaymentInput={merchantOid:string;email:string;amountMicros:number;currency?:string;productName:string;successUrl:string;cancelUrl:string;returnUrl:string;callbackUrl:string};
-type Order={id?:string;paymentStatus?:string;lineItems?:{productId?:string;title?:string}[]};
+type Line={productId?:string;product_id?:string;title?:string};
+type Order={id?:string;paymentStatus?:string;payment_status?:string;payment?:{status?:string};lineItems?:Line[];line_items?:Line[]};
+type Result={merchantOid:string;status:Status;note:string};
 
 export default function createModule(host:ModuleHost){
 const API="https://api.shopier.com/v1";
@@ -53,51 +55,59 @@ async function createPayment(config:ShopierConfig,input:PaymentInput){
  });
  const url=product.data?.url;
  if(!product.ok||typeof url!=="string"||!/^https:\/\//.test(url))throw apiError(product.data,"Shopier ödeme sayfası oluşturulamadı.");
- return {redirectUrl:url};
+ // The product id is kept by the host: the webhook and the status check find the order by it (as the Shopier SDKs do).
+ return {redirectUrl:url,productId:String(product.data?.id??"")};
 }
 
-// The webhook body is only a hint: the order is read back from the API with the store's own token, and it counts only if one of its
-// lines is the single-use product titled with this reference. Webhook bodies may be the order itself or wrapped ({ data }, { order },
-// { data: { order } }), so the order id and the reference are looked up in all of them.
-// Pull mode (empty payload, reference given): the host asks while the customer waits or the admin opens the order, so a payment is
-// still settled when a webhook never arrives. Recent orders are listed and the one carrying the reference is checked.
-const isPaid=(order:Order|null|undefined)=>String(order?.paymentStatus||"").toLowerCase()==="paid";
-const carries=(order:Order|null|undefined,ref:string)=>(order?.lineItems||[]).some(line=>String(line?.title||"").toLowerCase().includes(ref));
+// The webhook body is only a hint: the order is read back from the API with the store's own token and counts only when one of its
+// lines is the single-use product of this payment, matched by product id (kept by the host since 1.0.3) or by the reference in the
+// line title. Webhook bodies may be the order itself or wrapped ({ data }, { order }), so the order id is looked up in all of them.
+// Pull mode (empty payload): the host asks while the customer waits or the admin opens the order, so a payment is still settled when
+// a webhook never arrives. Orders of the product are listed (falling back to recent orders). Every answer carries a short note that
+// the host shows on the admin order page, so a payment that is not confirmed can be explained.
+const lines=(order:Order|null|undefined)=>[...(order?.lineItems||[]),...(order?.line_items||[])];
+const paymentState=(order:Order|null|undefined)=>String(order?.paymentStatus??order?.payment_status??order?.payment?.status??"").toLowerCase();
+const isPaid=(order:Order|null|undefined)=>["paid","success","succeeded","completed"].includes(paymentState(order));
+const matches=(order:Order|null|undefined,ref:string,productId:string)=>lines(order).some(line=>(productId&&String(line?.productId??line?.product_id??"")===productId)||String(line?.title||"").toLowerCase().includes(ref));
 function findOrder(value:unknown,depth=0):Order|null{
  if(!value||typeof value!=="object"||depth>3)return null;
  const v=value as Record<string,unknown>;
- if(Array.isArray(v.lineItems)&&typeof v.id==="string")return v as Order;
+ if((Array.isArray(v.lineItems)||Array.isArray(v.line_items))&&(typeof v.id==="string"||typeof v.id==="number"))return {...v,id:String(v.id)} as Order;
  for(const key of ["order","data","payload","resource"])if(v[key]&&typeof v[key]==="object"){const found=findOrder(v[key],depth+1);if(found)return found}
  return null;
 }
-async function pull(config:ShopierConfig,ref:string){
- for(const query of ["?limit=50&sort=dateDesc","?limit=50",""]){
+const answer=(merchantOid:string,order:Order,via:string):Result=>isPaid(order)?{merchantOid,status:"paid",note:`Shopier siparişi ${order.id||""} ödendi (${via}).`}:{merchantOid,status:"pending",note:`Shopier siparişi ${order.id||""} bulundu, ödeme durumu: ${paymentState(order)||"bilinmiyor"} (${via}).`};
+async function readOrder(config:ShopierConfig,id:string){if(!/^[A-Za-z0-9_-]{1,80}$/.test(id))return null;const r=await call<Order>(config,"GET",`/orders/${encodeURIComponent(id)}`);return r.ok&&r.data&&typeof r.data==="object"?{...r.data,id:String(r.data.id??id)}:null}
+async function pull(config:ShopierConfig,ref:string,productId:string):Promise<Result>{
+ const queries=[...(productId?[`?productId=${encodeURIComponent(productId)}`]:[]),"?limit=50&sort=dateDesc","?limit=50",""];
+ let lastError="";
+ for(const query of queries){
   const list=await call<Order[]>(config,"GET",`/orders${query}`);
-  if(!list.ok||!Array.isArray(list.data))continue;
-  const hit=list.data.find(order=>carries(order,ref));
-  if(!hit)return {merchantOid:ref,status:"pending" as Status};
-  // The list entry is enough when it already says paid; otherwise the order is read on its own (fresher status).
-  if(isPaid(hit))return {merchantOid:ref,status:"paid" as Status};
-  if(typeof hit.id==="string"&&/^[A-Za-z0-9_-]{1,80}$/.test(hit.id)){const one=await call<Order>(config,"GET",`/orders/${encodeURIComponent(hit.id)}`);if(one.ok&&one.data&&carries(one.data,ref))return {merchantOid:ref,status:(isPaid(one.data)?"paid":"pending") as Status}}
-  return {merchantOid:ref,status:"pending" as Status};
+  if(!list.ok||!Array.isArray(list.data)){lastError=`sipariş listesi okunamadı (HTTP ${list.status})`;continue}
+  const hit=list.data.find(order=>matches(order,ref,productId));
+  if(!hit){if(query.startsWith("?productId"))continue;return {merchantOid:ref,status:"pending",note:`Shopier'de bu ödemeye ait sipariş henüz yok (${list.data.length} sipariş tarandı${productId?`, ürün ${productId}`:", ürün kimliği yok"}).`}}
+  if(isPaid(hit))return answer(ref,hit,"liste");
+  const one=hit.id?await readOrder(config,String(hit.id)):null;
+  return answer(ref,one&&matches(one,ref,productId)?one:hit,"sipariş");
  }
- return null;
+ return {merchantOid:ref,status:"pending",note:`Shopier'e sorulamadı: ${lastError||"yanıt yok"}. Erişim anahtarının sipariş okuma izni olmalı.`};
 }
-async function verifyWebhook(config:ShopierConfig,input:{payload?:string;reference?:string}){
- const payload=typeof input?.payload==="string"?input.payload:"";
- if(!payload){const ref=String(input?.reference||"").toLowerCase();return REFERENCE.test(ref)&&ref.match(REFERENCE)?.[0]===ref?pull(config,ref):null}
+async function verify(config:ShopierConfig,input:{payload?:string;reference?:string;productId?:string}):Promise<Result|null>{
+ const payload=typeof input?.payload==="string"?input.payload:"",productId=String(input?.productId||"");
+ let ref=String(input?.reference||"").toLowerCase();
+ if(ref&&ref.match(REFERENCE)?.[0]!==ref)return null;
+ if(!payload)return ref?pull(config,ref,productId):null;
  let data:unknown;
  try{data=JSON.parse(payload)}catch{return null}
+ ref||=(payload.match(REFERENCE)?.[0]||"").toLowerCase();
+ if(!ref)return {merchantOid:"",status:"ignored",note:"Bildirimde bu siteye ait ödeme yok."};
  const hint=findOrder(data);
- const merchantOid=(payload.match(REFERENCE)?.[0]||"").toLowerCase();
- if(!merchantOid)return {merchantOid:"",status:"ignored" as Status};
- const orderId=typeof hint?.id==="string"?hint.id.trim():"";
- if(!/^[A-Za-z0-9_-]{1,80}$/.test(orderId))return pull(config,merchantOid);
- const order=await call<Order>(config,"GET",`/orders/${encodeURIComponent(orderId)}`);
- if(!order.ok||!order.data||!carries(order.data,merchantOid))return pull(config,merchantOid);
- return {merchantOid,status:(isPaid(order.data)?"paid":"pending") as Status};
+ const order=hint?.id?await readOrder(config,String(hint.id)):null;
+ if(order&&matches(order,ref,productId))return answer(ref,order,"bildirim");
+ return pull(config,ref,productId);
 }
 
 return {createPayment: async (input:PaymentInput) => createPayment(await host.configuration(),input),
-verifyCallback: async (input:{payload?:string;reference?:string}) => verifyWebhook(await host.configuration(),input)};
+// Network or API failures never surface as a bare module error: the host gets a pending answer with the reason.
+verifyCallback: async (input:{payload?:string;reference?:string;productId?:string}) => {try{return await verify(await host.configuration(),input)}catch(error){const ref=String(input?.reference||"").toLowerCase();return ref?{merchantOid:ref,status:"pending" as Status,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}:null}}};
 }

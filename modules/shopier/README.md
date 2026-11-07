@@ -35,6 +35,14 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.3
+
+- Sipariş, ödeme için açılan Shopier ürününün kimliğiyle bulunur (sistem kimliği ödeme başlarken kaydeder); ürün başlığına bağlı
+  kalınmaz. Satırlardaki ürün kimliği hem productId hem product_id biçiminde okunur.
+- Ödeme durumu payment_status ve payment.status alanlarından da okunur.
+- Her sorgu ve bildirim kısa bir açıklamayla döner (ör. “sipariş listesi okunamadı (HTTP 401)”); yönetimde sipariş sayfasındaki
+  Shopier Kayıtları kartında görünür.
+
 ### 1.0.2
 
 - Ödeme bildirimi gelmese de ödeme onaylanır: müşteri bekleme ekranındayken ve yönetici siparişi açtığında sistem Shopier’e
