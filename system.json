@@ -1,5 +1,5 @@
 {
-  "version": "1.0.190",
-  "notes": "- Düzeltme: Havale / EFT bildirimi gönderen müşteri, ilk bildiriminde bile “bildiriminiz zaten alındı” hatası görüyordu; site sahibine bildirim uyarısı ve müşteriye “bildiriminiz alındı” e-postası da gitmiyordu. Bildirim artık normal şekilde alınır, uyarı ve e-posta gider.\n- Sipariş detayında ürün satırında adet iki kez yazılmıyor.",
-  "publishedAt": "2026-11-07T07:12:05.836Z"
+  "version": "1.0.191",
+  "notes": "- Temalar: kurulu her temada yeni sürüm varsa Güncelle düğmesi çıkar (kullanılmayan temalarda da). Güncelleme ve Uygula artık temayı eski sürüme düşürmez.\n- Yönetim panelindeki etiketler yeniden yazıldı: daha net, en fazla üç kelime. Ödeme yöntemlerindeki komisyon alanı “Ödeme Şirketi Komisyonu” oldu ve müşteriden alınmadığı yazıyor; sepetteki ücretler “Sepete Eklenen Ücretler”.\n- Yazar açıklamaları daha profesyonel yazılır: yazarın adıyla başlayan, uzmanlık alanını ve yaklaşımını anlatan editoryal bir tanıtım; uydurma unvan, yıl, rakam ve klişe kullanılmaz.\n- Sitenin telefon menüsü: Sipariş Sorgula üzerindeki çizgi kaldırıldı, ürün türü logoları yan yana iç içe gösterilir.",
+  "publishedAt": "2026-11-07T07:54:03.069Z"
 }
