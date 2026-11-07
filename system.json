@@ -1,5 +1,5 @@
 {
-  "version": "1.0.196",
-  "notes": "- Sipariş sayfası yenilendi: işlem düğmeleri (Ödemeyi Onayla, Tamamlandı Yap vb.) en üstte Siparişler düğmesinin yanında; sipariş kodu, durum ve tutarla özet kartı ve yeni Ödeme – Hazırlanıyor – Teslim ilerleyişi; çok ürünlü sepette ürün ürün durum değiştirme.\n- Sipariş geçmişi: oluşturma, ödeme (başlatıldı, alındı, başarısız, havale bildirimi), sağlayıcıya gönderim (hangi sağlayıcı, sağlayıcı sipariş numarası, reddedilen denemeler), sağlayıcı durumu ve yönetici işlemleri kaydedilir. Sipariş sayfasında yan yana açılır Ödeme Kaydı ve Sipariş Kaydı kartları; kapalıyken son durum görünür.\n- Siparişler ve Genel Bakış tablolarında satırın tamamına tıklayınca sipariş açılır.",
-  "publishedAt": "2026-11-07T10:53:38.816Z"
+  "version": "1.0.197",
+  "notes": "- Karta iade: İade Et'te tutarın nereye iade edileceği seçilir: Karta İade (Shopier ile ödenen siparişlerde tutar ödeme yapılan karta döner), Bakiyeye İade (üyeler) ya da Yalnızca Durumu Değiştir. Mobil uygulamada da aynı seçim var.\n- İade durumu (işlemde, tamamlandı, başarısız) sipariş açıldıkça Shopier'den okunur ve sipariş geçmişine yazılır; aynı ürün ikinci kez iade edilemez.\n- İade Dekontu: iade yapılan siparişte müşteriye verilecek, mağaza logosu ve rengiyle hazırlanmış yazdırılabilir / PDF dekont (tutar, ürünler, müşteri, sipariş, iade yöntemi, Shopier sipariş ve iade numaraları, şirket bilgileri).\n- Karta iade için Shopier modülünü 1.0.5 sürümüne güncelleyin; erişim anahtarının iade izni olmalıdır.",
+  "publishedAt": "2026-11-07T11:28:33.978Z"
 }
