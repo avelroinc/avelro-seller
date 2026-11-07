@@ -9,6 +9,13 @@ type PaymentInput={merchantOid:string;email:string;amountMicros:number;currency?
 type Line={productId?:string;product_id?:string;title?:string};
 type Order={id?:string;paymentStatus?:string;payment_status?:string;payment?:{status?:string};lineItems?:Line[];line_items?:Line[]};
 type Result={merchantOid:string;status:Status;note:string};
+type ProductLike={id?:string|number;productId?:string|number;product_id?:string|number;product?:{id?:string|number};url?:string;title?:string};
+const ID=/^[A-Za-z0-9_-]{1,80}$/;
+// Ürün kimliği: yanıtın id / productId / product_id / product.id alanı; hiçbiri yoksa ödeme adresinin son parçası (ör. /123456).
+function productIdOf(p:ProductLike|null|undefined,url=""){
+ for(const v of [p?.id,p?.productId,p?.product_id,p?.product?.id]){const s=v===undefined||v===null?"":String(v);if(ID.test(s))return s}
+ const tail=String(url).split(/[?#]/)[0].split("/").filter(Boolean).pop()||"";return /^[0-9]{3,}$/.test(tail)?tail:"";
+}
 
 export default function createModule(host:ModuleHost){
 const API="https://api.shopier.com/v1";
@@ -43,7 +50,7 @@ async function createPayment(config:ShopierConfig,input:PaymentInput){
  // repository) so the product never shows a broken image, whatever the site's own address, firewall or image format.
  const image=PRODUCT_IMAGE;
  const title=`${input.productName.replace(/\s+/g," ").trim().slice(0,80)||"Sipariş Ödemesi"} · ${input.merchantOid}`;
- const product=await call<{id?:string;url?:string}>(config,"POST","/products",{
+ const product=await call<ProductLike>(config,"POST","/products",{
   title,
   description:`Sipariş kodu: ${input.merchantOid}\nBu ürün yalnızca bu siparişin ödemesi içindir; ödeme tamamlanınca sipariş sitede kendiliğinden onaylanır.`,
   type:"digital",
@@ -56,7 +63,7 @@ async function createPayment(config:ShopierConfig,input:PaymentInput){
  const url=product.data?.url;
  if(!product.ok||typeof url!=="string"||!/^https:\/\//.test(url))throw apiError(product.data,"Shopier ödeme sayfası oluşturulamadı.");
  // The product id is kept by the host: the webhook and the status check find the order by it (as the Shopier SDKs do).
- return {redirectUrl:url,productId:String(product.data?.id??"")};
+ return {redirectUrl:url,productId:productIdOf(product.data,url)};
 }
 
 // The webhook body is only a hint: the order is read back from the API with the store's own token and counts only when one of its
@@ -68,7 +75,15 @@ async function createPayment(config:ShopierConfig,input:PaymentInput){
 const lines=(order:Order|null|undefined)=>[...(order?.lineItems||[]),...(order?.line_items||[])];
 const paymentState=(order:Order|null|undefined)=>String(order?.paymentStatus??order?.payment_status??order?.payment?.status??"").toLowerCase();
 const isPaid=(order:Order|null|undefined)=>["paid","success","succeeded","completed"].includes(paymentState(order));
-const matches=(order:Order|null|undefined,ref:string,productId:string)=>lines(order).some(line=>(productId&&String(line?.productId??line?.product_id??"")===productId)||String(line?.title||"").toLowerCase().includes(ref));
+const lineProduct=(line:Line&{product?:{id?:string|number}})=>String(line?.productId??line?.product_id??line?.product?.id??"");
+const matches=(order:Order|null|undefined,ref:string,productId:string)=>lines(order).some(line=>(productId&&lineProduct(line)===productId)||String(line?.title||"").toLowerCase().includes(ref));
+// Eşleşme yoksa kayda yazılan örnek: son siparişlerin kimliği, ödeme durumu ve satırlardaki ürün kimliği / adı (kişisel bilgi yok).
+const sample=(list:Order[])=>list.slice(0,3).map(o=>`#${o.id??"?"} ${paymentState(o)||"-"} [${lines(o).slice(0,2).map(l=>`${lineProduct(l)||"kimliksiz"} ${String(l?.title||"").slice(0,40)}`).join("; ")}]`).join(" · ");
+// Ürün kimliği bilinmiyorsa (eski ödeme) ürünler arasında başlığında referans geçen ürün aranır.
+async function productForReference(config:ShopierConfig,ref:string){
+ for(const query of ["?limit=50&sort=dateDesc","?limit=50"]){const list=await call<ProductLike[]>(config,"GET",`/products${query}`);if(!list.ok||!Array.isArray(list.data))continue;const hit=list.data.find(p=>String(p?.title||"").toLowerCase().includes(ref));return hit?productIdOf(hit,String(hit.url||"")):""}
+ return "";
+}
 function findOrder(value:unknown,depth=0):Order|null{
  if(!value||typeof value!=="object"||depth>3)return null;
  const v=value as Record<string,unknown>;
@@ -78,14 +93,15 @@ function findOrder(value:unknown,depth=0):Order|null{
 }
 const answer=(merchantOid:string,order:Order,via:string):Result=>isPaid(order)?{merchantOid,status:"paid",note:`Shopier siparişi ${order.id||""} ödendi (${via}).`}:{merchantOid,status:"pending",note:`Shopier siparişi ${order.id||""} bulundu, ödeme durumu: ${paymentState(order)||"bilinmiyor"} (${via}).`};
 async function readOrder(config:ShopierConfig,id:string){if(!/^[A-Za-z0-9_-]{1,80}$/.test(id))return null;const r=await call<Order>(config,"GET",`/orders/${encodeURIComponent(id)}`);return r.ok&&r.data&&typeof r.data==="object"?{...r.data,id:String(r.data.id??id)}:null}
-async function pull(config:ShopierConfig,ref:string,productId:string):Promise<Result>{
+async function pull(config:ShopierConfig,ref:string,known:string):Promise<Result>{
+ const productId=known||await productForReference(config,ref).catch(()=>"");
  const queries=[...(productId?[`?productId=${encodeURIComponent(productId)}`]:[]),"?limit=50&sort=dateDesc","?limit=50",""];
  let lastError="";
  for(const query of queries){
   const list=await call<Order[]>(config,"GET",`/orders${query}`);
   if(!list.ok||!Array.isArray(list.data)){lastError=`sipariş listesi okunamadı (HTTP ${list.status})`;continue}
   const hit=list.data.find(order=>matches(order,ref,productId));
-  if(!hit){if(query.startsWith("?productId"))continue;return {merchantOid:ref,status:"pending",note:`Shopier'de bu ödemeye ait sipariş henüz yok (${list.data.length} sipariş tarandı${productId?`, ürün ${productId}`:", ürün kimliği yok"}).`}}
+  if(!hit){if(query.startsWith("?productId"))continue;return {merchantOid:ref,status:"pending",note:`Shopier'de bu ödemeye ait sipariş henüz yok (${list.data.length} sipariş tarandı${productId?`, aranan ürün ${productId}${known?"":" (ürün listesinden bulundu)"}`:", ürün kimliği bilinmiyor"}). Son siparişler: ${sample(list.data)||"yok"}`}}
   if(isPaid(hit))return answer(ref,hit,"liste");
   const one=hit.id?await readOrder(config,String(hit.id)):null;
   return answer(ref,one&&matches(one,ref,productId)?one:hit,"sipariş");

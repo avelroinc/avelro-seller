@@ -35,6 +35,13 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.4
+
+- Ürün kimliği Shopier yanıtının id / productId / product_id / product.id alanından, yoksa ödeme adresinden alınır.
+- Ürün kimliği bilinmeyen ödemelerde (eski ödemeler dahil) ürün, başlığındaki sipariş referansıyla Shopier ürün listesinden bulunur;
+  sipariş bu ürünün kimliğiyle aranır.
+- Eşleşme olmazsa kayda son siparişlerin kimliği, ödeme durumu ve satırlardaki ürün kimliği / adı yazılır (kişisel bilgi yazılmaz).
+
 ### 1.0.3
 
 - Sipariş, ödeme için açılan Shopier ürününün kimliğiyle bulunur (sistem kimliği ödeme başlarken kaydeder); ürün başlığına bağlı
