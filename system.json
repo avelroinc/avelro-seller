@@ -1,5 +1,5 @@
 {
-  "version": "1.0.195",
-  "notes": "- Shopier: ürün kimliği Shopier yanıtının her biçiminden ya da ödeme adresinden alınır; kimliği kaydedilmemiş ödemeler (eskiler dahil) Shopier ürün listesinden bulunup onaylanır (Shopier modülü 1.0.4 gerekir). Shopier Kayıtları eşleşme olmazsa Shopier’in döndürdüğü son siparişleri gösterir; tekrarlayan satırlar tek satırda toplanır.\n- Sipariş detayı: üstte yan yana Müşteri (altında Fatura) ve Sipariş Bilgileri, altında sepet, en altta ödeme kayıtları; Siparişler düğmesi.",
-  "publishedAt": "2026-11-07T09:52:21.451Z"
+  "version": "1.0.196",
+  "notes": "- Sipariş sayfası yenilendi: işlem düğmeleri (Ödemeyi Onayla, Tamamlandı Yap vb.) en üstte Siparişler düğmesinin yanında; sipariş kodu, durum ve tutarla özet kartı ve yeni Ödeme – Hazırlanıyor – Teslim ilerleyişi; çok ürünlü sepette ürün ürün durum değiştirme.\n- Sipariş geçmişi: oluşturma, ödeme (başlatıldı, alındı, başarısız, havale bildirimi), sağlayıcıya gönderim (hangi sağlayıcı, sağlayıcı sipariş numarası, reddedilen denemeler), sağlayıcı durumu ve yönetici işlemleri kaydedilir. Sipariş sayfasında yan yana açılır Ödeme Kaydı ve Sipariş Kaydı kartları; kapalıyken son durum görünür.\n- Siparişler ve Genel Bakış tablolarında satırın tamamına tıklayınca sipariş açılır.",
+  "publishedAt": "2026-11-07T10:53:38.816Z"
 }
