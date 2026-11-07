@@ -1,5 +1,5 @@
 {
-  "version": "1.0.193",
-  "notes": "- Shopier: ödeme bildirimi gelmese de ödeme onaylanır. Müşteri bekleme ekranındayken ve yönetici siparişi açtığında sistem Shopier’e siparişi sorar (Shopier modülü 1.0.2 gerekir). Bildirim ve dönüş adresleri artık her zaman sitenin https adresidir.\n- Yönetim paneli: sipariş detayı ayrı sayfada açılır (sağda panel açılmaz). Genel Bakış’taki Yapılacaklar kaldırıldı. Sipariş tablolarında tarih ve Üye / Misafir ayrı sütunlarda.\n- Yönetim panelinin telefon menüsündeki Siteyi Aç ve koyu mod düğmeleri kaldırıldı; sitenin telefon menüsündeki koyu mod düğmesinin arka planı kaldırıldı.",
-  "publishedAt": "2026-11-07T08:53:22.086Z"
+  "version": "1.0.194",
+  "notes": "- Shopier: ödeme, Shopier’de açılan ürünün kimliğiyle eşleştirilir (Shopier modülü 1.0.3 gerekir); bildirim ve Shopier’e sorma artık ürün başlığına bağlı değildir.\n- Yönetimde Shopier siparişinin sayfasında “Shopier Kayıtları” kartı: ödeme sayfasının açılması, gelen bildirimler ve Shopier’e sorulan durum açıklamasıyla görünür (ödemenin neden onaylanmadığı buradan anlaşılır).",
+  "publishedAt": "2026-11-07T09:30:04.498Z"
 }
