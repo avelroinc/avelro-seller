@@ -1,5 +1,5 @@
 {
-  "version": "1.0.197",
-  "notes": "- Karta iade: İade Et'te tutarın nereye iade edileceği seçilir: Karta İade (Shopier ile ödenen siparişlerde tutar ödeme yapılan karta döner), Bakiyeye İade (üyeler) ya da Yalnızca Durumu Değiştir. Mobil uygulamada da aynı seçim var.\n- İade durumu (işlemde, tamamlandı, başarısız) sipariş açıldıkça Shopier'den okunur ve sipariş geçmişine yazılır; aynı ürün ikinci kez iade edilemez.\n- İade Dekontu: iade yapılan siparişte müşteriye verilecek, mağaza logosu ve rengiyle hazırlanmış yazdırılabilir / PDF dekont (tutar, ürünler, müşteri, sipariş, iade yöntemi, Shopier sipariş ve iade numaraları, şirket bilgileri).\n- Karta iade için Shopier modülünü 1.0.5 sürümüne güncelleyin; erişim anahtarının iade izni olmalıdır.",
-  "publishedAt": "2026-11-07T11:28:33.978Z"
+  "version": "1.0.198",
+  "notes": "- Shopier'de sipariş kapatma: Shopier ödemeyi kapatılan siparişler için aktarır. Sipariş sayfasında Shopier'de Kapat, siparişlerde toplu kapatma; tamamlanan siparişler kendiliğinden kapatılır (Modüller › Shopier: Tamamlanınca Otomatik Kapat ve Teslimat Notu). Shopier modülünü 1.0.6 sürümüne güncelleyin.\n- Yeni onay ve uyarı pencereleri: bütün sistemde aynı görünüm; üç ve üzeri seçenek alt alta, silme gibi işlemlerin düğmesi kırmızı, telefonda alttan açılır. İade penceresindeki kayma giderildi.\n- Yönetim panelindeki yazılar (web ve mobil) İlk ve Son yazımında: sipariş kayıtları, durumlar, bildirimler ve kısa etiketler.\n- Sipariş detayında sepetteki ürünlerin yanında platform simgesi (Instagram, TikTok, YouTube…) marka renginde.\n- İade ya da iptal edilen siparişte başlığın altındaki büyük kart kaldırıldı; durum etiketi gösterilir.",
+  "publishedAt": "2026-11-07T12:16:47.429Z"
 }
