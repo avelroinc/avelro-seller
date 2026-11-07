@@ -3,7 +3,7 @@
   "id": "shopier",
   "name": "Shopier Entegrasyonu",
   "description": "Shopier ile kredi ve banka kartı ödemesi almak için bağımsız sağlayıcı paketi.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "hostApiVersion": 2,
   "category": "payment",
   "scopes": [

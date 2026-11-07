@@ -10,6 +10,7 @@ type Order={id?:string;paymentStatus?:string;lineItems?:{productId?:string;title
 
 export default function createModule(host:ModuleHost){
 const API="https://api.shopier.com/v1";
+const PRODUCT_IMAGE="https://raw.githubusercontent.com/avelroinc/avelro-seller/main/modules/shopier/assets/odeme.png";
 // Order reference written by the host: kind prefix + 32 hex characters (lib/payments/merchant-oid.ts).
 const REFERENCE=/(?:sdep|sord|sgrp)[0-9a-f]{32}/i;
 
@@ -36,11 +37,9 @@ async function createPayment(config:ShopierConfig,input:PaymentInput){
  if(!(Number(price)>0))throw new Error("Geçersiz tutar.");
  if(!REFERENCE.test(input.merchantOid))throw new Error("Geçersiz sipariş referansı.");
  await ensureWebhook(config,input.callbackUrl);
- // Shopier requires one public product image; the store's sharing image is used.
- // (The sandbox has no URL global, so the site address is cut from the return address.)
- const origin=String(input.returnUrl||"").match(/^https:\/\/[^/?#]+/)?.[0];
- if(!origin)throw new Error("Geçersiz site adresi.");
- const image=`${origin}/images/store-social-hero.webp`;
+ // Shopier requires one public product image. A fixed PNG kept with this package is used (assets/odeme.png, served from the public
+ // repository) so the product never shows a broken image, whatever the site's own address, firewall or image format.
+ const image=PRODUCT_IMAGE;
  const title=`${input.productName.replace(/\s+/g," ").trim().slice(0,80)||"Sipariş Ödemesi"} · ${input.merchantOid}`;
  const product=await call<{id?:string;url?:string}>(config,"POST","/products",{
   title,
