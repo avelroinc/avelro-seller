@@ -123,7 +123,36 @@ async function verify(config:ShopierConfig,input:{payload?:string;reference?:str
  return pull(config,ref,productId);
 }
 
+// Refunds (1.0.5): the money goes back to the card the customer paid with. The Shopier order is the one recorded when the payment
+// was confirmed (providerOrderId) or, for older payments, found again by product id / reference. A full refund returns the whole
+// order (amount = order total); a partial one only the given amount (one item of a multi-item cart). POST /refunds always carries
+// orderId, amount and a short note to the buyer (Shopier API). Shopier answers with a refund record whose status is pending,
+// succeeded or failed; refundStatus reads it again later. Failures come back as { ok:false, note } (never a bare error).
+type RefundInput={reference:string;productId?:string;providerOrderId?:string;amountMicros:number;full:boolean};
+type RefundRecord={id?:string|number;status?:string;total?:string;amount?:string;orderId?:string;order_id?:string;dateRefunded?:string};
+const refundState=(r:RefundRecord|null)=>{const s=String(r?.status||"").toLowerCase();return s==="succeeded"||s==="success"||s==="completed"?"succeeded":s==="failed"||s==="rejected"?"failed":"pending"};
+async function refund(config:ShopierConfig,input:RefundInput){
+ const ref=String(input?.reference||"").toLowerCase(),amount=(Number(input?.amountMicros)/1000000).toFixed(2);
+ if(ref.match(REFERENCE)?.[0]!==ref)return {ok:false,note:"Ödeme referansı geçersiz."};
+ if(!(Number(amount)>0))return {ok:false,note:"İade tutarı geçersiz."};
+ let orderId=String(input?.providerOrderId||"");
+ if(!orderId){const found=await pull(config,ref,String(input?.productId||""));orderId=found.status==="paid"?providerOrderOf(found.note):"";if(!orderId)return {ok:false,note:`Shopier siparişi bulunamadı: ${found.note}`}}
+ if(!ID.test(orderId))return {ok:false,note:"Shopier sipariş numarası geçersiz."};
+ const r=await call<RefundRecord>(config,"POST","/refunds",{orderId,amount,note:input.full?"Siparişiniz iade edildi.":"Siparişinizdeki bir ürün iade edildi."});
+ if(!r.ok||!r.data)return {ok:false,note:apiError(r.data,`Shopier iadeyi kabul etmedi (HTTP ${r.status}).`).message,providerOrderId:orderId};
+ return {ok:true,refundId:String(r.data.id??""),status:refundState(r.data),providerOrderId:orderId,amount:String(r.data.total??r.data.amount??amount),note:`Shopier iade kaydı ${r.data.id??""} oluşturuldu.`};
+}
+async function refundStatus(config:ShopierConfig,input:{refundId:string}){
+ const id=String(input?.refundId||"");if(!ID.test(id))return {ok:false,note:"İade numarası geçersiz."};
+ const r=await call<RefundRecord>(config,"GET",`/refunds/${encodeURIComponent(id)}`);
+ if(!r.ok||!r.data)return {ok:false,note:`İade durumu okunamadı (HTTP ${r.status}).`};
+ return {ok:true,refundId:id,status:refundState(r.data),refundedAt:r.data.dateRefunded||null};
+}
+const providerOrderOf=(note:string)=>note.match(/siparişi\s+([A-Za-z0-9_-]+)\s+ödendi/)?.[1]||"";
+
 return {createPayment: async (input:PaymentInput) => createPayment(await host.configuration(),input),
 // Network or API failures never surface as a bare module error: the host gets a pending answer with the reason.
-verifyCallback: async (input:{payload?:string;reference?:string;productId?:string}) => {try{return await verify(await host.configuration(),input)}catch(error){const ref=String(input?.reference||"").toLowerCase();return ref?{merchantOid:ref,status:"pending" as Status,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}:null}}};
+verifyCallback: async (input:{payload?:string;reference?:string;productId?:string}) => {try{const r=await verify(await host.configuration(),input);return r&&r.status==="paid"?{...r,providerOrderId:providerOrderOf(r.note)}:r}catch(error){const ref=String(input?.reference||"").toLowerCase();return ref?{merchantOid:ref,status:"pending" as Status,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}:null}},
+refund: async (input:RefundInput) => {try{return await refund(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}},
+refundStatus: async (input:{refundId:string}) => {try{return await refundStatus(await host.configuration(),input)}catch(error){return {ok:false,note:`Shopier'e bağlanılamadı: ${error instanceof Error?error.message:"hata"}`}}}};
 }

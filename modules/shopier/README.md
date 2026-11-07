@@ -35,6 +35,13 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.5
+
+- Karta iade: yönetimde İade Et › Karta İade (Shopier) ile tutar Shopier üzerinden ödeme yapılan karta iade edilir (tek ürünlü
+  sepette tam, çok ürünlü sepette ürünün tutarı kadar kısmi). İade durumu (bekliyor, tamamlandı, başarısız) Shopier’den okunur.
+  Erişim anahtarının iade izni olmalıdır.
+- Ödeme onaylanırken Shopier sipariş numarası sisteme bildirilir (iade bu numarayla istenir).
+
 ### 1.0.4
 
 - Ürün kimliği Shopier yanıtının id / productId / product_id / product.id alanından, yoksa ödeme adresinden alınır.
