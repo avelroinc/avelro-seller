@@ -1,5 +1,5 @@
 {
-  "version": "1.0.189",
-  "notes": "- Yeni ödeme modülü: Shopier. Modüller › Ödeme bölümünden kurulur; Shopier Kişisel Erişim Anahtarı girilince müşteriler kartla Shopier ödeme sayfasından öder, ödeme Shopier API’sinden doğrulanıp sipariş kendiliğinden onaylanır.\n- Ana sayfa makalesi: İçindekiler kaldırıldı; içinde görsel olan bölümler sağda ve solda görselli iki sütunlu satır olarak gösterilir.\n- Yazılardaki Sıkça Sorulan Sorular ve İlgili Yazılar artık ara başlık değil, kendi kutusu olan bileşenler; İçindekiler’e ve bölüm sayısına girmez.\n- Telefonda blog yazısı bilgi şeridindeki Bölüm hücresinin eksik çizgisi düzeltildi.\n- Sitenin telefon menüsündeki Hızlı Erişim alanı kaldırıldı.",
-  "publishedAt": "2026-11-07T05:49:58.789Z"
+  "version": "1.0.190",
+  "notes": "- Düzeltme: Havale / EFT bildirimi gönderen müşteri, ilk bildiriminde bile “bildiriminiz zaten alındı” hatası görüyordu; site sahibine bildirim uyarısı ve müşteriye “bildiriminiz alındı” e-postası da gitmiyordu. Bildirim artık normal şekilde alınır, uyarı ve e-posta gider.\n- Sipariş detayında ürün satırında adet iki kez yazılmıyor.",
+  "publishedAt": "2026-11-07T07:12:05.836Z"
 }
