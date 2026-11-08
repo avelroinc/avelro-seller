@@ -1,5 +1,5 @@
 {
-  "version": "1.0.210",
-  "notes": "- Son Siparişler şeridinde müşteri bilgisi yer almaz: \"100 Reels İzlenme Satın Alındı.\" Müşteri adı (gizlenmiş hâli dahil) sayfaya hiç gönderilmez.",
-  "publishedAt": "2026-11-08T16:06:02.361Z"
+  "version": "1.0.211",
+  "notes": "- Av/Tawk › Asistan ekranındaki \"Durum alınamadı\" hatası giderildi: asistanın durumu ve son 7 günün sohbet sayıları yeniden gösteriliyor.",
+  "publishedAt": "2026-11-08T17:51:15.429Z"
 }
