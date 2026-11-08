@@ -1,5 +1,5 @@
 {
-  "version": "1.0.211",
-  "notes": "- Av/Tawk › Asistan ekranındaki \"Durum alınamadı\" hatası giderildi: asistanın durumu ve son 7 günün sohbet sayıları yeniden gösteriliyor.",
-  "publishedAt": "2026-11-08T17:51:15.429Z"
+  "version": "1.0.212",
+  "notes": "- Av/Dashboard 1.17.81: Av/Tawk › Asistan › \"Av/Dashboard’da Aç\" düğmesi yeniden çalışıyor; Work/Bot › Canlı Destek ekranını açar.",
+  "publishedAt": "2026-11-08T18:54:22.505Z"
 }
