@@ -1,5 +1,5 @@
 {
-  "version": "1.0.207",
-  "notes": "- Work/Bot yalnızca sitede açık satış modülleri için öneri verir (Modüller › Ürünler). Örneğin E-Pin kapalıysa E-Pin stok uyarısı ya da indirim önerisi gelmez.\n- Servis Danışmanı'nın servis planları, Kampanya Uzmanı'nın hizmet ve kombin önerileri ve Sağlayıcı Kâşifi yalnızca Sosyal Medya açıkken çalışır.\n- Lisans, Yazılım, E-Pin ve SMS Onay önerileri yalnızca ilgili modül açıksa gelir; modül kapatılınca açık öneriler kendiliğinden kapanır.",
-  "publishedAt": "2026-11-08T14:02:06.138Z"
+  "version": "1.0.208",
+  "notes": "- Work/Bot ana ekranında yalnızca birimler görünür; Gün Akışı kaldırıldı, üst şeritte Bekleyen Karar ve Otomasyon kaldı.\n- Aylık yapay zekâ bütçesi Modüller › Yapay Zekâ sayfasına taşındı (Aylık Yapay Zekâ Bütçesi: bu ayki harcama, çağrı sayısı, bütçe). Bütçe artık Modüller yetkisiyle değiştirilir.",
+  "publishedAt": "2026-11-08T14:43:35.604Z"
 }
