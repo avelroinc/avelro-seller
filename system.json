@@ -1,5 +1,5 @@
 {
-  "version": "1.0.206",
-  "notes": "- Work/Bot: Bekleyen kararlar artık yalnızca birimin kendi ekranında (Bekleyenler) listelenir; ofis ekranında yalnızca toplam sayı görünür.\n- Work/Bot: Birim kartlarında son tarama saat simgesiyle kısa gösterilir (ör. 4 Saat).\n- Work/Bot › Ekip eski görünümüne döndü: işi yapanlar Kontrol çizgisiyle Denetçi'ye bağlanır, karta tıklayınca altında düzenleyici açılır. Model artık yazılmaz, seçilir (yapay zekânın kendi listesinden; ilk seçenek Modüllerdeki varsayılan).\n- Work/Bot › İçerik Editörü: Yazım Talimatı sekmesi geri geldi; .md talimat dosyası yüklenir, her yükleme yeni sürüm olur (Önizle, Bu Sürüme Dön, Talimatı Kapat).\n- Raporlar: Hesaplama Notları kaldırıldı.\n- Okunur adresler: /admin/workbot/musteri-temsilcisi, /admin/ayarlar/sepet, /admin/moduller/odeme, /admin/siparisler?durum=isleniyor gibi. Eski bağlantılar yeni adrese yönlenir.\n- Av/Dashboard 1.17.80: Work/Bot ana ekranında bekleyen karar listesi kalktı (kararlar birim ekranında); birim ekranında son tarama saat simgesiyle.",
-  "publishedAt": "2026-11-08T13:12:48.071Z"
+  "version": "1.0.207",
+  "notes": "- Work/Bot yalnızca sitede açık satış modülleri için öneri verir (Modüller › Ürünler). Örneğin E-Pin kapalıysa E-Pin stok uyarısı ya da indirim önerisi gelmez.\n- Servis Danışmanı'nın servis planları, Kampanya Uzmanı'nın hizmet ve kombin önerileri ve Sağlayıcı Kâşifi yalnızca Sosyal Medya açıkken çalışır.\n- Lisans, Yazılım, E-Pin ve SMS Onay önerileri yalnızca ilgili modül açıksa gelir; modül kapatılınca açık öneriler kendiliğinden kapanır.",
+  "publishedAt": "2026-11-08T14:02:06.138Z"
 }
