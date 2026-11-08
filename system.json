@@ -1,5 +1,5 @@
 {
-  "version": "1.0.212",
-  "notes": "- Av/Dashboard 1.17.81: Av/Tawk › Asistan › \"Av/Dashboard’da Aç\" düğmesi yeniden çalışıyor; Work/Bot › Canlı Destek ekranını açar.",
-  "publishedAt": "2026-11-08T18:54:22.505Z"
+  "version": "1.0.213",
+  "notes": "- Av/Tawk 1.5.5: Daha Fazla tek, sade bir listede (Durum ve Çalışma Saatleri, Sohbet Ayarları, Görünüm, Siteleri Yönet). Destek Raporu ve uygulama simgesi seçici kaldırıldı.",
+  "publishedAt": "2026-11-08T21:38:11.051Z"
 }
