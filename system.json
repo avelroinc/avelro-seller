@@ -1,5 +1,5 @@
 {
-  "version": "1.0.209",
-  "notes": "- Yönetim paneli: sol menünün en altındaki Siteyi Aç yerine Çıkış Yap geldi; tıklayınca oturum kapanır ve giriş ekranı açılır.\n- Son Siparişler şeridi daha okunur: \"Bir Müşterimiz 100 Reels İzlenme Satın Aldı.\" Adet başa gelir, ek seçenekler (Hızlı Teslimat vb.) gösterilmez; zaman saat simgesiyle yazılır (15 Saat Önce, Dün, 3 Gün Önce).\n- Temalar: Pulse 1.0.58, Arel 1.0.4.",
-  "publishedAt": "2026-11-08T15:42:07.145Z"
+  "version": "1.0.210",
+  "notes": "- Son Siparişler şeridinde müşteri bilgisi yer almaz: \"100 Reels İzlenme Satın Alındı.\" Müşteri adı (gizlenmiş hâli dahil) sayfaya hiç gönderilmez.",
+  "publishedAt": "2026-11-08T16:06:02.361Z"
 }
