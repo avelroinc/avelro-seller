@@ -1,5 +1,5 @@
 {
-  "version": "1.0.220",
-  "notes": "- Yönetim panelinde klavye kısayolları: ? kısayolları gösterir, / ya da Ctrl+K arar, Esc bir üst sayfaya döner, n yeni kayıt açar, j / k ile satırlar arasında gezilir ve Enter açar, Ctrl+S kaydeder.\n- Bölümlere hızlı geçiş: g ve ardından harf (g s Siparişler, g m Müşteriler, g o Ödemeler, g a Ayarlar …); yalnızca yetkili bölümlere gider.\n- Tablo satırları Tab tuşuyla seçilip Enter ile açılabilir.",
-  "publishedAt": "2026-11-09T15:44:07.916Z"
+  "version": "1.0.221",
+  "notes": "- Work/Bot'a yeni birim: Bildirim Uzmanı. Tarayıcı bildirimlerinin performansına bakar; az tıklanan bildirimin metnini yeniler ve dener (kötüyse eski metne kendiliğinden döner), abone kaybettiren pazarlama bildirimini kapatır, kapalı pazarlama bildirimini açar, sessiz saatleri tıklama saatlerine göre ayarlar ve Kampanya Uzmanı'nın yeni indirimlerini Toplu Bildirimle duyurur.\n- Kişi başına günde en fazla 2 pazarlama bildirimi gider (sepet hatırlatma, fiyat düştü, stoğa geldi, Toplu Bildirim); sınır Work/Bot › Bildirim Uzmanı › Ayarlar'dan değişir. Otomasyon'da haftada en fazla 2 kampanya duyurusu yapılır.\n- Tarayıcı Bildirimleri › Son 30 Gün: abonelikten çıkanlar (izni geri alanlar, hangi bildirimden sonra çıktıkları) ve bildirim başına gönderilen / tıklanan / oran tablosu. Ana sayfada Bildirim Uzmanı'nın durumu görünür.\n- Bildirim Uzmanı Manumasyon'da başlar; kontrolü bota vermek için Work/Bot › Bildirim Uzmanı'nda Otomasyon'u seçin.",
+  "publishedAt": "2026-11-09T16:56:45.355Z"
 }
