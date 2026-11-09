@@ -1,5 +1,5 @@
 {
-  "version": "1.0.218",
-  "notes": "- Tarayıcı Bildirimleri sol menü yerine yol iziyle gezilir: üstte bulunulan sayfa (Tarayıcı Bildirimleri › Sipariş Bildirimleri › Sipariş Tamamlandı) ve bir üst sayfaya dönen düğme.\n- Ana sayfa bölümleri listeler: bildirim grupları (açık bildirim sayısıyla), Son 30 Gün, Sessiz Saatler, Yönetici Bildirimleri ve Toplu Bildirim; grup sayfasında her bildirimin ne zaman gittiği yazar.",
-  "publishedAt": "2026-11-09T13:48:16.087Z"
+  "version": "1.0.219",
+  "notes": "- Yönetim panelinde sol menüler ve sağdaki ayrıntı kartları kalktı: bölümler ve kayıtlar kendi sayfasında açılır, üstte yol izi ve bir üst sayfaya dönen düğme var; adresler paylaşılabilir.\n- Ayarlar, Modüller, Yorumlar ve SMS Onay ana sayfası bölümleri açıklamaları ve durumlarıyla listeler; Modüller'de her modülün kendi sayfası var.\n- Ödemeler, Müşteriler, Talepler, Faturalar, Değerlendirmeler, Personel, Kuponlar, Fırsat Köşesi, Ücretsiz Hizmetler, Duyurular, Sağlayıcılar ve Toplu E-posta / SMS / Bildirim kayıtları kendi sayfasında açılır; listeye dönünce sekme ve arama korunur.\n- Ürün düzenleme ve sipariş ayrıntısı sayfalarında geri düğmesi yerine yol izi var.",
+  "publishedAt": "2026-11-09T15:13:09.172Z"
 }
