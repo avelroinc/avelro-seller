@@ -1,5 +1,5 @@
 {
-  "version": "1.0.219",
-  "notes": "- Yönetim panelinde sol menüler ve sağdaki ayrıntı kartları kalktı: bölümler ve kayıtlar kendi sayfasında açılır, üstte yol izi ve bir üst sayfaya dönen düğme var; adresler paylaşılabilir.\n- Ayarlar, Modüller, Yorumlar ve SMS Onay ana sayfası bölümleri açıklamaları ve durumlarıyla listeler; Modüller'de her modülün kendi sayfası var.\n- Ödemeler, Müşteriler, Talepler, Faturalar, Değerlendirmeler, Personel, Kuponlar, Fırsat Köşesi, Ücretsiz Hizmetler, Duyurular, Sağlayıcılar ve Toplu E-posta / SMS / Bildirim kayıtları kendi sayfasında açılır; listeye dönünce sekme ve arama korunur.\n- Ürün düzenleme ve sipariş ayrıntısı sayfalarında geri düğmesi yerine yol izi var.",
-  "publishedAt": "2026-11-09T15:13:09.172Z"
+  "version": "1.0.220",
+  "notes": "- Yönetim panelinde klavye kısayolları: ? kısayolları gösterir, / ya da Ctrl+K arar, Esc bir üst sayfaya döner, n yeni kayıt açar, j / k ile satırlar arasında gezilir ve Enter açar, Ctrl+S kaydeder.\n- Bölümlere hızlı geçiş: g ve ardından harf (g s Siparişler, g m Müşteriler, g o Ödemeler, g a Ayarlar …); yalnızca yetkili bölümlere gider.\n- Tablo satırları Tab tuşuyla seçilip Enter ile açılabilir.",
+  "publishedAt": "2026-11-09T15:44:07.916Z"
 }
