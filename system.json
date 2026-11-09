@@ -1,5 +1,5 @@
 {
-  "version": "1.0.216",
-  "notes": "- Tarayıcı Bildirimleri ve E-Posta Şablonları: düzenleme kartı telefonda ekrandan taşmıyor; değişken düğmeleri sığdığı kadar yan yana, Kaydet ve Deneme Gönder alt alta.\n- Bildirimler Android durum çubuğunda beyaz kutu yerine mağazanın baş harfiyle görünür.",
-  "publishedAt": "2026-11-09T08:07:39.903Z"
+  "version": "1.0.217",
+  "notes": "- Tarayıcı Bildirimleri iç sayfalara ayrıldı: solda menü; Genel Bakış, bildirim grupları (Sipariş, Teslimat, Bakiye, Destek, Pazarlama), her bildirimin kendi sayfası, Sessiz Saatler ve Yönetici Bildirimleri.\n- Ölçüm: son 30 günde gönderilen, tıklanan, tıklanma oranı ve izin kartlarının izin oranı; Toplu Bildirim'de tıklanan ve satışa dönen (tıklayanın 48 saat içindeki siparişleri).\n- Toplu E-posta, SMS ve Bildirim ileri bir tarih ve saate zamanlanabilir; zamanı gelene kadar iptal edilebilir.\n- Toplu Bildirim'e görsel, bağlantı ve düğme eklenebilir; hazır bildirimlerde Siparişi Gör, Tekrar Al, Sepete Dön gibi düğmeler var (bildirim başına kapatılabilir).\n- Sessiz Saatler (varsayılan 23:00–09:00): sepet hatırlatma, fiyat düştü, stoğa geldi ve toplu bildirim bu saatlerde bekler.\n- Yönetici Bildirimleri: yeni sipariş, havale, talep, sağlayıcı hatası ve sistem uyarıları panel kapalıyken de tarayıcıya gelir (Tarayıcı Bildirimleri ya da Ayarlar › Hesabım'dan açılır). Sipariş hızlandırma talebi artık yöneticilere bildirilir.",
+  "publishedAt": "2026-11-09T11:34:51.470Z"
 }
