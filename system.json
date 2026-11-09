@@ -1,5 +1,5 @@
 {
-  "version": "1.0.215",
-  "notes": "- Tarayıcı bildirimleri: müşteri izin verirse sipariş, teslimat, bakiye, canlı destek yanıtı, talep durumu, sepet hatırlatma, fiyat düşüşü ve stoğa gelme bildirimleri tarayıcısına gelir (22 bildirim).\n- İzin; sipariş tamamlanınca, canlı destekte ilk mesajdan sonra ve ürün sayfasındaki Haber Ver düğmesiyle istenir. Hesabım › İletişim İzinleri altında açılıp kapatılır.\n- Lisans ve yazılımda Stoğa Gelince / Fiyatı Düşünce Haber Ver; e-pinde stokta olmayan kutucuğa dokununca stok takibi; favori paketlerde fiyat düşüşü bildirimi.\n- Yönetim: İletişim › Tarayıcı Bildirimleri (abone sayıları, her bildirim için aç / kapat, başlık ve metin düzenleme, önizleme, bu tarayıcıya deneme) ve Toplu Bildirim (bütün abonelere ya da üye gruplarına duyuru).\n- iPhone'da bildirim yalnızca site ana ekrana eklenmişse çalışır.",
-  "publishedAt": "2026-11-09T05:11:14.655Z"
+  "version": "1.0.216",
+  "notes": "- Tarayıcı Bildirimleri ve E-Posta Şablonları: düzenleme kartı telefonda ekrandan taşmıyor; değişken düğmeleri sığdığı kadar yan yana, Kaydet ve Deneme Gönder alt alta.\n- Bildirimler Android durum çubuğunda beyaz kutu yerine mağazanın baş harfiyle görünür.",
+  "publishedAt": "2026-11-09T08:07:39.903Z"
 }
