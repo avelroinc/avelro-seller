@@ -1,5 +1,5 @@
 {
-  "version": "1.0.232",
-  "notes": "- Sağlayıcının iptal ettiği ürün artık İade Et ile karta (Shopier) ya da bakiyeye iade edilebilir (önce iade yapılmamışsa).\n- Manuel işlenecek ürün için Sağlayıcıya Gönder: servis aranıp seçilir, sağlayıcısı seçilir (ya da öncelik sırası), adet ve hedef düzenlenip sağlayıcının API’sine gönderilir. Mobilde de sağlayıcı seçimi var.\n- Sepet: aynı ürün farklı bağlantıyla eklenince ayrı satır olur; önceki satırın bağlantısı ezilmez.",
-  "publishedAt": "2026-11-10T16:43:31.070Z"
+  "version": "1.0.233",
+  "notes": "- Sipariş sayfası: ürünün bağlantısı (hedef) kalemle düzenlenebilir; sağlayıcıya henüz gönderilmemişse sağlayıcıya gidecek bağlantı da değişir, değişiklik geçmişe yazılır.\n- Sipariş sepeti yeniden düzenlendi: durum etiketi ürün adının yanında, tutar platform simgesinin altında rozet, bağlantı kutu içinde ve kalem dışında; Durumu Değiştir ortalı ve simgeli; telefonda bloklar aynı hizada.\n- Sağdaki Hızlı Erişim çubuğu sayfayla birlikte açılır (sonradan belirmez).",
+  "publishedAt": "2026-11-10T18:14:05.195Z"
 }
