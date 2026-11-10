@@ -1,5 +1,5 @@
 {
-  "version": "1.0.236",
-  "notes": "- Genel Bakış › Son Siparişler, Siparişler listesiyle aynı görünümde; Tümünü Gör ve Shopier Yenile artık düğme.\n- Siparişler: seçim kutuları yok; sipariş sağ tıkla (telefonda basılı tutarak) seçilir, seçili satır vurgulu ve simgesinde onay; üstteki sayı şeridi ve ürün adı sütunu kaldırıldı.\n- Toplu işlem çubuğu renkli ve simgeli düğmeler (Tamamlandı Yap, İptal Et, İade Et, Shopier’de Kapat, Hepsini Seç, Seçimi Kaldır).\n- Telefonda listelerde kutu içinde kutu yok: her kayıt kendi kartı.",
-  "publishedAt": "2026-11-10T20:08:12.518Z"
+  "version": "1.0.237",
+  "notes": "- Siparişler ve Genel Bakış › Son Siparişler (masaüstü): bilgiler sütun sütun (Sipariş, Tür, Ürün, Ödeme, Tarih, Tutar, Durum); sütunların üstünde küçük etiket, aralarında soluk çizgi.",
+  "publishedAt": "2026-11-10T20:32:24.675Z"
 }
