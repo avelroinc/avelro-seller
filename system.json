@@ -1,5 +1,5 @@
 {
-  "version": "1.0.233",
-  "notes": "- Sipariş sayfası: ürünün bağlantısı (hedef) kalemle düzenlenebilir; sağlayıcıya henüz gönderilmemişse sağlayıcıya gidecek bağlantı da değişir, değişiklik geçmişe yazılır.\n- Sipariş sepeti yeniden düzenlendi: durum etiketi ürün adının yanında, tutar platform simgesinin altında rozet, bağlantı kutu içinde ve kalem dışında; Durumu Değiştir ortalı ve simgeli; telefonda bloklar aynı hizada.\n- Sağdaki Hızlı Erişim çubuğu sayfayla birlikte açılır (sonradan belirmez).",
-  "publishedAt": "2026-11-10T18:14:05.195Z"
+  "version": "1.0.234",
+  "notes": "- Yönetim panelinde tablolar kalktı: bütün listeler satır düzeninde (başlık satırı yok, alanlar arasında soluk çizgi, her alanın üstünde küçük etiket). Telefonda her kayıt bir kart: başlık üstte, alanlar yumuşak zeminli kutuda iki sütun.\n- Siparişler listesi: ilk ürünün büyük platform simgesi ve sepette başka ürün varsa köşesinde +N rozeti; müşteri, kod, ürünler, tarih, tutar ve durum.",
+  "publishedAt": "2026-11-10T19:02:22.560Z"
 }
