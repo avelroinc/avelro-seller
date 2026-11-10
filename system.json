@@ -1,5 +1,5 @@
 {
-  "version": "1.0.226",
-  "notes": "- Canlı Destek sol menüde Work/Bot'un altında kendi simgesiyle.\n- Canlı Destek'te Av/Tawk'taki bütün ayarlar: Asistan (son 7 / 30 gün raporu, asistan durumu, öğrenilen bilgiler), Hazır Yanıtlar (ekle / düzenle / sil) ve Ayarlar (bildirim sesi ve 7 ton, ses düzeyi, masaüstü bildirimi, durum ve çalışma saatleri, mesai dışı yanıt, sohbet dökümü, proaktif karşılama, canlı destek kutusu ve WhatsApp düğmesi). Sohbet listesinin başındaki simgelerle açılır.\n- Ziyaretçi yazınca panelin her sayfasında bildirim sesi çalar ve sağ çubuktaki sayaç anında güncellenir; tarayıcı bildirimine tıklayınca sohbet Canlı Destek sayfasında açılır.\n- Sağdaki Hızlı Erişim çubuğu yenilendi: ekran boyu, iş bekleyen kutular kendi renginde dolu ve köşede belirgin sayı, canlı destekte nabız halkası, + düğmesi altta.",
-  "publishedAt": "2026-11-10T07:27:14.161Z"
+  "version": "1.0.227",
+  "notes": "- Sol menü: Canlı Destek alt bölümde (Raporlar'ın üstünde); Work/Bot üstte kendi alanında tek.",
+  "publishedAt": "2026-11-10T07:57:23.239Z"
 }
