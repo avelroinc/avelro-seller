@@ -1,5 +1,5 @@
 {
-  "version": "1.0.234",
-  "notes": "- Yönetim panelinde tablolar kalktı: bütün listeler satır düzeninde (başlık satırı yok, alanlar arasında soluk çizgi, her alanın üstünde küçük etiket). Telefonda her kayıt bir kart: başlık üstte, alanlar yumuşak zeminli kutuda iki sütun.\n- Siparişler listesi: ilk ürünün büyük platform simgesi ve sepette başka ürün varsa köşesinde +N rozeti; müşteri, kod, ürünler, tarih, tutar ve durum.",
-  "publishedAt": "2026-11-10T19:02:22.560Z"
+  "version": "1.0.235",
+  "notes": "- Sağlayıcı siparişi iptal ya da iade ederse mağaza siparişi artık iptal olmaz, Manuel İşlenecek’e düşer: geçmişe yazılır, yöneticiye bildirim gider, müşteriye iptal e-postası gitmez. Sağlayıcıya Gönder ile başka servis ya da sağlayıcı seçilerek yeniden gönderilir.",
+  "publishedAt": "2026-11-10T19:36:48.949Z"
 }
