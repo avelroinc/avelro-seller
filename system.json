@@ -1,5 +1,5 @@
 {
-  "version": "1.0.222",
-  "notes": "- Work/Bot birim sayfalarının başlığı telefonda düzenli: geri, simge ve ad üstte; birimin işi altında tam genişlikte; Şimdi Tara en altta.",
-  "publishedAt": "2026-11-09T18:29:57.927Z"
+  "version": "1.0.223",
+  "notes": "- Genel Bakış › Shopier yenilendi: paranın yolu dört adımda (Siparişleri Kapat → Kullanılabilir Bakiye → Sıradaki Aktarım → Hesabına Geçen); kapatılmamış sipariş varsa ilk adımda uyarı ve Hepsini Kapat; son 30 günde aktarılan toplam; aktarım geçmişi (IBAN sütunuyla) açılır liste.",
+  "publishedAt": "2026-11-10T04:42:54.307Z"
 }
