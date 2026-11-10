@@ -1,5 +1,5 @@
 {
-  "version": "1.0.237",
-  "notes": "- Siparişler ve Genel Bakış › Son Siparişler (masaüstü): bilgiler sütun sütun (Sipariş, Tür, Ürün, Ödeme, Tarih, Tutar, Durum); sütunların üstünde küçük etiket, aralarında soluk çizgi.",
-  "publishedAt": "2026-11-10T20:32:24.675Z"
+  "version": "1.0.238",
+  "notes": "- Düzeltme: sağlayıcının iptal ettiği ürün listede, sipariş sayfasında, müşterinin sipariş takibinde ve sohbet kartında artık İptal değil Manuel İşlenecek (Ödendi) görünür; Sağlayıcıya Gönder düğmesi çıkar.",
+  "publishedAt": "2026-11-10T21:07:00.637Z"
 }
