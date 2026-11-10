@@ -1,5 +1,5 @@
 {
-  "version": "1.0.229",
-  "notes": "- Yönetim panelinde yol izi kutu içinde: geri düğmesi solda ayrı, yol izi (ör. Yorumlar › Değerlendirmeler) tek kutuda, işlem düğmeleri (Tamamlandı Yap, İade Et…) sağında.",
-  "publishedAt": "2026-11-10T09:04:26.046Z"
+  "version": "1.0.230",
+  "notes": "- Sipariş sayfası: yol izinde yalnızca sipariş kodu (Siparişler › #KOD).",
+  "publishedAt": "2026-11-10T09:35:53.713Z"
 }
