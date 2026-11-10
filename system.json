@@ -1,5 +1,5 @@
 {
-  "version": "1.0.228",
-  "notes": "- Canlı Destek: durum kutusu (Çevrimiçi / Molada / Çevrimdışı) yanındaki simge kutularıyla aynı çerçevede.",
-  "publishedAt": "2026-11-10T08:47:36.892Z"
+  "version": "1.0.229",
+  "notes": "- Yönetim panelinde yol izi kutu içinde: geri düğmesi solda ayrı, yol izi (ör. Yorumlar › Değerlendirmeler) tek kutuda, işlem düğmeleri (Tamamlandı Yap, İade Et…) sağında.",
+  "publishedAt": "2026-11-10T09:04:26.046Z"
 }
