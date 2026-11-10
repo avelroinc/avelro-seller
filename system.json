@@ -1,5 +1,5 @@
 {
-  "version": "1.0.223",
-  "notes": "- Genel Bakış › Shopier yenilendi: paranın yolu dört adımda (Siparişleri Kapat → Kullanılabilir Bakiye → Sıradaki Aktarım → Hesabına Geçen); kapatılmamış sipariş varsa ilk adımda uyarı ve Hepsini Kapat; son 30 günde aktarılan toplam; aktarım geçmişi (IBAN sütunuyla) açılır liste.",
-  "publishedAt": "2026-11-10T04:42:54.307Z"
+  "version": "1.0.224",
+  "notes": "- Siparişler › yeni Shopier'de Kapatılmamış sekmesi: teslim edilmiş ama Shopier'de kapatılmamış siparişler listelenir, Hepsini Shopier'de Kapat buradan yapılır; kapatması başarısız olan sipariş işaretli. Sekme yalnızca böyle sipariş varken görünür.\n- Genel Bakış › Shopier: Hepsini Kapat yerine Siparişleri Gör bağlantısı (yeni sekmeye gider).",
+  "publishedAt": "2026-11-10T05:05:16.051Z"
 }
