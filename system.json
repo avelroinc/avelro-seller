@@ -1,5 +1,5 @@
 {
-  "version": "1.0.231",
-  "notes": "- Yönetim paneli genel CSS düzeltmeleri (telefon ve masaüstü): kart başlığındaki düğmeler başlığı ezmez (iki düğmede düğmeler alt satırda yan yana), liste satırındaki etiketler yazıyı kesmez, Site Bilgileri › Sosyal Medya Ekle düğmesi taşmaz, İşlem Geçmişi seçimleri kesilmez, sipariş sayfasında tek kalan işlem düğmesi satırı doldurur, Canlı Destek › Asistan raporu telefonda tek sütun.",
-  "publishedAt": "2026-11-10T16:25:42.411Z"
+  "version": "1.0.232",
+  "notes": "- Sağlayıcının iptal ettiği ürün artık İade Et ile karta (Shopier) ya da bakiyeye iade edilebilir (önce iade yapılmamışsa).\n- Manuel işlenecek ürün için Sağlayıcıya Gönder: servis aranıp seçilir, sağlayıcısı seçilir (ya da öncelik sırası), adet ve hedef düzenlenip sağlayıcının API’sine gönderilir. Mobilde de sağlayıcı seçimi var.\n- Sepet: aynı ürün farklı bağlantıyla eklenince ayrı satır olur; önceki satırın bağlantısı ezilmez.",
+  "publishedAt": "2026-11-10T16:43:31.070Z"
 }
