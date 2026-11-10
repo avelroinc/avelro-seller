@@ -1,5 +1,5 @@
 {
-  "version": "1.0.227",
-  "notes": "- Sol menü: Canlı Destek alt bölümde (Raporlar'ın üstünde); Work/Bot üstte kendi alanında tek.",
-  "publishedAt": "2026-11-10T07:57:23.239Z"
+  "version": "1.0.228",
+  "notes": "- Canlı Destek: durum kutusu (Çevrimiçi / Molada / Çevrimdışı) yanındaki simge kutularıyla aynı çerçevede.",
+  "publishedAt": "2026-11-10T08:47:36.892Z"
 }
