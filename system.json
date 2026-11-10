@@ -1,5 +1,5 @@
 {
-  "version": "1.0.224",
-  "notes": "- Siparişler › yeni Shopier'de Kapatılmamış sekmesi: teslim edilmiş ama Shopier'de kapatılmamış siparişler listelenir, Hepsini Shopier'de Kapat buradan yapılır; kapatması başarısız olan sipariş işaretli. Sekme yalnızca böyle sipariş varken görünür.\n- Genel Bakış › Shopier: Hepsini Kapat yerine Siparişleri Gör bağlantısı (yeni sekmeye gider).",
-  "publishedAt": "2026-11-10T05:05:16.051Z"
+  "version": "1.0.225",
+  "notes": "- Yeni: web panelinde Canlı Destek sayfası (Müşteriler › Canlı Destek, /admin/canli-destek): konuşmalar (Açık / Kapalı, arama, okunmamış), sohbet, iç not, dosya, sipariş durum kartı, hazır yanıtlar, üstlen / bırak, sonlandır / yeniden aç, ziyaretçi kartı ve siparişleri, durum (Çevrimiçi / Molada / Çevrimdışı); anlık güncellenir, yeni mesajda ses çalar. Kısayol: g c.\n- Yeni: ekranın sağında Hızlı Erişim çubuğu: iş bekleyen yerler sayı rozetiyle (canlı destek, Work/Bot kararı, manuel sipariş, ödeme, Shopier'de kapatılmamış, talep, yorum) ve kişiye özel sabitlenen sayfalar (+ ile en çok 12).\n- Genel Bakış › Shopier: adımlardaki dolgu açıklamaları kaldırıldı.",
+  "publishedAt": "2026-11-10T06:29:53.145Z"
 }
