@@ -1,5 +1,5 @@
 {
-  "version": "1.0.240",
-  "notes": "- Mobil uygulama 1.17.82 (Ayarlar › Uygulamalar): sipariş detayında Fatura bölümü kalktı, Fatura Kes ve Fatura üstteki düğmelerde; ürüne basılı tutunca seçim, durum işlemleri ve sipariş işlemleri açılır, ürün seçiliyse üstteki düğmeler yalnızca seçilenlere uygulanır.",
-  "publishedAt": "2026-11-11T07:03:50.092Z"
+  "version": "1.0.241",
+  "notes": "- Sağ tık menüsü yenilendi: üstte kaydın adı ve kısa bilgisi, her işlemin simgesi, daha sade öğeler.\n- Siparişe sağ tıklayınca Durum Kartını İndir: siparişin durum görseli PNG olarak iner (Siparişler, Genel Bakış ve sipariş sayfası).\n- Düzeltme: sayfa yenilenince (F5) sağdaki Hızlı Erişim çubuğunun üst kısmı başlığın altında kalıyordu.\n- Panele yumuşak animasyonlar: kartlar ve liste satırları açılırken hafifçe belirir, düğmeler basınca tepki verir.",
+  "publishedAt": "2026-11-11T07:54:11.476Z"
 }
