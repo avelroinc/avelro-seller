@@ -1,5 +1,5 @@
 {
-  "version": "1.0.239",
-  "notes": "- Sipariş sayfası: Fatura kutusu kalktı; Fatura Kes ve kesilen faturayı açma, İade Dekontu gibi üstteki düğmelerde. Fatura kesilemezse hata özetin altında görünür.\n- Masaüstünde sağ tık menüsü: sipariş sayfasında ürüne sağ tıklayınca seçim, durum işlemleri ve sipariş işlemleri (Shopier’de Kapat, Fatura, İade Dekontu); ürün seçiliyse üstteki düğmeler yalnızca seçilenlere uygulanır. Siparişler, Ödemeler, Müşteriler, Talepler, Yorumlar, Faturalar ve diğer listelerde de satıra sağ tıklayınca o kayda özel işlemler.\n- Düzeltme: koyu mod seçiliyken Genel Bakış açık temada açılıyordu.",
-  "publishedAt": "2026-11-11T06:40:30.259Z"
+  "version": "1.0.240",
+  "notes": "- Mobil uygulama 1.17.82 (Ayarlar › Uygulamalar): sipariş detayında Fatura bölümü kalktı, Fatura Kes ve Fatura üstteki düğmelerde; ürüne basılı tutunca seçim, durum işlemleri ve sipariş işlemleri açılır, ürün seçiliyse üstteki düğmeler yalnızca seçilenlere uygulanır.",
+  "publishedAt": "2026-11-11T07:03:50.092Z"
 }
