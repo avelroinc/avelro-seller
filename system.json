@@ -1,5 +1,5 @@
 {
-  "version": "1.0.246",
-  "notes": "- Sayfa düzenleyici: Metin / Makale / SEO sekmeleri. Sosyal Medya hizmetlerinin, lisans ve yazılım ürünlerinin, E-Pin oyunlarının Google Görünümü (önizleme, Google başlığı ve açıklaması, yapılandırılmış veri) artık SEO sekmesinde.\n- Yapılandırılmış Veri anahtarları iki sütunlu kutular; açıklama kutunun içinde. Telefonda tek sütun.",
-  "publishedAt": "2026-11-11T15:07:15.111Z"
+  "version": "1.0.247",
+  "notes": "- Yönetim (telefon menüsü): Genel Bakış, Work/Bot, Canlı Destek, Raporlar, Modüller ve Ayarlar grup başlıklarıyla aynı kalınlıkta.",
+  "publishedAt": "2026-11-11T15:51:31.544Z"
 }
