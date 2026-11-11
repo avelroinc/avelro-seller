@@ -1,5 +1,5 @@
 {
-  "version": "1.0.244",
-  "notes": "- Güvenlik: Sipariş Sorgula artık lisans anahtarını, E-Pin kodunu ve yazılım indirme bağlantısını göstermez. Teslim edildiği ve gönderildiği adres (gizlenmiş) yazılır; Tekrar Gönder teslim e-postasını yalnızca siparişteki adrese yeniden gönderir (saatte en çok 3). Hedef alanındaki e-posta da gizlenir.\n- Misafir siparişleri hesaba bağlanır: aynı e-postayla kayıt olunca e-postaya kod gider, Hesabım'da kod girilince üyelik öncesi siparişler, anahtarlar ve kodlar hesaba eklenir. Google / Facebook ile girişte ve şifre sıfırlamada kodsuz bağlanır. Yeni e-posta şablonu: Sipariş Bağlama Kodu.\n- Sipariş Sorgula teslimat kutusu yeniden tasarlandı; telefonda düğme tam genişlik.\n- Hizmet adları her yerde: Sosyal Medya Hizmetleri, E-Pin & Oyun Hizmetleri, Lisans Hizmetleri, Yazılım Hizmetleri, SMS Onay Hizmetleri (menüler, ana sayfa, alt bilgi, sayfa başlıkları, yönetim menüsü).\n- Tema: Pulse 1.0.60, Arel 1.0.6.",
-  "publishedAt": "2026-11-11T13:27:11.068Z"
+  "version": "1.0.245",
+  "notes": "- Yönetim: uzun listelerde sayfalandırma. Siparişler, tüm tablolar (ürünler, E-Pin, lisanslar, kuponlar, ödemeler, talepler, yorumlar, faturalar, raporlar), Müşteriler, İşlem Geçmişi, Shopier Aktarım Geçmişi ve İadeler, Verilen Anahtarlar sayfa başına 25 kayıt gösterir.\n- Sade sayfalandırma çubuğu: solda Önceki, ortada sayfa numaraları, sağda Sonraki; telefonda yalnızca oklar.",
+  "publishedAt": "2026-11-11T14:46:57.776Z"
 }
