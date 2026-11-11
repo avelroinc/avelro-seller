@@ -1,5 +1,5 @@
 {
-  "version": "1.0.241",
-  "notes": "- Sağ tık menüsü yenilendi: üstte kaydın adı ve kısa bilgisi, her işlemin simgesi, daha sade öğeler.\n- Siparişe sağ tıklayınca Durum Kartını İndir: siparişin durum görseli PNG olarak iner (Siparişler, Genel Bakış ve sipariş sayfası).\n- Düzeltme: sayfa yenilenince (F5) sağdaki Hızlı Erişim çubuğunun üst kısmı başlığın altında kalıyordu.\n- Panele yumuşak animasyonlar: kartlar ve liste satırları açılırken hafifçe belirir, düğmeler basınca tepki verir.",
-  "publishedAt": "2026-11-11T07:54:11.476Z"
+  "version": "1.0.242",
+  "notes": "- Shopier artık kendi sayfasında (sayfa aramasında Shopier; sağdaki Hızlı Erişim çubuğuna sabitlenebilir). Genel Bakış daha hızlı açılır.\n- Sipariş sayfası: Müşteri ve Sipariş Bilgileri kartları aynı boyda; Müşteri kartında telefon, üyelik tarihi, sipariş sayısı, toplam harcama, bakiye, fatura bilgisi ve Müşteri Kartı / Siparişleri düğmeleri.\n- Seçili ürün göstergesi ve Shopier Aktarım Geçmişi artık düğme görünümünde.",
+  "publishedAt": "2026-11-11T08:44:49.471Z"
 }
