@@ -1,5 +1,5 @@
 {
-  "version": "1.0.242",
-  "notes": "- Shopier artık kendi sayfasında (sayfa aramasında Shopier; sağdaki Hızlı Erişim çubuğuna sabitlenebilir). Genel Bakış daha hızlı açılır.\n- Sipariş sayfası: Müşteri ve Sipariş Bilgileri kartları aynı boyda; Müşteri kartında telefon, üyelik tarihi, sipariş sayısı, toplam harcama, bakiye, fatura bilgisi ve Müşteri Kartı / Siparişleri düğmeleri.\n- Seçili ürün göstergesi ve Shopier Aktarım Geçmişi artık düğme görünümünde.",
-  "publishedAt": "2026-11-11T08:44:49.471Z"
+  "version": "1.0.243",
+  "notes": "- Vitrin: E-Pin, Lisans, Yazılım ve SMS Onay sayfaları e-ticaret düzeninde yeniden yapıldı. Her birinde ana sayfadaki gibi görselli giriş alanı; solda süzgeçler, sağda arama, sıralama ve ürün kartları.\n- E-Pin oyun sayfası: kapak, paket seçimi (adet başına fiyat yok), kod ya da ID ile yükleme alanları, Sepete Ekle / Hemen Al, sekmeler ve benzer oyunlar.\n- Lisans ve Yazılım ürün sayfaları: satın alma kutusu, ek seçenekler, adet. Yazılımda ekran görüntüsü galerisi, Site Demo ve Yönetim Demo düğmeleri (giriş bilgisi tek dokunuşla kopyalanır), Özellikler ve Sistem Gereksinimleri.\n- Yönetim › Yazılımlar › ürün: yeni Satış Sayfası kartı (özellikler, sistem gereksinimleri, demo bağlantıları ve girişleri, en çok 8 ekran görüntüsü).\n- SMS Onay: solda uygulama listesi, üstte bakiye ve Numaralarım, ülke kartlarında teslim oranı, hazır numara ve fiyat; ülke arama ve sıralama.\n- Sepette yazılımlar \"Anında İndirme · Bağlantı e-postayla gelir\" olarak görünür.\n- Shopier sayfası: Aktarım Geçmişi doğrudan liste olarak, yeni İadeler tablosu; telefonda tablo hizası düzeltildi.\n- Siparişler: seçili ürün sayısı ve Seçimi Kaldır ayrı kutular.",
+  "publishedAt": "2026-11-11T11:34:44.765Z"
 }
