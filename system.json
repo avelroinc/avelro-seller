@@ -1,5 +1,5 @@
 {
-  "version": "1.0.245",
-  "notes": "- Yönetim: uzun listelerde sayfalandırma. Siparişler, tüm tablolar (ürünler, E-Pin, lisanslar, kuponlar, ödemeler, talepler, yorumlar, faturalar, raporlar), Müşteriler, İşlem Geçmişi, Shopier Aktarım Geçmişi ve İadeler, Verilen Anahtarlar sayfa başına 25 kayıt gösterir.\n- Sade sayfalandırma çubuğu: solda Önceki, ortada sayfa numaraları, sağda Sonraki; telefonda yalnızca oklar.",
-  "publishedAt": "2026-11-11T14:46:57.776Z"
+  "version": "1.0.246",
+  "notes": "- Sayfa düzenleyici: Metin / Makale / SEO sekmeleri. Sosyal Medya hizmetlerinin, lisans ve yazılım ürünlerinin, E-Pin oyunlarının Google Görünümü (önizleme, Google başlığı ve açıklaması, yapılandırılmış veri) artık SEO sekmesinde.\n- Yapılandırılmış Veri anahtarları iki sütunlu kutular; açıklama kutunun içinde. Telefonda tek sütun.",
+  "publishedAt": "2026-11-11T15:07:15.111Z"
 }
