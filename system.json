@@ -1,5 +1,5 @@
 {
-  "version": "1.0.238",
-  "notes": "- Düzeltme: sağlayıcının iptal ettiği ürün listede, sipariş sayfasında, müşterinin sipariş takibinde ve sohbet kartında artık İptal değil Manuel İşlenecek (Ödendi) görünür; Sağlayıcıya Gönder düğmesi çıkar.",
-  "publishedAt": "2026-11-10T21:07:00.637Z"
+  "version": "1.0.239",
+  "notes": "- Sipariş sayfası: Fatura kutusu kalktı; Fatura Kes ve kesilen faturayı açma, İade Dekontu gibi üstteki düğmelerde. Fatura kesilemezse hata özetin altında görünür.\n- Masaüstünde sağ tık menüsü: sipariş sayfasında ürüne sağ tıklayınca seçim, durum işlemleri ve sipariş işlemleri (Shopier’de Kapat, Fatura, İade Dekontu); ürün seçiliyse üstteki düğmeler yalnızca seçilenlere uygulanır. Siparişler, Ödemeler, Müşteriler, Talepler, Yorumlar, Faturalar ve diğer listelerde de satıra sağ tıklayınca o kayda özel işlemler.\n- Düzeltme: koyu mod seçiliyken Genel Bakış açık temada açılıyordu.",
+  "publishedAt": "2026-11-11T06:40:30.259Z"
 }
