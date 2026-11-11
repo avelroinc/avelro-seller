@@ -1,5 +1,5 @@
 {
-  "version": "1.0.247",
-  "notes": "- Yönetim (telefon menüsü): Genel Bakış, Work/Bot, Canlı Destek, Raporlar, Modüller ve Ayarlar grup başlıklarıyla aynı kalınlıkta.",
-  "publishedAt": "2026-11-11T15:51:31.544Z"
+  "version": "1.0.248",
+  "notes": "- Makaleler (blog hariç): Yönetimde Makale sekmesi artık Makale Alanlarından oluşur; her alanın başlığı, görseli ve metni var. Artı düğmesiyle yeni alan eklenir; alanlar yukarı/aşağı taşınır ve silinir.\n- Sitede her alan zikzak düzende bir satırdır; 1. alanın başlığı makalenin başlığıdır. Ana sayfa, E-Pin, oyun, SMS Onay, Lisans ve Yazılım sayfalarındaki makaleler de zikzak düzene geçti.\n- Tek ana başlıklı eski makalelerde alt başlıklar ayrı bölümlere ayrılır; başlık düzeni H1 → H2 → H3.\n- Lisans ve Yazılım sayfalarında yazılan makale artık sitede görünür.",
+  "publishedAt": "2026-11-11T20:04:43.991Z"
 }
