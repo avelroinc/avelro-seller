@@ -1,5 +1,5 @@
 {
-  "version": "1.0.248",
-  "notes": "- Makaleler (blog hariç): Yönetimde Makale sekmesi artık Makale Alanlarından oluşur; her alanın başlığı, görseli ve metni var. Artı düğmesiyle yeni alan eklenir; alanlar yukarı/aşağı taşınır ve silinir.\n- Sitede her alan zikzak düzende bir satırdır; 1. alanın başlığı makalenin başlığıdır. Ana sayfa, E-Pin, oyun, SMS Onay, Lisans ve Yazılım sayfalarındaki makaleler de zikzak düzene geçti.\n- Tek ana başlıklı eski makalelerde alt başlıklar ayrı bölümlere ayrılır; başlık düzeni H1 → H2 → H3.\n- Lisans ve Yazılım sayfalarında yazılan makale artık sitede görünür.",
-  "publishedAt": "2026-11-11T20:04:43.991Z"
+  "version": "1.0.249",
+  "notes": "- Ortam Kütüphanesi (Site › Ortam Kütüphanesi): yüklenen bütün görseller tek yerde; arama, Kullanılan / Kullanılmayan sekmeleri, toplu yükleme ve sürükle bırak.\n- Görsel ayrıntısı: ad ve açıklama (alt metin) düzenleme, adres kopyalama, tür, boyut, ölçü, yüklenme tarihi ve kullanıldığı yerler. Kullanılan görsel silinemez.\n- Bütün görsel alanlarında ve metin düzenleyicide \"Kütüphaneden Seç\": daha önce yüklenen görsel yeniden yüklenmeden seçilir.\n- Metin düzenleyicide görsel eklenince araya \"metin\" yazısı girmesi düzeldi.",
+  "publishedAt": "2026-11-11T23:15:29.495Z"
 }
