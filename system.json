@@ -1,5 +1,5 @@
 {
-  "version": "1.0.258",
-  "notes": "- Seçerek Satın Alacağım sekmesinin adı Gönderi Seç oldu. Sekme artık dikkat çekiyor: renk geçişli dolu buton, Yeni rozeti, nabız halkası ve parıltı (hareketi azalt ayarında kapalı). Açık olan Bağlantıyla sekmesi sade görünüyor.\n- Gönderi satırlarındaki miktar kutusunda rakamlar ortalandı.",
-  "publishedAt": "2026-11-12T15:53:01.212Z"
+  "version": "1.0.259",
+  "notes": "- Hizmet sayfalarında üst alandaki yol satırının (Ana Sayfa › Platform › Hizmet) fazladan üst boşluğu kaldırıldı; özellikle mobilde sayfa başı daha derli toplu.",
+  "publishedAt": "2026-11-12T16:16:47.645Z"
 }
