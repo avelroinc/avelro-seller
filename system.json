@@ -1,5 +1,5 @@
 {
-  "version": "1.0.252",
-  "notes": "- SEO/GEO: www adresi kalıcı olarak yalın alan adına yönlenir. Hizmeti olmayan platform sayfaları site haritasından çıkar ve noindex olur. Google verilerinde ve sayfa başlıklarında marka adı (büyük harfle girilen ad “Socifizy” biçiminde); Site Ayarları’ndaki Sayfa Başlığı Eki artık kullanılır.\n- Yapay zekâ için /llms.txt: marka, iletişim, hizmetler, lisans / yazılım ürünleri, e-pin, ücretsiz hizmetler, blog ve kurumsal sayfalar.\n- Blog yazısı verisine güncelleme tarihi ve yayıncı; hizmet ürün verisine marka; hizmet sayfalarının paylaşım görseli makale kapağı. Platform başlıkları “… Hizmetleri ve Fiyatları”, Kampanyalar başlığı “Kampanyalar ve İndirim Kuponları”. SSS sayfasında her soru ara başlık.\n- Sipariş kutusu: yalnızca indirim basamağı kartı (“2.500 Adet Al %27 İndirimi Yakala!”).\n- Müşteri Deneyimleri: ana sayfadaki yorum bölümüyle aynı görünüm; lisans / yazılım ürünlerinde ve e-pin oyunlarında da gösterilir, bu siparişlerin yorumları ürüne bağlanır.\n- Sipariş alanındaki kayan avatarlar azaltıldı (daha hızlı yükleme).\n- Temalar: Pulse 1.0.72, Arel 1.0.18.",
-  "publishedAt": "2026-11-12T10:33:02.410Z"
+  "version": "1.0.253",
+  "notes": "- Platform sayfalarındaki hizmet kartları: fiyat (ya da “Yakında”) ve Sipariş Ver kartın altında, kenardan kenara uzanan şeritte; Sipariş Ver kartın üzerine gelince ana renkle dolar. Kesik çizgi kaldırıldı.\n- Temalar: Pulse 1.0.75, Arel 1.0.21.",
+  "publishedAt": "2026-11-12T11:52:04.131Z"
 }
