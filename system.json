@@ -1,5 +1,5 @@
 {
-  "version": "1.0.264",
-  "notes": "- Mobil dock: ilk düğme Ana Sayfa oldu (ev simgesi, ana sayfaya götürür); Pulse ve Arel temalarında.",
-  "publishedAt": "2026-11-12T18:34:21.407Z"
+  "version": "1.0.265",
+  "notes": "- Arel teması sistemden kaldırıldı; tek tema Pulse. Arel seçili site Pulse ile açılır.\n- Yönetim: Genel Bakış ve Siparişler listesinde sipariş kodu bağlantı değil; satırın tamamı siparişi açar.\n- Logo ve Ana Sayfa bağlantıları: ana sayfa arka planda önceden indirilir, tıklayınca hemen açılır.\n- Hizmet ek seçeneklerinin (Hızlı Teslimat, Garanti…) başında adına göre simge; işaret kutusu sağda.\n- Gönderi Seç seçiliyken de YENİ rozeti görünür.\n- Hesabım › Toplu Sipariş: Sipariş Özeti kaydırırken kaymaz; içerik kart kenarlarına eşit uzaklıkta (Bakiye Yükle özeti de).",
+  "publishedAt": "2026-11-12T19:40:09.874Z"
 }
