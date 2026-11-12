@@ -1,5 +1,5 @@
 {
-  "version": "1.0.256",
-  "notes": "- Sepet: satırın adında geçen adet altta ayrıca yazılmaz (“Reels İzlenme · 1.000 Adet” tek yerde). Bağlantı / kullanıcı adı yazısı kutunun solunda, kutuyla birleşik.\n- Temalar: Pulse 1.0.87, Arel 1.0.33.",
-  "publishedAt": "2026-11-12T14:36:11.973Z"
+  "version": "1.0.257",
+  "notes": "- Seçerek Satın Alacağım: Instagram gönderi hizmetlerinde sipariş kartında yeni sekme. Müşteri kullanıcı adını yazar, hesabın son gönderileri listelenir; birden fazla gönderi seçip her birine ayrı miktar girer. Gönderiler sepete ayrı satır olarak eklenir ve tek siparişte ödenir. İzlenme hizmetlerinde yalnızca videolar listelenir.\n- Hesabım › Toplu Sipariş: başıboş açıklama yazısı bağlantı kutusunun altına alındı, düğmeler sola hizalandı (mobilde tam genişlik), hizmet seçimine ok eklendi, uzun bağlantılar mobilde sayfayı taşırmıyor, toplu hizmet yokken yanlış başlık gösterilmiyor.",
+  "publishedAt": "2026-11-12T15:19:40.317Z"
 }
