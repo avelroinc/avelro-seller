@@ -1,5 +1,5 @@
 {
-  "version": "1.0.263",
-  "notes": "- Sipariş kartı: Bağlantıyla sekmesinin adı Bağlantı Gir oldu. Seçiliyken vurgu renginde dolu düğme, değilken açık zeminli; Gönderi Seç ile aynı aileden görünür. Sekmelerin çevresindeki koyu çerçeve kaldırıldı.",
-  "publishedAt": "2026-11-12T18:03:44.553Z"
+  "version": "1.0.264",
+  "notes": "- Mobil dock: ilk düğme Ana Sayfa oldu (ev simgesi, ana sayfaya götürür); Pulse ve Arel temalarında.",
+  "publishedAt": "2026-11-12T18:34:21.407Z"
 }
