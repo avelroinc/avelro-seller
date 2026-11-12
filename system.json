@@ -1,5 +1,5 @@
 {
-  "version": "1.0.257",
-  "notes": "- Seçerek Satın Alacağım: Instagram gönderi hizmetlerinde sipariş kartında yeni sekme. Müşteri kullanıcı adını yazar, hesabın son gönderileri listelenir; birden fazla gönderi seçip her birine ayrı miktar girer. Gönderiler sepete ayrı satır olarak eklenir ve tek siparişte ödenir. İzlenme hizmetlerinde yalnızca videolar listelenir.\n- Hesabım › Toplu Sipariş: başıboş açıklama yazısı bağlantı kutusunun altına alındı, düğmeler sola hizalandı (mobilde tam genişlik), hizmet seçimine ok eklendi, uzun bağlantılar mobilde sayfayı taşırmıyor, toplu hizmet yokken yanlış başlık gösterilmiyor.",
-  "publishedAt": "2026-11-12T15:19:40.317Z"
+  "version": "1.0.258",
+  "notes": "- Seçerek Satın Alacağım sekmesinin adı Gönderi Seç oldu. Sekme artık dikkat çekiyor: renk geçişli dolu buton, Yeni rozeti, nabız halkası ve parıltı (hareketi azalt ayarında kapalı). Açık olan Bağlantıyla sekmesi sade görünüyor.\n- Gönderi satırlarındaki miktar kutusunda rakamlar ortalandı.",
+  "publishedAt": "2026-11-12T15:53:01.212Z"
 }
