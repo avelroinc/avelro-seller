@@ -1,5 +1,5 @@
 {
-  "version": "1.0.249",
-  "notes": "- Ortam Kütüphanesi (Site › Ortam Kütüphanesi): yüklenen bütün görseller tek yerde; arama, Kullanılan / Kullanılmayan sekmeleri, toplu yükleme ve sürükle bırak.\n- Görsel ayrıntısı: ad ve açıklama (alt metin) düzenleme, adres kopyalama, tür, boyut, ölçü, yüklenme tarihi ve kullanıldığı yerler. Kullanılan görsel silinemez.\n- Bütün görsel alanlarında ve metin düzenleyicide \"Kütüphaneden Seç\": daha önce yüklenen görsel yeniden yüklenmeden seçilir.\n- Metin düzenleyicide görsel eklenince araya \"metin\" yazısı girmesi düzeldi.",
-  "publishedAt": "2026-11-11T23:15:29.495Z"
+  "version": "1.0.250",
+  "notes": "- Makalelerde ana başlık bölümlerden ayrı: en üstte iki yanı çizgili başlık, altında her makale alanı kendi numaralı başlığıyla (01, 02…). Düzenleyicide ayrı Makale Başlığı alanı.\n- Makale görselleri kırpılmadan kendi oranında gösterilir; görseli olmayan bölümlerde sitenin ana rengiyle çizilmiş numaralı kutu (açık ve koyu tema).\n- Yüklenen görsellerin sağ alt köşesine site simgesi ve adı basılır (logo ve sekme simgesi hariç); görseller yüksek kalitede kaydedilir (PNG kayıpsız, diğerleri %92 WebP, en fazla 2400 px).\n- E-postalar: simgenin çevresinde hareketli halkalar (her programda), Apple Mail ve iPhone’da kayarak beliren kart, zıplayan simge, ışıltılı düğme. Mesaj Şablonları önizlemesinde Masaüstü / Telefon geçişi ve Yeniden Oynat.\n- Temalar: Pulse 1.0.62, Arel 1.0.8.",
+  "publishedAt": "2026-11-12T07:18:51.860Z"
 }
