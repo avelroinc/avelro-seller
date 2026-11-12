@@ -1,5 +1,5 @@
 {
-  "version": "1.0.259",
-  "notes": "- Hizmet sayfalarında üst alandaki yol satırının (Ana Sayfa › Platform › Hizmet) fazladan üst boşluğu kaldırıldı; özellikle mobilde sayfa başı daha derli toplu.",
-  "publishedAt": "2026-11-12T16:16:47.645Z"
+  "version": "1.0.260",
+  "notes": "- Site Bilgileri: açık tema ve koyu tema için ayrı logo alanı. Koyu tema logosu boşsa açık tema logosu kullanılır; ziyaretçi temayı değiştirince logo da değişir (başlık, mobil menü, alt bilgi, yönetim paneli, giriş ekranı; Pulse ve Arel).\n- Yatay Logo seçeneği: mağaza adını içeren logo kare kalıba sığdırılmadan tek başına gösterilir, yanındaki ad gizlenir.\n- Logo alanlarına SVG yüklenebilir; betik ya da dış bağlantı içeren SVG reddedilir, SVG dosyaları güvenli biçimde sunulur.\n- Düzeltme: Ortam Kütüphanesinden yüklenen logo ve sekme simgesi kaydedilemiyordu.",
+  "publishedAt": "2026-11-12T16:42:59.900Z"
 }
