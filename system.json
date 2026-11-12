@@ -1,5 +1,5 @@
 {
-  "version": "1.0.261",
-  "notes": "- Başlıkta logo ve simge, yanındaki düğmelerle aynı boyda: masaüstünde 46 px, mobilde 42 px (Pulse); Arel temasında başlık düğmesi boyunda.",
-  "publishedAt": "2026-11-12T16:54:47.932Z"
+  "version": "1.0.262",
+  "notes": "- Site Bilgileri: Yatay Logo düğmesi yerine Logo Türü seçimi: Kare Simge (yanında mağaza adı), Simgeli Yatay Logo (başlık düğmeleri boyunda) ve Yalnız Yazı (simgesiz; masaüstünde 24, mobilde 20 px yazı boyunda). Önceden Yatay Logo açık olan siteler Simgeli Yatay Logo sayılır.",
+  "publishedAt": "2026-11-12T17:24:39.914Z"
 }
