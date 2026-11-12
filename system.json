@@ -1,5 +1,5 @@
 {
-  "version": "1.0.253",
-  "notes": "- Platform sayfalarındaki hizmet kartları: fiyat (ya da “Yakında”) ve Sipariş Ver kartın altında, kenardan kenara uzanan şeritte; Sipariş Ver kartın üzerine gelince ana renkle dolar. Kesik çizgi kaldırıldı.\n- Temalar: Pulse 1.0.75, Arel 1.0.21.",
-  "publishedAt": "2026-11-12T11:52:04.131Z"
+  "version": "1.0.254",
+  "notes": "- Hesabım › Siparişlerim: sepetten verilen sipariş (aynı sipariş kodlu ürünler) listede tek satır; siparişe basınca sipariş sayfası açılır (kod, tarih, ürün sayısı, toplam, durum, Öde; altında sepetteki ürünler ve ürün başına değerlendirme / telafi / tekrar al). Adres paylaşılabilir, geri tuşu listeye döner.\n- Sipariş kutusu: “2.500 Adet Al %27 İndirimi Yakala!” kartı alt şeritte Sepete Ekle’nin solunda; adet değişince çıkan “adet başına daha indirimli” önerisi kaldırıldı.\n- Temalar: Pulse 1.0.81, Arel 1.0.27.",
+  "publishedAt": "2026-11-12T12:35:06.164Z"
 }
