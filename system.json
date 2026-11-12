@@ -1,5 +1,5 @@
 {
-  "version": "1.0.265",
-  "notes": "- Arel teması sistemden kaldırıldı; tek tema Pulse. Arel seçili site Pulse ile açılır.\n- Yönetim: Genel Bakış ve Siparişler listesinde sipariş kodu bağlantı değil; satırın tamamı siparişi açar.\n- Logo ve Ana Sayfa bağlantıları: ana sayfa arka planda önceden indirilir, tıklayınca hemen açılır.\n- Hizmet ek seçeneklerinin (Hızlı Teslimat, Garanti…) başında adına göre simge; işaret kutusu sağda.\n- Gönderi Seç seçiliyken de YENİ rozeti görünür.\n- Hesabım › Toplu Sipariş: Sipariş Özeti kaydırırken kaymaz; içerik kart kenarlarına eşit uzaklıkta (Bakiye Yükle özeti de).",
-  "publishedAt": "2026-11-12T19:40:09.874Z"
+  "version": "1.0.266",
+  "notes": "- Instagram profil resmi ve gönderi görselleri (Gönderi Seç, sepet önizlemesi, Profil Analizi) artık sitenin kendi adresinden yüklenir; Instagram'ın başka sitelerde gösterimi engellemesi yüzünden kırık görünmez. Yalnızca Instagram görsel adresleri, en fazla 4 MB.\n- Hizmet seçeneği seçilince alt şeritte çıkan \"Seçenekler +₺\" yazısı kaldırıldı.\n- Gönderi Seç düğmesindeki dışa doğru dalga kaldırıldı; parlama kaldı.",
+  "publishedAt": "2026-11-12T20:47:19.055Z"
 }
