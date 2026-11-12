@@ -1,5 +1,5 @@
 {
-  "version": "1.0.262",
-  "notes": "- Site Bilgileri: Yatay Logo düğmesi yerine Logo Türü seçimi: Kare Simge (yanında mağaza adı), Simgeli Yatay Logo (başlık düğmeleri boyunda) ve Yalnız Yazı (simgesiz; masaüstünde 24, mobilde 20 px yazı boyunda). Önceden Yatay Logo açık olan siteler Simgeli Yatay Logo sayılır.",
-  "publishedAt": "2026-11-12T17:24:39.914Z"
+  "version": "1.0.263",
+  "notes": "- Sipariş kartı: Bağlantıyla sekmesinin adı Bağlantı Gir oldu. Seçiliyken vurgu renginde dolu düğme, değilken açık zeminli; Gönderi Seç ile aynı aileden görünür. Sekmelerin çevresindeki koyu çerçeve kaldırıldı.",
+  "publishedAt": "2026-11-12T18:03:44.553Z"
 }
