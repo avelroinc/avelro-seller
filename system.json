@@ -1,5 +1,5 @@
 {
-  "version": "1.0.266",
-  "notes": "- Instagram profil resmi ve gönderi görselleri (Gönderi Seç, sepet önizlemesi, Profil Analizi) artık sitenin kendi adresinden yüklenir; Instagram'ın başka sitelerde gösterimi engellemesi yüzünden kırık görünmez. Yalnızca Instagram görsel adresleri, en fazla 4 MB.\n- Hizmet seçeneği seçilince alt şeritte çıkan \"Seçenekler +₺\" yazısı kaldırıldı.\n- Gönderi Seç düğmesindeki dışa doğru dalga kaldırıldı; parlama kaldı.",
-  "publishedAt": "2026-11-12T20:47:19.055Z"
+  "version": "1.0.267",
+  "notes": "- Gönderi Seç ve Profil Analizi: HikerAPI ile gelen gönderilerin görselleri artık bulunur (thumbnail_url ve diğer görsel alanları okunur); videolar __typename / product_type / media_type alanlarından da tanınır.",
+  "publishedAt": "2026-11-12T22:05:47.173Z"
 }
