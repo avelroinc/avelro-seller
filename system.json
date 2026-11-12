@@ -1,5 +1,5 @@
 {
-  "version": "1.0.254",
-  "notes": "- Hesabım › Siparişlerim: sepetten verilen sipariş (aynı sipariş kodlu ürünler) listede tek satır; siparişe basınca sipariş sayfası açılır (kod, tarih, ürün sayısı, toplam, durum, Öde; altında sepetteki ürünler ve ürün başına değerlendirme / telafi / tekrar al). Adres paylaşılabilir, geri tuşu listeye döner.\n- Sipariş kutusu: “2.500 Adet Al %27 İndirimi Yakala!” kartı alt şeritte Sepete Ekle’nin solunda; adet değişince çıkan “adet başına daha indirimli” önerisi kaldırıldı.\n- Temalar: Pulse 1.0.81, Arel 1.0.27.",
-  "publishedAt": "2026-11-12T12:35:06.164Z"
+  "version": "1.0.255",
+  "notes": "- Tüm Hizmetler sayfası (/hizmetler): bütün hizmetler platformlara göre (lisans, yazılım, e-pin, SMS onay dahil). Ana sayfadaki hizmetler düğmesi, Tüm Hizmetler bağlantıları ve menü bu sayfaya gider.\n- Site Haritası sayfası (/site-haritasi): bölümler eşit boyutlu renkli kartlarda, sayfalar ağaç düzeninde; alt bilgide bağlantısı.\n- Sepet hatırlatma canlı destekte: sepette ürün kalan ziyaretçiye destek düğmesinin üstünde sepet özeti ve Siparişi Tamamla; karta basınca sohbette sepet detayı. Ana sayfadaki hatırlatma bandı kaldırıldı.\n- Son Siparişler şeridi yalnızca son 24 saatin siparişlerini gösterir.\n- Sipariş kutusunda “%X İndirim · tasarruf” yazısı kaldırıldı; hizmet kartı açıklamasında platform adı tekrar etmez.\n- Temalar: Pulse 1.0.86, Arel 1.0.32.",
+  "publishedAt": "2026-11-12T13:36:01.768Z"
 }
