@@ -1,5 +1,5 @@
 {
-  "version": "1.0.273",
-  "notes": "- Yapay zekâ artık yalnızca iki yerde çalışır: canlı destekte kendiliğinden, makale yazımında (sayfaların Makale sekmesi › Yapay Zekâ ile Yaz) yönetici başlatınca.\n- Canlı Destek › Asistan: en fazla 5 yapay zekâ temsilcisi. Her temsilcinin adı, yapay zekâsı (Otomatik, ChatGPT, Claude, DeepSeek, Gemini), dili ve üslup notu ayrıdır; bir sohbeti baştan sona aynı temsilci yürütür, yeni sohbet ziyaretçinin diline uyan temsilciye düşer. Her temsilcinin son 7 günde yanıtladığı sohbet sayısı görünür. Eski asistanın adı ilk temsilci olarak taşınır.\n- Kaldırılan yapay zekâ özellikleri: soruları yapay zekânın yanıtlaması ve yanıt önerisi, değerlendirmeleri yapay zekânın onaylaması, blogda yapay zekâyla yazı ve kapak görseli üretimi, yapay zekâ sepet önerileri ve görsel üretimi. Sepetteki öneriler kurallarla sürer.\n- Blog sayfası yenilendi: soldaki liste yerine tam genişlikte yazı listesi (durum sekmeleri, arama, kapak, kategori, yazar, tarih, okur oyu); yazı kendi sayfasında açılır (/admin/blog/yazinin-adresi).",
-  "publishedAt": "2026-11-13T11:52:19.640Z"
+  "version": "1.0.274",
+  "notes": "- Blog: Yeni Yazı taslak olarak açılır; yazının düzenleyicisinde Kaydet düğmesi (yayına alma yayın kartından). Listede yazı adresi gösterilmez.\n- Blog yazılarında ve kendi sayfalarında da Yapay Zekâ ile Yaz (kelime sayısı, Sık Sorulan Sorular, DataForSEO ve Search Console).\n- Yapay Zekâ ile Yaz'da Yazar ve Denetçi seçimi (Modüller › Yapay Zekâ'da açık yapay zekâlardan): yazar yazar, denetçi denetleyip düzeltir; denetçinin metni eksik kalırsa yazarın metni kullanılır.",
+  "publishedAt": "2026-11-13T12:52:40.111Z"
 }
