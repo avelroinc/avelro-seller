@@ -1,5 +1,5 @@
 {
-  "version": "1.0.281",
-  "notes": "- Ana sayfa › Lisanslar yenilendi: telefonda kaydırarak değişen kart yığını (arkadaki kartlar yanlardan görünür), masaüstünde 4 kartlık sıra (sürükleyerek kayar). Kartta dik ürün görseli, indirim etiketi, eski ve indirimli fiyat, stok durumu, Sepete Ekle ve Hemen Al; altta Tüm Lisanslar.\n- Öne Çıkan Hizmetler ve Lisanslar: alttaki ok ve noktalar kaldırıldı.\n- Hızlı sipariş sekmeleri simgesiz ve kısa: Sosyal Medya, E-Pin & Oyun, Lisans, SMS Onay.\n- Telefon menüsü: alttaki Sipariş Sorgula şeridinin ayrı koyu zemini kaldırıldı.\n- Masaüstü yan menüde ürün türleri kısa adla (Sosyal Medya H., Lisans H. …).",
-  "publishedAt": "2026-11-13T19:24:42.909Z"
+  "version": "1.0.282",
+  "notes": "- Son siparişler şeridi: soldaki mavi Son Siparişler kutusu ve yeşil nokta kaldırıldı; şerit doğrudan siparişle başlar.\n- Ana sayfa hızlı sipariş sekmelerinde simge yazının solunda.",
+  "publishedAt": "2026-11-13T19:48:45.345Z"
 }
