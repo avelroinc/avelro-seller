@@ -1,5 +1,5 @@
 {
-  "version": "1.0.269",
-  "notes": "- Yönetim paneli telefon menüsünün en altına Çıkış Yap eklendi.\n- Gönderi Seç: İzlenme hizmetlerindeki uyarı simgeli kart oldu: \"Yalnızca Reels Videolarını Seçin.\"",
-  "publishedAt": "2026-11-13T05:08:38.449Z"
+  "version": "1.0.270",
+  "notes": "- Sepet: Gönderi Seç ile seçilen (ve elle yapıştırılan) gönderinin önizlemesi görünür; görsel ve hesap adı Instagram'ın yerleştirme sayfasından okunur. \"Emin olun\" yazısı kaldırıldı.\n- Ödemeyi Onayla ile elle onaylanan siparişte ödeme yöntemi, ödemenin başlatıldığı yöntem olarak kalır (ör. Online Ödeme); geçmişe \"Ödeme Manuel Onaylandı · Online Ödeme\" yazılır. Ödeme başlatılmamışsa Manuel Onay.",
+  "publishedAt": "2026-11-13T05:40:47.562Z"
 }
