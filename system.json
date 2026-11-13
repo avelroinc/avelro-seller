@@ -1,5 +1,5 @@
 {
-  "version": "1.0.274",
-  "notes": "- Blog: Yeni Yazı taslak olarak açılır; yazının düzenleyicisinde Kaydet düğmesi (yayına alma yayın kartından). Listede yazı adresi gösterilmez.\n- Blog yazılarında ve kendi sayfalarında da Yapay Zekâ ile Yaz (kelime sayısı, Sık Sorulan Sorular, DataForSEO ve Search Console).\n- Yapay Zekâ ile Yaz'da Yazar ve Denetçi seçimi (Modüller › Yapay Zekâ'da açık yapay zekâlardan): yazar yazar, denetçi denetleyip düzeltir; denetçinin metni eksik kalırsa yazarın metni kullanılır.",
-  "publishedAt": "2026-11-13T12:52:40.111Z"
+  "version": "1.0.275",
+  "notes": "- Yapay zekâ yazım talimatı: Modüller > Yapay Zekâ altında .md ya da .txt talimat dosyası yüklenebilir; Yapay Zekâ ile Yaz (Makale, Blog Yazısı, Sayfa Metni) yazarı ve denetçisi bu talimata uyar.\n- Sağ hızlı menü: sabit öğeler kaldırıldı, yalnızca sizin sabitlediğiniz sayfalar görünür; bekleyen işi olan sabitlenmiş sayfada sayı rozeti çıkar. Menü adları en çok iki kelime.\n- Sol menü yeniden düzenlendi: Genel Bakış ve Canlı Destek en üstte; Raporlar Satış grubunda; Sayfalar, Blog, Duyurular ve Ortam Kütüphanesi yeni İçerik ve Ortam grubunda; İletişim grubu toplu gönderimleri topluyor.\n- Yapay zekâ bütçesi ve harcama kaydı kaldırıldı.\n- Raporlar sayfası yenilendi: dönem başlığında aralık, gün sayısı ve karşılaştırılan dönem; özet kartlarının altında bilgi kutuları; Net Satış, Sağlayıcı Maliyeti, İadeler ve Hediye Bakiye kartları; En Çok Satanlar sıralı, pay çubuklu, maliyet / kâr / marj sütunlu ve kısa ürün adlı; tüm listelerde yüzdeler ve boş durum kartları.",
+  "publishedAt": "2026-11-13T14:11:55.793Z"
 }
