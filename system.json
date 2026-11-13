@@ -1,5 +1,5 @@
 {
-  "version": "1.0.270",
-  "notes": "- Sepet: Gönderi Seç ile seçilen (ve elle yapıştırılan) gönderinin önizlemesi görünür; görsel ve hesap adı Instagram'ın yerleştirme sayfasından okunur. \"Emin olun\" yazısı kaldırıldı.\n- Ödemeyi Onayla ile elle onaylanan siparişte ödeme yöntemi, ödemenin başlatıldığı yöntem olarak kalır (ör. Online Ödeme); geçmişe \"Ödeme Manuel Onaylandı · Online Ödeme\" yazılır. Ödeme başlatılmamışsa Manuel Onay.",
-  "publishedAt": "2026-11-13T05:40:47.562Z"
+  "version": "1.0.271",
+  "notes": "- Makale alanlarına (hizmet, platform, lisans, e-pin, SMS ve kendi sayfalar) Yapay Zekâ ile Yaz: makale İçerik Editörü'nün yazarıyla, Yazım Talimatı'nın [Makale] bölümüne göre yazılır; isteğe bağlı anahtar kelimeler; dolu makalenin üzerine yazmadan önce onay sorulur.\n- Makale ve ana sayfa düzenleyicisindeki açma / kapama düğmeleri (Devamını Gör) bozuk boyutta görünüyordu; düzeltildi.",
+  "publishedAt": "2026-11-13T06:50:23.030Z"
 }
