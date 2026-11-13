@@ -1,5 +1,5 @@
 {
-  "version": "1.0.279",
-  "notes": "- Hesabım › Genel Bakış ve Referans Sistemi kartları: simge solda, etiket ve değer yanında; yazılar simgenin altına kaymaz. Telefonda simge küçülür, uzun etiket iki satıra iner ve tutar kesilmeden görünür.",
-  "publishedAt": "2026-11-13T18:23:38.542Z"
+  "version": "1.0.280",
+  "notes": "- Hesabım: hap biçimli öğeler (Telefonu Doğrula, sipariş süzgeçleri, durum etiketleri, menü sayıları) sitenin köşe biçimine geçti.\n- Siparişlerim: arama kutusu tam genişlikte.\n- Siparişlerim: birden çok ürünlü siparişin başlığı artık ilk ürün ve kalan ürün sayısı (ör. \"500 Beğeni + 2 Ürün\").",
+  "publishedAt": "2026-11-13T18:43:21.282Z"
 }
