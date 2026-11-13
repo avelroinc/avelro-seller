@@ -1,5 +1,5 @@
 {
-  "version": "1.0.276",
-  "notes": "- Kurtarma kodu kaldırıldı: yönetici ve personel şifresi, yönetici girişindeki (ya da Hesabım'daki) Şifremi Unuttum ile e-postaya gelen 6 haneli kodla yenilenir (15 dakika geçerli, en çok 5 deneme). Yenilemede açık oturumlar kapanır, hesap kilidi açılır. Kodun gelmesi için Ayarlar › E-posta Ayarları kurulu olmalı.\n- Ayarlar bölümleri yeniden adlandırıldı: Site Ayarları, Sepet Ayarları, Görünüm Ayarları, SEO Ayarları, Hesap Ayarları, Personel Ayarları, İşlem Kaydı Ayarları, E-posta Ayarları, Uygulama Ayarları, Güncelleme Ayarları.\n- SEO Ayarları'ndaki Sayfa Başlığı Eki kaldırıldı; sayfa başlıklarının sonuna marka adı kendiliğinden eklenir.\n- Hızlandırma ve temizlik: kullanılmayan yaklaşık 195 KB stil kuralı, kullanılmayan yazı tipleri ve görseller silindi; örnek hesap portreleri ayrı resim dosyalarından sunulur (oturum ucu 240 KB'tan 24 KB'a indi).",
-  "publishedAt": "2026-11-13T15:37:04.611Z"
+  "version": "1.0.277",
+  "notes": "- E-posta şablonları: logo artık beyaz üst şeritte ortada, altında mağaza renginde çizgi var. Logonun mağaza rengindeki kısmı artık zeminle karışmıyor; Gmail koyu modunda da logo tam görünür.",
+  "publishedAt": "2026-11-13T16:04:24.384Z"
 }
