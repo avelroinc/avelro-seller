@@ -1,5 +1,5 @@
 {
-  "version": "1.0.277",
-  "notes": "- E-posta şablonları: logo artık beyaz üst şeritte ortada, altında mağaza renginde çizgi var. Logonun mağaza rengindeki kısmı artık zeminle karışmıyor; Gmail koyu modunda da logo tam görünür.",
-  "publishedAt": "2026-11-13T16:04:24.384Z"
+  "version": "1.0.278",
+  "notes": "- Sayfalar artık Blog gibi: türe göre sekmeler (Sistem Sayfaları, Özel Sayfalar, Ana Sayfa, Ücretsiz Araçlar…), arama, Yeni Sayfa ve sayfa tablosu (tür, adres, makale, durum). Sayfa kendi adresinde açılır (ör. /admin/sayfalar/hakkimizda). \"Kendi Sayfaların\" adı \"Özel Sayfalar\" oldu.\n- Sağ tık menüleri her listede sayfaya özel: kayıt özeti üstte küçük kutularda; kopyalama, sitede açma, aç / kapat, yayınla / taslağa al ve silme gibi işlemler (Kuponlar, Fırsat Köşesi, Ücretsiz Hizmetler, Duyurular, Blog, Sağlayıcılar, Hizmetler, Lisanslar, Yazılımlar, E-Pin, Yorumlar, Toplu Gönderimler, SMS Onay, Raporlar).\n- Raporlar: kart altındaki bilgi kutuları mini ve tek satır; telefonda taşan ve kesilen kutular düzeldi.\n- E-posta şablonu ve bildirim değişken düğmelerinin bozulan görünümü düzeldi.",
+  "publishedAt": "2026-11-13T17:57:53.683Z"
 }
