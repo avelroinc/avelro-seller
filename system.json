@@ -1,5 +1,5 @@
 {
-  "version": "1.0.280",
-  "notes": "- Hesabım: hap biçimli öğeler (Telefonu Doğrula, sipariş süzgeçleri, durum etiketleri, menü sayıları) sitenin köşe biçimine geçti.\n- Siparişlerim: arama kutusu tam genişlikte.\n- Siparişlerim: birden çok ürünlü siparişin başlığı artık ilk ürün ve kalan ürün sayısı (ör. \"500 Beğeni + 2 Ürün\").",
-  "publishedAt": "2026-11-13T18:43:21.282Z"
+  "version": "1.0.281",
+  "notes": "- Ana sayfa › Lisanslar yenilendi: telefonda kaydırarak değişen kart yığını (arkadaki kartlar yanlardan görünür), masaüstünde 4 kartlık sıra (sürükleyerek kayar). Kartta dik ürün görseli, indirim etiketi, eski ve indirimli fiyat, stok durumu, Sepete Ekle ve Hemen Al; altta Tüm Lisanslar.\n- Öne Çıkan Hizmetler ve Lisanslar: alttaki ok ve noktalar kaldırıldı.\n- Hızlı sipariş sekmeleri simgesiz ve kısa: Sosyal Medya, E-Pin & Oyun, Lisans, SMS Onay.\n- Telefon menüsü: alttaki Sipariş Sorgula şeridinin ayrı koyu zemini kaldırıldı.\n- Masaüstü yan menüde ürün türleri kısa adla (Sosyal Medya H., Lisans H. …).",
+  "publishedAt": "2026-11-13T19:24:42.909Z"
 }
