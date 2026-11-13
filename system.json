@@ -1,5 +1,5 @@
 {
-  "version": "1.0.268",
-  "notes": "- Siparişler ve Genel Bakış: satırdaki etiketler ve soldaki simge kaldırıldı, sipariş kodu ilk sütun, sütun başlıkları üstte, yazılar ortalı; durum renkli rozet.\n- Ödeme yöntemi adları her yerde: Shopier → Online Ödeme, Bakiye → Hesap Bakiyesi, Havale / EFT → Banka Transferi (yönetim, dışa aktarım, raporlar, ödeme ekranı, mobil).\n- Sipariş listelerinde müşteri adı baş harfleri büyük gösterilir (burak mehel → Burak Mehel).\n- Gönderi Seç: HikerAPI'nin görsel vermediği gönderilerin görseli Instagram'ın yerleştirme sayfasından tamamlanır (küçük boy); İzlenme hizmetlerinde bütün gönderiler gösterilir, videolar önce.",
-  "publishedAt": "2026-11-12T23:03:06.799Z"
+  "version": "1.0.269",
+  "notes": "- Yönetim paneli telefon menüsünün en altına Çıkış Yap eklendi.\n- Gönderi Seç: İzlenme hizmetlerindeki uyarı simgeli kart oldu: \"Yalnızca Reels Videolarını Seçin.\"",
+  "publishedAt": "2026-11-13T05:08:38.449Z"
 }
