@@ -1,5 +1,5 @@
 {
-  "version": "1.0.295",
-  "notes": "- Telefon doğrulama: numara başına günlük sınır yalnızca gerçekten gönderilen kodları sayar (gönderilemeyen denemeler hakkı yemez); sınır günde 5 koda çıktı. Önceki denemelerden dolan sayaçlar sıfırlandı.",
-  "publishedAt": "2026-11-14T17:37:17.152Z"
+  "version": "1.0.296",
+  "notes": "- Modül servisi, sağlayıcı modülünün hata mesajını artık iletir: \"Sağlayıcı modülü işlemi tamamlayamadı\" yerine asıl sebep görünür (ör. Twilio kimlik doğrulaması başarısız, Firebase API anahtarı geçersiz).",
+  "publishedAt": "2026-11-14T17:56:35.799Z"
 }
