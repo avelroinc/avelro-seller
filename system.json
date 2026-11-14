@@ -1,5 +1,5 @@
 {
-  "version": "1.0.300",
-  "notes": "- Ek hizmetlerde simge seçilebilir (Otomatik ya da 16 simgeden biri) ve adın altında görünen kısa açıklama yazılabilir.\n- Hizmetlere 3 sağlayıcı servisi bağlanabilir: ana ve iki yedek; ana servis siparişi reddederse sırayla yedeklere gider.",
-  "publishedAt": "2026-11-14T22:29:47.708Z"
+  "version": "1.0.301",
+  "notes": "- Hizmet düzenleme: Paketler ve Ek Hizmetler ayrı kartta; alttaki 1.000 Adet fiyat notu kaldırıldı.\n- Ek Hizmetler tablosu telefonda düzgün: her satır ikişerli hücrelere bölünür.\n- Hizmet sayfasında indirim kutusu yokken teslimat süresi kutusu masaüstünde tam genişlikte.",
+  "publishedAt": "2026-11-14T23:28:40.097Z"
 }
