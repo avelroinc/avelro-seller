@@ -1,5 +1,5 @@
 {
-  "version": "1.0.283",
-  "notes": "- Lisans: stokta olmayan ürüne de sipariş verilebilir; ürün sayfasında \"Stokta Yok, Sipariş Verilebilir\" yazar. Sipariş Manuel İşlenecek sekmesine düşer; sipariş sayfasında Anahtar Gönder ile anahtarı yazınca müşteriye e-postayla gider ve sipariş kendiliğinden tamamlanır.\n- Ana sayfa lisans yığını: telefonda kaydırırken yalnızca öndeki kart hareket eder.\n- Hızlı sipariş sekmelerinde simge ve yazı hizalı.",
-  "publishedAt": "2026-11-13T20:35:29.925Z"
+  "version": "1.0.284",
+  "notes": "- Hız: kullanılmayan CSS temizlendi. Tema ve yönetim panelinde hiçbir sayfada geçmeyen kurallar, okunmayan CSS değişkenleri ve boşta kalan açıklamalar silindi (stil dosyaları yaklaşık 19 KB küçüldü); görünüm değişmedi.",
+  "publishedAt": "2026-11-14T00:21:16.637Z"
 }
