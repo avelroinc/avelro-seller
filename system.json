@@ -1,5 +1,5 @@
 {
-  "version": "1.0.299",
-  "notes": "- Sipariş durum kartında site logosu yerine site simgesi (favicon; yoksa uygulama simgesi) görünür.\n- Yönetim panelindeki sağ tık menüsünün köşeleri sitenin köşe yuvarlaklığıyla aynı.\n- Sosyal medya hizmetlerinde ek hizmetler (Hızlı Teslimat, Yavaş Teslimat vb.; yüzde ya da tutar) hizmet düzenleme ekranından eklenir.\n- Ek hizmetlerde \"Seçilince: Yorum Alanı Açılır\" seçeneği (ör. Özel Yorum); müşteri seçince yorum yazma alanı açılır. Lisans ürün sayfasında adet satırı telefonda taşmaz.\n- Hizmet sayfasında teslimat süresi, seçilen miktarın paketine göre altta Sepete Ekle butonunun yanında indirim kutusu biçiminde görünür.",
-  "publishedAt": "2026-11-14T21:52:08.927Z"
+  "version": "1.0.300",
+  "notes": "- Ek hizmetlerde simge seçilebilir (Otomatik ya da 16 simgeden biri) ve adın altında görünen kısa açıklama yazılabilir.\n- Hizmetlere 3 sağlayıcı servisi bağlanabilir: ana ve iki yedek; ana servis siparişi reddederse sırayla yedeklere gider.",
+  "publishedAt": "2026-11-14T22:29:47.708Z"
 }
