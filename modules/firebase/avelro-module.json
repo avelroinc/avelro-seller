@@ -3,7 +3,7 @@
   "id": "firebase",
   "name": "Firebase Telefon Doğrulama",
   "description": "Firebase Authentication ile telefon numarası doğrulama (SMS'i Firebase gönderir).",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "hostApiVersion": 2,
   "category": "loginverify",
   "scopes": [

@@ -20,6 +20,10 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 2.0.1
+
+- Firebase hata mesajının ayrıntısı da gösterilir; SMS bölge politikası engeli ayrıca belirtilir.
+
 ### 2.0.0
 
 - Firebase E-posta (bağlantıyla giriş) kaldırıldı; modül artık Firebase Telefon Doğrulama: müşterinin telefon numarasını Firebase'in gönderdiği SMS koduyla doğrular.
