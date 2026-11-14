@@ -1,5 +1,5 @@
 {
-  "version": "1.0.286",
-  "notes": "- Site yazıları: bölüm başlıkları, üst başlıklar ve açıklamalar (tanıtım metinleri) artık sayfa kodunda değil veritabanında tutulur. Mağaza ilk açıldığında mevcut yazılar aynen veritabanına yazılır; görünüm değişmez, panelden değiştirilen yazılar korunur.",
-  "publishedAt": "2026-11-14T06:46:39.000Z"
+  "version": "1.0.287",
+  "notes": "- Hız: site sayfaları yaklaşık iki kat daha hızlı hazırlanır. İçerik kayıtları artık dizinden okunur; Ortam Kütüphanesi’ndeki büyük görseller her sayfada taranmaz. Yönetim › Sayfalar da görselleri belleğe okumaz.\n- Sipariş: üyeliksiz siparişte ad soyad zorunlu. Sepette İletişim Bilgileri’nin başında Ad Soyad alanı var; yönetimde misafir siparişlerinde müşterinin adı görünür.",
+  "publishedAt": "2026-11-14T08:16:43.558Z"
 }
