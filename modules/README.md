@@ -1,12 +1,11 @@
 # Avelro Paket Satış Sistemi Modülleri
 
-Avelro Paket Satış Sistemi'nin ödeme, bildirim, SMS doğrulama, e-fatura, yapay zekâ ve SEO entegrasyonları ile özellik modülleri. Her modül `modules/` altında kendi klasöründedir; sistem
+Avelro Paket Satış Sistemi'nin ödeme, SMS doğrulama, e-fatura, yapay zekâ ve SEO entegrasyonları ile özellik modülleri. Her modül `modules/` altında kendi klasöründedir; sistem
 yönetim panelindeki Entegrasyon Ayarları ekranından bu depodan indirir, doğrular ve kurar. Modüller ana sistem olmadan çalışmaz.
 
 | Tür | Modüller |
 | --- | --- |
 | Ödeme | `havale`, `stripe`, `cryptomus`, `heleket`, `shopier` |
-| Bildirim | `telegram`, `whatsapp` |
 | SMS ve doğrulama | `netgsm`, `iletimerkezi`, `twilio`, `firebase` |
 | Sosyal giriş | `social-login` |
 | E-fatura | `parasut`, `bizimhesap`, `logo`, `uyumsoft` |
