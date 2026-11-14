@@ -1,5 +1,5 @@
 {
-  "version": "1.0.287",
-  "notes": "- Hız: site sayfaları yaklaşık iki kat daha hızlı hazırlanır. İçerik kayıtları artık dizinden okunur; Ortam Kütüphanesi’ndeki büyük görseller her sayfada taranmaz. Yönetim › Sayfalar da görselleri belleğe okumaz.\n- Sipariş: üyeliksiz siparişte ad soyad zorunlu. Sepette İletişim Bilgileri’nin başında Ad Soyad alanı var; yönetimde misafir siparişlerinde müşterinin adı görünür.",
-  "publishedAt": "2026-11-14T08:16:43.558Z"
+  "version": "1.0.288",
+  "notes": "- Kuponlar: sepette kullanılabilecek kuponlar listelenir, dokununca uygulanır. Kişi başı sınırlı kampanya kuponları üye olmayanlara da açık; aynı kişinin e-posta değiştirerek tekrar kullanması (e-posta, cihaz ve adresle) engellenir.\n- Özel kupon: Müşteriler › üyenin sayfasından üyeye özel kupon tanımlanır (kod kendiliğinden); istenirse yalnızca seçilen üründe geçerli olur. Kampanyalar’da da kupon bir üyeye tanımlanabilir.\n- Kampanyalar sayfasındaki kupon kartı ve ana sayfadaki kampanya bandı yeniden düzenlendi (masaüstü ve telefon); kart üzerine gelince kalkmaz, bandın ışıması kaldırıldı. Geri sayım bandı süreli kuponda her zaman açık.\n- Sipariş şeridi: telefonda da süre görünür, kısa yazılır (5 DK, 2 SAAT).\n- Müşteriler: Değerlendirmeler ve Sorular ayrı sayfalar. Ana Sayfa Yorumları kaldırıldı; yayındaki değerlendirme \"Ana Sayfada Göster\" ile ana sayfaya alınır (şu an görünenler korunur). Puan Rozetleri Ayarlar’a taşındı.\n- Açılır bildirim (popup) özelliği kaldırıldı.",
+  "publishedAt": "2026-11-14T09:54:22.469Z"
 }
