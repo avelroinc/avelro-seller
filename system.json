@@ -1,5 +1,5 @@
 {
-  "version": "1.0.290",
-  "notes": "- Müşteri bildirimleri: tarayıcı bildirimlerinin başlıkları emojiyle başlar ve noktayla biter, metinler daha bilgilendirici (ör. sipariş tutarı, teslimatın Hesabım’daki yeri). SMS metinleri yenilendi; Türkçe karaktersiz ve tek SMS.\n- Daha önce panelden düzenlenip kaydedilmiş şablonlar değişmez; yeni hâli için şablonda Varsayılana Dön kullanılabilir.",
-  "publishedAt": "2026-11-14T11:19:51.542Z"
+  "version": "1.0.291",
+  "notes": "- Fırsat Köşesi: kombine stok eklenebilir (boşsa sınırsız); kartta \"Son N Kombin\" yazar, stok bitince kombin gizlenir. İptal ya da iade edilen siparişin stoğu geri gelir.\n- Kombinde miktarı müşteri kategori sayfasındaki gibi (− / + ya da elle) seçer; kombinin indirim oranı (%) seçilen miktarların toplam fiyatına uygulanır. Eski kombinlerin oranı kayıtlı fiyatlarından hesaplanır.\n- Kombine kategori (platform) seçilebilir; kartta simgesiyle görünür. Kombin kartı yeniden düzenlendi. Kayıt hatalıysa sebebi söylenir, girilenler silinmez.\n- Sepet: başlık Sepetim; alan adları kutunun solunda, hap biçimler kaldırıldı; kupon uygulanınca bildirim çıkar; \"Fatura İstiyorum.\" sade.\n- Siparişler ve Genel Bakış: ayrı Teslim sütunu (tek hizmette de 0/1 Teslim). Genel Bakış'taki son siparişler kartı yan menülerle aynı boyda biter.\n- Sipariş şeridinde zaman \"15 Dakika / 2 Saat / 3 Gün\" biçiminde. Canlı destekteki durum noktası yuvarlak ve yanıp söner; Canlı Destek ayarlarındaki tarayıcı bildirimleri kartı kaldırıldı.",
+  "publishedAt": "2026-11-14T12:52:59.768Z"
 }
