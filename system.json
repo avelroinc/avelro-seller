@@ -1,5 +1,5 @@
 {
-  "version": "1.0.293",
-  "notes": "- Firebase Telefon Doğrulama modülü (2.0.0) güncellenirken çıkan \"Modül işlem sözleşmesi eksik\" hatası giderildi. Sistemi güncelledikten sonra Modüller › Firebase’ten modülü yeniden güncelleyin.\n- SMS modüllerinin (1.1.0) bağlantı denemesi işlemi modül servisinde tanındı.",
-  "publishedAt": "2026-11-14T16:37:16.893Z"
+  "version": "1.0.294",
+  "notes": "- Firebase Telefon Doğrulama: güvenlik başlığı Google reCAPTCHA betiğini engellediği için çıkan \"Robot doğrulaması yüklenemedi\" hatası giderildi; robot doğrulaması geç yüklenirse birkaç saniye beklenir.",
+  "publishedAt": "2026-11-14T17:18:55.064Z"
 }
