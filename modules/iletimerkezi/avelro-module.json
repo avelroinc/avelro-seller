@@ -3,7 +3,7 @@
   "id": "iletimerkezi",
   "name": "İleti Merkezi Entegrasyonu",
   "description": "İleti Merkezi Entegrasyonu için bağımsız sağlayıcı paketi.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "hostApiVersion": 2,
   "category": "loginverify",
   "scopes": [

@@ -1,6 +1,6 @@
-# Firebase Entegrasyonu
+# Firebase Telefon Doğrulama
 
-Avelro Packet Seller System için SMS ve doğrulama modülü. Kaynak: `avelroinc/avelro-seller` deposundaki `modules/firebase/` klasörü.
+Avelro Packet Seller System için telefon numarası doğrulama modülü (Firebase Authentication › Phone). Kaynak: `avelroinc/avelro-seller` deposundaki `modules/firebase/` klasörü.
 
 - `avelro-module.json`: modül kimliği, sürüm, Host API (2) ve izinli ağ adresleri
 - `config.schema.json`: yönetim panelinde istenen bağlantı ayarları
@@ -19,6 +19,11 @@ dışı başlar; güncelleme başarısız olursa kurulu sürüm korunur. Kaldır
 Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
+
+### 2.0.0
+
+- Firebase E-posta (bağlantıyla giriş) kaldırıldı; modül artık Firebase Telefon Doğrulama: müşterinin telefon numarasını Firebase'in gönderdiği SMS koduyla doğrular.
+- Firebase Authentication'da Phone girişini açın ve site alan adını Authorized domains'e ekleyin.
 
 ### 1.0.0
 

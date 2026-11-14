@@ -1,6 +1,6 @@
 # İleti Merkezi Entegrasyonu
 
-Avelro Packet Seller System için SMS ve doğrulama modülü. Kaynak: `avelroinc/avelro-seller` deposundaki `modules/iletimerkezi/` klasörü.
+Avelro Packet Seller System için SMS modülü: hesap doğrulama kodları, müşteri SMS bildirimleri ve toplu SMS. Kaynak: `avelroinc/avelro-seller` deposundaki `modules/iletimerkezi/` klasörü.
 
 - `avelro-module.json`: modül kimliği, sürüm, Host API (2) ve izinli ağ adresleri
 - `config.schema.json`: yönetim panelinde istenen bağlantı ayarları
@@ -19,6 +19,11 @@ dışı başlar; güncelleme başarısız olursa kurulu sürüm korunur. Kaldır
 Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
+
+### 1.1.0
+
+- Hesap doğrulama, müşteri SMS bildirimleri ve toplu SMS için tek modül. Numara İleti Merkezi’nin beklediği biçimde gönderilir.
+- Hata mesajı ve kodu gösterilir; bağlantı denemesi (test) eklendi.
 
 ### 1.0.0
 

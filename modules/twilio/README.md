@@ -1,6 +1,6 @@
 # Twilio Entegrasyonu
 
-Avelro Packet Seller System için SMS ve doğrulama modülü. Kaynak: `avelroinc/avelro-seller` deposundaki `modules/twilio/` klasörü.
+Avelro Packet Seller System için SMS modülü: hesap doğrulama kodları, müşteri SMS bildirimleri ve toplu SMS. Kaynak: `avelroinc/avelro-seller` deposundaki `modules/twilio/` klasörü.
 
 - `avelro-module.json`: modül kimliği, sürüm, Host API (2) ve izinli ağ adresleri
 - `config.schema.json`: yönetim panelinde istenen bağlantı ayarları
@@ -19,6 +19,12 @@ dışı başlar; güncelleme başarısız olursa kurulu sürüm korunur. Kaldır
 Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
+
+### 1.1.0
+
+- Hesap doğrulama, müşteri SMS bildirimleri ve toplu SMS için tek modül. Gönderen olarak numara, Alfanümerik Gönderici Kimliği ya da Messaging Service SID (MG…) kullanılabilir.
+- Twilio'nun hata mesajı ve kodu olduğu gibi gösterilir (ör. hatalı Auth Token, doğrulanmamış numara).
+- Bağlantı denemesi (test) eklendi; SMS metni Türkçe karaktersiz (tek SMS).
 
 ### 1.0.0
 

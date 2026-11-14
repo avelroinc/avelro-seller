@@ -1,30 +1,24 @@
 // Independent provider package. Credentials and networking are supplied by the host.
-export type ModuleHost={configuration():Promise<FirebaseEmailConfig>;request(url:string,init?:RequestInit):Promise<Response>};
-type FirebaseEmailConfig={webApiKey:string};
+export type ModuleHost={configuration():Promise<FirebaseConfig>;request(url:string,init?:RequestInit):Promise<Response>};
+// Firebase Telefon Doğrulama (Firebase Authentication › Sign-in method › Phone). SMS'i Firebase gönderir:
+// 1) recaptchaParams: sitenin reCAPTCHA anahtarı (tarayıcı bununla robot denetimi yapar; site alan adı Firebase'de Authorized domains'e eklenmelidir).
+// 2) sendCode: numara + reCAPTCHA yanıtıyla kod gönderilir, sessionInfo döner.
+// 3) verifyCode: sessionInfo + koddan doğrulanan numara döner (sunucu Firebase'e sorar; tarayıcıya güvenilmez).
+type FirebaseConfig={webApiKey:string};
 export default function createModule(host:ModuleHost){
 const fetch=(url:string,init?:RequestInit)=>host.request(url,init);
-
-class FirebaseEmailError extends Error{}
-
-// Firebase has no generic "send this exact text to this address" email API - the closest
-// fit for a login OTP is its own Email Link (passwordless) sign-in flow: we ask Firebase to
-// email the user a sign-in link, and once they click it, we exchange the oobCode embedded in
-// that link for confirmation the click really came from that inbox. The email's subject/body
-// is Firebase's own template (limited customization in the Firebase console), not ours - the
-// user accepted this tradeoff over building a custom code-based email sender.
-async function sendFirebaseEmailSignInLink(config:FirebaseEmailConfig,email:string,continueUrl:string){
- const response=await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=${encodeURIComponent(config.webApiKey)}`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({requestType:"EMAIL_SIGNIN",email,continueUrl,canHandleCodeInApp:true}),signal:AbortSignal.timeout(15000)}),
-  data=await response.json().catch(()=>null) as {error?:{message?:string}}|null;
- if(!response.ok)throw new FirebaseEmailError(data?.error?.message||"Doğrulama e-postası gönderilemedi.");
+class FirebaseError extends Error{}
+const MESSAGES:Record<string,string>={INVALID_PHONE_NUMBER:"Telefon numarası geçersiz.",TOO_MANY_ATTEMPTS_TRY_LATER:"Çok fazla deneme yapıldı; biraz sonra tekrar deneyin.",QUOTA_EXCEEDED:"Firebase SMS kotası doldu.",INVALID_CODE:"Doğrulama kodu hatalı.",INVALID_SESSION_INFO:"Doğrulama oturumu geçersiz; yeni kod isteyin.",SESSION_EXPIRED:"Kodun süresi doldu; yeni kod isteyin.",CAPTCHA_CHECK_FAILED:"Robot doğrulaması başarısız; sayfayı yenileyip tekrar deneyin.",INVALID_RECAPTCHA_TOKEN:"Robot doğrulaması başarısız; sayfayı yenileyip tekrar deneyin.",OPERATION_NOT_ALLOWED:"Firebase'de telefonla giriş (Phone) açık değil.",API_KEY_INVALID:"Firebase Web API anahtarı geçersiz.",UNAUTHORIZED_DOMAIN:"Site alan adı Firebase Authorized domains listesinde yok."};
+async function call<T>(method:string,body?:unknown):Promise<T>{
+ const {webApiKey}=await host.configuration(),url=`https://identitytoolkit.googleapis.com/v1/${method}?key=${encodeURIComponent(webApiKey.trim())}`;
+ const response=await fetch(url,body===undefined?{signal:AbortSignal.timeout(15000)}:{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)}),
+  data=await response.json().catch(()=>null) as (T&{error?:{message?:string}})|null;
+ if(!response.ok||!data){const raw=String(data?.error?.message||"").split(/[ :]/)[0];throw new FirebaseError(`Firebase: ${MESSAGES[raw]||data?.error?.message||"İstek tamamlanamadı."}`)}
+ return data;
 }
-
-async function verifyFirebaseEmailSignInLink(config:FirebaseEmailConfig,email:string,oobCode:string){
- const response=await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithEmailLink?key=${encodeURIComponent(config.webApiKey)}`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email,oobCode}),signal:AbortSignal.timeout(15000)}),
-  data=await response.json().catch(()=>null) as {error?:{message?:string};email?:string}|null;
- if(!response.ok||!data||data.email?.toLowerCase()!==email.toLowerCase())return false;
- return true;
-}
-
-return {sendLink: async (input:{email:string;continueUrl:string}) => sendFirebaseEmailSignInLink(await host.configuration(),input.email,input.continueUrl),
-verifyLink: async (input:{email:string;oobCode:string}) => verifyFirebaseEmailSignInLink(await host.configuration(),input.email,input.oobCode)};
+return {
+ recaptchaParams:async()=>({siteKey:(await call<{recaptchaSiteKey?:string}>("recaptchaParams")).recaptchaSiteKey||""}),
+ sendCode:async(input:{phoneNumber:string;recaptchaToken:string})=>({sessionInfo:(await call<{sessionInfo?:string}>("accounts:sendVerificationCode",{phoneNumber:input.phoneNumber,recaptchaToken:input.recaptchaToken})).sessionInfo||""}),
+ verifyCode:async(input:{sessionInfo:string;code:string})=>({phoneNumber:(await call<{phoneNumber?:string}>("accounts:signInWithPhoneNumber",{sessionInfo:input.sessionInfo,code:input.code})).phoneNumber||""}),
+};
 }

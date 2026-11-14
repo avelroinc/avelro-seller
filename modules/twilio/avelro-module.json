@@ -3,7 +3,7 @@
   "id": "twilio",
   "name": "Twilio Entegrasyonu",
   "description": "Twilio Entegrasyonu için bağımsız sağlayıcı paketi.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "hostApiVersion": 2,
   "category": "loginverify",
   "scopes": [
