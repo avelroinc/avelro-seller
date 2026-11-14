@@ -1,5 +1,5 @@
 {
-  "version": "1.0.285",
-  "notes": "- Telefon menüsü: ürün türü başlıkları artık sol menüdeki gibi kısa adla görünür (Lisans H., Sosyal Medya H. vb.).",
-  "publishedAt": "2026-11-14T05:16:49.482Z"
+  "version": "1.0.286",
+  "notes": "- Site yazıları: bölüm başlıkları, üst başlıklar ve açıklamalar (tanıtım metinleri) artık sayfa kodunda değil veritabanında tutulur. Mağaza ilk açıldığında mevcut yazılar aynen veritabanına yazılır; görünüm değişmez, panelden değiştirilen yazılar korunur.",
+  "publishedAt": "2026-11-14T06:46:39.000Z"
 }
