@@ -1,5 +1,5 @@
 {
-  "version": "1.0.312",
-  "notes": "- E-Pin paket kutularında stok ve rozet etiketleri üst üste binmez; stokta olmayan pakette rozet gösterilmez, telefonda paket adı ve fiyat taşmaz.\n- Yönetim: sağlayıcı sayfasında tür, protokol ve bakiye tek yerde; Sms Onay siparişlerinde durum adları Türkçe; kur alanı sağlayıcının para birimiyle; E-Pin paket tablosunda telefonda ID ile fiyatı da görünür.",
-  "publishedAt": "2026-11-15T21:10:22.903Z"
+  "version": "1.0.313",
+  "notes": "- Sms Onay siparişleri Satış menüsünde: Satış › Sms Onay Siparişleri sayfasında sağlayıcı bakiyesi, 30 günlük özet ve son numaralar; Katalog › Sms Onay Hizmetleri yalnızca ayarlar.\n- Son numaralarda siparişi veren müşteri (adı, e-postası, müşteri kartına bağlantı) görünür; uygulama simgesi kaldırıldı.",
+  "publishedAt": "2026-11-15T21:28:06.396Z"
 }
