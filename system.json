@@ -1,5 +1,5 @@
 {
-  "version": "1.0.304",
-  "notes": "- Üst barda Giriş Yap ve Üye Ol ayrı düğmeler; Üye Ol hesap sayfasını kayıt sekmesiyle açar. Oturum açıkken ad ile Hesabım görünür.",
-  "publishedAt": "2026-11-15T09:51:08.719Z"
+  "version": "1.0.305",
+  "notes": "- Gizli hesap uyarısı: hizmet sayfası ve ana sayfa hızlı siparişte gizli Instagram hesabına (profil ya da gönderi) sipariş verilemez; Tekrar Kontrol Et hesap açıldıysa siparişi sürdürür (Instagram modülü gerekir).\n- Bağlantı alanına dokununca panodaki uygun bağlantı kendiliğinden yapıştırılır (hizmet sayfası, hızlı sipariş, ücretsiz deneme).\n- Ana sayfa lisans kartlarında eski fiyat yeni fiyatın üstünde; stok yazısı ürün sayfasındaki gibi (Stokta Mevcut, Son N Adet, Stokta, Anında Teslim).",
+  "publishedAt": "2026-11-15T11:14:25.483Z"
 }
