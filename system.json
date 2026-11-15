@@ -1,5 +1,5 @@
 {
-  "version": "1.0.314",
-  "notes": "- Yönetim: Sms Onay satışları Satış › Diğer Siparişler sayfasında (Siparişler'in altında); telefonda Siparişler gibi kart listesi, uygulama adının üstünde soluk etiket.\n- Ülke sütununda uzun ad yan sütuna taşmaz, kısaltılır.\n- Canlı Destek simgesi sol menüden üst çubuğa, bildirimlerin soluna taşındı.",
-  "publishedAt": "2026-11-15T21:54:27.159Z"
+  "version": "1.0.315",
+  "notes": "- Sms Onay sayfası yenilendi: telefonda üstte yapışan, yana kayan uygulama şeridi ve kısa ülke satırları; masaüstünde sütunlu ülke tablosu (Ülke, Teslim Oranı, Stok, Fiyat); sıralama düğmeleri (Teslim Oranı, En Ucuz, En Çok Stok). Telefondaki boşluklar giderildi.\n- Yönetim: Diğer Siparişler'de durum sekmeleri, arama ve Excel'e Aktar; Sms Onay özet kartları Katalog › Sms Onay Hizmetleri'nde.",
+  "publishedAt": "2026-11-15T22:37:39.434Z"
 }
