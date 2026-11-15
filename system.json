@@ -1,5 +1,5 @@
 {
-  "version": "1.0.302",
-  "notes": "- Lisans ürün düzenlemede Ek Hizmetler tablosu telefonda düzgün: ad üstte, ücret türü ve ücret yan yana. Yönetimdeki tablolarda sütunlar telefonda kaybolmaz.\n- Ödeme bekleme ekranı önceki düzenine döndü: 3 kısa adım ve ilerleme çubuğu.",
-  "publishedAt": "2026-11-15T08:45:22.421Z"
+  "version": "1.0.303",
+  "notes": "- Ana sayfa hızlı sipariş kutusundaki tür sekmeleri (Sosyal Medya, E-Pin & Oyun, Lisans, SMS Onay) sadeleşti: büyük harf yok, seçili sekme kutuyla birleşir, diğerleri yarı saydam.\n- Telefonda kutuyu sola / sağa kaydırarak tür sekmesi değiştirilebilir; yeni içerik kayarak gelir.",
+  "publishedAt": "2026-11-15T09:27:13.786Z"
 }
