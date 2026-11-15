@@ -1,5 +1,5 @@
 {
-  "version": "1.0.309",
-  "notes": "- Ana sayfa Popüler Oyunlar bölümü yenilendi: kapaklı oyun kartları, kapağa taşan mini logo, en ucuz üç paket, başlayan fiyat ve Paketleri Gör; telefonda kartlar yana kayar.\n- Öne çıkan hizmet kartında hizmet adı yalnızca üst şeritte yazılır, gövdede tekrarlanmaz.\n- Yan menüdeki ürün türü simgeleri renk geçişli kutularda; köşeleri sitenin köşe yuvarlaklığını kullanır.",
-  "publishedAt": "2026-11-15T17:51:21.140Z"
+  "version": "1.0.310",
+  "notes": "- Sms Onay sağlayıcısı sabit değil: Sağlayıcılar sayfasında Sms Onay türünde sağlayıcı eklenir (5sim ya da SMS-Activate uyumlu), Sms Onay › Sağlayıcı sayfasında seçilir. Kayıtlı 5sim anahtarı kendiliğinden Sağlayıcılar'a taşınır.\n- E-Pin paketi hem kodla hem ID ile yüklemeyle, her biri kendi fiyatıyla satılabilir; müşteri paketi seçtikten sonra teslim şeklini seçer.\n- E-Pin ID ile yüklemede Oyuncu ID sepette istenir.\n- Reklam sayfası (/reklam) yeniden tasarlandı: menüsüz, hareketli giriş, sayılar, kayan logo şeridi; sosyal medya, E-Pin, lisans, yazılım ve Sms Onay bölümleri.",
+  "publishedAt": "2026-11-15T20:14:29.034Z"
 }
