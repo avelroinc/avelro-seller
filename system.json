@@ -1,5 +1,5 @@
 {
-  "version": "1.0.307",
-  "notes": "- iPhone ve uygulama içi tarayıcılarda (Instagram, Facebook, TikTok) ödeme sayfası dokunarak açılır; uygulama içi tarayıcıda siteye dönülünce bekleme ekranı sürer.\n- Vitrin alanları kupon kodu alanı gibi birleşik (etiket solda): Hesabım, sipariş formu, araçlar, soru-cevap.\n- Referans çekim talepleri: Pazarlama › Çekim Talepleri sayfası ve yapılacaklar listesi; müşteride Kazancını Çek bölümü her zaman görünür.\n- Reklam Sayfası yönetim ekranı yeniden eklendi (Pazarlama › Reklam Sayfası; site adresi /reklam).\n- Kuponlarda sitedeki geri sayım bandı ayarı: bitişe 24 saat kala, sürekli ya da gösterme. Kupon formundan üye e-postası alanı kaldırıldı.\n- Ana sayfa lisanslarında yalnızca Ana Sayfa Vitrininde işaretli ürünler gösterilir.\n- Ek hizmetler masaüstünde iki sütun; Son Kullandıkların düzeni; hizmet düzenlemede tek Kaydet; öne çıkan hizmette simge solda; tarayıcı bildirimi anahtarı yenilendi.\n- Yönetim panelinde yan yana kartlar (Görünüm Ayarları, Raporlar) eşit boy.\n- Sayfa açılırken alt menüdeki Destek düğmesi ve kampanya sayacı kaymaz.\n- Sunucu komutu: siparişleri ve satış kayıtlarını sıfırlama (scripts/reset-orders.mjs; önce sayar, --onayla ile yedek alıp siler).",
-  "publishedAt": "2026-11-15T16:15:31.591Z"
+  "version": "1.0.308",
+  "notes": "- Sitede ve yönetim panelinde \"SMS Onay\" yazımı \"Sms Onay\" oldu.\n- Telefon menüsünde arama sonuçları menüdeki marka logolarının üstünde kalır (logolar sonuçların üzerine taşmaz).",
+  "publishedAt": "2026-11-15T16:53:31.516Z"
 }
