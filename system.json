@@ -1,5 +1,5 @@
 {
-  "version": "1.0.305",
-  "notes": "- Gizli hesap uyarısı: hizmet sayfası ve ana sayfa hızlı siparişte gizli Instagram hesabına (profil ya da gönderi) sipariş verilemez; Tekrar Kontrol Et hesap açıldıysa siparişi sürdürür (Instagram modülü gerekir).\n- Bağlantı alanına dokununca panodaki uygun bağlantı kendiliğinden yapıştırılır (hizmet sayfası, hızlı sipariş, ücretsiz deneme).\n- Ana sayfa lisans kartlarında eski fiyat yeni fiyatın üstünde; stok yazısı ürün sayfasındaki gibi (Stokta Mevcut, Son N Adet, Stokta, Anında Teslim).",
-  "publishedAt": "2026-11-15T11:14:25.483Z"
+  "version": "1.0.306",
+  "notes": "- Site hızlandı: tema stil dosyası parçalı sunulur (çekirdek her sayfada; Hesabım, Sepet, Sipariş Sorgula ve yönetim parçaları kendi sayfasında), açıklama satırları ziyaretçiye gönderilmez.\n- Vitrin JavaScript'i yaklaşık dörtte bir küçüldü: sipariş kutusu, profil analizi, araçlar, fırsat, soru-cevap ve ödeme ekranları yalnızca kendi sayfasında yüklenir; ödeme bekleme ekranı ve canlı destek kutusu sonradan yüklenir; marka logoları görsel olarak gelir.\n- Kullanılmayan eski bileşen ve stil kalıntıları temizlendi.",
+  "publishedAt": "2026-11-15T12:35:20.657Z"
 }
