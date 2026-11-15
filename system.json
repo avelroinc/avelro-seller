@@ -1,5 +1,5 @@
 {
-  "version": "1.0.313",
-  "notes": "- Sms Onay siparişleri Satış menüsünde: Satış › Sms Onay Siparişleri sayfasında sağlayıcı bakiyesi, 30 günlük özet ve son numaralar; Katalog › Sms Onay Hizmetleri yalnızca ayarlar.\n- Son numaralarda siparişi veren müşteri (adı, e-postası, müşteri kartına bağlantı) görünür; uygulama simgesi kaldırıldı.",
-  "publishedAt": "2026-11-15T21:28:06.396Z"
+  "version": "1.0.314",
+  "notes": "- Yönetim: Sms Onay satışları Satış › Diğer Siparişler sayfasında (Siparişler'in altında); telefonda Siparişler gibi kart listesi, uygulama adının üstünde soluk etiket.\n- Ülke sütununda uzun ad yan sütuna taşmaz, kısaltılır.\n- Canlı Destek simgesi sol menüden üst çubuğa, bildirimlerin soluna taşındı.",
+  "publishedAt": "2026-11-15T21:54:27.159Z"
 }
