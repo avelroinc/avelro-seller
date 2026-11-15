@@ -1,5 +1,5 @@
 {
-  "version": "1.0.308",
-  "notes": "- Sitede ve yönetim panelinde \"SMS Onay\" yazımı \"Sms Onay\" oldu.\n- Telefon menüsünde arama sonuçları menüdeki marka logolarının üstünde kalır (logolar sonuçların üzerine taşmaz).",
-  "publishedAt": "2026-11-15T16:53:31.516Z"
+  "version": "1.0.309",
+  "notes": "- Ana sayfa Popüler Oyunlar bölümü yenilendi: kapaklı oyun kartları, kapağa taşan mini logo, en ucuz üç paket, başlayan fiyat ve Paketleri Gör; telefonda kartlar yana kayar.\n- Öne çıkan hizmet kartında hizmet adı yalnızca üst şeritte yazılır, gövdede tekrarlanmaz.\n- Yan menüdeki ürün türü simgeleri renk geçişli kutularda; köşeleri sitenin köşe yuvarlaklığını kullanır.",
+  "publishedAt": "2026-11-15T17:51:21.140Z"
 }
