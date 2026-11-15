@@ -1,5 +1,5 @@
 {
-  "version": "1.0.310",
-  "notes": "- Sms Onay sağlayıcısı sabit değil: Sağlayıcılar sayfasında Sms Onay türünde sağlayıcı eklenir (5sim ya da SMS-Activate uyumlu), Sms Onay › Sağlayıcı sayfasında seçilir. Kayıtlı 5sim anahtarı kendiliğinden Sağlayıcılar'a taşınır.\n- E-Pin paketi hem kodla hem ID ile yüklemeyle, her biri kendi fiyatıyla satılabilir; müşteri paketi seçtikten sonra teslim şeklini seçer.\n- E-Pin ID ile yüklemede Oyuncu ID sepette istenir.\n- Reklam sayfası (/reklam) yeniden tasarlandı: menüsüz, hareketli giriş, sayılar, kayan logo şeridi; sosyal medya, E-Pin, lisans, yazılım ve Sms Onay bölümleri.",
-  "publishedAt": "2026-11-15T20:14:29.034Z"
+  "version": "1.0.311",
+  "notes": "- E-Pin paket kutuları kısaldı: adet ve fiyat yan yana; stok durumu (Son N Adet, Gelince Haber Ver) kutunun üst kenarında etiket.\n- E-Pin teslim şekli seçimi lisanslardaki ek hizmet seçimi görünümünde; baştaki simgeler ve sepet notu kaldırıldı.",
+  "publishedAt": "2026-11-15T20:37:38.760Z"
 }
