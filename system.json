@@ -1,5 +1,5 @@
 {
-  "version": "1.0.301",
-  "notes": "- Hizmet düzenleme: Paketler ve Ek Hizmetler ayrı kartta; alttaki 1.000 Adet fiyat notu kaldırıldı.\n- Ek Hizmetler tablosu telefonda düzgün: her satır ikişerli hücrelere bölünür.\n- Hizmet sayfasında indirim kutusu yokken teslimat süresi kutusu masaüstünde tam genişlikte.",
-  "publishedAt": "2026-11-14T23:28:40.097Z"
+  "version": "1.0.302",
+  "notes": "- Lisans ürün düzenlemede Ek Hizmetler tablosu telefonda düzgün: ad üstte, ücret türü ve ücret yan yana. Yönetimdeki tablolarda sütunlar telefonda kaybolmaz.\n- Ödeme bekleme ekranı önceki düzenine döndü: 3 kısa adım ve ilerleme çubuğu.",
+  "publishedAt": "2026-11-15T08:45:22.421Z"
 }
