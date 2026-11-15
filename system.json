@@ -1,5 +1,5 @@
 {
-  "version": "1.0.311",
-  "notes": "- E-Pin paket kutuları kısaldı: adet ve fiyat yan yana; stok durumu (Son N Adet, Gelince Haber Ver) kutunun üst kenarında etiket.\n- E-Pin teslim şekli seçimi lisanslardaki ek hizmet seçimi görünümünde; baştaki simgeler ve sepet notu kaldırıldı.",
-  "publishedAt": "2026-11-15T20:37:38.760Z"
+  "version": "1.0.312",
+  "notes": "- E-Pin paket kutularında stok ve rozet etiketleri üst üste binmez; stokta olmayan pakette rozet gösterilmez, telefonda paket adı ve fiyat taşmaz.\n- Yönetim: sağlayıcı sayfasında tür, protokol ve bakiye tek yerde; Sms Onay siparişlerinde durum adları Türkçe; kur alanı sağlayıcının para birimiyle; E-Pin paket tablosunda telefonda ID ile fiyatı da görünür.",
+  "publishedAt": "2026-11-15T21:10:22.903Z"
 }
