@@ -1,5 +1,5 @@
 {
-  "version": "1.0.323",
-  "notes": "- Site › Ana Sayfa'da yapılan değişiklikler artık sitede görünüyor (eski düzenleme modundan kalan yazılar Ana Sayfa'daki değeri eziyordu; güncellemede Ana Sayfa'ya taşınır). Giriş alanına Açıklama eklendi, başlık sınırı 80 karakter.\n- Her alan tek yerden düzenlenir: ana sayfa görseli ve yazıları Site › Ana Sayfa'da, Google alanları SEO Ayarları'nda; hizmet ve ürün adı / açıklaması / görseli Katalog formunda; ücretsiz hizmet başlığı ve tanıtımı Pazarlama'da; sayfa giriş açıklamaları Sayfalar › Açıklama'da; Sipariş Sorgula Sayfalar'da; Reklam başlığı Reklam sayfasında. Kaldırılan yerlerde nerede düzenlendiği yazar.\n- Site Metinleri'nden bu alanlara taşınan yazılar güncellemede kendi yerine aktarılır; sitede görünen değişmez.",
-  "publishedAt": "2026-11-16T11:56:53.143Z"
+  "version": "1.0.324",
+  "notes": "- Destek talepleri: üyeler Hesabım › Destek Taleplerim’den tür, konu ve isterse siparişini seçerek talep açar; yazışma talebin içinde sürer. Sipariş sayfasında Destek Talebi düğmesi formu o sipariş seçili açar.\n- Yönetimde Müşteriler › Destek Talepleri: Yanıt Bekleyen / Yanıtlanan / Kapanan sekmeleri, arama, Yanıtla, Yanıtla ve Kapat, Yeniden Aç. Yanıt müşteriye e-posta ve tarayıcı bildirimi olarak gider (yeni şablon: Destek Talebi Yanıtlandı); yeni talep yöneticilere bildirim olarak düşer. Eski Talepler sayfasının adı Hızlandırma Talepleri oldu.\n- Hesabım menüsü kategorilere ayrıldı: Alışveriş, Dijital Ürünlerim, Cüzdan, Destek, Hesap Ayarları.\n- Hesabım adresleri okunur yollara geçti (/hesabim/siparislerim/KOD, /hesabim/destek-taleplerim/NO, /hesabim/bakiye-yukle…); eski ?sekme= bağlantıları yeni adrese yönlenir.",
+  "publishedAt": "2026-11-16T16:37:33.167Z"
 }
