@@ -1,5 +1,5 @@
 {
-  "version": "1.0.325",
-  "notes": "- Yönetim panelinin bildirim zili artık bildirimleri de gösterir: yeni destek talebi ve müşteri yanıtı, yeni sipariş ve ödeme, havale / bakiye talepleri, hızlandırma talepleri ve müşteri soruları, sağlayıcı hataları ve sistem uyarıları. Güncellemeler altta ayrı başlıkta kalır.\n- Bildirime tıklayınca ilgili sayfa açılır ve okunur; Tümü Okundu ile hepsi okunur. Okundu bilgisi yöneticiye özeldir; personel yalnızca yetkili olduğu bölümlerin bildirimlerini görür. Tarayıcı ya da mobil bildirim kapalı olsa da zile düşer; canlı destek mesajları zile yazılmaz.",
-  "publishedAt": "2026-11-16T17:50:24.812Z"
+  "version": "1.0.326",
+  "notes": "- Hesabım › Destek Taleplerim yenilendi: talepler tabloda (Talep No, Konu, Tür, Sipariş, Son İşlem, Durum; telefonda Konu ve Durum), üstte durum süzgeçleri.\n- Yeni talep formu tek kartta: simgeli tür seçimi, sipariş ve konu yan yana, karakter sayaçlı mesaj.\n- Talep sayfasında yazışma sohbet balonlarıyla (müşteri sağda, destek ekibi solda); yanıt kutusunda Ctrl + Enter ile gönderme.",
+  "publishedAt": "2026-11-16T18:26:57.505Z"
 }
