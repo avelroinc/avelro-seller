@@ -1,5 +1,5 @@
 {
-  "version": "1.0.320",
-  "notes": "- Tarayıcı Bildirimleri: yeni Sms Onay grubu — Onay Kodu Geldi ve Kod Gelmedi, Ücret İade Edildi (site açıkken gösterilmez, numara başına bir kez).\n- Lisans, Yazılım, E-Pin teslim ve Bakiye bildirimleri artık ilgili Hesabım sekmesini açar (üye değilse Sipariş Sorgula); E-Pin bildirim metni ID ile yüklemeye de uyar.\n- SMS: yalnız lisans / e-pin olan siparişte Ödeme Onaylandı SMS'i gitmez, yalnızca Sipariş Tamamlandı gider (iki ücretli SMS yerine bir).",
-  "publishedAt": "2026-11-16T09:50:42.217Z"
+  "version": "1.0.321",
+  "notes": "- Sol menü: üstteki ürün türü düğmeleri (Sosyal Medya, E-Pin, Lisans, Yazılım, Sms Onay) alttaki sayfa düğmeleriyle aynı boyutta.",
+  "publishedAt": "2026-11-16T10:07:56.826Z"
 }
