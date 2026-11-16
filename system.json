@@ -1,5 +1,5 @@
 {
-  "version": "1.0.322",
-  "notes": "- Sms Onay: ülke tablosunun başlıkları (Ülke, Teslim Oranı, Stok, Fiyat) sütunlarla tam hizalı.",
-  "publishedAt": "2026-11-16T10:48:22.938Z"
+  "version": "1.0.323",
+  "notes": "- Site › Ana Sayfa'da yapılan değişiklikler artık sitede görünüyor (eski düzenleme modundan kalan yazılar Ana Sayfa'daki değeri eziyordu; güncellemede Ana Sayfa'ya taşınır). Giriş alanına Açıklama eklendi, başlık sınırı 80 karakter.\n- Her alan tek yerden düzenlenir: ana sayfa görseli ve yazıları Site › Ana Sayfa'da, Google alanları SEO Ayarları'nda; hizmet ve ürün adı / açıklaması / görseli Katalog formunda; ücretsiz hizmet başlığı ve tanıtımı Pazarlama'da; sayfa giriş açıklamaları Sayfalar › Açıklama'da; Sipariş Sorgula Sayfalar'da; Reklam başlığı Reklam sayfasında. Kaldırılan yerlerde nerede düzenlendiği yazar.\n- Site Metinleri'nden bu alanlara taşınan yazılar güncellemede kendi yerine aktarılır; sitede görünen değişmez.",
+  "publishedAt": "2026-11-16T11:56:53.143Z"
 }
