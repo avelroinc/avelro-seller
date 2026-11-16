@@ -1,5 +1,5 @@
 {
-  "version": "1.0.321",
-  "notes": "- Sol menü: üstteki ürün türü düğmeleri (Sosyal Medya, E-Pin, Lisans, Yazılım, Sms Onay) alttaki sayfa düğmeleriyle aynı boyutta.",
-  "publishedAt": "2026-11-16T10:07:56.826Z"
+  "version": "1.0.322",
+  "notes": "- Sms Onay: ülke tablosunun başlıkları (Ülke, Teslim Oranı, Stok, Fiyat) sütunlarla tam hizalı.",
+  "publishedAt": "2026-11-16T10:48:22.938Z"
 }
