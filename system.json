@@ -1,5 +1,5 @@
 {
-  "version": "1.0.316",
-  "notes": "- Sms Onay sayfası: bölümler arası boşluklar üst menüyle hero arasındaki boşluk kadar eşitlendi; telefonda uygulama şeridinin altındaki çizgi kaldırıldı.",
-  "publishedAt": "2026-11-16T05:18:52.660Z"
+  "version": "1.0.317",
+  "notes": "- Sms Onay uygulama sayfaları artık /sms-onay/whatsapp biçiminde; eski ?uygulama= bağlantıları yeni adrese yönlenir.\n- Yönetim: Ayarlar › Panel Adresi Ayarları ile panelin adresi (/admin) değiştirilebilir; değişince giriş ekranı yalnızca yeni adreste açılır.\n- Ön yüz: sayfa boşlukları tek düzene bağlandı (üst menüyle ilk içerik 20px, bölümler arası 48 / 40 / 32px); başlık ile içerik, Hizmetler grupları, blog yazısı ve lisans sayfasındaki fazla boşluklar giderildi.\n- E-Pin ve Sms Onay güvence kutularında açıklamaların kelime kelime alt satıra inmesi düzeltildi; ana sayfadaki Sms tanıtımında rozetler içeriği örtmüyor.",
+  "publishedAt": "2026-11-16T06:54:58.247Z"
 }
