@@ -1,5 +1,5 @@
 {
-  "version": "1.0.315",
-  "notes": "- Sms Onay sayfası yenilendi: telefonda üstte yapışan, yana kayan uygulama şeridi ve kısa ülke satırları; masaüstünde sütunlu ülke tablosu (Ülke, Teslim Oranı, Stok, Fiyat); sıralama düğmeleri (Teslim Oranı, En Ucuz, En Çok Stok). Telefondaki boşluklar giderildi.\n- Yönetim: Diğer Siparişler'de durum sekmeleri, arama ve Excel'e Aktar; Sms Onay özet kartları Katalog › Sms Onay Hizmetleri'nde.",
-  "publishedAt": "2026-11-15T22:37:39.434Z"
+  "version": "1.0.316",
+  "notes": "- Sms Onay sayfası: bölümler arası boşluklar üst menüyle hero arasındaki boşluk kadar eşitlendi; telefonda uygulama şeridinin altındaki çizgi kaldırıldı.",
+  "publishedAt": "2026-11-16T05:18:52.660Z"
 }
