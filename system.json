@@ -1,5 +1,5 @@
 {
-  "version": "1.0.324",
-  "notes": "- Destek talepleri: üyeler Hesabım › Destek Taleplerim’den tür, konu ve isterse siparişini seçerek talep açar; yazışma talebin içinde sürer. Sipariş sayfasında Destek Talebi düğmesi formu o sipariş seçili açar.\n- Yönetimde Müşteriler › Destek Talepleri: Yanıt Bekleyen / Yanıtlanan / Kapanan sekmeleri, arama, Yanıtla, Yanıtla ve Kapat, Yeniden Aç. Yanıt müşteriye e-posta ve tarayıcı bildirimi olarak gider (yeni şablon: Destek Talebi Yanıtlandı); yeni talep yöneticilere bildirim olarak düşer. Eski Talepler sayfasının adı Hızlandırma Talepleri oldu.\n- Hesabım menüsü kategorilere ayrıldı: Alışveriş, Dijital Ürünlerim, Cüzdan, Destek, Hesap Ayarları.\n- Hesabım adresleri okunur yollara geçti (/hesabim/siparislerim/KOD, /hesabim/destek-taleplerim/NO, /hesabim/bakiye-yukle…); eski ?sekme= bağlantıları yeni adrese yönlenir.",
-  "publishedAt": "2026-11-16T16:37:33.167Z"
+  "version": "1.0.325",
+  "notes": "- Yönetim panelinin bildirim zili artık bildirimleri de gösterir: yeni destek talebi ve müşteri yanıtı, yeni sipariş ve ödeme, havale / bakiye talepleri, hızlandırma talepleri ve müşteri soruları, sağlayıcı hataları ve sistem uyarıları. Güncellemeler altta ayrı başlıkta kalır.\n- Bildirime tıklayınca ilgili sayfa açılır ve okunur; Tümü Okundu ile hepsi okunur. Okundu bilgisi yöneticiye özeldir; personel yalnızca yetkili olduğu bölümlerin bildirimlerini görür. Tarayıcı ya da mobil bildirim kapalı olsa da zile düşer; canlı destek mesajları zile yazılmaz.",
+  "publishedAt": "2026-11-16T17:50:24.812Z"
 }
