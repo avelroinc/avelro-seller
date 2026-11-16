@@ -1,5 +1,5 @@
 {
-  "version": "1.0.326",
-  "notes": "- Hesabım › Destek Taleplerim yenilendi: talepler tabloda (Talep No, Konu, Tür, Sipariş, Son İşlem, Durum; telefonda Konu ve Durum), üstte durum süzgeçleri.\n- Yeni talep formu tek kartta: simgeli tür seçimi, sipariş ve konu yan yana, karakter sayaçlı mesaj.\n- Talep sayfasında yazışma sohbet balonlarıyla (müşteri sağda, destek ekibi solda); yanıt kutusunda Ctrl + Enter ile gönderme.",
-  "publishedAt": "2026-11-16T18:26:57.505Z"
+  "version": "1.0.327",
+  "notes": "- Ana sayfa giriş alanı slaytlı: hızlı sipariş kutusu sabit kalır, arkadaki alan Sosyal Medya, E-Pin, Lisans, Sms Onay ve Bakiye slaytları arasında otomatik değişir (satılmayan türün slaytı gösterilmez). Görselsiz slaytta satıştaki ürünlerin logoları ve yüzen sonuç kartları; Site › Ana Sayfa › Giriş Alanı › Slaytlar’dan yazılar, bağlantı, görsel, otomatik geçiş ve süre düzenlenir.\n- Lisans kartları dokunmatik yüzeyde yana kaydırınca yerine oturur; sayfa artık yana kaymaz.\n- Giriş alanı ve lisans kartlarının köşelerindeki ince yay düzeldi.\n- Yönetim bildirim ziline Temizle ve tek bildirim silme eklendi.\n- Yönetim panelindeki istatistik kartlarının sol renkli çizgisi kaldırıldı.",
+  "publishedAt": "2026-11-16T20:38:08.789Z"
 }
