@@ -1,5 +1,5 @@
 {
-  "version": "1.0.317",
-  "notes": "- Sms Onay uygulama sayfaları artık /sms-onay/whatsapp biçiminde; eski ?uygulama= bağlantıları yeni adrese yönlenir.\n- Yönetim: Ayarlar › Panel Adresi Ayarları ile panelin adresi (/admin) değiştirilebilir; değişince giriş ekranı yalnızca yeni adreste açılır.\n- Ön yüz: sayfa boşlukları tek düzene bağlandı (üst menüyle ilk içerik 20px, bölümler arası 48 / 40 / 32px); başlık ile içerik, Hizmetler grupları, blog yazısı ve lisans sayfasındaki fazla boşluklar giderildi.\n- E-Pin ve Sms Onay güvence kutularında açıklamaların kelime kelime alt satıra inmesi düzeltildi; ana sayfadaki Sms tanıtımında rozetler içeriği örtmüyor.",
-  "publishedAt": "2026-11-16T06:54:58.247Z"
+  "version": "1.0.318",
+  "notes": "- Site Metinleri: Yazılım, Hizmetler Sayfası, Site Haritası, Ödeme Ekranı, Toplu Sipariş ve Sayfa Bulunamadı yazıları kendi gruplarında; Reklam Sayfası önizlemesi /reklam açıyor.\n- Listeye eklenen yazılar: hızlı sipariş seçim kutuları, üst menü arama kutusu, ücretsiz araçların adları ve adımları, İletişim kanalları ve hızlı işlemler, Hakkımızda maddeleri, Ücretsiz Araçlar soruları.\n- Sms Onay ve E-Pin uyarıları (Numara Hazır, Bakiye Yetersiz, Sepete Eklendi…), Hizmetler ve Site Haritası başlıkları ile sayaçları panelden değiştirilebilir.\n- İletişim sayfasındaki bilgi satırlarının (Çalışma Saatleri, Adres, Şirket) yazıları artık kaydedilebiliyor.",
+  "publishedAt": "2026-11-16T08:02:16.464Z"
 }
