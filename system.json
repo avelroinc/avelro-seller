@@ -1,5 +1,5 @@
 {
-  "version": "1.0.342",
-  "notes": "- Karşılaştırma tablosunda başlığın altında kısa açıklama (hizmet sayfasında hizmet adıyla; telefonda da görünür). Düzenleyicide yeni Kısa Açıklama alanı; yandaki uzun metin Yan Yazı adını aldı.",
-  "publishedAt": "2026-11-17T16:26:15.717Z"
+  "version": "1.0.343",
+  "notes": "- Günlük Çark: Hesabım üstündeki Günlük Çark düğmesiyle açılan pencere (arka plan bulanıklaşır). Üye günde bir kez çevirir; sonucu sunucu seçer. Ödül bakiye, üyeye tanımlı tek kullanımlık indirim kuponu ya da boş olabilir. Telefon doğrulaması ve isteğe bağlı sipariş şartı, günlük bakiye bütçesi. Yönetim › Pazarlama › Günlük Çark: dilimler, ağırlıklar, önizleme ve son çevirmeler.\n- Hediye Kartı: Hesabım › Hediye Kartı’nda kod kullanma ve yüklenen bakiyeden kart oluşturma (bonus ve ödüller hediye edilemez), WhatsApp ile paylaşma, kullanılmamış kartı iptal etme. Yönetim › Pazarlama › Hediye Kartları: ayarlar, toplu kod üretme, tüm kartlar.\n- Giriş ekranında Şifremi Unuttum bağlantısı şifre alanının altına taşındı.",
+  "publishedAt": "2026-11-17T21:37:03.370Z"
 }
