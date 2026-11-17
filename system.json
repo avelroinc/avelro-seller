@@ -1,5 +1,5 @@
 {
-  "version": "1.0.328",
-  "notes": "- Giriş alanı: Sosyal Medya slaytının görseli kaldırılabilir (Slaytlar › Sosyal Medya › Görsel Gösterilsin); kaldırılınca platform logoları gelir.\n- Slaytlarda yalnızca yüzen sonuç kartları hareketli; slayt belirteci kaldırıldı.\n- Slaytların telefon ve tablet düzeni yenilendi: yazı sabit hizada, logolar hızlı sipariş kutusunun üstünde tek sırada, yüzen kart yazıyla çakışmaz.\n- Lisans kartları sürükleme ya da kaydırma sonrası her durumda yerine oturur.",
-  "publishedAt": "2026-11-16T21:20:15.129Z"
+  "version": "1.0.329",
+  "notes": "- Tablet uyumu: üst barda düğmeler sağa yaslanır, geniş tablette arama kutusu görünür.\n- Hesabım tablette: cüzdan tam genişlikte tek satır, bölüm menüsü altında yatay şerit.\n- Hizmet sayfası hızlı sipariş kutusu tablette alt alta; satın alma düğmeleri tam genişlikte.\n- Ana sayfa oyunları tablette iki sütun; Fırsat Köşesi görseli fiyatın yanında; Sms Onay stok yazısı taşmaz.",
+  "publishedAt": "2026-11-17T04:37:45.569Z"
 }
