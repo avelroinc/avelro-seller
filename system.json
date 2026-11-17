@@ -1,5 +1,5 @@
 {
-  "version": "1.0.329",
-  "notes": "- Tablet uyumu: üst barda düğmeler sağa yaslanır, geniş tablette arama kutusu görünür.\n- Hesabım tablette: cüzdan tam genişlikte tek satır, bölüm menüsü altında yatay şerit.\n- Hizmet sayfası hızlı sipariş kutusu tablette alt alta; satın alma düğmeleri tam genişlikte.\n- Ana sayfa oyunları tablette iki sütun; Fırsat Köşesi görseli fiyatın yanında; Sms Onay stok yazısı taşmaz.",
-  "publishedAt": "2026-11-17T04:37:45.569Z"
+  "version": "1.0.330",
+  "notes": "- Telefonda ana sayfadaki lisans kartları parmakla yeniden kaydırılabiliyor.\n- Slaytlardaki logo kutularında simgeler tam ortada.",
+  "publishedAt": "2026-11-17T06:47:20.204Z"
 }
