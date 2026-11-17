@@ -1,5 +1,5 @@
 {
-  "version": "1.0.332",
-  "notes": "- Ana sayfa Profil Analizi bölümü telefon ve tablette masaüstü görünümüne sığdırıldı: form tek satır, örnek analiz kartı görünür; tablette açıklama solda, kart sağda.",
-  "publishedAt": "2026-11-17T08:08:06.817Z"
+  "version": "1.0.333",
+  "notes": "- Ana sayfa Sms Onay bölümü telefon ve tablette masaüstü düzeninde: telefon ekranı solda, adımlar yanında; bölüm yarı yarıya kısaldı.\n- Üyelik Tanıtımı sıfırdan: üye olmanın kazançları (yükleme bonusu, saklanan kodlar, sipariş takibi, referans kazancı, ücretsiz analiz, siparişe özel destek; yalnızca mağazada açık olanlar), örnek hesap ekranı ve Ücretsiz Üye Ol düğmesi. Giriş yapmış müşteriye Hesabına Git ve Bakiye Yükle gösterilir.",
+  "publishedAt": "2026-11-17T08:55:09.434Z"
 }
