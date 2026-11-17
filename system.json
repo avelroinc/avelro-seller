@@ -1,5 +1,5 @@
 {
-  "version": "1.0.335",
-  "notes": "- Yönetim paneli giriş ekranı kısaldı: masaüstünde kart ekranı boydan boya kaplamaz, içeriği kadar uzar ve dikeyde ortalanır; 1366x768 ekranda kaydırmadan sığar.\n- Giriş alanlarında etiket kutunun içinde küçük yazı; alanlar ve düğmeler daha kısa.",
-  "publishedAt": "2026-11-17T10:15:52.442Z"
+  "version": "1.0.336",
+  "notes": "- Ana sayfa slaytları ve hızlı sipariş kutusu eşleşti: slayt elle değiştirilince sekme, sekme değiştirilince slayt aynı konuya geçer. Otomatik geçiş sekmeyi değiştirmez; sekme seçilince ya da kutuya dokunulunca otomatik geçiş durur ve yapılan seçim korunur.",
+  "publishedAt": "2026-11-17T11:06:32.290Z"
 }
