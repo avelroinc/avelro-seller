@@ -1,5 +1,5 @@
 {
-  "version": "1.0.339",
-  "notes": "- Sosyal medya hizmet sayfalarının altına karşılaştırma tablosu (Neden Biz?): mağaza ile diğer siteler madde madde; mağaza sütunu vurgulu.\n- Ayarlar › Karşılaştırma Tablosu: tabloyu aç / kapa, başlık yazıları ve satırlar (ad, simge, Var / Kısmen / Yok; sırala, ekle, sil; en fazla 15 satır).",
-  "publishedAt": "2026-11-17T13:00:59.952Z"
+  "version": "1.0.340",
+  "notes": "- Karşılaştırma tablosu her hizmette ayrı: hizmet düzenleme sayfasında o hizmetin tablosu (göster / gizle, yazılar, satırlar); başlık hizmet adını taşır. Ana sayfanın tablosu ayrı (Site › Ana Sayfa’da yeni bölüm). Ayarlar’daki genel bölüm kaldırıldı.\n- Yeni düzen: tam genişlikte tablo ve sağında yazı alanı (üst etiket, başlık, açıklama, not; telefonda gizli, tablette tablonun üstünde); başlık satırı ayrı kutucuklar, mağaza sütunu öne çıkar; işaretler Var, Belirsiz, Yok ve Riskli.",
+  "publishedAt": "2026-11-17T13:48:20.826Z"
 }
