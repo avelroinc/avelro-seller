@@ -1,5 +1,5 @@
 {
-  "version": "1.0.341",
-  "notes": "- Karşılaştırma tablosunda başlık diğer bölümler gibi üstte ortalı; yanındaki yazı tablonun üstüyle aynı hizadan başlar. Sütun başlıkları büyük harfle: ÖZELLİKLER ve DİĞERLERİ.\n- Kullanılmayan eski stil kuralları temizlendi (tema dosyası küçüldü; görünüm değişmedi).",
-  "publishedAt": "2026-11-17T15:32:13.434Z"
+  "version": "1.0.342",
+  "notes": "- Karşılaştırma tablosunda başlığın altında kısa açıklama (hizmet sayfasında hizmet adıyla; telefonda da görünür). Düzenleyicide yeni Kısa Açıklama alanı; yandaki uzun metin Yan Yazı adını aldı.",
+  "publishedAt": "2026-11-17T16:26:15.717Z"
 }
