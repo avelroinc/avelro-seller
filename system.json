@@ -1,5 +1,5 @@
 {
-  "version": "1.0.336",
-  "notes": "- Ana sayfa slaytları ve hızlı sipariş kutusu eşleşti: slayt elle değiştirilince sekme, sekme değiştirilince slayt aynı konuya geçer. Otomatik geçiş sekmeyi değiştirmez; sekme seçilince ya da kutuya dokunulunca otomatik geçiş durur ve yapılan seçim korunur.",
-  "publishedAt": "2026-11-17T11:06:32.290Z"
+  "version": "1.0.337",
+  "notes": "- Platform simgeleri gerçek marka logoları oldu (Simple Icons); Threads, Kick, Discord, Snapchat, Pinterest, Reddit, SoundCloud, WhatsApp, Bluesky, Google Haritalar, Trustpilot, Steam ve 30’dan fazla platform daha tanınır ve kendi marka rengini alır. Twitter X logosuyla görünür.",
+  "publishedAt": "2026-11-17T11:52:54.093Z"
 }
