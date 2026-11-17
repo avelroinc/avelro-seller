@@ -1,5 +1,5 @@
 {
-  "version": "1.0.334",
-  "notes": "- Telefonda ana sayfa kutuları düzenlendi: Sms Onay adımlarında numara ortalı, uygulamalar eşit genişlikte üç sütunlu ızgarada; Üyelik Tanıtımı kazançlarında simge üstte, başlık ortalı.\n- Telefonda platform kutularında simge, ad ve etiket ortada; ok kutunun en altında.",
-  "publishedAt": "2026-11-17T09:59:37.391Z"
+  "version": "1.0.335",
+  "notes": "- Yönetim paneli giriş ekranı kısaldı: masaüstünde kart ekranı boydan boya kaplamaz, içeriği kadar uzar ve dikeyde ortalanır; 1366x768 ekranda kaydırmadan sığar.\n- Giriş alanlarında etiket kutunun içinde küçük yazı; alanlar ve düğmeler daha kısa.",
+  "publishedAt": "2026-11-17T10:15:52.442Z"
 }
