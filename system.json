@@ -1,5 +1,5 @@
 {
-  "version": "1.0.331",
-  "notes": "- Ana sayfa slaytları telefonda yeni düzende: yazı solda, logolar ya da görsel sağda; slayt alanı kısaldı, hızlı sipariş kutusu ekrana daha erken girer.\n- Slaytın sağında ve solunda büyük, soluk oklar.\n- Telefonda slaytlar parmakla kaydırılır; sağa kaydırma artık sayfada geri gitmeye dönüşmez.",
-  "publishedAt": "2026-11-17T07:36:32.690Z"
+  "version": "1.0.332",
+  "notes": "- Ana sayfa Profil Analizi bölümü telefon ve tablette masaüstü görünümüne sığdırıldı: form tek satır, örnek analiz kartı görünür; tablette açıklama solda, kart sağda.",
+  "publishedAt": "2026-11-17T08:08:06.817Z"
 }
