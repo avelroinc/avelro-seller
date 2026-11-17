@@ -1,5 +1,5 @@
 {
-  "version": "1.0.337",
-  "notes": "- Platform simgeleri gerçek marka logoları oldu (Simple Icons); Threads, Kick, Discord, Snapchat, Pinterest, Reddit, SoundCloud, WhatsApp, Bluesky, Google Haritalar, Trustpilot, Steam ve 30’dan fazla platform daha tanınır ve kendi marka rengini alır. Twitter X logosuyla görünür.",
-  "publishedAt": "2026-11-17T11:52:54.093Z"
+  "version": "1.0.338",
+  "notes": "- Sms Onay’da numara alımı bot doğrulamalı (müşteri beklemez, doğrulama arka planda çözülür); doğrulamasız istek reddedilir, bakiye düşmez.\n- Kötüye kullanıma karşı sınırlar: müşteri başına 10 dakikada 10 ve günde 40 numara, aynı adresten saatte 60 numara; ülke listesi ve numara yoklaması da sınırlı.",
+  "publishedAt": "2026-11-17T12:27:54.855Z"
 }
