@@ -1,5 +1,5 @@
 {
-  "version": "1.0.349",
-  "notes": "- Günlük Çark adı Hediye Çarkı oldu (menü, Hesabım, çark penceresi, yönetim). Yeni adresler /hediye-carki ve /admin/hediye-carki; eski adresler yönlenir, menüdeki eski öğe kendiliğinden yeni adla görünür.\n- Hediye Çarkı etkinlik takvimi: Pazarlama › Hediye Çarkı › Etkinlik Takvimiyle Yayınla açılınca çark yalnızca planlanan etkinliklerin başlangıç ve bitiş saatleri arasında görünür (Türkiye saati, en fazla 20 etkinlik; her birinde Şu An Aktif / Planlandı / Bitti durumu). Çark penceresinde etkinlik adı ve bitiş tarihi gösterilir.",
-  "publishedAt": "2026-11-18T12:43:15.967Z"
+  "version": "1.0.350",
+  "notes": "- Hediye Çarkı sonuç ekranı düzenlendi: ödül, kupon kodu (Kopyala düğmesiyle) ve açıklama tek kartta; Sepete Git ve diğer düğmeler, sayaç ve kurallar aynı genişlikte hizalı.",
+  "publishedAt": "2026-11-18T14:07:24.100Z"
 }
