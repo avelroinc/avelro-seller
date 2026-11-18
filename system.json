@@ -1,5 +1,5 @@
 {
-  "version": "1.0.345",
-  "notes": "- Otomatik beğeni siparişi: sağlayıcıda abonelik türündeki hizmetlerde sipariş kartı kullanıcı adı, gönderi başına beğeni, gönderi sayısı ve gecikme ister; fiyat = miktarın fiyatı × gönderi sayısı. Bilgiler sağlayıcıya otomatik beğeni olarak gönderilir; Active / Paused / Expired durumları tanınır.\n- Menüdeki Günlük Çark için yeni şans çarkı simgesi ve dikkat çeken efekt (renkli kutu, dönen çark, parlama).\n- Telefon menüsünde koyu / açık mod düğmesi profil düğmesiyle aynı zeminde.\n- Kullanıcı adı isteyen hizmetlerde Son Kullandıkların listesine telefon numaraları karışmıyor.",
-  "publishedAt": "2026-11-18T10:13:51.166Z"
+  "version": "1.0.346",
+  "notes": "- Hız: menüdeki Günlük Çark efekti her sayfada tarayıcıyı saniyede 60 kez yeniden çizdiriyordu; efekt artık yalnızca ekran kartında çalışan hareketlerle yapılıyor (görünüm aynı, boştaki işlemci yükü yaklaşık 9 kat az).",
+  "publishedAt": "2026-11-18T11:11:20.329Z"
 }
