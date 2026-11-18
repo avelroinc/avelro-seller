@@ -1,5 +1,5 @@
 {
-  "version": "1.0.343",
-  "notes": "- Günlük Çark: Hesabım üstündeki Günlük Çark düğmesiyle açılan pencere (arka plan bulanıklaşır). Üye günde bir kez çevirir; sonucu sunucu seçer. Ödül bakiye, üyeye tanımlı tek kullanımlık indirim kuponu ya da boş olabilir. Telefon doğrulaması ve isteğe bağlı sipariş şartı, günlük bakiye bütçesi. Yönetim › Pazarlama › Günlük Çark: dilimler, ağırlıklar, önizleme ve son çevirmeler.\n- Hediye Kartı: Hesabım › Hediye Kartı’nda kod kullanma ve yüklenen bakiyeden kart oluşturma (bonus ve ödüller hediye edilemez), WhatsApp ile paylaşma, kullanılmamış kartı iptal etme. Yönetim › Pazarlama › Hediye Kartları: ayarlar, toplu kod üretme, tüm kartlar.\n- Giriş ekranında Şifremi Unuttum bağlantısı şifre alanının altına taşındı.",
-  "publishedAt": "2026-11-17T21:37:03.370Z"
+  "version": "1.0.344",
+  "notes": "- Hesabım kutulu düzene geçti: içerik soldaki menüyle aynı çerçevede tek panel, üstte başlık şeridi; paneldeki kartlar bir ton yumuşak zeminde.\n- Günlük Çark menüye eklenebilir (Site › Menüler › Öğe Ekle › Günlük Çark): tıklanınca bulunulan sayfada çark penceresi açılır; giriş yapılmamışsa üye olma uyarısı çıkar.\n- Koyu / açık mod geçişi efektli: yeni renkler düğmeden dairesel olarak yayılır.\n- Hediye Kartları ve Günlük Çark yönetim sayfalarında yerleşim düzeltmeleri (tablo sütunları, telefonda dilim düzenleyici).\n- Durum etiketleri ve uyarılar koyu / açık temada daha okunur; telefonda sipariş detayı ve destek talebi başlığı düzenlendi.\n- Alt bilgideki sekmeler geniş ekranda taşmıyor, tablette yedinci sekme doğru yerde.",
+  "publishedAt": "2026-11-18T09:08:44.706Z"
 }
