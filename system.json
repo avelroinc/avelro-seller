@@ -1,5 +1,5 @@
 {
-  "version": "1.0.352",
-  "notes": "- Raporlar: Hediye Çarkı'ndan çıkan bakiye ve kullanılan mağaza hediye kartları Hediye Bakiye'ye dahil (net kârdan düşülür). Yeni \"Hediye Çarkı ve Hediye Kartları\" bölümü: çevirme, verilen bakiye ve kupon, çark kuponuyla ödenen siparişler, üretilen / kullanılan mağaza kartları ve müşterilerin oluşturduğu kartlar (önceki dönemle karşılaştırmalı).\n- Yönetim paneli: Canlı Destek telefon ve tablet menüsünden de kaldırıldı; üst çubukta duruyor.",
-  "publishedAt": "2026-11-18T15:59:19.576Z"
+  "version": "1.0.353",
+  "notes": "- Ücretsiz Araçlar düzeltmeleri: Profil Analizi'nde telefonda bot doğrulama satırı ekran dışına taşmıyor; not kutularındaki simgeler satıra hizalı.\n- Karakter Sayacı: sınır çubuklarının arkasında iz var; telefonda 5'li özet 3 + 2 dizilir.\n- Takibi Bırakanlar: telefonda 3'lü özet tek satırda. Etkileşim Oranı: son alan tam satır.",
+  "publishedAt": "2026-11-18T17:26:43.402Z"
 }
