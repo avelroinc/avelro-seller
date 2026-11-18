@@ -1,5 +1,5 @@
 {
-  "version": "1.0.353",
-  "notes": "- Ücretsiz Araçlar düzeltmeleri: Profil Analizi'nde telefonda bot doğrulama satırı ekran dışına taşmıyor; not kutularındaki simgeler satıra hizalı.\n- Karakter Sayacı: sınır çubuklarının arkasında iz var; telefonda 5'li özet 3 + 2 dizilir.\n- Takibi Bırakanlar: telefonda 3'lü özet tek satırda. Etkileşim Oranı: son alan tam satır.",
-  "publishedAt": "2026-11-18T17:26:43.402Z"
+  "version": "1.0.354",
+  "notes": "- Ana sayfa Popüler Oyunlar (telefon): yana kayan şerit yerine tek kart boyunda deste. Önde bir oyun, arkasında sıradaki iki oyun alt kenarlarıyla görünür; deste içinde dikey kaydırınca sıradaki kart öne gelir, son karttan sonra sayfa kaymaya devam eder. Tablet ve masaüstünde ızgara aynı.",
+  "publishedAt": "2026-11-18T18:36:45.590Z"
 }
