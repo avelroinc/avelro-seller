@@ -1,5 +1,5 @@
 {
-  "version": "1.0.346",
-  "notes": "- Hız: menüdeki Günlük Çark efekti her sayfada tarayıcıyı saniyede 60 kez yeniden çizdiriyordu; efekt artık yalnızca ekran kartında çalışan hareketlerle yapılıyor (görünüm aynı, boştaki işlemci yükü yaklaşık 9 kat az).",
-  "publishedAt": "2026-11-18T11:11:20.329Z"
+  "version": "1.0.347",
+  "notes": "- Menüdeki Günlük Çark simgesinde tek efekt: yalnızca çark yavaşça döner (parlama, halka ve kırmızı nokta kaldırıldı).",
+  "publishedAt": "2026-11-18T12:01:50.319Z"
 }
