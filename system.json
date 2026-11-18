@@ -1,5 +1,5 @@
 {
-  "version": "1.0.347",
-  "notes": "- Menüdeki Günlük Çark simgesinde tek efekt: yalnızca çark yavaşça döner (parlama, halka ve kırmızı nokta kaldırıldı).",
-  "publishedAt": "2026-11-18T12:01:50.319Z"
+  "version": "1.0.348",
+  "notes": "- Otomatik beğeni sipariş kartı yeni düzende: kullanıcı adı tam satır; Beğeni, Gönderi ve Gecikme yan yana (tablette ikili, telefonda alt alta); altta hesap ve vurgulu toplamla özet şeridi.",
+  "publishedAt": "2026-11-18T12:14:00.425Z"
 }
