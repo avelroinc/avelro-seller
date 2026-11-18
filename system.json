@@ -1,5 +1,5 @@
 {
-  "version": "1.0.354",
-  "notes": "- Ana sayfa Popüler Oyunlar (telefon): yana kayan şerit yerine tek kart boyunda deste. Önde bir oyun, arkasında sıradaki iki oyun alt kenarlarıyla görünür; deste içinde dikey kaydırınca sıradaki kart öne gelir, son karttan sonra sayfa kaymaya devam eder. Tablet ve masaüstünde ızgara aynı.",
-  "publishedAt": "2026-11-18T18:36:45.590Z"
+  "version": "1.0.355",
+  "notes": "- Hizmet ve platform sayfalarına animasyonlu \"Nasıl Sipariş Verilir?\" adımları: adımlar sırayla ilerler, telefonda da masaüstündeki gibi tek sıra görünür.\n- Yönetim Ana Sayfa Giriş Alanı sekmeli oldu: Sosyal Medya, E-Pin, Lisans, Sms Onay, Bakiye ve Ayarlar sekmeleri; ilk sekme seçili açılır.",
+  "publishedAt": "2026-11-18T19:56:25.110Z"
 }
