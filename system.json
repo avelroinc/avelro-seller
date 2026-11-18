@@ -1,5 +1,5 @@
 {
-  "version": "1.0.355",
-  "notes": "- Hizmet ve platform sayfalarına animasyonlu \"Nasıl Sipariş Verilir?\" adımları: adımlar sırayla ilerler, telefonda da masaüstündeki gibi tek sıra görünür.\n- Yönetim Ana Sayfa Giriş Alanı sekmeli oldu: Sosyal Medya, E-Pin, Lisans, Sms Onay, Bakiye ve Ayarlar sekmeleri; ilk sekme seçili açılır.",
-  "publishedAt": "2026-11-18T19:56:25.110Z"
+  "version": "1.0.356",
+  "notes": "- Sipariş alanındaki profil fotoğrafı şeridi yenilendi: \"Örnek Hesaplar\" başlığı ve \"Temsilî\" etiketi kaldırıldı; daha büyük, hikâye halkalı ve aralıklı portreler kartın tam genişliğinde kayar.",
+  "publishedAt": "2026-11-18T20:19:16.581Z"
 }
