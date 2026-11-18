@@ -1,5 +1,5 @@
 {
-  "version": "1.0.350",
-  "notes": "- Hediye Çarkı sonuç ekranı düzenlendi: ödül, kupon kodu (Kopyala düğmesiyle) ve açıklama tek kartta; Sepete Git ve diğer düğmeler, sayaç ve kurallar aynı genişlikte hizalı.",
-  "publishedAt": "2026-11-18T14:07:24.100Z"
+  "version": "1.0.351",
+  "notes": "- Hesabım: Hediye Çarkı düğmesi, Genel Bakış'taki çark kutusu ve alttaki hizmet düğmeleri kaldırıldı; üst karttaki Sepetim düğmesi kaldırıldı. Çark menüdeki Hediye Çarkı bağlantısıyla açılır.\n- Hesabım: telefonu doğrulanmış hesapta adın yanında onay işareti; \"Telefon Doğrulandı\" yazısı kaldırıldı.\n- Hediye Çarkı penceresi: geri sayım \"Çevirme Hakkının Yenilenmesine 05:54:20 Kaldı.\" şeklinde sade kart; etkinlik etiketi \"Etkinlik … Tarihinde Bitiyor!\".\n- Yönetim paneli: koyu / açık mod geçişinde yan menüler artık ortayla birlikte değişiyor.",
+  "publishedAt": "2026-11-18T15:24:01.789Z"
 }
