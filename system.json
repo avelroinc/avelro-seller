@@ -1,5 +1,5 @@
 {
-  "version": "1.0.356",
-  "notes": "- Sipariş alanındaki profil fotoğrafı şeridi yenilendi: \"Örnek Hesaplar\" başlığı ve \"Temsilî\" etiketi kaldırıldı; daha büyük, hikâye halkalı ve aralıklı portreler kartın tam genişliğinde kayar.",
-  "publishedAt": "2026-11-18T20:19:16.581Z"
+  "version": "1.0.357",
+  "notes": "- Planlı Teslimat: hizmet düzenlemesinden hizmet başına açılır; açık hizmetlerde müşteri sipariş verirken gün ve saat seçer (Türkiye saati, en erken 15 dakika, en geç 30 gün sonrası). Ödenen sipariş o saatte sağlayıcıya otomatik gönderilir; bekleyen planlı siparişler manuel işlenecekler arasına girmez.\n- Sipariş kutusunda Planlı Teslimat anahtarı bildirim izni anahtarıyla aynı görünümde (Açık / Kapalı); ek hizmetlerle arasındaki boşluk düzeltildi.\n- Alt bilgi, tablet: masaüstündeki gibi tek sıra sekme çubuğu; puan rozetleri genişliğe göre üç sütun ya da alt alta.\n- Kullanılmayan eski CSS kuralları temizlendi.",
+  "publishedAt": "2026-11-18T21:16:23.861Z"
 }
