@@ -1,5 +1,5 @@
 {
-  "version": "1.0.371",
-  "notes": "- Sepetten çıkarma onaylı: sepet sayfasında ürün ve Fırsat Köşesi kombini, alt menüdeki Sepetim'de ürün çıkarılmadan önce Sepetten Çıkarılsın mı? sorulur.",
-  "publishedAt": "2026-11-19T16:05:24.350Z"
+  "version": "1.0.372",
+  "notes": "- Canlı destek: Hediye Çarkı hatırlatma balonu (sepet hatırlatmasıyla aynı); üyede bugünkü hakkı varsa, misafirde üye olup çevirmeye çağırır.\n- Sepet satırı hizası: onay kutusu, ürün adı, tutar ve çöp kutusu aynı eksende.",
+  "publishedAt": "2026-11-19T18:19:57.794Z"
 }
