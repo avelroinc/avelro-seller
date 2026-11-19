@@ -1,5 +1,5 @@
 {
-  "version": "1.0.363",
-  "notes": "- Ana sayfa hızı (LCP/FCP): giriş görseli sayfa başlığında yüksek öncelikle istenir; telefonda ekrana göre küçültülmüş WebP kopyası indirilir (yüklenen görseller 480/768/1080/1280 px kopyalarıyla sunulur).\n- Giriş alanındaki diğer slaytların görselleri sayfa yüklendikten sonra indirilir; ilk görüntüyle yarışmaz.\n- Ana sayfa her sayfa açılışında arka planda yeniden indirilmez; bağlantının üzerine gelince hazırlanır.",
-  "publishedAt": "2026-11-19T08:20:27.882Z"
+  "version": "1.0.364",
+  "notes": "- Yakında Satışta: sosyal medya hizmetleri, lisans / yazılım ürünleri ve E-Pin oyunları için yeni ayar. Açıkken ürün sayfası bulanık görünür, üstünde Yakında Satışta! kartı durur; kartlarda fiyat yerine Yakında yazar, ana sayfa vitrinlerinde ve hızlı siparişte yer almaz, sipariş alınmaz.",
+  "publishedAt": "2026-11-19T10:47:57.556Z"
 }
