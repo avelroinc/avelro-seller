@@ -1,5 +1,5 @@
 {
-  "version": "1.0.359",
-  "notes": "- Tüm Hizmetler ve Site Haritası giriş alanındaki sayılar (Hizmet, Platform, Sayfa, Bölüm) büyük kutular yerine tek satırlık küçük rozet olarak gösteriliyor; köşeler tema köşe ayarını izler.",
-  "publishedAt": "2026-11-19T04:47:06.857Z"
+  "version": "1.0.360",
+  "notes": "- Tüm Hizmetler sayfası yalnızca sosyal medya hizmetlerini gösterir; lisans, yazılım, e-pin ve Sms onay kendi sayfalarında.\n- Planlı Teslimat, Instagram Gönderi Seç modunda da kullanılabilir; seçilen her gönderi seçilen başlangıç zamanıyla sepete eklenir.\n- Güven satırları (Şifre İstemez, Dakikalar İçinde Başlar, Güvenli Ödeme ve benzerleri): anlamlı simgeler, yeşil zeminli küçük kare kutu.\n- Tarayıcı kayıtlı kullanıcı adı / şifreyi doldurduğunda girişin arkasında beliren renkli şerit kaldırıldı.",
+  "publishedAt": "2026-11-19T05:52:11.867Z"
 }
