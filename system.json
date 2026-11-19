@@ -1,5 +1,5 @@
 {
-  "version": "1.0.360",
-  "notes": "- Tüm Hizmetler sayfası yalnızca sosyal medya hizmetlerini gösterir; lisans, yazılım, e-pin ve Sms onay kendi sayfalarında.\n- Planlı Teslimat, Instagram Gönderi Seç modunda da kullanılabilir; seçilen her gönderi seçilen başlangıç zamanıyla sepete eklenir.\n- Güven satırları (Şifre İstemez, Dakikalar İçinde Başlar, Güvenli Ödeme ve benzerleri): anlamlı simgeler, yeşil zeminli küçük kare kutu.\n- Tarayıcı kayıtlı kullanıcı adı / şifreyi doldurduğunda girişin arkasında beliren renkli şerit kaldırıldı.",
-  "publishedAt": "2026-11-19T05:52:11.867Z"
+  "version": "1.0.361",
+  "notes": "- Ürün başına Aramalarda Gizle (Google Görünümü): hizmet, lisans / yazılım, e-pin oyunu ve Sms Onay uygulaması arama motorlarından gizlenebilir; sayfa noindex alır, site haritası ve llms.txt'den çıkar, sitede satılmaya devam eder.\n- Kampanya bandı: uzun süreli kampanyada telefonda sayaç kartın dışına taşmıyor; sığmazsa alta iner. Dar tablette bant iki satır.\n- Kampanya bandı sayacının kutu çerçevesi koyu temada siyah görünmüyor.",
+  "publishedAt": "2026-11-19T07:16:37.200Z"
 }
