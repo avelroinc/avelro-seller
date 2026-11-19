@@ -1,5 +1,5 @@
 {
-  "version": "1.0.367",
-  "notes": "- Karşılaştırma tablosu: başlık kutuları sütunlarla hizalı; mağaza başlığı alttaki sütunla aynı genişlikte ve çizgileri aynı piksele oturur. Telefonda dokunulan satır gri kalmaz.",
-  "publishedAt": "2026-11-19T13:12:27.064Z"
+  "version": "1.0.368",
+  "notes": "- Planlı Teslimat: başlangıç zamanını bekleyen sipariş Zamanını Bekliyor olarak gösterilir (Hesabım, Sipariş Sorgula, yönetim). Otomatik beğeni siparişinde planlı teslimat kullanılamaz.\n- Son siparişler şeridinde planlı siparişin başlangıç zamanı gösterilmez; yerine Planlı Teslimat yazar.\n- Yönetici girişi: ekran bulanıklaşır; başarılıysa Hoş Geldiniz, başarısızsa sebebiyle Giriş Başarısız gösterilir.\n- Sepetteki Hediye Çarkı kuponları HEDİYE ÇARKI %5 İNDİRİM biçiminde.",
+  "publishedAt": "2026-11-19T13:41:16.512Z"
 }
