@@ -1,5 +1,5 @@
 {
-  "version": "1.0.366",
-  "notes": "- Google ürün verisi (Search Console uyarıları): bütün ürün sayfalarında görsel, açıklama, marka ve ürün kodu; dijital teslim için ücretsiz anında kargo ve iade politikası bilgisi (İade Koşulları bağlantısıyla); hizmetlerde teklif sayısı.\n- Lisans / yazılım ve E-Pin sayfalarında da puan yıldızları ve son onaylı yorumlar Google'a verilir (Google Görünümü › Puan Yıldızları).",
-  "publishedAt": "2026-11-19T12:05:43.676Z"
+  "version": "1.0.367",
+  "notes": "- Karşılaştırma tablosu: başlık kutuları sütunlarla hizalı; mağaza başlığı alttaki sütunla aynı genişlikte ve çizgileri aynı piksele oturur. Telefonda dokunulan satır gri kalmaz.",
+  "publishedAt": "2026-11-19T13:12:27.064Z"
 }
