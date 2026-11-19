@@ -1,5 +1,5 @@
 {
-  "version": "1.0.361",
-  "notes": "- Ürün başına Aramalarda Gizle (Google Görünümü): hizmet, lisans / yazılım, e-pin oyunu ve Sms Onay uygulaması arama motorlarından gizlenebilir; sayfa noindex alır, site haritası ve llms.txt'den çıkar, sitede satılmaya devam eder.\n- Kampanya bandı: uzun süreli kampanyada telefonda sayaç kartın dışına taşmıyor; sığmazsa alta iner. Dar tablette bant iki satır.\n- Kampanya bandı sayacının kutu çerçevesi koyu temada siyah görünmüyor.",
-  "publishedAt": "2026-11-19T07:16:37.200Z"
+  "version": "1.0.362",
+  "notes": "- Kampanya bandı sayacı yeni stil: ayrı kutular yerine tek parça sayaç şeridi; büyük sayılar, altında küçük birim, saat:dakika:saniye arasında iki nokta, günden sonra ince ayraç. Telefonda kupon kodunun altında tam genişlik.",
+  "publishedAt": "2026-11-19T07:48:43.039Z"
 }
