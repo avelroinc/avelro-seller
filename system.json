@@ -1,5 +1,5 @@
 {
-  "version": "1.0.358",
-  "notes": "- Kullanılmayan sınıflara bağlı CSS seçici parçaları temizlendi; mağaza ve yönetim panelinin görünümü değişmedi.",
-  "publishedAt": "2026-11-19T00:11:41.624Z"
+  "version": "1.0.359",
+  "notes": "- Tüm Hizmetler ve Site Haritası giriş alanındaki sayılar (Hizmet, Platform, Sayfa, Bölüm) büyük kutular yerine tek satırlık küçük rozet olarak gösteriliyor; köşeler tema köşe ayarını izler.",
+  "publishedAt": "2026-11-19T04:47:06.857Z"
 }
