@@ -1,5 +1,5 @@
 {
-  "version": "1.0.370",
-  "notes": "- Raporlar sayfası yeniden düzenlendi: üstte kârlılık paneli (net kâr ve Ciro Nereye Gitti? dağılımı), özet kutuları ve grafik; Hesaplar, Satışlar, Giderler ve Ödüller grupları; kalemlerde emoji, hizalı tablo başlıkları.\n- Onay ve bildirim pencerelerinde (bir ya da iki düğmeli) düğmeler yazının sağında aynı satırda; ayrı alt şerit ve kapat (×) yok. Yönetimde soru silme onayı da aynı pencerede.",
-  "publishedAt": "2026-11-19T15:38:47.626Z"
+  "version": "1.0.371",
+  "notes": "- Sepetten çıkarma onaylı: sepet sayfasında ürün ve Fırsat Köşesi kombini, alt menüdeki Sepetim'de ürün çıkarılmadan önce Sepetten Çıkarılsın mı? sorulur.",
+  "publishedAt": "2026-11-19T16:05:24.350Z"
 }
