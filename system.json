@@ -1,5 +1,5 @@
 {
-  "version": "1.0.362",
-  "notes": "- Kampanya bandı sayacı yeni stil: ayrı kutular yerine tek parça sayaç şeridi; büyük sayılar, altında küçük birim, saat:dakika:saniye arasında iki nokta, günden sonra ince ayraç. Telefonda kupon kodunun altında tam genişlik.",
-  "publishedAt": "2026-11-19T07:48:43.039Z"
+  "version": "1.0.363",
+  "notes": "- Ana sayfa hızı (LCP/FCP): giriş görseli sayfa başlığında yüksek öncelikle istenir; telefonda ekrana göre küçültülmüş WebP kopyası indirilir (yüklenen görseller 480/768/1080/1280 px kopyalarıyla sunulur).\n- Giriş alanındaki diğer slaytların görselleri sayfa yüklendikten sonra indirilir; ilk görüntüyle yarışmaz.\n- Ana sayfa her sayfa açılışında arka planda yeniden indirilmez; bağlantının üzerine gelince hazırlanır.",
+  "publishedAt": "2026-11-19T08:20:27.882Z"
 }
