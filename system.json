@@ -1,5 +1,5 @@
 {
-  "version": "1.0.373",
-  "notes": "- Canlı destek: telefonda tam ekran, masaüstü ve tablette sağ altta büyütülmüş panel. Konular okunur kartlar. Başlıkta Alta Al (sohbet sürer, Esc) ve Kapat (süren sohbette önce sonlandırma sorar).",
-  "publishedAt": "2026-11-19T19:48:08.366Z"
+  "version": "1.0.374",
+  "notes": "- Canlı destek paneli animasyonla açılır ve kapanır (masaüstünde köşeden, telefonda alttan).\n- Canlı destek yeni görünüm: sade başlık (Alta Al ve onaylı Kapat), Siparişimi Sor dosya ekinin yanında simge, tek şeritte mesaj alanı, mağaza köşe ayarına uyan balonlar.\n- Temsilciler: ziyaretçi sohbet başında Türkçe ve Her Dil temsilcilerinden görüşeceğini seçer; yabancı dil temsilcisi yalnızca yabancı dilde yazılan mesaja yanıt verir.",
+  "publishedAt": "2026-11-19T20:26:06.701Z"
 }
