@@ -1,5 +1,5 @@
 {
-  "version": "1.0.369",
-  "notes": "- Raporlar › Servis Giderleri: DataForSEO, HikerAPI ve yapay zekâ (ChatGPT, Claude, Gemini, DeepSeek) kullanımı; dolar ücretler kullanım gününün TCMB kuruyla TL'ye çevrilip net kârdan düşülür. HikerAPI sorgu ücreti ve model token ücretleri raporda girilir.\n- Sepet özetinde ek hizmetler (Hızlı Teslimat vb.) kendi tutarıyla ayrı satırda.\n- Sepetteki kuponlar: üstte HEDİYE ÇARKI / SADAKAT İNDİRİMİ, altta kod, solda oran.",
-  "publishedAt": "2026-11-19T14:38:37.904Z"
+  "version": "1.0.370",
+  "notes": "- Raporlar sayfası yeniden düzenlendi: üstte kârlılık paneli (net kâr ve Ciro Nereye Gitti? dağılımı), özet kutuları ve grafik; Hesaplar, Satışlar, Giderler ve Ödüller grupları; kalemlerde emoji, hizalı tablo başlıkları.\n- Onay ve bildirim pencerelerinde (bir ya da iki düğmeli) düğmeler yazının sağında aynı satırda; ayrı alt şerit ve kapat (×) yok. Yönetimde soru silme onayı da aynı pencerede.",
+  "publishedAt": "2026-11-19T15:38:47.626Z"
 }
