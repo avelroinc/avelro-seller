@@ -1,5 +1,5 @@
 {
-  "version": "1.0.372",
-  "notes": "- Canlı destek: Hediye Çarkı hatırlatma balonu (sepet hatırlatmasıyla aynı); üyede bugünkü hakkı varsa, misafirde üye olup çevirmeye çağırır.\n- Sepet satırı hizası: onay kutusu, ürün adı, tutar ve çöp kutusu aynı eksende.",
-  "publishedAt": "2026-11-19T18:19:57.794Z"
+  "version": "1.0.373",
+  "notes": "- Canlı destek: telefonda tam ekran, masaüstü ve tablette sağ altta büyütülmüş panel. Konular okunur kartlar. Başlıkta Alta Al (sohbet sürer, Esc) ve Kapat (süren sohbette önce sonlandırma sorar).",
+  "publishedAt": "2026-11-19T19:48:08.366Z"
 }
