@@ -1,5 +1,5 @@
 {
-  "version": "1.0.380",
-  "notes": "- Ana sayfa: başlık ile giriş alanı arasındaki boşluk, sipariş şeridi ile başlık arasıyla eşit.",
-  "publishedAt": "2026-11-20T12:27:03.852Z"
+  "version": "1.0.381",
+  "notes": "- Mobil uygulama (Av/Dashboard 1.17.83) operasyon odaklı: Raporlar sekmesi, Destek Talepleri ekranı (yanıtla, kapat), Genel Bakış'ta yanıt bekleyen destek talebi sayısı; Müşteriler Daha Fazla'da.\n- Raporlar: tamamı karta iade edilen sipariş hiç satılmamış sayılır (komisyon ve KDV dahil); iade edilen sipariş zarar yazmaz.\n- Son Kullandıkların: uzun bağlantı kutuda kısalır, başlık alan başlıklarıyla aynı görünümde.",
+  "publishedAt": "2026-11-20T13:27:14.432Z"
 }
