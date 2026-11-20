@@ -1,5 +1,5 @@
 {
-  "version": "1.0.385",
-  "notes": "- Ödeme bekleme ekranında güvence kutusundaki yeşil kalkan simgesi kaldırıldı.",
-  "publishedAt": "2026-11-20T15:55:06.815Z"
+  "version": "1.0.386",
+  "notes": "- Site telefona uygulama olarak yüklenebilir (PWA): mağaza simgesiyle (favicon ya da adın baş harfi) ana ekrana eklenir, tam ekran açılır.\n- Telefonda ve tablette altta \"Uygulamayı Yükle\" önerisi; iPhone'da Ana Ekrana Ekle adımları alttan açılan kartta.\n- İnternet yokken \"İnternet Bağlantısı Yok\" sayfası; bağlantı gelince sayfa kendiliğinden yenilenir.\n- Tarayıcı ve uygulama durum çubuğu sitenin zemin rengini alır (koyu modda koyu).",
+  "publishedAt": "2026-11-20T16:37:03.204Z"
 }
