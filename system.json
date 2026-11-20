@@ -1,5 +1,5 @@
 {
-  "version": "1.0.375",
-  "notes": "- Kod temizliği: kullanılmayan eski arayüz bileşenleri, yalnızca onların kullandığı bağımlılıklar ve kullanılmayan tema stilleri kaldırıldı.\n- Hoş geldin bakiyesi tabloları silindi; eski hoş geldin yüklemeleri finans raporunda hediye bakiye sayılmaya devam eder.",
-  "publishedAt": "2026-11-20T06:27:40.774Z"
+  "version": "1.0.376",
+  "notes": "- Sepet kuponları: en az sepet tutarı kodun yanında rozet olarak (MİN: 100,00 ₺); sepet tutarı yetmezken rozet uyarı renginde.\n- Sepet: telefonda ürün adının başında hizmetin logosu.\n- Alttaki Sepetim paneli Fırsat Köşesi kombinini adı ve indirimli tutarıyla listeler; toplam kombini de içerir.",
+  "publishedAt": "2026-11-20T08:01:19.882Z"
 }
