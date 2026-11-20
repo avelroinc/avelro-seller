@@ -1,5 +1,5 @@
 {
-  "version": "1.0.386",
-  "notes": "- Site telefona uygulama olarak yüklenebilir (PWA): mağaza simgesiyle (favicon ya da adın baş harfi) ana ekrana eklenir, tam ekran açılır.\n- Telefonda ve tablette altta \"Uygulamayı Yükle\" önerisi; iPhone'da Ana Ekrana Ekle adımları alttan açılan kartta.\n- İnternet yokken \"İnternet Bağlantısı Yok\" sayfası; bağlantı gelince sayfa kendiliğinden yenilenir.\n- Tarayıcı ve uygulama durum çubuğu sitenin zemin rengini alır (koyu modda koyu).",
-  "publishedAt": "2026-11-20T16:37:03.204Z"
+  "version": "1.0.387",
+  "notes": "- Shopier sayfasında mağaza kartı: Shopier mağazanın kapak görseli, logosu, adı, adresi ve sloganı; Siparişe Açık / Tatilde, Herkese Açık, üyelik türü, ürün ve kategori sayısı, mağaza e-postası ve telefonu, Mağazayı Aç düğmesi (Shopier modülü 1.0.9 gerekir).\n- Shopier sayfasında paranın yolu ve Aktarım Geçmişi / İadeler tabloları Shopier'in mor tonlarında.\n- Uygulama yükleme: alttan çıkan öneri şeridi kaldırıldı; yükleme alt bilgideki Uygulamayı Yükle düğmesiyle.",
+  "publishedAt": "2026-11-20T18:14:08.904Z"
 }
