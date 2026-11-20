@@ -35,6 +35,12 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.9
+
+- Mağaza bilgileri: hesap özetinde Shopier mağazasının kullanıcı adı, adresi, başlığı, sloganı, mağaza sayfasındaki e-posta ve
+  telefon, açık / tatilde ve herkese açık durumu ile üyelik türü (bireysel / kurumsal), ad ve şirket adı (GET /shop/settings,
+  GET /shop/owner). Banka ve kişisel iletişim bilgileri aktarılmaz. Anahtarın mağaza izni yoksa bu bölüm boş kalır.
+
 ### 1.0.8
 
 - İade dekontu bilgileri: iade durumu okunurken Shopier iade kaydının türü, talep ve bankaya iletilme tarihi, tutarı ve para birimi;

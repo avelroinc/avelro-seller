@@ -185,15 +185,25 @@ async function closeOrder(config:ShopierConfig,input:CloseInput){
 
 // Account summary (1.0.7): current balance per currency (GET /balance) and the last payouts (GET /payouts, newest first: id, status
 // pending / paid, date, amount, currency, IBAN shown only by its last four digits). Read-only; failures come back as { ok:false, note }.
+// Shop (1.0.9): the shop's public settings (GET /shop/settings: username, address, title, slogan, contact shown on the shop page,
+// open / on vacation, public) and the owner's membership (GET /shop/owner: personal / business, name, company name). Bank details and
+// the owner's private contact are not passed on. Missing when the token has no shop permission.
 type BalanceRow={currency?:string;amount?:string};
 type PayoutRow={id?:string|number;status?:string;dateCreated?:string;amount?:string;currency?:string;destination?:{type?:string;iban?:string}};
+type ShopSettings={name?:string;url?:string;title?:string;slogan?:string;email?:string;phone?:string;access?:boolean;vacation?:boolean;language?:string};
+type ShopOwner={type?:string;firstName?:string;lastName?:string;company?:{name?:string}};
+const text=(v:unknown,max=200)=>typeof v==="string"?v.trim().slice(0,max):"";
 async function account(config:ShopierConfig){
- const [balance,payouts]=await Promise.all([call<BalanceRow[]>(config,"GET","/balance"),call<PayoutRow[]>(config,"GET","/payouts?limit=5&sort=dateDesc")]);
+ const [balance,payouts,settings,owner]=await Promise.all([call<BalanceRow[]>(config,"GET","/balance"),call<PayoutRow[]>(config,"GET","/payouts?limit=5&sort=dateDesc"),
+  call<ShopSettings>(config,"GET","/shop/settings").catch(()=>null),call<ShopOwner>(config,"GET","/shop/owner").catch(()=>null)]);
  if(!balance.ok)return {ok:false,note:apiError(balance.data,`Shopier bakiyesi okunamadı (HTTP ${balance.status}).`).message};
  const iban=(v:unknown)=>{const s=String(v||"").replace(/\s+/g,"");return s?`•••• ${s.slice(-4)}`:""};
  return {ok:true,
   balances:(Array.isArray(balance.data)?balance.data:[]).map(b=>({currency:String(b?.currency||"TRY"),amount:String(b?.amount??"0")})),
-  payouts:payouts.ok&&Array.isArray(payouts.data)?payouts.data.slice(0,5).map(p=>({id:String(p?.id??""),status:String(p?.status||""),date:String(p?.dateCreated||""),amount:String(p?.amount??"0"),currency:String(p?.currency||"TRY"),iban:iban(p?.destination?.iban)})):[]};
+  payouts:payouts.ok&&Array.isArray(payouts.data)?payouts.data.slice(0,5).map(p=>({id:String(p?.id??""),status:String(p?.status||""),date:String(p?.dateCreated||""),amount:String(p?.amount??"0"),currency:String(p?.currency||"TRY"),iban:iban(p?.destination?.iban)})):[],
+  shop:settings?.ok&&settings.data&&typeof settings.data==="object"?{username:text(settings.data.name,80),url:text(settings.data.url,200),title:text(settings.data.title),slogan:text(settings.data.slogan),
+   email:text(settings.data.email,120),phone:text(settings.data.phone,40),public:settings.data.access!==false,vacation:settings.data.vacation===true,language:text(settings.data.language,4),
+   ownerType:owner?.ok&&owner.data?.type==="business"?"business":owner?.ok&&owner.data?.type?"personal":"",ownerName:owner?.ok?[text(owner.data?.firstName,60),text(owner.data?.lastName,60)].filter(Boolean).join(" "):"",company:owner?.ok?text(owner.data?.company?.name):""}:null};
 }
 
 return {createPayment: async (input:PaymentInput) => createPayment(await host.configuration(),input),
