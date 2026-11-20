@@ -1,5 +1,5 @@
 {
-  "version": "1.0.382",
-  "notes": "- Ödeme bekleme ekranı sadeleşti: ödeme sayfası kendiliğinden açılmaz, müşteri Ödeme Sayfasını Aç düğmesiyle açar; kısa yönerge, \"Ödemeniz Shopier Güvencesiyle Gerçekleştirilecektir.\" satırı (Shopier logosuyla), adımlar Ödeme Sayfası, Ödeme Başladı, Sipariş Alındı; alttaki not uyarı kutusunda.\n- Başlıklar: Ödeme Bekleniyor ve Ödeme Alındı!",
-  "publishedAt": "2026-11-20T13:56:19.988Z"
+  "version": "1.0.383",
+  "notes": "- Ödeme alındıktan sonra \"Ödenen Tutar\" yazar.\n- Sipariş sonucu başlıkları baş harfleri büyük (Siparişin Alındı!).\n- Bildirim izni metni düzeltildi (yarısında bildirimi kaldırılmıştı).",
+  "publishedAt": "2026-11-20T14:11:24.815Z"
 }
