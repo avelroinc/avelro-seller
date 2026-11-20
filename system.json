@@ -1,5 +1,5 @@
 {
-  "version": "1.0.379",
-  "notes": "- E-postalar sıfırdan yeni tasarım: hareket ve emoji yok, telefonda tam uyum; her müşteri e-postasında abonelikten çıkma bağlantısı.\n- İade dekontu Shopier iade bilgileriyle (tür, tarihler, kart türü); İade Yapıldı e-postası iade bankaya iletilince gider (Shopier modülü 1.0.8).\n- Sipariş Alındı e-postasında ödeme bilgisi seçilen ödeme yoluna göre (online ödemede IBAN yok).\n- SMS: Ödeme Hatırlatma, Teslimat Hazır, İptal, İade, Bakiye şablonları; misafire de SMS; her SMS sonunda kapatma adresi.\n- Kupon adı her yerde Sadakat İndirimi; gereksiz tarayıcı bildirimleri kaldırıldı; uzun uyarı pencerelerinde düğmeler alta iner.",
-  "publishedAt": "2026-11-20T11:51:24.383Z"
+  "version": "1.0.380",
+  "notes": "- Ana sayfa: başlık ile giriş alanı arasındaki boşluk, sipariş şeridi ile başlık arasıyla eşit.",
+  "publishedAt": "2026-11-20T12:27:03.852Z"
 }
