@@ -1,5 +1,5 @@
 {
-  "version": "1.0.376",
-  "notes": "- Sepet kuponları: en az sepet tutarı kodun yanında rozet olarak (MİN: 100,00 ₺); sepet tutarı yetmezken rozet uyarı renginde.\n- Sepet: telefonda ürün adının başında hizmetin logosu.\n- Alttaki Sepetim paneli Fırsat Köşesi kombinini adı ve indirimli tutarıyla listeler; toplam kombini de içerir.",
-  "publishedAt": "2026-11-20T08:01:19.882Z"
+  "version": "1.0.377",
+  "notes": "- Sepet: ek hizmetler (Hızlı Teslimat vb.) ürün adında değil, altında rozet olarak; alttaki Sepetim panelinde de.\n- Sepete eklenince Sepete Eklendi penceresi açılır (ürün adı, Sepete Git, Alışverişe Devam).",
+  "publishedAt": "2026-11-20T08:41:48.292Z"
 }
