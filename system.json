@@ -1,5 +1,5 @@
 {
-  "version": "1.0.387",
-  "notes": "- Shopier sayfasında mağaza kartı: Shopier mağazanın kapak görseli, logosu, adı, adresi ve sloganı; Siparişe Açık / Tatilde, Herkese Açık, üyelik türü, ürün ve kategori sayısı, mağaza e-postası ve telefonu, Mağazayı Aç düğmesi (Shopier modülü 1.0.9 gerekir).\n- Shopier sayfasında paranın yolu ve Aktarım Geçmişi / İadeler tabloları Shopier'in mor tonlarında.\n- Uygulama yükleme: alttan çıkan öneri şeridi kaldırıldı; yükleme alt bilgideki Uygulamayı Yükle düğmesiyle.",
-  "publishedAt": "2026-11-20T18:14:08.904Z"
+  "version": "1.0.388",
+  "notes": "- Hizmet düzenleme sayfası üstte menüyle bölümlere ayrıldı: Genel, Paketler, Ek Hizmetler, Sağlayıcı, Karşılaştırma, Sayfa Metni, Makale, SEO. Tekrar eden başlıklar, kapat düğmesi ve durum etiketleri kaldırıldı; seçili bölüm adreste tutulur.\n- Shopier mağaza kartı için Shopier anahtarına mağaza izni gerekmez: mağaza, ödeme ürünlerinin Shopier sayfasından bulunur.",
+  "publishedAt": "2026-11-20T19:23:39.610Z"
 }
