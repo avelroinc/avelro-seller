@@ -1,5 +1,5 @@
 {
-  "version": "1.0.381",
-  "notes": "- Mobil uygulama (Av/Dashboard 1.17.83) operasyon odaklı: Raporlar sekmesi, Destek Talepleri ekranı (yanıtla, kapat), Genel Bakış'ta yanıt bekleyen destek talebi sayısı; Müşteriler Daha Fazla'da.\n- Raporlar: tamamı karta iade edilen sipariş hiç satılmamış sayılır (komisyon ve KDV dahil); iade edilen sipariş zarar yazmaz.\n- Son Kullandıkların: uzun bağlantı kutuda kısalır, başlık alan başlıklarıyla aynı görünümde.",
-  "publishedAt": "2026-11-20T13:27:14.432Z"
+  "version": "1.0.382",
+  "notes": "- Ödeme bekleme ekranı sadeleşti: ödeme sayfası kendiliğinden açılmaz, müşteri Ödeme Sayfasını Aç düğmesiyle açar; kısa yönerge, \"Ödemeniz Shopier Güvencesiyle Gerçekleştirilecektir.\" satırı (Shopier logosuyla), adımlar Ödeme Sayfası, Ödeme Başladı, Sipariş Alındı; alttaki not uyarı kutusunda.\n- Başlıklar: Ödeme Bekleniyor ve Ödeme Alındı!",
+  "publishedAt": "2026-11-20T13:56:19.988Z"
 }
