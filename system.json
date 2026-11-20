@@ -1,5 +1,5 @@
 {
-  "version": "1.0.383",
-  "notes": "- Ödeme alındıktan sonra \"Ödenen Tutar\" yazar.\n- Sipariş sonucu başlıkları baş harfleri büyük (Siparişin Alındı!).\n- Bildirim izni metni düzeltildi (yarısında bildirimi kaldırılmıştı).",
-  "publishedAt": "2026-11-20T14:11:24.815Z"
+  "version": "1.0.384",
+  "notes": "- Ödeme bekleme ekranı tablet ve masaüstünde ortada kart olarak açılır; arkada site karartılmış ve hafif bulanık görünür. Telefonda tam ekran sürer.\n- Bekleme ekranındaki üst görsel ve Ödeme Bekleniyor başlığı küçültüldü.",
+  "publishedAt": "2026-11-20T14:43:46.300Z"
 }
