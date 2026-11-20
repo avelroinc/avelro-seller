@@ -1,5 +1,5 @@
 {
-  "version": "1.0.374",
-  "notes": "- Canlı destek paneli animasyonla açılır ve kapanır (masaüstünde köşeden, telefonda alttan).\n- Canlı destek yeni görünüm: sade başlık (Alta Al ve onaylı Kapat), Siparişimi Sor dosya ekinin yanında simge, tek şeritte mesaj alanı, mağaza köşe ayarına uyan balonlar.\n- Temsilciler: ziyaretçi sohbet başında Türkçe ve Her Dil temsilcilerinden görüşeceğini seçer; yabancı dil temsilcisi yalnızca yabancı dilde yazılan mesaja yanıt verir.",
-  "publishedAt": "2026-11-19T20:26:06.701Z"
+  "version": "1.0.375",
+  "notes": "- Kod temizliği: kullanılmayan eski arayüz bileşenleri, yalnızca onların kullandığı bağımlılıklar ve kullanılmayan tema stilleri kaldırıldı.\n- Hoş geldin bakiyesi tabloları silindi; eski hoş geldin yüklemeleri finans raporunda hediye bakiye sayılmaya devam eder.",
+  "publishedAt": "2026-11-20T06:27:40.774Z"
 }
