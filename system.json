@@ -1,5 +1,5 @@
 {
-  "version": "1.0.377",
-  "notes": "- Sepet: ek hizmetler (Hızlı Teslimat vb.) ürün adında değil, altında rozet olarak; alttaki Sepetim panelinde de.\n- Sepete eklenince Sepete Eklendi penceresi açılır (ürün adı, Sepete Git, Alışverişe Devam).",
-  "publishedAt": "2026-11-20T08:41:48.292Z"
+  "version": "1.0.378",
+  "notes": "- Sepet: ek hizmet (Hızlı Teslimat vb.) rozetindeki × ile ürün sepette kalırken yalnızca ek hizmet kaldırılır; tutar yeniden hesaplanır, bağlantı korunur.",
+  "publishedAt": "2026-11-20T09:36:03.247Z"
 }
