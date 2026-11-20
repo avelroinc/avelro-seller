@@ -1,5 +1,5 @@
 {
-  "version": "1.0.388",
-  "notes": "- Hizmet düzenleme sayfası üstte menüyle bölümlere ayrıldı: Genel, Paketler, Ek Hizmetler, Sağlayıcı, Karşılaştırma, Sayfa Metni, Makale, SEO. Tekrar eden başlıklar, kapat düğmesi ve durum etiketleri kaldırıldı; seçili bölüm adreste tutulur.\n- Shopier mağaza kartı için Shopier anahtarına mağaza izni gerekmez: mağaza, ödeme ürünlerinin Shopier sayfasından bulunur.",
-  "publishedAt": "2026-11-20T19:23:39.610Z"
+  "version": "1.0.389",
+  "notes": "- Sipariş miktarı 1.000 yerine hizmetin en küçük paketiyle başlar (hizmet sayfası, ana sayfadaki hızlı sipariş, Fırsat Köşesi).\n- Otomatik paket oluşturma kaldırıldı (hizmet kartındaki Otomatik Oluştur ve listedeki Paketleri Oluştur); paketler elle eklenir.",
+  "publishedAt": "2026-11-20T19:51:21.887Z"
 }
