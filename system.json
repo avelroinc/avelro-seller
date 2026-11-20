@@ -1,5 +1,5 @@
 {
-  "version": "1.0.384",
-  "notes": "- Ödeme bekleme ekranı tablet ve masaüstünde ortada kart olarak açılır; arkada site karartılmış ve hafif bulanık görünür. Telefonda tam ekran sürer.\n- Bekleme ekranındaki üst görsel ve Ödeme Bekleniyor başlığı küçültüldü.",
-  "publishedAt": "2026-11-20T14:43:46.300Z"
+  "version": "1.0.385",
+  "notes": "- Ödeme bekleme ekranında güvence kutusundaki yeşil kalkan simgesi kaldırıldı.",
+  "publishedAt": "2026-11-20T15:55:06.815Z"
 }
