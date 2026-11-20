@@ -129,7 +129,9 @@ async function verify(config:ShopierConfig,input:{payload?:string;reference?:str
 // orderId, amount and a short note to the buyer (Shopier API). Shopier answers with a refund record whose status is pending,
 // succeeded or failed; refundStatus reads it again later. Failures come back as { ok:false, note } (never a bare error).
 type RefundInput={reference:string;productId?:string;providerOrderId?:string;amountMicros:number;full:boolean};
-type RefundRecord={id?:string|number;status?:string;total?:string;amount?:string;orderId?:string;order_id?:string;dateRefunded?:string};
+type RefundRecord={id?:string|number;type?:string;status?:string;total?:string;amount?:string;currency?:string;note?:string;orderId?:string;order_id?:string;dateCreated?:string;dateRefunded?:string};
+type Person={firstName?:string;lastName?:string};
+type RefundOrder={id?:string|number;paymentMethod?:string;installments?:boolean;dateCreated?:string;currency?:string;totals?:{total?:string};billingInfo?:Person;shippingInfo?:Person};
 const refundState=(r:RefundRecord|null)=>{const s=String(r?.status||"").toLowerCase();return s==="succeeded"||s==="success"||s==="completed"?"succeeded":s==="failed"||s==="rejected"?"failed":"pending"};
 async function refund(config:ShopierConfig,input:RefundInput){
  const ref=String(input?.reference||"").toLowerCase(),amount=(Number(input?.amountMicros)/1000000).toFixed(2);
@@ -142,11 +144,19 @@ async function refund(config:ShopierConfig,input:RefundInput){
  if(!r.ok||!r.data)return {ok:false,note:apiError(r.data,`Shopier iadeyi kabul etmedi (HTTP ${r.status}).`).message,providerOrderId:orderId};
  return {ok:true,refundId:String(r.data.id??""),status:refundState(r.data),providerOrderId:orderId,amount:String(r.data.total??r.data.amount??amount),note:`Shopier iade kaydı ${r.data.id??""} oluşturuldu.`};
 }
+// 1.0.8: the refund record's details come back too (type, request and bank submission dates, total, currency) and, once the refund
+// has succeeded, the paid order's card type, installment flag, buyer name, total and date. The host issues the refund receipt from
+// these, so it matches what Shopier shows for the refund.
 async function refundStatus(config:ShopierConfig,input:{refundId:string}){
  const id=String(input?.refundId||"");if(!ID.test(id))return {ok:false,note:"İade numarası geçersiz."};
  const r=await call<RefundRecord>(config,"GET",`/refunds/${encodeURIComponent(id)}`);
  if(!r.ok||!r.data)return {ok:false,note:`İade durumu okunamadı (HTTP ${r.status}).`};
- return {ok:true,refundId:id,status:refundState(r.data),refundedAt:r.data.dateRefunded||null};
+ const rec=r.data,status=refundState(rec),orderId=String(rec.orderId??rec.order_id??"");
+ let order:RefundOrder|null=null;
+ if(status==="succeeded"&&ID.test(orderId)){const o=await call<RefundOrder>(config,"GET",`/orders/${encodeURIComponent(orderId)}`).catch(()=>null);if(o?.ok&&o.data)order=o.data}
+ const person=order?.billingInfo?.firstName?order.billingInfo:order?.shippingInfo,buyer=[person?.firstName,person?.lastName].filter(Boolean).join(" ").trim();
+ return {ok:true,refundId:id,status,refundedAt:rec.dateRefunded||null,details:{type:String(rec.type||""),createdAt:String(rec.dateCreated||""),refundedAt:String(rec.dateRefunded||""),total:String(rec.total??rec.amount??""),currency:String(rec.currency||""),note:String(rec.note||""),orderId,
+  ...(order?{paymentMethod:String(order.paymentMethod||""),installments:Boolean(order.installments),buyer,orderTotal:String(order.totals?.total||""),orderDate:String(order.dateCreated||"")}:{})}};
 }
 const providerOrderOf=(note:string)=>note.match(/siparişi\s+([A-Za-z0-9_-]+)\s+ödendi/)?.[1]||"";
 

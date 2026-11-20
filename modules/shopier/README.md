@@ -35,6 +35,12 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürüm Notları
 
+### 1.0.8
+
+- İade dekontu bilgileri: iade durumu okunurken Shopier iade kaydının türü, talep ve bankaya iletilme tarihi, tutarı ve para birimi;
+  iade tamamlanınca ödenen siparişin kart türü, taksit bilgisi, alıcı adı, tutarı ve tarihi de döner. Sistem iade dekontunu bu
+  bilgilerle düzenler (sistem 1.0.379 ve üzeri).
+
 ### 1.0.7
 
 - Shopier hesap özeti: yönetimde Genel Bakış'ta Shopier bakiyesi ve son ödeme aktarımları (tutar, tarih,
