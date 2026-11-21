@@ -1,5 +1,5 @@
 {
-  "version": "1.0.402",
-  "notes": "- Uygulamada telefon menüsünün üstündeki boşluk en aza indi; menüdeki ayrı Uygulama Ayarları satırı kaldırıldı.\n- Uygulamada Ayarlar'ın sonunda Bu Telefon grubu: Panel Seç, Bildirimler, Görünüm, Uygulama Kilidi.\n- Sağ üstteki profil kutusu Hesabım'ı açar (uygulamada Profilim).\n- Av/Dashboard 1.18.2: sayfa geçişinde üstte yükleme çubuğu, Görünüm'deki açık / koyu tema paneli de değiştirir, Uygulama Ayarları ekranı kaldırıldı, giriş ekranında Kullanıcı Adı.",
-  "publishedAt": "2026-11-21T18:59:35.702Z"
+  "version": "1.0.403",
+  "notes": "- Yetkisiz sayfa: \"Bu Sayfayı Görmeye Yetkin Yok.\" ekranı ve Yetki Talep Et; talep ana yöneticinin ziline düşer, Ayarlar › Personel › Yetki Talepleri'nde onaylanınca bölüm personele açılır.\n- Sol menüde bütün bölümler her personelde görünür; yetkisi olmayan bölüm açılınca talep ekranı gelir.\n- Ayarlar'da yalnızca ana yöneticiye açık bölümler personele kilit ekranıyla gösterilir.\n- Butonu olmayan siparişlerde (iptal) de üstte yalnızca geri düğmesi.\n- Av/Dashboard 1.18.3: efektli yükleme çubuğu, menü açıkken geri tuşu menüyü kapatır.",
+  "publishedAt": "2026-11-21T19:28:44.546Z"
 }
