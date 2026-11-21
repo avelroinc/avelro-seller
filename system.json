@@ -1,5 +1,5 @@
 {
-  "version": "1.0.394",
-  "notes": "- E-Pin, Lisans, Yazılım ve Sms Onay genel sayfalarının metni, makalesi ve SEO ayarları Site › Sayfalar › Sistem Sayfaları'nda; katalogdaki \"… Sayfası\" düğmeleri kaldırıldı.\n- Shopier sayfasında kapak görseli yok, mağaza profil fotoğrafı tam görünür.\n- Bölüm düğmeleri kutunun dışında, küçük ve sağa yaslı.\n- Kuponlar, Kombinler, Deneme Sayfaları, Duyurular, Oyunlar, Paketler, Sağlayıcılar, Personel ve Toplu Gönderimlerde arama.",
-  "publishedAt": "2026-11-21T10:06:50.608Z"
+  "version": "1.0.395",
+  "notes": "- Sistem Güncelleme: Şimdi Güncelle'ye basınca kutu bulanıklaşır, güncelleme sürerken dönen gösterge, bitince yeşil tik.\n- Bölüm araması ve düğmeleri her sayfada aynı ölçüde; telefonda sığmayan düğme alt satırı doldurur.",
+  "publishedAt": "2026-11-21T10:28:36.620Z"
 }
