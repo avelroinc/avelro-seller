@@ -1,5 +1,5 @@
 {
-  "version": "1.0.405",
-  "notes": "- Av/Dashboard 1.18.5: koyu modda aşağı çekip yenilerken ekran beyazlamaz; yenilenirken ortada yuvarlak uygulama simgesi ve etrafında dönen çizgi.\n- Av/Dashboard 1.18.5: üstteki yükleme çizgisi ekranın tamamında değil, site genişliğinde.",
-  "publishedAt": "2026-11-21T21:34:17.734Z"
+  "version": "1.0.406",
+  "notes": "- Telefonda kart grupları (Genel Bakış, müşteri kartı, raporlar…) her satırda bir kart.\n- Telefon menüsünde alt bölüm simgeleri ana bölümlerle aynı boyutta.\n- Telefonda iki düğmeli satırlar: yazı sığmazsa düğmeler alt alta iner (E-postayı Kopyala taşması giderildi).\n- Modüller: Güncellemeleri Denetle üst şeridin sağında simge; \"Modüller Güncel\" yazısı kaldırıldı.",
+  "publishedAt": "2026-11-21T21:46:37.894Z"
 }
