@@ -1,5 +1,5 @@
 {
-  "version": "1.0.403",
-  "notes": "- Yetkisiz sayfa: \"Bu Sayfayı Görmeye Yetkin Yok.\" ekranı ve Yetki Talep Et; talep ana yöneticinin ziline düşer, Ayarlar › Personel › Yetki Talepleri'nde onaylanınca bölüm personele açılır.\n- Sol menüde bütün bölümler her personelde görünür; yetkisi olmayan bölüm açılınca talep ekranı gelir.\n- Ayarlar'da yalnızca ana yöneticiye açık bölümler personele kilit ekranıyla gösterilir.\n- Butonu olmayan siparişlerde (iptal) de üstte yalnızca geri düğmesi.\n- Av/Dashboard 1.18.3: efektli yükleme çubuğu, menü açıkken geri tuşu menüyü kapatır.",
-  "publishedAt": "2026-11-21T19:28:44.546Z"
+  "version": "1.0.404",
+  "notes": "- Sipariş iptalinde sebep zorunlu: hazır sebepler ve yazı alanı; sebep müşteriye giden iptal e-postası, SMS ve tarayıcı bildiriminde ({{sebep}}) ve siparişin Kayıtlarında görünür.\n- Kaydet artık onay işaretli düğme ve her sayfada üst şeridin sağında (Ayarlar, Hediyeler, Ana Sayfa, Menüler, Site Bilgileri, Tema, SEO); Geri Al düğmeleri ve \"Yayında\" yazıları kaldırıldı.\n- Ana Sayfa: Ana Sayfayı Aç düğmesi kaldırıldı.\n- Shopier mağaza profili başlığı yeniden düzenlendi (telefonda kaymalar giderildi).\n- Yetkisiz sayfa uyarısı ekranın ortasında, arka plan bulanık.\n- Özet kartlarındaki grafikler kaldırıldı; kullanılmayan dosya ve CSS temizlendi.\n- Av/Dashboard 1.18.4: ekranı aşağı çekince sayfa yenilenir.",
+  "publishedAt": "2026-11-21T20:53:29.872Z"
 }
