@@ -1,5 +1,5 @@
 {
-  "version": "1.0.391",
-  "notes": "- Site Bilgileri, Görünüm ve SEO Site menüsünde; sitenin Google başlığı ve açıklaması tek yerde (Site › SEO).\n- Raporlar sayfa sayfa: Özet, Net Kâr, Hesaplar, Satışlar, Giderler ve Ödüller. Hediye Çarkı, Hediye Kartları, Müşteri ve Sipariş sayfaları da bölümlere ayrıldı.\n- Telefonda 4 ve daha çok sekme açılır seçim olur.\n- Hap biçimi kaldırıldı: rozetler, sayılar, etiketler ve çubuklar sitenin köşe ayarında.",
-  "publishedAt": "2026-11-21T08:22:17.993Z"
+  "version": "1.0.392",
+  "notes": "- Bölüm başlıkları simge kutulu: başlığın solunda bölümün simgesi.\n- Yol izinde üst sayfa altı çizili bağlantı yerine küçük kutu.\n- Üyeye özel kupon tek yerden (Müşteriler › üye › Özel Kuponlar); Kuponlar sayfası Genel Kuponlar ve Üyeye Özel sekmeli.",
+  "publishedAt": "2026-11-21T08:57:03.291Z"
 }
