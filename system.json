@@ -1,5 +1,5 @@
 {
-  "version": "1.0.392",
-  "notes": "- Bölüm başlıkları simge kutulu: başlığın solunda bölümün simgesi.\n- Yol izinde üst sayfa altı çizili bağlantı yerine küçük kutu.\n- Üyeye özel kupon tek yerden (Müşteriler › üye › Özel Kuponlar); Kuponlar sayfası Genel Kuponlar ve Üyeye Özel sekmeli.",
-  "publishedAt": "2026-11-21T08:57:03.291Z"
+  "version": "1.0.393",
+  "notes": "- Shopier sayfası yenilendi: mağaza başlığı, özet kutuları, kapatılmamış sipariş uyarısı ve Aktarımlar, İadeler, Mağaza Bilgileri bölümleri.\n- Telefonda 3 ve daha çok sekme açılır menü; sayılar rozet olarak görünür.\n- Yol izinde bütün yollar kutu, bulunulan sayfa vurgu renginde.\n- Sipariş bildirimleri panelin bildirim ziline düşmez (telefon ve tarayıcıya gider).",
+  "publishedAt": "2026-11-21T09:16:52.543Z"
 }
