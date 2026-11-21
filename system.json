@@ -1,5 +1,5 @@
 {
-  "version": "1.0.400",
-  "notes": "- Sipariş detayı: üstte sipariş kodu kutusu yok; geri düğmesi ve sipariş işlemleri aynı satırda (telefonda iki sütun, alt satırlar soldan başlar).\n- Ayarlar yenilendi: kutucuklu ana sayfa (Mağaza; Ekip ve Güvenlik; Sistem), kısa adlar (Sepet, Hesabım, Personel, E-posta Sunucusu, Mobil Uygulamalar, Güncelleme), masaüstünde solda Ayarlar listesi, tablet ve telefonda üstte açılır seçim; Sepet, Hesabım, E-posta Sunucusu, Panel Adresi ve Personel'de tek Kaydet satırı.\n- İşlem Kaydı bölümü kaldırıldı.\n- Personel yetkileri menüdeki gruplarla, güncel adlar ve açıklamalarla; seçili bölüm sayısı ve Hepsini Seç / Hiçbiri çerçeveli satırda.\n- Araç satırındaki açılır seçimlerde değer dikeyde ortada.\n- Av/Dashboard 1.18.0 için: mobil uygulama bütün paneli uygulama içinde açar (uygulamadan çıkış, Uygulama Ayarları bağlantısı, panel sayfasına doğrudan açılış).",
-  "publishedAt": "2026-11-21T17:27:23.334Z"
+  "version": "1.0.401",
+  "notes": "- Telefon menüsü tek liste: bölümler aralarında çizgiyle tek çerçevede, satırlar ve simgeler küçüldü, üstteki boşluk azaldı.\n- Sipariş satırına basınca panelin özel adresine gidilir.\n- Mobil uygulama için: panel adresi uygulamaya bildirilir; uygulamada kaydırma çubukları gizli.\n- Öncelikli Kelimeler kaldırıldı (canlı destek bildirimleri artık kelimeye göre öncelikli işaretlenmez).\n- Av/Dashboard 1.18.1: sipariş bağlantıları uygulamada açılır (özel panel adresi), durum çubuğu koyu temada doğru renkte, soldan sağa çekerek ve geri tuşuyla önceki sayfaya dönülür, kaydırma çubuğu görünmez.",
+  "publishedAt": "2026-11-21T18:17:53.467Z"
 }
