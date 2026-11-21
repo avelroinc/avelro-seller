@@ -1,5 +1,5 @@
 {
-  "version": "1.0.398",
-  "notes": "- Siparişler: müşteri sütunu tek satırda \"Üye • Müşteri Adı\".\n- Siparişler ve Genel Bakış › Son Siparişler tablette iki sütunlu kart; yan yana kartların başlık, gövde ve altlığı aynı hizada. Genel Bakış'ta telefonda kartlar Siparişler sayfasındaki gibi ayrı duruyor.\n- Telefonda sayfa içi boşluklar eşit (12px).\n- Sipariş detayı: Müşteri ve Sipariş Bilgileri ayrı sekme değil, Sepet sekmesinde sepetin üstünde; üstteki Ödeme / Hazırlanıyor / Teslim ilerleyişi kaldırıldı. Dar tablette işlem düğmeleri yol izini ezmiyor.\n- Pazarlama menüsü sadeleşti: İndirimler (Kuponlar, Fırsat Köşesi), Hediyeler (Hediye Kartları, Hediye Çarkı, Ücretsiz Hizmetler), Bonus Programı, Reklam Sayfası; sayfalar üstte sekmeyle.\n- Menü adları en fazla iki kelime: Sosyal Medya, E-Pin Hizmetleri, Sms Onay, İçerik, İşlem Kaydı, Panel Adresi.",
-  "publishedAt": "2026-11-21T15:07:56.934Z"
+  "version": "1.0.399",
+  "notes": "- Katalog menüsü adları: Sosyal Medya Hizmetleri, Oyun Hizmetleri, Sms Hizmetleri (Hızlı Erişim ve klavye kısayollarında da).",
+  "publishedAt": "2026-11-21T15:46:56.877Z"
 }
