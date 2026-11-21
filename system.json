@@ -1,5 +1,5 @@
 {
-  "version": "1.0.389",
-  "notes": "- Sipariş miktarı 1.000 yerine hizmetin en küçük paketiyle başlar (hizmet sayfası, ana sayfadaki hızlı sipariş, Fırsat Köşesi).\n- Otomatik paket oluşturma kaldırıldı (hizmet kartındaki Otomatik Oluştur ve listedeki Paketleri Oluştur); paketler elle eklenir.",
-  "publishedAt": "2026-11-20T19:51:21.887Z"
+  "version": "1.0.390",
+  "notes": "- Yönetim paneli sadeleşti: Toplu E-posta, Toplu SMS ve Toplu Bildirim tek menüde (Toplu Gönderim, sekmeli); Çekim Talepleri Bonus ve Referans'ta, Shopier Ödemeler'de sekme.\n- Bildirimler tek ekranda: her olayın e-postası, SMS'i ve tarayıcı bildirimi olay olay, kanal sekmeleriyle düzenlenir.\n- Lisans, yazılım ve e-pin sayfaları hizmet sayfası gibi üstte bölüm menülü; kayıt sayfalarında tekrar eden başlık, kapat düğmesi ve durum etiketleri kaldırıldı; aynı yere giden düğmeler teke indi.\n- Açık / kapalı anahtarları yeni görünümde ve sayılarına göre yan yana; düğmeler sütunlu; her şey çerçeve içinde.\n- Telefonda panel cihaz genişliğinde açılır; sekmeler alt satıra iner, tablolar ve formlar taşmaz, Kaydet ekranın altında hep elde.",
+  "publishedAt": "2026-11-21T06:19:22.311Z"
 }
