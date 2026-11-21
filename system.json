@@ -1,5 +1,5 @@
 {
-  "version": "1.0.395",
-  "notes": "- Sistem Güncelleme: Şimdi Güncelle'ye basınca kutu bulanıklaşır, güncelleme sürerken dönen gösterge, bitince yeşil tik.\n- Bölüm araması ve düğmeleri her sayfada aynı ölçüde; telefonda sığmayan düğme alt satırı doldurur.",
-  "publishedAt": "2026-11-21T10:28:36.620Z"
+  "version": "1.0.396",
+  "notes": "- Sipariş listesi yenilendi: masaüstünde ürün adı (+N Ürün), müşterinin altında Üye / Misafir, teslim ilerleme çubuğu.\n- Telefonda her sipariş bir kart: başlıkta kod ve tutar, gövdede müşteri, durum ve ürün, altlıkta tarih, ödeme ve teslim; kartlar arasında kayma yok.",
+  "publishedAt": "2026-11-21T10:59:38.685Z"
 }
