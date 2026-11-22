@@ -1,5 +1,5 @@
 {
-  "version": "1.0.414",
-  "notes": "- Sms Onay › Satılan Uygulamalar yenilendi: eşit kutular (logo, ad, Sayfayı Düzenle), sağ üstte küçük Kaldır; kaydedilmemiş değişiklikte başlıkta uyarı ve Kaydet yalnızca o zaman açık. Telefonda iki sütun.\n- Sitedeki arama kutuları (ülke, uygulama, E-Pin): tıklayınca içte ikinci çerçeve görünmüyor; odak halkası dış kutuda.\n- Koyu temada başlığın sağında ve solunda görünen koyu şerit giderildi (Pulse 1.0.314).",
-  "publishedAt": "2026-11-22T16:01:02.910Z"
+  "version": "1.0.415",
+  "notes": "- Sipariş sayfası: üstte kod, durum ve tutar aynı satırda, altında simgeli bilgi şeridi (tarih, ürün sayısı, ödeme yöntemi). Müşteri Bilgileri kartında yalnızca iletişim ve fatura bilgisi; tekrar eden Sipariş Bilgileri kartı kaldırıldı, indirim ya da hizmet bedeli varsa Tutar dökümü.\n- Kayıtlar sekmesi yenilendi: Ödeme ve Gönderim özet kutuları, sağlayıcı kartı (sipariş no, başlangıç, kalan) ve tek zaman çizelgesi (en yenisi üstte, güne göre, Tümü / Ödeme / Sipariş).\n- Sipariş kartları (telefon, tablet): duruma göre hafif renk geçişi, müşteri başlıkta sipariş kodunun yanında (e-posta gösterilmez; misafirde ad soyad), alt satırda tarih / ödeme / teslim simgeleri, iptal sayısı kırmızı etiket; teslim çizgisi kaldırıldı.\n- \"Manuel İşlenecek\" artık kısaca \"Manuel\".",
+  "publishedAt": "2026-11-22T17:52:17.248Z"
 }
