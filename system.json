@@ -1,5 +1,5 @@
 {
-  "version": "1.0.406",
-  "notes": "- Telefonda kart grupları (Genel Bakış, müşteri kartı, raporlar…) her satırda bir kart.\n- Telefon menüsünde alt bölüm simgeleri ana bölümlerle aynı boyutta.\n- Telefonda iki düğmeli satırlar: yazı sığmazsa düğmeler alt alta iner (E-postayı Kopyala taşması giderildi).\n- Modüller: Güncellemeleri Denetle üst şeridin sağında simge; \"Modüller Güncel\" yazısı kaldırıldı.",
-  "publishedAt": "2026-11-21T21:46:37.894Z"
+  "version": "1.0.407",
+  "notes": "- Yönetim paneli daha hızlı: panel artık mağaza vitrinine ait dosyaları (canlı destek penceresi, sepet, yorum bileşenleri) yüklemez; sayfa başına JavaScript yaklaşık 100 KB azaldı.\n- Tema dosyası panelde yalnızca çekirdek ve yönetim parçalarıyla, sıkıştırılarak gelir (yaklaşık 600 KB yerine 76 KB).\n- Siparişler: müşteri kartından gelindiğinde üstte müşteri adını gösteren şerit ve Tüm Siparişler düğmesi (masaüstü, tablet, telefon).\n- Av/Dashboard 1.18.6: kayıtlı hesapla panel sunucu beklenmeden açılır, oturum arka planda doğrulanır; çerez kayıtlıysa giriş yönlendirmesi atlanır; yükleme ekranı sayfa çizilir çizilmez kalkar.",
+  "publishedAt": "2026-11-22T05:32:02.806Z"
 }
