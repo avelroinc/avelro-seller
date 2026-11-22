@@ -1,5 +1,5 @@
 {
-  "version": "1.0.419",
-  "notes": "- Av/Dashboard 1.18.11: Android ana ekran bileşeni üç boyutta. Bugün Özeti (küçük: bugünün cirosu, sipariş sayısı, bekleyen iş), Panel Özeti (orta: bu ayın cirosu, 7 günlük eğri, bekleyen işler), Panel Panosu (büyük: ortadakilere ek son 4 sipariş; kod, müşteri, tutar, durum). Bileşen seçiminde her boyutun önizlemesi görünür.\n- Bileşende yalnızca operasyonel işler: Manuel, Ödeme (havale ve bakiye onayı), Destek (yanıt bekleyen talep), Hızlandırma; Soru ve Yorum çıkarıldı. Uygulama simgesindeki sayı da bu işlerin toplamı.",
-  "publishedAt": "2026-11-22T20:45:08.433Z"
+  "version": "1.0.420",
+  "notes": "- Ödemeler › Banka Bildirimleri: bağlı telefondaki banka bildirimleri (şimdilik Enpara) gönderen adı ve tutarla bekleyen havale bildirimi, havaleli sipariş ve bakiye yüklemesiyle eşleşir. Kesin eşleşmede Otomatik Onay açıksa ödeme kendiliğinden onaylanır; diğerleri öneri olarak listelenir (onayla, başka ödeme seç, yoksay). Her bildirimde yöneticiye bildirim gider; bildirimin tam metni saklanmaz.\n- Av/Dashboard 1.18.12: Ayarlar › Bu Telefon › Banka Bildirimleri (bildirim erişimi, telefonu bağlama, Otomatik Onay; uygulama kapalıyken de çalışır, yalnızca Android). Uygulamanın kendi ekranları panelle birebir aynı ölçülerde: başlık, yol izi (ev › sayfa), zil sayısı, kartlar, aç / kapa kutuları, bilgi satırları, uyarılar, düğmeler ve alanlar.",
+  "publishedAt": "2026-11-22T21:45:41.272Z"
 }
