@@ -1,5 +1,5 @@
 {
-  "version": "1.0.411",
-  "notes": "- Sipariş bildirimlerinde Siparişi Aç düğmesi; manuel işlenecek siparişte Sağlayıcıya Gönder de (sipariş gönderme penceresi açık gelir).\n- Canlı destekte sesle yazma: uygulamada mesaj kutusunda mikrofon düğmesi.\n- Av/Dashboard 1.18.8: uygulama simgesinde bekleyen iş sayısı; simgeye basılı tutunca Sipariş Ara ve Canlı Destek kısayolları; Paylaş menüsünden gelen bağlantı ya da sipariş kodu Siparişler’de aranır.\n- Av/Tawk 1.5.7: mesaj kutusu boşken mikrofon ile sesle yazma.",
-  "publishedAt": "2026-11-22T13:03:50.812Z"
+  "version": "1.0.412",
+  "notes": "- Canlı destek Av/Dashboard’a taşındı: canlı destek bildirimleri bu uygulamaya gelir (telefonda ayrı “Canlı Destek Mesajları” kanalı), bildirimden uygulamayı açmadan Yanıtla ve Üstlen; bildirime dokununca sohbet açılır. Av/Tawk kaldırıldı.\n- Canlı Destek sayfaları masaüstü, tablet ve telefonda yeniden düzenlendi: temsilciler geniş ekranda yan yana, Hazır Yanıtlar’da geniş liste ve içerik boyunda yan kart (telefonda forma kaydırma), Ayarlar’da kartlar içerik boyunda, sesler tek sırada.\n- Konuşma listesinin üst satırı: durum seçimi solda ve geniş (aşağı oklu), Asistan, Hazır Yanıtlar ve Ayarlar simgeleri sağda aynı boyda.\n- Av/Dashboard 1.18.9.",
+  "publishedAt": "2026-11-22T14:34:04.086Z"
 }
