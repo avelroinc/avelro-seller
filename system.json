@@ -1,5 +1,5 @@
 {
-  "version": "1.0.416",
-  "notes": "- Sipariş sayfasında Ödeme Bağlantısını Paylaş (paylaş simgesi): ödeme bekleyen siparişte 48 saatlik ödeme süresi içinde görünür; müşteri bağlantıdan siparişini açıp havale ya da online ödeme yapar. Telefonda paylaşma menüsü, masaüstünde kopyalama.\n- Sistemin kendi bağlantı kısaltıcısı (/k/<kod>): ödeme bağlantıları kısa adresle verilir, ödeme süresi dolunca çalışmaz.\n- Havaleyle verilen siparişte ödeme yöntemi baştan Banka Havalesi yazılır (sonradan online ödemeye geçilirse değişir); \"Banka Transferi\" adı \"Banka Havalesi\" oldu.\n- Sepetteki Telefon Numarası Girmedin penceresi masaüstünde sıkışmıyor.\n- Av/Dashboard 1.18.10: uygulama ekranlarının üstünde panelle aynı başlık (menü, logo, Canlı Destek, Bildirimler, Profilim); Panel Seç’te sitenin logosu; yükleme simgesi halkayı dolduruyor; aşağı çekip yenilerken sayfa bulanıklaşır, gösterge üstünde.",
-  "publishedAt": "2026-11-22T18:55:44.793Z"
+  "version": "1.0.417",
+  "notes": "- Yönetim panelinde yol izi yenilendi: başta ev simgesi (Genel Bakış), ardından üst sayfalar ve bulunulan sayfa, aralarında ince ok; telefonda da tam yol.\n- Temizlik: kullanılmayan stil kuralları ve eski Av/Tawk kaynakları kaldırıldı; sistemle taşınan sürüm notları kısaltıldı (daha hafif paket).",
+  "publishedAt": "2026-11-22T19:34:19.648Z"
 }
