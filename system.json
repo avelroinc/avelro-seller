@@ -1,5 +1,5 @@
 {
-  "version": "1.0.412",
-  "notes": "- Canlı destek Av/Dashboard’a taşındı: canlı destek bildirimleri bu uygulamaya gelir (telefonda ayrı “Canlı Destek Mesajları” kanalı), bildirimden uygulamayı açmadan Yanıtla ve Üstlen; bildirime dokununca sohbet açılır. Av/Tawk kaldırıldı.\n- Canlı Destek sayfaları masaüstü, tablet ve telefonda yeniden düzenlendi: temsilciler geniş ekranda yan yana, Hazır Yanıtlar’da geniş liste ve içerik boyunda yan kart (telefonda forma kaydırma), Ayarlar’da kartlar içerik boyunda, sesler tek sırada.\n- Konuşma listesinin üst satırı: durum seçimi solda ve geniş (aşağı oklu), Asistan, Hazır Yanıtlar ve Ayarlar simgeleri sağda aynı boyda.\n- Av/Dashboard 1.18.9.",
-  "publishedAt": "2026-11-22T14:34:04.086Z"
+  "version": "1.0.413",
+  "notes": "- Sms Onay deneme bakiyesi: yalnızca Sms Onay numaralarında harcanan, ana bakiyeden ayrı bakiye. Katalog › Sms Onay › Deneme Bakiyesi’nden açılır (tutar, geçerlilik günü); telefonunu doğrulayan yeni üye bir kez otomatik alır, aynı telefon numarası ikinci kez alamaz. Müşteriler › müşteri › Bakiye’den elle verilir ya da sıfırlanır.\n- Numara alınırken önce deneme bakiyesi, kalanı ana bakiyeden düşer; kod gelmezse her kısım kendi bakiyesine döner. Sitede bakiyenin altında deneme bakiyesi ve son günü görünür.\n- Yönetim panelinde yükleme iskeleti: veri gelene kadar sayfanın yerinde soluk, parıltılı bloklar (Yükleniyor yazısı yerine).",
+  "publishedAt": "2026-11-22T15:29:16.628Z"
 }
