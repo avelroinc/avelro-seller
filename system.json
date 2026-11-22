@@ -1,5 +1,5 @@
 {
-  "version": "1.0.410",
-  "notes": "- Av/Dashboard 1.18.7: kaydırarak geri / ileri yenilendi. Sol kenardan sağa çekince geri, sağ kenardan sola çekince ileri; çekerken kenarda saydam ok belirir, eşik geçilince dolar ve telefon kısa titrer. Sistem hareketiyle aynı anda iki sayfa geri gidilmez; ilk sayfada geri hareketi uygulamadan çıkar.",
-  "publishedAt": "2026-11-22T11:11:06.769Z"
+  "version": "1.0.411",
+  "notes": "- Sipariş bildirimlerinde Siparişi Aç düğmesi; manuel işlenecek siparişte Sağlayıcıya Gönder de (sipariş gönderme penceresi açık gelir).\n- Canlı destekte sesle yazma: uygulamada mesaj kutusunda mikrofon düğmesi.\n- Av/Dashboard 1.18.8: uygulama simgesinde bekleyen iş sayısı; simgeye basılı tutunca Sipariş Ara ve Canlı Destek kısayolları; Paylaş menüsünden gelen bağlantı ya da sipariş kodu Siparişler’de aranır.\n- Av/Tawk 1.5.7: mesaj kutusu boşken mikrofon ile sesle yazma.",
+  "publishedAt": "2026-11-22T13:03:50.812Z"
 }
