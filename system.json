@@ -1,5 +1,5 @@
 {
-  "version": "1.0.413",
-  "notes": "- Sms Onay deneme bakiyesi: yalnızca Sms Onay numaralarında harcanan, ana bakiyeden ayrı bakiye. Katalog › Sms Onay › Deneme Bakiyesi’nden açılır (tutar, geçerlilik günü); telefonunu doğrulayan yeni üye bir kez otomatik alır, aynı telefon numarası ikinci kez alamaz. Müşteriler › müşteri › Bakiye’den elle verilir ya da sıfırlanır.\n- Numara alınırken önce deneme bakiyesi, kalanı ana bakiyeden düşer; kod gelmezse her kısım kendi bakiyesine döner. Sitede bakiyenin altında deneme bakiyesi ve son günü görünür.\n- Yönetim panelinde yükleme iskeleti: veri gelene kadar sayfanın yerinde soluk, parıltılı bloklar (Yükleniyor yazısı yerine).",
-  "publishedAt": "2026-11-22T15:29:16.628Z"
+  "version": "1.0.414",
+  "notes": "- Sms Onay › Satılan Uygulamalar yenilendi: eşit kutular (logo, ad, Sayfayı Düzenle), sağ üstte küçük Kaldır; kaydedilmemiş değişiklikte başlıkta uyarı ve Kaydet yalnızca o zaman açık. Telefonda iki sütun.\n- Sitedeki arama kutuları (ülke, uygulama, E-Pin): tıklayınca içte ikinci çerçeve görünmüyor; odak halkası dış kutuda.\n- Koyu temada başlığın sağında ve solunda görünen koyu şerit giderildi (Pulse 1.0.314).",
+  "publishedAt": "2026-11-22T16:01:02.910Z"
 }
