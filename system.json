@@ -1,5 +1,5 @@
 {
-  "version": "1.0.407",
-  "notes": "- Yönetim paneli daha hızlı: panel artık mağaza vitrinine ait dosyaları (canlı destek penceresi, sepet, yorum bileşenleri) yüklemez; sayfa başına JavaScript yaklaşık 100 KB azaldı.\n- Tema dosyası panelde yalnızca çekirdek ve yönetim parçalarıyla, sıkıştırılarak gelir (yaklaşık 600 KB yerine 76 KB).\n- Siparişler: müşteri kartından gelindiğinde üstte müşteri adını gösteren şerit ve Tüm Siparişler düğmesi (masaüstü, tablet, telefon).\n- Av/Dashboard 1.18.6: kayıtlı hesapla panel sunucu beklenmeden açılır, oturum arka planda doğrulanır; çerez kayıtlıysa giriş yönlendirmesi atlanır; yükleme ekranı sayfa çizilir çizilmez kalkar.",
-  "publishedAt": "2026-11-22T05:32:02.806Z"
+  "version": "1.0.408",
+  "notes": "- Telefon menüsü eski görünümüne döndü: her bölüm ayrı kutuda, kutular arasında boşluk; açılan bölüm alt sayfalarıyla kendi kutusunda.",
+  "publishedAt": "2026-11-22T06:27:02.647Z"
 }
