@@ -1,5 +1,5 @@
 {
-  "version": "1.0.409",
-  "notes": "- Uygulamada telefon menüsünün üstündeki boşluk kaldırıldı: logo durum çubuğunun hemen altında.",
-  "publishedAt": "2026-11-22T06:46:23.870Z"
+  "version": "1.0.410",
+  "notes": "- Av/Dashboard 1.18.7: kaydırarak geri / ileri yenilendi. Sol kenardan sağa çekince geri, sağ kenardan sola çekince ileri; çekerken kenarda saydam ok belirir, eşik geçilince dolar ve telefon kısa titrer. Sistem hareketiyle aynı anda iki sayfa geri gidilmez; ilk sayfada geri hareketi uygulamadan çıkar.",
+  "publishedAt": "2026-11-22T11:11:06.769Z"
 }
