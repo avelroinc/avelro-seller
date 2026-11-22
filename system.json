@@ -1,5 +1,5 @@
 {
-  "version": "1.0.418",
-  "notes": "- Genel Bakış: dört kart yerine tek satır özet şeridi: Ciro (Bugün), Kâr (Bugün), Sipariş (Bugün); Raporlar ile aynı hesap.\n- Diğer Siparişler (Sms Onay): telefonda ve tablette Siparişler sayfasındaki kartların aynısı (uygulama, müşteri, tutar, ülke ve numara, durum, tarih ve gelen kod).",
-  "publishedAt": "2026-11-22T20:00:47.277Z"
+  "version": "1.0.419",
+  "notes": "- Av/Dashboard 1.18.11: Android ana ekran bileşeni üç boyutta. Bugün Özeti (küçük: bugünün cirosu, sipariş sayısı, bekleyen iş), Panel Özeti (orta: bu ayın cirosu, 7 günlük eğri, bekleyen işler), Panel Panosu (büyük: ortadakilere ek son 4 sipariş; kod, müşteri, tutar, durum). Bileşen seçiminde her boyutun önizlemesi görünür.\n- Bileşende yalnızca operasyonel işler: Manuel, Ödeme (havale ve bakiye onayı), Destek (yanıt bekleyen talep), Hızlandırma; Soru ve Yorum çıkarıldı. Uygulama simgesindeki sayı da bu işlerin toplamı.",
+  "publishedAt": "2026-11-22T20:45:08.433Z"
 }
