@@ -1,5 +1,5 @@
 {
-  "version": "1.0.408",
-  "notes": "- Telefon menüsü eski görünümüne döndü: her bölüm ayrı kutuda, kutular arasında boşluk; açılan bölüm alt sayfalarıyla kendi kutusunda.",
-  "publishedAt": "2026-11-22T06:27:02.647Z"
+  "version": "1.0.409",
+  "notes": "- Uygulamada telefon menüsünün üstündeki boşluk kaldırıldı: logo durum çubuğunun hemen altında.",
+  "publishedAt": "2026-11-22T06:46:23.870Z"
 }
