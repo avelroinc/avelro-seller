@@ -1,5 +1,5 @@
 {
-  "version": "1.0.425",
-  "notes": "- Hesabım › Profil ve Ayarlar: üye adını, kullanıcı adını, e-postasını (yeni adrese giden kodla) ve şifresini (mevcut şifreyle ya da e-postaya gelen kodla; Google / Facebook ile üye olanlar şifre belirleyebilir) değiştirir, isterse hesabını siler (kişisel bilgiler silinir, sipariş ve ödeme kayıtları adsız saklanır). Telefon Doğrulama, Fatura Bilgileri ve İletişim İzinleri bu sayfanın bölümleri oldu; eski adresler ilgili bölümü açar. Yeni e-posta şablonu: Hesap Doğrulama Kodu.\n- Sitede etiketli alanlarda (Ad Soyad, Kullanıcı Adı…) etiket ile kutu her yerde bitişik, tek parça.\n- Açık temada çerçevesiz gri kutulara ince çerçeve: üst bar düğmeleri, hızlı sipariş alanları, Hesabım kartları ve simgeleri, ürün sayfası şeritleri, iletişim ve SMS kutuları ve diğerleri.",
-  "publishedAt": "2026-11-23T10:04:13.249Z"
+  "version": "1.0.426",
+  "notes": "- Yönetim: bilgi kartları Genel Bakış'taki Ciro · Kâr · Sipariş şeridi gibi (tek çerçeve, ortada büyük değer, altında etiket); telefondaki liste kartları sipariş kartları gibi (gölge, durum renginde hafif geçiş, büyük başlık).\n- Yönetim menüsünde Modüller ve Ayarlar simgeleri renkli (masaüstü ve telefon).\n- Yalnızca bilgi veren açıklama kutuları kaldırıldı (Tarayıcı Bildirimleri, Toplu Gönderim, Yönetici Bildirimleri, Kombin Paket, Hazır Yanıtlar…); hata ve uyarılar duruyor.\n- Sitede Hesabım: Kazancını Çek kutu içinde, Siparişlerim / Destek Taleplerim geri bağlantıları çerçeveli düğme.",
+  "publishedAt": "2026-11-23T10:58:55.486Z"
 }
