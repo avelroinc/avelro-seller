@@ -1,5 +1,5 @@
 {
-  "version": "1.0.423",
-  "notes": "- Yönetim menüsü: bekleyen işi olan bölüm ve sayfalarda sitenin renginde sayı rozeti (sol menüde bölüm simgesinin köşesinde, açılan listede ve telefon menüsünde satırın sağında). Siparişler, Ödemeler (havale bildirimi, bakiye yüklemesi, banka bildirimi), Destek ve Hızlandırma Talepleri, Yorumlar, Sorular ve çekim talepleri sayılır.\n- Site: \"Fast ile Öde\" yazan her yer \"Havale ile Öde\" oldu (sepet, ödeme bekleyen siparişler, bakiye yükleme, sipariş sonrası ekranı, SSS).",
-  "publishedAt": "2026-11-23T06:09:29.038Z"
+  "version": "1.0.424",
+  "notes": "- Yönetim menüsündeki bekleyen iş rozetleri işlemden hemen sonra güncellenir (onay, iptal, kaydet ya da sayfa değişince); artık bir dakika beklemez.\n- Banka Bildirimleri rozeti: 7 günden eski eşleşmeyen bildirimler sayılmaz, rozet eski kayıt yüzünden sürekli dolu kalmaz.",
+  "publishedAt": "2026-11-23T08:14:26.446Z"
 }
