@@ -1,5 +1,5 @@
 {
-  "version": "1.0.427",
-  "notes": "- Sayfalar: sayfa adresleri değiştirilebilir (adres çubuğundaki kalemle). Özel sayfalarda ad ve tüm özel sayfalar için ortak önek (/sayfa/ → ör. /bilgi/), sistem sayfalarında (Hakkımızda, İletişim, SSS, Kampanyalar, Fırsat Köşesi, Duyurular, Blog, Ücretsiz Hizmetler / Araçlar, E-Pin, Lisans, Yazılım, Sms Onay) adın kendisi; alt adresler de yeni adla açılır (/oyunlar/pubg-mobile). Eski adresler kalıcı olarak (301) yeni adrese yönlenir; site haritası, canonical, menüler ve llms.txt yeni adresi kullanır. Platform, paket ve diğer adreslerle çakışma denetlenir.\n- Sms Onay uygulama sayfaları: sayfanın üstündeki büyük başlık ve giriş metni artık her uygulamaya özgü ve Google başlığından ayrı düzenlenir (Sms Onay › uygulama › Sayfa Başlığı); tüm uygulamalarda aynı genel başlık olduğu için Google sonuç başlığını sayfadaki yazıdan alıyordu. Sayfada başka uygulama seçilince başlık, metin ve sekme başlığı da değişir.\n- Raporlar › Özet kutuları: değer ortada, değişim rozeti değeri kaydırmıyor; alt bilgiler kutunun dibinde çerçeveli bir listede (solda etiket, sağda değer).",
-  "publishedAt": "2026-11-23T14:49:35.378Z"
+  "version": "1.0.428",
+  "notes": "- Sms Onay › uygulama sayfası iki sekmeli: Sayfa (büyük başlık ve giriş metni) ve Google Görünümü (Google başlığı, açıklaması, Aramalarda Gizle, yapılandırılmış veri). Seçili sekme adreste tutulur.",
+  "publishedAt": "2026-11-23T15:24:17.880Z"
 }
