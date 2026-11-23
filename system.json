@@ -1,5 +1,5 @@
 {
-  "version": "1.0.421",
-  "notes": "- Banka Bildirimleri: ödeme havale bildiriminden önce geldiyse, müşteri bildirimi yapınca ikisi eşleşir (aynı tutar, gönderen adı tutuyor; Otomatik Onay açıksa hemen onaylanır). Banka bildirimiyle onaylanan siparişin bekleyen havale bildirimi de kapanır. Sayfa yenilendi: bağlı telefon durum kutusu, yan yana anahtarlar, kayıtta kesin eşleşme etiketi.\n- Ayarlar › Bu Telefon: uygulamanın ayarları panel sayfası oldu (Görünüm: tema ve uygulama simgesi; Uygulama Kilidi; Bildirimler; Girişler: masaüstüne ve başka telefona QR ile giriş). Banka Bildirimleri'nde bu telefonu bağlama sayfanın içinde.\n- Av/Dashboard 1.18.13: ayar ekranları panelde açılır (uygulama köprüsüyle), hesap düğmesi Hesabım'ı, zil panelin bildirim listesini açar; Panel Seç'te site simgesi, adres yazılmaz.",
-  "publishedAt": "2026-11-22T23:23:06.587Z"
+  "version": "1.0.422",
+  "notes": "- Ayarlar: uygulamada Ayarlar seçiminde (Hesabım ve diğer bölümlerin üstündeki liste) Bu Telefon sayfaları da var: Panel Seç, Bildirimler, Görünüm, Uygulama Kilidi, Girişler, Banka Bildirimleri. Hesap düğmesiyle Hesabım'a gelince de bu ayarlara ulaşılır.",
+  "publishedAt": "2026-11-23T05:05:00.461Z"
 }
