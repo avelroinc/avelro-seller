@@ -1,5 +1,5 @@
 {
-  "version": "1.0.422",
-  "notes": "- Ayarlar: uygulamada Ayarlar seçiminde (Hesabım ve diğer bölümlerin üstündeki liste) Bu Telefon sayfaları da var: Panel Seç, Bildirimler, Görünüm, Uygulama Kilidi, Girişler, Banka Bildirimleri. Hesap düğmesiyle Hesabım'a gelince de bu ayarlara ulaşılır.",
-  "publishedAt": "2026-11-23T05:05:00.461Z"
+  "version": "1.0.423",
+  "notes": "- Yönetim menüsü: bekleyen işi olan bölüm ve sayfalarda sitenin renginde sayı rozeti (sol menüde bölüm simgesinin köşesinde, açılan listede ve telefon menüsünde satırın sağında). Siparişler, Ödemeler (havale bildirimi, bakiye yüklemesi, banka bildirimi), Destek ve Hızlandırma Talepleri, Yorumlar, Sorular ve çekim talepleri sayılır.\n- Site: \"Fast ile Öde\" yazan her yer \"Havale ile Öde\" oldu (sepet, ödeme bekleyen siparişler, bakiye yükleme, sipariş sonrası ekranı, SSS).",
+  "publishedAt": "2026-11-23T06:09:29.038Z"
 }
