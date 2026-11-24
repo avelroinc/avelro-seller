@@ -1,5 +1,5 @@
 {
-  "version": "1.0.440",
-  "notes": "- Sipariş tablosu: sütun sırası Sipariş, Tarih, Müşteri, Ürün, Ödeme, Tutar, Teslim, Durum; sütun genişlikleri içeriğe göre.\n- Teslim sütununda her ürün bir nokta (yeşil teslim edildi, boş halka bekliyor, kırmızı iade, gri iptal), noktalar yavaşça yanıp söner; \"İade\" yazısı kalktı. 6'dan çok üründe oranlı renk çubuğu ve teslim sayısı.\n- Genel Bakış'ta aramada Son Siparişler kartı sonuç sayısına göre boyutlanır.",
-  "publishedAt": "2026-11-24T12:39:39.139Z"
+  "version": "1.0.441",
+  "notes": "- Yönetim aramaları Türkçe harf ve büyük / küçük harf farkı gözetmez, kelimeleri sırası önemsiz arar (\"yilmaz ayse\" → Ayşe Yılmaz). Sipariş aramasına misafir adı / e-postası / telefonu, üye e-postası / telefonu / kullanıcı adı, kupon ve fatura unvanı eklendi. Müşteriler, Faturalar, Destek, Lisans / Yazılım, Hizmetler ve Sms Onay aramaları da aynı kuralla; liste aramasında kelime bölme hatası düzeltildi.\n- Sipariş tablosu: yalnızca kısa ürün adı ve adet (\"Reels İzlenme · 1.000 Adet\"), \"+2 Ürün\" adın yanında; durum etiketlerinde nokta yok; ürün hücresi satırın ortasında; zamanlı siparişte ürün adının yanında saat simgesi.",
+  "publishedAt": "2026-11-24T13:06:16.904Z"
 }
