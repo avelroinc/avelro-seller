@@ -1,5 +1,5 @@
 {
-  "version": "1.0.446",
-  "notes": "- Manuel gönderim sipariş zaman çizelgesinde: gönderilince Sağlayıcı'ya Gönderildi. (yönetici ve servis kaydedilir), reddedilince Sağlayıcı Siparişi Reddetti. ve Türkçe sebep; yanıtı doğrulanamayan ya da sağlayıcısı pasif gönderimler de yazılır. Satır yeniden gönderildiyse önceki denemeler de görünür.\n- Sipariş sayfası: Ödeme ve Gönderim kartlarında sonunda nokta; zaman çizelgesinde Ayrıntı alanı kaldırıldı.\n- Yol izinin sağındaki durum etiketi (Gönderiliyor, Tamamlandı …) yol izi şeridiyle aynı boyda.\n- Okunamayan sağlayıcı API anahtarı hatası Türkçe: Api Anahtarı Okunamadı, Sağlayıcıyı Yeniden Kaydedin.",
-  "publishedAt": "2026-11-24T19:22:01.467Z"
+  "version": "1.0.447",
+  "notes": "- Sağlayıcıya Gönder yeniden: önce sağlayıcı seçilir, sonra o sağlayıcının canlı servis listesinin tamamı gelir (hizmetlere bağlı olsun olmasın; ad, kategori ve servis no ile arama, listeyi yenile, 1.000 adet fiyatı); seçilen servise adet ve hedefle doğrudan gönderilir. Adet alanına rakam yazılamama hatası düzeltildi.",
+  "publishedAt": "2026-11-24T19:47:08.906Z"
 }
