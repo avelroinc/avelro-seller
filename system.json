@@ -1,5 +1,5 @@
 {
-  "version": "1.0.433",
-  "notes": "- Sipariş sayfası: işlem düğmesi olmayan siparişte (ör. iade edilmiş) geri düğmesinin yanında yol izi (Siparişler › #KOD) satırı doldurur; boş alan kalmaz.",
-  "publishedAt": "2026-11-24T09:14:36.011Z"
+  "version": "1.0.434",
+  "notes": "- Genel Bakış: üstte saate göre karşılama (Günaydın, İyi Günler, İyi Akşamlar, İyi Geceler) ve yöneticinin adı (sitenin ana renginden gradyanla, el sallama emojisi); altında tarih ve canlı saat (Türkiye saati). Masaüstü, tablet ve telefonda.",
+  "publishedAt": "2026-11-24T09:46:11.749Z"
 }
