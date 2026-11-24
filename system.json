@@ -1,5 +1,5 @@
 {
-  "version": "1.0.434",
-  "notes": "- Genel Bakış: üstte saate göre karşılama (Günaydın, İyi Günler, İyi Akşamlar, İyi Geceler) ve yöneticinin adı (sitenin ana renginden gradyanla, el sallama emojisi); altında tarih ve canlı saat (Türkiye saati). Masaüstü, tablet ve telefonda.",
-  "publishedAt": "2026-11-24T09:46:11.749Z"
+  "version": "1.0.435",
+  "notes": "- Ayarlar sayfası yeniden tasarlandı: her grup tek kart (başlık ve kısa açıklama, altında çizgiyle ayrılmış satırlar); masaüstünde yan yana, tablet ve telefonda alt alta.\n- Yönetim panelinde tüm kart ve bölüm başlıklarının altında ince, kısa açıklama.",
+  "publishedAt": "2026-11-24T10:14:44.085Z"
 }
