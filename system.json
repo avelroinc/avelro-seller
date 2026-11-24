@@ -1,5 +1,5 @@
 {
-  "version": "1.0.448",
-  "notes": "- Sağlayıcıya Gönder adımlı yeni tasarım: 1 Sağlayıcı (kartlar) › 2 Servis (sağlayıcının tüm servisleri; ad, no, kategori, 1.000 adet fiyatı ve adet aralığı; arama ve yenile) › 3 Gönder (özet, tahmini maliyet, adet ve hedef). Üstte adım çubuğu, biten adıma dönülebilir; masaüstü, tablet ve telefonda.\n- Kapat düğmeli kartlarda düğme başlığın yanında kalır, telefonda başlık iki satıra iner.",
-  "publishedAt": "2026-11-24T20:43:38.244Z"
+  "version": "1.0.449",
+  "notes": "- Sağlayıcı siparişi iptal / iade ettiğinde ya da kısmen tamamladığında zaman çizelgesinde tek kayıt: \"X Siparişi İptal Etti.\" (Kısmen Tamamladı / İade Etti); altında sağlayıcının bildirdiği sebep Türkçesiyle, bildirmediyse \"Sebep Bildirilmedi.\". Aynı iptal iki kez yazılmaz, yöneticiye bildirim bir kez gider (sebep bildirimde de).\n- Eski siparişlerde 2 dakika içinde tekrarlanan aynı kayıt bir kez gösterilir; \"Sağlayıcıya Gönderdi\" işlem kaydı \"X'e Gönderildi.\" ile çift görünmez.",
+  "publishedAt": "2026-11-24T21:58:42.934Z"
 }
