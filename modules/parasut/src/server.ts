@@ -3,8 +3,6 @@ export type ModuleHost={configuration():Promise<ParasutConfig>;request(url:strin
 type ParasutConfig={clientId:string;clientSecret:string;username:string;password:string;companyId:string};
 export default function createModule(host:ModuleHost){
 const fetch=(url:string,init?:RequestInit)=>host.request(url,init);
-type EinvoiceProvider="PARASUT"|"BIZIMHESAP"|"LOGO"|"UYUMSOFT";
-const EINVOICE_PROVIDERS:EinvoiceProvider[]=["PARASUT","BIZIMHESAP","LOGO","UYUMSOFT"];
 
 type BillingParty={
  taxIdType:"INDIVIDUAL"|"CORPORATE";
@@ -25,19 +23,13 @@ type CreateInvoiceInput={
 };
 
 type CreateInvoiceResult={providerInvoiceId:string;invoiceNumber?:string;pdfUrl?:string};
+// İade faturası (satıştan iade): asıl faturaya bağlanan, iade edilen tutar kadar belge.
+type CreateReturnInvoiceInput=CreateInvoiceInput&{original:{providerInvoiceId:string;invoiceNumber?:string|null;issueDate?:string|null};reason?:string};
+type CreateReturnInvoiceResult={providerReturnId:string;documentNumber?:string;pdfUrl?:string};
+
 
 class EinvoiceError extends Error{}
 
-interface EinvoiceAdapter<Config>{
- createInvoice(config:Config,input:CreateInvoiceInput):Promise<CreateInvoiceResult>;
-}
-
-function missingBillingFields(buyer:Partial<BillingParty>|null|undefined){
- if(!buyer)return true;
- if(!buyer.taxId||!buyer.legalName||!buyer.address||!buyer.city)return true;
- if(buyer.taxIdType==="CORPORATE"&&!buyer.taxOffice)return true;
- return false;
-}
 
 
 // Best-effort implementation of Paraşüt's v4 JSON:API. Verify field names and
@@ -78,5 +70,17 @@ async function createParasutInvoice(config:ParasutConfig,input:CreateInvoiceInpu
  return {providerInvoiceId:invoiceId,invoiceNumber:invoiceBody.data.attributes?.invoice_no};
 }
 
-return {createInvoice: async (input:CreateInvoiceInput) => createParasutInvoice(await host.configuration(),input)};
+// Satıştan iade: Paraşüt'te müşteriden gelen iade, gider tarafında "İade" türlü kayıt olarak tutulur (purchase_bills, item_type "refund";
+// alanlar devhub.parasut.com/openapi.json 4.1.0'daki PurchaseBillDetailedForm şemasına göre). Müşteri tedarikçi (supplier) olarak bağlanır;
+// açıklamada asıl faturanın numarası yazar. Gerçek hesapta denenmedi: ilk iadede Paraşüt'te kaydı kontrol edin.
+async function createParasutReturnInvoice(config:ParasutConfig,input:CreateReturnInvoiceInput):Promise<CreateReturnInvoiceResult>{
+ const token=await getAccessToken(config),headers={"content-type":"application/json","authorization":`Bearer ${token}`};
+ const contactId=await findOrCreateContact(config,token,input.buyer),today=new Date().toISOString().slice(0,10);
+ const response=await fetch(`${BASE}/${config.companyId}/purchase_bills`,{method:"POST",headers,body:JSON.stringify({data:{type:"purchase_bills",attributes:{item_type:"refund",description:input.note||`${input.original.invoiceNumber||input.original.providerInvoiceId} numaralı faturanın iadesi`,issue_date:today,due_date:today,currency:"TRL",...(input.original.invoiceNumber?{invoice_no:`IADE-${input.original.invoiceNumber}`}:{})},relationships:{supplier:{data:{id:contactId,type:"contacts"}},details:{data:input.lines.map(line=>({type:"purchase_bill_details",attributes:{quantity:line.quantity,unit_price:line.unitPriceMicros/1e6,vat_rate:line.vatRate??20,description:line.name}}))}}}}),signal:AbortSignal.timeout(20000)});
+ const body=await response.json() as {data?:{id:string;attributes?:{invoice_no?:string}};errors?:{detail?:string}[]};
+ if(!response.ok||!body.data?.id)throw new EinvoiceError(body.errors?.[0]?.detail||"Paraşüt iade kaydı oluşturulamadı.");
+ return {providerReturnId:body.data.id,documentNumber:body.data.attributes?.invoice_no};
+}
+
+return {createInvoice: async (input:CreateInvoiceInput) => createParasutInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput) => createParasutReturnInvoice(await host.configuration(),input)};
 }

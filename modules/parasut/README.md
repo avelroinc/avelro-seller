@@ -23,3 +23,7 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 ### 1.0.0
 
 - Paket satış sistemi için ilk sürüm. Kod, SMM panelindeki Paraşüt Entegrasyonu modülünün 1.0.1 sürümünden ayrıldı; davranış aynıdır.
+
+## Sürümler
+
+- 1.0.1: İade faturası (createReturnInvoice): faturası kesilmiş siparişte iade yapılınca iade edilen tutar kadar, asıl faturaya bağlı iade belgesi.

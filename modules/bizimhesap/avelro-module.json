@@ -3,7 +3,7 @@
   "id": "bizimhesap",
   "name": "Bizim Hesap Entegrasyonu",
   "description": "Bizim Hesap Entegrasyonu için bağımsız sağlayıcı paketi.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "hostApiVersion": 2,
   "category": "einvoice",
   "scopes": [

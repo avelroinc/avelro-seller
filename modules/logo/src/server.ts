@@ -3,8 +3,6 @@ export type ModuleHost={configuration():Promise<LogoConfig>;request(url:string,i
 type LogoConfig={wsUsername:string;wsPassword:string;firmCode:string};
 export default function createModule(host:ModuleHost){
 const fetch=(url:string,init?:RequestInit)=>host.request(url,init);
-type EinvoiceProvider="PARASUT"|"BIZIMHESAP"|"LOGO"|"UYUMSOFT";
-const EINVOICE_PROVIDERS:EinvoiceProvider[]=["PARASUT","BIZIMHESAP","LOGO","UYUMSOFT"];
 
 type BillingParty={
  taxIdType:"INDIVIDUAL"|"CORPORATE";
@@ -25,19 +23,13 @@ type CreateInvoiceInput={
 };
 
 type CreateInvoiceResult={providerInvoiceId:string;invoiceNumber?:string;pdfUrl?:string};
+// İade faturası (satıştan iade): asıl faturaya bağlanan, iade edilen tutar kadar belge.
+type CreateReturnInvoiceInput=CreateInvoiceInput&{original:{providerInvoiceId:string;invoiceNumber?:string|null;issueDate?:string|null};reason?:string};
+type CreateReturnInvoiceResult={providerReturnId:string;documentNumber?:string;pdfUrl?:string};
+
 
 class EinvoiceError extends Error{}
 
-interface EinvoiceAdapter<Config>{
- createInvoice(config:Config,input:CreateInvoiceInput):Promise<CreateInvoiceResult>;
-}
-
-function missingBillingFields(buyer:Partial<BillingParty>|null|undefined){
- if(!buyer)return true;
- if(!buyer.taxId||!buyer.legalName||!buyer.address||!buyer.city)return true;
- if(buyer.taxIdType==="CORPORATE"&&!buyer.taxOffice)return true;
- return false;
-}
 
 
 // Logo's e-Fatura is delivered through their "eLogo Özel Entegratörlük" service
@@ -54,5 +46,14 @@ async function createLogoInvoice(config:LogoConfig,input:CreateInvoiceInput):Pro
  return {providerInvoiceId:result.invoiceId,invoiceNumber:result.invoiceNumber,pdfUrl:result.pdfUrl};
 }
 
-return {createInvoice: async (input:CreateInvoiceInput) => createLogoInvoice(await host.configuration(),input)};
+// İade faturası: UBL-TR'de fatura tipi IADE ve asıl faturaya BillingReference (numara, tarih). eLogo entegratör sözleşmesi olmadan
+// doğrulanamadı (satış faturası gibi); ilk iadede eLogo portalında kontrol edin.
+async function createLogoReturnInvoice(config:LogoConfig,input:CreateReturnInvoiceInput):Promise<CreateReturnInvoiceResult>{
+ const response=await fetch(`${BASE}/SendInvoice`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({wsUserName:config.wsUsername,wsPassword:config.wsPassword,firmCode:config.firmCode,invoiceTypeCode:"IADE",billingReference:{invoiceNumber:input.original.invoiceNumber||input.original.providerInvoiceId,issueDate:input.original.issueDate||undefined},buyer:{taxIdType:input.buyer.taxIdType,taxId:input.buyer.taxId,taxOffice:input.buyer.taxOffice||undefined,name:input.buyer.legalName,address:input.buyer.address,city:input.buyer.city,email:input.buyer.email},lines:input.lines.map(line=>({name:line.name,quantity:line.quantity,unitPrice:line.unitPriceMicros/1e6,vatRate:line.vatRate??20})),note:input.note||undefined}),signal:AbortSignal.timeout(25000)});
+ const result=await response.json() as {success?:boolean;invoiceId?:string;invoiceNumber?:string;pdfUrl?:string;errorMessage?:string};
+ if(!response.ok||!result.success||!result.invoiceId)throw new EinvoiceError(result.errorMessage||"Logo/eLogo iade faturası oluşturulamadı.");
+ return {providerReturnId:result.invoiceId,documentNumber:result.invoiceNumber,pdfUrl:result.pdfUrl};
+}
+
+return {createInvoice: async (input:CreateInvoiceInput) => createLogoInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput) => createLogoReturnInvoice(await host.configuration(),input)};
 }
