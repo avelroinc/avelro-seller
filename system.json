@@ -1,5 +1,5 @@
 {
-  "version": "1.0.437",
-  "notes": "- Yönetim panelinde canlı arama: Siparişler, Müşteriler, Ödemeler, Faturalar, Yazılar, Lisanslar, Sayfalar, Hizmetler ve Sms Onay Numaraları listelerinde yazmayı bırakınca arama kendiliğinden yapılır; Enter beklenmez.",
-  "publishedAt": "2026-11-24T10:57:42.602Z"
+  "version": "1.0.438",
+  "notes": "- Yönetim panelindeki tüm sekme ve süzgeçlerin başında simge (sipariş durumları, rapor dönemleri, ürün düzenleme sekmeleri, ödeme / talep / yorum durumları ve diğerleri); hizmet platformlarında platformun simgesi. Telefondaki açılır sekme menüsünde de simgeler görünür.",
+  "publishedAt": "2026-11-24T11:18:26.796Z"
 }
