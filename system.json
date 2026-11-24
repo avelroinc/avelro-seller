@@ -1,5 +1,5 @@
 {
-  "version": "1.0.438",
-  "notes": "- Yönetim panelindeki tüm sekme ve süzgeçlerin başında simge (sipariş durumları, rapor dönemleri, ürün düzenleme sekmeleri, ödeme / talep / yorum durumları ve diğerleri); hizmet platformlarında platformun simgesi. Telefondaki açılır sekme menüsünde de simgeler görünür.",
-  "publishedAt": "2026-11-24T11:18:26.796Z"
+  "version": "1.0.439",
+  "notes": "- Genel Bakış'taki sipariş araması canlı: yazmayı bırakınca sonuçlar Son Siparişler kartında listelenir (kutu boşalınca son siparişler geri gelir); Enter ile Siparişler sayfası o aramayla açılır. Mobil uygulamada da.",
+  "publishedAt": "2026-11-24T12:02:31.530Z"
 }
