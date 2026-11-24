@@ -1,5 +1,5 @@
 {
-  "version": "1.0.444",
-  "notes": "- Sağlayıcı hata yanıtları (Perfect Panel API v2 ve benzerleri) Türkçe: ör. Not enough funds on balance → Sağlayıcıda Bakiye Yok., Quantity less than minimal 100 → Minimum 100 Adet Sipariş Verebilirsiniz.; sipariş sayfasında, sağlayıcı kartında ve bağlantı testinde.\n- Sipariş zaman çizelgesi: bütün olaylar kısa ve aynı kalıpta, sonunda nokta (Sipariş Oluşturuldu. › Ödeme Sayfası Açıldı. › Ödeme Bekleniyor. › Ödeme Gerçekleştirildi. › Sağlayıcı'ya Gönderildi. › Sipariş Tamamlandı. › Sipariş Kapatıldı.); aynı ödemenin iki kaydı tek satır; sağlayıcı adı doğru ekle; alt yazı yalnızca sağlayıcının red sebebinde.",
-  "publishedAt": "2026-11-24T18:00:11.453Z"
+  "version": "1.0.445",
+  "notes": "- Sipariş zaman çizelgesinde sağlayıcı denemeleri (ör. Smmxy Siparişi Reddetti.) 3 saat erken görünüp siparişin oluşturulmasından önceye düşüyordu: saat dilimi yazmayan kayıt zamanları UTC okunur, sıralama doğru. Sağlayıcı kartındaki gönderim ve son kontrol zamanları da düzeldi.",
+  "publishedAt": "2026-11-24T18:20:47.288Z"
 }
