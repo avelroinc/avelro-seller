@@ -1,5 +1,5 @@
 {
-  "version": "1.0.447",
-  "notes": "- Sağlayıcıya Gönder yeniden: önce sağlayıcı seçilir, sonra o sağlayıcının canlı servis listesinin tamamı gelir (hizmetlere bağlı olsun olmasın; ad, kategori ve servis no ile arama, listeyi yenile, 1.000 adet fiyatı); seçilen servise adet ve hedefle doğrudan gönderilir. Adet alanına rakam yazılamama hatası düzeltildi.",
-  "publishedAt": "2026-11-24T19:47:08.906Z"
+  "version": "1.0.448",
+  "notes": "- Sağlayıcıya Gönder adımlı yeni tasarım: 1 Sağlayıcı (kartlar) › 2 Servis (sağlayıcının tüm servisleri; ad, no, kategori, 1.000 adet fiyatı ve adet aralığı; arama ve yenile) › 3 Gönder (özet, tahmini maliyet, adet ve hedef). Üstte adım çubuğu, biten adıma dönülebilir; masaüstü, tablet ve telefonda.\n- Kapat düğmeli kartlarda düğme başlığın yanında kalır, telefonda başlık iki satıra iner.",
+  "publishedAt": "2026-11-24T20:43:38.244Z"
 }
