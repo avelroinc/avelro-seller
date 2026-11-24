@@ -1,5 +1,5 @@
 {
-  "version": "1.0.431",
-  "notes": "- Açılır pencereler (yönetim ve site): başlığın altında ince, kısa açıklama. Açıklaması olmayan pencerede türüne göre kısa bir cümle (İşlem başarıyla tamamlandı. gibi); uzun açıklamalar tek kısa cümleye indirildi.\n- İşlem Seçin ve iade / iptal sebebi pencerelerinde başlık altı açıklama.",
-  "publishedAt": "2026-11-24T08:06:31.594Z"
+  "version": "1.0.432",
+  "notes": "- Sağlayıcının kısmi teslim ettiği ürün Tamamlandı Yap ile kapatılınca Kısmi olarak kalır: müşteri Tamamlandı, yönetim Kısmi Teslim görür; Kalanı İade Et kullanılabilir.\n- Sipariş Sorgula sepet durumunu her yerdeki kuralla gösterir (iade edilen sepet İade Edildi); kısmi teslimde adımlar Tamamlandı'da, planlı siparişte adımlar görünür.\n- Ödenmemiş ürünü ve yalnızca iptal edilmiş diğer ürünleri olan sepet Ödeme Bekliyor görünür (İşlemde değil).\n- Ödemesi 48 saatte yapılmayıp iptal edilen siparişte müşteriye Sipariş İptal Edildi e-postası ve SMS'i gider (sebep: ödeme süresi doldu).",
+  "publishedAt": "2026-11-24T08:40:02.937Z"
 }
