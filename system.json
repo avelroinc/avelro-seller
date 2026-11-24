@@ -1,5 +1,5 @@
 {
-  "version": "1.0.442",
-  "notes": "- Yönetim panelinde her sayfa hiyerarşik yol iziyle açılır: Genel Bakış › Bölüm › Sayfa › Kayıt (ör. Satış › Ödemeler › Banka Bildirimleri › kayıt). Bölümler tıklanmaz soluk yazı; yol izi olmayan liste sayfalarına da eklendi. Telefonda yalnızca bir üst sayfa yazılır.\n- Personel silme gerçekten siler (bağlı oturum ve bildirimler temizlenir); eskiden silinemeyen hesap sessizce engelleniyordu. Telefonda Engelle / Sil düğmeleri yol izinin altında, taşmaz.\n- Ayarlar'da açılır menü kaldırıldı (düz yol izi); Erişim Yetkileri'nde toplu seçim satırı ve Panel Adresi'nde uyarı, açıklama ve şu anki adres kaldırıldı.\n- Modüller grup başlıklarında kısa açıklama; Genel Bakış Son Siparişler'de ürün adı adetle (Reels İzlenme · 1.000 Adet).\n- Av/Dashboard 1.18.14: Panel Seç ve Panel Ekle yol izinde Ayarlar altında.",
-  "publishedAt": "2026-11-24T15:02:30.408Z"
+  "version": "1.0.443",
+  "notes": "- Yönetim panelinde Genel Bakış dışındaki her sayfada geri düğmesi (üst sayfa yoksa Genel Bakış'a döner).\n- Bildirim paneli yeniden düzenlendi: başlıkta okunmamış sayısı ve simge düğmeler, güncellemeler üstte şerit, bildirimde başlık ve zaman aynı satırda, emojisiz kısa özet; telefonda tam genişlik ve karartılmış arka plan.\n- Personel kaydında Ana Yönetici / Yetkili etiketi kaldırıldı (yalnızca Engelli görünür); telefonda durum etiketi kaydet düğmesinin üstüne binmiyor.\n- Av/Dashboard 1.18.15: Panel Seç'te site adları büyük harfle, site simgesi küçüldü.",
+  "publishedAt": "2026-11-24T15:59:58.208Z"
 }
