@@ -1,5 +1,5 @@
 {
-  "version": "1.0.432",
-  "notes": "- Sağlayıcının kısmi teslim ettiği ürün Tamamlandı Yap ile kapatılınca Kısmi olarak kalır: müşteri Tamamlandı, yönetim Kısmi Teslim görür; Kalanı İade Et kullanılabilir.\n- Sipariş Sorgula sepet durumunu her yerdeki kuralla gösterir (iade edilen sepet İade Edildi); kısmi teslimde adımlar Tamamlandı'da, planlı siparişte adımlar görünür.\n- Ödenmemiş ürünü ve yalnızca iptal edilmiş diğer ürünleri olan sepet Ödeme Bekliyor görünür (İşlemde değil).\n- Ödemesi 48 saatte yapılmayıp iptal edilen siparişte müşteriye Sipariş İptal Edildi e-postası ve SMS'i gider (sebep: ödeme süresi doldu).",
-  "publishedAt": "2026-11-24T08:40:02.937Z"
+  "version": "1.0.433",
+  "notes": "- Sipariş sayfası: işlem düğmesi olmayan siparişte (ör. iade edilmiş) geri düğmesinin yanında yol izi (Siparişler › #KOD) satırı doldurur; boş alan kalmaz.",
+  "publishedAt": "2026-11-24T09:14:36.011Z"
 }
