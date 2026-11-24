@@ -1,5 +1,5 @@
 {
-  "version": "1.0.443",
-  "notes": "- Yönetim panelinde Genel Bakış dışındaki her sayfada geri düğmesi (üst sayfa yoksa Genel Bakış'a döner).\n- Bildirim paneli yeniden düzenlendi: başlıkta okunmamış sayısı ve simge düğmeler, güncellemeler üstte şerit, bildirimde başlık ve zaman aynı satırda, emojisiz kısa özet; telefonda tam genişlik ve karartılmış arka plan.\n- Personel kaydında Ana Yönetici / Yetkili etiketi kaldırıldı (yalnızca Engelli görünür); telefonda durum etiketi kaydet düğmesinin üstüne binmiyor.\n- Av/Dashboard 1.18.15: Panel Seç'te site adları büyük harfle, site simgesi küçüldü.",
-  "publishedAt": "2026-11-24T15:59:58.208Z"
+  "version": "1.0.444",
+  "notes": "- Sağlayıcı hata yanıtları (Perfect Panel API v2 ve benzerleri) Türkçe: ör. Not enough funds on balance → Sağlayıcıda Bakiye Yok., Quantity less than minimal 100 → Minimum 100 Adet Sipariş Verebilirsiniz.; sipariş sayfasında, sağlayıcı kartında ve bağlantı testinde.\n- Sipariş zaman çizelgesi: bütün olaylar kısa ve aynı kalıpta, sonunda nokta (Sipariş Oluşturuldu. › Ödeme Sayfası Açıldı. › Ödeme Bekleniyor. › Ödeme Gerçekleştirildi. › Sağlayıcı'ya Gönderildi. › Sipariş Tamamlandı. › Sipariş Kapatıldı.); aynı ödemenin iki kaydı tek satır; sağlayıcı adı doğru ekle; alt yazı yalnızca sağlayıcının red sebebinde.",
+  "publishedAt": "2026-11-24T18:00:11.453Z"
 }
