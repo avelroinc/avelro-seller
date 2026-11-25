@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
-  "notes": "- Ayarlar › Pencere Metinleri (geçici araç, yalnızca ana yönetici): düzenleme modu açıkken sitede ve panelde her uyarı penceresinin köşesinde kalem çıkar; pencerenin başlığı, açıklaması ve düğmeleri yerinde değiştirilir, değişiklik herkes için hemen geçerli olur.\n- Değiştirilen metinler Ayarlar'da listelenir; tek tek ya da hepsi birden varsayılana döndürülür. Değişen bilgiler ({…}: tutar, kod, ad) yerinde kalır.",
-  "publishedAt": "2026-11-25T15:27:55.175Z"
+  "version": "1.1.2",
+  "notes": "- Sipariş zaman çizelgesi: işlem geçmişinden gelen durum değişiklikleri (Durumu “İşlemde (Manuel)” Yaptı) diğer kayıtlarla aynı kalıpta yazılır (Sipariş Manuel İşlemeye Alındı).\n- Fatura kesildiğinde ya da kesilemediğinde faturaya giren her siparişin zaman çizelgesine Fatura Kesildi / Fatura Kesilemedi kaydı düşer (tekli, otomatik, gecikmeli ve toplu fatura); kesilemeyen faturada sebep yazar.\n- Sipariş detayındaki Ödeme kutusu fatura kayıtlarından etkilenmez, ödemenin kendi durumunu gösterir.\n- Yönetim panelindeki bütün anahtarların altındaki açıklama yazıları kaldırıldı; anahtarlarda yalnızca ad yazar.",
+  "publishedAt": "2026-11-25T17:45:34.380Z"
 }
