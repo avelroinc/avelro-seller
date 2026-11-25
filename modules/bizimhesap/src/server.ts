@@ -29,14 +29,15 @@ function firmIdOf(config:BizimHesapConfig){
 // Tutarlar 2 ondalıklı metin (ör. "1200.00"); tarih Türkiye saatiyle ISO (ör. 2026-11-25T14:20:00+03:00).
 const money=(v:number)=>(Math.round(v*100)/100).toFixed(2);
 const trNow=()=>new Date(Date.now()+3*3600e3).toISOString().slice(0,19)+"+03:00";
-// Ürün kimliği hizmet adından (Sosyal Medya Hizmeti → sosyal-medya-hizmeti): aynı hizmet Bizim Hesap'ta tek ürün kartı olur.
+// Satırda ürün kimliği gönderilmez: Bizim Hesap kimliği ürün kodu olarak açıklamanın başına yazıyordu ("sosyal-medya-hizmeti Sosyal
+// Medya Hizmeti"); boş kimlikte faturada yalnızca hizmet adı görünür. slug yalnızca müşteri kimliği yedeğinde kullanılır.
 const slug=(v:string)=>v.toLocaleLowerCase("tr-TR").replace(/ı/g,"i").replace(/ğ/g,"g").replace(/ü/g,"u").replace(/ş/g,"s").replace(/ö/g,"o").replace(/ç/g,"c").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60)||"hizmet";
 // Müşteri kimliği: e-posta (kişiye özel; nihai tüketici numarası 11111111111 herkes için aynı olduğundan kimlik olarak kullanılmaz).
 const customerKey=(b:BillingParty)=>(b.email||"").trim().toLowerCase()||(b.taxIdType==="CORPORATE"?b.taxId:"")||slug(b.legalName);
 
 function body(firmId:string,input:CreateInvoiceInput){
  const details=input.lines.map(line=>{const rate=line.vatRate??20,qty=line.quantity||1,unit=line.unitPriceMicros/1e6,gross=unit*qty,tax=gross*rate/100;
-  return {productId:slug(line.name.replace(/\s*\(İade\)$/,"")),productName:line.name,note:"",barcode:"",taxRate:money(rate),quantity:qty,unitPrice:money(unit),grossPrice:money(gross),discount:"0.00",net:money(gross),tax:money(tax),total:money(gross+tax)}});
+  return {productId:"",productName:line.name,note:"",barcode:"",taxRate:money(rate),quantity:qty,unitPrice:money(unit),grossPrice:money(gross),discount:"0.00",net:money(gross),tax:money(tax),total:money(gross+tax)}});
  const sum=(k:"net"|"tax"|"total")=>details.reduce((s,d)=>s+Number(d[k]),0),now=trNow(),b=input.buyer;
  return {firmId,invoiceType:3,note:input.note||"",dates:{invoiceDate:now,dueDate:now,deliveryDate:now},
   customer:{customerId:customerKey(b),title:b.legalName,taxOffice:b.taxIdType==="CORPORATE"?(b.taxOffice||""):"",taxNo:b.taxId,email:b.email||"",phone:"",address:[b.address,b.city].filter(Boolean).join(" ")},

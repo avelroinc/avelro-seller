@@ -26,6 +26,7 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürümler
 
+- 1.0.4: Faturada satır açıklaması yalnızca hizmet adı (ör. "Sosyal Medya Hizmeti"); ürün kodu (sosyal-medya-hizmeti) artık başa yazılmaz.
 - 1.0.3: İstekler doğrudan uygulama.bizimhesap.com adresine gider (bizimhesap.com/api bu adrese yönlendiriyor; modül ağı yönlendirme izlemediğinden fatura "Modül ağ isteği reddedildi" hatası veriyordu). Bizim Hesap'ın döndürdüğü fatura numarası (eInvoiceNo) siparişe yazılır. Sistem 1.0.459 ve üzeri gerekir.
 - 1.0.2: Bizim Hesap'ın resmî Entegrasyon API dokümanına göre yeniden yazıldı: fatura POST /api/b2b/addinvoice (firmId, invoiceType 3, dates, customer, amounts, details; cevap error / guid / url), iptal POST /api/b2b/cancelinvoice. Bağlantı ayarında yalnızca Firma ID (FirmId) gerekir, token isteğe bağlı. Bizim Hesap'ta satıştan iade belgesi olmadığı için tamamı iade edilen siparişin faturası iptal edilir; kısmi iade Bizim Hesap panelinden kesilir.
 - 1.0.1: İade faturası (createReturnInvoice): faturası kesilmiş siparişte iade yapılınca iade edilen tutar kadar, asıl faturaya bağlı iade belgesi.
