@@ -1,6 +1,6 @@
 // Independent provider package. Credentials and networking are supplied by the host.
-// Bizim Hesap B2B API (Bizim Hesap "Entegrasyon API Dökümanı"): fatura POST https://bizimhesap.com/api/b2b/addinvoice (JSON, başlık
-// gerekmez; firmId gövdede), iptal POST /api/b2b/cancelinvoice ({firmId,guid}). Cevap {error,guid,url}: error doluysa hata, guid faturanın
+// Bizim Hesap B2B API (Bizim Hesap "Entegrasyon API Dökümanı"): fatura POST https://uygulama.bizimhesap.com/api/b2b/addinvoice (JSON, başlık
+// gerekmez; firmId gövdede), iptal POST /api/b2b/cancelinvoice ({firmId,guid}). Cevap {error,guid,url,eInvoiceNo}: error doluysa hata, guid faturanın
 // Bizim Hesap kimliği, url PDF bağlantısı. Gönderilen müşteri ve ürün Bizim Hesap'ta yoksa kendiliğinden oluşturulur.
 export type ModuleHost={configuration():Promise<BizimHesapConfig>;request(url:string,init?:RequestInit):Promise<Response>};
 // companyId: Bizim Hesap'ın verdiği firma kimliği (FirmId). apiKey: isteğe bağlı token (yalnızca liste servisleri için; fatura kesmede
@@ -17,7 +17,8 @@ type CreateReturnInvoiceInput=CreateInvoiceInput&{original:{providerInvoiceId:st
 type CreateReturnInvoiceResult={providerReturnId:string;documentNumber?:string;pdfUrl?:string};
 class EinvoiceError extends Error{}
 
-const BASE="https://bizimhesap.com/api/b2b";
+// bizimhesap.com/api isteklerini uygulama.bizimhesap.com'a yönlendirir (308); modül ağında yönlendirme izlenmediğinden doğrudan bu adres.
+const BASE="https://uygulama.bizimhesap.com/api/b2b";
 const looksId=(v?:string)=>Boolean(v&&/^[0-9A-Za-z-]{16,}$/.test(v.trim()));
 function firmIdOf(config:BizimHesapConfig){
  const options=[config.firmId,config.companyId,config.apiKey].map(v=>(v||"").trim()).filter(Boolean);
@@ -43,7 +44,7 @@ function body(firmId:string,input:CreateInvoiceInput){
 }
 async function post(path:string,payload:unknown){
  const response=await fetch(`${BASE}/${path}`,{method:"POST",headers:{"content-type":"application/json",accept:"application/json"},body:JSON.stringify(payload),signal:AbortSignal.timeout(20000)});
- const text=await response.text();let data:{error?:string;guid?:string;url?:string;status?:string|number}={};
+ const text=await response.text();let data:{error?:string;guid?:string;url?:string;eInvoiceNo?:string;status?:string|number}={};
  try{data=JSON.parse(text)}catch{if(!response.ok)throw new EinvoiceError(`Bizim Hesap yanıt vermedi (HTTP ${response.status}).`)}
  if(data.error)throw new EinvoiceError(`Bizim Hesap: ${data.error}`);
  if(!response.ok)throw new EinvoiceError(`Bizim Hesap isteği başarısız (HTTP ${response.status}).`);
@@ -53,7 +54,7 @@ async function post(path:string,payload:unknown){
 async function createBizimHesapInvoice(config:BizimHesapConfig,input:CreateInvoiceInput):Promise<CreateInvoiceResult>{
  const data=await post("addinvoice",body(firmIdOf(config),input));
  if(!data.guid)throw new EinvoiceError("Bizim Hesap faturayı kaydetmedi (fatura kimliği dönmedi).");
- return {providerInvoiceId:data.guid,pdfUrl:data.url||undefined};
+ return {providerInvoiceId:data.guid,invoiceNumber:data.eInvoiceNo||undefined,pdfUrl:data.url||undefined};
 }
 
 // İade: Bizim Hesap API'sinde satıştan iade belgesi yok (yalnızca satış 3 / alış 5 ve iptal). İade edilen tutar faturanın tamamıysa

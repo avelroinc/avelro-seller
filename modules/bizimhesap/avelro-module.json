@@ -3,7 +3,7 @@
   "id": "bizimhesap",
   "name": "Bizim Hesap Entegrasyonu",
   "description": "Bizim Hesap Entegrasyonu için bağımsız sağlayıcı paketi.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "hostApiVersion": 2,
   "category": "einvoice",
   "scopes": [
@@ -13,7 +13,8 @@
     "server": "src/server.ts"
   },
   "capabilities": [
-    "network:bizimhesap.com"
+    "network:bizimhesap.com",
+    "network:uygulama.bizimhesap.com"
   ],
   "configuration": "config.schema.json"
 }
