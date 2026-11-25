@@ -1,5 +1,5 @@
 {
-  "version": "1.0.455",
-  "notes": "- Siparişler ve Genel Bakış › Son Siparişler: ödeme bekleyen siparişte Ödeme Bekliyor etiketinin yanında etiketle aynı boyda saat simgesi; kalan ödeme süresi ve iptal saati üzerine gelince (telefonda dokununca) görünür. Son 6 saatte sarı, son 1 saatte kırmızı.\n- Klavye Kısayolları penceresi: bölüm seçimi açılır liste (yanında arama), alttaki ipucu satırı ve ayraç çizgileri kaldırıldı, Tümünü Sıfırla başlıkta; sağdaki kaydırma çubuğu gizli; telefon ve tablette taşma / kayma düzeltildi, pencere açıkken arkadaki sayfa kaymaz.",
-  "publishedAt": "2026-11-25T10:41:57.941Z"
+  "version": "1.0.456",
+  "notes": "- Klavye kısayolları tamamen kişisel: hazır kısayol ve kategori yok. Kısayollar penceresinde (yönetimdeki aramada \"Klavye Kısayolları\") Kısayol Ekle ile işlem seçilir ve tuşa basılır; her işleme en çok üç tuş (F tuşları, Ctrl / Shift / Alt'lı ya da iki adımlı). Listede tuş eklenir, tek tuş ya da kısayolun tamamı silinir; başka işlemde kullanılan tuş oradan kaldırılır ve bildirilir. Atamalar her personelin hesabına kaydedilir.",
+  "publishedAt": "2026-11-25T11:18:30.734Z"
 }
