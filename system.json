@@ -1,5 +1,5 @@
 {
-  "version": "1.0.459",
-  "notes": "- Bizim Hesap: fatura kesilirken alınan \"Modül ağ isteği reddedildi\" hatası giderildi (Bizim Hesap API'si uygulama.bizimhesap.com adresine yönlendiriyor; bu adres izinli). Güncellemeden sonra Modüller ekranından Bizim Hesap modülünü 1.0.3'e güncelleyin; bağlantıda yalnızca Firma ID (FirmId) gerekir.\n- Siparişler: sağ tık menüsünde Faturalandır (ödenmiş siparişin faturası e-fatura modülüyle kesilir).\n- E-fatura: Otomatik Fatura Kes açıkken \"Kaç Gün Sonra Kesilsin\" ayarı; 0 ödeme alınınca hemen, N gün sipariş tarihinden N gün sonra (15 dakikada bir kontrol, en çok N + 7 gün geriye bakılır).",
-  "publishedAt": "2026-11-25T12:36:49.426Z"
+  "version": "1.0.460",
+  "notes": "- Toplu e-fatura: Otomatik Fatura Kes açıkken Kesim Şekli seçilir: Her Sipariş İçin Ayrı (0 gün ödeme alınınca, N gün sonra) ya da Toplu (Müşteri Başına, N günde bir). Toplu kesimde müşterinin faturalanmamış bütün siparişleri tek faturada, aynı hizmet türü tek satırda kesilir (çok sipariş veren müşteride kontör tasarrufu). Faturalar listesinde \"Toplu · N Sipariş\"; siparişte toplu faturanın PDF'i açılır.\n- Fatura kesilince müşteriye \"Faturanız Oluşturuldu!\" e-postası (fatura numarası, tutar, PDF düğmesi; toplu faturada sipariş listesi). İletişim › Mesaj Şablonları'ndan düzenlenir ya da kapatılır.\n- Faturalar listesinde fatura numarası dönmeyen sağlayıcıda sipariş kodu ve belge türü görünür; arama sipariş koduyla da çalışır.\n- Modüller: kurulu modülün sürüm numarası kartın sağ üstünde, durum etiketinin yanında (Sürüm satırı kaldırıldı).",
+  "publishedAt": "2026-11-25T13:18:45.435Z"
 }
