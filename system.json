@@ -1,5 +1,5 @@
 {
-  "version": "1.0.452",
-  "notes": "- Sağ tık menüleri sadeleşti: bütün yönetim sayfalarında menü öğeleri en fazla iki kelime (ör. Sekmede Aç, Kodu Kopyala, Durum Kartı, İptal Talebi, Telafi Talebi, Sitede Gör, Gönderimi Durdur, Ödendi Yap).",
-  "publishedAt": "2026-11-25T06:36:42.036Z"
+  "version": "1.0.453",
+  "notes": "- Yönetim paneline yumuşak geçişler: sekme değişince ve kayıt açılınca kartlar hafifçe solarak gelir; Raporlar grafiğinde sütunlar alttan büyür, pay çubukları soldan uzar; alanlar ve listeler renk değiştirirken yumuşak geçer (hareket azaltma tercihinde kapalı).\n- Açılır seçimler (telefon ve tablette sekmeler, ör. Raporlar › Dönem, Banka Bildirimleri › Bildirim Durumu) artık kesilmeden ve kartların üstünde açılır; sayfanın altındaki liste açılınca sayfa yumuşakça kayar.\n- Klavye kısayolları yenilendi (? ile listesi): Ara (/ ya da Ctrl+K), Kaydet (Ctrl+S), Yeni Kayıt (n), Bildirimler (b), Koyu / Açık Mod (t), önceki / sonraki sekme ([ ve ]), satırlar arasında j / k ve oklar; g ve harfle bölüme git (Siparişler s, Ödemeler ö, Müşteriler m, Destek d, Canlı Destek c, Değerlendirmeler y, Hizmetler h, E-Pin e, Lisanslar l, Sağlayıcılar p, Kuponlar k, Faturalar f, Raporlar r, Modüller u, Ayarlar a); bölüm geçişi sayfayı yeniden yüklemez.",
+  "publishedAt": "2026-11-25T08:06:58.669Z"
 }
