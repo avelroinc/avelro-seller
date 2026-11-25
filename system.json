@@ -1,5 +1,5 @@
 {
-  "version": "1.0.454",
-  "notes": "- Klavye kısayollarına F tuşları: F1 Kısayollar, F2 Ara, F3 Yeni Kayıt, F4 Bildirimler, F5 Sayfayı Yenile, F6 Genel Bakış, F7 Siparişler, F8 Ödemeler, F9 Müşteriler, F10 Canlı Destek, F11 Destek Talepleri, F12 Raporlar (yazı alanındayken de çalışır).\n- Bütün kısayollar değiştirilebilir: Kısayollar penceresinde Düzenle ile her işleme en çok üç tuş (Ctrl / Shift / Alt'lı ya da iki adımlı) atanır, tuş kaldırılır, işlem ya da hepsi varsayılana döner. Başka işlemde kullanılan tuş oradan kaldırılır ve bildirilir. Atamalar her personelin hesabına kaydedilir.\n- Klavye Kısayolları penceresi yeni tasarım: arama, bölüm seçimi (Tümü, Genel, Sayfada, Bölüme Git), kart ızgarası ve klavye tuşu görünümü; telefonda alttan açılan tam boy sayfa.",
-  "publishedAt": "2026-11-25T09:36:27.012Z"
+  "version": "1.0.455",
+  "notes": "- Siparişler ve Genel Bakış › Son Siparişler: ödeme bekleyen siparişte Ödeme Bekliyor etiketinin yanında etiketle aynı boyda saat simgesi; kalan ödeme süresi ve iptal saati üzerine gelince (telefonda dokununca) görünür. Son 6 saatte sarı, son 1 saatte kırmızı.\n- Klavye Kısayolları penceresi: bölüm seçimi açılır liste (yanında arama), alttaki ipucu satırı ve ayraç çizgileri kaldırıldı, Tümünü Sıfırla başlıkta; sağdaki kaydırma çubuğu gizli; telefon ve tablette taşma / kayma düzeltildi, pencere açıkken arkadaki sayfa kaymaz.",
+  "publishedAt": "2026-11-25T10:41:57.941Z"
 }
