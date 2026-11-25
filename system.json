@@ -1,5 +1,5 @@
 {
-  "version": "1.0.458",
-  "notes": "- Bizim Hesap: bağlantı ayarında yalnızca Firma ID (FirmId) gerekir, API Token isteğe bağlı. Bizim Hesap modülünü 1.0.2'ye güncelleyin (Modüller ekranı): fatura Bizim Hesap'ın resmî Entegrasyon API'siyle (addinvoice) kesilir, PDF bağlantısı siparişte görünür.\n- İade faturası: siparişin tamamı iade edildiğinde iade belgesi olmayan sağlayıcıda (Bizim Hesap) asıl fatura iptal edilir; kısmi iadede sipariş geçmişine not düşülür.",
-  "publishedAt": "2026-11-25T11:54:22.578Z"
+  "version": "1.0.459",
+  "notes": "- Bizim Hesap: fatura kesilirken alınan \"Modül ağ isteği reddedildi\" hatası giderildi (Bizim Hesap API'si uygulama.bizimhesap.com adresine yönlendiriyor; bu adres izinli). Güncellemeden sonra Modüller ekranından Bizim Hesap modülünü 1.0.3'e güncelleyin; bağlantıda yalnızca Firma ID (FirmId) gerekir.\n- Siparişler: sağ tık menüsünde Faturalandır (ödenmiş siparişin faturası e-fatura modülüyle kesilir).\n- E-fatura: Otomatik Fatura Kes açıkken \"Kaç Gün Sonra Kesilsin\" ayarı; 0 ödeme alınınca hemen, N gün sipariş tarihinden N gün sonra (15 dakikada bir kontrol, en çok N + 7 gün geriye bakılır).",
+  "publishedAt": "2026-11-25T12:36:49.426Z"
 }
