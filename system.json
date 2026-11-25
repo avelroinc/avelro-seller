@@ -1,5 +1,5 @@
 {
-  "version": "1.0.457",
-  "notes": "- E-fatura: siparişte fatura bilgisi yoksa üyenin Hesabım › Fatura Bilgileri'ndeki kayıtlı bilgiler kullanılır (önceden dolu olmasına rağmen \"fatura bilgileri eksik\" hatası veriliyordu).\n- E-fatura her durumda kesilir: bilgi eksikse nihai tüketici olarak T.C. kimlik no 11111111111, ad soyad üyenin / misafirin adı (yoksa Nihai Tüketici), adres Türkiye, il İstanbul; eksik kurumsal bilgide fatura bireysel kesilir. İade faturası da aynı kuralla.\n- Faturadaki hizmet adı ürün türüne göre: sosyal medya paketleri Sosyal Medya Hizmeti; lisans, Sms Onay ve e-pin Dijital Lisans Hizmeti; yazılımlar Yazılım Hizmeti (iade faturasında sonuna \"(İade)\").",
-  "publishedAt": "2026-11-25T11:41:51.471Z"
+  "version": "1.0.458",
+  "notes": "- Bizim Hesap: bağlantı ayarında yalnızca Firma ID (FirmId) gerekir, API Token isteğe bağlı. Bizim Hesap modülünü 1.0.2'ye güncelleyin (Modüller ekranı): fatura Bizim Hesap'ın resmî Entegrasyon API'siyle (addinvoice) kesilir, PDF bağlantısı siparişte görünür.\n- İade faturası: siparişin tamamı iade edildiğinde iade belgesi olmayan sağlayıcıda (Bizim Hesap) asıl fatura iptal edilir; kısmi iadede sipariş geçmişine not düşülür.",
+  "publishedAt": "2026-11-25T11:54:22.578Z"
 }
