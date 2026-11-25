@@ -3,20 +3,18 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "apiKey",
     "companyId"
   ],
   "properties": {
-    "apiKey": {
-      "type": "string",
-      "title": "apiKey",
-      "minLength": 1,
-      "writeOnly": true
-    },
     "companyId": {
       "type": "string",
-      "title": "companyId",
+      "title": "Firma ID (FirmId)",
       "minLength": 1
+    },
+    "apiKey": {
+      "type": "string",
+      "title": "API Token (İsteğe Bağlı)",
+      "writeOnly": true
     }
   }
 }

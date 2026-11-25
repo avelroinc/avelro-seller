@@ -26,4 +26,5 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 ## Sürümler
 
+- 1.0.2: Bizim Hesap'ın resmî Entegrasyon API dokümanına göre yeniden yazıldı: fatura POST /api/b2b/addinvoice (firmId, invoiceType 3, dates, customer, amounts, details; cevap error / guid / url), iptal POST /api/b2b/cancelinvoice. Bağlantı ayarında yalnızca Firma ID (FirmId) gerekir, token isteğe bağlı. Bizim Hesap'ta satıştan iade belgesi olmadığı için tamamı iade edilen siparişin faturası iptal edilir; kısmi iade Bizim Hesap panelinden kesilir.
 - 1.0.1: İade faturası (createReturnInvoice): faturası kesilmiş siparişte iade yapılınca iade edilen tutar kadar, asıl faturaya bağlı iade belgesi.
