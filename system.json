@@ -1,5 +1,5 @@
 {
-  "version": "1.0.451",
-  "notes": "- Müşteriler: müşteri kartında ve sağ tık menüsünde Hesabı Sil. Ad, e-posta, telefon, fatura bilgileri, oturumlar ve bakiye silinir; sipariş, ödeme ve fatura kayıtları kalır. Silinen hesap listede görünmez, aynı e-postayla yeniden üye olunabilir. Üyenin kendi hesabını silmesi de aynı işlemi kullanır (bakiye de sıfırlanır).\n- Raporlar Bugün ile açılır; Net Kâr ve Ciro Nereye Gitti? Özet sayfasının en üstünde (ayrı sekme kaldırıldı). Dönem satırı (tarih aralığı, Başlangıç, Bitiş) eşit sütunlarda, karşılaştırma yazısı kaldırıldı.\n- Rapor hesapları: iade edilen payın KDV'si KDV'den düşülür (iki kez düşülmüyordu); Elle İade Ettim durum değiştiği gün iade ve Net Tahsilat'tan düşer (Kasa'da Elle İadeler); İadesiz İptal satış olarak kalır; karta iade edilen teslim edilmiş ürünün sağlayıcı maliyeti gider olarak kalır; komisyon yalnızca o dönemde ödenen tutardan ve grafikte doğrudan ödeme günlerine; En Çok Satanlar'da kâr iade ve KDV'yi düşer, pay toplam ciroya göre; Sipariş Durumları sepet başına.",
-  "publishedAt": "2026-11-25T06:04:56.125Z"
+  "version": "1.0.452",
+  "notes": "- Sağ tık menüleri sadeleşti: bütün yönetim sayfalarında menü öğeleri en fazla iki kelime (ör. Sekmede Aç, Kodu Kopyala, Durum Kartı, İptal Talebi, Telafi Talebi, Sitede Gör, Gönderimi Durdur, Ödendi Yap).",
+  "publishedAt": "2026-11-25T06:36:42.036Z"
 }
