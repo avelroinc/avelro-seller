@@ -1,5 +1,5 @@
 {
-  "version": "1.1.13",
-  "notes": "- E-pin oyun sayfası telefonda: kapak görseli ve bilgi kutuları gizlenir, sayfa satın alma paneliyle açılır; Nasıl Kullanılır, Ürün Açıklaması, Teslimat ve İade, Sık Sorulanlar sekmeleri açılır-kapanır başlıklar oldu (taşma yok). Tablette kapak kısa bir şerit.",
-  "publishedAt": "2026-11-26T15:22:44.392Z"
+  "version": "1.1.14",
+  "notes": "- E-pin oyun sayfası: büyük kapak görseli telefon ve tablette yeniden görünür; görselle satın alma paneli arasındaki boşluk daraldı. Telefonda bilgi kutuları gizli, sekmeler açılır-kapanır başlık olarak kalır.",
+  "publishedAt": "2026-11-26T16:11:24.083Z"
 }
