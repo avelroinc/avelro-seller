@@ -1,5 +1,5 @@
 {
-  "version": "1.1.9",
-  "notes": "- Sayfa hızı: tema stil dosyası brotli ile sıkıştırılır; yalnızca tek sayfada kullanılan stiller (ana sayfa kutuları, ücretsiz araçlar, İletişim, lisans ürün sayfası, Hesabım › Destek, Sipariş Sorgula) kendi sayfasında yüklenir. Her sayfada yüklenen stil dosyası yaklaşık %35 küçüldü.\n- Ana sayfadaki hızlı sipariş kutusuna yalnızca gereken hizmet bilgisi gönderilir (sayfa daha hafif).\n- Tüm Hizmetler sayfasının Google başlığı, açıklaması ve makalesi Sayfalar'dan düzenlenir.\n- Site haritasında oyun, lisans, sistem sayfaları, blog ve liste sayfaları için son güncelleme tarihi.\n- Ana sayfa giriş görselleri ve blog kapaklarında açıklama yazılmadıysa başlık kullanılır.\n- Ana sayfa yapılandırılmış veride makale olarak işaretlenmez.",
-  "publishedAt": "2026-11-26T11:21:14.007Z"
+  "version": "1.1.10",
+  "notes": "- Facebook ile giriş kaldırıldı; yalnızca Google ile giriş var (modülün adı Google ile Giriş). Kayıtlı Facebook uygulama bilgileri bir kez silinir. Facebook ile üye olan müşteriler Şifremi Unuttum ile şifre belirleyip girebilir.",
+  "publishedAt": "2026-11-26T13:17:56.034Z"
 }
