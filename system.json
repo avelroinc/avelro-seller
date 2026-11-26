@@ -1,5 +1,5 @@
 {
-  "version": "1.1.11",
-  "notes": "- Modüller ana sayfası Ayarlar ana sayfasıyla aynı düzende: Satış, İletişim, Büyüme kutuları; her türde açık modül sayısı ve modüller.\n- Sağdaki Hızlı Erişim menüsünde sabitlenen sayfalar sürüklenerek (ya da Alt + Yukarı / Aşağı ok ile) sıralanır; sıra kişiye özel kaydedilir.\n- Müşteri detayındaki E-postayı Kopyala düğmesi kaldırıldı.",
-  "publishedAt": "2026-11-26T13:45:39.434Z"
+  "version": "1.1.12",
+  "notes": "- E-pin oyun sayfasındaki satın alma paneli yenilendi: oyun logosu ve teslim bilgisiyle başlık; numaralı adımlar; iki sütun paket kartları (logo, miktar, birim, fiyat, indirim, seçilende onay işareti, rozetler); 8'den fazla pakette stokta olanlar önde ve kalanı Paket Daha ile açılır; seçilen paket, adet ve toplamın tek kutuda olduğu özet; tek satır güvenceler. Renkler oyunun rengidir.",
+  "publishedAt": "2026-11-26T15:01:37.732Z"
 }
