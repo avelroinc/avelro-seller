@@ -1,5 +1,5 @@
 {
-  "version": "1.1.6",
-  "notes": "- Havale ile ödemede tam ekran bekleme ekranı: banka hesapları, tutar ve sipariş kodu tek dokunuşla kopyalanır; havale banka bildirimiyle (ya da yönetici onayıyla) onaylanınca ekran kendiliğinden güncellenir.\n- Havale ile bakiye yüklemesi bildirilince Ödemen Kontrol Ediliyor ekranı açılır; para önce gönderilip sonra bildirildiyse gelmiş banka bildirimi yüklemeyle eşleştirilir (Otomatik Onay açıksa bakiye hemen yüklenir).\n- Sepetteki Öde düğmesi basılınca soluklaşmıyor; yazı ve dönen simge ortada.",
-  "publishedAt": "2026-11-26T07:02:23.031Z"
+  "version": "1.1.7",
+  "notes": "- Havale bekleme ekranı: Otomatik Onay açıkken bildirim düğmesi ikinci planda (Ödeme Onaylanmadı Mı? Bildir.) ve altında kendi adına gönderenin bildirmesine gerek olmadığı notu; kapalıyken Ödemeyi Yaptım, Bildir ana düğme kalır.\n- Ödemesi onaylanmış siparişe havale bildirimi yapılınca Ödemen Zaten Onaylandı yanıtı; sepetteki sayfa kendini ödendi olarak günceller.",
+  "publishedAt": "2026-11-26T07:34:26.663Z"
 }
