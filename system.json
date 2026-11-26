@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
-  "notes": "- Banka Bildirimleri sayfasında yalnızca bildirimler; bağlı telefon, bildirim erişimi, Otomatik Onay ve bağlantıyı kaldırma Ayarlar › Mağaza › Banka Bildirimleri'nde (uygulamada Bu Telefon kutucuğu da buraya açılır).",
-  "publishedAt": "2026-11-25T20:33:32.803Z"
+  "version": "1.1.5",
+  "notes": "- Ayarlar: Bu Telefon başlığı kaldırıldı; Uygulama Kilidi ve Girişler Ekip ve Güvenlik grubunda, Bildirimler ve Görünüm Sistem grubunda (yalnızca uygulamada).\n- Panel Seç uygulamada menünün altında, Çıkış Yap’ın üstünde.\n- Banka Bildirimleri yalnızca Ayarlar › Mağaza altında.",
+  "publishedAt": "2026-11-26T05:50:22.722Z"
 }
