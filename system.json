@@ -1,5 +1,5 @@
 {
-  "version": "1.1.10",
-  "notes": "- Facebook ile giriş kaldırıldı; yalnızca Google ile giriş var (modülün adı Google ile Giriş). Kayıtlı Facebook uygulama bilgileri bir kez silinir. Facebook ile üye olan müşteriler Şifremi Unuttum ile şifre belirleyip girebilir.",
-  "publishedAt": "2026-11-26T13:17:56.034Z"
+  "version": "1.1.11",
+  "notes": "- Modüller ana sayfası Ayarlar ana sayfasıyla aynı düzende: Satış, İletişim, Büyüme kutuları; her türde açık modül sayısı ve modüller.\n- Sağdaki Hızlı Erişim menüsünde sabitlenen sayfalar sürüklenerek (ya da Alt + Yukarı / Aşağı ok ile) sıralanır; sıra kişiye özel kaydedilir.\n- Müşteri detayındaki E-postayı Kopyala düğmesi kaldırıldı.",
+  "publishedAt": "2026-11-26T13:45:39.434Z"
 }
