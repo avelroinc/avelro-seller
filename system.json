@@ -1,5 +1,5 @@
 {
-  "version": "1.1.17",
-  "notes": "- Google Araması Raporlar’dan çıktı, Pazarlama › Google Araması olarak ayrı sayfa oldu (Pazarlama yetkisiyle).\n- Google Araması ve Kelime Takibi sayfaları yeniden tasarlandı: sade özet kutuları, tek başlıklı tablolar, renkli sıra rozetleri; telefonda kart satırlar ve sekmeler yerine açılır liste.\n- Kelime Takibi: süzgeç (Tümü, İlk 3, İlk Sayfa, 11–100, Sırasız), en iyi sıradan dizilir.\n- Google Araması: aramalar satırdan Kelime Takibi’ne alınabilir; grafikte gün çizgileri ve tarihler.",
-  "publishedAt": "2026-11-26T19:11:44.192Z"
+  "version": "1.1.18",
+  "notes": "- Havale bildirimi ödeme ekranının içinde yapılır: Bildir düğmesi ekranda Havale Bildirimi sayfasını açar (Geri ile havale bilgilerine dönülür); gönderilince ekran Ödemen Kontrol Ediliyor olur ve beklemeye devam eder.\n- Sepetin sipariş sonrası sayfasında havale bildirimi formu yok; Havale ile Öde kartında banka hesapları ve Ödeme Ekranını Aç düğmesi var.",
+  "publishedAt": "2026-11-26T20:01:15.530Z"
 }
