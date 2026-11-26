@@ -1,5 +1,5 @@
 {
-  "version": "1.1.15",
-  "notes": "- Yönetici giriş ekranı yenilendi: Tekrar Hoş Geldin başlığı; simgeli alanlar ve şifreyi göster / gizle; Oturumu Açık Tut ve Şifremi Unuttum aynı satırda; bot doğrulaması küçük bir satır; altta güven satırı. Görsel alanda başlık üstte, yüzen kartlar yazıların üstüne binmez, logo açık temada da okunur.",
-  "publishedAt": "2026-11-26T16:47:04.447Z"
+  "version": "1.1.16",
+  "notes": "- Raporlar › Google Araması: Search Console özeti (tıklama, gösterim, oran, ortalama sıra ve önceki dönemle karşılaştırma; günlük grafik; aramalar, fırsatlar ve sıra değişenler; sayfalar ve cihazlar).\n- Pazarlama › Kelime Takibi: seçilen kelimelerin Google sırası her gün kendiliğinden kontrol edilir (DataForSEO açıksa canlı Google, değilse Search Console); değişim, en iyi sıra, son 30 kontrol grafiği, sıralanan sayfa; Search Console aramalarından öneri. DataForSEO modülü 1.0.2 gerekir.\n- Yönetici girişi: QR ile girişteki adım açıklamaları kaldırıldı.",
+  "publishedAt": "2026-11-26T18:22:25.951Z"
 }
