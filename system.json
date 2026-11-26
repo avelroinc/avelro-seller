@@ -1,5 +1,5 @@
 {
-  "version": "1.1.14",
-  "notes": "- E-pin oyun sayfası: büyük kapak görseli telefon ve tablette yeniden görünür; görselle satın alma paneli arasındaki boşluk daraldı. Telefonda bilgi kutuları gizli, sekmeler açılır-kapanır başlık olarak kalır.",
-  "publishedAt": "2026-11-26T16:11:24.083Z"
+  "version": "1.1.15",
+  "notes": "- Yönetici giriş ekranı yenilendi: Tekrar Hoş Geldin başlığı; simgeli alanlar ve şifreyi göster / gizle; Oturumu Açık Tut ve Şifremi Unuttum aynı satırda; bot doğrulaması küçük bir satır; altta güven satırı. Görsel alanda başlık üstte, yüzen kartlar yazıların üstüne binmez, logo açık temada da okunur.",
+  "publishedAt": "2026-11-26T16:47:04.447Z"
 }
