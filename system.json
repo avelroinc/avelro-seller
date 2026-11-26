@@ -1,5 +1,5 @@
 {
-  "version": "1.1.7",
-  "notes": "- Havale bekleme ekranı: Otomatik Onay açıkken bildirim düğmesi ikinci planda (Ödeme Onaylanmadı Mı? Bildir.) ve altında kendi adına gönderenin bildirmesine gerek olmadığı notu; kapalıyken Ödemeyi Yaptım, Bildir ana düğme kalır.\n- Ödemesi onaylanmış siparişe havale bildirimi yapılınca Ödemen Zaten Onaylandı yanıtı; sepetteki sayfa kendini ödendi olarak günceller.",
-  "publishedAt": "2026-11-26T07:34:26.663Z"
+  "version": "1.1.8",
+  "notes": "- SEO: Ayarlar › SEO altında Yönlendirmeler listesi (eski adres → yeni adres, kalıcı 301; zincirler tek adıma iner).\n- Ücretsiz araçların eski /araclar adresleri /ucretsiz-araclar adreslerine yönlenir.\n- SVG logo paylaşım görseli olarak kullanılmaz; yerine 1200×630 JPEG paylaşım görseli.\n- Bulunamayan sayfaların başlığı Sayfa Bulunamadı (ana sayfanın Google başlığını taşımaz).\n- Başlık girilmemiş lisans ürünlerinde Lisans kelimesi iki kez yazılmaz.\n- Socifizy: arama sonucu başlıkları ve açıklamaları, ana sayfa makalesindeki bozuk bağlantılar ve silinmiş Instagram hizmetlerinin yönlendirmeleri tek seferlik veri güncellemesiyle girildi.",
+  "publishedAt": "2026-11-26T10:35:46.159Z"
 }
