@@ -1,5 +1,5 @@
 {
-  "version": "1.1.16",
-  "notes": "- Raporlar › Google Araması: Search Console özeti (tıklama, gösterim, oran, ortalama sıra ve önceki dönemle karşılaştırma; günlük grafik; aramalar, fırsatlar ve sıra değişenler; sayfalar ve cihazlar).\n- Pazarlama › Kelime Takibi: seçilen kelimelerin Google sırası her gün kendiliğinden kontrol edilir (DataForSEO açıksa canlı Google, değilse Search Console); değişim, en iyi sıra, son 30 kontrol grafiği, sıralanan sayfa; Search Console aramalarından öneri. DataForSEO modülü 1.0.2 gerekir.\n- Yönetici girişi: QR ile girişteki adım açıklamaları kaldırıldı.",
-  "publishedAt": "2026-11-26T18:22:25.951Z"
+  "version": "1.1.17",
+  "notes": "- Google Araması Raporlar’dan çıktı, Pazarlama › Google Araması olarak ayrı sayfa oldu (Pazarlama yetkisiyle).\n- Google Araması ve Kelime Takibi sayfaları yeniden tasarlandı: sade özet kutuları, tek başlıklı tablolar, renkli sıra rozetleri; telefonda kart satırlar ve sekmeler yerine açılır liste.\n- Kelime Takibi: süzgeç (Tümü, İlk 3, İlk Sayfa, 11–100, Sırasız), en iyi sıradan dizilir.\n- Google Araması: aramalar satırdan Kelime Takibi’ne alınabilir; grafikte gün çizgileri ve tarihler.",
+  "publishedAt": "2026-11-26T19:11:44.192Z"
 }
