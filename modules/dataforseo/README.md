@@ -15,12 +15,17 @@ Avelro Packet Seller System için SEO modülü. Kaynak: `avelroinc/avelro-seller
 - Google'dan yeterli arama önerisi gelmezse ana kelime için Google Ads'in ilgili aramaları kullanılır.
 - Her istek Work/Bot canlı akışında İçerik Editörü satırı olarak görünür: kaç aramanın sayısı alındı, isteğin ücreti ve bu ayın toplamı; hata olursa nedeni.
 - Modül kapalıysa ya da ayar yoksa yazılar yine yazılır; öneriler Google'ın kendi sırasıyla kullanılır.
+- Pazarlama › Kelime Takibi: takip edilen kelimeler Google Türkiye'de (masaüstü, ilk 100 sonuç) canlı aranır ve sitenin sırası
+  kaydedilir. Her kelime günde bir kez kendiliğinden, istenirse panelden hemen kontrol edilir.
 
 ## Ücret
 
 DataForSEO kullandıkça ücretlendirir; ücret istek başınadır, kelime sayısına göre değişmez. Her yazı planı tek istek gönderir (yaklaşık
 0,075 USD). Aynı kelimelerin sonuçları 7 gün saklanır, aynı konuda yeniden yazıda tekrar ücret ödenmez. Güncel fiyatlar:
 dataforseo.com/pricing.
+
+Kelime Takibi'nde her kelime kontrolü ayrı bir istektir; ücret aranan sonuç derinliğine göre değişir (ilk 100 sonuç için kelime başına bir
+sentin altında). Her isteğin gerçek ücreti yanıtla döner ve aylık toplama yazılır.
 
 ## Kurulum
 
@@ -41,6 +46,11 @@ güncelleme başarısız olursa kurulu sürüm korunur. Kaldırma bağlantı aya
 3. Değişiklikleri `avelro-seller` deposunun `main` dalına gönderin.
 
 ## Sürüm Notları
+
+### 1.0.2
+
+- Yeni işlem: canlı Google sırası (serpRank). Kelime Google Türkiye'de aranır; sitenin ilk organik sonucunun sırası, adresi ve
+  ilk üç rakip alan adı döner. Pazarlama › Kelime Takibi bunu kullanır. Sistem 1.1.16 ve üzeri gerekir.
 
 ### 1.0.1
 

@@ -1,5 +1,5 @@
-// DataForSEO Entegrasyonu: Google Ads (Anahtar Kelime Planlayıcı) verisiyle kelimelerin aylık arama sayısı, ilgili kelime önerileri ve
-// hesap bakiyesi. Bağımsız sağlayıcı paketidir: giriş bilgileri ve ağ erişimi sistem tarafından verilir; modül veritabanına ve başka
+// DataForSEO Entegrasyonu: Google Ads (Anahtar Kelime Planlayıcı) verisiyle kelimelerin aylık arama sayısı, ilgili kelime önerileri,
+// canlı Google sırası (serpRank: kelime Google Türkiye'de aranır, sitenin sırası bulunur) ve hesap bakiyesi. Bağımsız sağlayıcı paketidir: giriş bilgileri ve ağ erişimi sistem tarafından verilir; modül veritabanına ve başka
 // adrese erişemez. Hatalar fırlatılmaz, {error,status} olarak döner (sistem kullanıcıya anlaşılır mesaj gösterebilsin). Her başarılı
 // yanıtta isteğin ücreti (cost, USD) döner.
 export type ModuleHost={configuration():Promise<Config>;request(url:string,init?:RequestInit):Promise<{ok:boolean;status:number;json():Promise<unknown>;text():Promise<string>}>};
@@ -7,6 +7,8 @@ type Config={login:string;password:string};
 type Failure={error:string;status:number};
 type VolumeInput={keywords:string[];locationCode?:number;languageCode?:string};
 type IdeasInput={keyword:string;locationCode?:number;languageCode?:string;limit?:number};
+type RankInput={keyword:string;domain:string;locationCode?:number;languageCode?:string;device?:"desktop"|"mobile";depth?:number};
+type SerpItem={type?:string;rank_group?:number;domain?:string;url?:string};
 type Envelope={status_code?:number;status_message?:string;cost?:number;tasks?:{status_code?:number;status_message?:string;cost?:number;result?:unknown[]|null}[]};
 type Row={keyword?:string;search_volume?:number|null;competition?:string|null;cpc?:number|null};
 
@@ -54,6 +56,22 @@ export default function createModule(host:ModuleHost){
   return {items,cost:r.cost};
  }
 
+ // Canlı Google sırası: kelime Google Türkiye'de aranır (varsayılan masaüstü, ilk 100 sonuç); sitenin (alan adı ve alt alan adları)
+ // ilk organik sonucunun sırası ve adresi döner, sitede yoksa position null. İlk üç organik sonucun alan adı da döner (rakipler).
+ async function serpRank(input:RankInput){
+  const keyword=typeof input?.keyword==="string"?input.keyword.trim().replace(/\s+/g," ").slice(0,200):"";
+  const domain=typeof input?.domain==="string"?input.domain.trim().toLowerCase().replace(/^https?:\/\//,"").replace(/^www\./,"").replace(/\/.*$/,""):"";
+  if(keyword.length<2)return {error:"Kelime geçersiz.",status:400};
+  if(!/^[a-z0-9.-]+\.[a-z]{2,}$/.test(domain))return {error:"Alan adı geçersiz.",status:400};
+  const depth=Math.max(10,Math.min(100,Number(input.depth)||100));
+  const r=await call("serp/google/organic/live/regular",[{keyword,...place(input),device:input.device==="mobile"?"mobile":"desktop",depth}]);
+  if("error" in r)return r;
+  const items=(((r.result[0] as {items?:SerpItem[]}|undefined)?.items)||[]).filter(x=>x&&x.type==="organic");
+  const own=(d:string|undefined)=>{const h=String(d||"").toLowerCase().replace(/^www\./,"");return h===domain||h.endsWith("."+domain)};
+  const hit=items.find(x=>own(x.domain));
+  return {position:hit&&typeof hit.rank_group==="number"?hit.rank_group:null,url:hit?.url||null,top:items.slice(0,3).map(x=>String(x.domain||"")),cost:r.cost};
+ }
+
  // Hesap: bağlantı denemesi ve kalan bakiye (USD).
  async function account(){
   const r=await call("appendix/user_data");
@@ -62,5 +80,5 @@ export default function createModule(host:ModuleHost){
   return {balance:typeof money?.balance==="number"?money.balance:null};
  }
 
- return {searchVolume,keywordIdeas,account};
+ return {searchVolume,keywordIdeas,account,serpRank};
 }
