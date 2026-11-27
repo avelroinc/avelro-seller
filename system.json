@@ -1,5 +1,5 @@
 {
-  "version": "1.1.22",
-  "notes": "- Yönetimdeki bütün alanlar aynı düzende: ad solda soluk zeminde, giriş bitişik (modül sayfaları, sayfa düzenleyici, görsel alanı, Site Metinleri, Yapay Zekâ ile Yaz seçenekleri). Çok satırlı alanda ve telefonda ad üstte.\n- Havale / EFT › Bağlı Telefon: Otomatik Onay yazısız anahtar, Bağlantıyı Kaldır'ın yanında.",
-  "publishedAt": "2026-11-27T09:55:58.718Z"
+  "version": "1.1.23",
+  "notes": "- Yönetimde yol izi ve geri düğmesi hiçbir ekranda yok; üst satırda yalnızca sayfanın işlemleri ve yazılı Kaydet düğmesi kalır.",
+  "publishedAt": "2026-11-27T10:17:19.833Z"
 }
