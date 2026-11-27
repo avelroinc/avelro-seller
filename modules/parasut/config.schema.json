@@ -5,8 +5,6 @@
   "required": [
     "clientId",
     "clientSecret",
-    "username",
-    "password",
     "companyId"
   ],
   "properties": {
@@ -21,21 +19,24 @@
       "minLength": 1,
       "writeOnly": true
     },
-    "username": {
-      "type": "string",
-      "title": "username",
-      "minLength": 1
-    },
-    "password": {
-      "type": "string",
-      "title": "password",
-      "minLength": 1,
-      "writeOnly": true
-    },
     "companyId": {
       "type": "string",
       "title": "companyId",
       "minLength": 1
+    },
+    "accessToken": {
+      "type": "string",
+      "title": "accessToken",
+      "writeOnly": true
+    },
+    "username": {
+      "type": "string",
+      "title": "username"
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "writeOnly": true
     }
   }
 }

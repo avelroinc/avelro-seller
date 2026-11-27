@@ -28,3 +28,9 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 
 - 1.0.1: İade faturası (createReturnInvoice): faturası kesilmiş siparişte iade yapılınca iade edilen tutar kadar, asıl faturaya bağlı iade belgesi.
 - 1.1.0: Bağlantı denemesi (test): oturum açılır ve firmanın kişi listesi okunur. Modüller › Paraşüt › Bağlantıyı Test Et.
+- 1.2.0: Paraşüt API v4 dokümanına (devhub.parasut.com, OpenAPI 4.1.0) uyum. Yetki OAuth2 Authorization Code + PKCE ile alınır
+  (Modüller › Paraşüt › Paraşüt'e Bağlan; anahtarı sistem yeniler, modüle erişim anahtarı gelir; eski parola akışı yalnızca bağlanmamış
+  eski kurulumlarda). Fatura: sabit external_reference_key ile tekrar denemede ikinci fatura açılmaz; e-belge türü alıcının e-fatura
+  posta kutusuna göre seçilir (e_invoice_inbox_checks → e-Fatura senaryo TEMEL, yoksa e-Arşiv internet satışı bilgisiyle), e-belge işi
+  (trackable_jobs) sonuçlanana kadar beklenir ve hata iletisi döner; fatura numarası e-belgeden alınır. İade kaydına net_total ve total_vat
+  eklendi. İstekler application/vnd.api+json.
