@@ -35,3 +35,4 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
   (trackable_jobs) sonuçlanana kadar beklenir ve hata iletisi döner; fatura numarası e-belgeden alınır. İade kaydına net_total ve total_vat
   eklendi. İstekler application/vnd.api+json.
 - 1.2.1: Bağlantıyı Test Et hesabın erişebildiği firmaları okur (GET /me?include=companies): Firma No yanlışsa doğru numaraları adlarıyla gösterir; Paraşüt erişimi reddederse kendi gerekçesini (API paketi, entegrasyon yetkisi) iletir.
+- 1.2.2: Fatura ve iade satırları Paraşüt ürününe bağlanır ("Ürün/hizmet doldurulmalı" hatası): satırın adıyla ürün aranır, yoksa stok takipsiz hizmet olarak açılır (Bizim Hesap'taki gibi satır adı kullanılır).

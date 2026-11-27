@@ -90,6 +90,24 @@ async function referenceKey(reference:string){
  return `${hex.slice(0,8)}-${hex.slice(8,12)}-5${hex.slice(13,16)}-${(8|parseInt(hex[16],16)&3).toString(16)}${hex.slice(17,20)}-${hex.slice(20,32)}`;
 }
 
+// Ürün / hizmet: Paraşüt fatura satırında ürün bağlantısı ister ("Ürün/hizmet doldurulmalı"). Bizim Hesap'taki gibi satırın adı kullanılır:
+// aynı adlı ürün varsa o, yoksa stok takipsiz hizmet olarak açılır (birim Adet, satırın KDV oranı). Aynı ad bir kez sorulur.
+async function productIds(api:Api,lines:InvoiceLine[]){
+ const ids=new Map<string,string>();
+ for(const line of lines){
+  const name=line.name.trim().slice(0,255)||"Hizmet";if(ids.has(name))continue;
+  const found=await api("GET",`/products?${new URLSearchParams({"filter[name]":name,"page[size]":"25"}).toString()}`,undefined,15000);
+  const list=Array.isArray(found.body.data)?found.body.data:[];
+  const match=list.find(x=>String(x.attributes?.name||"").trim().toLocaleLowerCase("tr-TR")===name.toLocaleLowerCase("tr-TR")&&x.attributes?.archived!==true);
+  if(found.ok&&match?.id){ids.set(name,match.id);continue}
+  const created=await api("POST","/products",{data:{type:"products",attributes:{name,vat_rate:line.vatRate??20,unit:"Adet",currency:"TRL",inventory_tracking:false}}},15000);
+  const product=one(created.body);
+  if(!created.ok||!product?.id)throw new EinvoiceError(errorOf(created.body,`Paraşüt'te "${name}" ürünü açılamadı.`));
+  ids.set(name,product.id);
+ }
+ return (line:InvoiceLine)=>({product:{data:{id:ids.get(line.name.trim().slice(0,255)||"Hizmet"),type:"products"}}});
+}
+
 // E-Arşiv internet satışı: ödeme yöntemi Paraşüt'ün kodlarıyla.
 const PLATFORM:Record<string,string>={STRIPE:"Stripe",SHOPIER:"Shopier",CRYPTOMUS:"Cryptomus",HELEKET:"Heleket"};
 function internetSale(sale:CreateInvoiceInput["sale"]){
@@ -127,7 +145,8 @@ async function createParasutInvoice(config:ParasutConfig,input:CreateInvoiceInpu
  const api=client(config,await accessToken(config));
  const contactId=await findOrCreateContact(api,input.buyer),date=today();
  const attributes={item_type:"invoice",description:(input.note||"Sipariş Faturası").slice(0,255),issue_date:date,due_date:date,currency:"TRL",billing_address:input.buyer.address||undefined,tax_office:input.buyer.taxOffice||undefined,tax_number:input.buyer.taxId,city:input.buyer.city||undefined};
- const details=input.lines.map(line=>({type:"sales_invoice_details",attributes:{quantity:line.quantity,unit_price:line.unitPriceMicros/1e6,vat_rate:line.vatRate??20,description:line.name}}));
+ const product=await productIds(api,input.lines);
+ const details=input.lines.map(line=>({type:"sales_invoice_details",attributes:{quantity:line.quantity,unit_price:line.unitPriceMicros/1e6,vat_rate:line.vatRate??20,description:line.name},relationships:product(line)}));
  const relationships:Record<string,unknown>={contact:{data:{id:contactId,type:"contacts"}},details:{data:details}};
  if(input.reference)relationships.external_reference_key={data:{type:"external_reference_keys",attributes:{key:await referenceKey(input.reference)}}};
  const created=await api("POST","/sales_invoices",{data:{type:"sales_invoices",attributes,relationships}});
@@ -161,7 +180,8 @@ async function createParasutReturnInvoice(config:ParasutConfig,input:CreateRetur
  const contactId=await findOrCreateContact(api,input.buyer),date=today();
  const round=(n:number)=>Math.round(n*100)/100;
  const net=round(input.lines.reduce((s,l)=>s+l.quantity*l.unitPriceMicros/1e6,0)),vat=round(input.lines.reduce((s,l)=>s+l.quantity*l.unitPriceMicros/1e6*(l.vatRate??20)/100,0));
- const r=await api("POST","/purchase_bills",{data:{type:"purchase_bills",attributes:{item_type:"refund",description:(input.note||`${input.original.invoiceNumber||input.original.providerInvoiceId} numaralı faturanın iadesi`).slice(0,255),issue_date:date,due_date:date,currency:"TRL",net_total:net,total_vat:vat,...(input.original.invoiceNumber?{invoice_no:`IADE-${input.original.invoiceNumber}`}:{})},relationships:{supplier:{data:{id:contactId,type:"contacts"}},details:{data:input.lines.map(line=>({type:"purchase_bill_details",attributes:{quantity:line.quantity,unit_price:line.unitPriceMicros/1e6,vat_rate:line.vatRate??20,description:line.name}}))}}}});
+ const product=await productIds(api,input.lines);
+ const r=await api("POST","/purchase_bills",{data:{type:"purchase_bills",attributes:{item_type:"refund",description:(input.note||`${input.original.invoiceNumber||input.original.providerInvoiceId} numaralı faturanın iadesi`).slice(0,255),issue_date:date,due_date:date,currency:"TRL",net_total:net,total_vat:vat,...(input.original.invoiceNumber?{invoice_no:`IADE-${input.original.invoiceNumber}`}:{})},relationships:{supplier:{data:{id:contactId,type:"contacts"}},details:{data:input.lines.map(line=>({type:"purchase_bill_details",attributes:{quantity:line.quantity,unit_price:line.unitPriceMicros/1e6,vat_rate:line.vatRate??20,description:line.name},relationships:product(line)}))}}}});
  const bill=one(r.body);
  if(!r.ok||!bill?.id)throw new EinvoiceError(errorOf(r.body,"Paraşüt iade kaydı oluşturulamadı."));
  const number=bill.attributes?.invoice_no;
