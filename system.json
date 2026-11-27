@@ -1,5 +1,5 @@
 {
-  "version": "1.1.26",
-  "notes": "- İade faturası: e-fatura modüllerinde (Paraşüt, Bizim Hesap, Logo, Uyumsoft) \"Modül işlemi desteklenmiyor\" hatası giderildi; kesilemeyen iade faturaları sipariş sayfasındaki Yeniden Dene ile kesilir.\n- E-fatura: aynı anda yalnızca bir modül açık olabilir; diğeri açıkken Fatura Kes açılmaz (önceden diğerini sessizce kapatıyordu).\n- Paraşüt (modül 1.2.1): Bağlantıyı Test Et, Firma No yanlışsa hesabın firmalarını numaralarıyla gösterir; Paraşüt erişimi reddederse gerekçesini (API paketi, entegrasyon yetkisi) iletir.",
-  "publishedAt": "2026-11-27T16:02:24.621Z"
+  "version": "1.1.27",
+  "notes": "- Paraşüt (modül 1.2.2): fatura ve iade satırları Paraşüt ürününe bağlanır (\"Ürün/hizmet doldurulmalı\" hatası giderildi); ürün satırın adıyla (Sosyal Medya Hizmeti, Dijital Lisans Hizmeti, Yazılım Hizmeti) bulunur ya da hizmet olarak açılır.\n- İade faturası yalnızca durumu İade Edildi olan ürün için kesilir; kısmi iadede kesilmez.\n- Aynı fatura aynı hatayla yeniden kesilemezse tekrar bildirim düşmez; e-fatura modüllerinin tek işlemdeki istek sınırı yükseltildi.",
+  "publishedAt": "2026-11-27T17:35:27.610Z"
 }
