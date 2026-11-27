@@ -1,5 +1,5 @@
 {
-  "version": "1.1.20",
-  "notes": "- Modül sayfaları yeniden tasarlandı: üstte logo, ad, sürüm ve durum (yeni sürüm varsa Güncelle); Durum, Bağlantı Bilgileri, Komisyon gibi bölümler; altta Kaldır, Bağlantıyı Test Et ve Kaydet. İnce açıklama yazıları ve bilgi kutuları kaldırıldı.\n- Bağlantıyı Test Et: bütün bağlantılı modüllerde (ödeme, SMS, Firebase, e-fatura, yapay zekâ, DataForSEO, Search Console, Google ile Giriş), Sağlayıcılar'da ve E-posta Sunucusu'nda. Hiçbir şey kaydedilmez. Stripe, Cryptomus, Heleket, Paraşüt, BizimHesap, Logo, Uyumsoft ve Sosyal Giriş için modülü 1.1.0'a güncelleyin.\n- Yönetimde hap şeklinde alan kalmadı; aç / kapat anahtarları mağazanın bildirim izni anahtarı gibi.\n- Düğmeler masaüstü, tablet ve telefonda sığdıkça yan yana (onay pencereleri dahil); yalnızca sığmayan alt satıra iner.",
-  "publishedAt": "2026-11-27T08:23:48.591Z"
+  "version": "1.1.21",
+  "notes": "- Her pencere ayrı: Pencere Metinleri'nde değişiklik yalnızca o sayfadaki o düğmenin penceresinde geçerli (Kaydet'in cevabı ile Sil'in cevabı ayrı düzenlenir).\n- Yönetimdeki Nasıl Kullanılır kutuları, açıklama yazıları ve numaralı adımlar kaldırıldı.\n- Telefonda yol izi ve geri düğmesi yok; sayfanın işlemleri ve Kaydet (tam genişlik) kalır.\n- Ayarlar yeniden düzenlendi: Puan Rozetleri ve Pencere Metinleri Site menüsünde; Panel Adresi Sistem'de; Banka Bildirimleri'nin bağlı telefonu Modüller › Havale / EFT'de (Otomatik Onay anahtarı Bağlantıyı Kaldır'ın yanında).\n- Havale / EFT'de komisyon alanları kaldırıldı; raporlarda havaleden komisyon düşülmez.",
+  "publishedAt": "2026-11-27T09:11:29.852Z"
 }
