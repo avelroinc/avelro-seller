@@ -81,6 +81,15 @@ async function verifyWebhook(config:HeleketConfig,input:{payload:string}){
  return {merchantOid,status};
 }
 
-return {createPayment: async (input:Parameters<typeof createInvoice>[1]) => createInvoice(await host.configuration(),input),
+// Bağlantı denemesi: imzalı bakiye isteği; merchant kimliği ya da ödeme anahtarı yanlışsa Heleket hata döner.
+async function test(){
+ const config=await host.configuration(),body="[]";
+ const response=await host.request("https://api.heleket.com/v1/balance",{method:"POST",headers:{"content-type":"application/json",merchant:config.merchantId,sign:sign(body,config.paymentKey)},body});
+ const result=await response.json().catch(()=>({})) as {state?:number;message?:string};
+ if(!response.ok||result.state!==0)throw new Error(result.message?`Heleket: ${result.message}`:`Heleket yanıt vermedi (HTTP ${response.status}).`);
+ return {ok:true,message:"Bağlantı çalışıyor."};
+}
+
+return {test,createPayment: async (input:Parameters<typeof createInvoice>[1]) => createInvoice(await host.configuration(),input),
 verifyCallback: async (input:{payload:string}) => verifyWebhook(await host.configuration(),input)};
 }

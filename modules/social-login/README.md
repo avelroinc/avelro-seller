@@ -25,3 +25,4 @@ adreslerine istek gönderebilir. State ve PKCE doğrulaması sistemdedir. Kaldı
 ### 1.0.0
 
 - İlk sürüm: Google / Facebook ile giriş artık sistemle gömülü gelmiyor, ayrı modül olarak kurulup kaldırılıyor. Uygulama bilgileri kayıtlı siteler güncellemeden sonra modülü kendiliğinden kurar. Sistem 1.0.180 ve üzeri gerekir.
+- 1.1.0: Bağlantı denemesi (test): Google uygulama bilgileri (Client ID / Client Secret) doğrulanır. Modüller › Google ile Giriş › Bağlantıyı Test Et.

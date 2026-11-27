@@ -3,7 +3,7 @@
   "id": "cryptomus",
   "name": "Cryptomus Entegrasyonu",
   "description": "Cryptomus ile kripto para ödemesi almak için bağımsız sağlayıcı paketi.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "hostApiVersion": 2,
   "category": "payment",
   "scopes": [

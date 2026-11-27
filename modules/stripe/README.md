@@ -23,3 +23,4 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 ### 1.0.0
 
 - Paket satış sistemi için ilk sürüm. Kod, SMM panelindeki Stripe Entegrasyonu modülünün 1.1.0 sürümünden ayrıldı; davranış aynıdır.
+- 1.1.0: Bağlantı denemesi (test): hesabın bakiyesi okunur; webhook anahtarının whsec_ ile başladığı denetlenir. Modüller › Stripe › Bağlantıyı Test Et.

@@ -55,5 +55,14 @@ async function createLogoReturnInvoice(config:LogoConfig,input:CreateReturnInvoi
  return {providerReturnId:result.invoiceId,documentNumber:result.invoiceNumber,pdfUrl:result.pdfUrl};
 }
 
-return {createInvoice: async (input:CreateInvoiceInput) => createLogoInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput) => createLogoReturnInvoice(await host.configuration(),input)};
+// Bağlantı denemesi: servis kullanıcısı, şifre ve firma koduyla oturum denenir.
+async function test(){
+ const config=await host.configuration();
+ const response=await fetch(`${BASE}/Login`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({wsUserName:config.wsUsername,wsPassword:config.wsPassword,firmCode:config.firmCode}),signal:AbortSignal.timeout(20000)});
+ const result=await response.json().catch(()=>({})) as {success?:boolean;errorMessage?:string};
+ if(!response.ok||result.success===false)throw new EinvoiceError(result.errorMessage||(response.status===401||response.status===403?"Logo servis kullanıcısı ya da şifresi hatalı.":`Logo/eLogo yanıt vermedi (HTTP ${response.status}).`));
+ return {ok:true,message:"Bağlantı çalışıyor."};
+}
+
+return {test,createInvoice: async (input:CreateInvoiceInput) => createLogoInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput) => createLogoReturnInvoice(await host.configuration(),input)};
 }

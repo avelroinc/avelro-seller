@@ -66,5 +66,15 @@ async function createBizimHesapReturnInvoice(config:BizimHesapConfig,input:Creat
  return {providerReturnId:`iptal:${input.original.providerInvoiceId}`,documentNumber:"Fatura İptal Edildi"};
 }
 
-return {createInvoice: async (input:CreateInvoiceInput) => createBizimHesapInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput&{full?:boolean}) => createBizimHesapReturnInvoice(await host.configuration(),input)};
+// Bağlantı denemesi: firmanın depo listesi okunur (Firma ID token başlığında); kimlik yanlışsa Bizim Hesap hata döner.
+async function test(){
+ const config=await host.configuration(),firmId=firmIdOf(config);
+ const response=await fetch(`${BASE}/warehouses`,{method:"GET",headers:{accept:"application/json",token:firmId},signal:AbortSignal.timeout(20000)});
+ const text=await response.text();let data:{error?:string}|null=null;try{data=JSON.parse(text)}catch{}
+ if(data?.error)throw new EinvoiceError(`Bizim Hesap: ${data.error}`);
+ if(!response.ok)throw new EinvoiceError(response.status===401||response.status===403?"Bizim Hesap Firma ID'yi kabul etmedi.":`Bizim Hesap yanıt vermedi (HTTP ${response.status}).`);
+ return {ok:true,message:"Bağlantı çalışıyor."};
+}
+
+return {test,createInvoice: async (input:CreateInvoiceInput) => createBizimHesapInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput&{full?:boolean}) => createBizimHesapReturnInvoice(await host.configuration(),input)};
 }

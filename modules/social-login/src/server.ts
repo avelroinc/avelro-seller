@@ -39,5 +39,17 @@ export default function createModule(host:ModuleHost){
   // Facebook yalnızca hesapta onaylanmış e-postayı döndürür.
   return {profile:{subject:String(me.data.id||""),email:String(me.data.email||"").toLowerCase(),emailVerified:Boolean(me.data.email),name:String(me.data.name||"").slice(0,60)}};
  }
- return {profile};
+ // Bağlantı denemesi (Google): geçersiz bir kodla token istenir. Google önce uygulamayı doğrular: invalid_client ise Client ID ya da
+ // Client Secret yanlıştır; invalid_grant ise uygulama bilgileri doğrudur (yalnızca deneme kodu geçersizdir).
+ async function test(input:{redirectUri?:string}){
+  const {clientId,clientSecret}=await host.configuration();
+  const response=await host.request("https://oauth2.googleapis.com/token",{method:"POST",headers:{"content-type":"application/x-www-form-urlencoded"},body:new URLSearchParams({client_id:clientId,client_secret:clientSecret,code:"avelro-baglanti-denemesi",grant_type:"authorization_code",redirect_uri:String(input?.redirectUri||"")}).toString()}).catch(()=>null);
+  if(!response)throw new Error("Google'a ulaşılamadı.");
+  const data=await response.json().catch(()=>({})) as {error?:string;error_description?:string};
+  if(data.error==="invalid_grant")return {ok:true,message:"Bağlantı çalışıyor."};
+  if(data.error==="invalid_client"||data.error==="unauthorized_client")throw new Error("Client ID ya da Client Secret hatalı.");
+  if(data.error==="redirect_uri_mismatch")throw new Error("Uygulama bilgileri doğru ama yönlendirme adresi Google'da tanımlı değil.");
+  throw new Error(data.error_description||data.error||`Google yanıt vermedi (HTTP ${response.status}).`);
+ }
+ return {profile,test};
 }

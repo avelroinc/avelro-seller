@@ -27,3 +27,4 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 ## Sürümler
 
 - 1.0.1: İade faturası (createReturnInvoice): faturası kesilmiş siparişte iade yapılınca iade edilen tutar kadar, asıl faturaya bağlı iade belgesi.
+- 1.1.0: Bağlantı denemesi (test): oturum açılır ve firmanın kişi listesi okunur. Modüller › Paraşüt › Bağlantıyı Test Et.

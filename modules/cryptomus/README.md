@@ -23,3 +23,4 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
 ### 1.0.0
 
 - Paket satış sistemi için ilk sürüm. Kod, SMM panelindeki Cryptomus Entegrasyonu modülünün 1.0.0 sürümünden ayrıldı; davranış aynıdır.
+- 1.1.0: Bağlantı denemesi (test): imzalı bakiye isteği. Modüller › Cryptomus › Bağlantıyı Test Et.

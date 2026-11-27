@@ -82,5 +82,14 @@ async function createParasutReturnInvoice(config:ParasutConfig,input:CreateRetur
  return {providerReturnId:body.data.id,documentNumber:body.data.attributes?.invoice_no};
 }
 
-return {createInvoice: async (input:CreateInvoiceInput) => createParasutInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput) => createParasutReturnInvoice(await host.configuration(),input)};
+// Bağlantı denemesi: oturum açılır (uygulama ve kullanıcı bilgileri) ve firmanın kişi listesi okunur (firma numarası).
+async function test(){
+ const config=await host.configuration(),token=await getAccessToken(config);
+ const response=await fetch(`${BASE}/${config.companyId}/contacts?page[size]=1`,{headers:{authorization:`Bearer ${token}`},signal:AbortSignal.timeout(15000)});
+ if(response.status===401||response.status===403||response.status===404)throw new EinvoiceError("Paraşüt oturumu açıldı ama firma numarası bu kullanıcıya ait değil.");
+ if(!response.ok)throw new EinvoiceError(`Paraşüt yanıt vermedi (HTTP ${response.status}).`);
+ return {ok:true,message:"Bağlantı çalışıyor."};
+}
+
+return {test,createInvoice: async (input:CreateInvoiceInput) => createParasutInvoice(await host.configuration(),input),createReturnInvoice: async (input:CreateReturnInvoiceInput) => createParasutReturnInvoice(await host.configuration(),input)};
 }

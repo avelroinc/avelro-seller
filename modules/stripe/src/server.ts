@@ -63,6 +63,17 @@ async function verifyStripeCallback(config:StripeConfig,input:{payload:string;si
  return {merchantOid,status};
 }
 
-return {createPayment: async (input:Parameters<typeof createCheckoutSession>[1]) => createCheckoutSession(await host.configuration(),input),
+// Bağlantı denemesi: hesabın bakiyesi okunur; gizli anahtar yanlışsa Stripe'ın hata mesajı döner.
+async function test(){
+ const config=await host.configuration();
+ const response=await host.request("https://api.stripe.com/v1/balance",{method:"GET",headers:{authorization:`Bearer ${config.secretKey}`}});
+ const result=await response.json().catch(()=>({})) as {available?:{amount:number;currency:string}[];error?:{message?:string}};
+ if(!response.ok)throw new Error(result.error?.message||`Stripe yanıt vermedi (HTTP ${response.status}).`);
+ if(!/^whsec_/.test(config.webhookSecret||""))throw new Error("Gizli anahtar çalışıyor ama webhook anahtarı whsec_ ile başlamıyor.");
+ const a=result.available?.[0];
+ return {ok:true,message:a?`Bağlantı çalışıyor. Bakiye: ${(a.amount/100).toFixed(2)} ${a.currency.toUpperCase()}`:"Bağlantı çalışıyor."};
+}
+
+return {test,createPayment: async (input:Parameters<typeof createCheckoutSession>[1]) => createCheckoutSession(await host.configuration(),input),
 verifyCallback: async (input:{payload:string;signature:string}) => verifyStripeCallback(await host.configuration(),input)};
 }
