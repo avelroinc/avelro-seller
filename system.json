@@ -1,5 +1,5 @@
 {
-  "version": "1.1.21",
-  "notes": "- Her pencere ayrı: Pencere Metinleri'nde değişiklik yalnızca o sayfadaki o düğmenin penceresinde geçerli (Kaydet'in cevabı ile Sil'in cevabı ayrı düzenlenir).\n- Yönetimdeki Nasıl Kullanılır kutuları, açıklama yazıları ve numaralı adımlar kaldırıldı.\n- Telefonda yol izi ve geri düğmesi yok; sayfanın işlemleri ve Kaydet (tam genişlik) kalır.\n- Ayarlar yeniden düzenlendi: Puan Rozetleri ve Pencere Metinleri Site menüsünde; Panel Adresi Sistem'de; Banka Bildirimleri'nin bağlı telefonu Modüller › Havale / EFT'de (Otomatik Onay anahtarı Bağlantıyı Kaldır'ın yanında).\n- Havale / EFT'de komisyon alanları kaldırıldı; raporlarda havaleden komisyon düşülmez.",
-  "publishedAt": "2026-11-27T09:11:29.852Z"
+  "version": "1.1.22",
+  "notes": "- Yönetimdeki bütün alanlar aynı düzende: ad solda soluk zeminde, giriş bitişik (modül sayfaları, sayfa düzenleyici, görsel alanı, Site Metinleri, Yapay Zekâ ile Yaz seçenekleri). Çok satırlı alanda ve telefonda ad üstte.\n- Havale / EFT › Bağlı Telefon: Otomatik Onay yazısız anahtar, Bağlantıyı Kaldır'ın yanında.",
+  "publishedAt": "2026-11-27T09:55:58.718Z"
 }
