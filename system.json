@@ -1,5 +1,5 @@
 {
-  "version": "1.1.18",
-  "notes": "- Havale bildirimi ödeme ekranının içinde yapılır: Bildir düğmesi ekranda Havale Bildirimi sayfasını açar (Geri ile havale bilgilerine dönülür); gönderilince ekran Ödemen Kontrol Ediliyor olur ve beklemeye devam eder.\n- Sepetin sipariş sonrası sayfasında havale bildirimi formu yok; Havale ile Öde kartında banka hesapları ve Ödeme Ekranını Aç düğmesi var.",
-  "publishedAt": "2026-11-26T20:01:15.530Z"
+  "version": "1.1.19",
+  "notes": "- Reddedilen havale bildirimi ilgili siparişlerin kayıtlarına yazılır (Havale Bildirimi Reddedildi., altında Reddeden).\n- Havale / EFT banka hesaplarında Şube alanı kaldırıldı; mağazadaki havale bilgilerinde şube görünmez.",
+  "publishedAt": "2026-11-27T06:51:22.187Z"
 }
