@@ -1,5 +1,5 @@
 {
-  "version": "1.1.24",
-  "notes": "- Kaydet: değişiklik varken ekranın altında beliren çubuk (Kaydedilmemiş Değişiklik Var · Vazgeç · Kaydet).\n- Durum etiketleri kartın kendi başlığında; sipariş işlemleri (Fatura Kes, İşlemler…) sipariş özet kartında.\n- Personelde Engelle ve Sil kartın altında; Modüller'de Güncellemeleri Denetle grupların altında.",
-  "publishedAt": "2026-11-27T10:39:17.133Z"
+  "version": "1.1.25",
+  "notes": "- Paraşüt (modül 1.2.0): güncel API dokümanına göre yenilendi. Bağlantı artık Paraşüt'e Bağlan ile (Paraşüt'te oturum açıp izin verilerek) kurulur; Kullanıcı ve Şifre alanları kalktı. Geri Dönüş Adresi modül sayfasında, Paraşüt geliştirici panelinde kaydedilmeli.\n- Paraşüt faturası: alıcı e-fatura mükellefiyse e-Fatura, değilse internet satışı bilgisiyle e-Arşiv; belge sonucu beklenir, hata siparişe yazılır; yeniden denemede ikinci fatura açılmaz; fatura numarası e-belgeden alınır.\n- Ana Sayfa, Site Metinleri ve Menüler baştan tasarlandı: sürükleyerek sıralama, canlı önizleme (telefon / masaüstü), alttaki Kaydet çubuğu.\n- Yönetim ana sayfasında Net Satış (Bugün): iadeler düşülmüş satış; ciro olduğu gibi kalır.\n- Raporlar › Servis Ücretleri formu düzenlendi; yönetim panelindeki küçük görünüm hataları giderildi.",
+  "publishedAt": "2026-11-27T15:16:02.144Z"
 }
