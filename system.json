@@ -1,5 +1,5 @@
 {
-  "version": "1.1.25",
-  "notes": "- Paraşüt (modül 1.2.0): güncel API dokümanına göre yenilendi. Bağlantı artık Paraşüt'e Bağlan ile (Paraşüt'te oturum açıp izin verilerek) kurulur; Kullanıcı ve Şifre alanları kalktı. Geri Dönüş Adresi modül sayfasında, Paraşüt geliştirici panelinde kaydedilmeli.\n- Paraşüt faturası: alıcı e-fatura mükellefiyse e-Fatura, değilse internet satışı bilgisiyle e-Arşiv; belge sonucu beklenir, hata siparişe yazılır; yeniden denemede ikinci fatura açılmaz; fatura numarası e-belgeden alınır.\n- Ana Sayfa, Site Metinleri ve Menüler baştan tasarlandı: sürükleyerek sıralama, canlı önizleme (telefon / masaüstü), alttaki Kaydet çubuğu.\n- Yönetim ana sayfasında Net Satış (Bugün): iadeler düşülmüş satış; ciro olduğu gibi kalır.\n- Raporlar › Servis Ücretleri formu düzenlendi; yönetim panelindeki küçük görünüm hataları giderildi.",
-  "publishedAt": "2026-11-27T15:16:02.144Z"
+  "version": "1.1.26",
+  "notes": "- İade faturası: e-fatura modüllerinde (Paraşüt, Bizim Hesap, Logo, Uyumsoft) \"Modül işlemi desteklenmiyor\" hatası giderildi; kesilemeyen iade faturaları sipariş sayfasındaki Yeniden Dene ile kesilir.\n- E-fatura: aynı anda yalnızca bir modül açık olabilir; diğeri açıkken Fatura Kes açılmaz (önceden diğerini sessizce kapatıyordu).\n- Paraşüt (modül 1.2.1): Bağlantıyı Test Et, Firma No yanlışsa hesabın firmalarını numaralarıyla gösterir; Paraşüt erişimi reddederse gerekçesini (API paketi, entegrasyon yetkisi) iletir.",
+  "publishedAt": "2026-11-27T16:02:24.621Z"
 }
