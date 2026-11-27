@@ -34,3 +34,4 @@ Yönetim paneli Entegrasyon Ayarları ekranında güncellemeyi gösterir.
   posta kutusuna göre seçilir (e_invoice_inbox_checks → e-Fatura senaryo TEMEL, yoksa e-Arşiv internet satışı bilgisiyle), e-belge işi
   (trackable_jobs) sonuçlanana kadar beklenir ve hata iletisi döner; fatura numarası e-belgeden alınır. İade kaydına net_total ve total_vat
   eklendi. İstekler application/vnd.api+json.
+- 1.2.1: Bağlantıyı Test Et hesabın erişebildiği firmaları okur (GET /me?include=companies): Firma No yanlışsa doğru numaraları adlarıyla gösterir; Paraşüt erişimi reddederse kendi gerekçesini (API paketi, entegrasyon yetkisi) iletir.

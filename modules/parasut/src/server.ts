@@ -168,12 +168,25 @@ async function createParasutReturnInvoice(config:ParasutConfig,input:CreateRetur
  return {providerReturnId:bill.id,...(typeof number==="string"&&number?{documentNumber:number}:{})};
 }
 
-// Bağlantı denemesi: erişim anahtarıyla firmanın kişi listesi okunur (firma numarası bu hesaba ait mi).
+// Bağlantı denemesi: önce hesabın erişebildiği firmalar okunur (GET /me?include=companies); Firma No aralarında yoksa doğru numaralar
+// adlarıyla gösterilir. Sonra firmanın kişi listesi okunur; Paraşüt reddederse kendi gerekçesi (API paketi, entegrasyon yetkisi…) döner.
 async function test(){
- const config=await host.configuration(),api=client(config,await accessToken(config));
- const r=await api("GET","/contacts?page[size]=1",undefined,15000);
- if(r.status===403||r.status===404)throw new EinvoiceError("Paraşüt oturumu açıldı ama Firma No bu hesaba ait değil.");
- if(!r.ok)throw new EinvoiceError(errorOf(r.body,`Paraşüt yanıt vermedi (HTTP ${r.status}).`));
+ const config=await host.configuration(),token=await accessToken(config);
+ const me=await fetch(`${BASE}/me?include=companies`,{method:"GET",headers:{accept:"application/vnd.api+json",authorization:`Bearer ${token}`},signal:AbortSignal.timeout(15000)});
+ const meBody=await me.json().catch(()=>({})) as Body;
+ if(me.status===401)throw new EinvoiceError("Paraşüt oturumu reddedildi. Modüller › Paraşüt'te Paraşüt'e Bağlan'a yeniden basın.");
+ if(me.ok){
+  const companies=(meBody.included||[]).filter(x=>x.type==="companies"&&x.id).map(x=>({id:String(x.id),name:String(x.attributes?.name||x.attributes?.legal_name||"")}));
+  if(companies.length&&!companies.some(c=>c.id===String(config.companyId).trim()))throw new EinvoiceError(`Firma No (${config.companyId}) bu Paraşüt hesabında yok. Hesabın firmaları: ${companies.map(c=>`${c.name||"Firma"} (No ${c.id})`).join(", ")}.`);
+ }
+ const r=await client(config,token)("GET","/contacts?page[size]=1",undefined,15000);
+ if(!r.ok){
+  const detail=errorOf(r.body,"");
+  if(r.status===402)throw new EinvoiceError("Firmanın Paraşüt kullanım süresi sona ermiş.");
+  if(r.status===403)throw new EinvoiceError(`Paraşüt bu firmaya erişim vermedi${detail?`: ${detail}`:"."} API paketinizin bu firmayı kapsadığını ve bağlanan kullanıcının firmada üçüncü taraf entegrasyon yetkisi olduğunu kontrol edin.`);
+  if(r.status===404)throw new EinvoiceError(`Firma No (${config.companyId}) Paraşüt'te bulunamadı. Numara, Paraşüt'e girince adres çubuğunda uygulama.parasut.com/ sonrasındaki sayıdır.`);
+  throw new EinvoiceError(detail||`Paraşüt yanıt vermedi (HTTP ${r.status}).`);
+ }
  return {ok:true,message:"Bağlantı Çalışıyor."};
 }
 
