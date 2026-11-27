@@ -1,5 +1,5 @@
 {
-  "version": "1.1.23",
-  "notes": "- Yönetimde yol izi ve geri düğmesi hiçbir ekranda yok; üst satırda yalnızca sayfanın işlemleri ve yazılı Kaydet düğmesi kalır.",
-  "publishedAt": "2026-11-27T10:17:19.833Z"
+  "version": "1.1.24",
+  "notes": "- Kaydet: değişiklik varken ekranın altında beliren çubuk (Kaydedilmemiş Değişiklik Var · Vazgeç · Kaydet).\n- Durum etiketleri kartın kendi başlığında; sipariş işlemleri (Fatura Kes, İşlemler…) sipariş özet kartında.\n- Personelde Engelle ve Sil kartın altında; Modüller'de Güncellemeleri Denetle grupların altında.",
+  "publishedAt": "2026-11-27T10:39:17.133Z"
 }
