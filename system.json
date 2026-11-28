@@ -1,5 +1,5 @@
 {
-  "version": "1.1.35",
-  "notes": "- Profil fotoğrafı: yönetici (Hesabım) ve personel profil fotoğrafı yükleyebilir; üst çubukta ve personel listesinde görünür.\n- Personel sayfası profil sayfası oldu: kapaklı profil kartı, son giriş / katılma / kullanıcı adı / yetki bilgi şeridi, Profil Bilgileri ve Güvenlik kartları, erişim yetkileri. Hesabım da aynı profil kartıyla.\n- Kayan sipariş şeridindeki ürün logosu daha net; yazı alanındaki Yazım Talimatı çizgisi kaldırıldı.",
-  "publishedAt": "2026-11-28T14:14:58.373Z"
+  "version": "1.1.36",
+  "notes": "- Üst çubuktaki kullanıcı düğmesi yenilendi: profil fotoğrafı, ad ve altında rol (Yönetici / görevi).\n- Two-Factor kurulumu: büyük kare kod, gruplanmış manuel anahtar ve Anahtarı Kopyala düğmesi. İki Adımlı Doğrulama yazıları Two-Factor oldu.\n- Profil kartındaki bilgi kutularının çizgileri her ekranda tam.",
+  "publishedAt": "2026-11-28T14:54:03.980Z"
 }
