@@ -1,5 +1,5 @@
 {
-  "version": "1.1.30",
-  "notes": "- Kripto ödemeler (Cryptomus, Heleket) resmî faturadan muaf: kripto ile ödenen siparişe ve kripto ile yapılan bakiye yüklemesine fatura kesilmez (otomatik ve elle).\n- Kripto ödemeler siparişlerde, raporlarda ve e-postalarda \"Kripto Transferi\" olarak görünür; sepetteki Kripto Para ile Öde seçeneğinin açıklaması kaldırıldı.\n- Yönetim › Site sadeleşti: Site Metinleri ile Pencere Metinleri tek \"Metinler\" sayfasında; Site Bilgileri ile Görünüm tek \"Marka ve Görünüm\" sayfasında (tek Kaydet); SEO'daki Google'daki Şirket Adı alanı kalktı (Şirket Unvanı kullanılır). Eski adresler yeni sayfalara yönlenir.\n- Tablette logo ve sekme simgesi alanlarının kesilmesi düzeltildi.",
-  "publishedAt": "2026-11-28T07:46:54.072Z"
+  "version": "1.1.31",
+  "notes": "- Kripto ile Öde yalnızca 1 dolar ve üstü tutarlarda görünür (sepet, ödeme bekleyen sipariş, bakiye yükleme); sınır TCMB dolar kuruyla TL'ye çevrilir, daha küçük tutarda kripto ödemesi başlatılamaz.\n- Site › Metinler: arama alanı başlıklı kutuda; Pencere Metinleri kutusu kaldırıldı, pencerelerdeki düzenleme kalemi ana yöneticide her zaman açık.",
+  "publishedAt": "2026-11-28T08:37:31.398Z"
 }
