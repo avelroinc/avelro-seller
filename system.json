@@ -1,5 +1,5 @@
 {
-  "version": "1.1.32",
-  "notes": "- Site › Metinler: sitedeki 205 yazı daha düzenlenebilir (iletişim ve hakkımızda kartları, ana sayfa bildirimleri, site haritası, ücretsiz araçlar, menü bölümleri, sipariş tamamlandı ekranı, Hesabım durumları ve süzgeçleri, destek ve canlı destek yazıları).\n- Favori kalbi lisans, yazılım, e-pin ve Sms Onay'da da var (kartlarda ve ürün sayfalarında).\n- Blog yazısı yan sütuna kadar yayılır; okuma çizgisi site genişliğinde.\n- Sayfa yolunda sayfa adı sayfa ayarlarındaki başlıktan gelir (ör. İletişim).\n- Yönetim: Görünüm sayfasının adı Tema; sekmelerdeki bütün kutuların başlığı var; Kelime Takibi özet kartları simge solda, Kelime Ekle başlıklı kutuda, Search Console önerileri kaldırıldı; Reklam Sayfası reklam modülü kurulu değilse menüde görünmez; raporda Sipariş Ödemeleri açıklamasına kripto eklendi.",
-  "publishedAt": "2026-11-28T10:55:26.198Z"
+  "version": "1.1.33",
+  "notes": "- Ürünlerin gerçek logoları: 61 yeni marka logosu (Adobe ürünleri, Office / Microsoft 365, güvenlik, VPN, oyun ve yayın servisleri); lisans, yazılım ve e-pin ürünleri sepette, aramada, menüde, alt bilgide, Hesabım'da, sipariş sorgulamada, favorilerde ve canlı sipariş akışında kendi logosuyla görünür.\n- Logoların arkasındaki gölge ve çerçeve kaldırıldı.\n- Ana sayfa üyelik alanı yeni tasarım: yükleme bonusu büyük yüzdesiyle öne çıkar, diğer kazançlar kutusuz liste.",
+  "publishedAt": "2026-11-28T12:16:02.256Z"
 }
