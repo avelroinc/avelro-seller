@@ -1,5 +1,5 @@
 {
-  "version": "1.1.29",
-  "notes": "- Sepette kripto ödeme (Cryptomus, Heleket) ayrı \"Kripto Para ile Öde\" yöntemi olarak görünür; önceden Banka / Kredi Kartı seçeneğinin altında kalıyordu. Ödeme bekleyen siparişlerde de Kripto ile Öde düğmesi var.",
-  "publishedAt": "2026-11-28T06:58:49.063Z"
+  "version": "1.1.30",
+  "notes": "- Kripto ödemeler (Cryptomus, Heleket) resmî faturadan muaf: kripto ile ödenen siparişe ve kripto ile yapılan bakiye yüklemesine fatura kesilmez (otomatik ve elle).\n- Kripto ödemeler siparişlerde, raporlarda ve e-postalarda \"Kripto Transferi\" olarak görünür; sepetteki Kripto Para ile Öde seçeneğinin açıklaması kaldırıldı.\n- Yönetim › Site sadeleşti: Site Metinleri ile Pencere Metinleri tek \"Metinler\" sayfasında; Site Bilgileri ile Görünüm tek \"Marka ve Görünüm\" sayfasında (tek Kaydet); SEO'daki Google'daki Şirket Adı alanı kalktı (Şirket Unvanı kullanılır). Eski adresler yeni sayfalara yönlenir.\n- Tablette logo ve sekme simgesi alanlarının kesilmesi düzeltildi.",
+  "publishedAt": "2026-11-28T07:46:54.072Z"
 }
