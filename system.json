@@ -1,5 +1,5 @@
 {
-  "version": "1.1.34",
-  "notes": "- Sipariş Zaman Çizelgesi: sepetteki her ürüne yazılan aynı kayıtlar (Sipariş Oluşturuldu, Ödeme Başlatıldı…) tek satır görünür.\n- Ortam Kütüphanesi: sağ tıkla Seç ile çoklu seçim; seçilenlerin adresleri kopyalanır ya da kullanılmayanlar toplu silinir.\n- Site: Menüler öğelerinin altındaki bağlantı satırı ve Menüler / Bölümler / Site Metinleri sayaçları kaldırıldı; bu kutularda simgeli başlık ve açıklama var; Ana Sayfa menü adı Anasayfa oldu.\n- Kayan sipariş şeridinde ve diğer listelerde ürün logoları kutusundan taşmaz.",
-  "publishedAt": "2026-11-28T13:34:39.612Z"
+  "version": "1.1.35",
+  "notes": "- Profil fotoğrafı: yönetici (Hesabım) ve personel profil fotoğrafı yükleyebilir; üst çubukta ve personel listesinde görünür.\n- Personel sayfası profil sayfası oldu: kapaklı profil kartı, son giriş / katılma / kullanıcı adı / yetki bilgi şeridi, Profil Bilgileri ve Güvenlik kartları, erişim yetkileri. Hesabım da aynı profil kartıyla.\n- Kayan sipariş şeridindeki ürün logosu daha net; yazı alanındaki Yazım Talimatı çizgisi kaldırıldı.",
+  "publishedAt": "2026-11-28T14:14:58.373Z"
 }
