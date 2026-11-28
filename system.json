@@ -1,5 +1,5 @@
 {
-  "version": "1.1.38",
-  "notes": "- Telefonda üst çubuktaki kullanıcı düğmesinde profil fotoğrafı kutunun ortasında.",
-  "publishedAt": "2026-11-28T16:40:05.336Z"
+  "version": "1.1.39",
+  "notes": "- Bildirim zili: her yönetici / personel zile gelecek türleri seçer (Havale ve Bakiye, Talepler, Sağlayıcı Hataları, Sistem Uyarıları); seçilmeyenler telefona ve tarayıcıya yine gider.\n- Zil ve tarayıcı bildirim ayarları Ayarlar › Hesabım'da (yöneticinin kendi profilinde); Tarayıcı Bildirimleri'ndeki Yönetici Bildirimleri bölümü buraya taşındı.\n- Sipariş Zaman Çizelgesi saatleri saniyesiyle; kayıtlar tam zamana göre sıralanır.",
+  "publishedAt": "2026-11-28T18:02:30.427Z"
 }
