@@ -1,5 +1,5 @@
 {
-  "version": "1.1.40",
-  "notes": "- Sağlayıcı siparişi reddederse yedek sağlayıcıya 3 saniye sonra gönderilir.",
-  "publishedAt": "2026-11-28T18:26:20.771Z"
+  "version": "1.1.41",
+  "notes": "- Müşteri detayı profil sayfası oldu: kapaklı profil kartı (ad, kullanıcı adı, e-posta, durum; Siparişleri, Engelle, Sil) ve bakiye / sipariş / harcama / son sipariş / üyelik şeridi. Özel Kuponlar'da Kupon Tanımla artık düğme; basınca tanımlama alanı açılır.\n- Banka Bildirimleri durumu simgeli, tek satırlık etiket.\n- Üst çubuktaki kullanıcı düğmesinde Görevi alanındaki yazı görünür.\n- Duyurular panelinin kaydırma çubuğu gizlendi.",
+  "publishedAt": "2026-11-28T19:10:57.517Z"
 }
