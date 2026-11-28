@@ -1,5 +1,5 @@
 {
-  "version": "1.1.36",
-  "notes": "- Üst çubuktaki kullanıcı düğmesi yenilendi: profil fotoğrafı, ad ve altında rol (Yönetici / görevi).\n- Two-Factor kurulumu: büyük kare kod, gruplanmış manuel anahtar ve Anahtarı Kopyala düğmesi. İki Adımlı Doğrulama yazıları Two-Factor oldu.\n- Profil kartındaki bilgi kutularının çizgileri her ekranda tam.",
-  "publishedAt": "2026-11-28T14:54:03.980Z"
+  "version": "1.1.37",
+  "notes": "- Karşılaştırma tablosu düzenleyicisi sadeleşti: satırlar tek çerçeveli tabloda, her ekranda tek satır (Özellik, Simge, Bizde, Diğerleri, Sil); Bizde / Diğerleri kendi renginde; sıra okları, simge önizlemesi ve Satırlar sayacı kaldırıldı.",
+  "publishedAt": "2026-11-28T15:32:34.849Z"
 }
