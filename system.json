@@ -1,5 +1,5 @@
 {
-  "version": "1.1.27",
-  "notes": "- Paraşüt (modül 1.2.2): fatura ve iade satırları Paraşüt ürününe bağlanır (\"Ürün/hizmet doldurulmalı\" hatası giderildi); ürün satırın adıyla (Sosyal Medya Hizmeti, Dijital Lisans Hizmeti, Yazılım Hizmeti) bulunur ya da hizmet olarak açılır.\n- İade faturası yalnızca durumu İade Edildi olan ürün için kesilir; kısmi iadede kesilmez.\n- Aynı fatura aynı hatayla yeniden kesilemezse tekrar bildirim düşmez; e-fatura modüllerinin tek işlemdeki istek sınırı yükseltildi.",
-  "publishedAt": "2026-11-27T17:35:27.610Z"
+  "version": "1.1.28",
+  "notes": "- Hesabım baştan tasarlandı (masaüstü, tablet, telefon): kenar sütunda müşteri kartı ve cüzdan; siparişler ay ay ve adım çubuklu, sipariş detayı zaman çizelgeli, Bakiye Yükle sıradaki bonusu gösterir, profil sekmeli.\n- Lisanslarım, Yazılımlarım ve Oyun Kodlarım Hesabım > Diğer altında toplandı; Onay Kodlarım ve toplu sipariş Hesabım'dan kaldırıldı (onay kodları Sms Onay sayfasında).\n- Referans sistemi, Puan Rozetleri ve Pazarlama > Google Araması tamamen kaldırıldı; güncellemede bunlara ait kayıtlar silinir.\n- Site Metinleri yalnızca aramayla çalışır, yazı bulunduğu yerde küçük alanda düzenlenir; Menüler önizlemesi kaldırıldı.\n- Sipariş Sorgula sade 3 adımlı yol göstericiyle; E-Pin sekmeleri, lisans teslimat bilgisi, SMS teslim oranı ve Hizmetler düğmesi yenilendi; İletişim Hızlı İşlemler düzeltildi, Nasıl Sipariş Verilir alanı kaldırıldı.",
+  "publishedAt": "2026-11-28T04:34:43.614Z"
 }
